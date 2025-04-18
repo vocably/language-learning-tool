@@ -24,7 +24,7 @@ export const predefinedMultiChoiceOptions: CardItem[] = [
     created: 1737092508669,
     data: {
       language: 'da',
-      source: 'modstandsdygtighed',
+      source: 'en modstandsdygtighed',
       ipa: 'ˈmoðsdans-',
       example: '',
       definition: '',
@@ -43,7 +43,7 @@ export const predefinedMultiChoiceOptions: CardItem[] = [
     created: 1737092518379,
     data: {
       language: 'da',
-      source: 'tærskel',
+      source: 'en tærskel',
       ipa: 'ˈtæɐ̯sgəl',
       example: 'træde (ind) over tærsklen',
       definition: '',
@@ -80,7 +80,7 @@ export const predefinedMultiChoiceOptions: CardItem[] = [
     created: 1737092529021,
     data: {
       language: 'da',
-      source: 'eftervirkning',
+      source: 'en eftervirkning',
       ipa: '',
       example: 'psykiske eftervirkninger',
       definition: '',

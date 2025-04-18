@@ -6,7 +6,7 @@ export const predefinedMultiChoiceOptions: CardItem[] = [
     created: 1737090500620,
     data: {
       language: 'da',
-      source: 'integritet',
+      source: 'en integritet',
       ipa: 'entəgʁiˈteˀd',
       example:
         '* den personlige integritet\n* territorial integritet\n* folketingsmedlemmernes personlige integritet',
@@ -27,7 +27,7 @@ export const predefinedMultiChoiceOptions: CardItem[] = [
     created: 1737090510688,
     data: {
       language: 'da',
-      source: 'modstandsdygtighed',
+      source: 'en modstandsdygtighed',
       ipa: 'ˈmoðsdans-',
       example: '',
       definition: '',
@@ -46,7 +46,7 @@ export const predefinedMultiChoiceOptions: CardItem[] = [
     created: 1737090520317,
     data: {
       language: 'da',
-      source: 'tærskel',
+      source: 'en tærskel',
       ipa: 'ˈtæɐ̯sgəl',
       example: 'træde (ind) over tærsklen',
       definition: '',
@@ -65,7 +65,7 @@ export const predefinedMultiChoiceOptions: CardItem[] = [
     created: 1737090531304,
     data: {
       language: 'da',
-      source: 'disposition',
+      source: 'en disposition',
       ipa: 'disbosiˈɕoˀn',
       example:
         '* foretage en disposition\n* til fri disposition\n* en tilgængelig disposition af bogens stof',
@@ -86,7 +86,7 @@ export const predefinedMultiChoiceOptions: CardItem[] = [
     created: 1737090541033,
     data: {
       language: 'da',
-      source: 'eftervirkning',
+      source: 'en eftervirkning',
       ipa: '',
       example: 'psykiske eftervirkninger',
       definition: '',
@@ -105,7 +105,7 @@ export const predefinedMultiChoiceOptions: CardItem[] = [
     created: 1737090560286,
     data: {
       language: 'da',
-      source: 'resultat',
+      source: 'et resultat',
       ipa: 'ʁεsulˈtæˀd',
       example: '* det endelige resultat\n* opnå resultater',
       definition:

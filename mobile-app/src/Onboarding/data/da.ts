@@ -40,7 +40,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -140,7 +140,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
         },
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -221,7 +221,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -302,7 +302,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -404,7 +404,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
         },
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -496,7 +496,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
         },
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -576,7 +576,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -656,7 +656,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -736,7 +736,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -828,7 +828,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -908,7 +908,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -998,7 +998,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -1090,7 +1090,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -1170,7 +1170,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -1250,7 +1250,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -1330,7 +1330,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -1496,7 +1496,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -1576,7 +1576,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -1656,7 +1656,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -1736,7 +1736,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -1816,7 +1816,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -1896,7 +1896,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -1989,7 +1989,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -2069,7 +2069,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -2149,7 +2149,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -2229,7 +2229,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
@@ -2309,7 +2309,7 @@ export const onboardingCollection: MobileOnboardingDataCollection = {
       results: [
         {
           language: 'da',
-          source: 'spørgsmål',
+          source: 'et spørgsmål',
           ipa: 'ˈsbɶɐ̯sˌmɔˀl',
           example:
             '* stille et spørgsmål til nogen\n* ignorere spørgsmålet om ulighed\n* et spørgsmål om tillid',
