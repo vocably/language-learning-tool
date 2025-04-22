@@ -17,15 +17,22 @@ console.log('Received users', inspect(users, { depth: null }));
 
 const sub = users.Users[0].Attributes.find((attr) => attr.Name === 'sub').Value;
 
-const userCardCollections = JSON.parse(
-  (
-    await execute(
-      `aws s3api list-objects --bucket vocably-prod-cards --prefix "${sub}/"`
-    )
-  ).stdout
-);
+try {
+  const userCardCollections = JSON.parse(
+    (
+      await execute(
+        `aws s3api list-objects --bucket vocably-prod-cards --prefix "${sub}/"`
+      )
+    ).stdout
+  );
 
-console.log('Cards collections', inspect(userCardCollections, { depth: null }));
+  console.log(
+    'Cards collections',
+    inspect(userCardCollections, { depth: null })
+  );
+} catch (error) {
+  console.error(error);
+}
 
 const userMetadata = JSON.parse(
   (
