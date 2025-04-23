@@ -38,7 +38,7 @@ const setPreferMultiChoiceEnabled = (preferMultiCHoice: boolean) =>
 
 type Props = {};
 
-export const PracticeSettingsScreen: FC<Props> = () => {
+export const StudySettingsScreen: FC<Props> = () => {
   const theme = useTheme();
   const insets = useSafeAreaInsets();
 

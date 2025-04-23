@@ -13,7 +13,7 @@ import { AccountScreen } from './AccountScreen';
 import { HowToGroupCardsScreen } from './HowToGroupCardsScreen';
 import { MainMenu, MenuMainProps } from './MainMenu';
 import { MainMenuHeader } from './MainMenuHeader';
-import { PracticeSettingsScreen } from './PracticeSettingsScreen';
+import { StudySettingsScreen } from './StudySettingsScreen';
 
 const Stack = createStackNavigator();
 
@@ -71,8 +71,8 @@ export const MainMenuNavigationStack: FC = () => {
               header: MainMenuHeader,
               title: 'Study Settings',
             }}
-            name="Study Settings"
-            component={PracticeSettingsScreen}
+            name="StudySettings"
+            component={StudySettingsScreen}
           />
         </Stack.Navigator>
       </NavigationContainer>

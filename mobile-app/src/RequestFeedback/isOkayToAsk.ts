@@ -3,16 +3,16 @@ import { Platform } from 'react-native';
 
 type Payload = {
   userMetadata: UserMetadata;
-  numberOfRepetitions: number;
+  numberOfStudySessions: number;
 };
 
 const platform: 'ios' | 'android' = Platform.OS === 'ios' ? 'ios' : 'android';
 
 export const isOkayToAsk = async ({
   userMetadata,
-  numberOfRepetitions,
+  numberOfStudySessions,
 }: Payload): Promise<boolean> => {
-  if (numberOfRepetitions === 0) {
+  if (numberOfStudySessions === 0) {
     return false;
   }
 
@@ -24,5 +24,5 @@ export const isOkayToAsk = async ({
     return false;
   }
 
-  return numberOfRepetitions % 5 === 0;
+  return numberOfStudySessions % 5 === 0;
 };

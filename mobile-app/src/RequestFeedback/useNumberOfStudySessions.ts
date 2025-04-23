@@ -3,7 +3,7 @@ import { AsyncResult, useAsync } from '../useAsync';
 
 const numberOfRepetitionsKey = 'numberOfRepetitions';
 
-const retrieveNumberOfPracticeSessions = (): Promise<number> =>
+const retrieveNumberOfStudySessions = (): Promise<number> =>
   asyncAppStorage
     .getItem(numberOfRepetitionsKey)
     .then((receivedNumberOfRepetitions) => {
@@ -15,26 +15,26 @@ const retrieveNumberOfPracticeSessions = (): Promise<number> =>
     })
     .catch(() => 0);
 
-const storeNumberOfPracticeSessions = (numberOfRepetitions: number) =>
+const storeNumberOfStudySessions = (numberOfRepetitions: number) =>
   asyncAppStorage.setItem(
     numberOfRepetitionsKey,
     numberOfRepetitions.toString()
   );
 
-export const useNumberOfPracticeSessions = (): [
+export const useNumberOfStudySessions = (): [
   AsyncResult<number>,
   () => Promise<any>
 ] => {
-  const [numberOfPracticeSessions, mutateNumberOfPracticeSessions] = useAsync(
-    retrieveNumberOfPracticeSessions,
-    storeNumberOfPracticeSessions
+  const [numberOfStudySessions, mutateNumberOfStudySessions] = useAsync(
+    retrieveNumberOfStudySessions,
+    storeNumberOfStudySessions
   );
 
   const increase = async () => {
-    if (numberOfPracticeSessions.status === 'loaded') {
-      await mutateNumberOfPracticeSessions(numberOfPracticeSessions.value + 1);
+    if (numberOfStudySessions.status === 'loaded') {
+      await mutateNumberOfStudySessions(numberOfStudySessions.value + 1);
     }
   };
 
-  return [numberOfPracticeSessions, increase];
+  return [numberOfStudySessions, increase];
 };

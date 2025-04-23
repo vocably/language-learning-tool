@@ -18,8 +18,8 @@ import {
   getMultiChoiceEnabled,
   getPreferMultiChoiceEnabled,
   getRandomizerEnabled,
-} from '../MainMenu/PracticeSettingsScreen';
-import { useNumberOfPracticeSessions } from '../RequestFeedback/useNumberOfPracticeSessions';
+} from '../MainMenu/StudySettingsScreen';
+import { useNumberOfStudySessions } from '../RequestFeedback/useNumberOfStudySessions';
 import { useAsync } from '../useAsync';
 import { useCardsAnsweredToday } from './cardsAnsweredToday';
 import { Completed } from './Completed';
@@ -68,8 +68,8 @@ export const StudyScreen: Props = ({ navigation }) => {
 
   const [cards, setCards] = useState<CardItem[]>();
   const [cardsStudied, setCardsStudied] = useState(0);
-  const [numberOfRepetitions, increaseNumberOfRepetitions] =
-    useNumberOfPracticeSessions();
+  const [numberOfStudySessions, increaseNumberOfStudySessions] =
+    useNumberOfStudySessions();
   const [cardsAnsweredToday, increaseCardsAnsweredToday] =
     useCardsAnsweredToday();
 
@@ -238,7 +238,7 @@ export const StudyScreen: Props = ({ navigation }) => {
 
     if (followingCards.length === 0) {
       setBadgeCount(0);
-      increaseNumberOfRepetitions();
+      increaseNumberOfStudySessions();
     }
   };
 
@@ -390,9 +390,9 @@ export const StudyScreen: Props = ({ navigation }) => {
           <Completed
             cards={allCards}
             onDone={() => navigation.goBack()}
-            numberOfRepetitions={
-              numberOfRepetitions.status === 'loaded'
-                ? numberOfRepetitions.value
+            numberOfStudySessions={
+              numberOfStudySessions.status === 'loaded'
+                ? numberOfStudySessions.value
                 : 0
             }
             onStudyAgain={() => setCardsStudied(0)}

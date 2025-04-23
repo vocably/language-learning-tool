@@ -100,7 +100,7 @@ export const MainMenu: FC<MenuMainProps> = ({
         <Divider />
         <List.Item
           title="Study Settings"
-          onPress={() => navigator.navigate('PracticeSettings')}
+          onPress={() => navigator.navigate('StudySettings')}
           titleStyle={{
             color: theme.colors.onBackground,
           }}

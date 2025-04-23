@@ -42,7 +42,7 @@ const motivationalQuotes = [
 ];
 
 type Props = {
-  numberOfRepetitions?: number;
+  numberOfStudySessions?: number;
   onStudyAgain?: () => void;
   onDone?: () => void;
   cards: CardItem[];
@@ -54,7 +54,7 @@ type Props = {
 export const Completed: FC<Props> = ({
   onStudyAgain = () => {},
   onDone = () => {},
-  numberOfRepetitions,
+  numberOfStudySessions,
   cards,
   streakHasBeenShown,
   streakDays,
@@ -111,7 +111,7 @@ export const Completed: FC<Props> = ({
         </Button>
         {cards.length > 30 && (
           <RequestFeedback
-            numberOfRepetitions={numberOfRepetitions}
+            numberOfStudySessions={numberOfStudySessions}
             style={{
               paddingHorizontal: 24,
             }}

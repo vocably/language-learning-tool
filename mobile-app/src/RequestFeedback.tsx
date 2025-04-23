@@ -14,10 +14,13 @@ import { UserMetadataContext } from './UserMetadataContainer';
 
 type Props = {
   style?: StyleProp<ViewStyle>;
-  numberOfRepetitions?: number;
+  numberOfStudySessions?: number;
 };
 
-export const RequestFeedback: FC<Props> = ({ style, numberOfRepetitions }) => {
+export const RequestFeedback: FC<Props> = ({
+  style,
+  numberOfStudySessions,
+}) => {
   const askForReviewMaxHeight = useSharedValue(0);
   const askForReviewOpacity = useSharedValue(0);
 
@@ -33,13 +36,13 @@ export const RequestFeedback: FC<Props> = ({ style, numberOfRepetitions }) => {
   const posthog = usePostHog();
 
   useEffect(() => {
-    if (!numberOfRepetitions) {
+    if (!numberOfStudySessions) {
       return;
     }
 
     isOkayToAsk({
       userMetadata,
-      numberOfRepetitions,
+      numberOfStudySessions,
     }).then((isOkay) => {
       if (isOkay) {
         posthog.capture('feedback-requested');

@@ -8,14 +8,14 @@ const getToday = (): number => {
   return today.getTime();
 };
 
-const retrieveLastPracticeDayTs = (): Promise<number> => {
-  return AsyncStorage.getItem('lastPracticeDay').then((lastPracticeDay) => {
-    return Number(lastPracticeDay ?? 0);
+const retrieveLastStudyDayTs = (): Promise<number> => {
+  return AsyncStorage.getItem('lastStudyDay').then((lastStudyDay) => {
+    return Number(lastStudyDay ?? 0);
   });
 };
 
-const storeLastPracticeDayTs = (dayTs: number) => {
-  return AsyncStorage.setItem('lastPracticeDay', dayTs.toString());
+const storeLastStudyDayTs = (dayTs: number) => {
+  return AsyncStorage.setItem('lastStudyDay', dayTs.toString());
 };
 
 export const useStreakHasBeenShown = (): [
@@ -24,23 +24,23 @@ export const useStreakHasBeenShown = (): [
 ] => {
   const today = getToday();
 
-  const [lastPracticeDayResult, setLastPracticeDay] = useAsync(
-    retrieveLastPracticeDayTs,
-    storeLastPracticeDayTs
+  const [lastStudyDayResult, setLastStudyDay] = useAsync(
+    retrieveLastStudyDayTs,
+    storeLastStudyDayTs
   );
 
   const setIsShown = () => {
-    return setLastPracticeDay(today);
+    return setLastStudyDay(today);
   };
 
-  if (lastPracticeDayResult.status !== 'loaded') {
-    return [lastPracticeDayResult, setIsShown];
+  if (lastStudyDayResult.status !== 'loaded') {
+    return [lastStudyDayResult, setIsShown];
   }
 
   return [
     {
       status: 'loaded',
-      value: lastPracticeDayResult.value === today,
+      value: lastStudyDayResult.value === today,
     },
     setIsShown,
   ];
