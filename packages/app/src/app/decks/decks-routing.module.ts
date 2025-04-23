@@ -29,7 +29,7 @@ const routes: Routes = [
           },
           {
             path: 'study',
-            title: 'Practice',
+            title: 'Study',
             component: StudyPageComponent,
             data: {
               cleanScreen: true,

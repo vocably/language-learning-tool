@@ -29,13 +29,13 @@ const getGenericBody = (language: string): NotificationBody => {
   if (!languageName) {
     return {
       Title: sample(inspiringQuotes),
-      Body: "It's time to practice your cards.",
+      Body: "It's time to study your cards.",
     };
   }
 
   return {
     Title: sample(inspiringQuotes),
-    Body: `It's time to practice your ${languageName} cards.`,
+    Body: `It's time to study your ${languageName} cards.`,
   };
 };
 
@@ -60,8 +60,8 @@ export const getBody = (deck: LanguageDeck): NotificationBody => {
 
   const languageName = trimLanguage(get(languageList, deck.language, ''));
   const genericBody = languageName
-    ? `It's time to practice your ${languageName} cards.`
-    : `It's time to practice your cards.`;
+    ? `It's time to study your ${languageName} cards.`
+    : `It's time to study your cards.`;
 
   if (titleCandidate.length <= 30) {
     return {
@@ -72,7 +72,7 @@ export const getBody = (deck: LanguageDeck): NotificationBody => {
 
   const genericTitle = languageName
     ? `Time for ${languageName}.`
-    : `Time to practice.`;
+    : `Time to study.`;
   const bodyCandidate = `Still remember "${card.data.source}"?`;
   if (bodyCandidate.length <= 120) {
     return {
