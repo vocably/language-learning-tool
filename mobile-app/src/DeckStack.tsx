@@ -33,7 +33,7 @@ export const DeckStack = () => {
       />
       <Stack.Screen
         name="Notifications"
-        options={{ title: `Practice Notifications` }}
+        options={{ title: `Study Notifications` }}
         component={NotificationsScreen}
       />
       <Stack.Screen

@@ -28,8 +28,8 @@ export const HowToGroupCards: FC<Props> = () => {
       </Text>
       <Text style={styles.text}>
         When at least one tag is created, press the{' '}
-        <Icon name={'tag'} size={16} /> icon on the Practice button to practice
-        a selected tag or a group of selected tags.
+        <Icon name={'tag'} size={16} /> icon on the Study button to study a
+        selected tag or a group of selected tags.
       </Text>
       <Text style={styles.text}>
         Swipe any tag in the list to edit or delete it. Your cards will not be

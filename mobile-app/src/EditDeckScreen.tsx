@@ -27,7 +27,7 @@ export const EditDeckScreen: FC<Props> = ({ navigation }) => {
         }}
       >
         <List.Item
-          title="Practice Notifications"
+          title="Study Notifications"
           onPress={() => navigation.navigate('Notifications')}
           left={() => (
             <Icon

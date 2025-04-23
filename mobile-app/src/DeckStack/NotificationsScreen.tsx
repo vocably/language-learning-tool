@@ -136,8 +136,8 @@ export const NotificationsScreen: FC<Props> = () => {
         enablingNotifications) && (
         <>
           <Text style={{ textAlign: 'center', paddingHorizontal: 38 }}>
-            Practice notifications are sent once a day to remind you to review
-            your {languageString} cards.
+            Study notifications are sent once a day to remind you to review your{' '}
+            {languageString} cards.
           </Text>
           <Button
             onPress={requestPermissions}

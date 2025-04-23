@@ -175,7 +175,7 @@ export const PracticeSettingsScreen: FC<Props> = () => {
           gap: 8,
         }}
       >
-        <Text>Maximum cards per practice session:</Text>
+        <Text>Maximum cards per study session:</Text>
       </View>
       {maximumCardsPerSession.status === 'loaded' && (
         <View
@@ -207,7 +207,7 @@ export const PracticeSettingsScreen: FC<Props> = () => {
             position="leading"
             status={isRandomizerEnabled.value ? 'checked' : 'unchecked'}
             onPress={onRandomizerEnabledPress}
-            label="Randomly select cards for practice"
+            label="Randomly select cards to study"
             labelStyle={{
               textAlign: 'left',
               lineHeight: 16,

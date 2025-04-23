@@ -99,7 +99,7 @@ export const MainMenu: FC<MenuMainProps> = ({
         ></List.Item>
         <Divider />
         <List.Item
-          title="Practice Settings"
+          title="Study Settings"
           onPress={() => navigator.navigate('PracticeSettings')}
           titleStyle={{
             color: theme.colors.onBackground,

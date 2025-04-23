@@ -144,7 +144,7 @@ export const NotificationsAllowed: FC<Props> = ({ language }) => {
             }}
           >
             <Text style={{ textAlign: 'center', paddingHorizontal: 38 }}>
-              Practice notifications are sent once a day to remind you to review
+              Study notifications are sent once a day to remind you to review
               your {languageString} cards.
             </Text>
             <View

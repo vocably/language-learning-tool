@@ -258,7 +258,7 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                   onPress={() => navigation.navigate('Study')}
                   disabled={cards.length === 0 || !netInfo.isInternetReachable}
                 >
-                  Practice{selectedTags.length > 0 ? ' selected tags' : ''}
+                  Study{selectedTags.length > 0 ? ' selected tags' : ''}
                 </Button>
                 {deck.tags.length > 0 && (
                   <View
@@ -338,8 +338,8 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
           )}
           {!netInfo.isInternetReachable && (
             <Text style={{ textAlign: 'left', color: theme.colors.secondary }}>
-              <Icon name="connection" /> Practice mode isn't available right now
-              as it looks like your device is offline. Please connect to the
+              <Icon name="connection" /> Study mode isn't available right now as
+              it looks like your device is offline. Please connect to the
               internet and try again later.
             </Text>
           )}

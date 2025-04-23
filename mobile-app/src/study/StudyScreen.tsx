@@ -98,7 +98,7 @@ export const StudyScreen: Props = ({ navigation }) => {
         `Sorry, Vocably is unable data essential for the study session. Please try again later.`,
         [
           {
-            text: 'Exit practice session',
+            text: 'Exit study session',
             onPress: () => navigation.goBack(),
           },
         ]
@@ -160,7 +160,7 @@ export const StudyScreen: Props = ({ navigation }) => {
         `Sorry, Vocably is unable to grade the card yet. Please try again in a moment.`,
         [
           {
-            text: 'Exit practice session',
+            text: 'Exit study session',
             onPress: () => navigation.goBack(),
           },
         ]
@@ -196,10 +196,10 @@ export const StudyScreen: Props = ({ navigation }) => {
             `Error: Card update failed`,
             result.errorCode === 'NETWORK_REQUEST_ERROR'
               ? `Your answer wasn't saved due to a lost connection. The session will stop and resume from the failed answer.`
-              : `Oops! Unable to continue practice session due to a technical issue. Please try again later.`,
+              : `Oops! Unable to continue study session due to a technical issue. Please try again later.`,
             [
               {
-                text: 'Exit practice session',
+                text: 'Exit study session',
                 onPress: () => navigation.goBack(),
               },
             ]
@@ -219,10 +219,10 @@ export const StudyScreen: Props = ({ navigation }) => {
             `Error: Card update failed`,
             setStreakResult.errorCode === 'NETWORK_REQUEST_ERROR'
               ? `Your answer wasn't saved due to a lost connection. The session will stop and resume from the failed answer.`
-              : `Oops! Unable to continue practice session due to a technical issue. Please try again later.`,
+              : `Oops! Unable to continue study session due to a technical issue. Please try again later.`,
             [
               {
-                text: 'Exit practice session',
+                text: 'Exit study session',
                 onPress: () => navigation.goBack(),
               },
             ]

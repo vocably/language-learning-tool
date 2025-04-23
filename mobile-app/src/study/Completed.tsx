@@ -28,7 +28,7 @@ const motivationalQuotes = [
   'Persistence is the secret ingredient in becoming fluent. Keep going!',
   'Practice doesn’t make perfect — it makes progress, and that’s what matters.',
   'A second language is not just a skill, but a gift that keeps giving.',
-  'Each time you practice, you’re rewriting your brain for success.',
+  'Each time you study, you’re rewriting your brain for success.',
   'A language learner is a world explorer in disguise.',
   'Every mistake you make while learning is proof that you’re growing.',
   'Languages are the keys to the world; every word you master unlocks new doors.',

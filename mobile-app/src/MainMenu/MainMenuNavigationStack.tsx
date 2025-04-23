@@ -69,9 +69,9 @@ export const MainMenuNavigationStack: FC = () => {
           <Stack.Screen
             options={{
               header: MainMenuHeader,
-              title: 'Practice Settings',
+              title: 'Study Settings',
             }}
-            name="PracticeSettings"
+            name="Study Settings"
             component={PracticeSettingsScreen}
           />
         </Stack.Navigator>
