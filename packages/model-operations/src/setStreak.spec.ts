@@ -6,8 +6,8 @@ describe('setStreak', () => {
       {
         days: 2,
         longestStreak: 2,
-        lastPracticeDay: '0000-01-01',
-        lastPracticeTimezone: 'Asia/Jerusalem',
+        lastStudyDay: '0000-01-01',
+        lastStudyTimezone: 'Asia/Jerusalem',
       },
       '0000-01-01',
       'Asia/Jerusalem'
@@ -22,8 +22,8 @@ describe('setStreak', () => {
       {
         days: 2,
         longestStreak: 2,
-        lastPracticeDay: '2024-12-31',
-        lastPracticeTimezone: 'Asia/Jerusalem',
+        lastStudyDay: '2024-12-31',
+        lastStudyTimezone: 'Asia/Jerusalem',
       },
       '2025-01-01',
       'Asia/Jerusalem'
@@ -38,8 +38,8 @@ describe('setStreak', () => {
       {
         days: 2,
         longestStreak: 4,
-        lastPracticeDay: '2025-11-20',
-        lastPracticeTimezone: 'Asia/Jerusalem',
+        lastStudyDay: '2025-11-20',
+        lastStudyTimezone: 'Asia/Jerusalem',
       },
       '2025-11-21',
       'Asia/Jerusalem'
@@ -49,13 +49,13 @@ describe('setStreak', () => {
     expect(result.longestStreak).toEqual(4);
   });
 
-  it('sets streak to 1 when last practice day was before yesterday', () => {
+  it('sets streak to 1 when last Study day was before yesterday', () => {
     const result = setStreak(
       {
         days: 3,
         longestStreak: 4,
-        lastPracticeDay: '2024-12-31',
-        lastPracticeTimezone: 'Asia/Jerusalem',
+        lastStudyDay: '2024-12-31',
+        lastStudyTimezone: 'Asia/Jerusalem',
       },
       '2025-01-02',
       'Asia/Jerusalem'
