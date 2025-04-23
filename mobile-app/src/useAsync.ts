@@ -1,4 +1,4 @@
-import { isError } from '@vocably/model';
+import { isError, Result } from '@vocably/model';
 import { useCallback, useEffect, useState } from 'react';
 import { Alert } from 'react-native';
 import { Sentry } from './BetterSentry';
@@ -21,8 +21,8 @@ export type AsyncResult<T> = AsyncSuccess<T> | AsyncFailure | AsyncLoading;
 
 export const useAsync = <T>(
   load: () => Promise<T>,
-  mutate?: (newValue: T) => Promise<any>
-): [AsyncResult<T>, (newValue: T) => Promise<any>] => {
+  mutate?: (newValue: T) => Promise<unknown>
+): [AsyncResult<T>, (newValue: T) => Promise<Result<unknown>>] => {
   const [result, setResult] = useState<AsyncResult<T>>({
     status: 'loading',
   });
@@ -62,7 +62,7 @@ export const useAsync = <T>(
   }, []);
 
   const update = useCallback(
-    async (newValue: T) => {
+    async (newValue: T): Promise<Result<unknown>> => {
       const lastResult = result;
 
       setResult({
@@ -71,14 +71,38 @@ export const useAsync = <T>(
       });
 
       if (!mutate) {
-        return;
+        return {
+          success: true,
+          value: null,
+        };
       }
 
-      return mutate(newValue).catch((error) => {
+      try {
+        const result = await mutate(newValue);
+        if (isError(result)) {
+          return result;
+        }
+
+        return {
+          success: true,
+          value: null,
+        };
+      } catch (error) {
         Alert.alert('Error', 'Unable to perform the operation.');
         console.error('Mutation failed', error);
         setResult(lastResult);
-      });
+
+        if (isError(error)) {
+          return error;
+        }
+
+        return {
+          success: false,
+          errorCode: 'FUCKING_ERROR',
+          reason: 'Unable to save the mutation',
+          extra: error,
+        };
+      }
     },
     [mutate, result, setResult]
   );

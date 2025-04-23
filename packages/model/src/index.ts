@@ -13,6 +13,7 @@ export * from './notifications';
 export * from './onboarding';
 export { isError, isSuccess, Result, resultify } from './result';
 export * from './sorted-languages';
+export * from './study-stats';
 export * from './subscription';
 export * from './text-to-speech';
 export * from './translation-cards';

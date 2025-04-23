@@ -6,6 +6,7 @@ import { ScrollView, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { Button, Text, useTheme } from 'react-native-paper';
 import { RequestFeedback } from '../RequestFeedback';
+import { Streak } from '../Streak';
 import { Displayer } from './Displayer';
 import { PADDING_VERTICAL } from './StudyScreen';
 
@@ -45,6 +46,9 @@ type Props = {
   onStudyAgain?: () => void;
   onDone?: () => void;
   cards: CardItem[];
+  streakHasBeenShown: boolean;
+  streakDays: number;
+  onShow: () => void;
 };
 
 export const Completed: FC<Props> = ({
@@ -52,6 +56,9 @@ export const Completed: FC<Props> = ({
   onDone = () => {},
   numberOfRepetitions,
   cards,
+  streakHasBeenShown,
+  streakDays,
+  onShow,
 }) => {
   const theme = useTheme();
   const [motivationalQuote, setMotivationalQuote] = useState('');
@@ -64,6 +71,7 @@ export const Completed: FC<Props> = ({
 
   useEffect(() => {
     posthog.capture('study_completed');
+    onShow();
   }, []);
 
   return (
@@ -78,9 +86,10 @@ export const Completed: FC<Props> = ({
           minHeight: '100%',
         }}
       >
-        <Text style={{ fontSize: 24, color: theme.colors.secondary }}>
-          You did it!
-        </Text>
+        <Streak
+          consecutiveDays={streakDays}
+          hasBeenShown={streakHasBeenShown}
+        ></Streak>
         {motivationalQuote.length > 0 && (
           <View style={{ paddingHorizontal: 36, marginBottom: 14 }}>
             <Text

@@ -26,6 +26,8 @@ import { Completed } from './Completed';
 import { craftTheStrategy } from './craftTheStrategy';
 import { getPredefinedMultiChoiceOptions } from './getPredefinedMultiChoiceOptions';
 import { Grade } from './Grade';
+import { useStreakHasBeenShown } from './useStreakHasBeenShown';
+import { useStudyStats } from './useStudyStats';
 import { useTranslationLanguage } from './useTranslationLanguage';
 
 export const PADDING_VERTICAL = 70;
@@ -75,6 +77,9 @@ export const StudyScreen: Props = ({ navigation }) => {
     language as GoogleLanguage
   );
 
+  const [streakHasShownToday, setStreakHasShown] = useStreakHasBeenShown();
+  const studyStatsResult = useStudyStats();
+
   useEffect(() => {
     if (
       cardsAnsweredToday !== null &&
@@ -85,6 +90,21 @@ export const StudyScreen: Props = ({ navigation }) => {
       setBadgeCount(0);
     }
   }, [cardsAnsweredToday, maximumCardsPerSessionResult]);
+
+  useEffect(() => {
+    if (studyStatsResult.status === 'failed') {
+      Alert.alert(
+        `Error: unable to load essential data`,
+        `Sorry, Vocably is unable data essential for the study session. Please try again later.`,
+        [
+          {
+            text: 'Exit practice session',
+            onPress: () => navigation.goBack(),
+          },
+        ]
+      );
+    }
+  }, [studyStatsResult.status]);
 
   useEffect(() => {
     if (
@@ -134,6 +154,21 @@ export const StudyScreen: Props = ({ navigation }) => {
       return;
     }
 
+    if (studyStatsResult.status !== 'loaded') {
+      Alert.alert(
+        `Unable to grade the card`,
+        `Sorry, Vocably is unable to grade the card yet. Please try again in a moment.`,
+        [
+          {
+            text: 'Exit practice session',
+            onPress: () => navigation.goBack(),
+          },
+        ]
+      );
+
+      return;
+    }
+
     if (
       isMultiChoiceEnabledResult.status !== 'loaded' ||
       preferMultiChoiceEnabledResult.status !== 'loaded'
@@ -155,11 +190,34 @@ export const StudyScreen: Props = ({ navigation }) => {
     });
 
     update(cards[0].id, grade(cards[0].data, score, strategy)).then(
-      (result) => {
+      async (result) => {
         if (result.success === false) {
           Alert.alert(
             `Error: Card update failed`,
             result.errorCode === 'NETWORK_REQUEST_ERROR'
+              ? `Your answer wasn't saved due to a lost connection. The session will stop and resume from the failed answer.`
+              : `Oops! Unable to continue practice session due to a technical issue. Please try again later.`,
+            [
+              {
+                text: 'Exit practice session',
+                onPress: () => navigation.goBack(),
+              },
+            ]
+          );
+
+          return;
+        }
+
+        if (cardsStudied > 0) {
+          return;
+        }
+
+        const setStreakResult = await studyStatsResult.value.setStreak();
+
+        if (setStreakResult.success === false) {
+          Alert.alert(
+            `Error: Card update failed`,
+            setStreakResult.errorCode === 'NETWORK_REQUEST_ERROR'
               ? `Your answer wasn't saved due to a lost connection. The session will stop and resume from the failed answer.`
               : `Oops! Unable to continue practice session due to a technical issue. Please try again later.`,
             [
@@ -218,7 +276,9 @@ export const StudyScreen: Props = ({ navigation }) => {
     isRandomizerEnabledResult.status !== 'loaded' ||
     autoPlayResult.status !== 'loaded' ||
     maximumCardsPerSessionResult.status !== 'loaded' ||
-    preferMultiChoiceEnabledResult.status !== 'loaded'
+    preferMultiChoiceEnabledResult.status !== 'loaded' ||
+    studyStatsResult.status !== 'loaded' ||
+    streakHasShownToday.status !== 'loaded'
   ) {
     return <Loader>Loading...</Loader>;
   }
@@ -336,6 +396,9 @@ export const StudyScreen: Props = ({ navigation }) => {
                 : 0
             }
             onStudyAgain={() => setCardsStudied(0)}
+            streakHasBeenShown={streakHasShownToday.value}
+            streakDays={studyStatsResult.value.streak.days}
+            onShow={() => setStreakHasShown()}
           ></Completed>
         )}
       </View>

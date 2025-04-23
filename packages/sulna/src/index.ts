@@ -1,3 +1,4 @@
+export * from './date';
 export * from './getAttributeValue';
 export * from './isSafeObject';
 export * from './queue';
