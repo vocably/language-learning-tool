@@ -84,10 +84,10 @@ export const NotificationsScreen: FC<Props> = () => {
       .then(async (enabled) => {
         if (!enabled) {
           Alert.alert(
-            'Notifications failed',
+            'Study reminders failed',
             Platform.OS === 'android'
-              ? "Notifications can't be set through the app. Please enable them in the App Info settings."
-              : "Notifications can't be set through the app. Please enable them in Settings → Vocably."
+              ? "Study reminders can't be set through the app. Please enable them in the App Info settings."
+              : "Study reminders can't be set through the app. Please enable them in Settings → Vocably."
           );
         }
 
@@ -136,7 +136,7 @@ export const NotificationsScreen: FC<Props> = () => {
         enablingNotifications) && (
         <>
           <Text style={{ textAlign: 'center', paddingHorizontal: 38 }}>
-            Study notifications are sent once a day to remind you to review your{' '}
+            Study reminders are sent once a day to remind you to review your{' '}
             {languageString} cards.
           </Text>
           <Button
@@ -144,7 +144,7 @@ export const NotificationsScreen: FC<Props> = () => {
             mode="contained"
             loading={enablingNotifications}
           >
-            Enable Notifications
+            Enable reminders
           </Button>
         </>
       )}

@@ -45,7 +45,7 @@ export const DeleteDeckButton: FC = () => {
           borderColor: theme.colors.error,
         }}
       >
-        Delete This Deck
+        Delete this deck
       </Button>
       <Portal>
         <Dialog

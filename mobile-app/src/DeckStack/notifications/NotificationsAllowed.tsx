@@ -129,7 +129,7 @@ export const NotificationsAllowed: FC<Props> = ({ language }) => {
       {loadNotificationsResult.status === 'failed' && (
         <>
           <Text>I'm very sorry.</Text>
-          <Text>The system can't load the notifications status.</Text>
+          <Text>The system can't load the study reminders status.</Text>
           <Text>I have already been informed about it.</Text>
           <Text>Please try again later.</Text>
         </>
@@ -144,8 +144,8 @@ export const NotificationsAllowed: FC<Props> = ({ language }) => {
             }}
           >
             <Text style={{ textAlign: 'center', paddingHorizontal: 38 }}>
-              Study notifications are sent once a day to remind you to review
-              your {languageString} cards.
+              Study reminders are sent once a day to remind you to review your{' '}
+              {languageString} cards.
             </Text>
             <View
               style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}

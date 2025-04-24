@@ -1,6 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 
 import { getFullLanguageName } from '@vocably/model';
+import { trimLanguage } from '@vocably/sulna';
 import { useContext } from 'react';
 import { DashboardScreen } from './DashboardScreen';
 import { HowToGroupCardsScreen } from './DeckStack/HowToGroupCardsScreen';
@@ -14,7 +15,9 @@ const Stack = createStackNavigator();
 
 export const DeckStack = () => {
   const { selectedLanguage } = useContext(LanguagesContext);
-  const fullLanguage = getFullLanguageName(selectedLanguage);
+  const languageName = trimLanguage(
+    getFullLanguageName(selectedLanguage ?? '')
+  );
   return (
     <Stack.Navigator
       screenOptions={{
@@ -23,27 +26,27 @@ export const DeckStack = () => {
     >
       <Stack.Screen
         name="Dashboard"
-        options={{ title: fullLanguage, headerShown: false }}
+        options={{ title: languageName, headerShown: false }}
         component={DashboardScreen}
       />
       <Stack.Screen
         name="EditDeck"
-        options={{ title: `Edit ${fullLanguage}` }}
+        options={{ title: `Edit ${languageName}` }}
         component={EditDeckScreen}
       />
       <Stack.Screen
         name="Notifications"
-        options={{ title: `Study Notifications` }}
+        options={{ title: `${languageName} study reminders` }}
         component={NotificationsScreen}
       />
       <Stack.Screen
         name="HowToGroupCards"
-        options={{ title: `How to Group Cards` }}
+        options={{ title: `How to group cards` }}
         component={HowToGroupCardsScreen}
       />
       <Stack.Screen
         name="HowToImportAndExport"
-        options={{ title: `Import/Export` }}
+        options={{ title: `Import and export` }}
         component={HowToImportAndExportScreen}
       />
     </Stack.Navigator>

@@ -27,11 +27,11 @@ export const EditDeckScreen: FC<Props> = ({ navigation }) => {
         }}
       >
         <List.Item
-          title="Study Notifications"
+          title="Study reminders"
           onPress={() => navigation.navigate('Notifications')}
           left={() => (
             <Icon
-              name="bell"
+              name="bell-outline"
               size={24}
               color={theme.colors.onBackground}
               style={{ marginLeft: 24 }}
@@ -47,7 +47,7 @@ export const EditDeckScreen: FC<Props> = ({ navigation }) => {
         ></List.Item>
         <Divider style={{ alignSelf: 'stretch' }} />
         <List.Item
-          title="How to Group Cards"
+          title="How to group cards"
           onPress={() => navigation.navigate('HowToGroupCards')}
           left={() => (
             <Icon
@@ -67,7 +67,7 @@ export const EditDeckScreen: FC<Props> = ({ navigation }) => {
         ></List.Item>
         <Divider style={{ alignSelf: 'stretch' }} />
         <List.Item
-          title="How to Import and Export"
+          title="How to import and export"
           onPress={() => navigation.navigate('HowToImportAndExport')}
           left={() => (
             <Icon
