@@ -13,13 +13,13 @@ import {
 } from '../autoPlayState';
 import { useSelectedDeck } from '../languageDeck/useSelectedDeck';
 import { Loader } from '../loaders/Loader';
+import { useNumberOfStudySessions } from '../RequestFeedback/useNumberOfStudySessions';
 import {
   getMaximumCardsPerSession,
   getMultiChoiceEnabled,
   getPreferMultiChoiceEnabled,
   getRandomizerEnabled,
-} from '../MainMenu/StudySettingsScreen';
-import { useNumberOfStudySessions } from '../RequestFeedback/useNumberOfStudySessions';
+} from '../Settings/StudySettingsScreen';
 import { useAsync } from '../useAsync';
 import { useCardsAnsweredToday } from './cardsAnsweredToday';
 import { Completed } from './Completed';

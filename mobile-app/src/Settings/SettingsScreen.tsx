@@ -1,39 +1,36 @@
-import { useNavigation, type DrawerStatus } from '@react-navigation/native';
-import React, { FC, useEffect } from 'react';
-import { ScrollView, View } from 'react-native';
-import { Button, Divider, List, Text, useTheme } from 'react-native-paper';
+import { NavigationProp } from '@react-navigation/native';
+import React, { FC } from 'react';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import {
+  Button,
+  Divider,
+  List,
+  Surface,
+  Text,
+  useTheme,
+} from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import VersionNumber from 'react-native-version-number';
 // @ts-ignore
 import { ENV_SUFFIX, SHOW_CLEAR_STORAGE_BUTTON } from '@env';
 import { clearAll } from '../asyncAppStorage';
+import { mainPadding } from '../styles';
 
-export type MenuMainProps = {
-  parentNavigator: any;
-  drawerStatus: DrawerStatus;
+type Props = {
+  navigation: NavigationProp<any>;
 };
 
-export const MainMenu: FC<MenuMainProps> = ({
-  parentNavigator,
-  drawerStatus,
-}) => {
+const styles = StyleSheet.create({
+  surface: {
+    padding: 8,
+    borderRadius: 16,
+  },
+});
+
+export const SettingsScreen: FC<Props> = ({ navigation }) => {
   const theme = useTheme();
-  const navigator = useNavigation();
   const insets = useSafeAreaInsets();
-
-  useEffect(() => {
-    let timeoutId: ReturnType<typeof setTimeout>;
-    if (drawerStatus === 'closed' && navigator.canGoBack()) {
-      timeoutId = setTimeout(() => {
-        navigator.navigate('MainMenu');
-      }, 1000);
-    }
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, [drawerStatus, navigator]);
 
   return (
     <ScrollView
@@ -41,22 +38,27 @@ export const MainMenu: FC<MenuMainProps> = ({
         display: 'flex',
         justifyContent: 'center',
         minHeight: '100%',
-        paddingLeft: insets.left,
-        paddingTop: insets.top,
+        paddingLeft: insets.left + mainPadding,
+        paddingTop: insets.top + mainPadding,
+        paddingRight: insets.right + mainPadding,
         paddingBottom: insets.bottom,
       }}
     >
-      <View
-        style={{
-          marginBottom: 'auto',
-        }}
-      >
+      <Surface style={[styles.surface, { marginBottom: 16 }]}>
         <List.Item
-          title="Your Account"
-          onPress={() => navigator.navigate('AccountMenu')}
+          title="Your account"
+          onPress={() => navigation.navigate('AccountMenu')}
           titleStyle={{
             color: theme.colors.onBackground,
           }}
+          left={() => (
+            <Icon
+              name="account-circle-outline"
+              size={24}
+              color={theme.colors.onBackground}
+              style={{ marginLeft: 16 }}
+            />
+          )}
           right={() => (
             <Icon
               name="menu-right"
@@ -66,14 +68,47 @@ export const MainMenu: FC<MenuMainProps> = ({
           )}
         ></List.Item>
         <Divider />
+        <List.Item
+          title="Study settings"
+          onPress={() => navigation.navigate('StudySettings')}
+          titleStyle={{
+            color: theme.colors.onBackground,
+          }}
+          left={() => (
+            <Icon
+              name="book-open-variant"
+              size={24}
+              color={theme.colors.onBackground}
+              style={{ marginLeft: 16 }}
+            />
+          )}
+          right={() => (
+            <Icon
+              name="menu-right"
+              size={24}
+              color={theme.colors.onBackground}
+            />
+          )}
+        ></List.Item>
+      </Surface>
+
+      <Surface style={[styles.surface, { marginBottom: 16 }]}>
         <List.Item
           title="Notifications"
           onPress={() => {
-            parentNavigator.navigate('Notifications');
+            navigation.navigate('Notifications');
           }}
           titleStyle={{
             color: theme.colors.onBackground,
           }}
+          left={() => (
+            <Icon
+              name="bell-outline"
+              size={24}
+              color={theme.colors.onBackground}
+              style={{ marginLeft: 16 }}
+            />
+          )}
           right={() => (
             <Icon
               name="menu-right"
@@ -82,36 +117,33 @@ export const MainMenu: FC<MenuMainProps> = ({
             />
           )}
         ></List.Item>
-        <Divider />
+      </Surface>
+
+      <Surface style={[styles.surface, { marginBottom: 8 }]}>
         <List.Item
-          title="How to Group Cards"
+          title="Provide feedback"
+          onPress={() => {
+            navigation.navigate('Feedback');
+          }}
           titleStyle={{
             color: theme.colors.onBackground,
           }}
-          onPress={() => navigator.navigate('HowToGroupCards')}
-          right={() => (
+          left={() => (
             <Icon
-              name="menu-right"
+              name="message-text-outline"
               size={24}
               color={theme.colors.onBackground}
+              style={{ marginLeft: 16 }}
             />
           )}
         ></List.Item>
-        <Divider />
-        <List.Item
-          title="Study Settings"
-          onPress={() => navigator.navigate('StudySettings')}
-          titleStyle={{
-            color: theme.colors.onBackground,
-          }}
-          right={() => (
-            <Icon
-              name="menu-right"
-              size={24}
-              color={theme.colors.onBackground}
-            />
-          )}
-        ></List.Item>
+      </Surface>
+
+      <View style={{ paddingHorizontal: 16 }}>
+        <Text>
+          Are you missing any crucial feature or simply want to share your
+          opinion about Vocably with me? I would love to hear from you!
+        </Text>
       </View>
 
       <View
@@ -120,24 +152,7 @@ export const MainMenu: FC<MenuMainProps> = ({
           flex: 1,
           justifyContent: 'center',
         }}
-      >
-        <Text style={{ marginBottom: 12 }}>
-          Are you missing any crucial feature or simply want to share your
-          opinion about Vocably with me? I would love to hear from you!
-        </Text>
-        <View
-          style={{
-            alignSelf: 'stretch',
-          }}
-        >
-          <Button
-            mode={'contained'}
-            onPress={() => parentNavigator.navigate('Feedback')}
-          >
-            Provide Feedback
-          </Button>
-        </View>
-      </View>
+      ></View>
 
       {VersionNumber.appVersion && (
         <View
@@ -145,6 +160,8 @@ export const MainMenu: FC<MenuMainProps> = ({
             paddingHorizontal: 16,
             marginBottom: 16,
             gap: 16,
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
           {SHOW_CLEAR_STORAGE_BUTTON === 'true' && (

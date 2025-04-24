@@ -1,5 +1,4 @@
 import { useNetInfo } from '@react-native-community/netinfo';
-import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { NavigationProp } from '@react-navigation/native';
 import {
   byDate,
@@ -17,7 +16,14 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { Alert, PixelRatio, Pressable, StyleSheet, View } from 'react-native';
+import {
+  Alert,
+  PixelRatio,
+  Platform,
+  Pressable,
+  StyleSheet,
+  View,
+} from 'react-native';
 import {
   ActivityIndicator,
   Appbar,
@@ -199,14 +205,11 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
         }}
       >
         <Appbar.Header>
-          <Appbar.Action
-            icon="menu"
-            onPress={() =>
-              (navigation as any as DrawerNavigationProp<{}>).openDrawer()
-            }
-          />
-
           <Appbar.Content
+            style={{
+              alignItems: 'flex-start',
+              marginLeft: Platform.OS === 'android' ? 28 : -24,
+            }}
             title={languageList[deck.language as GoogleLanguage] ?? ''}
           />
 

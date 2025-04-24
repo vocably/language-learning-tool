@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { DeckStack } from './DeckStack';
 import { LanguagesContext } from './languages/LanguagesContainer';
 import { LookUpScreen } from './LookUpScreen';
+import { SettingsStack } from './Settings/SettingsStack';
 import { WelcomeContext } from './WelcomeContainer';
 import { WelcomeStack } from './WelcomeStack';
 
@@ -19,7 +20,7 @@ export const TabsNavigator = () => {
         <Tabs.Screen
           name="DeckScreen"
           options={{
-            title: 'Cards',
+            title: 'My Cards',
             tabBarIcon: ({ color }) => (
               <Icon name="card-multiple-outline" color={color} size={24} />
             ),
@@ -43,9 +44,19 @@ export const TabsNavigator = () => {
         name="LookUp"
         component={LookUpScreen}
         options={{
-          title: 'Look up',
+          title: 'Look Up',
           tabBarIcon: ({ color }) => (
             <Icon name="translate" color={color} size={24} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="Settings"
+        component={SettingsStack}
+        options={{
+          title: 'Settings',
+          tabBarIcon: ({ color }) => (
+            <Icon name="tune-variant" color={color} size={24} />
           ),
         }}
       />

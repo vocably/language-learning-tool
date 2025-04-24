@@ -1,11 +1,25 @@
 import { Slider } from '@miblanchard/react-native-slider';
 import { FC } from 'react';
-import { Linking, ScrollView, View } from 'react-native';
-import { Checkbox, Divider, Text, useTheme } from 'react-native-paper';
+import {
+  Linking,
+  PixelRatio,
+  ScrollView,
+  StyleSheet,
+  View,
+} from 'react-native';
+import { Checkbox, Surface, Text, useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { getItem, setItem } from '../asyncAppStorage';
+import { mainPadding } from '../styles';
 import { useAsync } from '../useAsync';
+
+const styles = StyleSheet.create({
+  surface: {
+    padding: 8,
+    borderRadius: 16,
+  },
+});
 
 const MULTI_CHOICE_ENABLED_KEY = 'isMultiChoiceEnabled';
 const RANDOMIZER_ENABLED_KEY = 'isRandomizerEnabled';
@@ -84,45 +98,69 @@ export const StudySettingsScreen: FC<Props> = () => {
     mutatePreferMultiChoice(!preferMultiChoiceResult.value);
   };
 
+  const fontScale = Math.max(1, PixelRatio.getFontScale());
+
   return (
     <ScrollView
       contentContainerStyle={{
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingTop: insets.top,
-        paddingBottom: insets.bottom,
+        alignItems: 'stretch',
+        justifyContent: 'flex-start',
+        paddingTop: mainPadding,
+        paddingBottom: insets.bottom + mainPadding,
+        paddingLeft: insets.left + mainPadding,
+        paddingRight: insets.right + mainPadding,
       }}
     >
+      <View
+        style={{
+          marginBottom: 32,
+          flexDirection: 'row',
+          justifyContent: 'flex-start',
+          alignItems: 'center',
+          gap: 8,
+        }}
+      >
+        <Icon name="book-open-variant" size={24} />
+        <View>
+          <Text style={{ fontSize: 24, color: theme.colors.secondary }}>
+            Study settings
+          </Text>
+        </View>
+      </View>
+
       {isMultiChoiceEnabledResult.status === 'loaded' &&
         preferMultiChoiceResult.status === 'loaded' && (
           <>
-            <Checkbox.Item
-              mode="android"
-              position="leading"
-              status={
-                isMultiChoiceEnabledResult.value ? 'checked' : 'unchecked'
-              }
-              onPress={onMultiChoicePress}
-              label="Show multi-choice questions"
-              labelStyle={{
-                textAlign: 'left',
-                lineHeight: 16,
-              }}
-              style={{
-                width: '100%',
-              }}
-            />
+            <Surface style={[styles.surface, { marginBottom: 8 }]}>
+              <Checkbox.Item
+                mode="android"
+                position="leading"
+                status={
+                  isMultiChoiceEnabledResult.value ? 'checked' : 'unchecked'
+                }
+                onPress={onMultiChoicePress}
+                label="Use multiple-choice questions"
+                labelStyle={{
+                  textAlign: 'left',
+                  lineHeight: 16,
+                }}
+                style={{
+                  width: '100%',
+                }}
+              />
+            </Surface>
 
             <View
               style={{
-                paddingLeft: insets.left + 16,
+                paddingLeft: 8,
                 paddingRight: 8,
                 width: '100%',
                 gap: 8,
+                marginBottom: 32,
               }}
             >
               <Text>
-                The multiple-choice questions are displayed only when you have
+                The multiple-choice questions are only visible when you have
                 enough cards.
               </Text>
               <Text>
@@ -133,75 +171,81 @@ export const StudySettingsScreen: FC<Props> = () => {
 
             {isMultiChoiceEnabledResult.value && (
               <>
-                <Checkbox.Item
-                  mode="android"
-                  position="leading"
-                  status={
-                    preferMultiChoiceResult.value ? 'checked' : 'unchecked'
-                  }
-                  onPress={onPreferMultiChoicePress}
-                  label="Enforce multi choice questions"
-                  labelStyle={{
-                    textAlign: 'left',
-                    lineHeight: 16,
-                  }}
-                  style={{
-                    width: '100%',
-                  }}
-                />
+                <Surface style={[styles.surface, { marginBottom: 8 }]}>
+                  <Checkbox.Item
+                    mode="android"
+                    position="leading"
+                    status={
+                      preferMultiChoiceResult.value ? 'checked' : 'unchecked'
+                    }
+                    onPress={onPreferMultiChoicePress}
+                    label="Multiple-choice only"
+                    labelStyle={{
+                      textAlign: 'left',
+                      lineHeight: 16,
+                    }}
+                    style={{
+                      width: '100%',
+                    }}
+                  />
+                </Surface>
                 <View
                   style={{
-                    paddingLeft: insets.left + 16,
+                    paddingLeft: 8,
                     paddingRight: 8,
                     width: '100%',
                     gap: 8,
+                    marginBottom: 32,
                   }}
                 >
                   <Text>
-                    This option makes Vocably to show only multi-choice
-                    questions.
+                    Vocably will only show multiple-choice question if possible.
                   </Text>
                 </View>
               </>
             )}
           </>
         )}
-      <Divider style={{ width: '100%', marginVertical: 16 }} />
-      <View
-        style={{
-          paddingLeft: insets.left + 16,
-          paddingRight: 8,
-          width: '100%',
-          gap: 8,
-        }}
+
+      <Surface
+        style={[
+          styles.surface,
+          { marginBottom: 32, gap: 16, padding: 16, paddingHorizontal: 32 },
+        ]}
       >
-        <Text>Maximum cards per study session:</Text>
-      </View>
-      {maximumCardsPerSession.status === 'loaded' && (
-        <View
-          style={{
-            width: '100%',
-            paddingLeft: insets.left + 16,
-            paddingRight: 16,
-          }}
-        >
-          <Slider
-            minimumValue={5}
-            maximumValue={40}
-            step={1}
-            minimumTrackTintColor={theme.colors.primary}
-            thumbTintColor={theme.colors.primary}
-            value={maximumCardsPerSession.value}
-            onValueChange={(value) => {
-              mutateMaximumCardsPerSession(value[0]);
-            }}
-          ></Slider>
-          <Text>{maximumCardsPerSession.value}</Text>
+        <View>
+          <Text style={{ fontSize: 16 }}>Maximum cards per study session</Text>
         </View>
-      )}
-      <Divider style={{ width: '100%', marginVertical: 16 }} />
+        {maximumCardsPerSession.status === 'loaded' && (
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              gap: 8,
+            }}
+          >
+            <Text style={{ fontSize: 16, width: 24 * fontScale }}>
+              {maximumCardsPerSession.value}
+            </Text>
+            <View style={{ flex: 1 }}>
+              <Slider
+                minimumValue={5}
+                maximumValue={40}
+                step={1}
+                minimumTrackTintColor={theme.colors.primary}
+                thumbTintColor={theme.colors.primary}
+                value={maximumCardsPerSession.value}
+                onValueChange={(value) => {
+                  mutateMaximumCardsPerSession(value[0]);
+                }}
+              ></Slider>
+            </View>
+          </View>
+        )}
+      </Surface>
+
       {isRandomizerEnabled.status === 'loaded' && (
-        <>
+        <Surface style={[styles.surface, { marginBottom: 8 }]}>
           <Checkbox.Item
             mode="android"
             position="leading"
@@ -216,18 +260,17 @@ export const StudySettingsScreen: FC<Props> = () => {
               width: '100%',
             }}
           />
-        </>
+        </Surface>
       )}
       <View
         style={{
-          paddingLeft: insets.left + 16,
-          paddingRight: 8,
-          width: '100%',
+          paddingHorizontal: 8,
         }}
       >
         <Text>
-          Important! This option disables the SuperMemo algorithm, which was
-          created to help people remember large amounts of information.{' '}
+          <Icon name="alert-outline" size={16} /> This option disables the
+          SuperMemo algorithm, which was created to help people remember large
+          amounts of information.{' '}
           <Text onPress={() => Linking.openURL('https://vocably.pro/srs.html')}>
             <Text
               style={{

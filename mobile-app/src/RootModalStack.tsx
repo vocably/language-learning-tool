@@ -1,12 +1,12 @@
 import { useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Button, useTheme } from 'react-native-paper';
-import { DrawerNavigator } from './DrawerNavigator';
 import { EditCardScreen } from './EditCardScreen';
 import { FeedbackModal } from './FeedbackModal';
 import { LanguageSelectorModal } from './LanguageSelectorModal';
 import { MnemonicModal } from './MnemonicModal';
 import { StudyScreen } from './study/StudyScreen';
+import { TabsNavigator } from './TabsNavigator';
 
 const Stack = createStackNavigator();
 
@@ -15,7 +15,7 @@ export const RootModalStack = () => {
   return (
     <Stack.Navigator>
       <Stack.Group screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="DrawerNavigator" component={DrawerNavigator} />
+        <Stack.Screen name="TabsNavigator" component={TabsNavigator} />
       </Stack.Group>
       <Stack.Group
         screenOptions={{
