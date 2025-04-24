@@ -1,19 +1,14 @@
 import { deleteUser, signOut } from '@aws-amplify/auth';
 import { FC, useCallback } from 'react';
-import { Alert, StyleSheet, View } from 'react-native';
-import { List, Surface, Text, useTheme } from 'react-native-paper';
+import { Alert, View } from 'react-native';
+import { List, Text, useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { clearAll } from '../asyncAppStorage';
 import { useUserEmail } from '../auth/useUserEmail';
 import { mainPadding } from '../styles';
-
-const styles = StyleSheet.create({
-  surface: {
-    padding: 8,
-    borderRadius: 16,
-  },
-});
+import { CustomSurface } from '../ui/CustomSurface';
+import { ScreenTitle } from '../ui/ScreenTitle';
 
 type Props = {};
 
@@ -51,25 +46,16 @@ export const AccountScreen: FC<Props> = () => {
         paddingTop: mainPadding,
       }}
     >
-      <View
-        style={{
-          marginBottom: 32,
-          flexDirection: 'row',
-          justifyContent: 'flex-start',
-          alignItems: 'center',
-          gap: 8,
-        }}
-      >
-        <Icon name="account-circle-outline" size={24} />
-        <View>
-          <Text style={{ fontSize: 24, color: theme.colors.secondary }}>
-            Your account
-          </Text>
-          <Text>{userEmail}</Text>
-        </View>
+      <View style={{ marginBottom: 32 }}>
+        <ScreenTitle
+          icon="account-circle-outline"
+          title="Your account"
+          style={{ marginBottom: 4 }}
+        />
+        <Text>{userEmail}</Text>
       </View>
 
-      <Surface style={[styles.surface, { marginBottom: 16 }]}>
+      <CustomSurface style={{ marginBottom: 16 }}>
         <List.Item
           title="Sign out"
           onPress={() => signOut()}
@@ -85,9 +71,9 @@ export const AccountScreen: FC<Props> = () => {
             />
           )}
         ></List.Item>
-      </Surface>
+      </CustomSurface>
 
-      <Surface style={[styles.surface, { marginBottom: 16 }]}>
+      <CustomSurface style={{ marginBottom: 16 }}>
         <List.Item
           title="Delete your account"
           onPress={onDelete}
@@ -103,7 +89,7 @@ export const AccountScreen: FC<Props> = () => {
             />
           )}
         ></List.Item>
-      </Surface>
+      </CustomSurface>
     </View>
   );
 };

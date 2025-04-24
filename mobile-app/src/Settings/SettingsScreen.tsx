@@ -1,16 +1,8 @@
 import { NavigationProp } from '@react-navigation/native';
 import React, { FC, useContext } from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
-import {
-  Button,
-  Divider,
-  List,
-  Surface,
-  Text,
-  useTheme,
-} from 'react-native-paper';
+import { ScrollView, View } from 'react-native';
+import { Button, Divider, Text, useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import VersionNumber from 'react-native-version-number';
 // @ts-ignore
 import { ENV_SUFFIX, SHOW_CLEAR_STORAGE_BUTTON } from '@env';
@@ -20,17 +12,12 @@ import { get } from 'lodash-es';
 import { clearAll } from '../asyncAppStorage';
 import { LanguagesContext } from '../languages/LanguagesContainer';
 import { mainPadding } from '../styles';
+import { CustomSurface } from '../ui/CustomSurface';
+import { ListItem } from '../ui/ListItem';
 
 type Props = {
   navigation: NavigationProp<any>;
 };
-
-const styles = StyleSheet.create({
-  surface: {
-    padding: 8,
-    borderRadius: 16,
-  },
-});
 
 export const SettingsScreen: FC<Props> = ({ navigation }) => {
   const theme = useTheme();
@@ -53,82 +40,29 @@ export const SettingsScreen: FC<Props> = ({ navigation }) => {
         paddingBottom: insets.bottom,
       }}
     >
-      <Surface style={[styles.surface, { marginBottom: 16 }]}>
-        <List.Item
+      <CustomSurface style={{ marginBottom: 16 }}>
+        <ListItem
+          leftIcon="account-circle-outline"
           title="Your account"
           onPress={() => navigation.navigate('AccountMenu')}
-          titleStyle={{
-            color: theme.colors.onBackground,
-          }}
-          left={() => (
-            <Icon
-              name="account-circle-outline"
-              size={24}
-              color={theme.colors.onBackground}
-              style={{ marginLeft: 16 }}
-            />
-          )}
-          right={() => (
-            <Icon
-              name="menu-right"
-              size={24}
-              color={theme.colors.onBackground}
-            />
-          )}
-        ></List.Item>
+        />
         <Divider />
-        <List.Item
+        <ListItem
+          leftIcon="book-open-variant"
           title="Study settings"
           onPress={() => navigation.navigate('StudySettings')}
-          titleStyle={{
-            color: theme.colors.onBackground,
-          }}
-          left={() => (
-            <Icon
-              name="book-open-variant"
-              size={24}
-              color={theme.colors.onBackground}
-              style={{ marginLeft: 16 }}
-            />
-          )}
-          right={() => (
-            <Icon
-              name="menu-right"
-              size={24}
-              color={theme.colors.onBackground}
-            />
-          )}
-        ></List.Item>
-      </Surface>
+        />
+      </CustomSurface>
 
       {selectedLanguage && (
         <>
-          <Surface style={[styles.surface, { marginBottom: 8 }]}>
-            <List.Item
+          <CustomSurface style={{ marginBottom: 8 }}>
+            <ListItem
+              leftIcon="bell-outline"
               title="Study remninders"
-              onPress={() => {
-                navigation.navigate('Notifications');
-              }}
-              titleStyle={{
-                color: theme.colors.onBackground,
-              }}
-              left={() => (
-                <Icon
-                  name="bell-outline"
-                  size={24}
-                  color={theme.colors.onBackground}
-                  style={{ marginLeft: 16 }}
-                />
-              )}
-              right={() => (
-                <Icon
-                  name="menu-right"
-                  size={24}
-                  color={theme.colors.onBackground}
-                />
-              )}
-            ></List.Item>
-          </Surface>
+              onPress={() => navigation.navigate('Notifications')}
+            />
+          </CustomSurface>
           <View style={{ paddingHorizontal: 16, marginBottom: 32, gap: 8 }}>
             <Text>
               Study reminders are sent once a day to remind you to review your{' '}
@@ -144,25 +78,13 @@ export const SettingsScreen: FC<Props> = ({ navigation }) => {
         </>
       )}
 
-      <Surface style={[styles.surface, { marginBottom: 8 }]}>
-        <List.Item
-          title="Provide feedback"
-          onPress={() => {
-            navigation.navigate('Feedback');
-          }}
-          titleStyle={{
-            color: theme.colors.onBackground,
-          }}
-          left={() => (
-            <Icon
-              name="message-text-outline"
-              size={24}
-              color={theme.colors.onBackground}
-              style={{ marginLeft: 16 }}
-            />
-          )}
-        ></List.Item>
-      </Surface>
+      <CustomSurface style={{ marginBottom: 8 }}>
+        <ListItem
+          leftIcon="message-text-outline"
+          title="Provide feedbacks"
+          onPress={() => navigation.navigate('Feedback')}
+        />
+      </CustomSurface>
 
       <View style={{ paddingHorizontal: 16 }}>
         <Text>

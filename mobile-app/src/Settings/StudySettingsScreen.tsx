@@ -1,25 +1,14 @@
 import { Slider } from '@miblanchard/react-native-slider';
 import { FC } from 'react';
-import {
-  Linking,
-  PixelRatio,
-  ScrollView,
-  StyleSheet,
-  View,
-} from 'react-native';
-import { Checkbox, Surface, Text, useTheme } from 'react-native-paper';
+import { Linking, PixelRatio, ScrollView, View } from 'react-native';
+import { Checkbox, Text, useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { getItem, setItem } from '../asyncAppStorage';
 import { mainPadding } from '../styles';
+import { CustomSurface } from '../ui/CustomSurface';
+import { ScreenTitle } from '../ui/ScreenTitle';
 import { useAsync } from '../useAsync';
-
-const styles = StyleSheet.create({
-  surface: {
-    padding: 8,
-    borderRadius: 16,
-  },
-});
 
 const MULTI_CHOICE_ENABLED_KEY = 'isMultiChoiceEnabled';
 const RANDOMIZER_ENABLED_KEY = 'isRandomizerEnabled';
@@ -111,27 +100,12 @@ export const StudySettingsScreen: FC<Props> = () => {
         paddingRight: insets.right + mainPadding,
       }}
     >
-      <View
-        style={{
-          marginBottom: 32,
-          flexDirection: 'row',
-          justifyContent: 'flex-start',
-          alignItems: 'center',
-          gap: 8,
-        }}
-      >
-        <Icon name="book-open-variant" size={24} />
-        <View>
-          <Text style={{ fontSize: 24, color: theme.colors.secondary }}>
-            Study settings
-          </Text>
-        </View>
-      </View>
+      <ScreenTitle icon="book-open-variant" title="Study settings" />
 
       {isMultiChoiceEnabledResult.status === 'loaded' &&
         preferMultiChoiceResult.status === 'loaded' && (
           <>
-            <Surface style={[styles.surface, { marginBottom: 8 }]}>
+            <CustomSurface style={{ marginBottom: 8 }}>
               <Checkbox.Item
                 mode="android"
                 position="leading"
@@ -148,7 +122,7 @@ export const StudySettingsScreen: FC<Props> = () => {
                   width: '100%',
                 }}
               />
-            </Surface>
+            </CustomSurface>
 
             <View
               style={{
@@ -171,7 +145,7 @@ export const StudySettingsScreen: FC<Props> = () => {
 
             {isMultiChoiceEnabledResult.value && (
               <>
-                <Surface style={[styles.surface, { marginBottom: 8 }]}>
+                <CustomSurface style={{ marginBottom: 8 }}>
                   <Checkbox.Item
                     mode="android"
                     position="leading"
@@ -188,7 +162,7 @@ export const StudySettingsScreen: FC<Props> = () => {
                       width: '100%',
                     }}
                   />
-                </Surface>
+                </CustomSurface>
                 <View
                   style={{
                     paddingLeft: 8,
@@ -207,11 +181,13 @@ export const StudySettingsScreen: FC<Props> = () => {
           </>
         )}
 
-      <Surface
-        style={[
-          styles.surface,
-          { marginBottom: 32, gap: 16, padding: 16, paddingHorizontal: 32 },
-        ]}
+      <CustomSurface
+        style={{
+          marginBottom: 32,
+          gap: 16,
+          padding: 16,
+          paddingHorizontal: 32,
+        }}
       >
         <View>
           <Text style={{ fontSize: 16 }}>Maximum cards per study session</Text>
@@ -242,10 +218,10 @@ export const StudySettingsScreen: FC<Props> = () => {
             </View>
           </View>
         )}
-      </Surface>
+      </CustomSurface>
 
       {isRandomizerEnabled.status === 'loaded' && (
-        <Surface style={[styles.surface, { marginBottom: 8 }]}>
+        <CustomSurface style={{ marginBottom: 8 }}>
           <Checkbox.Item
             mode="android"
             position="leading"
@@ -260,7 +236,7 @@ export const StudySettingsScreen: FC<Props> = () => {
               width: '100%',
             }}
           />
-        </Surface>
+        </CustomSurface>
       )}
       <View
         style={{

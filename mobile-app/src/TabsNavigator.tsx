@@ -20,7 +20,7 @@ export const TabsNavigator = () => {
         <Tabs.Screen
           name="DeckScreen"
           options={{
-            title: 'My Cards',
+            title: 'My cards',
             tabBarIcon: ({ color }) => (
               <Icon name="card-multiple-outline" color={color} size={24} />
             ),
@@ -44,7 +44,7 @@ export const TabsNavigator = () => {
         name="LookUp"
         component={LookUpScreen}
         options={{
-          title: 'Look Up',
+          title: 'Look up',
           tabBarIcon: ({ color }) => (
             <Icon name="translate" color={color} size={24} />
           ),

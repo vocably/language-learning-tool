@@ -31,7 +31,7 @@ export const DeckStack = () => {
       />
       <Stack.Screen
         name="EditDeck"
-        options={{ title: `Edit ${languageName}` }}
+        options={{ title: `My cards` }}
         component={EditDeckScreen}
       />
       <Stack.Screen

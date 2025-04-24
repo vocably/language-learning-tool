@@ -6,10 +6,18 @@ type Header = FC<StackHeaderProps>;
 
 export const Header: Header = ({ options, back, navigation, route }) => {
   return (
-    <Appbar.Header>
-      {back && <Appbar.BackAction onPress={navigation.goBack} />}
+    <Appbar.Header elevated={true}>
+      {back && (
+        <Appbar.BackAction
+          onPress={navigation.goBack}
+          style={{ backgroundColor: 'transparent' }}
+        />
+      )}
 
-      <Appbar.Content title={options.title} />
+      <Appbar.Content
+        style={{ alignItems: 'flex-start' }}
+        title={options.title}
+      />
     </Appbar.Header>
   );
 };

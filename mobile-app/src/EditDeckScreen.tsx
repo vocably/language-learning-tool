@@ -1,10 +1,15 @@
 import { NavigationProp } from '@react-navigation/native';
 import React, { FC } from 'react';
 import { ScrollView, View } from 'react-native';
-import { Button, Divider, List, Text, useTheme } from 'react-native-paper';
+import { Divider, List, Text, useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { DeleteDeckButton } from './DeleteDeckButton';
+import { mainPadding } from './styles';
+import { CustomSurface } from './ui/CustomSurface';
+import { ListItem } from './ui/ListItem';
+import { ScreenTitle } from './ui/ScreenTitle';
+import { useCurrentLanguageName } from './useCurrentLanguageName';
 
 type Props = {
   navigation: NavigationProp<any>;
@@ -13,19 +18,24 @@ type Props = {
 export const EditDeckScreen: FC<Props> = ({ navigation }) => {
   const insets = useSafeAreaInsets();
   const theme = useTheme();
+
+  const languageName = useCurrentLanguageName();
+
   return (
-    <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-      <View
-        style={{
-          flex: 1,
-          alignItems: 'center',
-          justifyContent: 'center',
-          width: '100%',
-          paddingLeft: insets.left,
-          paddingRight: insets.right,
-          paddingBottom: insets.bottom,
-        }}
-      >
+    <ScrollView
+      contentContainerStyle={{
+        paddingTop: mainPadding,
+        paddingBottom: insets.bottom + mainPadding,
+        paddingLeft: insets.left + mainPadding,
+        paddingRight: insets.right + mainPadding,
+      }}
+    >
+      <ScreenTitle
+        icon="card-multiple-outline"
+        title={`Edit ${languageName}`}
+      />
+
+      <CustomSurface style={{ marginBottom: 32 }}>
         <List.Item
           title="Study reminders"
           onPress={() => navigation.navigate('Notifications')}
@@ -85,25 +95,24 @@ export const EditDeckScreen: FC<Props> = ({ navigation }) => {
             />
           )}
         ></List.Item>
-        <Divider style={{ alignSelf: 'stretch', marginBottom: 16 }} />
-        <View
-          style={{
-            gap: 16,
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '100%',
-          }}
-        >
-          <DeleteDeckButton />
-          <Divider style={{ alignSelf: 'stretch' }} />
-          <Text>Are you looking for a specific feature?</Text>
-          <Button
-            mode="outlined"
-            onPress={() => navigation.navigate('Feedback')}
-          >
-            Yes, provide feedback
-          </Button>
-        </View>
+      </CustomSurface>
+
+      <CustomSurface style={{ marginBottom: 32 }}>
+        <DeleteDeckButton />
+      </CustomSurface>
+
+      <CustomSurface style={{ marginBottom: 8 }}>
+        <ListItem
+          leftIcon="message-text-outline"
+          title="Provide feedbacks"
+          onPress={() => navigation.navigate('Feedback')}
+        />
+      </CustomSurface>
+      <View style={{ paddingHorizontal: 16 }}>
+        <Text>
+          Are you missing any crucial feature or simply want to share your
+          opinion about Vocably with me? I would love to hear from you!
+        </Text>
       </View>
     </ScrollView>
   );
