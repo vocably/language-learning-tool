@@ -1,6 +1,6 @@
 import { NavigationProp } from '@react-navigation/native';
 import { FC, useCallback } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, useWindowDimensions, View } from 'react-native';
 import { IconButton, Text, useTheme } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { SourceLanguageButton } from '../SourceLanguageButton';
@@ -38,6 +38,8 @@ export const TranslationPresetForm: FC<Props> = ({
     });
   }, [preset]);
 
+  const { width: windowWidth } = useWindowDimensions();
+
   return (
     <View>
       <View style={styles.container}>
@@ -69,7 +71,6 @@ export const TranslationPresetForm: FC<Props> = ({
       {!preset.sourceLanguage && (
         <View
           style={{
-            marginLeft: 48,
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
@@ -84,15 +85,16 @@ export const TranslationPresetForm: FC<Props> = ({
       {preset.sourceLanguage && !preset.translationLanguage && (
         <View
           style={{
-            marginRight: 48,
+            width: '50%',
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'flex-end',
+            transform: [{ translateX: windowWidth / 3 }],
           }}
         >
           <Text style={{ color: theme.colors.secondary }}>
-            Select the language you speak fluently.
+            Select your mother tongue
           </Text>
           <Icon name="arrow-up-thin" size={48} color={theme.colors.secondary} />
         </View>
