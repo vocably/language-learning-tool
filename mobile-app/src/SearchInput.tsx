@@ -40,7 +40,7 @@ export const SearchInput: SearchInput = ({
           : theme.colors.tertiary,
         borderRadius: 12,
         opacity: disabled ? 0.5 : 1,
-        backgroundColor: theme.colors.background,
+        backgroundColor: 'transparent',
         paddingLeft: 12,
       }}
     >
@@ -61,6 +61,7 @@ export const SearchInput: SearchInput = ({
         autoCapitalize={'none'}
         onChangeText={onChange}
         placeholder={placeholder}
+        placeholderTextColor={theme.colors.tertiary}
         returnKeyType={'search'}
         onSubmitEditing={() => onSubmit(value)}
       />
