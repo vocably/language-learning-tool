@@ -34,6 +34,8 @@ import { Loader } from './loaders/Loader';
 import { swipeListButtonPressOpacity } from './stupidConstants';
 import { mainPadding } from './styles';
 import { TagsSelector } from './TagsSelector';
+import { CustomSurface } from './ui/CustomSurface';
+import { ListItem } from './ui/ListItem';
 
 const SWIPE_MENU_BUTTON_SIZE = 100;
 
@@ -484,7 +486,26 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
           contentContainerStyle={isEmpty && styles.emptyContentContainer}
           ListEmptyComponent={
             <View style={{ paddingHorizontal: mainPadding }}>
-              {selectedTags.length === 0 && <Text>Card list is empty.</Text>}
+              {selectedTags.length === 0 && (
+                <View style={{ width: '100%' }}>
+                  <View
+                    style={{ paddingHorizontal: 16, marginBottom: 16, gap: 8 }}
+                  >
+                    <Text>No cards yet.</Text>
+                    <Text>
+                      Head over to the Look Up tab to find and add some new
+                      words.
+                    </Text>
+                  </View>
+                  <CustomSurface>
+                    <ListItem
+                      leftIcon="translate"
+                      title="Go to Look up"
+                      onPress={() => navigation.navigate('LookUp')}
+                    />
+                  </CustomSurface>
+                </View>
+              )}
               {selectedTags.length === 1 && (
                 <Text>
                   You don't yet have cards marked with the{' '}
