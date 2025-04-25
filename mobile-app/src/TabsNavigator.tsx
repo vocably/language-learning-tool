@@ -15,51 +15,61 @@ export const TabsNavigator = () => {
   const { isWelcomeVisible } = useContext(WelcomeContext);
 
   return (
-    <Tabs.Navigator>
-      {languages.length > 0 && (
+    <>
+      <Tabs.Navigator
+        barStyle={{
+          elevation: 10, // Android
+          shadowColor: '#000',
+          shadowOffset: { width: 0, height: -1 },
+          shadowOpacity: 0.1,
+          shadowRadius: 3,
+        }}
+      >
+        {languages.length > 0 && (
+          <Tabs.Screen
+            name="DeckScreen"
+            options={{
+              title: 'My cards',
+              tabBarIcon: ({ color }) => (
+                <Icon name="card-multiple-outline" color={color} size={24} />
+              ),
+            }}
+            component={DeckStack}
+          />
+        )}
+        {(isWelcomeVisible || languages.length === 0) && (
+          <Tabs.Screen
+            name="WelcomeScreen"
+            options={{
+              title: 'Welcome',
+              tabBarIcon: ({ color }) => (
+                <Icon name="human-greeting-variant" color={color} size={24} />
+              ),
+            }}
+            component={WelcomeStack}
+          />
+        )}
         <Tabs.Screen
-          name="DeckScreen"
+          name="LookUp"
+          component={LookUpScreen}
           options={{
-            title: 'My cards',
+            title: 'Look up',
             tabBarIcon: ({ color }) => (
-              <Icon name="card-multiple-outline" color={color} size={24} />
+              <Icon name="translate" color={color} size={24} />
             ),
           }}
-          component={DeckStack}
         />
-      )}
-      {(isWelcomeVisible || languages.length === 0) && (
         <Tabs.Screen
-          name="WelcomeScreen"
+          name="Settings"
+          component={SettingsStack}
           options={{
-            title: 'Welcome',
+            title: 'Settings',
             tabBarIcon: ({ color }) => (
-              <Icon name="human-greeting-variant" color={color} size={24} />
+              <Icon name="tune-variant" color={color} size={24} />
             ),
           }}
-          component={WelcomeStack}
         />
-      )}
-      <Tabs.Screen
-        name="LookUp"
-        component={LookUpScreen}
-        options={{
-          title: 'Look up',
-          tabBarIcon: ({ color }) => (
-            <Icon name="translate" color={color} size={24} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="Settings"
-        component={SettingsStack}
-        options={{
-          title: 'Settings',
-          tabBarIcon: ({ color }) => (
-            <Icon name="tune-variant" color={color} size={24} />
-          ),
-        }}
-      />
-    </Tabs.Navigator>
+      </Tabs.Navigator>
+    </>
   );
 };
