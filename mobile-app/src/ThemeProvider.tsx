@@ -11,6 +11,7 @@ type ThemeProvider = FC<PropsWithChildren<{}>>;
 
 export const lightTheme: MD3Theme = {
   ...MD3LightTheme,
+  roundness: 3,
   colors: {
     ...MD3LightTheme.colors,
     background: 'rgb(255, 255, 255)',
@@ -45,6 +46,7 @@ export const lightTheme: MD3Theme = {
 
 const darkTheme: MD3Theme = {
   ...MD3DarkTheme,
+  roundness: 3,
   colors: {
     ...MD3DarkTheme.colors,
     background: 'rgb(37, 37, 37)',

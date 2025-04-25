@@ -6,11 +6,12 @@ import React, { FC, useEffect, useRef, useState } from 'react';
 import {
   Alert,
   Keyboard,
+  Platform,
   StyleSheet,
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
-import { Surface, Text, useTheme } from 'react-native-paper';
+import { Surface, Text, TouchableRipple, useTheme } from 'react-native-paper';
 import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -265,102 +266,107 @@ export const LookUpScreen: FC<Props> = ({
               style={{
                 flex: 1,
                 width: '100%',
-                paddingHorizontal: padding,
-                paddingVertical: padding,
-                paddingLeft: padding + 18,
                 gap: 8,
               }}
             >
               {!isSharedLookUp && (
-                <>
-                  {canTranslate && (
-                    <View>
-                      <Text>
-                        The cards will be saved to your{' '}
-                        {
-                          languageList[
-                            translationPresetState.preset
-                              .sourceLanguage as GoogleLanguage
-                          ]
-                        }{' '}
-                        deck.
-                      </Text>
-                    </View>
-                  )}
+                <View
+                  style={{ alignItems: 'center', justifyContent: 'center' }}
+                >
                   {canTranslate && !translationPresetState.preset.isReverse && (
                     <Animated.View entering={FadeIn} exiting={FadeOut}>
-                      <Text>
-                        To search in{' '}
-                        {
-                          languageList[
-                            translationPresetState.preset
-                              .translationLanguage as GoogleLanguage
-                          ]
-                        }{' '}
-                        for a{' '}
-                        {
-                          languageList[
-                            translationPresetState.preset
-                              .sourceLanguage as GoogleLanguage
-                          ]
-                        }{' '}
-                        word or phrase, turn on reverse translation mode by
-                        clicking this{'\u00A0'}button:{'\u00A0'}
-                        <Text
+                      <Text style={{ fontSize: 16 }}>
+                        Use{' '}
+                        <TouchableRipple
                           style={{
-                            backgroundColor: theme.colors.inversePrimary,
+                            backgroundColor: theme.colors.elevation.level5,
+                            borderRadius: 12,
+                            padding: 4,
+                            transform: [
+                              {
+                                translateY: Platform.OS === 'android' ? 7 : 5,
+                              },
+                            ],
                           }}
                           onPress={() => setTranslationDirection(true)}
+                          borderless={true}
                         >
                           <Icon
-                            size={14}
+                            size={16}
                             color={theme.colors.primary}
                             name="arrow-right"
                           ></Icon>
-                        </Text>
-                      </Text>
-                    </Animated.View>
-                  )}
-
-                  {canTranslate && translationPresetState.preset.isReverse && (
-                    <Animated.View
-                      entering={FadeIn}
-                      exiting={FadeOut}
-                      style={{ gap: 8 }}
-                    >
-                      <View>
-                        <Text>Reverse Translation mode is on.</Text>
-                      </View>
-                      <View>
-                        <Text>
-                          To search in{' '}
+                        </TouchableRipple>{' '}
+                        to translate from{' '}
+                        <Text style={{ fontWeight: 'bold' }}>
+                          {
+                            languageList[
+                              translationPresetState.preset
+                                .translationLanguage as GoogleLanguage
+                            ]
+                          }
+                        </Text>{' '}
+                        to{' '}
+                        <Text style={{ fontWeight: 'bold' }}>
                           {
                             languageList[
                               translationPresetState.preset
                                 .sourceLanguage as GoogleLanguage
                             ]
                           }
-                          {', '}
-                          turn off reverse translation mode by clicking this
-                          {'\u00A0'}
-                          button:{'\u00A0'}
-                          <Text
-                            style={{
-                              backgroundColor: theme.colors.inversePrimary,
-                            }}
-                            onPress={() => setTranslationDirection(false)}
-                          >
-                            <Icon
-                              size={14}
-                              color={theme.colors.primary}
-                              name="arrow-left"
-                            ></Icon>
-                          </Text>
                         </Text>
-                      </View>
+                        .
+                      </Text>
                     </Animated.View>
                   )}
-                </>
+
+                  {canTranslate && translationPresetState.preset.isReverse && (
+                    <Animated.View entering={FadeIn} exiting={FadeOut}>
+                      <Text style={{ fontSize: 16 }}>
+                        Use{' '}
+                        <TouchableRipple
+                          style={{
+                            backgroundColor: theme.colors.elevation.level5,
+                            borderRadius: 12,
+                            padding: 4,
+                            transform: [
+                              {
+                                translateY: Platform.OS === 'android' ? 7 : 5,
+                              },
+                            ],
+                          }}
+                          onPress={() => setTranslationDirection(false)}
+                          borderless={true}
+                        >
+                          <Icon
+                            size={16}
+                            color={theme.colors.primary}
+                            name="arrow-left"
+                          ></Icon>
+                        </TouchableRipple>{' '}
+                        to translate from{' '}
+                        <Text style={{ fontWeight: 'bold' }}>
+                          {
+                            languageList[
+                              translationPresetState.preset
+                                .sourceLanguage as GoogleLanguage
+                            ]
+                          }
+                        </Text>{' '}
+                        to{' '}
+                        <Text style={{ fontWeight: 'bold' }}>
+                          {
+                            languageList[
+                              translationPresetState.preset
+                                .translationLanguage as GoogleLanguage
+                            ]
+                          }
+                        </Text>
+                        .
+                      </Text>
+                    </Animated.View>
+                  )}
+                </View>
               )}
             </View>
           </TouchableWithoutFeedback>
