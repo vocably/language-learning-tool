@@ -21,10 +21,7 @@ export const EditDeckScreen: FC<Props> = ({ navigation }) => {
 
   return (
     <CustomScrollView>
-      <ScreenTitle
-        icon="card-multiple-outline"
-        title={`Edit ${languageName}`}
-      />
+      <ScreenTitle icon="pencil-outline" title={`Edit ${languageName}`} />
 
       <CustomSurface style={{ marginBottom: 32 }}>
         <List.Item

@@ -1,12 +1,15 @@
 import { getFullLanguageName } from '@vocably/model';
 import { FC, useContext, useState } from 'react';
-import { PixelRatio } from 'react-native';
-import { Appbar, Menu, useTheme } from 'react-native-paper';
+import { PixelRatio, StyleProp, View, ViewStyle } from 'react-native';
+import { Menu, Text, TouchableRipple, useTheme } from 'react-native-paper';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { LanguagesContext } from './languages/LanguagesContainer';
 
-type LanguageSelector = FC<{}>;
+type Props = {
+  style?: StyleProp<ViewStyle>;
+};
 
-export const LanguageSelector: LanguageSelector = () => {
+export const LanguageSelector: FC<Props> = ({ style }) => {
   const { languages, selectedLanguage, selectLanguage } =
     useContext(LanguagesContext);
 
@@ -30,11 +33,24 @@ export const LanguageSelector: LanguageSelector = () => {
         visible={visible}
         onDismiss={closeMenu}
         anchor={
-          <Appbar.Action
-            icon="earth"
+          <TouchableRipple
+            hitSlop={24}
             onPress={openMenu}
-            size={24 * fontScale}
-          />
+            borderless={true}
+            style={[{ borderRadius: 32, padding: 8 }, style]}
+          >
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <Icon
+                color={theme.colors.onBackground}
+                name="earth"
+                size={24 * fontScale}
+                style={{ marginRight: 8 }}
+              />
+              <Text style={{ fontSize: 16, fontWeight: '500' }}>
+                {selectedLanguage.toUpperCase()}
+              </Text>
+            </View>
+          </TouchableRipple>
         }
       >
         {languages.map((language) => (
