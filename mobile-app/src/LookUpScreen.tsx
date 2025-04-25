@@ -10,9 +10,9 @@ import {
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
-import { Text, useTheme } from 'react-native-paper';
+import { Surface, Text, useTheme } from 'react-native-paper';
 import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useLanguageDeck } from './languageDeck/useLanguageDeck';
 import { InlineLoader } from './loaders/InlineLoader';
@@ -22,6 +22,7 @@ import { TranslationPresetForm } from './LookUpScreen/TranslationPresetForm';
 import { SearchInput } from './SearchInput';
 import { Preset } from './TranslationPreset/TranslationPresetContainer';
 import { useTranslationPreset } from './TranslationPreset/useTranslationPreset';
+import { CustomScrollView } from './ui/CustomScrollView';
 import { useAnalyzeOperations } from './useAnalyzeOperations';
 
 const padding = 16;
@@ -96,6 +97,9 @@ export const LookUpScreen: FC<Props> = ({
         : '',
     autoReload: true,
   });
+
+  const insets = useSafeAreaInsets();
+
   const posthog = usePostHog();
 
   const cancelThePreviousLookUp = () => {
@@ -211,165 +215,180 @@ export const LookUpScreen: FC<Props> = ({
       translationPresetState.preset.translationLanguage;
 
   return (
-    <SafeAreaView
-      style={[styles.container, { backgroundColor: theme.colors.background }]}
-    >
-      <View style={styles.languageToolbar}>
-        <TranslationPresetForm
-          navigation={navigation}
-          languagePairs={languagePairs}
-          preset={translationPresetState.preset}
-          onChange={setTranslationPreset}
-        />
-      </View>
-      <View style={[styles.searchContainer]}>
-        <SearchInput
-          value={lookUpText}
-          placeholder={
-            languageList[
-              (translationPresetState.preset.isReverse
-                ? translationPresetState.preset.translationLanguage
-                : translationPresetState.preset
-                    .sourceLanguage) as GoogleLanguage
-            ]
-          }
-          onChange={setLookUpText}
-          onSubmit={lookUp}
-          disabled={
-            !translationPresetState.preset.sourceLanguage ||
-            !translationPresetState.preset.translationLanguage
-          }
-        />
-      </View>
-      {!isAnalyzingPreset && !lookUpResult && (
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-          <View
-            style={{
-              flex: 1,
-              width: '100%',
-              paddingHorizontal: padding,
-              paddingVertical: padding,
-              paddingLeft: padding + 18,
-              gap: 8,
-            }}
+    <>
+      <Surface elevation={2}>
+        <View
+          style={{
+            paddingTop: insets.top,
+            paddingLeft: insets.left,
+            paddingRight: insets.right,
+            paddingBottom: 24,
+          }}
+        >
+          <View style={styles.languageToolbar}>
+            <TranslationPresetForm
+              navigation={navigation}
+              languagePairs={languagePairs}
+              preset={translationPresetState.preset}
+              onChange={setTranslationPreset}
+            />
+          </View>
+          <View style={[styles.searchContainer]}>
+            <SearchInput
+              value={lookUpText}
+              multiline={true}
+              placeholder={
+                languageList[
+                  (translationPresetState.preset.isReverse
+                    ? translationPresetState.preset.translationLanguage
+                    : translationPresetState.preset
+                        .sourceLanguage) as GoogleLanguage
+                ]
+              }
+              onChange={setLookUpText}
+              onSubmit={lookUp}
+              disabled={
+                !translationPresetState.preset.sourceLanguage ||
+                !translationPresetState.preset.translationLanguage
+              }
+            />
+          </View>
+        </View>
+      </Surface>
+      <CustomScrollView>
+        {!isAnalyzingPreset && !lookUpResult && (
+          <TouchableWithoutFeedback
+            onPress={Keyboard.dismiss}
+            accessible={false}
           >
-            {!isSharedLookUp && (
-              <>
-                {canTranslate && (
-                  <View>
-                    <Text>
-                      The cards will be saved to your{' '}
-                      {
-                        languageList[
-                          translationPresetState.preset
-                            .sourceLanguage as GoogleLanguage
-                        ]
-                      }{' '}
-                      deck.
-                    </Text>
-                  </View>
-                )}
-                {canTranslate && !translationPresetState.preset.isReverse && (
-                  <Animated.View entering={FadeIn} exiting={FadeOut}>
-                    <Text>
-                      To search in{' '}
-                      {
-                        languageList[
-                          translationPresetState.preset
-                            .translationLanguage as GoogleLanguage
-                        ]
-                      }{' '}
-                      for a{' '}
-                      {
-                        languageList[
-                          translationPresetState.preset
-                            .sourceLanguage as GoogleLanguage
-                        ]
-                      }{' '}
-                      word or phrase, turn on reverse translation mode by
-                      clicking this{'\u00A0'}button:{'\u00A0'}
-                      <Text
-                        style={{
-                          backgroundColor: theme.colors.inversePrimary,
-                        }}
-                        onPress={() => setTranslationDirection(true)}
-                      >
-                        <Icon
-                          size={14}
-                          color={theme.colors.primary}
-                          name="arrow-right"
-                        ></Icon>
-                      </Text>
-                    </Text>
-                  </Animated.View>
-                )}
-
-                {canTranslate && translationPresetState.preset.isReverse && (
-                  <Animated.View
-                    entering={FadeIn}
-                    exiting={FadeOut}
-                    style={{ gap: 8 }}
-                  >
-                    <View>
-                      <Text>Reverse Translation mode is on.</Text>
-                    </View>
+            <View
+              style={{
+                flex: 1,
+                width: '100%',
+                paddingHorizontal: padding,
+                paddingVertical: padding,
+                paddingLeft: padding + 18,
+                gap: 8,
+              }}
+            >
+              {!isSharedLookUp && (
+                <>
+                  {canTranslate && (
                     <View>
                       <Text>
-                        To search in{' '}
+                        The cards will be saved to your{' '}
                         {
                           languageList[
                             translationPresetState.preset
                               .sourceLanguage as GoogleLanguage
                           ]
-                        }
-                        {', '}
-                        turn off reverse translation mode by clicking this
-                        {'\u00A0'}
-                        button:{'\u00A0'}
+                        }{' '}
+                        deck.
+                      </Text>
+                    </View>
+                  )}
+                  {canTranslate && !translationPresetState.preset.isReverse && (
+                    <Animated.View entering={FadeIn} exiting={FadeOut}>
+                      <Text>
+                        To search in{' '}
+                        {
+                          languageList[
+                            translationPresetState.preset
+                              .translationLanguage as GoogleLanguage
+                          ]
+                        }{' '}
+                        for a{' '}
+                        {
+                          languageList[
+                            translationPresetState.preset
+                              .sourceLanguage as GoogleLanguage
+                          ]
+                        }{' '}
+                        word or phrase, turn on reverse translation mode by
+                        clicking this{'\u00A0'}button:{'\u00A0'}
                         <Text
                           style={{
                             backgroundColor: theme.colors.inversePrimary,
                           }}
-                          onPress={() => setTranslationDirection(false)}
+                          onPress={() => setTranslationDirection(true)}
                         >
                           <Icon
                             size={14}
                             color={theme.colors.primary}
-                            name="arrow-left"
+                            name="arrow-right"
                           ></Icon>
                         </Text>
                       </Text>
-                    </View>
-                  </Animated.View>
-                )}
-              </>
-            )}
-          </View>
-        </TouchableWithoutFeedback>
-      )}
-      {isAnalyzingPreset && (
-        <Animated.View
-          entering={FadeIn}
-          exiting={FadeOut.duration(50)}
-          style={{
-            padding: padding,
-            marginTop: 16,
-          }}
-        >
-          <InlineLoader>{getLoadingText(isAnalyzingPreset)}</InlineLoader>
-        </Animated.View>
-      )}
-      {!isAnalyzingPreset && lookUpResult && lookUpResult.success && (
-        <Analyze
-          style={styles.resultContainer}
-          analysis={lookUpResult.value}
-          cards={deck.deck.cards}
-          onAdd={onAdd}
-          onRemove={onRemove}
-          onTagsChange={onTagsChange}
-          deck={deck}
-        />
-      )}
-    </SafeAreaView>
+                    </Animated.View>
+                  )}
+
+                  {canTranslate && translationPresetState.preset.isReverse && (
+                    <Animated.View
+                      entering={FadeIn}
+                      exiting={FadeOut}
+                      style={{ gap: 8 }}
+                    >
+                      <View>
+                        <Text>Reverse Translation mode is on.</Text>
+                      </View>
+                      <View>
+                        <Text>
+                          To search in{' '}
+                          {
+                            languageList[
+                              translationPresetState.preset
+                                .sourceLanguage as GoogleLanguage
+                            ]
+                          }
+                          {', '}
+                          turn off reverse translation mode by clicking this
+                          {'\u00A0'}
+                          button:{'\u00A0'}
+                          <Text
+                            style={{
+                              backgroundColor: theme.colors.inversePrimary,
+                            }}
+                            onPress={() => setTranslationDirection(false)}
+                          >
+                            <Icon
+                              size={14}
+                              color={theme.colors.primary}
+                              name="arrow-left"
+                            ></Icon>
+                          </Text>
+                        </Text>
+                      </View>
+                    </Animated.View>
+                  )}
+                </>
+              )}
+            </View>
+          </TouchableWithoutFeedback>
+        )}
+        {isAnalyzingPreset && (
+          <Animated.View
+            entering={FadeIn}
+            exiting={FadeOut.duration(50)}
+            style={{
+              padding: padding,
+              marginTop: 16,
+            }}
+          >
+            <InlineLoader>{getLoadingText(isAnalyzingPreset)}</InlineLoader>
+          </Animated.View>
+        )}
+        {!isAnalyzingPreset && lookUpResult && lookUpResult.success && (
+          <Analyze
+            style={styles.resultContainer}
+            analysis={lookUpResult.value}
+            cards={deck.deck.cards}
+            onAdd={onAdd}
+            onRemove={onRemove}
+            onTagsChange={onTagsChange}
+            deck={deck}
+          />
+        )}
+      </CustomScrollView>
+    </>
   );
 };
