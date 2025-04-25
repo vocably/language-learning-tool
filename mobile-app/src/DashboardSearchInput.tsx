@@ -48,24 +48,14 @@ export const DashboardSearchInput = forwardRef<DashboardSearchInputRef, Props>(
               flexDirection: 'row',
               alignItems: 'center',
               borderColor: isFocused
-                ? theme.colors.primary
-                : theme.colors.outlineVariant,
+                ? theme.colors.outlineVariant
+                : theme.colors.tertiary,
               borderWidth: 1,
-              borderRadius: 32,
+              borderRadius: 8,
               paddingLeft: 8,
               paddingRight: 0,
               gap: 6,
-              shadowOffset: {
-                width: 0,
-                height: 0,
-              },
-              shadowOpacity: 0.5,
-              shadowColor: isFocused
-                ? theme.colors.primary
-                : theme.colors.outlineVariant,
-              shadowRadius: 5,
               backgroundColor: theme.colors.background,
-              elevation: 7,
             },
             style,
           ]}

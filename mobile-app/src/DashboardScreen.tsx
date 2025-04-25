@@ -184,39 +184,57 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
         }}
       >
         <Appbar.Header elevated={true}>
-          <LanguageSelector style={{ marginLeft: 8 }} />
-          <View
-            style={{
-              alignSelf: 'center',
-              backgroundColor: theme.colors.elevation.level5,
-              alignItems: 'center',
-              justifyContent: 'center',
-              borderRadius: 24,
-              minWidth: 24 * fontScale,
-              minHeight: 18 * fontScale,
-              paddingHorizontal: 6,
-              paddingVertical: 3,
-            }}
-          >
-            <Text
-              style={{
-                color: theme.colors.onTertiary,
-                fontSize: 12,
-              }}
-            >
-              {cards.length}
-            </Text>
-          </View>
-          <View style={{ flexGrow: 1 }}></View>
-          <Appbar.Action
-            icon={'pencil-outline'}
-            onPress={() => navigation.navigate('EditDeck')}
-            size={20 * fontScale}
-            style={{ backgroundColor: 'transparent' }}
-          />
+          {(!canBeSearched || !isSearching) && (
+            <>
+              <LanguageSelector style={{ marginLeft: 12 }} />
+              <View
+                style={{
+                  alignSelf: 'center',
+                  backgroundColor: theme.colors.elevation.level5,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  borderRadius: 24,
+                  minWidth: 24 * fontScale,
+                  minHeight: 18 * fontScale,
+                  paddingHorizontal: 6,
+                  paddingVertical: 3,
+                }}
+              >
+                <Text
+                  style={{
+                    color: theme.colors.onTertiary,
+                    fontSize: 12,
+                  }}
+                >
+                  {deck.cards.length}
+                </Text>
+              </View>
+              <View style={{ flexGrow: 1 }}></View>
+              <Appbar.Action
+                icon={'pencil-outline'}
+                onPress={() => navigation.navigate('EditDeck')}
+                size={22 * fontScale}
+                style={{ backgroundColor: 'transparent' }}
+              />
+            </>
+          )}
+          {canBeSearched && isSearching && (
+            <View style={{ flexGrow: 1, paddingLeft: 18 }}>
+              <DashboardSearchInput
+                value={searchText}
+                ref={searchInputRef}
+                onChange={(text) => {
+                  setSearchText(text);
+                }}
+                style={{
+                  height: 40 * fontScale,
+                }}
+              />
+            </View>
+          )}
           {canBeSearched && (
             <Appbar.Action
-              icon={isSearching ? 'magnify-remove-outline' : 'magnify'}
+              icon={isSearching ? 'close' : 'magnify'}
               onPress={() => setIsSearching(!isSearching)}
               size={24 * fontScale}
               style={{ backgroundColor: 'transparent' }}
@@ -243,79 +261,62 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                 marginBottom: 8,
               }}
             >
-              {canBeSearched && isSearching && (
-                <DashboardSearchInput
-                  value={searchText}
-                  ref={searchInputRef}
-                  onChange={(text) => {
-                    setSearchText(text);
-                  }}
+              <Button
+                style={{
+                  height: 40 * fontScale,
+                  justifyContent: 'center',
+                  borderRadius: 12,
+                }}
+                labelStyle={{
+                  fontSize: 18,
+                }}
+                mode={'contained'}
+                onPress={() => navigation.navigate('Study')}
+                disabled={cards.length === 0 || !netInfo.isInternetReachable}
+              >
+                Study{selectedTags.length > 0 ? ' selected tags' : ''}
+              </Button>
+              {deck.tags.length > 0 && (
+                <View
                   style={{
-                    height: 40 * fontScale,
+                    position: 'absolute',
+                    right: 0,
+                    top: 0,
+                    bottom: 0,
+                    justifyContent: 'center',
                   }}
-                />
-              )}
-              {(!canBeSearched || !isSearching) && (
-                <>
-                  <Button
-                    style={{
-                      height: 40 * fontScale,
-                      justifyContent: 'center',
+                >
+                  <TagsSelector
+                    value={selectedTags}
+                    onChange={async (tags) => {
+                      await setSelectedTagIds(tags.map((t) => t.id));
+                      postHog.capture('practice_tags_selected', {
+                        tags: tags.map((t) => t.data.title).join(', '),
+                      });
                     }}
-                    labelStyle={{
-                      fontSize: 18,
-                    }}
-                    mode={'contained'}
-                    onPress={() => navigation.navigate('Study')}
-                    disabled={
-                      cards.length === 0 || !netInfo.isInternetReachable
-                    }
-                  >
-                    Study{selectedTags.length > 0 ? ' selected tags' : ''}
-                  </Button>
-                  {deck.tags.length > 0 && (
-                    <View
-                      style={{
-                        position: 'absolute',
-                        right: 0,
-                        top: 0,
-                        bottom: 0,
-                        justifyContent: 'center',
-                      }}
-                    >
-                      <TagsSelector
-                        value={selectedTags}
-                        onChange={async (tags) => {
-                          await setSelectedTagIds(tags.map((t) => t.id));
-                          postHog.capture('practice_tags_selected', {
-                            tags: tags.map((t) => t.data.title).join(', '),
-                          });
-                        }}
-                        isAllowedToAdd={false}
-                        deck={selectedDeck}
-                        renderAnchor={({ openMenu, disabled }) => (
-                          <Pressable
-                            style={({ pressed }) => [
-                              {
-                                opacity: pressed ? 0.8 : 1,
-                                padding: 8,
-                              },
-                            ]}
-                            hitSlop={20}
-                            onPress={openMenu}
-                            disabled={disabled}
-                          >
-                            <Icon
-                              name={'tag'}
-                              color={theme.colors.onPrimary}
-                              size={22 * fontScale}
-                            />
-                          </Pressable>
-                        )}
-                      />
-                    </View>
-                  )}
-                </>
+                    isAllowedToAdd={false}
+                    deck={selectedDeck}
+                    renderAnchor={({ openMenu, disabled }) => (
+                      <Pressable
+                        style={({ pressed }) => [
+                          {
+                            opacity: pressed ? 0.8 : 1,
+                            padding: 8,
+                          },
+                        ]}
+                        hitSlop={20}
+                        onPress={openMenu}
+                        disabled={disabled}
+                      >
+                        <Icon
+                          name={'tag'}
+                          color={theme.colors.onPrimary}
+                          size={22 * fontScale}
+                        />
+                      </Pressable>
+                    )}
+                  />
+                </View>
               )}
             </View>
             {selectedTags.length > 0 && (
