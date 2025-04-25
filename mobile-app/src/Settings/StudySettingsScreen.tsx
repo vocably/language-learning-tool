@@ -1,11 +1,10 @@
 import { Slider } from '@miblanchard/react-native-slider';
 import { FC } from 'react';
-import { Linking, PixelRatio, ScrollView, View } from 'react-native';
+import { Linking, PixelRatio, View } from 'react-native';
 import { Checkbox, Text, useTheme } from 'react-native-paper';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { getItem, setItem } from '../asyncAppStorage';
-import { mainPadding } from '../styles';
+import { CustomScrollView } from '../ui/CustomScrollView';
 import { CustomSurface } from '../ui/CustomSurface';
 import { ScreenTitle } from '../ui/ScreenTitle';
 import { useAsync } from '../useAsync';
@@ -43,7 +42,6 @@ type Props = {};
 
 export const StudySettingsScreen: FC<Props> = () => {
   const theme = useTheme();
-  const insets = useSafeAreaInsets();
 
   const [isMultiChoiceEnabledResult, mutateMultiChoiceEnabled] = useAsync(
     getMultiChoiceEnabled,
@@ -90,16 +88,7 @@ export const StudySettingsScreen: FC<Props> = () => {
   const fontScale = Math.max(1, PixelRatio.getFontScale());
 
   return (
-    <ScrollView
-      contentContainerStyle={{
-        alignItems: 'stretch',
-        justifyContent: 'flex-start',
-        paddingTop: mainPadding,
-        paddingBottom: insets.bottom + mainPadding,
-        paddingLeft: insets.left + mainPadding,
-        paddingRight: insets.right + mainPadding,
-      }}
-    >
+    <CustomScrollView>
       <ScreenTitle icon="book-open-variant" title="Study settings" />
 
       {isMultiChoiceEnabledResult.status === 'loaded' &&
@@ -270,6 +259,6 @@ export const StudySettingsScreen: FC<Props> = () => {
           </Text>
         </Text>
       </View>
-    </ScrollView>
+    </CustomScrollView>
   );
 };

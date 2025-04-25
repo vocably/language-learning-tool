@@ -1,17 +1,17 @@
 import { NavigationProp } from '@react-navigation/native';
 import React, { FC, useContext } from 'react';
-import { ScrollView, View } from 'react-native';
+import { View } from 'react-native';
 import { Button, Divider, Text, useTheme } from 'react-native-paper';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import VersionNumber from 'react-native-version-number';
 // @ts-ignore
 import { ENV_SUFFIX, SHOW_CLEAR_STORAGE_BUTTON } from '@env';
 import { languageList } from '@vocably/model';
 import { trimLanguage } from '@vocably/sulna';
 import { get } from 'lodash-es';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { clearAll } from '../asyncAppStorage';
 import { LanguagesContext } from '../languages/LanguagesContainer';
-import { mainPadding } from '../styles';
+import { CustomScrollView } from '../ui/CustomScrollView';
 import { CustomSurface } from '../ui/CustomSurface';
 import { ListItem } from '../ui/ListItem';
 
@@ -29,15 +29,9 @@ export const SettingsScreen: FC<Props> = ({ navigation }) => {
 
   // @ts-ignore
   return (
-    <ScrollView
+    <CustomScrollView
       contentContainerStyle={{
-        display: 'flex',
-        justifyContent: 'center',
-        minHeight: '100%',
-        paddingLeft: insets.left + mainPadding,
-        paddingTop: insets.top + mainPadding,
-        paddingRight: insets.right + mainPadding,
-        paddingBottom: insets.bottom,
+        paddingTop: insets.top + 32,
       }}
     >
       <CustomSurface style={{ marginBottom: 16 }}>
@@ -93,14 +87,6 @@ export const SettingsScreen: FC<Props> = ({ navigation }) => {
         </Text>
       </View>
 
-      <View
-        style={{
-          paddingHorizontal: 16,
-          flex: 1,
-          justifyContent: 'center',
-        }}
-      ></View>
-
       {VersionNumber.appVersion && (
         <View
           style={{
@@ -109,6 +95,7 @@ export const SettingsScreen: FC<Props> = ({ navigation }) => {
             gap: 16,
             alignItems: 'center',
             justifyContent: 'center',
+            marginTop: 48,
           }}
         >
           {SHOW_CLEAR_STORAGE_BUTTON === 'true' && (
@@ -132,6 +119,6 @@ export const SettingsScreen: FC<Props> = ({ navigation }) => {
           </Text>
         </View>
       )}
-    </ScrollView>
+    </CustomScrollView>
   );
 };

@@ -1,7 +1,8 @@
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { FC, useState } from 'react';
 import { Platform, View } from 'react-native';
-import { Button } from 'react-native-paper';
+import { Text } from 'react-native-paper';
+import { ListItem } from '../../ui/ListItem';
 
 type Props = {
   time: string;
@@ -23,33 +24,36 @@ export const TimePicker: FC<Props> = ({ time, onChange, disabled = false }) => {
       }}
     >
       {Platform.OS === 'ios' && (
-        <DateTimePicker
-          value={value}
-          minuteInterval={15}
-          mode={'time'}
-          display={'spinner'}
-          disabled={disabled}
-          onChange={(_, date) => {
-            if (date !== undefined) {
-              onChange(
-                `${date.getHours().toString().padStart(2, '0')}:${date
-                  .getMinutes()
-                  .toString()
-                  .padStart(2, '0')}`
-              );
-            }
-          }}
-        />
+        <>
+          <Text style={{ fontSize: 24, marginVertical: 32 }}>Receive at</Text>
+          <DateTimePicker
+            value={value}
+            minuteInterval={15}
+            mode={'time'}
+            display={'spinner'}
+            disabled={disabled}
+            onChange={(_, date) => {
+              if (date !== undefined) {
+                onChange(
+                  `${date.getHours().toString().padStart(2, '0')}:${date
+                    .getMinutes()
+                    .toString()
+                    .padStart(2, '0')}`
+                );
+              }
+            }}
+          />
+        </>
       )}
       {Platform.OS !== 'ios' && (
         <>
-          <Button
-            mode="contained"
+          <ListItem
+            leftIcon="clock-time-ten-outline"
+            rightIcon=""
             disabled={disabled}
             onPress={() => setIsAndroidVisible(true)}
-          >
-            Receive at {time}
-          </Button>
+            title={`Receive at ${time}`}
+          />
           {isAndroidVisible && (
             <DateTimePicker
               value={value}

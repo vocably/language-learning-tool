@@ -12,6 +12,7 @@ import { View } from 'react-native';
 import { getTimeZone } from 'react-native-localize';
 import { Switch, Text } from 'react-native-paper';
 import { InlineLoader } from '../../loaders/InlineLoader';
+import { CustomSurface } from '../../ui/CustomSurface';
 import { useAsync } from '../../useAsync';
 import { TimePicker } from './TimePicker';
 
@@ -115,16 +116,9 @@ export const NotificationsAllowed: FC<Props> = ({ language }) => {
   };
 
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: 12,
-      }}
-    >
+    <>
       {loadNotificationsResult.status === 'loading' && (
-        <InlineLoader>Loading preset...</InlineLoader>
+        <InlineLoader center={false}>Loading preset...</InlineLoader>
       )}
       {loadNotificationsResult.status === 'failed' && (
         <>
@@ -136,17 +130,7 @@ export const NotificationsAllowed: FC<Props> = ({ language }) => {
       )}
       {loadNotificationsResult.status === 'loaded' && (
         <>
-          <View
-            style={{
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: 12,
-            }}
-          >
-            <Text style={{ textAlign: 'center', paddingHorizontal: 38 }}>
-              Study reminders are sent once a day to remind you to review your{' '}
-              {languageString} cards.
-            </Text>
+          <CustomSurface style={{ padding: 16, marginBottom: 8 }}>
             <View
               style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}
             >
@@ -154,8 +138,16 @@ export const NotificationsAllowed: FC<Props> = ({ language }) => {
                 value={loadNotificationsResult.value.exists}
                 onChange={enableOrDisableNotificationTime}
               />
-              <Text>Enabled for {languageString}</Text>
+              <Text style={{ fontSize: 16 }}>Enabled for {languageString}</Text>
             </View>
+          </CustomSurface>
+          <View style={{ paddingHorizontal: 16, marginBottom: 32 }}>
+            <Text>
+              Study reminders are sent once a day to remind you to review your{' '}
+              {languageString} cards.
+            </Text>
+          </View>
+          <CustomSurface>
             <TimePicker
               disabled={!loadNotificationsResult.value.exists || isSwitching}
               time={
@@ -173,9 +165,9 @@ export const NotificationsAllowed: FC<Props> = ({ language }) => {
                 });
               }}
             />
-          </View>
+          </CustomSurface>
         </>
       )}
-    </View>
+    </>
   );
 };

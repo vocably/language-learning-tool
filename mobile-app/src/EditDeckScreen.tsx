@@ -1,11 +1,10 @@
 import { NavigationProp } from '@react-navigation/native';
 import React, { FC } from 'react';
-import { ScrollView, View } from 'react-native';
+import { View } from 'react-native';
 import { Divider, List, Text, useTheme } from 'react-native-paper';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { DeleteDeckButton } from './DeleteDeckButton';
-import { mainPadding } from './styles';
+import { CustomScrollView } from './ui/CustomScrollView';
 import { CustomSurface } from './ui/CustomSurface';
 import { ListItem } from './ui/ListItem';
 import { ScreenTitle } from './ui/ScreenTitle';
@@ -16,20 +15,12 @@ type Props = {
 };
 
 export const EditDeckScreen: FC<Props> = ({ navigation }) => {
-  const insets = useSafeAreaInsets();
   const theme = useTheme();
 
   const languageName = useCurrentLanguageName();
 
   return (
-    <ScrollView
-      contentContainerStyle={{
-        paddingTop: mainPadding,
-        paddingBottom: insets.bottom + mainPadding,
-        paddingLeft: insets.left + mainPadding,
-        paddingRight: insets.right + mainPadding,
-      }}
-    >
+    <CustomScrollView>
       <ScreenTitle
         icon="card-multiple-outline"
         title={`Edit ${languageName}`}
@@ -114,6 +105,6 @@ export const EditDeckScreen: FC<Props> = ({ navigation }) => {
           opinion about Vocably with me? I would love to hear from you!
         </Text>
       </View>
-    </ScrollView>
+    </CustomScrollView>
   );
 };

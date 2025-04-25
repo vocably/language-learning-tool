@@ -1,21 +1,18 @@
 import { FC } from 'react';
-import { ScrollView } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { View } from 'react-native';
 import { HowToGroupCards } from '../HowToGroupCards';
+import { CustomScrollView } from '../ui/CustomScrollView';
+import { ScreenTitle } from '../ui/ScreenTitle';
 
 type Props = {};
 
 export const HowToGroupCardsScreen: FC<Props> = () => {
-  const insets = useSafeAreaInsets();
   return (
-    <ScrollView
-      contentContainerStyle={{
-        justifyContent: 'center',
-        paddingHorizontal: insets.left + 16,
-        height: '100%',
-      }}
-    >
-      <HowToGroupCards />
-    </ScrollView>
+    <CustomScrollView>
+      <ScreenTitle icon="group" title="How to group cards" />
+      <View style={{ paddingHorizontal: 16 }}>
+        <HowToGroupCards />
+      </View>
+    </CustomScrollView>
   );
 };

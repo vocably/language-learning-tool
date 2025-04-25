@@ -25,7 +25,10 @@ export const ScreenTitle: FC<Props> = ({ style, icon, title }) => {
       ]}
     >
       <Icon name={icon} size={24} color={theme.colors.onBackground} />
-      <View>
+      {/*
+        Padding right 32 is needed for the Text element not to overflow the outer container: a quirk of React Native
+       */}
+      <View style={{ paddingRight: 32 }}>
         <Text style={{ fontSize: 24, color: theme.colors.onBackground }}>
           {title}
         </Text>

@@ -1,21 +1,24 @@
 import { getNotificationTime, setNotificationTime } from '@vocably/api';
-import { languageList, Result } from '@vocably/model';
-import { trimLanguage } from '@vocably/sulna';
+import { Result } from '@vocably/model';
 import {
   getPermissionStatus,
   GetPermissionStatusOutput,
   requestPermissions as amplifyRequestPermissions,
 } from 'aws-amplify/push-notifications';
-import { get } from 'lodash-es';
 import { usePostHog } from 'posthog-react-native';
 import { FC, useEffect, useState } from 'react';
-import { Alert, Platform, ScrollView } from 'react-native';
+import { Alert, Platform, View } from 'react-native';
 import { getTimeZone } from 'react-native-localize';
-import { Button, Text } from 'react-native-paper';
+import { Text } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useSelectedDeck } from '../languageDeck/useSelectedDeck';
 import { InlineLoader } from '../loaders/InlineLoader';
 import { notificationsIdentifyUser } from '../notificationsIdentifyUser';
+import { CustomScrollView } from '../ui/CustomScrollView';
+import { CustomSurface } from '../ui/CustomSurface';
+import { ListItem } from '../ui/ListItem';
+import { ScreenTitle } from '../ui/ScreenTitle';
+import { useCurrentLanguageName } from '../useCurrentLanguageName';
 import { NotificationsAllowed } from './notifications/NotificationsAllowed';
 import { NotificationsDenied } from './notifications/NotificationsDenied';
 
@@ -52,7 +55,7 @@ export const NotificationsScreen: FC<Props> = () => {
     deck: { language },
   } = useSelectedDeck({ autoReload: false });
 
-  const languageString = trimLanguage(get(languageList, language, ''));
+  const languageName = useCurrentLanguageName();
 
   const postHog = usePostHog();
 
@@ -114,19 +117,13 @@ export const NotificationsScreen: FC<Props> = () => {
   };
 
   return (
-    <ScrollView
-      contentContainerStyle={{
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingTop: insets.top,
-        paddingBottom: insets.bottom,
-        height: '100%',
-        gap: 12,
-      }}
-    >
+    <CustomScrollView>
+      <ScreenTitle icon="bell-outline" title="Study reminders" />
+
       {notificationsStatus === 'loading' && (
-        <InlineLoader>Checking...</InlineLoader>
+        <InlineLoader center={false}>Checking...</InlineLoader>
       )}
+
       {notificationsStatus === 'granted' && !enablingNotifications && (
         <NotificationsAllowed language={language} />
       )}
@@ -135,19 +132,23 @@ export const NotificationsScreen: FC<Props> = () => {
         notificationsStatus === 'shouldRequest' ||
         enablingNotifications) && (
         <>
-          <Text style={{ textAlign: 'center', paddingHorizontal: 38 }}>
-            Study reminders are sent once a day to remind you to review your{' '}
-            {languageString} cards.
-          </Text>
-          <Button
-            onPress={requestPermissions}
-            mode="contained"
-            loading={enablingNotifications}
-          >
-            Enable reminders
-          </Button>
+          <CustomSurface style={{ marginBottom: 8 }}>
+            <ListItem
+              leftIcon="bell"
+              title="Enable reminders"
+              onPress={requestPermissions}
+              disabled={enablingNotifications}
+              rightIcon=""
+            />
+          </CustomSurface>
+          <View style={{ paddingHorizontal: 16 }}>
+            <Text>
+              Study reminders are sent once a day to remind you to review your{' '}
+              {languageName} cards.
+            </Text>
+          </View>
         </>
       )}
-    </ScrollView>
+    </CustomScrollView>
   );
 };

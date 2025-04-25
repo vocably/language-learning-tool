@@ -2,15 +2,17 @@ import { FC, PropsWithChildren } from 'react';
 import { View } from 'react-native';
 import { ActivityIndicator, Text, useTheme } from 'react-native-paper';
 
-type InlineLoader = PropsWithChildren;
+type Props = PropsWithChildren<{
+  center?: boolean;
+}>;
 
-export const InlineLoader: FC<InlineLoader> = ({ children }) => {
+export const InlineLoader: FC<Props> = ({ children, center = true }) => {
   const theme = useTheme();
   return (
     <View
       style={{
         flexDirection: 'row',
-        justifyContent: 'center',
+        justifyContent: center ? 'center' : 'flex-start',
         alignItems: 'center',
       }}
     >

@@ -10,6 +10,7 @@ type Props = {
   rightIcon?: string;
   color?: string;
   onPress: () => void;
+  disabled?: boolean;
 };
 
 export const ListItem: FC<Props> = ({
@@ -19,10 +20,12 @@ export const ListItem: FC<Props> = ({
   color,
   onPress,
   title,
+  disabled = false,
 }) => {
   const theme = useTheme();
   return (
     <List.Item
+      disabled={disabled}
       style={style}
       title={title}
       onPress={onPress}

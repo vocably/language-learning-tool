@@ -2,11 +2,10 @@ import { deleteUser, signOut } from '@aws-amplify/auth';
 import { FC, useCallback } from 'react';
 import { Alert, View } from 'react-native';
 import { List, Text, useTheme } from 'react-native-paper';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { clearAll } from '../asyncAppStorage';
 import { useUserEmail } from '../auth/useUserEmail';
-import { mainPadding } from '../styles';
+import { CustomScrollView } from '../ui/CustomScrollView';
 import { CustomSurface } from '../ui/CustomSurface';
 import { ScreenTitle } from '../ui/ScreenTitle';
 
@@ -14,7 +13,6 @@ type Props = {};
 
 export const AccountScreen: FC<Props> = () => {
   const theme = useTheme();
-  const insets = useSafeAreaInsets();
   const userEmail = useUserEmail();
 
   const onDelete = useCallback(() => {
@@ -35,17 +33,7 @@ export const AccountScreen: FC<Props> = () => {
   }, []);
 
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: 'stretch',
-        justifyContent: 'flex-start',
-        paddingLeft: insets.left + mainPadding,
-        paddingRight: insets.right + mainPadding,
-        paddingBottom: insets.bottom + mainPadding,
-        paddingTop: mainPadding,
-      }}
-    >
+    <CustomScrollView>
       <View style={{ marginBottom: 32 }}>
         <ScreenTitle
           icon="account-circle-outline"
@@ -90,6 +78,6 @@ export const AccountScreen: FC<Props> = () => {
           )}
         ></List.Item>
       </CustomSurface>
-    </View>
+    </CustomScrollView>
   );
 };
