@@ -53,7 +53,7 @@ export const SettingsScreen: FC<Props> = ({ navigation }) => {
           <CustomSurface style={{ marginBottom: 8 }}>
             <ListItem
               leftIcon="bell-outline"
-              title="Study remninders"
+              title="Study reminders"
               onPress={() => navigation.navigate('Notifications')}
             />
           </CustomSurface>
@@ -62,7 +62,7 @@ export const SettingsScreen: FC<Props> = ({ navigation }) => {
               Study reminders are sent once a day to remind you to review your{' '}
               <Text style={{ fontWeight: 'bold' }}>{languageName}</Text> cards.
             </Text>
-            {languages.length > 0 && (
+            {languages.length > 1 && (
               <Text>
                 Every language has it's own reminder settings available in the
                 "Edit deck" screen.
@@ -75,7 +75,7 @@ export const SettingsScreen: FC<Props> = ({ navigation }) => {
       <CustomSurface style={{ marginBottom: 8 }}>
         <ListItem
           leftIcon="message-text-outline"
-          title="Provide feedbacks"
+          title="Provide feedback"
           onPress={() => navigation.navigate('Feedback')}
         />
       </CustomSurface>

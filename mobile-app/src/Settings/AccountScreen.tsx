@@ -39,8 +39,8 @@ export const AccountScreen: FC<Props> = () => {
           icon="account-circle-outline"
           title="Your account"
           style={{ marginBottom: 4 }}
+          subtitle={<Text>{userEmail}</Text>}
         />
-        <Text>{userEmail}</Text>
       </View>
 
       <CustomSurface style={{ marginBottom: 16 }}>

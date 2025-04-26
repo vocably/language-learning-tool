@@ -189,28 +189,6 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
           {(!canBeSearched || !isSearching) && (
             <>
               <LanguageSelector style={{ marginLeft: 12 }} />
-              <View
-                style={{
-                  alignSelf: 'center',
-                  backgroundColor: theme.colors.elevation.level5,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  borderRadius: 24,
-                  minWidth: 24 * fontScale,
-                  minHeight: 18 * fontScale,
-                  paddingHorizontal: 6,
-                  paddingVertical: 3,
-                }}
-              >
-                <Text
-                  style={{
-                    color: theme.colors.onTertiary,
-                    fontSize: 12,
-                  }}
-                >
-                  {deck.cards.length}
-                </Text>
-              </View>
               <View style={{ flexGrow: 1 }}></View>
               <Appbar.Action
                 icon={'pencil-outline'}

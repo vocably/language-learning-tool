@@ -4,6 +4,7 @@ import { View } from 'react-native';
 import { Divider, List, Text, useTheme } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { DeleteDeckButton } from './DeleteDeckButton';
+import { useSelectedDeck } from './languageDeck/useSelectedDeck';
 import { CustomScrollView } from './ui/CustomScrollView';
 import { CustomSurface } from './ui/CustomSurface';
 import { ListItem } from './ui/ListItem';
@@ -18,12 +19,22 @@ export const EditDeckScreen: FC<Props> = ({ navigation }) => {
   const theme = useTheme();
 
   const languageName = useCurrentLanguageName();
+  const deck = useSelectedDeck({ autoReload: false });
 
   return (
     <CustomScrollView>
-      <ScreenTitle icon="pencil-outline" title={`Edit ${languageName}`} />
+      <ScreenTitle
+        icon="pencil-outline"
+        title={`${languageName} deck options`}
+        subtitle={
+          <Text>
+            {deck.deck.cards.length} card
+            {deck.deck.cards.length === 1 ? '' : 's'}
+          </Text>
+        }
+      />
 
-      <CustomSurface style={{ marginBottom: 32 }}>
+      <CustomSurface style={{ marginBottom: 8 }}>
         <List.Item
           title="Study reminders"
           onPress={() => navigation.navigate('Notifications')}
@@ -43,7 +54,15 @@ export const EditDeckScreen: FC<Props> = ({ navigation }) => {
             />
           )}
         ></List.Item>
-        <Divider style={{ alignSelf: 'stretch' }} />
+      </CustomSurface>
+      <View style={{ paddingHorizontal: 16, marginBottom: 32, gap: 8 }}>
+        <Text>
+          Study reminders are sent once a day to remind you to review your{' '}
+          <Text style={{ fontWeight: 'bold' }}>{languageName}</Text> cards.
+        </Text>
+      </View>
+
+      <CustomSurface style={{ marginBottom: 32 }}>
         <List.Item
           title="How to group cards"
           onPress={() => navigation.navigate('HowToGroupCards')}
@@ -92,7 +111,7 @@ export const EditDeckScreen: FC<Props> = ({ navigation }) => {
       <CustomSurface style={{ marginBottom: 8 }}>
         <ListItem
           leftIcon="message-text-outline"
-          title="Provide feedbacks"
+          title="Provide feedback"
           onPress={() => navigation.navigate('Feedback')}
         />
       </CustomSurface>

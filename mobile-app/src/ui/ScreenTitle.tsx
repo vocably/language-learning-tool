@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import { StyleProp, View, ViewStyle } from 'react-native';
 import { Text, useTheme } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -7,9 +7,10 @@ type Props = {
   style?: StyleProp<ViewStyle>;
   icon: string;
   title: string;
+  subtitle?: ReactNode;
 };
 
-export const ScreenTitle: FC<Props> = ({ style, icon, title }) => {
+export const ScreenTitle: FC<Props> = ({ style, icon, title, subtitle }) => {
   const theme = useTheme();
   return (
     <View
@@ -32,6 +33,7 @@ export const ScreenTitle: FC<Props> = ({ style, icon, title }) => {
         <Text style={{ fontSize: 24, color: theme.colors.onBackground }}>
           {title}
         </Text>
+        {subtitle}
       </View>
     </View>
   );
