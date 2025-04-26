@@ -7,6 +7,7 @@ import {
   Alert,
   Keyboard,
   Platform,
+  ScrollView,
   StyleSheet,
   TouchableWithoutFeedback,
   View,
@@ -18,12 +19,11 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useLanguageDeck } from './languageDeck/useLanguageDeck';
 import { InlineLoader } from './loaders/InlineLoader';
 import { Loader } from './loaders/Loader';
-import { Analyze } from './LookUpScreen/AnalyzeResult';
+import { AnalyzeResult } from './LookUpScreen/AnalyzeResult';
 import { TranslationPresetForm } from './LookUpScreen/TranslationPresetForm';
 import { SearchInput } from './SearchInput';
 import { Preset } from './TranslationPreset/TranslationPresetContainer';
 import { useTranslationPreset } from './TranslationPreset/useTranslationPreset';
-import { CustomScrollView } from './ui/CustomScrollView';
 import { useAnalyzeOperations } from './useAnalyzeOperations';
 
 const padding = 16;
@@ -217,7 +217,7 @@ export const LookUpScreen: FC<Props> = ({
 
   return (
     <>
-      <Surface elevation={2}>
+      <Surface elevation={1}>
         <View
           style={{
             paddingTop: insets.top,
@@ -256,7 +256,13 @@ export const LookUpScreen: FC<Props> = ({
           </View>
         </View>
       </Surface>
-      <CustomScrollView>
+      <ScrollView
+        style={{ marginTop: 2 }}
+        contentContainerStyle={{
+          paddingBottom: insets.bottom + padding - 2,
+          paddingTop: padding,
+        }}
+      >
         {!isAnalyzingPreset && !lookUpResult && (
           <TouchableWithoutFeedback
             onPress={Keyboard.dismiss}
@@ -271,7 +277,11 @@ export const LookUpScreen: FC<Props> = ({
             >
               {!isSharedLookUp && (
                 <View
-                  style={{ alignItems: 'center', justifyContent: 'center' }}
+                  style={{
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    paddingHorizontal: padding,
+                  }}
                 >
                   {canTranslate && !translationPresetState.preset.isReverse && (
                     <Animated.View entering={FadeIn} exiting={FadeOut}>
@@ -384,7 +394,7 @@ export const LookUpScreen: FC<Props> = ({
           </Animated.View>
         )}
         {!isAnalyzingPreset && lookUpResult && lookUpResult.success && (
-          <Analyze
+          <AnalyzeResult
             style={styles.resultContainer}
             analysis={lookUpResult.value}
             cards={deck.deck.cards}
@@ -394,7 +404,7 @@ export const LookUpScreen: FC<Props> = ({
             deck={deck}
           />
         )}
-      </CustomScrollView>
+      </ScrollView>
     </>
   );
 };

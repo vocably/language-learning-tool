@@ -1,13 +1,13 @@
 import { Analysis, CardItem, Result, TagItem } from '@vocably/model';
 import React, { FC } from 'react';
-import { FlatList, StyleProp, ViewStyle } from 'react-native';
+import { StyleProp, View, ViewStyle } from 'react-native';
 import { Separator } from '../CardListItem';
 import { Deck } from '../languageDeck/useLanguageDeck';
 import { AnalyzeResultItem } from './AnalyzeResultItem';
 import { associateCards, AssociatedCard } from './associateCards';
 import { makeCards } from './makeCards';
 
-type AnalyzeResult = FC<{
+type Props = {
   analysis: Analysis;
   cards: CardItem[];
   onAdd: (card: AssociatedCard) => Promise<Result<CardItem>>;
@@ -15,9 +15,9 @@ type AnalyzeResult = FC<{
   onTagsChange: (id: string, tags: TagItem[]) => Promise<Result<true>>;
   style?: StyleProp<ViewStyle>;
   deck: Deck;
-}>;
+};
 
-export const Analyze: AnalyzeResult = ({
+export const AnalyzeResult: FC<Props> = ({
   analysis,
   style,
   cards,
@@ -29,21 +29,19 @@ export const Analyze: AnalyzeResult = ({
   const associatedCards = associateCards(makeCards(analysis), cards);
 
   return (
-    <FlatList
-      style={style}
-      data={associatedCards}
-      renderItem={({ item }) => (
-        <AnalyzeResultItem
-          onAdd={onAdd}
-          onRemove={onRemove}
-          onTagsChange={onTagsChange}
-          item={item}
-          deck={deck}
-        />
-      )}
-      keyExtractor={(item) => `${item.card.source}${item.card.partOfSpeech}`}
-      ItemSeparatorComponent={Separator}
-      nestedScrollEnabled={true}
-    />
+    <View>
+      {associatedCards.map((item, index) => (
+        <View key={`${item.card.source}${item.card.partOfSpeech}`}>
+          {index > 0 && <Separator />}
+          <AnalyzeResultItem
+            onAdd={onAdd}
+            onRemove={onRemove}
+            onTagsChange={onTagsChange}
+            item={item}
+            deck={deck}
+          />
+        </View>
+      ))}
+    </View>
   );
 };
