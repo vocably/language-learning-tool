@@ -237,7 +237,7 @@ export const LookUpScreen: FC<Props> = ({
           <View style={[styles.searchContainer]}>
             <SearchInput
               value={lookUpText}
-              multiline={true}
+              multiline={false}
               placeholder={
                 languageList[
                   (translationPresetState.preset.isReverse
