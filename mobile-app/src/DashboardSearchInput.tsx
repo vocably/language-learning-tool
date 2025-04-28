@@ -48,7 +48,7 @@ export const DashboardSearchInput = forwardRef<DashboardSearchInputRef, Props>(
               flexDirection: 'row',
               alignItems: 'center',
               borderColor: isFocused
-                ? theme.colors.outlineVariant
+                ? theme.colors.onSurface
                 : theme.colors.tertiary,
               borderWidth: 1,
               borderRadius: 8,

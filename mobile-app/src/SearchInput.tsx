@@ -35,9 +35,7 @@ export const SearchInput: SearchInput = ({
         justifyContent: 'center',
         borderStyle: 'solid',
         borderWidth: 1,
-        borderColor: isFocused
-          ? theme.colors.outlineVariant
-          : theme.colors.tertiary,
+        borderColor: isFocused ? theme.colors.onSurface : theme.colors.tertiary,
         borderRadius: 12,
         opacity: disabled ? 0.5 : 1,
         backgroundColor: 'transparent',
@@ -50,7 +48,7 @@ export const SearchInput: SearchInput = ({
           color: theme.colors.secondary,
           fontSize: 18,
           minHeight: 24,
-          paddingTop: Platform.OS === 'android' ? 10 : 16,
+          paddingTop: Platform.OS === 'android' ? 11 : 16,
           paddingBottom: 10,
         }}
         multiline={multiline}
