@@ -16,6 +16,7 @@ import {
   Appbar,
   Button,
   Chip,
+  Surface,
   Text,
   useTheme,
 } from 'react-native-paper';
@@ -36,6 +37,7 @@ import { mainPadding } from './styles';
 import { TagsSelector } from './TagsSelector';
 import { CustomSurface } from './ui/CustomSurface';
 import { ListItem } from './ui/ListItem';
+import { ScreenLayout } from './ui/ScreenLayout';
 
 const SWIPE_MENU_BUTTON_SIZE = 100;
 
@@ -48,9 +50,6 @@ const styles = StyleSheet.create({
     width: '100%',
     flex: 1,
     alignItems: 'center',
-  },
-  swipeList: {
-    width: '100%',
   },
   emptyContentContainer: {
     flexGrow: 1,
@@ -176,112 +175,287 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
   const fontScale = Math.max(1, PixelRatio.getFontScale());
 
   return (
-    <>
-      <Pressable
-        style={{ marginBottom: 16 }}
-        onPress={() => {
-          if (searchInputRef.current) {
-            searchInputRef.current.blur();
-          }
-        }}
-      >
-        <Appbar.Header elevated={true}>
-          {(!canBeSearched || !isSearching) && (
-            <>
-              <LanguageSelector style={{ marginLeft: 12 }} />
-              <View style={{ flexGrow: 1 }}></View>
-              <Appbar.Action
-                icon={'pencil-outline'}
-                onPress={() => navigation.navigate('EditDeck')}
-                size={22 * fontScale}
-                style={{ backgroundColor: 'transparent' }}
-              />
-            </>
-          )}
-          {canBeSearched && isSearching && (
-            <View style={{ flexGrow: 1, paddingLeft: 18 }}>
-              <DashboardSearchInput
-                value={searchText}
-                ref={searchInputRef}
-                onChange={(text) => {
-                  setSearchText(text);
-                }}
-                style={{
-                  height: 40 * fontScale,
-                }}
-              />
-            </View>
-          )}
-          {canBeSearched && (
-            <Appbar.Action
-              icon={isSearching ? 'close' : 'magnify'}
-              onPress={() => setIsSearching(!isSearching)}
-              size={24 * fontScale}
-              style={{ backgroundColor: 'transparent' }}
-            />
-          )}
-        </Appbar.Header>
-      </Pressable>
-      <View
-        style={{
-          flex: 1,
-          paddingLeft: insets.left,
-          paddingRight: insets.right,
-        }}
-      >
-        {!isEmpty && (
+    <ScreenLayout
+      header={
+        <Surface
+          elevation={1}
+          style={{
+            paddingTop: insets.top,
+            paddingLeft: insets.left,
+            paddingRight: insets.right,
+          }}
+        >
           <View
             style={{
-              paddingHorizontal: mainPadding,
+              flexDirection: 'row',
+              alignItems: 'center',
+              paddingLeft: 8,
+              paddingRight: 8,
             }}
           >
+            {(!canBeSearched || !isSearching) && (
+              <>
+                <LanguageSelector style={{ marginLeft: 12 }} />
+                <View style={{ flexGrow: 1 }}></View>
+                <Appbar.Action
+                  icon={'pencil-outline'}
+                  onPress={() => navigation.navigate('EditDeck')}
+                  size={22 * fontScale}
+                  style={{ backgroundColor: 'transparent' }}
+                />
+              </>
+            )}
+            {canBeSearched && isSearching && (
+              <View style={{ flexGrow: 1, paddingLeft: 18 }}>
+                <DashboardSearchInput
+                  value={searchText}
+                  ref={searchInputRef}
+                  onChange={(text) => {
+                    setSearchText(text);
+                  }}
+                  style={{
+                    height: 40 * fontScale,
+                  }}
+                />
+              </View>
+            )}
+            {canBeSearched && (
+              <Appbar.Action
+                icon={isSearching ? 'close' : 'magnify'}
+                onPress={() => setIsSearching(!isSearching)}
+                size={24 * fontScale}
+                style={{ backgroundColor: 'transparent' }}
+              />
+            )}
+          </View>
+          {!isEmpty && (
             <View
               style={{
-                position: 'relative',
-                marginBottom: 8,
+                paddingHorizontal: mainPadding,
+                paddingTop: 8,
+                paddingBottom: mainPadding,
               }}
             >
-              <Button
+              <View
                 style={{
-                  height: 40 * fontScale,
-                  justifyContent: 'center',
-                  borderRadius: 12,
+                  position: 'relative',
                 }}
-                labelStyle={{
-                  fontSize: 18,
-                }}
-                mode={'contained'}
-                onPress={() => navigation.navigate('Study')}
-                disabled={cards.length === 0 || !netInfo.isInternetReachable}
               >
-                Study{selectedTags.length > 0 ? ' selected tags' : ''}
-              </Button>
-              {deck.tags.length > 0 && (
+                <Button
+                  style={{
+                    height: 40 * fontScale,
+                    justifyContent: 'center',
+                    borderRadius: 12,
+                  }}
+                  labelStyle={{
+                    fontSize: 18,
+                  }}
+                  mode={'contained'}
+                  onPress={() => navigation.navigate('Study')}
+                  disabled={cards.length === 0 || !netInfo.isInternetReachable}
+                >
+                  Study{selectedTags.length > 0 ? ' selected tags' : ''}
+                </Button>
+                {deck.tags.length > 0 && (
+                  <View
+                    style={{
+                      position: 'absolute',
+                      right: 0,
+                      top: 0,
+                      bottom: 0,
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <TagsSelector
+                      value={selectedTags}
+                      onChange={async (tags) => {
+                        await setSelectedTagIds(tags.map((t) => t.id));
+                        postHog.capture('practice_tags_selected', {
+                          tags: tags.map((t) => t.data.title).join(', '),
+                        });
+                      }}
+                      isAllowedToAdd={false}
+                      deck={selectedDeck}
+                      renderAnchor={({ openMenu, disabled }) => (
+                        <Pressable
+                          style={({ pressed }) => [
+                            {
+                              opacity: pressed ? 0.8 : 1,
+                              padding: 8,
+                            },
+                          ]}
+                          hitSlop={20}
+                          onPress={openMenu}
+                          disabled={disabled}
+                        >
+                          <Icon
+                            name={'tag'}
+                            color={theme.colors.onPrimary}
+                            size={22 * fontScale}
+                          />
+                        </Pressable>
+                      )}
+                    />
+                  </View>
+                )}
+              </View>
+              {selectedTags.length > 0 && (
                 <View
                   style={{
-                    position: 'absolute',
-                    right: 0,
-                    top: 0,
-                    bottom: 0,
-                    justifyContent: 'center',
+                    marginTop: 16,
+                    flexDirection: 'row',
+                    gap: 8,
+                    alignItems: 'center',
+                    flexWrap: 'wrap',
+                  }}
+                >
+                  <Text>Selected tags: </Text>
+                  {selectedTags.map((tag) => (
+                    // Wrap the chip in view to fix the close button on Android
+                    <View key={tag.id}>
+                      <Chip
+                        mode="outlined"
+                        selectedColor={theme.colors.outlineVariant}
+                        onClose={() =>
+                          setSelectedTagIds(
+                            selectedTags
+                              .filter(
+                                (selectedTag) => selectedTag.id !== tag.id
+                              )
+                              .map((t) => t.id)
+                          )
+                        }
+                      >
+                        {tag.data.title}
+                      </Chip>
+                    </View>
+                  ))}
+                </View>
+              )}
+              {!netInfo.isInternetReachable && (
+                <Text
+                  style={{ textAlign: 'left', color: theme.colors.secondary }}
+                >
+                  <Icon name="connection" /> Study mode isn't available right
+                  now as it looks like your device is offline. Please connect to
+                  the internet and try again later.
+                </Text>
+              )}
+            </View>
+          )}
+        </Surface>
+      }
+      content={
+        <View
+          style={{
+            flex: 1,
+            paddingLeft: insets.left,
+            paddingRight: insets.right,
+          }}
+        >
+          <SwipeListView<CardItem>
+            onRefresh={onRefresh}
+            refreshing={refreshing}
+            style={{
+              width: '100%',
+            }}
+            data={cards}
+            ItemSeparatorComponent={Separator}
+            keyExtractor={keyExtractor}
+            renderItem={({ item }) => (
+              <Pressable
+                onPress={() =>
+                  navigation.navigate('EditCardModal', { card: item })
+                }
+                style={{
+                  backgroundColor: theme.colors.background,
+                  // This is to prevent the swipe menu
+                  // from flashing occasionally
+                  borderWidth: 1,
+                  borderColor: 'transparent',
+                  display: 'flex',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  paddingHorizontal: mainPadding,
+                }}
+              >
+                <CardListItem
+                  savingTagsInProgress={savingTagsForId === item.id}
+                  card={item.data}
+                  style={{ flex: 1, paddingVertical: 16 }}
+                  onTagsChange={onTagsChange(item)}
+                />
+              </Pressable>
+            )}
+            renderHiddenItem={(data, rowMap) => (
+              <View
+                style={{
+                  flex: 1,
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  // This is to prevent the swipe menu
+                  // from flashing occasionally
+                  borderWidth: 2,
+                  borderColor: 'transparent',
+                  borderStyle: 'solid',
+                  overflow: 'hidden',
+                }}
+              >
+                <Pressable
+                  onPress={() => deleteCard(data.item.id)}
+                  disabled={toBeDeletedId === data.item.id}
+                  style={({ pressed }) => [
+                    {
+                      backgroundColor: theme.colors.error,
+                      width: SWIPE_MENU_BUTTON_SIZE,
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      height: '100%',
+                      opacity: pressed ? swipeListButtonPressOpacity : 1,
+                    },
+                  ]}
+                >
+                  {toBeDeletedId === data.item.id ? (
+                    <ActivityIndicator
+                      size={32}
+                      color={theme.colors.onSecondary}
+                    />
+                  ) : (
+                    <Icon
+                      name="delete-outline"
+                      size={32}
+                      color={theme.colors.onSecondary}
+                    />
+                  )}
+                </Pressable>
+
+                <View
+                  style={{
+                    marginLeft: 'auto',
                   }}
                 >
                   <TagsSelector
-                    value={selectedTags}
+                    value={data.item.data.tags}
                     onChange={async (tags) => {
-                      await setSelectedTagIds(tags.map((t) => t.id));
-                      postHog.capture('practice_tags_selected', {
-                        tags: tags.map((t) => t.data.title).join(', '),
-                      });
+                      // We need to close the row and wait so the item
+                      // gets properly refreshed after tags are set
+                      rowMap[keyExtractor(data.item)].closeRow();
+                      await new Promise((resolve) => setTimeout(resolve, 400));
+                      await onTagsChange(data.item)(tags);
                     }}
-                    isAllowedToAdd={false}
                     deck={selectedDeck}
                     renderAnchor={({ openMenu, disabled }) => (
                       <Pressable
                         style={({ pressed }) => [
                           {
-                            opacity: pressed ? 0.8 : 1,
-                            padding: 8,
+                            backgroundColor: theme.colors.primary,
+                            width: SWIPE_MENU_BUTTON_SIZE,
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            height: '100%',
+                            opacity: pressed ? swipeListButtonPressOpacity : 1,
                           },
                         ]}
                         hitSlop={20}
@@ -289,222 +463,79 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                         disabled={disabled}
                       >
                         <Icon
-                          name={'tag'}
+                          name={'tag-plus'}
                           color={theme.colors.onPrimary}
-                          size={22 * fontScale}
+                          style={{ fontSize: 22 }}
                         />
                       </Pressable>
                     )}
                   />
                 </View>
-              )}
-            </View>
-            {selectedTags.length > 0 && (
+              </View>
+            )}
+            leftOpenValue={SWIPE_MENU_BUTTON_SIZE}
+            rightOpenValue={-SWIPE_MENU_BUTTON_SIZE}
+            contentContainerStyle={isEmpty && styles.emptyContentContainer}
+            ListEmptyComponent={
               <View
                 style={{
-                  flexDirection: 'row',
-                  gap: 8,
+                  paddingHorizontal: mainPadding,
+                  paddingTop: mainPadding,
                   alignItems: 'center',
-                  marginBottom: 8,
-                  flexWrap: 'wrap',
                 }}
               >
-                <Text>Selected tags: </Text>
-                {selectedTags.map((tag) => (
-                  // Wrap the chip in view to fix the close button on Android
-                  <View key={tag.id}>
-                    <Chip
-                      mode="outlined"
-                      selectedColor={theme.colors.outlineVariant}
-                      onClose={() =>
-                        setSelectedTagIds(
-                          selectedTags
-                            .filter((selectedTag) => selectedTag.id !== tag.id)
-                            .map((t) => t.id)
-                        )
-                      }
+                {!isSearching && selectedTags.length === 0 && (
+                  <View style={{ width: '100%' }}>
+                    <View
+                      style={{
+                        paddingHorizontal: 16,
+                        marginBottom: 16,
+                        gap: 8,
+                      }}
                     >
-                      {tag.data.title}
-                    </Chip>
-                  </View>
-                ))}
-              </View>
-            )}
-            {!netInfo.isInternetReachable && (
-              <Text
-                style={{ textAlign: 'left', color: theme.colors.secondary }}
-              >
-                <Icon name="connection" /> Study mode isn't available right now
-                as it looks like your device is offline. Please connect to the
-                internet and try again later.
-              </Text>
-            )}
-          </View>
-        )}
-        <SwipeListView<CardItem>
-          onRefresh={onRefresh}
-          refreshing={refreshing}
-          style={styles.swipeList}
-          data={cards}
-          ItemSeparatorComponent={Separator}
-          keyExtractor={keyExtractor}
-          renderItem={({ item }) => (
-            <Pressable
-              onPress={() =>
-                navigation.navigate('EditCardModal', { card: item })
-              }
-              style={{
-                backgroundColor: theme.colors.background,
-                // This is to prevent the swipe menu
-                // from flashing occasionally
-                borderWidth: 1,
-                borderColor: 'transparent',
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'center',
-                paddingHorizontal: mainPadding,
-              }}
-            >
-              <CardListItem
-                savingTagsInProgress={savingTagsForId === item.id}
-                card={item.data}
-                style={{ flex: 1, paddingVertical: 16 }}
-                onTagsChange={onTagsChange(item)}
-              />
-            </Pressable>
-          )}
-          renderHiddenItem={(data, rowMap) => (
-            <View
-              style={{
-                flex: 1,
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                // This is to prevent the swipe menu
-                // from flashing occasionally
-                borderWidth: 2,
-                borderColor: 'transparent',
-                borderStyle: 'solid',
-                overflow: 'hidden',
-              }}
-            >
-              <Pressable
-                onPress={() => deleteCard(data.item.id)}
-                disabled={toBeDeletedId === data.item.id}
-                style={({ pressed }) => [
-                  {
-                    backgroundColor: theme.colors.error,
-                    width: SWIPE_MENU_BUTTON_SIZE,
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    height: '100%',
-                    opacity: pressed ? swipeListButtonPressOpacity : 1,
-                  },
-                ]}
-              >
-                {toBeDeletedId === data.item.id ? (
-                  <ActivityIndicator
-                    size={32}
-                    color={theme.colors.onSecondary}
-                  />
-                ) : (
-                  <Icon
-                    name="delete-outline"
-                    size={32}
-                    color={theme.colors.onSecondary}
-                  />
-                )}
-              </Pressable>
-
-              <View
-                style={{
-                  marginLeft: 'auto',
-                }}
-              >
-                <TagsSelector
-                  value={data.item.data.tags}
-                  onChange={async (tags) => {
-                    // We need to close the row and wait so the item
-                    // gets properly refreshed after tags are set
-                    rowMap[keyExtractor(data.item)].closeRow();
-                    await new Promise((resolve) => setTimeout(resolve, 400));
-                    await onTagsChange(data.item)(tags);
-                  }}
-                  deck={selectedDeck}
-                  renderAnchor={({ openMenu, disabled }) => (
-                    <Pressable
-                      style={({ pressed }) => [
-                        {
-                          backgroundColor: theme.colors.primary,
-                          width: SWIPE_MENU_BUTTON_SIZE,
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          height: '100%',
-                          opacity: pressed ? swipeListButtonPressOpacity : 1,
-                        },
-                      ]}
-                      hitSlop={20}
-                      onPress={openMenu}
-                      disabled={disabled}
-                    >
-                      <Icon
-                        name={'tag-plus'}
-                        color={theme.colors.onPrimary}
-                        style={{ fontSize: 22 }}
+                      <Text style={{ fontSize: 16 }}>No cards yet.</Text>
+                      <Text style={{ fontSize: 16 }}>
+                        Head over to the Look Up tab to find and add some new
+                        words.
+                      </Text>
+                    </View>
+                    <CustomSurface>
+                      <ListItem
+                        leftIcon="translate"
+                        title="Go to Look up"
+                        onPress={() => navigation.navigate('LookUp')}
                       />
-                    </Pressable>
-                  )}
-                />
-              </View>
-            </View>
-          )}
-          leftOpenValue={SWIPE_MENU_BUTTON_SIZE}
-          rightOpenValue={-SWIPE_MENU_BUTTON_SIZE}
-          contentContainerStyle={isEmpty && styles.emptyContentContainer}
-          ListEmptyComponent={
-            <View style={{ paddingHorizontal: mainPadding }}>
-              {selectedTags.length === 0 && (
-                <View style={{ width: '100%' }}>
-                  <View
-                    style={{ paddingHorizontal: 16, marginBottom: 16, gap: 8 }}
-                  >
-                    <Text>No cards yet.</Text>
-                    <Text>
-                      Head over to the Look Up tab to find and add some new
-                      words.
-                    </Text>
+                    </CustomSurface>
                   </View>
-                  <CustomSurface>
-                    <ListItem
-                      leftIcon="translate"
-                      title="Go to Look up"
-                      onPress={() => navigation.navigate('LookUp')}
-                    />
-                  </CustomSurface>
-                </View>
-              )}
-              {selectedTags.length === 1 && (
-                <Text>
-                  You don't yet have cards marked with the{' '}
-                  <Text style={{ fontWeight: 'bold' }}>
-                    {selectedTags[0].data.title}
-                  </Text>{' '}
-                  tag.
-                </Text>
-              )}
-              {selectedTags.length > 1 && (
-                <Text>
-                  You don't yet have cards marked with the selected tags.
-                </Text>
-              )}
-            </View>
-          }
-          ListHeaderComponentStyle={{
-            paddingHorizontal: mainPadding,
-          }}
-        />
-      </View>
-    </>
+                )}
+                {isSearching && searchText && (
+                  <Text style={{ fontSize: 16 }}>
+                    No cards found for{' '}
+                    <Text style={{ fontWeight: 'bold' }}>{searchText}</Text>.
+                  </Text>
+                )}
+                {selectedTags.length === 1 && (
+                  <Text style={{ fontSize: 16 }}>
+                    You don’t have any cards tagged with{' '}
+                    <Text style={{ fontWeight: 'bold' }}>
+                      {selectedTags[0].data.title}
+                    </Text>
+                    .
+                  </Text>
+                )}
+                {selectedTags.length > 1 && (
+                  <Text style={{ fontSize: 16 }}>
+                    You don't yet have cards under the selected tags.
+                  </Text>
+                )}
+              </View>
+            }
+            ListHeaderComponentStyle={{
+              paddingHorizontal: mainPadding,
+            }}
+          />
+        </View>
+      }
+    />
   );
 };

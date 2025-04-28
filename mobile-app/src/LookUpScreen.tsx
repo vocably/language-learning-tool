@@ -22,8 +22,10 @@ import { Loader } from './loaders/Loader';
 import { AnalyzeResult } from './LookUpScreen/AnalyzeResult';
 import { TranslationPresetForm } from './LookUpScreen/TranslationPresetForm';
 import { SearchInput } from './SearchInput';
+import { mainPadding } from './styles';
 import { Preset } from './TranslationPreset/TranslationPresetContainer';
 import { useTranslationPreset } from './TranslationPreset/useTranslationPreset';
+import { ScreenLayout } from './ui/ScreenLayout';
 import { useAnalyzeOperations } from './useAnalyzeOperations';
 
 const padding = 16;
@@ -216,195 +218,198 @@ export const LookUpScreen: FC<Props> = ({
       translationPresetState.preset.translationLanguage;
 
   return (
-    <>
-      <Surface elevation={1}>
-        <View
-          style={{
-            paddingTop: insets.top,
-            paddingLeft: insets.left,
-            paddingRight: insets.right,
-            paddingBottom: 24,
-          }}
-        >
-          <View style={styles.languageToolbar}>
-            <TranslationPresetForm
-              navigation={navigation}
-              languagePairs={languagePairs}
-              preset={translationPresetState.preset}
-              onChange={setTranslationPreset}
-            />
-          </View>
-          <View style={[styles.searchContainer]}>
-            <SearchInput
-              value={lookUpText}
-              multiline={false}
-              placeholder={
-                languageList[
-                  (translationPresetState.preset.isReverse
-                    ? translationPresetState.preset.translationLanguage
-                    : translationPresetState.preset
-                        .sourceLanguage) as GoogleLanguage
-                ]
-              }
-              onChange={setLookUpText}
-              onSubmit={lookUp}
-              disabled={
-                !translationPresetState.preset.sourceLanguage ||
-                !translationPresetState.preset.translationLanguage
-              }
-            />
-          </View>
-        </View>
-      </Surface>
-      <ScrollView
-        style={{ marginTop: 2 }}
-        contentContainerStyle={{
-          paddingBottom: insets.bottom + padding - 2,
-          paddingTop: padding,
-        }}
-      >
-        {!isAnalyzingPreset && !lookUpResult && (
-          <TouchableWithoutFeedback
-            onPress={Keyboard.dismiss}
-            accessible={false}
-          >
-            <View
-              style={{
-                flex: 1,
-                width: '100%',
-                gap: 8,
-              }}
-            >
-              {!isSharedLookUp && (
-                <View
-                  style={{
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    paddingHorizontal: padding,
-                  }}
-                >
-                  {canTranslate && !translationPresetState.preset.isReverse && (
-                    <Animated.View entering={FadeIn} exiting={FadeOut}>
-                      <Text style={{ fontSize: 16 }}>
-                        Use{' '}
-                        <TouchableRipple
-                          style={{
-                            backgroundColor: theme.colors.elevation.level5,
-                            borderRadius: 12,
-                            padding: 4,
-                            transform: [
-                              {
-                                translateY: Platform.OS === 'android' ? 7 : 5,
-                              },
-                            ],
-                          }}
-                          onPress={() => setTranslationDirection(true)}
-                          borderless={true}
-                        >
-                          <Icon
-                            size={16}
-                            color={theme.colors.primary}
-                            name="arrow-right"
-                          ></Icon>
-                        </TouchableRipple>{' '}
-                        to translate from{' '}
-                        <Text style={{ fontWeight: 'bold' }}>
-                          {
-                            languageList[
-                              translationPresetState.preset
-                                .translationLanguage as GoogleLanguage
-                            ]
-                          }
-                        </Text>{' '}
-                        to{' '}
-                        <Text style={{ fontWeight: 'bold' }}>
-                          {
-                            languageList[
-                              translationPresetState.preset
-                                .sourceLanguage as GoogleLanguage
-                            ]
-                          }
-                        </Text>
-                        .
-                      </Text>
-                    </Animated.View>
-                  )}
-
-                  {canTranslate && translationPresetState.preset.isReverse && (
-                    <Animated.View entering={FadeIn} exiting={FadeOut}>
-                      <Text style={{ fontSize: 16 }}>
-                        Use{' '}
-                        <TouchableRipple
-                          style={{
-                            backgroundColor: theme.colors.elevation.level5,
-                            borderRadius: 12,
-                            padding: 4,
-                            transform: [
-                              {
-                                translateY: Platform.OS === 'android' ? 7 : 5,
-                              },
-                            ],
-                          }}
-                          onPress={() => setTranslationDirection(false)}
-                          borderless={true}
-                        >
-                          <Icon
-                            size={16}
-                            color={theme.colors.primary}
-                            name="arrow-left"
-                          ></Icon>
-                        </TouchableRipple>{' '}
-                        to translate from{' '}
-                        <Text style={{ fontWeight: 'bold' }}>
-                          {
-                            languageList[
-                              translationPresetState.preset
-                                .sourceLanguage as GoogleLanguage
-                            ]
-                          }
-                        </Text>{' '}
-                        to{' '}
-                        <Text style={{ fontWeight: 'bold' }}>
-                          {
-                            languageList[
-                              translationPresetState.preset
-                                .translationLanguage as GoogleLanguage
-                            ]
-                          }
-                        </Text>
-                        .
-                      </Text>
-                    </Animated.View>
-                  )}
-                </View>
-              )}
-            </View>
-          </TouchableWithoutFeedback>
-        )}
-        {isAnalyzingPreset && (
-          <Animated.View
-            entering={FadeIn}
-            exiting={FadeOut.duration(50)}
+    <ScreenLayout
+      header={
+        <Surface elevation={1}>
+          <View
             style={{
-              padding: padding,
-              marginTop: 16,
+              paddingTop: insets.top,
+              paddingLeft: insets.left,
+              paddingRight: insets.right,
+              paddingBottom: 24,
             }}
           >
-            <InlineLoader>{getLoadingText(isAnalyzingPreset)}</InlineLoader>
-          </Animated.View>
-        )}
-        {!isAnalyzingPreset && lookUpResult && lookUpResult.success && (
-          <AnalyzeResult
-            style={styles.resultContainer}
-            analysis={lookUpResult.value}
-            cards={deck.deck.cards}
-            onAdd={onAdd}
-            onRemove={onRemove}
-            onTagsChange={onTagsChange}
-            deck={deck}
-          />
-        )}
-      </ScrollView>
-    </>
+            <View style={styles.languageToolbar}>
+              <TranslationPresetForm
+                navigation={navigation}
+                languagePairs={languagePairs}
+                preset={translationPresetState.preset}
+                onChange={setTranslationPreset}
+              />
+            </View>
+            <View style={[styles.searchContainer]}>
+              <SearchInput
+                value={lookUpText}
+                multiline={false}
+                placeholder={
+                  languageList[
+                    (translationPresetState.preset.isReverse
+                      ? translationPresetState.preset.translationLanguage
+                      : translationPresetState.preset
+                          .sourceLanguage) as GoogleLanguage
+                  ]
+                }
+                onChange={setLookUpText}
+                onSubmit={lookUp}
+                disabled={
+                  !translationPresetState.preset.sourceLanguage ||
+                  !translationPresetState.preset.translationLanguage
+                }
+              />
+            </View>
+          </View>
+        </Surface>
+      }
+      content={
+        <ScrollView
+          contentContainerStyle={{
+            paddingBottom: insets.bottom + padding - 2,
+          }}
+        >
+          {!isAnalyzingPreset && !lookUpResult && (
+            <TouchableWithoutFeedback
+              onPress={Keyboard.dismiss}
+              accessible={false}
+            >
+              <View
+                style={{
+                  flex: 1,
+                  width: '100%',
+                  gap: 8,
+                  paddingTop: mainPadding,
+                }}
+              >
+                {!isSharedLookUp && (
+                  <View
+                    style={{
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      paddingHorizontal: padding,
+                    }}
+                  >
+                    {canTranslate && !translationPresetState.preset.isReverse && (
+                      <Animated.View entering={FadeIn} exiting={FadeOut}>
+                        <Text style={{ fontSize: 16 }}>
+                          Use{' '}
+                          <TouchableRipple
+                            style={{
+                              backgroundColor: theme.colors.elevation.level5,
+                              borderRadius: 12,
+                              padding: 4,
+                              transform: [
+                                {
+                                  translateY: Platform.OS === 'android' ? 7 : 5,
+                                },
+                              ],
+                            }}
+                            onPress={() => setTranslationDirection(true)}
+                            borderless={true}
+                          >
+                            <Icon
+                              size={16}
+                              color={theme.colors.primary}
+                              name="arrow-right"
+                            ></Icon>
+                          </TouchableRipple>{' '}
+                          to translate from{' '}
+                          <Text style={{ fontWeight: 'bold' }}>
+                            {
+                              languageList[
+                                translationPresetState.preset
+                                  .translationLanguage as GoogleLanguage
+                              ]
+                            }
+                          </Text>{' '}
+                          to{' '}
+                          <Text style={{ fontWeight: 'bold' }}>
+                            {
+                              languageList[
+                                translationPresetState.preset
+                                  .sourceLanguage as GoogleLanguage
+                              ]
+                            }
+                          </Text>
+                          .
+                        </Text>
+                      </Animated.View>
+                    )}
+
+                    {canTranslate && translationPresetState.preset.isReverse && (
+                      <Animated.View entering={FadeIn} exiting={FadeOut}>
+                        <Text style={{ fontSize: 16 }}>
+                          Use{' '}
+                          <TouchableRipple
+                            style={{
+                              backgroundColor: theme.colors.elevation.level5,
+                              borderRadius: 12,
+                              padding: 4,
+                              transform: [
+                                {
+                                  translateY: Platform.OS === 'android' ? 7 : 5,
+                                },
+                              ],
+                            }}
+                            onPress={() => setTranslationDirection(false)}
+                            borderless={true}
+                          >
+                            <Icon
+                              size={16}
+                              color={theme.colors.primary}
+                              name="arrow-left"
+                            ></Icon>
+                          </TouchableRipple>{' '}
+                          to translate from{' '}
+                          <Text style={{ fontWeight: 'bold' }}>
+                            {
+                              languageList[
+                                translationPresetState.preset
+                                  .sourceLanguage as GoogleLanguage
+                              ]
+                            }
+                          </Text>{' '}
+                          to{' '}
+                          <Text style={{ fontWeight: 'bold' }}>
+                            {
+                              languageList[
+                                translationPresetState.preset
+                                  .translationLanguage as GoogleLanguage
+                              ]
+                            }
+                          </Text>
+                          .
+                        </Text>
+                      </Animated.View>
+                    )}
+                  </View>
+                )}
+              </View>
+            </TouchableWithoutFeedback>
+          )}
+          {isAnalyzingPreset && (
+            <Animated.View
+              entering={FadeIn}
+              exiting={FadeOut.duration(50)}
+              style={{
+                padding: padding,
+                paddingTop: mainPadding + 4,
+              }}
+            >
+              <InlineLoader>{getLoadingText(isAnalyzingPreset)}</InlineLoader>
+            </Animated.View>
+          )}
+          {!isAnalyzingPreset && lookUpResult && lookUpResult.success && (
+            <AnalyzeResult
+              style={styles.resultContainer}
+              analysis={lookUpResult.value}
+              cards={deck.deck.cards}
+              onAdd={onAdd}
+              onRemove={onRemove}
+              onTagsChange={onTagsChange}
+              deck={deck}
+            />
+          )}
+        </ScrollView>
+      }
+    />
   );
 };
