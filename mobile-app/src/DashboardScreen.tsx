@@ -363,10 +363,7 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
             ItemSeparatorComponent={Separator}
             keyExtractor={keyExtractor}
             renderItem={({ item }) => (
-              <Pressable
-                onPress={() =>
-                  navigation.navigate('EditCardModal', { card: item })
-                }
+              <View
                 style={{
                   backgroundColor: theme.colors.background,
                   // This is to prevent the swipe menu
@@ -386,7 +383,7 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                   style={{ flex: 1, paddingVertical: 16 }}
                   onTagsChange={onTagsChange(item)}
                 />
-              </Pressable>
+              </View>
             )}
             renderHiddenItem={(data, rowMap) => (
               <View
@@ -424,7 +421,7 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                     />
                   ) : (
                     <Icon
-                      name="delete-outline"
+                      name="delete"
                       size={32}
                       color={theme.colors.onSecondary}
                     />
@@ -434,8 +431,33 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                 <View
                   style={{
                     marginLeft: 'auto',
+                    flexDirection: 'row',
                   }}
                 >
+                  <Pressable
+                    style={({ pressed }) => [
+                      {
+                        // @ts-ignore
+                        backgroundColor: theme.colors.primaryVariant,
+                        width: SWIPE_MENU_BUTTON_SIZE,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        height: '100%',
+                        opacity: pressed ? swipeListButtonPressOpacity : 1,
+                      },
+                    ]}
+                    hitSlop={20}
+                    onPress={() => {
+                      navigation.navigate('EditCardModal', { card: data.item });
+                      rowMap[keyExtractor(data.item)].closeRow();
+                    }}
+                  >
+                    <Icon
+                      name={'pencil'}
+                      color={theme.colors.onPrimary}
+                      style={{ fontSize: 22 }}
+                    />
+                  </Pressable>
                   <TagsSelector
                     value={data.item.data.tags}
                     onChange={async (tags) => {
@@ -474,7 +496,7 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
               </View>
             )}
             leftOpenValue={SWIPE_MENU_BUTTON_SIZE}
-            rightOpenValue={-SWIPE_MENU_BUTTON_SIZE}
+            rightOpenValue={-SWIPE_MENU_BUTTON_SIZE * 2}
             contentContainerStyle={isEmpty && styles.emptyContentContainer}
             ListEmptyComponent={
               <View
