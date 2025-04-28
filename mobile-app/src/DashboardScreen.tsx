@@ -32,12 +32,15 @@ import { useSelectedDeck } from './languageDeck/useSelectedDeck';
 import { LanguagesContext } from './languages/LanguagesContainer';
 import { LanguageSelector } from './LanguageSelector';
 import { Loader } from './loaders/Loader';
+import { setSourceLanguage } from './SourceLanguageButton';
 import { swipeListButtonPressOpacity } from './stupidConstants';
 import { mainPadding } from './styles';
 import { TagsSelector } from './TagsSelector';
+import { useTranslationPreset } from './TranslationPreset/useTranslationPreset';
 import { CustomSurface } from './ui/CustomSurface';
 import { ListItem } from './ui/ListItem';
 import { ScreenLayout } from './ui/ScreenLayout';
+import { useCurrentLanguageName } from './useCurrentLanguageName';
 
 const SWIPE_MENU_BUTTON_SIZE = 100;
 
@@ -112,6 +115,8 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
   const [toBeDeletedId, setToBeDeletedId] = useState<string | null>(null);
   const [savingTagsForId, setSavingTagsForId] = useState<string | null>(null);
   const insets = useSafeAreaInsets();
+  const [preset, languagePairs, setTranslationPreset] = useTranslationPreset();
+  const languageName = useCurrentLanguageName();
 
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
@@ -517,7 +522,13 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                         gap: 8,
                       }}
                     >
-                      <Text style={{ fontSize: 16 }}>No cards yet.</Text>
+                      <Text style={{ fontSize: 16 }}>
+                        No{' '}
+                        <Text style={{ fontWeight: 'bold' }}>
+                          {languageName}
+                        </Text>{' '}
+                        cards yet.
+                      </Text>
                       <Text style={{ fontSize: 16 }}>
                         Head over to the Look Up tab to find and add some new
                         words.
@@ -527,7 +538,18 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                       <ListItem
                         leftIcon="translate"
                         title="Go to Look up"
-                        onPress={() => navigation.navigate('LookUp')}
+                        onPress={() => {
+                          navigation.navigate('LookUp');
+                          if (preset.status === 'known') {
+                            setTranslationPreset(
+                              setSourceLanguage(
+                                deck.language,
+                                preset.preset,
+                                languagePairs
+                              )
+                            );
+                          }
+                        }}
                       />
                     </CustomSurface>
                   </View>

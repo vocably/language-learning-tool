@@ -1,5 +1,9 @@
-import { deleteLanguageDeck, listLanguages } from '@vocably/api';
-import { LanguageDeck, TagItem } from '@vocably/model';
+import {
+  deleteLanguageDeck,
+  listLanguages,
+  saveLanguageDeck,
+} from '@vocably/api';
+import { LanguageDeck, Result, TagItem } from '@vocably/model';
 import { usePostHog } from 'posthog-react-native';
 import React, {
   createContext,
@@ -42,6 +46,7 @@ type Languages = {
   selectLanguage: (language: string) => Promise<void>;
   refreshLanguages: () => Promise<void>;
   addLanguage: (language: string) => void;
+  addNewLanguage: (language: string) => Promise<Result<unknown>>;
 };
 
 export const LanguagesContext = createContext<Languages>({
@@ -58,6 +63,7 @@ export const LanguagesContext = createContext<Languages>({
   selectLanguage: () => Promise.resolve(),
   refreshLanguages: () => Promise.resolve(),
   addLanguage: () => null,
+  addNewLanguage: () => Promise.resolve({ success: true, value: null }),
 });
 
 type Props = {
@@ -140,6 +146,30 @@ export const LanguagesContainer: FC<Props> = ({
     setListLoadingStatus('loaded');
   };
 
+  const addNewLanguage = async (language: string): Promise<Result<unknown>> => {
+    const existingLanguagesResult = await listLanguages();
+    if (existingLanguagesResult.success === false) {
+      return existingLanguagesResult;
+    }
+
+    if (existingLanguagesResult.value.includes(language)) {
+      setLanguages(existingLanguagesResult.value);
+      await selectLanguage(language);
+      return {
+        success: true,
+        value: null,
+      };
+    }
+
+    setLanguages([...existingLanguagesResult.value, language]);
+    selectLanguage(language).then();
+    return saveLanguageDeck({
+      language,
+      cards: [],
+      tags: [],
+    });
+  };
+
   useEffect(() => {
     refreshLanguages().then();
 
@@ -191,6 +221,7 @@ export const LanguagesContainer: FC<Props> = ({
     selectLanguage,
     refreshLanguages,
     addLanguage,
+    addNewLanguage,
   };
 
   return (

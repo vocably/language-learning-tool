@@ -49,8 +49,8 @@ export const TargetLanguageButton: FC<Props> = ({
   const preferredLanguagesTitle =
     // @ts-ignore
     !preset.translationLanguage && languageList[deviceLanguage]
-      ? 'Device Language'
-      : 'Preferred';
+      ? 'Device language'
+      : 'Preferred languages';
 
   const selectTranslationLanguage = () => {
     navigation.navigate('LanguageSelector', {

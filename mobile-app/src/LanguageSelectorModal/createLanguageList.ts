@@ -59,7 +59,7 @@ export const createLanguageList = ({
   }
 
   data.push({
-    title: 'Available',
+    title: 'Available languages',
     data: Object.entries(filteredLanguageList).map(([key, label]) => ({
       key,
       label,

@@ -16,6 +16,35 @@ type Props = {
   style?: StyleProp<ViewStyle>;
 };
 
+export const popularLanguages = [
+  'en',
+  'de',
+  'pt',
+  'es',
+  'nl',
+  'fr',
+  'it',
+  'ja',
+  'no',
+  'da',
+];
+
+export const setSourceLanguage = (
+  sourceLanguage: string,
+  currentPreset: Preset,
+  languagePairs: LanguagePairs
+): Preset => {
+  return {
+    ...currentPreset,
+    sourceLanguage,
+    // @ts-ignore
+    translationLanguage: languagePairs[sourceLanguage]
+      ? // @ts-ignore
+        languagePairs[sourceLanguage].translationLanguage
+      : currentPreset.translationLanguage,
+  };
+};
+
 export const SourceLanguageButton: FC<Props> = ({
   navigation,
   preset,
@@ -27,15 +56,7 @@ export const SourceLanguageButton: FC<Props> = ({
   const { languages: existingDeckLanguages } = useContext(LanguagesContext);
 
   const onSourceSelection = (sourceLanguage: string) => {
-    onChange({
-      ...preset,
-      sourceLanguage,
-      // @ts-ignore
-      translationLanguage: languagePairs[sourceLanguage]
-        ? // @ts-ignore
-          languagePairs[sourceLanguage].translationLanguage
-        : preset.translationLanguage,
-    });
+    onChange(setSourceLanguage(sourceLanguage, preset, languagePairs));
   };
 
   const selectSourceLanguage = () => {
@@ -44,10 +65,12 @@ export const SourceLanguageButton: FC<Props> = ({
       selected: preset.sourceLanguage,
       preferred:
         existingDeckLanguages.length === 0
-          ? ['en', 'de', 'pt', 'es', 'nl', 'fr', 'it', 'ja']
+          ? popularLanguages
           : existingDeckLanguages,
       preferredTitle:
-        existingDeckLanguages.length > 0 ? 'Your Decks' : 'Popular Languages',
+        existingDeckLanguages.length > 0
+          ? 'Your languages'
+          : 'Popular Languages',
       onSelect: onSourceSelection,
     });
   };
