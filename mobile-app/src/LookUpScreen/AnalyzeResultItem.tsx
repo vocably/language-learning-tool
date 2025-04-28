@@ -81,9 +81,9 @@ export const AnalyzeResultItem: AnalyzeResultItem = ({
           }}
         >
           <IconButton
-            icon={!item.id ? 'plus-circle' : 'minus-circle'}
+            icon={!item.id ? 'plus-circle-outline' : 'bookmark-check'}
             animated={true}
-            iconColor={!item.id ? theme.colors.primary : theme.colors.error}
+            iconColor={theme.colors.primary}
             onPress={toggleCard}
             disabled={isProcessing}
             style={{ margin: 0 }}
