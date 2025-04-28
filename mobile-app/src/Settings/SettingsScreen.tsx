@@ -42,7 +42,7 @@ export const SettingsScreen: FC<Props> = ({ navigation }) => {
         />
         <Divider />
         <ListItem
-          leftIcon="book-open-variant"
+          leftIcon="school-outline"
           title="Study settings"
           onPress={() => navigation.navigate('StudySettings')}
         />

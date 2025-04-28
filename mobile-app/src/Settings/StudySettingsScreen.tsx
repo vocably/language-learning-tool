@@ -89,7 +89,7 @@ export const StudySettingsScreen: FC<Props> = () => {
 
   return (
     <CustomScrollView>
-      <ScreenTitle icon="book-open-variant" title="Study settings" />
+      <ScreenTitle icon="school-outline" title="Study settings" />
 
       {isMultiChoiceEnabledResult.status === 'loaded' &&
         preferMultiChoiceResult.status === 'loaded' && (
