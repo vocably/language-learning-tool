@@ -76,10 +76,9 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
       style={{
         alignItems: 'center',
         justifyContent: 'center',
-        paddingVertical: 24,
         paddingLeft: insets.left,
         paddingRight: insets.right,
-        minHeight: '90%',
+        flex: 1,
       }}
     >
       {showWelcomeForm && (
@@ -88,10 +87,11 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
             contentContainerStyle={{
               flexGrow: 1,
               gap: 16,
-              maxWidth: 600,
+              maxWidth: 400,
               paddingHorizontal: 24,
               paddingBottom: 36,
               justifyContent: 'center',
+              alignSelf: 'center',
             }}
           >
             <Text
@@ -102,7 +102,6 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
 
             <View
               style={{
-                flexDirection: 'row',
                 alignItems: 'center',
                 gap: 16,
               }}
@@ -110,14 +109,12 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
               <Text
                 style={{
                   fontSize: 18,
-                  flex: 1,
-                  textAlign: 'right',
                   color: theme.colors.onBackground,
                 }}
               >
                 What language do you study?
               </Text>
-              <View style={{ width: '50%' }}>
+              <View style={{ width: '100%' }}>
                 <SourceLanguageButton
                   navigation={navigation}
                   preset={translationPresetState.preset}
@@ -129,7 +126,8 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
             </View>
             <View style={{ alignItems: 'flex-end' }}>
               <Text>
-                You can study multiple languages. For now, let's pick one.
+                You can learn multiple languages. For now, just pick one to get
+                started.
               </Text>
             </View>
             {translationPresetState.preset.sourceLanguage && (
@@ -142,7 +140,6 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
                 <Divider style={{ width: '100%' }} />
                 <View
                   style={{
-                    flexDirection: 'row',
                     alignItems: 'center',
                     gap: 16,
                   }}
@@ -150,14 +147,12 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
                   <Text
                     style={{
                       fontSize: 18,
-                      flex: 1,
-                      textAlign: 'right',
                       color: theme.colors.onBackground,
                     }}
                   >
                     What is your mother{'\u00A0'}tongue?
                   </Text>
-                  <View style={{ width: '50%' }}>
+                  <View style={{ width: '100%' }}>
                     <TargetLanguageButton
                       navigation={navigation}
                       preset={translationPresetState.preset}
@@ -169,9 +164,14 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
               </Animated.View>
             )}
             {isNextButtonVisible && (
-              <Animated.View entering={FadeInDown} style={{ marginTop: 25 }}>
+              <Animated.View
+                entering={FadeInDown}
+                style={{ marginTop: 25, gap: 32 }}
+              >
+                <Divider style={{ width: '100%' }} />
                 <Button
-                  mode="contained"
+                  mode="elevated"
+                  elevation={1}
                   onPress={async () => {
                     onboardingDisplayerRef.current &&
                       (await onboardingDisplayerRef.current.hide());
