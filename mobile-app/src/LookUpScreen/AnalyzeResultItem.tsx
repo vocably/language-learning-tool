@@ -75,9 +75,9 @@ export const AnalyzeResultItem: AnalyzeResultItem = ({
       {!hideOperations && (
         <View
           style={{
-            marginTop: 12,
+            marginTop: 16,
             // To prevent jumping
-            height: 87,
+            height: 90,
           }}
         >
           <IconButton
