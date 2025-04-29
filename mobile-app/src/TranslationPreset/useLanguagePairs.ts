@@ -1,6 +1,6 @@
 import { GoogleLanguage } from '@vocably/model';
-import { useCallback, useEffect, useState } from 'react';
 import * as asyncAppStorage from '../asyncAppStorage';
+import { AsyncResult, useAsync } from '../useAsync';
 
 type LanguageSetting = {
   translationLanguage: GoogleLanguage;
@@ -9,29 +9,28 @@ type LanguageSetting = {
 
 export type LanguagePairs = Partial<Record<GoogleLanguage, LanguageSetting>>;
 
-export const useLanguagePairs = (): [
-  languagePairs: LanguagePairs | null,
-  saveLanguagePairs: (languageParis: LanguagePairs) => Promise<void>
-] => {
-  const [languagePairs, setLanguagePairs] = useState<LanguagePairs | null>(
-    null
-  );
-  const saveLanguagePairs = useCallback(
-    (languagePairs: LanguagePairs) => {
-      setLanguagePairs(languagePairs);
-      return asyncAppStorage.setItem(
-        'languagePairs',
-        JSON.stringify(languagePairs)
-      );
-    },
-    [setLanguagePairs]
-  );
+const loadLanguagePairs = async (): Promise<LanguagePairs> => {
+  return asyncAppStorage
+    .getItem('languagePairs')
+    .then((languagePairsString) => {
+      if (!languagePairsString) {
+        return {};
+      }
 
-  useEffect(() => {
-    asyncAppStorage.getItem('languagePairs').then((languagePairs) => {
-      setLanguagePairs(languagePairs ? JSON.parse(languagePairs) : {});
+      return JSON.parse(languagePairsString);
     });
-  }, [setLanguagePairs]);
+};
 
-  return [languagePairs, saveLanguagePairs];
+const storeLanguagePairs = async (languagePairs: LanguagePairs) => {
+  return asyncAppStorage.setItem(
+    'languagePairs',
+    JSON.stringify(languagePairs)
+  );
+};
+
+export const useLanguagePairs = (): [
+  languagePairsResult: AsyncResult<LanguagePairs>,
+  saveLanguagePairs: (languageParis: LanguagePairs) => Promise<unknown>
+] => {
+  return useAsync(loadLanguagePairs, storeLanguagePairs);
 };

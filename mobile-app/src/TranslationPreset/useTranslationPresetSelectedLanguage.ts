@@ -1,38 +1,40 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import * as asyncAppStorage from '../asyncAppStorage';
 import { LanguagesContext } from '../languages/LanguagesContainer';
+import { AsyncResult, useAsync } from '../useAsync';
 
-export const useTranslationPresetSelectedLanguage = (): [
-  string,
-  (language: string) => void
-] => {
+const loadSelectedLanguage = async (): Promise<string | undefined> => {
+  return asyncAppStorage.getItem('translationPresetSelectedLanguage');
+};
+
+const storeSelectedLanguage = async (
+  language: string | undefined
+): Promise<void> => {
+  if (language === undefined) {
+    return asyncAppStorage.removeItem('translationPresetSelectedLanguage');
+  }
+  await asyncAppStorage.setItem('translationPresetSelectedLanguage', language);
+};
+
+export const useTranslationPresetSelectedLanguage = (): AsyncResult<{
+  selectedLanguage: string;
+  saveSelectedLanguage: (language: string) => Promise<unknown>;
+}> => {
   const { selectedLanguage: dashboardLanguage } = useContext(LanguagesContext);
-  const [selectedLanguage, setSelectedLanguageState] =
-    useState(dashboardLanguage);
+  const [selectedLanguageResult, setSelectedLanguage] = useAsync(
+    loadSelectedLanguage,
+    storeSelectedLanguage
+  );
 
-  const setSelectedLanguage = async (language: string) => {
-    setSelectedLanguageState(language);
-    await asyncAppStorage.setItem(
-      'translationPresetSelectedLanguage',
-      language
-    );
+  if (selectedLanguageResult.status !== 'loaded') {
+    return selectedLanguageResult;
+  }
+
+  return {
+    status: 'loaded',
+    value: {
+      selectedLanguage: selectedLanguageResult.value ?? dashboardLanguage,
+      saveSelectedLanguage: (language: string) => setSelectedLanguage(language),
+    },
   };
-
-  useEffect(() => {
-    asyncAppStorage
-      .getItem('translationPresetSelectedLanguage')
-      .then((language) => {
-        if (language) {
-          setSelectedLanguageState(language);
-        }
-      });
-  }, []);
-
-  useEffect(() => {
-    if (dashboardLanguage && !selectedLanguage) {
-      setSelectedLanguageState(dashboardLanguage);
-    }
-  }, [selectedLanguage, dashboardLanguage]);
-
-  return [selectedLanguage, setSelectedLanguage];
 };

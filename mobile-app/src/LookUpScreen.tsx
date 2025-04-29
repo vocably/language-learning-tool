@@ -84,8 +84,7 @@ export const LookUpScreen: FC<Props> = ({
   initialText = '',
   isSharedLookUp = false,
 }) => {
-  const [translationPresetState, languagePairs, setTranslationPreset] =
-    useTranslationPreset();
+  const translationPresetState = useTranslationPreset();
   const [lookUpText, setLookUpText] = useState(initialText);
   const [isAnalyzingPreset, setIsAnalyzingPreset] = useState<Preset | false>(
     false
@@ -201,7 +200,7 @@ export const LookUpScreen: FC<Props> = ({
       return;
     }
 
-    setTranslationPreset({
+    translationPresetState.setPreset({
       ...translationPresetState.preset,
       isReverse,
     });
@@ -232,9 +231,9 @@ export const LookUpScreen: FC<Props> = ({
             <View style={styles.languageToolbar}>
               <TranslationPresetForm
                 navigation={navigation}
-                languagePairs={languagePairs}
+                languagePairs={translationPresetState.languagePairs}
                 preset={translationPresetState.preset}
-                onChange={setTranslationPreset}
+                onChange={translationPresetState.setPreset}
               />
             </View>
             <View style={[styles.searchContainer]}>

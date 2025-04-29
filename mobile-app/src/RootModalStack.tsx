@@ -7,11 +7,13 @@ import { LanguageSelectorModal } from './LanguageSelectorModal';
 import { MnemonicModal } from './MnemonicModal';
 import { StudyScreen } from './study/StudyScreen';
 import { TabsNavigator } from './TabsNavigator';
+import { WelcomeScreen } from './WelcomeScreen';
 
 const Stack = createStackNavigator();
 
 export const RootModalStack = () => {
   const theme = useTheme();
+
   return (
     <Stack.Navigator>
       <Stack.Group screenOptions={{ headerShown: false }}>
@@ -23,6 +25,14 @@ export const RootModalStack = () => {
           headerShown: false,
         }}
       >
+        <Stack.Screen
+          name="Welcome"
+          component={WelcomeScreen}
+          options={{
+            presentation: 'modal',
+            headerShown: false,
+          }}
+        />
         <Stack.Screen name="Study" component={StudyScreen} />
         <Stack.Screen name="EditCardModal" component={EditCardScreen} />
         <Stack.Screen name="MnemonicModal" component={MnemonicModal} />

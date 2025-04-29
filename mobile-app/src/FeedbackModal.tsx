@@ -18,7 +18,7 @@ export const FeedbackModal: FC<Props> = ({ navigation, route }) => {
   const [isSending, setIsSending] = useState(false);
   const userEmail = useUserEmail();
 
-  const [translationPreset] = useTranslationPreset();
+  const translationPreset = useTranslationPreset();
 
   const sendFeedback = useCallback(async () => {
     setIsSending(true);

@@ -2,17 +2,19 @@ import { NavigationProp } from '@react-navigation/native';
 import { postOnboardingAction } from '@vocably/api';
 import { GoogleLanguage } from '@vocably/model';
 import { usePostHog } from 'posthog-react-native';
-import React, { FC, useEffect, useRef } from 'react';
+import React, { FC, useContext, useEffect, useRef } from 'react';
 import { ScrollView, View } from 'react-native';
 import { Button, Divider, Text, useTheme } from 'react-native-paper';
 import Animated, { FadeInDown } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { getItem, setItem } from './asyncAppStorage';
 import { facility } from './facility';
+import { LanguagesContext } from './languages/LanguagesContainer';
 import { OnboardingSlider } from './OnboardingSlider';
 import { SourceLanguageButton } from './SourceLanguageButton';
 import { Displayer, DisplayerRef } from './study/Displayer';
 import { TargetLanguageButton } from './TargetLanguageButton';
+import { Preset } from './TranslationPreset/TranslationPresetContainer';
 import { useTranslationPreset } from './TranslationPreset/useTranslationPreset';
 import { useAsync } from './useAsync';
 
@@ -39,10 +41,12 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
     getOnboardingStepFromStorage,
     setOnboardingStepToStorage
   );
-  const [translationPresetState, languagePairs, setTranslationPreset] =
-    useTranslationPreset();
+  const translationPresetState = useTranslationPreset();
   const insets = useSafeAreaInsets();
   const onboardingDisplayerRef = useRef<DisplayerRef>(null);
+
+  const { languages, selectedLanguage, selectLanguage, addNewLanguage } =
+    useContext(LanguagesContext);
 
   const postHog = usePostHog();
 
@@ -71,6 +75,16 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
     return <></>;
   }
 
+  const onSourceLanguageChange = async (preset: Preset) => {
+    await translationPresetState.setPreset(preset);
+    if (languages.includes(preset.sourceLanguage)) {
+      await selectLanguage(preset.sourceLanguage);
+      return;
+    }
+
+    return addNewLanguage(preset.sourceLanguage);
+  };
+
   return (
     <View
       style={{
@@ -97,7 +111,7 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
             <Text
               style={{ textAlign: 'center', fontSize: 24, marginBottom: 24 }}
             >
-              To get started, please answer these questions:
+              To get started, please answer a few questions.
             </Text>
 
             <View
@@ -118,8 +132,8 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
                 <SourceLanguageButton
                   navigation={navigation}
                   preset={translationPresetState.preset}
-                  onChange={setTranslationPreset}
-                  languagePairs={languagePairs}
+                  onChange={onSourceLanguageChange}
+                  languagePairs={translationPresetState.languagePairs}
                   emptyText="Select"
                 />
               </View>
@@ -156,8 +170,8 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
                     <TargetLanguageButton
                       navigation={navigation}
                       preset={translationPresetState.preset}
-                      onChange={setTranslationPreset}
-                      languagePairs={languagePairs}
+                      onChange={translationPresetState.setPreset}
+                      languagePairs={translationPresetState.languagePairs}
                     />
                   </View>
                 </View>
@@ -213,7 +227,7 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
         <Displayer style={{ gap: 16, maxWidth: 600 }}>
           <OnboardingSlider
             setIsReverse={(isReverse) =>
-              setTranslationPreset({
+              translationPresetState.setPreset({
                 ...translationPresetState.preset,
                 isReverse,
               })
