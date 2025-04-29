@@ -1,6 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 
 import { DashboardScreen } from './DashboardScreen';
+import { HowToEditCardsScreen } from './DeckStack/HowToEditCardsScreen';
 import { HowToGroupCardsScreen } from './DeckStack/HowToGroupCardsScreen';
 import { HowToImportAndExportScreen } from './DeckStack/HowToImportAndExportScreen';
 import { NotificationsScreen } from './DeckStack/NotificationsScreen';
@@ -32,6 +33,11 @@ export const DeckStack = () => {
         name="Notifications"
         options={{ title: `Edit ${languageName} deck` }}
         component={NotificationsScreen}
+      />
+      <Stack.Screen
+        name="HowToEditCards"
+        options={{ title: `Edit ${languageName} deck` }}
+        component={HowToEditCardsScreen}
       />
       <Stack.Screen
         name="HowToGroupCards"

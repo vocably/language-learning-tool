@@ -64,6 +64,26 @@ export const EditDeckScreen: FC<Props> = ({ navigation }) => {
 
       <CustomSurface style={{ marginBottom: 32 }}>
         <List.Item
+          title="How to edit cards"
+          onPress={() => navigation.navigate('HowToEditCards')}
+          left={() => (
+            <Icon
+              name="pencil-outline"
+              size={24}
+              color={theme.colors.onBackground}
+              style={{ marginLeft: 24 }}
+            />
+          )}
+          right={() => (
+            <Icon
+              name="menu-right"
+              size={24}
+              color={theme.colors.onBackground}
+            />
+          )}
+        ></List.Item>
+        <Divider style={{ alignSelf: 'stretch' }} />
+        <List.Item
           title="How to group cards"
           onPress={() => navigation.navigate('HowToGroupCards')}
           left={() => (
