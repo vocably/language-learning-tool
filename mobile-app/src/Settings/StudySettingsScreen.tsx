@@ -1,11 +1,12 @@
 import { Slider } from '@miblanchard/react-native-slider';
 import { FC } from 'react';
 import { Linking, PixelRatio, View } from 'react-native';
-import { Checkbox, Text, useTheme } from 'react-native-paper';
+import { Text, useTheme } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { getItem, setItem } from '../asyncAppStorage';
 import { CustomScrollView } from '../ui/CustomScrollView';
 import { CustomSurface } from '../ui/CustomSurface';
+import { ListSwitch } from '../ui/ListSwitch';
 import { ScreenTitle } from '../ui/ScreenTitle';
 import { useAsync } from '../useAsync';
 
@@ -63,26 +64,26 @@ export const StudySettingsScreen: FC<Props> = () => {
     setPreferMultiChoiceEnabled
   );
 
-  const onMultiChoicePress = () => {
+  const onMultiChoiceChange = async () => {
     if (isMultiChoiceEnabledResult.status !== 'loaded') {
       return;
     }
-    mutateMultiChoiceEnabled(!isMultiChoiceEnabledResult.value);
+    await mutateMultiChoiceEnabled(!isMultiChoiceEnabledResult.value);
   };
 
-  const onRandomizerEnabledPress = () => {
+  const onRandomizerEnabledChange = async () => {
     if (isRandomizerEnabled.status !== 'loaded') {
       return;
     }
 
-    mutateIsRandomizerEnabled(!isRandomizerEnabled.value);
+    await mutateIsRandomizerEnabled(!isRandomizerEnabled.value);
   };
 
-  const onPreferMultiChoicePress = () => {
+  const onPreferMultiChoiceChange = async () => {
     if (preferMultiChoiceResult.status !== 'loaded') {
       return;
     }
-    mutatePreferMultiChoice(!preferMultiChoiceResult.value);
+    await mutatePreferMultiChoice(!preferMultiChoiceResult.value);
   };
 
   const fontScale = Math.max(1, PixelRatio.getFontScale());
@@ -95,21 +96,10 @@ export const StudySettingsScreen: FC<Props> = () => {
         preferMultiChoiceResult.status === 'loaded' && (
           <>
             <CustomSurface style={{ marginBottom: 8 }}>
-              <Checkbox.Item
-                mode="android"
-                position="leading"
-                status={
-                  isMultiChoiceEnabledResult.value ? 'checked' : 'unchecked'
-                }
-                onPress={onMultiChoicePress}
-                label="Use multiple-choice questions"
-                labelStyle={{
-                  textAlign: 'left',
-                  lineHeight: 16,
-                }}
-                style={{
-                  width: '100%',
-                }}
+              <ListSwitch
+                title="Use multiple-choice questions"
+                value={isMultiChoiceEnabledResult.value}
+                onChange={onMultiChoiceChange}
               />
             </CustomSurface>
 
@@ -135,21 +125,10 @@ export const StudySettingsScreen: FC<Props> = () => {
             {isMultiChoiceEnabledResult.value && (
               <>
                 <CustomSurface style={{ marginBottom: 8 }}>
-                  <Checkbox.Item
-                    mode="android"
-                    position="leading"
-                    status={
-                      preferMultiChoiceResult.value ? 'checked' : 'unchecked'
-                    }
-                    onPress={onPreferMultiChoicePress}
-                    label="Multiple-choice only"
-                    labelStyle={{
-                      textAlign: 'left',
-                      lineHeight: 16,
-                    }}
-                    style={{
-                      width: '100%',
-                    }}
+                  <ListSwitch
+                    title="Multiple-choice only"
+                    value={preferMultiChoiceResult.value}
+                    onChange={onPreferMultiChoiceChange}
                   />
                 </CustomSurface>
                 <View
@@ -211,19 +190,10 @@ export const StudySettingsScreen: FC<Props> = () => {
 
       {isRandomizerEnabled.status === 'loaded' && (
         <CustomSurface style={{ marginBottom: 8 }}>
-          <Checkbox.Item
-            mode="android"
-            position="leading"
-            status={isRandomizerEnabled.value ? 'checked' : 'unchecked'}
-            onPress={onRandomizerEnabledPress}
-            label="Randomly select cards to study"
-            labelStyle={{
-              textAlign: 'left',
-              lineHeight: 16,
-            }}
-            style={{
-              width: '100%',
-            }}
+          <ListSwitch
+            title="Randomly select cards to study"
+            value={isRandomizerEnabled.value}
+            onChange={onRandomizerEnabledChange}
           />
         </CustomSurface>
       )}

@@ -10,9 +10,10 @@ import { usePostHog } from 'posthog-react-native';
 import { FC, useState } from 'react';
 import { View } from 'react-native';
 import { getTimeZone } from 'react-native-localize';
-import { Switch, Text } from 'react-native-paper';
+import { Text } from 'react-native-paper';
 import { InlineLoader } from '../../loaders/InlineLoader';
 import { CustomSurface } from '../../ui/CustomSurface';
+import { ListSwitch } from '../../ui/ListSwitch';
 import { useAsync } from '../../useAsync';
 import { TimePicker } from './TimePicker';
 
@@ -130,16 +131,12 @@ export const NotificationsAllowed: FC<Props> = ({ language }) => {
       )}
       {loadNotificationsResult.status === 'loaded' && (
         <>
-          <CustomSurface style={{ padding: 16, marginBottom: 8 }}>
-            <View
-              style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}
-            >
-              <Switch
-                value={loadNotificationsResult.value.exists}
-                onChange={enableOrDisableNotificationTime}
-              />
-              <Text style={{ fontSize: 16 }}>Enabled for {languageString}</Text>
-            </View>
+          <CustomSurface style={{ marginBottom: 8 }}>
+            <ListSwitch
+              title={`Enabled for ${languageString}`}
+              value={loadNotificationsResult.value.exists}
+              onChange={enableOrDisableNotificationTime}
+            />
           </CustomSurface>
           <View style={{ paddingHorizontal: 16, marginBottom: 32 }}>
             <Text>
@@ -147,25 +144,27 @@ export const NotificationsAllowed: FC<Props> = ({ language }) => {
               {languageString} cards.
             </Text>
           </View>
-          <CustomSurface>
-            <TimePicker
-              disabled={!loadNotificationsResult.value.exists || isSwitching}
-              time={
-                (loadNotificationsResult.value.exists &&
-                  loadNotificationsResult.value.time) ||
-                defaultNotificationTime
-              }
-              onChange={(time) => {
-                posthog.capture('notificationsSetTime', { time });
+          {loadNotificationsResult.value.exists && (
+            <CustomSurface>
+              <TimePicker
+                disabled={!loadNotificationsResult.value.exists || isSwitching}
+                time={
+                  (loadNotificationsResult.value.exists &&
+                    loadNotificationsResult.value.time) ||
+                  defaultNotificationTime
+                }
+                onChange={(time) => {
+                  posthog.capture('notificationsSetTime', { time });
 
-                mutateNotifications({
-                  language: loadNotificationsResult.value.language,
-                  time,
-                  exists: true,
-                });
-              }}
-            />
-          </CustomSurface>
+                  mutateNotifications({
+                    language: loadNotificationsResult.value.language,
+                    time,
+                    exists: true,
+                  });
+                }}
+              />
+            </CustomSurface>
+          )}
         </>
       )}
     </>

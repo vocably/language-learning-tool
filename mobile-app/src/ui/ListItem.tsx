@@ -33,6 +33,7 @@ export const ListItem: FC<Props> = ({
       borderless={true}
       style={[
         {
+          width: '100%',
           borderTopLeftRadius:
             order === 'single' || order === 'first' ? BORDER_RADIUS : 0,
           borderTopRightRadius:
