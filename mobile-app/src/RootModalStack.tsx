@@ -7,7 +7,7 @@ import { LanguageSelectorModal } from './LanguageSelectorModal';
 import { MnemonicModal } from './MnemonicModal';
 import { StudyScreen } from './study/StudyScreen';
 import { TabsNavigator } from './TabsNavigator';
-import { WelcomeScreen } from './WelcomeScreen';
+import { WelcomeScreen } from './Welcome/WelcomeScreen';
 
 const Stack = createStackNavigator();
 

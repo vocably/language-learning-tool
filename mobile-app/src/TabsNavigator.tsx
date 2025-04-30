@@ -6,7 +6,7 @@ import { DeckStack } from './DeckStack';
 import { LookUpScreen } from './LookUpScreen';
 import { SettingsStack } from './Settings/SettingsStack';
 import { useWelcomeRequired } from './useWelcomeRequired';
-import { WelcomeScreen } from './WelcomeScreen';
+import { WelcomeScreen } from './Welcome/WelcomeScreen';
 
 const Tabs = createMaterialBottomTabNavigator();
 
@@ -17,21 +17,21 @@ type Props = {
 export const TabsNavigator: FC<Props> = ({ navigation }) => {
   const welcomeIsRequiredResult = useWelcomeRequired();
 
-  useEffect(() => {
-    if (
-      welcomeIsRequiredResult.status === 'loaded' &&
-      welcomeIsRequiredResult.value
-    ) {
-      setTimeout(() => navigation.navigate('Welcome'), 50);
-    }
-  }, [welcomeIsRequiredResult]);
+  // useEffect(() => {
+  //   if (
+  //     welcomeIsRequiredResult.status === 'loaded' &&
+  //     welcomeIsRequiredResult.value
+  //   ) {
+  //     setTimeout(() => navigation.navigate('Welcome'), 50);
+  //   }
+  // }, [welcomeIsRequiredResult]);
 
-  if (
-    welcomeIsRequiredResult.status !== 'loaded' ||
-    welcomeIsRequiredResult.value
-  ) {
-    return <></>;
-  }
+  // if (
+  //   welcomeIsRequiredResult.status !== 'loaded' ||
+  //   welcomeIsRequiredResult.value
+  // ) {
+  //   return <></>;
+  // }
 
   return (
     <>
