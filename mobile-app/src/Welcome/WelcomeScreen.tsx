@@ -204,7 +204,9 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
               {swiperIndex < totalSlides - 1 && (
                 <Button
                   mode="elevated"
-                  elevation={2}
+                  elevation={3}
+                  // @ts-ignore
+                  buttonColor={theme.colors.aboveElevation}
                   onPress={() => {
                     swiperRef.current && swiperRef.current.scrollBy(1);
                   }}
