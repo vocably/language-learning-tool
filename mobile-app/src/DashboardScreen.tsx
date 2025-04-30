@@ -115,7 +115,7 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
   const [toBeDeletedId, setToBeDeletedId] = useState<string | null>(null);
   const [savingTagsForId, setSavingTagsForId] = useState<string | null>(null);
   const insets = useSafeAreaInsets();
-  const [preset, languagePairs, setTranslationPreset] = useTranslationPreset();
+  const presetState = useTranslationPreset();
   const languageName = useCurrentLanguageName();
 
   const onRefresh = useCallback(async () => {
@@ -540,12 +540,12 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                         title="Go to Look up"
                         onPress={() => {
                           navigation.navigate('LookUp');
-                          if (preset.status === 'known') {
-                            setTranslationPreset(
+                          if (presetState.status === 'known') {
+                            presetState.setPreset(
                               setSourceLanguage(
                                 deck.language,
-                                preset.preset,
-                                languagePairs
+                                presetState.preset,
+                                presetState.languagePairs
                               )
                             );
                           }

@@ -12,7 +12,6 @@ import { RootModalStack } from './RootModalStack';
 import { ThemeProvider } from './ThemeProvider';
 import { TranslationPresetContainer } from './TranslationPreset/TranslationPresetContainer';
 import { UserMetadataContainer } from './UserMetadataContainer';
-import { WelcomeContainer } from './WelcomeContainer';
 
 configureApi({
   baseUrl: API_BASE_URL,
@@ -27,27 +26,25 @@ configureApi({
 const App = () => {
   return (
     <ThemeProvider>
-      <WelcomeContainer>
-        <NavigationContainer>
-          <PostHogProvider>
-            <AuthContainer>
-              <Login>
-                <NotificationsContainer>
-                  <UserMetadataContainer>
-                    <LanguagesContainer refreshLanguagesOnActive={true}>
-                      <TranslationPresetContainer>
-                        <SafeAreaProvider>
-                          <RootModalStack />
-                        </SafeAreaProvider>
-                      </TranslationPresetContainer>
-                    </LanguagesContainer>
-                  </UserMetadataContainer>
-                </NotificationsContainer>
-              </Login>
-            </AuthContainer>
-          </PostHogProvider>
-        </NavigationContainer>
-      </WelcomeContainer>
+      <NavigationContainer>
+        <PostHogProvider>
+          <AuthContainer>
+            <Login>
+              <NotificationsContainer>
+                <UserMetadataContainer>
+                  <LanguagesContainer refreshLanguagesOnActive={true}>
+                    <TranslationPresetContainer>
+                      <SafeAreaProvider>
+                        <RootModalStack />
+                      </SafeAreaProvider>
+                    </TranslationPresetContainer>
+                  </LanguagesContainer>
+                </UserMetadataContainer>
+              </NotificationsContainer>
+            </Login>
+          </AuthContainer>
+        </PostHogProvider>
+      </NavigationContainer>
     </ThemeProvider>
   );
 };

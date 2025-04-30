@@ -1,11 +1,11 @@
 import { FC, PropsWithChildren } from 'react';
-import { FlexStyle, Platform } from 'react-native';
+import { Platform, StyleProp, ViewStyle } from 'react-native';
 import { IPhone } from './Telephone/iPhone';
 import { Pixel } from './Telephone/Pixel';
 import { ColorScheme } from './useColorScheme';
 
 type Props = {
-  style?: FlexStyle;
+  style?: StyleProp<ViewStyle>;
   colorScheme?: ColorScheme;
 };
 

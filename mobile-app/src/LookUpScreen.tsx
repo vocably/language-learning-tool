@@ -84,8 +84,7 @@ export const LookUpScreen: FC<Props> = ({
   initialText = '',
   isSharedLookUp = false,
 }) => {
-  const [translationPresetState, languagePairs, setTranslationPreset] =
-    useTranslationPreset();
+  const translationPresetState = useTranslationPreset();
   const [lookUpText, setLookUpText] = useState(initialText);
   const [isAnalyzingPreset, setIsAnalyzingPreset] = useState<Preset | false>(
     false
@@ -190,7 +189,14 @@ export const LookUpScreen: FC<Props> = ({
       console.log('Looking up...');
       lookUp();
     }
-  }, [translationPresetState, deck.status]);
+  }, [
+    // Translation preset state can be a new object,
+    // but all we care about is sourceLanguage, targetLanguage, and if it is reversed
+    translationPresetState.status === 'known'
+      ? `${translationPresetState.preset.sourceLanguage}${translationPresetState.preset.translationLanguage}${translationPresetState.preset.isReverse}`
+      : '',
+    deck.status,
+  ]);
 
   const { onAdd, onRemove, onTagsChange } = useAnalyzeOperations({
     deck,
@@ -201,7 +207,7 @@ export const LookUpScreen: FC<Props> = ({
       return;
     }
 
-    setTranslationPreset({
+    translationPresetState.setPreset({
       ...translationPresetState.preset,
       isReverse,
     });
@@ -232,9 +238,9 @@ export const LookUpScreen: FC<Props> = ({
             <View style={styles.languageToolbar}>
               <TranslationPresetForm
                 navigation={navigation}
-                languagePairs={languagePairs}
+                languagePairs={translationPresetState.languagePairs}
                 preset={translationPresetState.preset}
-                onChange={setTranslationPreset}
+                onChange={translationPresetState.setPreset}
               />
             </View>
             <View style={[styles.searchContainer]}>

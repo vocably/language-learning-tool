@@ -5,14 +5,14 @@ import { TranslationPresetContext } from '../TranslationPreset/TranslationPreset
 export const useTranslationLanguage = (
   sourceLanguage: GoogleLanguage
 ): GoogleLanguage | null => {
-  const { presetState, languagePairs } = useContext(TranslationPresetContext);
+  const { presetState } = useContext(TranslationPresetContext);
 
   if (presetState.status === 'unknown') {
     return null;
   }
 
-  const translationLanguage = languagePairs[sourceLanguage]
-    ? languagePairs[sourceLanguage]?.translationLanguage
+  const translationLanguage = presetState.languagePairs[sourceLanguage]
+    ? presetState.languagePairs[sourceLanguage]?.translationLanguage
     : (presetState.preset.translationLanguage as GoogleLanguage);
 
   return translationLanguage ?? null;
