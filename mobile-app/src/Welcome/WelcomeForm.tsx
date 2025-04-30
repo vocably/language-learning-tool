@@ -7,7 +7,7 @@ import { LanguagesContext } from '../languages/LanguagesContainer';
 import { SourceLanguageButton } from '../SourceLanguageButton';
 import { TargetLanguageButton } from '../TargetLanguageButton';
 import { Preset } from '../TranslationPreset/TranslationPresetContainer';
-import { useTranslationPreset } from '../TranslationPreset/useTranslationPreset';
+import { useWelcomeTranslationPreset } from './useWelcomeTranslationPreset';
 import { WelcomeScrollView } from './WelcomeScrollView';
 
 type Props = {};
@@ -15,22 +15,13 @@ type Props = {};
 export const WelcomeForm: FC<Props> = () => {
   const theme = useTheme();
   const navigation = useNavigation();
-  const translationPresetState = useTranslationPreset();
+  const translationPresetState = useWelcomeTranslationPreset();
   const { languages, selectLanguage, addNewLanguage } =
     useContext(LanguagesContext);
 
   if (translationPresetState.status === 'unknown') {
     return <></>;
   }
-
-  const welcomePreset: Preset = {
-    ...translationPresetState.preset,
-    sourceLanguage: languages.includes(
-      translationPresetState.preset.sourceLanguage
-    )
-      ? translationPresetState.preset.sourceLanguage
-      : '',
-  };
 
   const onSourceLanguageChange = async (preset: Preset) => {
     await translationPresetState.setPreset(preset);
@@ -46,7 +37,6 @@ export const WelcomeForm: FC<Props> = () => {
     <WelcomeScrollView>
       <View
         style={{
-          maxWidth: 400,
           gap: 16,
         }}
       >
@@ -71,7 +61,7 @@ export const WelcomeForm: FC<Props> = () => {
           <View style={{ width: '100%' }}>
             <SourceLanguageButton
               navigation={navigation}
-              preset={welcomePreset}
+              preset={translationPresetState.preset}
               onChange={onSourceLanguageChange}
               languagePairs={translationPresetState.languagePairs}
               emptyText="Select"
@@ -84,7 +74,7 @@ export const WelcomeForm: FC<Props> = () => {
             started.
           </Text>
         </View>
-        {welcomePreset.sourceLanguage && (
+        {translationPresetState.preset.sourceLanguage && (
           <Animated.View
             entering={FadeInDown}
             style={{
@@ -109,7 +99,7 @@ export const WelcomeForm: FC<Props> = () => {
               <View style={{ width: '100%' }}>
                 <TargetLanguageButton
                   navigation={navigation}
-                  preset={welcomePreset}
+                  preset={translationPresetState.preset}
                   onChange={translationPresetState.setPreset}
                   languagePairs={translationPresetState.languagePairs}
                 />

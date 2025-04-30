@@ -3,21 +3,19 @@ import { GoogleLanguage } from '@vocably/model';
 import { usePostHog } from 'posthog-react-native';
 import { FC, useRef, useState } from 'react';
 import { View } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
 import { Button, Surface, Text, useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Swiper from 'react-native-swiper';
 import { mainPadding } from '../styles';
-import { useTranslationPreset } from '../TranslationPreset/useTranslationPreset';
 import { ScreenLayout } from '../ui/ScreenLayout';
 import { SlideCard } from './SlideCard';
 import { SlideDesktopBrowser } from './SlideDesktopBrowser';
 import { SlideLookUp } from './SlideLookUp';
 import { SlideReverseTranslate } from './SlideReverseTranslate';
 import { SlideSelectToTranslate } from './SlideSelectToTranslate';
+import { useWelcomeTranslationPreset } from './useWelcomeTranslationPreset';
 import { WelcomeForm } from './WelcomeForm';
 import { WelcomePaginator } from './WelcomePaginator';
-import { NEXT_BUTTON_HEIGHT } from './WelcomeScrollView';
 
 type Props = {
   navigation: NavigationProp<any>;
@@ -28,7 +26,7 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
   const insets = useSafeAreaInsets();
   const swiperRef = useRef<Swiper>(null);
   const posthog = usePostHog();
-  const translationPresetState = useTranslationPreset();
+  const translationPresetState = useWelcomeTranslationPreset();
   const [swiperIndex, setSwiperIndex] = useState(0);
 
   if (translationPresetState.status === 'unknown') {
@@ -108,7 +106,6 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
           style={{
             flex: 1,
             position: 'relative',
-            paddingBottom: insets.bottom,
           }}
         >
           <Swiper
@@ -183,53 +180,55 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
               />
             )}
           </Swiper>
-          <LinearGradient
-            locations={[0.1, 0.4]}
-            // @ts-ignore
-            colors={[theme.colors.transparentSurface, theme.colors.surface]}
-            style={{
-              position: 'absolute',
-              display: 'flex',
-              bottom: 0,
-              width: '100%',
-              alignItems: 'stretch',
-              justifyContent: 'center',
-              height: insets.bottom + NEXT_BUTTON_HEIGHT,
-              paddingLeft: insets.left + mainPadding,
-              paddingRight: insets.right + mainPadding,
-            }}
-          >
-            {isSet && (
-              <>
-                {swiperIndex < totalSlides - 1 && (
-                  <Button
-                    mode="elevated"
-                    elevation={2}
-                    onPress={() => {
-                      swiperRef.current && swiperRef.current.scrollBy(1);
-                    }}
-                  >
-                    Next
-                  </Button>
-                )}
-                {swiperIndex === totalSlides - 1 && (
-                  <Button
-                    mode="elevated"
-                    elevation={2}
-                    buttonColor={theme.colors.primary}
-                    textColor={theme.colors.onPrimary}
-                    onPress={() => {
-                      posthog.capture('onboardingDoneClicked');
-                      navigation.goBack();
-                    }}
-                  >
-                    Go to the app
-                  </Button>
-                )}
-              </>
-            )}
-          </LinearGradient>
         </View>
+      }
+      footer={
+        <>
+          {isSet && (
+            <Surface
+              elevation={1}
+              // @ts-ignore
+              colors={[theme.colors.transparentSurface, theme.colors.surface]}
+              style={{
+                display: 'flex',
+                bottom: 0,
+                width: '100%',
+                alignItems: 'stretch',
+                justifyContent: 'center',
+                paddingLeft: insets.left + mainPadding,
+                paddingRight: insets.right + mainPadding,
+                paddingBottom: insets.bottom + mainPadding,
+                paddingTop: mainPadding,
+              }}
+            >
+              {swiperIndex < totalSlides - 1 && (
+                <Button
+                  mode="elevated"
+                  elevation={2}
+                  onPress={() => {
+                    swiperRef.current && swiperRef.current.scrollBy(1);
+                  }}
+                >
+                  Next
+                </Button>
+              )}
+              {swiperIndex === totalSlides - 1 && (
+                <Button
+                  mode="elevated"
+                  elevation={2}
+                  buttonColor={theme.colors.primary}
+                  textColor={theme.colors.onPrimary}
+                  onPress={() => {
+                    posthog.capture('onboardingDoneClicked');
+                    navigation.goBack();
+                  }}
+                >
+                  Go to the app
+                </Button>
+              )}
+            </Surface>
+          )}
+        </>
       }
     ></ScreenLayout>
   );
