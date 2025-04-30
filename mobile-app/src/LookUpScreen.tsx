@@ -189,7 +189,14 @@ export const LookUpScreen: FC<Props> = ({
       console.log('Looking up...');
       lookUp();
     }
-  }, [translationPresetState, deck.status]);
+  }, [
+    // Translation preset state can be a new object,
+    // but all we care about is sourceLanguage, targetLanguage, and if it is reversed
+    translationPresetState.status === 'known'
+      ? `${translationPresetState.preset.sourceLanguage}${translationPresetState.preset.translationLanguage}${translationPresetState.preset.isReverse}`
+      : '',
+    deck.status,
+  ]);
 
   const { onAdd, onRemove, onTagsChange } = useAnalyzeOperations({
     deck,
