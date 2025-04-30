@@ -18,7 +18,7 @@ export const WelcomeScrollView: FC<PropsWithChildren<Props>> = ({
         {
           paddingLeft: insets.left + mainPadding,
           paddingRight: insets.right + mainPadding,
-          paddingBottom: 80,
+          paddingBottom: 90,
           paddingTop: mainPadding,
           flexGrow: 1,
           alignItems: 'center',

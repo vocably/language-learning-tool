@@ -4,7 +4,7 @@ import { usePostHog } from 'posthog-react-native';
 import { FC, useRef, useState } from 'react';
 import { View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import { Button, Surface, useTheme } from 'react-native-paper';
+import { Button, Surface, Text, useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Swiper from 'react-native-swiper';
 import { mainPadding } from '../styles';
@@ -16,6 +16,7 @@ import { SlideLookUp } from './SlideLookUp';
 import { SlideReverseTranslate } from './SlideReverseTranslate';
 import { SlideSelectToTranslate } from './SlideSelectToTranslate';
 import { WelcomeForm } from './WelcomeForm';
+import { WelcomePaginator } from './WelcomePaginator';
 
 type Props = {
   navigation: NavigationProp<any>;
@@ -53,28 +54,52 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
             flexDirection: 'row',
           }}
         >
-          {swiperIndex > 0 && (
+          <View style={{ flex: 1, alignItems: 'flex-start' }}>
             <Button
+              style={{
+                opacity: swiperIndex > 0 ? 1 : 0,
+                pointerEvents: swiperIndex > 0 ? 'auto' : 'none',
+              }}
               onPress={() =>
                 swiperRef.current && swiperRef.current.scrollBy(-1)
               }
             >
-              Back
+              Previous
             </Button>
-          )}
-          <Button
+          </View>
+
+          <View
             style={{
-              marginLeft: 'auto',
-              opacity: isSet ? 1 : 0,
-              pointerEvents: isSet ? 'auto' : 'none',
-            }}
-            onPress={() => {
-              posthog.capture('onboardingSkipped');
-              navigation.goBack();
+              flex: 1,
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
           >
-            Skip
-          </Button>
+            {isSet && swiperIndex > 0 && (
+              <WelcomePaginator
+                slideIndex={swiperIndex}
+                totalSlides={totalSlides}
+              />
+            )}
+            {(!isSet || swiperIndex === 0) && (
+              <Text style={{ fontWeight: 'bold' }}>Setup</Text>
+            )}
+          </View>
+
+          <View style={{ flex: 1, alignItems: 'flex-end' }}>
+            <Button
+              style={{
+                opacity: isSet && swiperIndex > 0 ? 1 : 0,
+                pointerEvents: isSet ? 'auto' : 'none',
+              }}
+              onPress={() => {
+                posthog.capture('onboardingSkipped');
+                navigation.goBack();
+              }}
+            >
+              Skip
+            </Button>
+          </View>
         </Surface>
       }
       content={
@@ -187,12 +212,14 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
                   <Button
                     mode="elevated"
                     elevation={2}
+                    buttonColor={theme.colors.primary}
+                    textColor={theme.colors.onPrimary}
                     onPress={() => {
                       posthog.capture('onboardingDoneClicked');
                       navigation.goBack();
                     }}
                   >
-                    Done
+                    Go to the app
                   </Button>
                 )}
               </>
