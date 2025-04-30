@@ -44,16 +44,6 @@ export const TabsNavigator: FC<Props> = ({ navigation }) => {
         }}
       >
         <Tabs.Screen
-          name="LookUp"
-          component={LookUpScreen}
-          options={{
-            title: 'Look up',
-            tabBarIcon: ({ color }) => (
-              <Icon name="translate" color={color} size={24} />
-            ),
-          }}
-        />
-        <Tabs.Screen
           name="DeckScreen"
           options={{
             title: 'My cards',
@@ -62,6 +52,16 @@ export const TabsNavigator: FC<Props> = ({ navigation }) => {
             ),
           }}
           component={DeckStack}
+        />
+        <Tabs.Screen
+          name="LookUp"
+          component={LookUpScreen}
+          options={{
+            title: 'Look up',
+            tabBarIcon: ({ color }) => (
+              <Icon name="translate" color={color} size={24} />
+            ),
+          }}
         />
         <Tabs.Screen
           name="Settings"

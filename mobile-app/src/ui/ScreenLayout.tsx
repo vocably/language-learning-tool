@@ -10,7 +10,6 @@ type Props = {
 export const ScreenLayout: FC<Props> = ({ header, content, footer }) => {
   const [headerHeight, setHeaderHeight] = useState(64);
   const [footerHeight, setFooterHeight] = useState(0);
-  console.log(footerHeight);
 
   return (
     <View

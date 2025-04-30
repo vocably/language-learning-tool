@@ -1,4 +1,5 @@
 import { NavigationProp } from '@react-navigation/native';
+import { postOnboardingAction } from '@vocably/api';
 import { GoogleLanguage } from '@vocably/model';
 import { usePostHog } from 'posthog-react-native';
 import { FC, useRef, useState } from 'react';
@@ -6,6 +7,7 @@ import { View } from 'react-native';
 import { Button, Surface, Text, useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Swiper from 'react-native-swiper';
+import { facility } from '../facility';
 import { mainPadding } from '../styles';
 import { ScreenLayout } from '../ui/ScreenLayout';
 import { SlideCard } from './SlideCard';
@@ -28,6 +30,8 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
   const posthog = usePostHog();
   const translationPresetState = useWelcomeTranslationPreset();
   const [swiperIndex, setSwiperIndex] = useState(0);
+  const [onboardingActionTargetLanguage, setOnboardingActionTargetLanuguage] =
+    useState('');
 
   if (translationPresetState.status === 'unknown') {
     return <></>;
@@ -39,6 +43,31 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
 
   // @ts-ignore
   const totalSlides = swiperRef.current ? swiperRef.current.state.total : 0;
+
+  const onSwipe = (index: number) => {
+    if (
+      index === 1 &&
+      translationPresetState.preset.translationLanguage !==
+        onboardingActionTargetLanguage
+    ) {
+      postOnboardingAction({
+        name: 'facilityOnboarded',
+        payload: {
+          facility,
+          targetLanguage: translationPresetState.preset.translationLanguage,
+        },
+      }).then(() =>
+        setOnboardingActionTargetLanuguage(
+          translationPresetState.preset.translationLanguage
+        )
+      );
+    }
+
+    setSwiperIndex(index);
+    posthog.capture('onboardingSwiped', {
+      index,
+    });
+  };
 
   return (
     <ScreenLayout
@@ -113,12 +142,7 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
             loop={false}
             showsPagination={false}
             ref={swiperRef}
-            onIndexChanged={(index) => {
-              setSwiperIndex(index);
-              posthog.capture('onboardingSwiped', {
-                index,
-              });
-            }}
+            onIndexChanged={onSwipe}
           >
             <WelcomeForm></WelcomeForm>
             {isSet && (
