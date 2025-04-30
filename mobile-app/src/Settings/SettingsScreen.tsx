@@ -36,12 +36,14 @@ export const SettingsScreen: FC<Props> = ({ navigation }) => {
     >
       <CustomSurface style={{ marginBottom: 16 }}>
         <ListItem
+          order="first"
           leftIcon="account-circle-outline"
           title="Your account"
           onPress={() => navigation.navigate('AccountMenu')}
         />
         <Divider />
         <ListItem
+          order="last"
           leftIcon="school-outline"
           title="Study settings"
           onPress={() => navigation.navigate('StudySettings')}

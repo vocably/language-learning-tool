@@ -1,8 +1,7 @@
 import { NavigationProp } from '@react-navigation/native';
 import React, { FC } from 'react';
 import { View } from 'react-native';
-import { Divider, List, Text, useTheme } from 'react-native-paper';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Divider, Text, useTheme } from 'react-native-paper';
 import { DeleteDeckButton } from './DeleteDeckButton';
 import { useSelectedDeck } from './languageDeck/useSelectedDeck';
 import { CustomScrollView } from './ui/CustomScrollView';
@@ -35,25 +34,12 @@ export const EditDeckScreen: FC<Props> = ({ navigation }) => {
       />
 
       <CustomSurface style={{ marginBottom: 8 }}>
-        <List.Item
+        <ListItem
           title="Study reminders"
           onPress={() => navigation.navigate('Notifications')}
-          left={() => (
-            <Icon
-              name="bell-outline"
-              size={24}
-              color={theme.colors.onBackground}
-              style={{ marginLeft: 24 }}
-            />
-          )}
-          right={() => (
-            <Icon
-              name="menu-right"
-              size={24}
-              color={theme.colors.onBackground}
-            />
-          )}
-        ></List.Item>
+          leftIcon="bell-outline"
+          rightIcon="menu-right"
+        ></ListItem>
       </CustomSurface>
       <View style={{ paddingHorizontal: 16, marginBottom: 32, gap: 8 }}>
         <Text>
@@ -63,65 +49,29 @@ export const EditDeckScreen: FC<Props> = ({ navigation }) => {
       </View>
 
       <CustomSurface style={{ marginBottom: 32 }}>
-        <List.Item
+        <ListItem
+          order="first"
           title="How to edit cards"
           onPress={() => navigation.navigate('HowToEditCards')}
-          left={() => (
-            <Icon
-              name="pencil-outline"
-              size={24}
-              color={theme.colors.onBackground}
-              style={{ marginLeft: 24 }}
-            />
-          )}
-          right={() => (
-            <Icon
-              name="menu-right"
-              size={24}
-              color={theme.colors.onBackground}
-            />
-          )}
-        ></List.Item>
+          leftIcon="pencil-outline"
+          rightIcon="menu-right"
+        ></ListItem>
         <Divider style={{ alignSelf: 'stretch' }} />
-        <List.Item
+        <ListItem
+          order="middle"
           title="How to group cards"
           onPress={() => navigation.navigate('HowToGroupCards')}
-          left={() => (
-            <Icon
-              name="group"
-              size={24}
-              color={theme.colors.onBackground}
-              style={{ marginLeft: 24 }}
-            />
-          )}
-          right={() => (
-            <Icon
-              name="menu-right"
-              size={24}
-              color={theme.colors.onBackground}
-            />
-          )}
-        ></List.Item>
+          leftIcon="group"
+          rightIcon="menu-right"
+        ></ListItem>
         <Divider style={{ alignSelf: 'stretch' }} />
-        <List.Item
+        <ListItem
+          order="last"
           title="How to import and export"
           onPress={() => navigation.navigate('HowToImportAndExport')}
-          left={() => (
-            <Icon
-              name="swap-vertical"
-              size={24}
-              color={theme.colors.onBackground}
-              style={{ marginLeft: 24 }}
-            />
-          )}
-          right={() => (
-            <Icon
-              name="menu-right"
-              size={24}
-              color={theme.colors.onBackground}
-            />
-          )}
-        ></List.Item>
+          leftIcon="swap-vertical"
+          rightIcon="menu-right"
+        ></ListItem>
       </CustomSurface>
 
       <CustomSurface style={{ marginBottom: 32 }}>
