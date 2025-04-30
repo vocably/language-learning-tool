@@ -145,17 +145,20 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
                 }
               />
             )}
-            {isSet && (
-              <SlideReverseTranslate
-                sourceLanguage={
-                  translationPresetState.preset.sourceLanguage as GoogleLanguage
-                }
-                targetLanguage={
-                  translationPresetState.preset
-                    .translationLanguage as GoogleLanguage
-                }
-              />
-            )}
+            {isSet &&
+              translationPresetState.preset.sourceLanguage !==
+                translationPresetState.preset.translationLanguage && (
+                <SlideReverseTranslate
+                  sourceLanguage={
+                    translationPresetState.preset
+                      .sourceLanguage as GoogleLanguage
+                  }
+                  targetLanguage={
+                    translationPresetState.preset
+                      .translationLanguage as GoogleLanguage
+                  }
+                />
+              )}
             {isSet && (
               <SlideSelectToTranslate
                 sourceLanguage={

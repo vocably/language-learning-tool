@@ -37,7 +37,8 @@ export const SlideCard: FC<Props> = ({ sourceLanguage, targetLanguage }) => {
   return (
     <WelcomeScrollView style={{ gap: 16 }}>
       <Text style={{ fontSize: 22, textAlign: 'center' }}>
-        Vocably translates words and makes flashcards like this one:
+        Vocably {sourceLanguage === targetLanguage ? 'looks up' : 'translates'}{' '}
+        words and makes flashcards like this one:
       </Text>
 
       {onboardingData.isFallback && (

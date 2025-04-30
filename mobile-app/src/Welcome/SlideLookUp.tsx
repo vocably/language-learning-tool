@@ -31,7 +31,9 @@ export const SlideLookUp: FC<Props> = ({ sourceLanguage, targetLanguage }) => {
         <Text style={{ fontWeight: 'bold' }}>
           {trimLanguage(languageList[sourceLanguage])}
         </Text>{' '}
-        word? Translate it and save it as a flashcard!
+        word?{' '}
+        {sourceLanguage === targetLanguage ? 'Look it up' : 'Translate it'} and
+        save it as a flashcard!
       </Text>
 
       <View style={{ width: '100%', alignItems: 'center' }}>

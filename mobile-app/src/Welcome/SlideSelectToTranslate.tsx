@@ -35,7 +35,9 @@ export const SlideSelectToTranslate: FC<Props> = ({
           <Text style={{ fontWeight: 'bold' }}>
             {trimLanguage(languageList[sourceLanguage])}
           </Text>{' '}
-          in Mobile Safari? Translate it with the{' '}
+          word in Mobile Safari?{' '}
+          {sourceLanguage === targetLanguage ? 'Look it up' : 'Translate it'}{' '}
+          with the{' '}
           <Text
             style={{ color: theme.colors.primary }}
             onPress={() => {
