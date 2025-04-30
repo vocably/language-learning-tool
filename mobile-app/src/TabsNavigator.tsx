@@ -1,12 +1,11 @@
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { NavigationProp } from '@react-navigation/native';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { DeckStack } from './DeckStack';
 import { LookUpScreen } from './LookUpScreen';
 import { SettingsStack } from './Settings/SettingsStack';
 import { useWelcomeRequired } from './useWelcomeRequired';
-import { WelcomeScreen } from './Welcome/WelcomeScreen';
 
 const Tabs = createMaterialBottomTabNavigator();
 
@@ -17,21 +16,21 @@ type Props = {
 export const TabsNavigator: FC<Props> = ({ navigation }) => {
   const welcomeIsRequiredResult = useWelcomeRequired();
 
-  // useEffect(() => {
-  //   if (
-  //     welcomeIsRequiredResult.status === 'loaded' &&
-  //     welcomeIsRequiredResult.value
-  //   ) {
-  //     setTimeout(() => navigation.navigate('Welcome'), 50);
-  //   }
-  // }, [welcomeIsRequiredResult]);
+  useEffect(() => {
+    if (
+      welcomeIsRequiredResult.status === 'loaded' &&
+      welcomeIsRequiredResult.value
+    ) {
+      setTimeout(() => navigation.navigate('Welcome'), 50);
+    }
+  }, [welcomeIsRequiredResult]);
 
-  // if (
-  //   welcomeIsRequiredResult.status !== 'loaded' ||
-  //   welcomeIsRequiredResult.value
-  // ) {
-  //   return <></>;
-  // }
+  if (
+    welcomeIsRequiredResult.status !== 'loaded' ||
+    welcomeIsRequiredResult.value
+  ) {
+    return <></>;
+  }
 
   return (
     <>
@@ -44,16 +43,6 @@ export const TabsNavigator: FC<Props> = ({ navigation }) => {
           shadowRadius: 3,
         }}
       >
-        <Tabs.Screen
-          name="Welcome"
-          component={WelcomeScreen}
-          options={{
-            title: 'Welcome',
-            tabBarIcon: ({ color }) => (
-              <Icon name="human-greeting-variant" color={color} size={24} />
-            ),
-          }}
-        />
         <Tabs.Screen
           name="LookUp"
           component={LookUpScreen}

@@ -94,7 +94,7 @@ export const TranslationPresetContainer: FC<PropsWithChildren> = ({
               selectedLanguageResult.value.selectedLanguage
             ].translationLanguage
           : '',
-      isReverse: true,
+      isReverse: false,
     });
   }, [selectedLanguageResult, languagePairsResult, preset]);
 

@@ -7,6 +7,8 @@ type Props = {
   style?: StyleProp<ViewStyle>;
 };
 
+export const NEXT_BUTTON_HEIGHT = 160;
+
 export const WelcomeScrollView: FC<PropsWithChildren<Props>> = ({
   children,
   style,
@@ -18,7 +20,7 @@ export const WelcomeScrollView: FC<PropsWithChildren<Props>> = ({
         {
           paddingLeft: insets.left + mainPadding,
           paddingRight: insets.right + mainPadding,
-          paddingBottom: 90,
+          paddingBottom: insets.bottom + NEXT_BUTTON_HEIGHT - 10,
           paddingTop: mainPadding,
           flexGrow: 1,
           alignItems: 'center',

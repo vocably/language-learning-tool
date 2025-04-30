@@ -17,6 +17,7 @@ import { SlideReverseTranslate } from './SlideReverseTranslate';
 import { SlideSelectToTranslate } from './SlideSelectToTranslate';
 import { WelcomeForm } from './WelcomeForm';
 import { WelcomePaginator } from './WelcomePaginator';
+import { NEXT_BUTTON_HEIGHT } from './WelcomeScrollView';
 
 type Props = {
   navigation: NavigationProp<any>;
@@ -47,10 +48,10 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
         <Surface
           elevation={1}
           style={{
+            paddingTop: 16,
             paddingLeft: insets.left + mainPadding,
             paddingRight: insets.right + mainPadding,
-            paddingTop: insets.top + mainPadding,
-            paddingBottom: mainPadding,
+            paddingBottom: 16,
             flexDirection: 'row',
           }}
         >
@@ -193,7 +194,7 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
               width: '100%',
               alignItems: 'stretch',
               justifyContent: 'center',
-              height: 100,
+              height: insets.bottom + NEXT_BUTTON_HEIGHT,
               paddingLeft: insets.left + mainPadding,
               paddingRight: insets.right + mainPadding,
             }}
