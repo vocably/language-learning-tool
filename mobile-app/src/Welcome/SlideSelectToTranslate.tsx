@@ -1,4 +1,3 @@
-import { useNavigation } from '@react-navigation/native';
 import { GoogleLanguage, languageList } from '@vocably/model';
 import { trimLanguage } from '@vocably/sulna';
 import { usePostHog } from 'posthog-react-native';
@@ -23,7 +22,6 @@ export const SlideSelectToTranslate: FC<Props> = ({
   targetLanguage,
 }) => {
   const colorScheme = useColorScheme();
-  const navigation = useNavigation();
   const onboardingData = getOnboardingData(sourceLanguage, targetLanguage);
   const theme = useTheme();
   const isAndroid = Platform.OS === 'android';

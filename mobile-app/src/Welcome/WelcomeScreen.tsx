@@ -11,6 +11,7 @@ import { mainPadding } from '../styles';
 import { useTranslationPreset } from '../TranslationPreset/useTranslationPreset';
 import { ScreenLayout } from '../ui/ScreenLayout';
 import { SlideCard } from './SlideCard';
+import { SlideDesktopBrowser } from './SlideDesktopBrowser';
 import { SlideLookUp } from './SlideLookUp';
 import { SlideReverseTranslate } from './SlideReverseTranslate';
 import { SlideSelectToTranslate } from './SlideSelectToTranslate';
@@ -124,6 +125,17 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
             )}
             {isSet && (
               <SlideSelectToTranslate
+                sourceLanguage={
+                  translationPresetState.preset.sourceLanguage as GoogleLanguage
+                }
+                targetLanguage={
+                  translationPresetState.preset
+                    .translationLanguage as GoogleLanguage
+                }
+              />
+            )}
+            {isSet && (
+              <SlideDesktopBrowser
                 sourceLanguage={
                   translationPresetState.preset.sourceLanguage as GoogleLanguage
                 }
