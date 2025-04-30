@@ -37,6 +37,9 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
     translationPresetState.preset.sourceLanguage &&
     translationPresetState.preset.translationLanguage;
 
+  // @ts-ignore
+  const totalSlides = swiperRef.current ? swiperRef.current.state.total : 0;
+
   return (
     <ScreenLayout
       header={
@@ -59,15 +62,19 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
               Back
             </Button>
           )}
-          {translationPresetState.preset.sourceLanguage &&
-            translationPresetState.preset.translationLanguage && (
-              <Button
-                style={{ marginLeft: 'auto' }}
-                onPress={() => navigation.goBack()}
-              >
-                Skip
-              </Button>
-            )}
+          <Button
+            style={{
+              marginLeft: 'auto',
+              opacity: isSet ? 1 : 0,
+              pointerEvents: isSet ? 'auto' : 'none',
+            }}
+            onPress={() => {
+              posthog.capture('onboardingSkipped');
+              navigation.goBack();
+            }}
+          >
+            Skip
+          </Button>
         </Surface>
       }
       content={
@@ -79,6 +86,7 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
           }}
         >
           <Swiper
+            key={isSet ? 1 : 0}
             loop={false}
             showsPagination={false}
             ref={swiperRef}
@@ -163,15 +171,31 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
             }}
           >
             {isSet && (
-              <Button
-                mode="elevated"
-                elevation={2}
-                onPress={() => {
-                  swiperRef.current && swiperRef.current.scrollBy(1);
-                }}
-              >
-                Next
-              </Button>
+              <>
+                {swiperIndex < totalSlides - 1 && (
+                  <Button
+                    mode="elevated"
+                    elevation={2}
+                    onPress={() => {
+                      swiperRef.current && swiperRef.current.scrollBy(1);
+                    }}
+                  >
+                    Next
+                  </Button>
+                )}
+                {swiperIndex === totalSlides - 1 && (
+                  <Button
+                    mode="elevated"
+                    elevation={2}
+                    onPress={() => {
+                      posthog.capture('onboardingDoneClicked');
+                      navigation.goBack();
+                    }}
+                  >
+                    Done
+                  </Button>
+                )}
+              </>
             )}
           </LinearGradient>
         </View>
