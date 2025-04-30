@@ -1,14 +1,14 @@
+import { useNavigation } from '@react-navigation/native';
 import { FC, useContext } from 'react';
 import { View } from 'react-native';
+import { Divider, Text, useTheme } from 'react-native-paper';
 import Animated, { FadeInDown } from 'react-native-reanimated';
-import { WelcomeScrollView } from './WelcomeScrollView';
-import { Button, Divider, Text, useTheme } from 'react-native-paper';
-import { SourceLanguageButton } from '../SourceLanguageButton';
-import { useNavigation } from '@react-navigation/native';
-import { useTranslationPreset } from '../TranslationPreset/useTranslationPreset';
-import { Preset } from '../TranslationPreset/TranslationPresetContainer';
 import { LanguagesContext } from '../languages/LanguagesContainer';
+import { SourceLanguageButton } from '../SourceLanguageButton';
 import { TargetLanguageButton } from '../TargetLanguageButton';
+import { Preset } from '../TranslationPreset/TranslationPresetContainer';
+import { useTranslationPreset } from '../TranslationPreset/useTranslationPreset';
+import { WelcomeScrollView } from './WelcomeScrollView';
 
 type Props = {};
 

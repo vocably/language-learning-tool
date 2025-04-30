@@ -1,17 +1,17 @@
+import { useNavigation } from '@react-navigation/native';
+import { GoogleLanguage, languageList } from '@vocably/model';
+import { trimLanguage } from '@vocably/sulna';
 import { FC } from 'react';
 import { View } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 import { Divider, Text, useTheme } from 'react-native-paper';
-import { WelcomeScrollView } from './WelcomeScrollView';
-import { GoogleLanguage, languageList } from '@vocably/model';
-import { Telephone } from '../Telephone';
+import { CardListItem } from '../CardListItem';
 import { TranslationPresetForm } from '../LookUpScreen/TranslationPresetForm';
-import { useColorScheme } from '../useColorScheme';
-import { useNavigation } from '@react-navigation/native';
 import { getOnboardingData } from '../Onboarding/getOnboardingData';
 import { SearchInput } from '../SearchInput';
-import { CardListItem } from '../CardListItem';
-import LinearGradient from 'react-native-linear-gradient';
-import { trimLanguage } from '@vocably/sulna';
+import { Telephone } from '../Telephone';
+import { useColorScheme } from '../useColorScheme';
+import { WelcomeScrollView } from './WelcomeScrollView';
 
 type Props = {
   sourceLanguage: GoogleLanguage;

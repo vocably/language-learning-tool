@@ -1,20 +1,20 @@
 import { NavigationProp } from '@react-navigation/native';
-import { FC, useRef, useState } from 'react';
-import { Button, Surface, useTheme } from 'react-native-paper';
-import { ScreenLayout } from '../ui/ScreenLayout';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { mainPadding } from '../styles';
-import { View } from 'react-native';
-import Swiper from 'react-native-swiper';
-import { usePostHog } from 'posthog-react-native';
-import { WelcomeForm } from './WelcomeForm';
-import { useTranslationPreset } from '../TranslationPreset/useTranslationPreset';
-import LinearGradient from 'react-native-linear-gradient';
 import { GoogleLanguage } from '@vocably/model';
+import { usePostHog } from 'posthog-react-native';
+import { FC, useRef, useState } from 'react';
+import { View } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
+import { Button, Surface, useTheme } from 'react-native-paper';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import Swiper from 'react-native-swiper';
+import { mainPadding } from '../styles';
+import { useTranslationPreset } from '../TranslationPreset/useTranslationPreset';
+import { ScreenLayout } from '../ui/ScreenLayout';
 import { SlideCard } from './SlideCard';
 import { SlideLookUp } from './SlideLookUp';
 import { SlideReverseTranslate } from './SlideReverseTranslate';
 import { SlideSelectToTranslate } from './SlideSelectToTranslate';
+import { WelcomeForm } from './WelcomeForm';
 
 type Props = {
   navigation: NavigationProp<any>;

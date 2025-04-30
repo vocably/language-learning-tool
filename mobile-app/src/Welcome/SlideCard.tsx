@@ -1,15 +1,15 @@
-import { FC } from 'react';
-import { getOnboardingData } from '../Onboarding/getOnboardingData';
-import { WelcomeScrollView } from './WelcomeScrollView';
 import { GoogleLanguage, languageList } from '@vocably/model';
-import { Text, useTheme } from 'react-native-paper';
-import { View } from 'react-native';
-import { AnalyzeResultItem } from '../LookUpScreen/AnalyzeResultItem';
 import { usePostHog } from 'posthog-react-native';
-import { useLanguageDeck } from '../languageDeck/useLanguageDeck';
-import { associateCards } from '../LookUpScreen/associateCards';
-import { useAnalyzeOperations } from '../useAnalyzeOperations';
+import { FC } from 'react';
+import { View } from 'react-native';
+import { Text, useTheme } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { useLanguageDeck } from '../languageDeck/useLanguageDeck';
+import { AnalyzeResultItem } from '../LookUpScreen/AnalyzeResultItem';
+import { associateCards } from '../LookUpScreen/associateCards';
+import { getOnboardingData } from '../Onboarding/getOnboardingData';
+import { useAnalyzeOperations } from '../useAnalyzeOperations';
+import { WelcomeScrollView } from './WelcomeScrollView';
 
 type Props = {
   sourceLanguage: GoogleLanguage;

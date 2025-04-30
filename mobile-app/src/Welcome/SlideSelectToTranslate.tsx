@@ -1,19 +1,17 @@
-import { FC } from 'react';
-import { Linking, Platform, View } from 'react-native';
-import { Divider, Text, useTheme } from 'react-native-paper';
-import { WelcomeScrollView } from './WelcomeScrollView';
-import { GoogleLanguage, languageList } from '@vocably/model';
-import { Telephone } from '../Telephone';
-import { TranslationPresetForm } from '../LookUpScreen/TranslationPresetForm';
-import { useColorScheme } from '../useColorScheme';
 import { useNavigation } from '@react-navigation/native';
-import { getOnboardingData } from '../Onboarding/getOnboardingData';
-import { SearchInput } from '../SearchInput';
-import { CardListItem } from '../CardListItem';
-import LinearGradient from 'react-native-linear-gradient';
+import { GoogleLanguage, languageList } from '@vocably/model';
 import { trimLanguage } from '@vocably/sulna';
 import { usePostHog } from 'posthog-react-native';
+import { FC } from 'react';
+import { Linking, Platform, View } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
+import { Divider, Text, useTheme } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { CardListItem } from '../CardListItem';
+import { getOnboardingData } from '../Onboarding/getOnboardingData';
+import { Telephone } from '../Telephone';
+import { useColorScheme } from '../useColorScheme';
+import { WelcomeScrollView } from './WelcomeScrollView';
 
 type Props = {
   sourceLanguage: GoogleLanguage;
