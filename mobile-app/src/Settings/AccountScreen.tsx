@@ -1,12 +1,12 @@
 import { deleteUser, signOut } from '@aws-amplify/auth';
 import { FC, useCallback } from 'react';
 import { Alert, View } from 'react-native';
-import { List, Text, useTheme } from 'react-native-paper';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Text, useTheme } from 'react-native-paper';
 import { clearAll } from '../asyncAppStorage';
 import { useUserEmail } from '../auth/useUserEmail';
 import { CustomScrollView } from '../ui/CustomScrollView';
 import { CustomSurface } from '../ui/CustomSurface';
+import { ListItem } from '../ui/ListItem';
 import { ScreenTitle } from '../ui/ScreenTitle';
 
 type Props = {};
@@ -44,39 +44,20 @@ export const AccountScreen: FC<Props> = () => {
       </View>
 
       <CustomSurface style={{ marginBottom: 16 }}>
-        <List.Item
+        <ListItem
           title="Sign out"
           onPress={() => signOut()}
-          titleStyle={{
-            color: theme.colors.onBackground,
-          }}
-          left={() => (
-            <Icon
-              name="logout"
-              size={24}
-              color={theme.colors.onBackground}
-              style={{ marginLeft: 16 }}
-            />
-          )}
-        ></List.Item>
+          leftIcon="logout"
+        />
       </CustomSurface>
 
       <CustomSurface style={{ marginBottom: 16 }}>
-        <List.Item
+        <ListItem
           title="Delete your account"
           onPress={onDelete}
-          titleStyle={{
-            color: theme.colors.error,
-          }}
-          left={() => (
-            <Icon
-              name="trash-can-outline"
-              size={24}
-              color={theme.colors.error}
-              style={{ marginLeft: 16 }}
-            />
-          )}
-        ></List.Item>
+          color={theme.colors.error}
+          leftIcon="trash-can-outline"
+        ></ListItem>
       </CustomSurface>
     </CustomScrollView>
   );
