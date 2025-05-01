@@ -2,12 +2,13 @@ import { SrsScore } from '@vocably/srs';
 import React, { FC, ReactNode, useRef } from 'react';
 import {
   Animated,
+  Image,
   PanResponder,
   StyleSheet,
   useWindowDimensions,
   View,
 } from 'react-native';
-import { Button, useTheme } from 'react-native-paper';
+import { Surface, Text, TouchableRipple, useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { PADDING_VERTICAL } from './StudyScreen';
@@ -27,6 +28,8 @@ const styles = StyleSheet.create({
 const AnimatedIcon = Animated.createAnimatedComponent(Icon);
 
 const iconSize = 80;
+const buttonBigBorderRadius = 24;
+const buttonSmallBorderRadius = 8;
 
 export const SwipeGrade: FC<{
   onGrade: (score: SrsScore) => void;
@@ -340,30 +343,116 @@ export const SwipeGrade: FC<{
           gap: 6,
         }}
       >
-        <Button
-          style={{ flex: 1 }}
-          icon={'close'}
-          onPress={weak}
-          mode="elevated"
+        <Surface
+          elevation={1}
+          style={{
+            flex: 1,
+            borderRadius: buttonSmallBorderRadius,
+            borderTopLeftRadius: buttonBigBorderRadius,
+            borderBottomLeftRadius: buttonBigBorderRadius,
+          }}
         >
-          Weak
-        </Button>
-        <Button
-          style={{ flex: 1 }}
-          icon={'check'}
-          onPress={medium}
-          mode="elevated"
+          <TouchableRipple
+            onPress={weak}
+            borderless={true}
+            style={{
+              backgroundColor: theme.colors.elevation.level3,
+              borderTopLeftRadius: buttonBigBorderRadius,
+              borderBottomLeftRadius: buttonBigBorderRadius,
+              borderRadius: buttonSmallBorderRadius,
+            }}
+          >
+            <View
+              style={{
+                gap: 4,
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: 8,
+              }}
+            >
+              <Image
+                resizeMode="contain"
+                source={require('./response-1.png')}
+                style={{
+                  height: 24,
+                }}
+              />
+              <Text>Not yet</Text>
+            </View>
+          </TouchableRipple>
+        </Surface>
+        <Surface
+          elevation={1}
+          style={{
+            flex: 1,
+            borderRadius: buttonSmallBorderRadius,
+          }}
         >
-          Okay
-        </Button>
-        <Button
-          style={{ flex: 1 }}
-          icon={'check-all'}
-          onPress={strong}
-          mode="elevated"
+          <TouchableRipple
+            onPress={medium}
+            borderless={true}
+            style={{
+              backgroundColor: theme.colors.elevation.level3,
+              borderRadius: buttonSmallBorderRadius,
+            }}
+          >
+            <View
+              style={{
+                gap: 4,
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: 8,
+              }}
+            >
+              <Image
+                resizeMode="contain"
+                source={require('./response-3.png')}
+                style={{
+                  height: 24,
+                }}
+              />
+              <Text>Almost</Text>
+            </View>
+          </TouchableRipple>
+        </Surface>
+        <Surface
+          elevation={1}
+          style={{
+            flex: 1,
+            borderRadius: buttonSmallBorderRadius,
+            borderTopRightRadius: buttonBigBorderRadius,
+            borderBottomRightRadius: buttonBigBorderRadius,
+          }}
         >
-          Strong
-        </Button>
+          <TouchableRipple
+            onPress={strong}
+            borderless={true}
+            style={{
+              backgroundColor: theme.colors.elevation.level3,
+              borderRadius: buttonSmallBorderRadius,
+              borderTopRightRadius: buttonBigBorderRadius,
+              borderBottomRightRadius: buttonBigBorderRadius,
+            }}
+          >
+            <View
+              style={{
+                gap: 4,
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: 8,
+              }}
+            >
+              <Image
+                resizeMode="contain"
+                source={require('./response-5.png')}
+                style={{
+                  height: 24,
+                }}
+              />
+              <Text>Got it!</Text>
+            </View>
+          </TouchableRipple>
+        </Surface>
       </View>
     </View>
   );
