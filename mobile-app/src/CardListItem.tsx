@@ -180,7 +180,7 @@ export const CardListItem: FC<Props> = ({
           {card.tags.map((tag) => (
             <Chip
               key={tag.id}
-              selectedColor={theme.colors.outlineVariant}
+              selectedColor={theme.colors.onSurface}
               mode="outlined"
               onClose={onTagClose(tag)}
             >

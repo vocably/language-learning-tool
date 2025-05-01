@@ -320,7 +320,10 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                     <View key={tag.id}>
                       <Chip
                         mode="outlined"
-                        selectedColor={theme.colors.outlineVariant}
+                        selectedColor={theme.colors.onSurface}
+                        style={{
+                          backgroundColor: 'transparent',
+                        }}
                         onClose={() =>
                           setSelectedTagIds(
                             selectedTags

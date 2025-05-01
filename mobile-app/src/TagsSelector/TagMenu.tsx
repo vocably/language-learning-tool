@@ -10,6 +10,7 @@ import {
   Menu,
   Portal,
   Text,
+  TouchableRipple,
   useTheme,
 } from 'react-native-paper';
 import { SwipeListView, SwipeRow } from 'react-native-swipe-list-view';
@@ -290,45 +291,54 @@ export const TagsMenu: FC<Props> = ({
             keyExtractor={extractKey}
             ItemSeparatorComponent={Divider}
             renderItem={({ item: tag }) => (
-              <Pressable
+              <TouchableRipple
                 onPress={tagPressed(tag)}
-                style={{
-                  backgroundColor: theme.colors.elevation.level2,
-                  padding: 12,
-                  display: 'flex',
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  // This is to prevent the swipe menu
-                  // from flashing occasionally
-                  borderWidth: 1,
-                  borderColor: 'transparent',
-                }}
+                style={{ backgroundColor: theme.colors.elevation.level2 }}
               >
-                <Text
+                <View
                   style={{
-                    fontSize: ITEM_FONT_SIZE,
-                    marginRight: 6,
+                    padding: 12,
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    // This is to prevent the swipe menu
+                    // from flashing occasionally
+                    borderWidth: 1,
+                    borderColor: 'transparent',
                   }}
                 >
-                  {tag.data.title}
-                </Text>
-                <Icon
-                  name="check"
-                  size={18}
-                  color={theme.colors.onBackground}
-                  style={{
-                    opacity: isSelectedTag(tag) ? 1 : 0,
-                  }}
-                />
-                <ActivityIndicator
-                  size={18}
-                  color={theme.colors.onBackground}
-                  style={{
-                    marginLeft: 8,
-                    opacity: tag.id === updatingId ? 1 : 0,
-                  }}
-                />
-              </Pressable>
+                  <Text
+                    style={{
+                      fontSize: ITEM_FONT_SIZE,
+                      marginRight: 6,
+                      flexGrow: 1,
+                    }}
+                  >
+                    {tag.data.title}
+                  </Text>
+                  <ActivityIndicator
+                    size={18}
+                    color={theme.colors.onBackground}
+                    style={{
+                      marginRight: 8,
+                      opacity: tag.id === updatingId ? 1 : 0,
+                    }}
+                  />
+                  <Icon
+                    name={
+                      isSelectedTag(tag)
+                        ? 'checkbox-marked'
+                        : 'checkbox-blank-outline'
+                    }
+                    size={24}
+                    color={
+                      isSelectedTag(tag)
+                        ? theme.colors.primary
+                        : theme.colors.onBackground
+                    }
+                  />
+                </View>
+              </TouchableRipple>
             )}
             renderHiddenItem={(data, rowMap) => (
               <View
@@ -404,7 +414,6 @@ export const TagsMenu: FC<Props> = ({
                   gap: 12,
                 }}
               >
-                <Text>Tap the tag to check or uncheck it.</Text>
                 <Text>Swipe left to edit the tag.</Text>
                 <Text>
                   Swipe right to delete the tag. Your cards will not be deleted.
