@@ -126,7 +126,7 @@ export const MultiChoice: FC<Props> = ({
                       : theme.colors.primary,
                     paddingVertical: 12,
                     paddingHorizontal: 8,
-                    borderRadius: 50,
+                    borderRadius: 16,
                     minHeight: minHeight,
                     alignItems: 'center',
                     justifyContent: 'center',
