@@ -2,9 +2,9 @@ import { CardItem } from '@vocably/model';
 import { SrsScore } from '@vocably/srs';
 import { shuffle } from 'lodash-es';
 import React, { FC, useMemo, useRef, useState } from 'react';
-import { Pressable, ScrollView, View } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import { Text, useTheme } from 'react-native-paper';
+import { Surface, Text, TouchableRipple, useTheme } from 'react-native-paper';
 import { CardDefinition } from '../CardDefinition';
 import { CardFront } from './Card/CardFront';
 import { Displayer, DisplayerRef } from './Displayer';
@@ -17,6 +17,8 @@ type Props = {
   alternatives: CardItem[];
   direction: 'front' | 'back';
 };
+
+const buttonBorderRadius = 16;
 
 export const MultiChoice: FC<Props> = ({
   card,
@@ -107,61 +109,60 @@ export const MultiChoice: FC<Props> = ({
             style={{
               marginTop: 32,
               width: '100%',
-              gap: 8,
+              gap: 12,
             }}
           >
             {answers.map((answerCard, index) => (
-              <Pressable
-                disabled={wrong.includes(answerCard.id)}
-                onPress={() => validate(answerCard)}
-                onLayout={(event) => {
-                  const { height } = event.nativeEvent.layout;
-                  if (height > minHeight) {
-                    setMinHeight(height);
-                  }
+              <Surface
+                style={{
+                  borderRadius: buttonBorderRadius,
                 }}
-                style={({ pressed }) => [
-                  {
+              >
+                <TouchableRipple
+                  borderless={true}
+                  disabled={wrong.includes(answerCard.id)}
+                  onPress={() => validate(answerCard)}
+                  onLayout={(event) => {
+                    const { height } = event.nativeEvent.layout;
+                    if (height > minHeight) {
+                      setMinHeight(height);
+                    }
+                  }}
+                  style={{
                     flexDirection: 'column',
-                    borderWidth: 1,
-                    borderStyle: 'solid',
-                    borderColor: wrong.includes(answerCard.id)
-                      ? theme.colors.error
-                      : theme.colors.primary,
                     paddingVertical: 12,
                     paddingHorizontal: 8,
-                    borderRadius: 16,
+                    borderRadius: buttonBorderRadius,
                     minHeight: minHeight,
                     alignItems: 'center',
                     justifyContent: 'center',
-                    backgroundColor: pressed
-                      ? theme.colors.inversePrimary
-                      : wrong.includes(answerCard.id)
+                    backgroundColor: wrong.includes(answerCard.id)
                       ? theme.colors.error
                       : correct === answerCard.id
                       ? theme.colors.primary
-                      : undefined,
-                  },
-                ]}
-                key={answerCard.id}
-              >
-                <Text
-                  style={{
-                    width: '100%',
-                    textAlign: 'center',
-                    fontSize: 18,
-                    color: wrong.includes(answerCard.id)
-                      ? theme.colors.onError
-                      : correct === answerCard.id
-                      ? theme.colors.onPrimary
-                      : theme.colors.primary,
+                      : theme.colors.elevation.level3,
                   }}
+                  key={answerCard.id}
                 >
-                  {direction === 'back'
-                    ? answerCard.data.source
-                    : answerCard.data.translation || answerCard.data.definition}
-                </Text>
-              </Pressable>
+                  <Text
+                    style={{
+                      width: '100%',
+                      textAlign: 'center',
+                      fontSize: 18,
+                      color: wrong.includes(answerCard.id)
+                        ? theme.colors.onError
+                        : correct === answerCard.id
+                        ? theme.colors.onPrimary
+                        : theme.colors.secondary,
+                    }}
+                  >
+                    {direction === 'back'
+                      ? answerCard.data.source
+                      : answerCard.data.translation ||
+                        answerCard.data.definition}
+                  </Text>
+                </TouchableRipple>
+              </Surface>
             ))}
           </View>
         </Displayer>
