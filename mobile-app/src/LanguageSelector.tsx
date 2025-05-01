@@ -87,7 +87,12 @@ export const LanguageSelector: FC<Props> = ({ style }) => {
             key={language}
             title={getFullLanguageName(language)}
             onPress={() => onSelect(language)}
-            titleStyle={{ color: theme.colors.secondary }}
+            titleStyle={{
+              color: theme.colors.secondary,
+            }}
+            contentStyle={{
+              flex: 1,
+            }}
             trailingIcon={language === selectedLanguage ? 'check' : undefined}
           />
         ))}
@@ -97,6 +102,7 @@ export const LanguageSelector: FC<Props> = ({ style }) => {
           onPress={onAddNewLanguageClick}
           titleStyle={{ color: theme.colors.secondary }}
           leadingIcon={'plus'}
+          style={{ paddingRight: 32 }}
         />
       </Menu>
     </>
