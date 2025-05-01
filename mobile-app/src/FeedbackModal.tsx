@@ -1,11 +1,14 @@
 import { NavigationProp, Route } from '@react-navigation/native';
 import { sendUserFeedback } from '@vocably/api';
 import { FC, useCallback, useEffect, useState } from 'react';
-import { Alert, Platform, ScrollView, View } from 'react-native';
-import { Button, Text } from 'react-native-paper';
+import { Alert, Platform, View } from 'react-native';
+import { Appbar, Button, Text } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useUserEmail } from './auth/useUserEmail';
 import { useTranslationPreset } from './TranslationPreset/useTranslationPreset';
+import { CustomScrollView } from './ui/CustomScrollView';
+import { ScreenLayout } from './ui/ScreenLayout';
+import { ScreenTitle } from './ui/ScreenTitle';
 import { VocablyTextInput } from './VocablyTextInput';
 
 type Props = {
@@ -67,39 +70,52 @@ export const FeedbackModal: FC<Props> = ({ navigation, route }) => {
   const insets = useSafeAreaInsets();
 
   return (
-    <>
-      <ScrollView automaticallyAdjustKeyboardInsets={true}>
-        <View
-          style={{
-            flex: 1,
-            alignItems: 'stretch',
-            justifyContent: 'flex-start',
-            paddingVertical: 32,
-            paddingLeft: insets.left + 32,
-            paddingRight: insets.right + 32,
-            gap: 16,
-          }}
-        >
-          <Text>
-            Missing any crucial features? Have questions or want to share your
-            thoughts on Vocably? I'd love to hear from you!
-          </Text>
-          <Text>
-            I personally respond to every user, usually within a couple of days.
-          </Text>
-          {userEmail && (
+    <ScreenLayout
+      header={
+        <Appbar.Header elevated={true} statusBarHeight={0}>
+          <Appbar.Action
+            icon={'close'}
+            onPress={navigation.goBack}
+            style={{ backgroundColor: 'transparent' }}
+          />
+          <Appbar.Content style={{ alignItems: 'flex-start' }} title={''} />
+          <Button
+            disabled={text.trim().length === 0 || isSending}
+            onPress={sendFeedback}
+            loading={isSending}
+            style={{ marginRight: 8 }}
+          >
+            Send
+          </Button>
+        </Appbar.Header>
+      }
+      content={
+        <CustomScrollView automaticallyAdjustKeyboardInsets={true}>
+          <ScreenTitle icon="message-text-outline" title="Provide feedback" />
+          <View style={{ gap: 16, marginBottom: 16 }}>
             <Text>
-              I'll reply to you at your email address{' '}
-              <Text style={{ fontWeight: 'bold' }}>{userEmail}</Text>.
-              {userEmail.includes('privaterelay') && (
-                <Text>
-                  {' '}
-                  It looks like you shared a private Apple email with me during
-                  registration, but no worries — it should work just fine.
-                </Text>
-              )}
+              Missing any crucial features? Have questions or want to share your
+              thoughts on Vocably? I'd love to hear from you!
             </Text>
-          )}
+            <Text>
+              I personally respond to every user, usually within a couple of
+              days.
+            </Text>
+            {userEmail && (
+              <Text>
+                I'll reply to you at your email address{' '}
+                <Text style={{ fontWeight: 'bold' }}>{userEmail}</Text>.
+                {userEmail.includes('privaterelay') && (
+                  <Text>
+                    {' '}
+                    It looks like you shared a private Apple email with me
+                    during registration, but no worries — it should work just
+                    fine.
+                  </Text>
+                )}
+              </Text>
+            )}
+          </View>
           <VocablyTextInput
             multiline
             placeholder={'Please type your message here...'}
@@ -107,8 +123,8 @@ export const FeedbackModal: FC<Props> = ({ navigation, route }) => {
             onChangeText={setText}
             value={text}
           />
-        </View>
-      </ScrollView>
-    </>
+        </CustomScrollView>
+      }
+    />
   );
 };

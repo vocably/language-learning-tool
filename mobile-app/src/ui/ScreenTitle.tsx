@@ -2,6 +2,7 @@ import { FC, ReactNode } from 'react';
 import { StyleProp, View, ViewStyle } from 'react-native';
 import { Text, useTheme } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { mainPadding } from '../styles';
 
 type Props = {
   style?: StyleProp<ViewStyle>;
@@ -20,7 +21,7 @@ export const ScreenTitle: FC<Props> = ({ style, icon, title, subtitle }) => {
           justifyContent: 'flex-start',
           alignItems: 'center',
           gap: 8,
-          marginBottom: 32,
+          marginBottom: mainPadding,
         },
         style,
       ]}

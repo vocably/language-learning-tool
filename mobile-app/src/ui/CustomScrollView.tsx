@@ -5,15 +5,18 @@ import { mainPadding } from '../styles';
 
 type Props = PropsWithChildren<{
   contentContainerStyle?: StyleProp<ViewStyle>;
+  automaticallyAdjustKeyboardInsets?: boolean;
 }>;
 
 export const CustomScrollView: FC<Props> = ({
   contentContainerStyle,
+  automaticallyAdjustKeyboardInsets,
   children,
 }) => {
   const insets = useSafeAreaInsets();
   return (
     <ScrollView
+      automaticallyAdjustKeyboardInsets={automaticallyAdjustKeyboardInsets}
       contentContainerStyle={[
         {
           paddingTop: mainPadding,

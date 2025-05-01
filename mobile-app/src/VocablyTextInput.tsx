@@ -41,8 +41,8 @@ export const VocablyTextInput: VocablyTextInput = ({
         {
           borderStyle: 'solid',
           borderColor: isFocused
-            ? theme.colors.primary
-            : theme.colors.outlineVariant,
+            ? theme.colors.onSurface
+            : theme.colors.tertiary,
           borderWidth: 1,
           borderRadius: 8,
           padding: 16,
