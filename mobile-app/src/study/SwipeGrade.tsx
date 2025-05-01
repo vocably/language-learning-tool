@@ -330,7 +330,7 @@ export const SwipeGrade: FC<{
       <View
         style={{
           position: 'absolute',
-          bottom: insets.bottom + 16,
+          bottom: 32,
           paddingLeft: 16 + insets.left,
           paddingRight: 16 + insets.right,
           left: 0,

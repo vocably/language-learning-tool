@@ -6,7 +6,8 @@ import { shuffle } from 'lodash-es';
 import { usePostHog } from 'posthog-react-native';
 import React, { FC, useEffect, useState } from 'react';
 import { Alert, View } from 'react-native';
-import { Button, IconButton, useTheme } from 'react-native-paper';
+import { Button, IconButton, Text, useTheme } from 'react-native-paper';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import {
   getAutoPlayFromStorage,
   saveAutoPlayToStorage,
@@ -20,6 +21,7 @@ import {
   getPreferMultiChoiceEnabled,
   getRandomizerEnabled,
 } from '../Settings/StudySettingsScreen';
+import { ScreenLayout } from '../ui/ScreenLayout';
 import { useAsync } from '../useAsync';
 import { useCardsAnsweredToday } from './cardsAnsweredToday';
 import { Completed } from './Completed';
@@ -67,6 +69,7 @@ export const StudyScreen: Props = ({ navigation }) => {
   const [maximumCardsPerSessionResult] = useAsync(getMaximumCardsPerSession);
 
   const [cards, setCards] = useState<CardItem[]>();
+  const [cardsInTheCurrentSession, setCardsInTheCurrentSession] = useState(0);
   const [cardsStudied, setCardsStudied] = useState(0);
   const [numberOfStudySessions, increaseNumberOfStudySessions] =
     useNumberOfStudySessions();
@@ -112,15 +115,22 @@ export const StudyScreen: Props = ({ navigation }) => {
       isRandomizerEnabledResult.status === 'loaded' &&
       maximumCardsPerSessionResult.status === 'loaded'
     ) {
+      let sessionCards: CardItem[];
       if (isRandomizerEnabledResult.value) {
-        setCards(
-          shuffle(filteredCards).slice(0, maximumCardsPerSessionResult.value)
+        sessionCards = shuffle(filteredCards).slice(
+          0,
+          maximumCardsPerSessionResult.value
         );
       } else {
-        setCards(
-          slice(new Date(), maximumCardsPerSessionResult.value, filteredCards)
+        sessionCards = slice(
+          new Date(),
+          maximumCardsPerSessionResult.value,
+          filteredCards
         );
       }
+
+      setCardsInTheCurrentSession(sessionCards.length);
+      setCards(sessionCards);
     }
   }, [
     filteredCards,
@@ -269,6 +279,8 @@ export const StudyScreen: Props = ({ navigation }) => {
     maximumCardsPerSessionResult,
   ]);
 
+  const insets = useSafeAreaInsets();
+
   if (
     loadDeckStatus === 'loading' ||
     cards === undefined ||
@@ -284,124 +296,152 @@ export const StudyScreen: Props = ({ navigation }) => {
   }
 
   return (
-    <View
-      style={{
-        backgroundColor: theme.colors.background,
-        height: '100%',
-        paddingTop: PADDING_VERTICAL,
-      }}
-    >
-      <View
-        style={{
-          position: 'absolute',
-          width: '100%',
-          padding: 20,
-          zIndex: 1,
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <IconButton
-          icon={autoPlayResult.value ? 'volume-high' : 'volume-variant-off'}
-          size={24}
-          animated={true}
-          onPress={() => setAutoPlay(!autoPlayResult.value)}
+    <ScreenLayout
+      header={
+        <View
           style={{
-            backgroundColor: theme.colors.background,
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            paddingLeft: insets.left + 8,
+            paddingRight: insets.right + 8,
+            paddingVertical: 16,
           }}
-        />
-        {cards.length > 0 && (
-          <>
-            <IconButton
-              icon={'pencil'}
-              size={24}
-              onPress={() =>
-                navigation.navigate('EditCardModal', {
-                  card: cards[0],
-                })
-              }
-              style={{
-                backgroundColor: theme.colors.background,
-              }}
-            />
-            {isOkayForMnemonic(cards[0]) &&
-              isGoogleLanguage(language) &&
-              isGoogleLanguage(translationLanguage ?? '') && (
-                <IconButton
-                  icon={'creation'}
-                  size={24}
-                  onPress={() =>
-                    navigation.navigate('MnemonicModal', {
-                      sourceLanguage: language,
-                      targetLanguage: translationLanguage,
-                      card: cards[0],
-                    })
-                  }
-                  style={{
-                    transform: [{ translateX: -9 }],
-                    backgroundColor: theme.colors.background,
-                  }}
-                />
-              )}
-          </>
-        )}
-        <View style={{ flex: 1, alignItems: 'flex-end' }}>
-          <Button
-            textColor={theme.colors.onBackground}
-            onPress={() => navigation.goBack()}
-            buttonColor={theme.colors.background}
-          >
-            Done
-          </Button>
-        </View>
-      </View>
-      <View
-        style={{
-          flexGrow: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        {cards.length > 0 &&
-          cards
-            .slice(0, 1)
-            .map((card) => (
-              <Grade
-                key={card.id}
-                isMultiChoiceEnabled={isMultiChoiceEnabledResult.value}
-                preferMultiChoiceEnabled={preferMultiChoiceEnabledResult.value}
-                card={card}
-                onGrade={onGrade}
-                autoPlay={autoPlayResult.value}
-                existingCards={allCards}
-                prerenderedCards={
-                  translationLanguage
-                    ? getPredefinedMultiChoiceOptions(
-                        language as GoogleLanguage,
-                        translationLanguage
-                      )
-                    : []
+        >
+          <IconButton
+            icon={autoPlayResult.value ? 'volume-high' : 'volume-variant-off'}
+            size={24}
+            animated={true}
+            onPress={() => setAutoPlay(!autoPlayResult.value)}
+            style={{
+              backgroundColor: theme.colors.background,
+            }}
+          />
+          {cards.length > 0 && (
+            <>
+              <IconButton
+                icon={'pencil'}
+                size={24}
+                onPress={() =>
+                  navigation.navigate('EditCardModal', {
+                    card: cards[0],
+                  })
                 }
+                style={{
+                  backgroundColor: theme.colors.background,
+                }}
               />
-            ))}
-        {cards.length === 0 && (
-          <Completed
-            cards={allCards}
-            onDone={() => navigation.goBack()}
-            numberOfStudySessions={
-              numberOfStudySessions.status === 'loaded'
-                ? numberOfStudySessions.value
-                : 0
-            }
-            onStudyAgain={() => setCardsStudied(0)}
-            streakHasBeenShown={streakHasShownToday.value}
-            streakDays={studyStatsResult.value.streak.days}
-            onShow={() => setStreakHasShown()}
-          ></Completed>
-        )}
-      </View>
-    </View>
+              {isOkayForMnemonic(cards[0]) &&
+                isGoogleLanguage(language) &&
+                isGoogleLanguage(translationLanguage ?? '') && (
+                  <IconButton
+                    icon={'creation'}
+                    size={24}
+                    onPress={() =>
+                      navigation.navigate('MnemonicModal', {
+                        sourceLanguage: language,
+                        targetLanguage: translationLanguage,
+                        card: cards[0],
+                      })
+                    }
+                    style={{
+                      transform: [{ translateX: -9 }],
+                      backgroundColor: theme.colors.background,
+                    }}
+                  />
+                )}
+            </>
+          )}
+          <View style={{ flex: 1, alignItems: 'flex-end' }}>
+            <Button
+              textColor={theme.colors.onBackground}
+              onPress={() => navigation.goBack()}
+              buttonColor={theme.colors.background}
+            >
+              Done
+            </Button>
+          </View>
+        </View>
+      }
+      content={
+        <View
+          style={{
+            flexGrow: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          {cards.length > 0 &&
+            cards
+              .slice(0, 1)
+              .map((card) => (
+                <Grade
+                  key={card.id}
+                  isMultiChoiceEnabled={isMultiChoiceEnabledResult.value}
+                  preferMultiChoiceEnabled={
+                    preferMultiChoiceEnabledResult.value
+                  }
+                  card={card}
+                  onGrade={onGrade}
+                  autoPlay={autoPlayResult.value}
+                  existingCards={allCards}
+                  prerenderedCards={
+                    translationLanguage
+                      ? getPredefinedMultiChoiceOptions(
+                          language as GoogleLanguage,
+                          translationLanguage
+                        )
+                      : []
+                  }
+                />
+              ))}
+          {cards.length === 0 && (
+            <Completed
+              cards={allCards}
+              onDone={() => navigation.goBack()}
+              numberOfStudySessions={
+                numberOfStudySessions.status === 'loaded'
+                  ? numberOfStudySessions.value
+                  : 0
+              }
+              onStudyAgain={() => setCardsStudied(0)}
+              streakHasBeenShown={streakHasShownToday.value}
+              streakDays={studyStatsResult.value.streak.days}
+              onShow={() => setStreakHasShown()}
+            ></Completed>
+          )}
+        </View>
+      }
+      footer={
+        <>
+          {cards.length > 0 && (
+            <View
+              style={{
+                paddingBottom: insets.bottom + 16,
+                paddingHorizontal: 16,
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <View
+                style={{
+                  padding: 8,
+                  backgroundColor: theme.colors.background,
+                  borderRadius: 16,
+                }}
+              >
+                <Text>
+                  <Text style={{ color: theme.colors.secondary }}>
+                    {cardsStudied + 1}
+                  </Text>
+                  {' / '}
+                  {cardsInTheCurrentSession}
+                </Text>
+              </View>
+            </View>
+          )}
+        </>
+      }
+    />
   );
 };

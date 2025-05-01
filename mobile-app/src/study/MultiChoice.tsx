@@ -60,18 +60,22 @@ export const MultiChoice: FC<Props> = ({
     <>
       <ScrollView
         style={{
-          minHeight: '100%',
           width: '100%',
         }}
         contentContainerStyle={{
-          minHeight: '100%',
-          width: '100%',
+          flexGrow: 1,
           alignItems: 'center',
           justifyContent: 'center',
           paddingBottom: PADDING_VERTICAL,
         }}
       >
-        <Displayer ref={displayerRef} style={{ padding: 16, maxWidth: 700 }}>
+        <Displayer
+          ref={displayerRef}
+          style={{
+            padding: 16,
+            maxWidth: 700,
+          }}
+        >
           {direction === 'back' && (
             <>
               <Text style={{ fontSize: 24, marginBottom: 12 }}>
