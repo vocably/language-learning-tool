@@ -42,7 +42,7 @@ import { ListItem } from './ui/ListItem';
 import { ScreenLayout } from './ui/ScreenLayout';
 import { useCurrentLanguageName } from './useCurrentLanguageName';
 
-const SWIPE_MENU_BUTTON_SIZE = 100;
+const SWIPE_MENU_BUTTON_SIZE = 80;
 
 const styles = StyleSheet.create({
   container: {
@@ -425,15 +425,12 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                   ]}
                 >
                   {toBeDeletedId === data.item.id ? (
-                    <ActivityIndicator
-                      size={32}
-                      color={theme.colors.onSecondary}
-                    />
+                    <ActivityIndicator size={32} color={theme.colors.onError} />
                   ) : (
                     <Icon
                       name="delete"
                       size={32}
-                      color={theme.colors.onSecondary}
+                      color={theme.colors.onError}
                     />
                   )}
                 </Pressable>
