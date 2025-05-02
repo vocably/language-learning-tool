@@ -1,14 +1,13 @@
 import { SrsScore } from '@vocably/srs';
-import React, { FC, ReactNode, useRef } from 'react';
+import React, { FC, ReactNode, useRef, useState } from 'react';
 import {
   Animated,
-  Image,
   PanResponder,
   StyleSheet,
   useWindowDimensions,
   View,
 } from 'react-native';
-import { Surface, Text, TouchableRipple, useTheme } from 'react-native-paper';
+import { Text, TouchableRipple, useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { PADDING_VERTICAL } from './StudyScreen';
@@ -28,8 +27,8 @@ const styles = StyleSheet.create({
 const AnimatedIcon = Animated.createAnimatedComponent(Icon);
 
 const iconSize = 80;
-const buttonBigBorderRadius = 24;
-const buttonSmallBorderRadius = 8;
+const buttonBigBorderRadius = 16;
+const buttonSmallBorderRadius = 4;
 
 export const SwipeGrade: FC<{
   onGrade: (score: SrsScore) => void;
@@ -43,6 +42,8 @@ export const SwipeGrade: FC<{
   const sufficientHorizontalDisplacement = Math.min(windowWidth / 4, 110);
   const sufficientVerticalDisplacement = Math.min(windowHeight / 5, 110);
   const minimalQuickDisplacement = 10;
+
+  const [selectedGrade, setSelectedGrade] = useState(-1);
 
   const pan = useRef(
     new Animated.ValueXY(undefined, {
@@ -200,6 +201,7 @@ export const SwipeGrade: FC<{
   ).current;
 
   const weak = () => {
+    setSelectedGrade(1);
     Animated.parallel([
       Animated.timing(pan.x, {
         toValue: -windowWidth,
@@ -217,6 +219,7 @@ export const SwipeGrade: FC<{
   };
 
   const medium = () => {
+    setSelectedGrade(3);
     Animated.parallel([
       Animated.timing(pan.y, {
         toValue: windowHeight,
@@ -234,6 +237,7 @@ export const SwipeGrade: FC<{
   };
 
   const strong = () => {
+    setSelectedGrade(5);
     Animated.parallel([
       Animated.timing(pan.x, {
         toValue: windowWidth,
@@ -343,116 +347,140 @@ export const SwipeGrade: FC<{
           gap: 6,
         }}
       >
-        <Surface
-          elevation={1}
+        <TouchableRipple
+          onPress={weak}
+          borderless={true}
           style={{
             flex: 1,
-            borderRadius: buttonSmallBorderRadius,
             borderTopLeftRadius: buttonBigBorderRadius,
             borderBottomLeftRadius: buttonBigBorderRadius,
-          }}
-        >
-          <TouchableRipple
-            onPress={weak}
-            borderless={true}
-            style={{
-              backgroundColor: theme.colors.elevation.level3,
-              borderTopLeftRadius: buttonBigBorderRadius,
-              borderBottomLeftRadius: buttonBigBorderRadius,
-              borderRadius: buttonSmallBorderRadius,
-            }}
-          >
-            <View
-              style={{
-                gap: 4,
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: 8,
-              }}
-            >
-              <Image
-                resizeMode="contain"
-                source={require('./response-1.png')}
-                style={{
-                  height: 24,
-                }}
-              />
-              <Text>Not yet</Text>
-            </View>
-          </TouchableRipple>
-        </Surface>
-        <Surface
-          elevation={1}
-          style={{
-            flex: 1,
             borderRadius: buttonSmallBorderRadius,
+            borderWidth: 1,
+            borderColor: theme.colors.primary,
+            backgroundColor:
+              selectedGrade === 1
+                ? theme.colors.primary
+                : theme.colors.background,
           }}
         >
-          <TouchableRipple
-            onPress={medium}
-            borderless={true}
+          <View
             style={{
-              backgroundColor: theme.colors.elevation.level3,
-              borderRadius: buttonSmallBorderRadius,
+              gap: 4,
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 8,
             }}
           >
-            <View
+            <Icon
+              name="close"
+              color={
+                selectedGrade === 1
+                  ? theme.colors.onPrimary
+                  : theme.colors.primary
+              }
+              size={24}
+            />
+            <Text
               style={{
-                gap: 4,
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: 8,
+                color:
+                  selectedGrade === 1
+                    ? theme.colors.onPrimary
+                    : theme.colors.primary,
               }}
             >
-              <Image
-                resizeMode="contain"
-                source={require('./response-3.png')}
-                style={{
-                  height: 24,
-                }}
-              />
-              <Text>Almost</Text>
-            </View>
-          </TouchableRipple>
-        </Surface>
-        <Surface
-          elevation={1}
+              Not yet
+            </Text>
+          </View>
+        </TouchableRipple>
+        <TouchableRipple
+          onPress={medium}
+          borderless={true}
+          style={{
+            backgroundColor:
+              selectedGrade === 3
+                ? theme.colors.primary
+                : theme.colors.background,
+            borderRadius: buttonSmallBorderRadius,
+            flex: 1,
+            borderWidth: 1,
+            borderColor: theme.colors.primary,
+          }}
+        >
+          <View
+            style={{
+              gap: 4,
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 8,
+            }}
+          >
+            <Icon
+              name="check"
+              color={
+                selectedGrade === 3
+                  ? theme.colors.onPrimary
+                  : theme.colors.primary
+              }
+              size={24}
+            />
+            <Text
+              style={{
+                color:
+                  selectedGrade === 3
+                    ? theme.colors.onPrimary
+                    : theme.colors.primary,
+              }}
+            >
+              Almost
+            </Text>
+          </View>
+        </TouchableRipple>
+
+        <TouchableRipple
+          onPress={strong}
+          borderless={true}
           style={{
             flex: 1,
             borderRadius: buttonSmallBorderRadius,
             borderTopRightRadius: buttonBigBorderRadius,
             borderBottomRightRadius: buttonBigBorderRadius,
+            borderWidth: 1,
+            borderColor: theme.colors.primary,
+            backgroundColor:
+              selectedGrade === 5
+                ? theme.colors.primary
+                : theme.colors.background,
           }}
         >
-          <TouchableRipple
-            onPress={strong}
-            borderless={true}
+          <View
             style={{
-              backgroundColor: theme.colors.elevation.level3,
-              borderRadius: buttonSmallBorderRadius,
-              borderTopRightRadius: buttonBigBorderRadius,
-              borderBottomRightRadius: buttonBigBorderRadius,
+              gap: 4,
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 8,
             }}
           >
-            <View
+            <Icon
+              name="check-all"
+              color={
+                selectedGrade === 5
+                  ? theme.colors.onPrimary
+                  : theme.colors.primary
+              }
+              size={24}
+            />
+            <Text
               style={{
-                gap: 4,
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: 8,
+                color:
+                  selectedGrade === 5
+                    ? theme.colors.onPrimary
+                    : theme.colors.primary,
               }}
             >
-              <Image
-                resizeMode="contain"
-                source={require('./response-5.png')}
-                style={{
-                  height: 24,
-                }}
-              />
-              <Text>Got it!</Text>
-            </View>
-          </TouchableRipple>
-        </Surface>
+              Got it!
+            </Text>
+          </View>
+        </TouchableRipple>
       </View>
     </View>
   );

@@ -32,7 +32,7 @@ import { useStreakHasBeenShown } from './useStreakHasBeenShown';
 import { useStudyStats } from './useStudyStats';
 import { useTranslationLanguage } from './useTranslationLanguage';
 
-export const PADDING_VERTICAL = 70;
+export const PADDING_VERTICAL = 40;
 
 type Props = FC<{
   navigation: NavigationProp<any>;
