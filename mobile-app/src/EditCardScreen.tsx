@@ -1,14 +1,15 @@
 import { NavigationProp, Route } from '@react-navigation/native';
 import { CardItem, TagItem } from '@vocably/model';
 import React, { FC, useCallback, useEffect, useState } from 'react';
-import { Alert, Platform, ScrollView, View } from 'react-native';
+import { Alert, View } from 'react-native';
 import { Appbar, Button, Chip, useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { CardForm } from './CardForm';
 import { useLanguageDeck } from './languageDeck/useLanguageDeck';
 import { Loader } from './loaders/Loader';
-import { mainPadding } from './styles';
 import { TagsSelector } from './TagsSelector';
+import { CustomScrollView } from './ui/CustomScrollView';
+import { ScreenTitle } from './ui/ScreenTitle';
 
 export type EditCardParams = {
   card: CardItem;
@@ -67,11 +68,11 @@ export const EditCardScreen: FC<Props> = ({ route, navigation }) => {
   const onDelete = async () => {
     Alert.alert(
       'Delete this card?',
-      'This operation can not be undone',
+      'This operation can not be undone.',
       [
-        { text: 'Cancel', onPress: () => {} },
         {
           text: 'Delete',
+          style: 'destructive',
           onPress: async () => {
             setIsDeleting(true);
             const deleteResult = await deck.remove(card.id);
@@ -83,6 +84,7 @@ export const EditCardScreen: FC<Props> = ({ route, navigation }) => {
             navigation.goBack();
           },
         },
+        { text: 'Cancel', onPress: () => {} },
       ],
       { cancelable: true }
     );
@@ -98,43 +100,24 @@ export const EditCardScreen: FC<Props> = ({ route, navigation }) => {
 
   return (
     <>
-      <Appbar.Header statusBarHeight={0}>
+      <Appbar.Header statusBarHeight={0} elevated={true}>
         <Appbar.Action
           icon={'close'}
           size={24}
           onPress={() => navigation.goBack()}
+          style={{ backgroundColor: 'transparent' }}
         />
-        <Appbar.Content title="Edit Card" />
-        <Appbar.Action
-          icon={'check'}
-          size={24}
-          loading={isUpdating}
-          disabled={isUpdating}
-          onPress={onUpdate}
-          color={theme.colors.primary}
-        />
+        <Appbar.Content title="" />
+        <Button loading={isUpdating} disabled={isUpdating} onPress={onUpdate}>
+          Save
+        </Button>
       </Appbar.Header>
-      <ScrollView
-        automaticallyAdjustKeyboardInsets={true}
-        contentContainerStyle={{
-          paddingLeft: insets.left,
-          paddingRight: insets.right,
-          paddingBottom: insets.bottom,
-        }}
-      >
-        <View
-          style={{
-            flex: 1,
-            alignItems: 'stretch',
-            justifyContent: 'flex-start',
-            padding: mainPadding,
-            gap: 16,
-          }}
-        >
+      <CustomScrollView automaticallyAdjustKeyboardInsets={true}>
+        <ScreenTitle icon="pencil" title="Edit card" />
+        <View style={{ gap: 16 }}>
           <View
             style={{
-              marginBottom: 8,
-              alignItems: Platform.OS === 'android' ? 'flex-start' : 'center',
+              alignItems: 'flex-start',
             }}
           >
             <TagsSelector
@@ -148,7 +131,7 @@ export const EditCardScreen: FC<Props> = ({ route, navigation }) => {
                   icon={'tag'}
                   loading={savingTags}
                 >
-                  Manage card tags (folders)
+                  Add or remove card tags (folders)
                 </Button>
               )}
             />
@@ -193,11 +176,12 @@ export const EditCardScreen: FC<Props> = ({ route, navigation }) => {
             icon={'delete'}
             textColor={theme.colors.error}
             onPress={onDelete}
+            style={{ alignSelf: 'flex-start', marginTop: 24 }}
           >
             Delete this card
           </Button>
         </View>
-      </ScrollView>
+      </CustomScrollView>
     </>
   );
 };

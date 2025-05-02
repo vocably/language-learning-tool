@@ -125,7 +125,7 @@ export const FeedbackModal: FC<Props> = ({ navigation, route }) => {
           <FormText
             label="Your message"
             multiline
-            inputStyle={{ height: 128 }}
+            inputStyle={{ minHeight: 128 }}
             onChangeText={setText}
             value={text}
           />

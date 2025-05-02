@@ -1,4 +1,4 @@
-import { FC, useCallback, useState } from 'react';
+import { FC, ReactNode, useCallback, useState } from 'react';
 import { TextInput, TextInputProps, View, ViewStyle } from 'react-native';
 import { Text, useTheme } from 'react-native-paper';
 
@@ -6,6 +6,7 @@ type Props = TextInputProps & {
   style?: ViewStyle;
   inputStyle?: TextInputProps['style'];
   label?: string;
+  right?: ReactNode;
 };
 
 export const FormText: FC<Props> = ({
@@ -14,6 +15,7 @@ export const FormText: FC<Props> = ({
   onBlur,
   inputStyle,
   label,
+  right,
   ...textInputProps
 }) => {
   const theme = useTheme();
@@ -56,7 +58,8 @@ export const FormText: FC<Props> = ({
             : theme.colors.tertiary,
           borderWidth: 1,
           borderRadius: 8,
-          padding: 8,
+          paddingHorizontal: 8,
+          flexDirection: 'row',
         }}
       >
         <TextInput
@@ -65,6 +68,9 @@ export const FormText: FC<Props> = ({
               color: theme.colors.secondary,
               textAlignVertical: 'top',
               fontSize: 16,
+              flexGrow: 1,
+              paddingTop: 16,
+              paddingBottom: 16,
             },
             inputStyle,
           ]}
@@ -73,6 +79,7 @@ export const FormText: FC<Props> = ({
           onFocus={onFocusReloaded}
           onBlur={onBlurReloaded}
         ></TextInput>
+        {right}
       </View>
     </View>
   );
