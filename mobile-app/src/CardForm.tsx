@@ -70,7 +70,7 @@ export const CardForm: FC<Props> = ({ card, onChange }) => {
         }
       />
       <FormText
-        label={'Transcription'}
+        label={'Transcription (IPA)'}
         value={card.ipa}
         onChangeText={onTextChange('ipa')}
       />
