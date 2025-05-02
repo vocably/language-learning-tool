@@ -2,14 +2,14 @@ import { NavigationProp, Route } from '@react-navigation/native';
 import { sendUserFeedback } from '@vocably/api';
 import { FC, useCallback, useEffect, useState } from 'react';
 import { Alert, Platform, View } from 'react-native';
-import { Appbar, Button, Text } from 'react-native-paper';
+import { Appbar, Button, Text, useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useUserEmail } from './auth/useUserEmail';
 import { useTranslationPreset } from './TranslationPreset/useTranslationPreset';
 import { CustomScrollView } from './ui/CustomScrollView';
+import { FormText } from './ui/FormText';
 import { ScreenLayout } from './ui/ScreenLayout';
 import { ScreenTitle } from './ui/ScreenTitle';
-import { VocablyTextInput } from './VocablyTextInput';
 
 type Props = {
   route: Route<string, any>;
@@ -22,6 +22,8 @@ export const FeedbackModal: FC<Props> = ({ navigation, route }) => {
   const userEmail = useUserEmail();
 
   const translationPreset = useTranslationPreset();
+
+  const theme = useTheme();
 
   const sendFeedback = useCallback(async () => {
     setIsSending(true);
@@ -36,15 +38,19 @@ export const FeedbackModal: FC<Props> = ({ navigation, route }) => {
     });
 
     if (res.success === true) {
-      Alert.alert('Success', 'Thank you for your feedback.', [
-        {
-          text: 'Go back',
-          onPress: () => {
-            setText('');
-            navigation.goBack();
+      Alert.alert(
+        'Thank you for your feedback.',
+        'I appreciate your input and will follow up with you via email shortly.',
+        [
+          {
+            text: 'Go back',
+            onPress: () => {
+              setText('');
+              navigation.goBack();
+            },
           },
-        },
-      ]);
+        ]
+      );
     } else {
       Alert.alert('Something went wrong. Please try again later.');
     }
@@ -116,9 +122,9 @@ export const FeedbackModal: FC<Props> = ({ navigation, route }) => {
               </Text>
             )}
           </View>
-          <VocablyTextInput
+          <FormText
+            label="Your message"
             multiline
-            placeholder={'Please type your message here...'}
             inputStyle={{ height: 128 }}
             onChangeText={setText}
             value={text}
