@@ -17,7 +17,7 @@ import { detectTargetLanguage } from './detectTargetLanguage';
 })
 export class IndexPageComponent implements OnInit {
   languages = sortedTargetLanguages;
-  showTop = 10;
+  showTop = 12;
   expanded = false;
   targetLanguage: GoogleLanguage | undefined;
   selected: GoogleLanguage | null = null;
