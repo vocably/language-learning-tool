@@ -20,6 +20,7 @@
     <base href="/" />
   </head>
   <body id="page-top" class="d-flex flex-column min-vh-100">
+    {{#unless disableAnalytics}}
     <script type="text/javascript">
       (function(window, document, dataLayerName, id) {
         window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName("script")[0],tags=document.createElement("script");
@@ -30,6 +31,7 @@
         !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
       })(window, document, "dataLayer", "{{ htmlWebpackPlugin.options.environment.piwikId }}");
     </script>
+    {{/unless}}
     {{#unless hideNavBar}}
       <style>
         .navbar-bg {
