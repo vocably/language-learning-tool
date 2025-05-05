@@ -843,7 +843,7 @@
       <swiper-container class="languages-swiper" slides-per-view="auto" space-between="20" navigation="true" slides-offset-before="40" slides-offset-after="40" slides-per-group="2">
         {{#each htmlWebpackPlugin.options.environment.languages}}
           <swiper-slide class="language-slide">
-            <img alt="{{ this.name }} flag" class="flag" src="assets/language-flags/{{this.code}}.svg" />
+            <img alt="{{ this.name }} flag" class="flag" src="assets/language-flags/{{this.code}}.svg?1" />
             <span class="language">{{this.name}}</span>
           </swiper-slide>
         {{/each}}
