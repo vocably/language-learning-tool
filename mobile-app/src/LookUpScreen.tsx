@@ -314,7 +314,7 @@ export const LookUpScreen: FC<Props> = ({
                             <Icon
                               size={16}
                               color={theme.colors.primary}
-                              name="arrow-right"
+                              name="swap-horizontal"
                             ></Icon>
                           </TouchableRipple>{' '}
                           to translate from{' '}
@@ -361,7 +361,7 @@ export const LookUpScreen: FC<Props> = ({
                             <Icon
                               size={16}
                               color={theme.colors.primary}
-                              name="arrow-left"
+                              name="swap-horizontal"
                             ></Icon>
                           </TouchableRipple>{' '}
                           to translate from{' '}
