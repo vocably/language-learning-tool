@@ -133,7 +133,9 @@ export const MultiChoice: FC<Props> = ({
                   alignItems: 'center',
                   justifyContent: 'center',
                   borderWidth: 1,
-                  borderColor: theme.colors.primary,
+                  borderColor: wrong.includes(answerCard.id)
+                    ? theme.colors.error
+                    : theme.colors.primary,
                   backgroundColor: wrong.includes(answerCard.id)
                     ? theme.colors.error
                     : correct === answerCard.id
