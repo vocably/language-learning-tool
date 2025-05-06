@@ -12,7 +12,6 @@ const Stack = createStackNavigator();
 
 export const RootModalStack = () => {
   const theme = useTheme();
-
   return (
     <Stack.Navigator>
       <Stack.Group screenOptions={{ headerShown: false }}>
@@ -28,8 +27,12 @@ export const RootModalStack = () => {
           name="Welcome"
           component={WelcomeScreen}
           options={{
-            presentation: 'modal',
+            presentation: 'transparentModal',
             headerShown: false,
+            gestureEnabled: false,
+            cardStyle: {
+              backgroundColor: theme.colors.background,
+            },
           }}
         />
         <Stack.Screen name="Study" component={StudyScreen} />

@@ -87,7 +87,7 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
         <Surface
           elevation={1}
           style={{
-            paddingTop: 16,
+            paddingTop: insets.top + 16,
             paddingLeft: insets.left + mainPadding,
             paddingRight: insets.right + mainPadding,
             paddingBottom: 16,
