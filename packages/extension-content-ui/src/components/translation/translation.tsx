@@ -498,7 +498,7 @@ export class VocablyTranslation {
                                     <vocably-icon-spin></vocably-icon-spin>
                                   )}
                                   {this.isUpdating !== card && (
-                                    <vocably-icon-remove></vocably-icon-remove>
+                                    <vocably-icon-bookmark-check></vocably-icon-bookmark-check>
                                   )}
                                 </button>
 

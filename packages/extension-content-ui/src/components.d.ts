@@ -42,6 +42,8 @@ export namespace Components {
     }
     interface VocablyIconArrowRight {
     }
+    interface VocablyIconBookmarkCheck {
+    }
     interface VocablyIconCheck {
     }
     interface VocablyIconClose {
@@ -253,6 +255,12 @@ declare global {
         prototype: HTMLVocablyIconArrowRightElement;
         new (): HTMLVocablyIconArrowRightElement;
     };
+    interface HTMLVocablyIconBookmarkCheckElement extends Components.VocablyIconBookmarkCheck, HTMLStencilElement {
+    }
+    var HTMLVocablyIconBookmarkCheckElement: {
+        prototype: HTMLVocablyIconBookmarkCheckElement;
+        new (): HTMLVocablyIconBookmarkCheckElement;
+    };
     interface HTMLVocablyIconCheckElement extends Components.VocablyIconCheck, HTMLStencilElement {
     }
     var HTMLVocablyIconCheckElement: {
@@ -415,6 +423,7 @@ declare global {
         "vocably-icon-add": HTMLVocablyIconAddElement;
         "vocably-icon-ai": HTMLVocablyIconAiElement;
         "vocably-icon-arrow-right": HTMLVocablyIconArrowRightElement;
+        "vocably-icon-bookmark-check": HTMLVocablyIconBookmarkCheckElement;
         "vocably-icon-check": HTMLVocablyIconCheckElement;
         "vocably-icon-close": HTMLVocablyIconCloseElement;
         "vocably-icon-edit": HTMLVocablyIconEditElement;
@@ -479,6 +488,8 @@ declare namespace LocalJSX {
     interface VocablyIconAi {
     }
     interface VocablyIconArrowRight {
+    }
+    interface VocablyIconBookmarkCheck {
     }
     interface VocablyIconCheck {
     }
@@ -610,6 +621,7 @@ declare namespace LocalJSX {
         "vocably-icon-add": VocablyIconAdd;
         "vocably-icon-ai": VocablyIconAi;
         "vocably-icon-arrow-right": VocablyIconArrowRight;
+        "vocably-icon-bookmark-check": VocablyIconBookmarkCheck;
         "vocably-icon-check": VocablyIconCheck;
         "vocably-icon-close": VocablyIconClose;
         "vocably-icon-edit": VocablyIconEdit;
@@ -652,6 +664,7 @@ declare module "@stencil/core" {
             "vocably-icon-add": LocalJSX.VocablyIconAdd & JSXBase.HTMLAttributes<HTMLVocablyIconAddElement>;
             "vocably-icon-ai": LocalJSX.VocablyIconAi & JSXBase.HTMLAttributes<HTMLVocablyIconAiElement>;
             "vocably-icon-arrow-right": LocalJSX.VocablyIconArrowRight & JSXBase.HTMLAttributes<HTMLVocablyIconArrowRightElement>;
+            "vocably-icon-bookmark-check": LocalJSX.VocablyIconBookmarkCheck & JSXBase.HTMLAttributes<HTMLVocablyIconBookmarkCheckElement>;
             "vocably-icon-check": LocalJSX.VocablyIconCheck & JSXBase.HTMLAttributes<HTMLVocablyIconCheckElement>;
             "vocably-icon-close": LocalJSX.VocablyIconClose & JSXBase.HTMLAttributes<HTMLVocablyIconCloseElement>;
             "vocably-icon-edit": LocalJSX.VocablyIconEdit & JSXBase.HTMLAttributes<HTMLVocablyIconEditElement>;
