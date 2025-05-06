@@ -7,6 +7,7 @@ import { ScrollView, View } from 'react-native';
 import Markdown from 'react-native-markdown-display';
 import { Appbar, Button, IconButton, Text, useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { fixMarkdown } from './fixMarkdown';
 import { Loader } from './loaders/Loader';
 import { Displayer } from './study/Displayer';
 import { useAsync } from './useAsync';
@@ -90,10 +91,6 @@ Yapay zeka destekli hafıza tekniği oluşturucu aracımız, deneme aşamasında
 Deneyin ve bana ne düşündüğünüzü söyleyin.`,
     okay: `Peki`,
   },
-};
-
-const fixMarkdown = (markdown: string): string => {
-  return markdown.replace(/["'`]+\*\*/gi, '**').replace(/\*\*["'`]+/gi, '**');
 };
 
 export type MnemonicModalParams = {
