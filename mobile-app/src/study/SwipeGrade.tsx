@@ -42,6 +42,7 @@ export const SwipeGrade: FC<{
   const sufficientHorizontalDisplacement = Math.min(windowWidth / 4, 110);
   const sufficientVerticalDisplacement = Math.min(windowHeight / 5, 110);
   const minimalQuickDisplacement = 10;
+  const [rankButtonsHeight, setRankButtonsHeight] = useState(0);
 
   const [selectedGrade, setSelectedGrade] = useState(-1);
 
@@ -327,6 +328,7 @@ export const SwipeGrade: FC<{
             alignItems: 'center',
             justifyContent: 'center',
             width: '100%',
+            paddingBottom: rankButtonsHeight,
           },
           { transform: [{ translateX: pan.x }, { translateY: pan.y }] },
         ]}
@@ -337,7 +339,7 @@ export const SwipeGrade: FC<{
       <View
         style={{
           position: 'absolute',
-          bottom: 32,
+          bottom: 36,
           paddingLeft: 16 + insets.left,
           paddingRight: 16 + insets.right,
           left: 0,
@@ -345,6 +347,9 @@ export const SwipeGrade: FC<{
           flexDirection: 'row',
           justifyContent: 'center',
           gap: 6,
+        }}
+        onLayout={(event) => {
+          setRankButtonsHeight(event.nativeEvent.layout.height);
         }}
       >
         <TouchableRipple
