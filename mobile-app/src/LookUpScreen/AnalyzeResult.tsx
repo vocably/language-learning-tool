@@ -55,7 +55,7 @@ export const AnalyzeResult: FC<Props> = ({
   };
 
   return (
-    <Displayer>
+    <Displayer scaleAnimationEnabled={false}>
       {analysis.explanation && (
         <>
           <TouchableRipple

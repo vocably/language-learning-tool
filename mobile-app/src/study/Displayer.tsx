@@ -14,11 +14,14 @@ export type DisplayerRef = {
 type Props = {
   children: ReactNode;
   style?: StyleProp<ViewStyle>;
+  scaleAnimationEnabled?: boolean;
 };
 
 export const Displayer = forwardRef<DisplayerRef, Props>(
-  ({ children, style }, ref) => {
-    const scaleAnimation = useRef(new Animated.Value(0.5)).current;
+  ({ children, style, scaleAnimationEnabled = true }, ref) => {
+    const scaleAnimation = useRef(
+      new Animated.Value(scaleAnimationEnabled ? 0.5 : 1)
+    ).current;
     const opacityAnimation = useRef(new Animated.Value(0)).current;
 
     useEffect(() => {
