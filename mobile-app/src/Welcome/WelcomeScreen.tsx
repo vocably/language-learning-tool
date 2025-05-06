@@ -3,7 +3,7 @@ import { postOnboardingAction } from '@vocably/api';
 import { GoogleLanguage } from '@vocably/model';
 import { usePostHog } from 'posthog-react-native';
 import { FC, useRef, useState } from 'react';
-import { View } from 'react-native';
+import { Platform, View } from 'react-native';
 import { Button, Surface, Text, useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Swiper from 'react-native-swiper';
@@ -61,6 +61,18 @@ export const WelcomeScreen: FC<Props> = ({ navigation }) => {
           translationPresetState.preset.translationLanguage
         )
       );
+
+      posthog.capture('welcome_submitted', {
+        studyLanguage: translationPresetState.preset.sourceLanguage,
+        nativeLanguage: translationPresetState.preset.translationLanguage,
+      });
+      posthog.capture('$set', {
+        $set: {
+          studyLanguage: translationPresetState.preset.sourceLanguage,
+          nativeLanguage: translationPresetState.preset.translationLanguage,
+          mobileOS: Platform.OS,
+        },
+      });
     }
 
     setSwiperIndex(index);
