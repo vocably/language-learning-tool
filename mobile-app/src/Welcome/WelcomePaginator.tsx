@@ -26,7 +26,7 @@ export const WelcomePaginator: FC<Props> = ({ slideIndex, totalSlides }) => {
             height: 8,
             borderRadius: 8,
             backgroundColor:
-              slideIndex === index
+              slideIndex >= index
                 ? theme.colors.primary
                 : theme.colors.onSurface,
           }}

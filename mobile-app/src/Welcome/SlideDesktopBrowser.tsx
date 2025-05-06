@@ -1,4 +1,3 @@
-import { useNavigation } from '@react-navigation/native';
 import { GoogleLanguage, languageList } from '@vocably/model';
 import { trimLanguage } from '@vocably/sulna';
 import { usePostHog } from 'posthog-react-native';
@@ -16,12 +15,11 @@ export const SlideDesktopBrowser: FC<Props> = ({
   sourceLanguage,
   targetLanguage,
 }) => {
-  const navigation = useNavigation();
   const theme = useTheme();
   const posthog = usePostHog();
 
   return (
-    <WelcomeScrollView style={{ gap: 16 }}>
+    <WelcomeScrollView style={{ gap: 16, alignItems: 'center' }}>
       <Text style={{ fontSize: 22, textAlign: 'center' }}>
         Do you use a desktop computer? Install{' '}
         <Text
