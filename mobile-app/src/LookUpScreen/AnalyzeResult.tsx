@@ -42,6 +42,13 @@ export const AnalyzeResult: FC<Props> = ({
   const fontScale = PixelRatio.getFontScale();
   const posthog = usePostHog();
 
+  const markdownStyles = {
+    body: { color: theme.colors.onSurface, fontSize: 16 },
+    hr: {
+      backgroundColor: theme.colors.onSurface,
+    },
+  };
+
   const toggleExplanation = () => {
     Animated.timing(explanationMaxHeight, {
       toValue: explanationIsVisible ? 0 : 2000 * fontScale, // target height
@@ -94,7 +101,11 @@ export const AnalyzeResult: FC<Props> = ({
               overflow: 'hidden',
             }}
           >
-            <Markdown>{fixMarkdown(analysis.explanation)}</Markdown>
+            <View style={{ paddingBottom: 12 }}>
+              <Markdown style={markdownStyles}>
+                {fixMarkdown(analysis.explanation)}
+              </Markdown>
+            </View>
           </Animated.View>
           <Separator />
         </>
