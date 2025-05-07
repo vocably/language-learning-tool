@@ -157,13 +157,24 @@ export const initYoutube = async (options: InitYouTubeOptions) => {
     let captionContainersCloneList: HTMLElement[] = [];
 
     players.forEach((player) => {
-      const video = player.querySelector('video');
+      player.style.userSelect = 'auto';
+      player.style.webkitUserSelect = 'auto';
+
+      const container = player.querySelector('.ytd-player');
+      if (isHtmlElement(container)) {
+        container.style.userSelect = 'auto';
+        container.style.webkitUserSelect = 'auto';
+      }
+
       const captionContainer = player.querySelector(
         '#ytp-caption-window-container'
       );
       if (!isHtmlElement(captionContainer)) {
         return;
       }
+
+      captionContainer.style.userSelect = 'auto';
+      captionContainer.style.webkitUserSelect = 'auto';
 
       const captionContainerClone = captionContainer.cloneNode(
         true
