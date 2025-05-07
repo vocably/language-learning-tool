@@ -9,8 +9,11 @@
   z-index: 2147483647;
   inset: 0;
 
-  // Reddit sets visibility: hidden for custom elements
   visibility: visible !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 
   .backdrop {
     position: fixed;

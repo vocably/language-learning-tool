@@ -1,8 +1,12 @@
 @import '../../styles/component';
 
 :host {
-  // Reddit sets visibility: hidden for custom elements
   visibility: visible !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
   --shadow-spread: 10px;
   --shadow-v-offset: 4px;
 }
