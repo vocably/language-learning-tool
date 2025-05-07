@@ -14,7 +14,7 @@ import { contextLanguages } from './contextLanguages';
 import { detectLanguage } from './detectLanguage';
 import { getContext } from './getContext';
 import { getText } from './getText';
-import { createPopup, destroyAllOverlays } from './popup';
+import { createPopup, destroyAllOverlays, popupAlreadyExists } from './popup';
 import { getGlobalRect } from './position';
 import { getSelection, isValidSelection } from './selection';
 import { initYoutube, InitYouTubeOptions } from './youtube';
@@ -168,6 +168,12 @@ const showPopup = async (options: AutoShowOptions) => {
     return;
   }
 
+  const text = getText(selection);
+
+  if (popupAlreadyExists(text)) {
+    return;
+  }
+
   const detectedLanguage = await detectLanguage(selection);
   const context =
     detectedLanguage && contextLanguages.includes(detectedLanguage)
@@ -176,8 +182,8 @@ const showPopup = async (options: AutoShowOptions) => {
 
   await createPopup({
     detectedLanguage,
-    text: getText(selection),
-    context: context,
+    text,
+    context,
     globalRect: getGlobalRect(selection.getRangeAt(0).getBoundingClientRect()),
     isTouchscreen: options.isTouchscreen,
   });
@@ -196,6 +202,28 @@ const onMouseDown = async (event: MouseEvent) => {
   }
 
   destroyButton();
+};
+
+let lastShiftPressed: number = 0;
+const showOnHotKey = async (event: KeyboardEvent) => {
+  if (event.key !== 'Shift') {
+    return;
+  }
+
+  const settings = await api.getSettings();
+  if (!settings.showOnHotKey) {
+    return;
+  }
+
+  const now = new Date().getTime();
+  if (now - lastShiftPressed <= 500) {
+    await showPopup({
+      isTouchscreen: false,
+    });
+    return;
+  }
+
+  lastShiftPressed = now;
 };
 
 export const registerContentScript = async (
@@ -219,6 +247,7 @@ export const registerContentScript = async (
   configureContentScript(contentScript);
   document.addEventListener('mouseup', onMouseUp);
   document.addEventListener('mousedown', onMouseDown);
+  document.addEventListener('keyup', showOnHotKey);
 
   document.addEventListener(
     'dblclick',

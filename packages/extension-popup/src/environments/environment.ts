@@ -25,6 +25,7 @@ let settings: ExtensionSettings = {
   autoPlay: true,
   hideSelectionButton: true,
   autodetectLanguage: false,
+  showOnHotKey: false,
 };
 
 const timeout = async (ms: number) => {

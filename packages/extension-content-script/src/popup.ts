@@ -77,9 +77,18 @@ type PopupOptions = {
   isTouchscreen: boolean;
 };
 
+export const popupAlreadyExists = (text: string) => {
+  const lastPopup = [...document.querySelectorAll('vocably-popup')].pop();
+  if (!lastPopup) {
+    return false;
+  }
+
+  return lastPopup.dataset.text === text;
+};
+
 export const createPopup = async (options: PopupOptions) => {
   const popup = document.createElement('vocably-popup');
-  applyInitialStyles(popup);
+  popup.dataset.text = options.text;
 
   const { autoPlay } = await api.getSettings();
 

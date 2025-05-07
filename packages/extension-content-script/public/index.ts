@@ -177,6 +177,10 @@ registerContentScript({
             document.getElementById('hideSelectionButton') as HTMLInputElement
           ).checked,
 
+          showOnHotKey: (
+            document.getElementById('showOnHotKey') as HTMLInputElement
+          ).checked,
+
           autodetectLanguage: false,
         });
       }),

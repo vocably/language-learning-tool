@@ -33,9 +33,71 @@
           })
         "
       />
-      Display the translations on double-click.
+      Display the popup on double-click.
     </label>
   </p>
+
+  <p class="mb-1">
+    <label>
+      <input
+        type="checkbox"
+        [checked]="settings.showOnHotKey"
+        (change)="
+          setSettings({
+            showOnHotKey: !settings.showOnHotKey
+          })
+        "
+      />
+      Display the popup on double-press of the Shift key.
+    </label>
+  </p>
+
+  <p class="mb-0_5">
+    <label>
+      <input
+        type="checkbox"
+        [checked]="settings.hideSelectionButton"
+        (change)="
+          setSettings({
+            hideSelectionButton: !settings.hideSelectionButton
+          })
+        "
+      />
+      Don't show the Vocably button when text is selected.
+    </label>
+  </p>
+  <div class="mb-1 small" style="max-width: 500px">
+    <p class="mb-0_5">Alternatively you can display the popup by:</p>
+    <ul>
+      <li class="mb-0_5">
+        Opening context menu and selecting "Translate with Vocably".
+      </li>
+      <li class="mb-0_5">
+        Double-clicking the word. [<button
+          class="link"
+          (click)="
+            setSettings({
+              showOnDoubleClick: !settings.showOnDoubleClick
+            })
+          "
+        >
+          {{ settings.showOnDoubleClick ? 'Disable' : 'Enable' }}</button
+        >]
+      </li>
+      <li>
+        Double-pressing the Shift button. [<button
+          class="link"
+          (click)="
+            setSettings({
+              showOnHotKey: !settings.showOnHotKey
+            })
+          "
+        >
+          {{ settings.showOnHotKey ? 'Disable' : 'Enable' }}</button
+        >]
+      </li>
+    </ul>
+  </div>
 
   <p class="mb-1">
     <label>
@@ -49,22 +111,6 @@
         "
       />
       Automatically play audio pronunciation.
-    </label>
-  </p>
-
-  <p class="mb-1">
-    <label>
-      <input
-        type="checkbox"
-        [checked]="settings.hideSelectionButton"
-        (change)="
-          setSettings({
-            hideSelectionButton: !settings.hideSelectionButton
-          })
-        "
-      />
-      Don't show the Vocably button when text is selected (use the right-click
-      context menu instead).
     </label>
   </p>
 
