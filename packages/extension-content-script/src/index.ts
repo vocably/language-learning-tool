@@ -16,7 +16,7 @@ import { getContext } from './getContext';
 import { getText } from './getText';
 import { createPopup, destroyAllOverlays } from './popup';
 import { getGlobalRect } from './position';
-import { isValidSelection } from './selection';
+import { getSelection, isValidSelection } from './selection';
 import { initYoutube, InitYouTubeOptions } from './youtube';
 
 type RegisterContentScriptOptions = {
@@ -34,7 +34,7 @@ const onCreateSelectionTimeout = async () => {
 
   destroyButton();
 
-  const selection = window.getSelection();
+  const selection = getSelection();
   if (!isValidSelection(selection)) {
     return;
   }
@@ -98,7 +98,7 @@ const isClickableElement = (element: HTMLElement) => {
 const doubleClick$ = new Subject<void>();
 
 const onMouseUp = async (event: MouseEvent) => {
-  const selection = window.getSelection();
+  const selection = getSelection();
 
   if (
     isClickableElement(event.target as HTMLElement) &&
@@ -163,7 +163,7 @@ const showOnDbClick = (options: AutoShowOptions) => async () => {
 };
 
 const showPopup = async (options: AutoShowOptions) => {
-  const selection = window.getSelection();
+  const selection = getSelection();
   if (!isValidSelection(selection)) {
     return;
   }

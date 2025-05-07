@@ -1,4 +1,34 @@
 import { MAX_SYMBOLS_TO_BE_TRANSLATED } from '@vocably/model';
+import { isHtmlElement } from './isHtmlElement';
+
+export const getSelection = (): Selection | null => {
+  const globalSelection = window.getSelection();
+
+  if (!globalSelection || globalSelection.toString() === '') {
+    return null;
+  }
+
+  if (
+    globalSelection.focusNode &&
+    globalSelection.focusNode.nodeName === 'VOCABLY-POPUP' &&
+    isHtmlElement(globalSelection.focusNode)
+  ) {
+    const translation = globalSelection.focusNode.querySelector(
+      'vocably-translation'
+    );
+    if (!translation) {
+      return null;
+    }
+
+    if (translation.shadowRoot && translation.shadowRoot['getSelection']) {
+      return translation.shadowRoot['getSelection']();
+    }
+
+    return null;
+  }
+
+  return globalSelection;
+};
 
 export const isValidSelection = (
   selection: Selection | null
