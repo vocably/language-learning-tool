@@ -1,9 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import React, { FC } from 'react';
-import { BackHandler, Platform, StatusBar } from 'react-native';
-import { Button, Text } from 'react-native-paper';
+import { StatusBar } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { ShareMenuReactView } from 'react-native-share-menu';
 import { AuthContainer } from '../auth/AuthContainer';
 import { LanguagesContainer } from '../languages/LanguagesContainer';
 import { LanguageSelectorModal } from '../LanguageSelectorModal';
@@ -38,23 +36,9 @@ export const ShareIntentAppBase: FC<Props> = ({ os }) => {
                           name="Vocably"
                           component={ShareIntentLookUpScreen}
                           options={{
-                            headerShown: true,
+                            headerShown: false,
                             presentation: 'card',
-                            headerTitleAlign: 'center',
-                            headerTitle: () => (
-                              <Text style={{ fontSize: 20 }}>Vocably</Text>
-                            ),
-                            headerRight: () => (
-                              <Button
-                                onPress={() =>
-                                  Platform.OS === 'ios'
-                                    ? ShareMenuReactView.dismissExtension()
-                                    : BackHandler.exitApp()
-                                }
-                              >
-                                Done
-                              </Button>
-                            ),
+                            gestureEnabled: true,
                           }}
                         />
                         <Stack.Screen
@@ -62,7 +46,8 @@ export const ShareIntentAppBase: FC<Props> = ({ os }) => {
                           component={LanguageSelectorModal}
                           options={{
                             headerShown: false,
-                            presentation: 'transparentModal',
+                            presentation: 'modal',
+                            gestureEnabled: true,
                           }}
                         />
                       </Stack.Navigator>

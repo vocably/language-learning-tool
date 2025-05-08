@@ -15,6 +15,8 @@ type AnalyzeResultItem = FC<{
   item: AssociatedCard;
   deck: Deck;
   hideOperations?: boolean;
+  leftInset?: number;
+  rightInset?: number;
 }>;
 
 export const AnalyzeResultItem: AnalyzeResultItem = ({
@@ -24,6 +26,8 @@ export const AnalyzeResultItem: AnalyzeResultItem = ({
   item,
   deck,
   hideOperations = false,
+  leftInset = 0,
+  rightInset = 0,
 }) => {
   const theme = useTheme();
   const [isProcessing, setIsProcessing] = useState(false);
@@ -59,9 +63,9 @@ export const AnalyzeResultItem: AnalyzeResultItem = ({
         alignItems: 'flex-start',
         justifyContent: 'center',
         flexDirection: 'row',
-        paddingLeft: mainPadding,
+        paddingLeft: leftInset + mainPadding,
         // Align ⊕ button with the 🔎
-        paddingRight: 16,
+        paddingRight: rightInset + 16,
       }}
     >
       <CardListItem

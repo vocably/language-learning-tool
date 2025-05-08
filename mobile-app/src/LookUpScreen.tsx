@@ -2,19 +2,26 @@ import { NavigationProp } from '@react-navigation/native';
 import { analyze } from '@vocably/api';
 import { AnalyzePayload, GoogleLanguage, languageList } from '@vocably/model';
 import { usePostHog } from 'posthog-react-native';
-import React, { FC, useEffect, useRef, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import {
   Alert,
+  BackHandler,
   Keyboard,
   Platform,
   ScrollView,
-  StyleSheet,
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
-import { Surface, Text, TouchableRipple, useTheme } from 'react-native-paper';
+import {
+  Button,
+  Surface,
+  Text,
+  TouchableRipple,
+  useTheme,
+} from 'react-native-paper';
 import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { ShareMenuReactView } from 'react-native-share-menu';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useLanguageDeck } from './languageDeck/useLanguageDeck';
 import { InlineLoader } from './loaders/InlineLoader';
@@ -29,26 +36,6 @@ import { ScreenLayout } from './ui/ScreenLayout';
 import { useAnalyzeOperations } from './useAnalyzeOperations';
 
 const padding = 16;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-  },
-  languageToolbar: {
-    padding: padding,
-    width: '100%',
-  },
-  searchContainer: {
-    width: '100%',
-    paddingHorizontal: padding,
-  },
-  resultContainer: {
-    flex: 1,
-    width: '100%',
-    marginRight: 8,
-  },
-});
 
 const getLoadingText = (translationPreset: Preset) => {
   const fromLanguage = translationPreset.isReverse
@@ -226,43 +213,74 @@ export const LookUpScreen: FC<Props> = ({
   return (
     <ScreenLayout
       header={
-        <Surface elevation={1}>
+        <Surface
+          elevation={1}
+          style={{
+            paddingTop: insets.top,
+            paddingLeft: insets.left,
+            paddingRight: insets.right,
+            paddingBottom: 24,
+          }}
+        >
+          {isSharedLookUp && (
+            <View
+              style={{
+                flexDirection: 'row',
+                paddingLeft: padding + 8,
+                paddingRight: padding - 8,
+                paddingTop: padding,
+                alignItems: 'center',
+              }}
+            >
+              <Text style={{ fontSize: 18 }}>Vocably</Text>
+              <Button
+                style={{ marginLeft: 'auto' }}
+                onPress={() =>
+                  Platform.OS === 'ios'
+                    ? ShareMenuReactView.dismissExtension()
+                    : BackHandler.exitApp()
+                }
+              >
+                Done
+              </Button>
+            </View>
+          )}
           <View
             style={{
-              paddingTop: insets.top,
-              paddingLeft: insets.left,
-              paddingRight: insets.right,
-              paddingBottom: 24,
+              padding: padding,
+              width: '100%',
             }}
           >
-            <View style={styles.languageToolbar}>
-              <TranslationPresetForm
-                navigation={navigation}
-                languagePairs={translationPresetState.languagePairs}
-                preset={translationPresetState.preset}
-                onChange={translationPresetState.setPreset}
-              />
-            </View>
-            <View style={[styles.searchContainer]}>
-              <SearchInput
-                value={lookUpText}
-                multiline={false}
-                placeholder={
-                  languageList[
-                    (translationPresetState.preset.isReverse
-                      ? translationPresetState.preset.translationLanguage
-                      : translationPresetState.preset
-                          .sourceLanguage) as GoogleLanguage
-                  ]
-                }
-                onChange={setLookUpText}
-                onSubmit={lookUp}
-                disabled={
-                  !translationPresetState.preset.sourceLanguage ||
-                  !translationPresetState.preset.translationLanguage
-                }
-              />
-            </View>
+            <TranslationPresetForm
+              navigation={navigation}
+              languagePairs={translationPresetState.languagePairs}
+              preset={translationPresetState.preset}
+              onChange={translationPresetState.setPreset}
+            />
+          </View>
+          <View
+            style={{
+              paddingHorizontal: padding,
+            }}
+          >
+            <SearchInput
+              value={lookUpText}
+              multiline={false}
+              placeholder={
+                languageList[
+                  (translationPresetState.preset.isReverse
+                    ? translationPresetState.preset.translationLanguage
+                    : translationPresetState.preset
+                        .sourceLanguage) as GoogleLanguage
+                ]
+              }
+              onChange={setLookUpText}
+              onSubmit={lookUp}
+              disabled={
+                !translationPresetState.preset.sourceLanguage ||
+                !translationPresetState.preset.translationLanguage
+              }
+            />
           </View>
         </Surface>
       }
@@ -405,7 +423,13 @@ export const LookUpScreen: FC<Props> = ({
           )}
           {!isAnalyzingPreset && lookUpResult && lookUpResult.success && (
             <AnalyzeResult
-              style={styles.resultContainer}
+              leftInset={insets.left}
+              rightInset={insets.right}
+              style={{
+                flex: 1,
+                width: '100%',
+                marginRight: 8,
+              }}
               analysis={lookUpResult.value}
               cards={deck.deck.cards}
               onAdd={onAdd}

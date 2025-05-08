@@ -4,7 +4,6 @@ import { FC, useRef, useState } from 'react';
 import { Animated, PixelRatio, StyleProp, View, ViewStyle } from 'react-native';
 import Markdown from 'react-native-markdown-display';
 import { Text, TouchableRipple, useTheme } from 'react-native-paper';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Separator } from '../CardListItem';
 import { fixMarkdown } from '../fixMarkdown';
@@ -23,6 +22,8 @@ type Props = {
   onTagsChange: (id: string, tags: TagItem[]) => Promise<Result<true>>;
   style?: StyleProp<ViewStyle>;
   deck: Deck;
+  leftInset?: number;
+  rightInset?: number;
 };
 
 export const AnalyzeResult: FC<Props> = ({
@@ -33,9 +34,10 @@ export const AnalyzeResult: FC<Props> = ({
   onRemove,
   onTagsChange,
   deck,
+  leftInset = 0,
+  rightInset = 0,
 }) => {
   const associatedCards = associateCards(makeCards(analysis), cards);
-  const insets = useSafeAreaInsets();
   const theme = useTheme();
   const [explanationIsVisible, setExplanationIsVisible] = useState(false);
   const explanationMaxHeight = useRef(new Animated.Value(0)).current;
@@ -70,8 +72,8 @@ export const AnalyzeResult: FC<Props> = ({
               width: '100%',
               paddingTop: 16,
               paddingBottom: 16,
-              paddingLeft: insets.left + mainPadding,
-              paddingRight: insets.right + mainPadding,
+              paddingLeft: leftInset + mainPadding,
+              paddingRight: rightInset + mainPadding,
               alignItems: 'flex-end',
             }}
             onPress={toggleExplanation}
@@ -95,8 +97,8 @@ export const AnalyzeResult: FC<Props> = ({
           </TouchableRipple>
           <Animated.View
             style={{
-              paddingLeft: insets.left + mainPadding,
-              paddingRight: insets.right + mainPadding,
+              paddingLeft: leftInset + mainPadding,
+              paddingRight: rightInset + mainPadding,
               maxHeight: explanationMaxHeight,
               overflow: 'hidden',
             }}
@@ -114,6 +116,8 @@ export const AnalyzeResult: FC<Props> = ({
         <View key={`${item.card.source}${item.card.partOfSpeech}`}>
           {index > 0 && <Separator />}
           <AnalyzeResultItem
+            leftInset={leftInset}
+            rightInset={rightInset}
             onAdd={onAdd}
             onRemove={onRemove}
             onTagsChange={onTagsChange}
