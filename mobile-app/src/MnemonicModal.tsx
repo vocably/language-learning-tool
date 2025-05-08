@@ -3,13 +3,23 @@ import { NavigationProp, Route } from '@react-navigation/native';
 import { CardItem, GoogleLanguage } from '@vocably/model';
 import { usePostHog } from 'posthog-react-native';
 import React, { FC, useState } from 'react';
-import { ScrollView, View } from 'react-native';
+import { View } from 'react-native';
 import Markdown from 'react-native-markdown-display';
-import { Appbar, Button, IconButton, Text, useTheme } from 'react-native-paper';
+import {
+  Appbar,
+  Button,
+  IconButton,
+  Surface,
+  Text,
+  useTheme,
+} from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { fixMarkdown } from './fixMarkdown';
 import { Loader } from './loaders/Loader';
 import { Displayer } from './study/Displayer';
+import { mainPadding } from './styles';
+import { CustomScrollView } from './ui/CustomScrollView';
+import { ScreenLayout } from './ui/ScreenLayout';
 import { useAsync } from './useAsync';
 import { useMnemonic } from './useMnemonic';
 
@@ -123,9 +133,9 @@ export const MnemonicModal: FC<Props> = ({ route, navigation }) => {
   const postHog = usePostHog();
 
   const markdownStyles = {
-    body: { color: theme.colors.onBackground, fontSize: 18 },
+    body: { color: theme.colors.onSurface, fontSize: 18 },
     hr: {
-      backgroundColor: theme.colors.onBackground,
+      backgroundColor: theme.colors.onSurface,
     },
   };
 
@@ -192,137 +202,149 @@ export const MnemonicModal: FC<Props> = ({ route, navigation }) => {
   };
 
   return (
-    <>
-      <Appbar.Header statusBarHeight={0}>
-        {isVisitedResult.value && (
+    <ScreenLayout
+      header={
+        <Surface
+          elevation={1}
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            paddingLeft: insets.left + mainPadding,
+            paddingRight: insets.right + 8,
+            paddingVertical: 8,
+          }}
+        >
+          <Appbar.Content title="✨ Mnemonics" />
+          {isVisitedResult.value && (
+            <Appbar.Action
+              icon={'help-circle-outline'}
+              size={24}
+              onPress={() => setHelpIsOpen(!helpIsOpen)}
+              style={{ backgroundColor: 'transparent' }}
+            />
+          )}
           <Appbar.Action
-            icon={'help-circle-outline'}
+            icon={'close'}
             size={24}
-            onPress={() => setHelpIsOpen(!helpIsOpen)}
+            onPress={() => navigation.goBack()}
+            style={{ backgroundColor: 'transparent' }}
           />
-        )}
-        <Appbar.Content title="✨ Mnemonics" />
-        <Appbar.Action
-          icon={'close'}
-          size={24}
-          onPress={() => navigation.goBack()}
-        />
-      </Appbar.Header>
-      <ScrollView
-        automaticallyAdjustKeyboardInsets={true}
-        contentContainerStyle={{
-          paddingLeft: insets.left + 24,
-          paddingRight: insets.right + 24,
-          paddingBottom: insets.bottom,
-          flexGrow: 1,
-        }}
-      >
-        {isHelpVisible && (
-          <Displayer
-            style={{
-              flex: 1,
-              alignItems: 'center',
-              justifyContent: 'center',
-              paddingBottom: 16,
-            }}
-          >
-            <Markdown style={markdownStyles}>{translation.text}</Markdown>
-            <Button
-              style={{ width: '100%', marginTop: 24 }}
-              mode="outlined"
-              onPress={() => {
-                setHelpIsOpen(false);
-                mutateIsVisited(true);
+        </Surface>
+      }
+      content={
+        <CustomScrollView
+          automaticallyAdjustKeyboardInsets={true}
+          contentContainerStyle={{
+            flexGrow: 1,
+          }}
+        >
+          {isHelpVisible && (
+            <Displayer
+              style={{
+                paddingBottom: 16,
               }}
             >
-              {translation.okay}
-            </Button>
-          </Displayer>
-        )}
-        {!isHelpVisible && (
-          <Displayer
-            style={{
-              flex: 1,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            {mnemonicResult.status === 'loading' && (
-              <Loader>Generating mnemonic</Loader>
-            )}
-            {mnemonicResult.status === 'loaded' && (
-              <View style={{ width: '100%' }}>
-                <View style={{ alignSelf: 'center' }}>
-                  <Markdown style={markdownStyles}>
-                    {fixMarkdown(mnemonicResult.markdown)}
-                  </Markdown>
-                </View>
-                <View
-                  style={{
-                    marginTop: 16,
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                  }}
-                >
-                  <Button
-                    mode="elevated"
-                    textColor={theme.colors.onBackground}
-                    onPress={feedback}
-                  >
-                    Provide Feedback
-                  </Button>
-                  <View style={{ flexDirection: 'row', marginLeft: 'auto' }}>
-                    <IconButton
-                      icon={
-                        votedFor === 'upvoted' ? 'thumb-up' : 'thumb-up-outline'
-                      }
-                      style={{ marginLeft: 'auto' }}
-                      onPress={() => upvote()}
-                      loading={upvoting}
-                    />
-                    <IconButton
-                      icon={
-                        votedFor === 'downvoted'
-                          ? 'thumb-down'
-                          : 'thumb-down-outline'
-                      }
-                      style={{ marginLeft: 'auto' }}
-                      onPress={() => downvote()}
-                      loading={downvoting}
-                    />
-                    <IconButton
-                      icon={'reload'}
-                      style={{ marginLeft: 'auto' }}
-                      onPress={regenerateMnemonic}
-                    />
-                  </View>
-                </View>
-              </View>
-            )}
-            {mnemonicResult.status === 'error' && (
-              <View
-                style={{
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: 8,
+              <Markdown style={markdownStyles}>{translation.text}</Markdown>
+              <Button
+                style={{ width: '100%', marginTop: 24 }}
+                mode="outlined"
+                onPress={() => {
+                  setHelpIsOpen(false);
+                  mutateIsVisited(true);
                 }}
               >
-                <Text>Error while generating mnemonic.</Text>
-                {mnemonicResult.code === 'OPENAI_UNSUCCESSFUL_REQUEST' && (
-                  <Text>AI is so unstable nowadays!</Text>
-                )}
-                <Button
-                  style={{ marginTop: 6 }}
-                  mode="contained"
-                  onPress={regenerateMnemonic}
+                {translation.okay}
+              </Button>
+            </Displayer>
+          )}
+          {!isHelpVisible && (
+            <Displayer
+              style={{
+                flex: 1,
+                alignItems: 'center',
+              }}
+            >
+              {mnemonicResult.status === 'loading' && (
+                <View style={{}}>
+                  <Loader>Generating mnemonic</Loader>
+                </View>
+              )}
+              {mnemonicResult.status === 'loaded' && (
+                <View style={{ width: '100%' }}>
+                  <View style={{ alignSelf: 'center' }}>
+                    <Markdown style={markdownStyles}>
+                      {fixMarkdown(mnemonicResult.markdown)}
+                    </Markdown>
+                  </View>
+                  <View
+                    style={{
+                      marginTop: 16,
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <Button
+                      mode="elevated"
+                      textColor={theme.colors.onBackground}
+                      onPress={feedback}
+                    >
+                      Provide Feedback
+                    </Button>
+                    <View style={{ flexDirection: 'row', marginLeft: 'auto' }}>
+                      <IconButton
+                        icon={
+                          votedFor === 'upvoted'
+                            ? 'thumb-up'
+                            : 'thumb-up-outline'
+                        }
+                        style={{ marginLeft: 'auto' }}
+                        onPress={() => upvote()}
+                        loading={upvoting}
+                      />
+                      <IconButton
+                        icon={
+                          votedFor === 'downvoted'
+                            ? 'thumb-down'
+                            : 'thumb-down-outline'
+                        }
+                        style={{ marginLeft: 'auto' }}
+                        onPress={() => downvote()}
+                        loading={downvoting}
+                      />
+                      <IconButton
+                        icon={'reload'}
+                        style={{ marginLeft: 'auto' }}
+                        onPress={regenerateMnemonic}
+                      />
+                    </View>
+                  </View>
+                </View>
+              )}
+              {mnemonicResult.status === 'error' && (
+                <View
+                  style={{
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: 8,
+                  }}
                 >
-                  Try to generate again
-                </Button>
-              </View>
-            )}
-          </Displayer>
-        )}
-      </ScrollView>
-    </>
+                  <Text>Error while generating mnemonic.</Text>
+                  {mnemonicResult.code === 'OPENAI_UNSUCCESSFUL_REQUEST' && (
+                    <Text>AI is so unstable nowadays!</Text>
+                  )}
+                  <Button
+                    style={{ marginTop: 6 }}
+                    mode="contained"
+                    onPress={regenerateMnemonic}
+                  >
+                    Try to generate again
+                  </Button>
+                </View>
+              )}
+            </Displayer>
+          )}
+        </CustomScrollView>
+      }
+    />
   );
 };
