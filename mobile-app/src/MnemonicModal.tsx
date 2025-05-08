@@ -326,6 +326,7 @@ export const MnemonicModal: FC<Props> = ({ route, navigation }) => {
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: 8,
+                    flex: 1,
                   }}
                 >
                   <Text>Error while generating mnemonic.</Text>
