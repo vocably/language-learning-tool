@@ -32,8 +32,9 @@ export const generateMnemonic = async (
     payload.sourceLanguage != payload.targetLanguage
       ? 'Incorporate the translation in response'
       : '',
-    `Don't suggest first letter sentences`,
-    'Highlight with markdown',
+    `Avoid abbreviations or acronyms. Instead, create vivid, story-based, or image-based associations that connect the word\'s sound or meaning to something concrete or funny.
+Make sure the mnemonic helps recall both the pronunciation and the definition of the word.`,
+    'Highlight with markdown.',
   ]
     .filter((line) => !!line)
     .join('\n');
