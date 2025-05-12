@@ -19,6 +19,7 @@ import {
   Chip,
   Surface,
   Text,
+  TouchableRipple,
   useTheme,
 } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -98,7 +99,9 @@ type Props = {
 type Section = {
   title: string;
   data: CardItem[];
+  all: CardItem[];
   isFirst: boolean;
+  id: string;
 };
 
 export const DashboardScreen: FC<Props> = ({ navigation }) => {
@@ -177,38 +180,47 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
     );
   }, [filteredCards, searchText, isSearching]);
 
-  const sections: Section[] = useMemo(() => {
-    const plan = studyPlan(new Date(), cards);
+  const plan = useMemo(() => studyPlan(new Date(), cards), [cards]);
+  const [collapsedSections, setCollapsedSections] = useState<string[]>([]);
 
+  const sections: Section[] = useMemo(() => {
     const result = [
       {
         title: 'Planned for today',
-        data: plan.today,
+        data: collapsedSections.includes('today') ? [] : plan.today,
+        all: plan.today,
         isFirst: false,
+        id: 'today',
       },
       {
         title: 'Expired',
-        data: plan.expired,
+        data: collapsedSections.includes('expired') ? [] : plan.expired,
+        all: plan.expired,
         isFirst: false,
+        id: 'expired',
       },
       {
         title: 'Never studied',
-        data: plan.notStarted,
+        data: collapsedSections.includes('notStarted') ? [] : plan.notStarted,
+        all: plan.notStarted,
         isFirst: false,
+        id: 'notStarted',
       },
       {
         title: 'Planned for future',
-        data: plan.future,
+        data: collapsedSections.includes('future') ? [] : plan.future,
+        all: plan.future,
         isFirst: false,
+        id: 'future',
       },
-    ].filter((item) => item.data.length > 0);
+    ].filter((item) => item.all.length > 0);
 
     if (result.length > 0) {
       result[0].isFirst = true;
     }
 
     return result;
-  }, [cards]);
+  }, [plan, collapsedSections]);
 
   const searchInputRef = useRef<DashboardSearchInputRef>(null);
 
@@ -226,6 +238,16 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
     today.getUTCMonth(),
     today.getUTCDate()
   );
+
+  const toggleSection = (sectionId: string) => {
+    setCollapsedSections((collapsedSections) => {
+      if (collapsedSections.includes(sectionId)) {
+        return collapsedSections.filter((s) => s !== sectionId);
+      } else {
+        return [...collapsedSections, sectionId];
+      }
+    });
+  };
 
   return (
     <ScreenLayout
@@ -425,7 +447,8 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
             renderSectionHeader={(section) => {
               return (
                 <>
-                  <View
+                  <TouchableRipple
+                    onPress={() => toggleSection(section.section.id as string)}
                     style={{
                       paddingLeft: insets.left + mainPadding,
                       paddingRight: insets.right + mainPadding,
@@ -433,34 +456,50 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                       paddingBottom: 16,
                       // @ts-ignore
                       backgroundColor: `rgba(${theme.colors.backgroundRgb}, 0.95)`,
-                      flexDirection: 'row',
-                      alignItems: 'center',
-                      gap: 16,
                     }}
                   >
-                    <Text
-                      style={{
-                        fontSize: 22,
-                        color: theme.colors.secondary,
-                      }}
-                    >
-                      {section.section.title}
-                    </Text>
                     <View
                       style={{
-                        borderRadius: 16,
-                        paddingVertical: 4,
-                        paddingHorizontal: 8,
+                        flexDirection: 'row',
                         alignItems: 'center',
-                        minWidth: 36,
-                        backgroundColor: theme.colors.secondary,
+                        gap: 16,
                       }}
                     >
-                      <Text style={{ color: theme.colors.onSecondary }}>
-                        {section.section.data.length}
+                      <Text
+                        style={{
+                          fontSize: 22,
+                          color: theme.colors.secondary,
+                        }}
+                      >
+                        {section.section.title}
                       </Text>
+                      <View
+                        style={{
+                          borderRadius: 16,
+                          paddingVertical: 4,
+                          paddingHorizontal: 8,
+                          alignItems: 'center',
+                          minWidth: 36,
+                          backgroundColor: theme.colors.secondary,
+                        }}
+                      >
+                        <Text style={{ color: theme.colors.onSecondary }}>
+                          {section.section.all.length}
+                        </Text>
+                      </View>
+                      <Icon
+                        name={
+                          collapsedSections.includes(
+                            section.section.id as string
+                          )
+                            ? 'chevron-right'
+                            : 'chevron-down'
+                        }
+                        size={24}
+                        color={theme.colors.onBackground}
+                      />
                     </View>
-                  </View>
+                  </TouchableRipple>
                 </>
               );
             }}
