@@ -1,6 +1,7 @@
 import { useNetInfo } from '@react-native-community/netinfo';
 import { NavigationProp } from '@react-navigation/native';
-import { byDate, CardItem, TagItem } from '@vocably/model';
+import { CardItem, TagItem } from '@vocably/model';
+import { studyPlan } from '@vocably/srs';
 import { usePostHog } from 'posthog-react-native';
 import React, {
   FC,
@@ -28,6 +29,7 @@ import {
   DashboardSearchInput,
   DashboardSearchInputRef,
 } from './DashboardSearchInput';
+import { daysString } from './daysString';
 import { useSelectedDeck } from './languageDeck/useSelectedDeck';
 import { LanguagesContext } from './languages/LanguagesContainer';
 import { LanguageSelector } from './LanguageSelector';
@@ -91,6 +93,12 @@ export const keyExtractor: (item: CardItem) => string = (item) =>
 
 type Props = {
   navigation: NavigationProp<any>;
+};
+
+type Section = {
+  title: string;
+  data: CardItem[];
+  isFirst: boolean;
 };
 
 export const DashboardScreen: FC<Props> = ({ navigation }) => {
@@ -161,13 +169,46 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
   const canBeSearched = deck.cards.length > 4;
   const cards = useMemo(() => {
     if (!canBeSearched || !isSearching || searchText === '') {
-      return filteredCards.sort(byDate);
+      return filteredCards;
     }
 
-    return filteredCards
-      .sort(byDate)
-      .filter(filterByLowercasedText(searchText.toLowerCase()));
+    return filteredCards.filter(
+      filterByLowercasedText(searchText.toLowerCase())
+    );
   }, [filteredCards, searchText, isSearching]);
+
+  const sections: Section[] = useMemo(() => {
+    const plan = studyPlan(new Date(), cards);
+
+    const result = [
+      {
+        title: 'Planned for today',
+        data: plan.today,
+        isFirst: false,
+      },
+      {
+        title: 'Expired',
+        data: plan.expired,
+        isFirst: false,
+      },
+      {
+        title: 'Never studied',
+        data: plan.notStarted,
+        isFirst: false,
+      },
+      {
+        title: 'Planned for future',
+        data: plan.future,
+        isFirst: false,
+      },
+    ].filter((item) => item.data.length > 0);
+
+    if (result.length > 0) {
+      result[0].isFirst = true;
+    }
+
+    return result;
+  }, [cards]);
 
   const searchInputRef = useRef<DashboardSearchInputRef>(null);
 
@@ -178,6 +219,13 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
   const isEmpty = deck.cards.length === 0;
 
   const fontScale = Math.max(1, PixelRatio.getFontScale());
+
+  const today = new Date();
+  const todayTS = Date.UTC(
+    today.getUTCFullYear(),
+    today.getUTCMonth(),
+    today.getUTCDate()
+  );
 
   return (
     <ScreenLayout
@@ -363,15 +411,59 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
             paddingRight: insets.right,
           }}
         >
-          <SwipeListView<CardItem>
+          <SwipeListView
             onRefresh={onRefresh}
             refreshing={refreshing}
             style={{
               width: '100%',
             }}
-            data={cards}
+            sections={sections}
+            useSectionList={true}
             ItemSeparatorComponent={Separator}
             keyExtractor={keyExtractor}
+            stickySectionHeadersEnabled={true}
+            renderSectionHeader={(section) => {
+              return (
+                <>
+                  <View
+                    style={{
+                      paddingLeft: insets.left + mainPadding,
+                      paddingRight: insets.right + mainPadding,
+                      paddingTop: 16,
+                      paddingBottom: 16,
+                      // @ts-ignore
+                      backgroundColor: `rgba(${theme.colors.backgroundRgb}, 0.95)`,
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                      gap: 16,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        fontSize: 22,
+                        color: theme.colors.secondary,
+                      }}
+                    >
+                      {section.section.title}
+                    </Text>
+                    <View
+                      style={{
+                        borderRadius: 16,
+                        paddingVertical: 4,
+                        paddingHorizontal: 8,
+                        alignItems: 'center',
+                        minWidth: 36,
+                        backgroundColor: theme.colors.secondary,
+                      }}
+                    >
+                      <Text style={{ color: theme.colors.onSecondary }}>
+                        {section.section.data.length}
+                      </Text>
+                    </View>
+                  </View>
+                </>
+              );
+            }}
             renderItem={({ item }) => (
               <View
                 style={{
@@ -381,18 +473,34 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                   borderWidth: 1,
                   borderColor: 'transparent',
                   display: 'flex',
-                  flexDirection: 'row',
-                  alignItems: 'center',
+                  alignItems: 'flex-start',
                   justifyContent: 'center',
                   paddingHorizontal: mainPadding,
+                  paddingBottom: 16,
+                  paddingTop: 16,
                 }}
               >
                 <CardListItem
                   savingTagsInProgress={savingTagsForId === item.id}
                   card={item.data}
-                  style={{ flex: 1, paddingVertical: 16 }}
+                  style={{ flex: 1 }}
                   onTagsChange={onTagsChange(item)}
                 />
+                {todayTS < item.data.dueDate && (
+                  <View
+                    style={{
+                      marginTop: 8,
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                      gap: 8,
+                    }}
+                  >
+                    <Icon name="school" color={theme.colors.secondary} />
+                    <Text style={{ color: theme.colors.secondary }}>
+                      in {daysString(todayTS, item.data.dueDate)}
+                    </Text>
+                  </View>
+                )}
               </View>
             )}
             renderHiddenItem={(data, rowMap) => (

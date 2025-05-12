@@ -1,67 +1,35 @@
 import { CardItem } from '@vocably/model';
+import { studyPlan } from './studyPlan';
 
-export type SliceItem = {
-  data: Pick<CardItem['data'], 'dueDate'>;
-};
-
-export const slice = <T extends SliceItem>(
+export const slice = (
   today: Date,
   maxCards: number,
-  list: T[]
-): T[] => {
+  list: CardItem[]
+): CardItem[] => {
   if (list.length === 0) {
     return [];
   }
 
-  const todayTS = Date.UTC(
-    today.getUTCFullYear(),
-    today.getUTCMonth(),
-    today.getUTCDate()
-  );
+  const plan = studyPlan(today, list);
+  const result = plan.today;
 
-  const batch: CardItem[] = [];
-
-  const classifiedListItems: {
-    past: T[];
-    future: T[];
-    today: T[];
-  } = {
-    past: [],
-    future: [],
-    today: [],
-  };
-
-  list.forEach((item) => {
-    if (item.data.dueDate < todayTS) {
-      classifiedListItems.past.push(item);
-    } else if (item.data.dueDate === todayTS) {
-      classifiedListItems.today.push(item);
-    } else {
-      classifiedListItems.future.push(item);
-    }
-  });
-
-  const result = classifiedListItems.today.slice(0, maxCards);
-
-  if (result.length === maxCards) {
+  if (result.length >= maxCards) {
     return result;
   }
 
-  result.push(
-    ...classifiedListItems.past
-      .sort((a, b) => b.data.dueDate - a.data.dueDate)
-      .slice(0, maxCards - result.length)
-  );
+  result.push(...plan.expired.slice(0, maxCards - result.length));
 
-  if (classifiedListItems.today.length > 0 || result.length === maxCards) {
+  if (result.length >= maxCards) {
     return result;
   }
 
-  result.push(
-    ...classifiedListItems.future
-      .sort((a, b) => a.data.dueDate - b.data.dueDate)
-      .slice(0, maxCards - result.length)
-  );
+  result.push(...plan.notStarted.slice(0, maxCards - result.length));
+
+  if (result.length >= maxCards) {
+    return result;
+  }
+
+  result.push(...plan.future.slice(0, maxCards - result.length));
 
   return result;
 };
