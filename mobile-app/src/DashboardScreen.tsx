@@ -1,6 +1,6 @@
 import { useNetInfo } from '@react-native-community/netinfo';
 import { NavigationProp } from '@react-navigation/native';
-import { CardItem, TagItem } from '@vocably/model';
+import { byDate, CardItem, TagItem } from '@vocably/model';
 import { studyPlan } from '@vocably/srs';
 import { usePostHog } from 'posthog-react-native';
 import React, {
@@ -35,6 +35,7 @@ import { useSelectedDeck } from './languageDeck/useSelectedDeck';
 import { LanguagesContext } from './languages/LanguagesContainer';
 import { LanguageSelector } from './LanguageSelector';
 import { Loader } from './loaders/Loader';
+import { getRandomizerEnabled } from './Settings/StudySettingsScreen';
 import { setSourceLanguage } from './SourceLanguageButton';
 import { swipeListButtonPressOpacity } from './stupidConstants';
 import { mainPadding } from './styles';
@@ -43,6 +44,7 @@ import { useTranslationPreset } from './TranslationPreset/useTranslationPreset';
 import { CustomSurface } from './ui/CustomSurface';
 import { ListItem } from './ui/ListItem';
 import { ScreenLayout } from './ui/ScreenLayout';
+import { useAsync } from './useAsync';
 import { useCurrentLanguageName } from './useCurrentLanguageName';
 
 const SWIPE_MENU_BUTTON_SIZE = 80;
@@ -128,6 +130,7 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
   const insets = useSafeAreaInsets();
   const presetState = useTranslationPreset();
   const languageName = useCurrentLanguageName();
+  const [isRandomEnabledResult] = useAsync(getRandomizerEnabled);
 
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
@@ -172,12 +175,12 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
   const canBeSearched = deck.cards.length > 4;
   const cards = useMemo(() => {
     if (!canBeSearched || !isSearching || searchText === '') {
-      return filteredCards;
+      return filteredCards.sort(byDate);
     }
 
-    return filteredCards.filter(
-      filterByLowercasedText(searchText.toLowerCase())
-    );
+    return filteredCards
+      .sort(byDate)
+      .filter(filterByLowercasedText(searchText.toLowerCase()));
   }, [filteredCards, searchText, isSearching]);
 
   const plan = useMemo(() => studyPlan(new Date(), cards), [cards]);
@@ -224,7 +227,10 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
 
   const searchInputRef = useRef<DashboardSearchInputRef>(null);
 
-  if (deck.cards.length === 0 && status === 'loading') {
+  if (
+    (deck.cards.length === 0 && status === 'loading') ||
+    isRandomEnabledResult.status !== 'loaded'
+  ) {
     return <Loader>Loading cards...</Loader>;
   }
 
@@ -434,13 +440,14 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
           }}
         >
           <SwipeListView
+            key={languageName + collapsedSections.join(',')}
             onRefresh={onRefresh}
             refreshing={refreshing}
             style={{
               width: '100%',
             }}
             sections={sections}
-            useSectionList={true}
+            useSectionList={isRandomEnabledResult.value === false}
             ItemSeparatorComponent={Separator}
             keyExtractor={keyExtractor}
             stickySectionHeadersEnabled={true}
@@ -450,6 +457,7 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                   <TouchableRipple
                     onPress={() => toggleSection(section.section.id as string)}
                     style={{
+                      zIndex: 1,
                       paddingLeft: insets.left + mainPadding,
                       paddingRight: insets.right + mainPadding,
                       paddingTop: 16,
