@@ -196,7 +196,7 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
         id: 'today',
       },
       {
-        title: 'Expired',
+        title: 'To catch up',
         data: collapsedSections.includes('expired') ? [] : plan.expired,
         all: plan.expired,
         isFirst: false,
@@ -447,6 +447,7 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
               width: '100%',
             }}
             sections={sections}
+            data={cards}
             useSectionList={isRandomEnabledResult.value === false}
             ItemSeparatorComponent={Separator}
             keyExtractor={keyExtractor}
@@ -533,21 +534,22 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                   style={{ flex: 1 }}
                   onTagsChange={onTagsChange(item)}
                 />
-                {todayTS < item.data.dueDate && (
-                  <View
-                    style={{
-                      marginTop: 8,
-                      flexDirection: 'row',
-                      alignItems: 'center',
-                      gap: 8,
-                    }}
-                  >
-                    <Icon name="school" color={theme.colors.secondary} />
-                    <Text style={{ color: theme.colors.secondary }}>
-                      in {daysString(todayTS, item.data.dueDate)}
-                    </Text>
-                  </View>
-                )}
+                {isRandomEnabledResult.value === false &&
+                  todayTS < item.data.dueDate && (
+                    <View
+                      style={{
+                        marginTop: 8,
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        gap: 8,
+                      }}
+                    >
+                      <Icon name="school" color={theme.colors.secondary} />
+                      <Text style={{ color: theme.colors.secondary }}>
+                        {daysString(todayTS, item.data.dueDate)}
+                      </Text>
+                    </View>
+                  )}
               </View>
             )}
             renderHiddenItem={(data, rowMap) => (

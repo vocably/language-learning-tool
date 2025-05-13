@@ -4,8 +4,8 @@ export const daysString = (todayTs: number, dueDate: number): string => {
   const days = calculateDays(todayTs, dueDate);
 
   if (days === 1) {
-    return `1 day`;
+    return `tomorrow`;
   } else {
-    return `${days} days`;
+    return `in ${days} days`;
   }
 };
