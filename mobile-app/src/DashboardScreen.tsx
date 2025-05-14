@@ -210,7 +210,7 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
         id: 'notStarted',
       },
       {
-        title: 'Planned for future',
+        title: 'Planned',
         data: collapsedSections.includes('future') ? [] : plan.future,
         all: plan.future,
         isFirst: false,
