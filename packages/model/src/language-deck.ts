@@ -94,3 +94,12 @@ export const byDate = (a: CardItem, b: CardItem): number => {
 
   return a.data.partOfSpeech.localeCompare(b.data.partOfSpeech);
 };
+
+export const isSrsCard = (card: Card & Partial<SrsItem>): card is SrsCard => {
+  return (
+    'interval' in card &&
+    'repetition' in card &&
+    'eFactor' in card &&
+    'dueDate' in card
+  );
+};

@@ -1,6 +1,7 @@
 import { useNetInfo } from '@react-native-community/netinfo';
 import { NavigationProp } from '@react-navigation/native';
 import { byDate, CardItem, TagItem } from '@vocably/model';
+import { studyPlan } from '@vocably/srs';
 import { usePostHog } from 'posthog-react-native';
 import React, {
   FC,
@@ -18,6 +19,7 @@ import {
   Chip,
   Surface,
   Text,
+  TouchableRipple,
   useTheme,
 } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -28,10 +30,12 @@ import {
   DashboardSearchInput,
   DashboardSearchInputRef,
 } from './DashboardSearchInput';
+import { daysString } from './daysString';
 import { useSelectedDeck } from './languageDeck/useSelectedDeck';
 import { LanguagesContext } from './languages/LanguagesContainer';
 import { LanguageSelector } from './LanguageSelector';
 import { Loader } from './loaders/Loader';
+import { getRandomizerEnabled } from './Settings/StudySettingsScreen';
 import { setSourceLanguage } from './SourceLanguageButton';
 import { swipeListButtonPressOpacity } from './stupidConstants';
 import { mainPadding } from './styles';
@@ -40,6 +44,7 @@ import { useTranslationPreset } from './TranslationPreset/useTranslationPreset';
 import { CustomSurface } from './ui/CustomSurface';
 import { ListItem } from './ui/ListItem';
 import { ScreenLayout } from './ui/ScreenLayout';
+import { useAsync } from './useAsync';
 import { useCurrentLanguageName } from './useCurrentLanguageName';
 
 const SWIPE_MENU_BUTTON_SIZE = 80;
@@ -93,6 +98,14 @@ type Props = {
   navigation: NavigationProp<any>;
 };
 
+type Section = {
+  title: string;
+  data: CardItem[];
+  all: CardItem[];
+  isFirst: boolean;
+  id: string;
+};
+
 export const DashboardScreen: FC<Props> = ({ navigation }) => {
   const selectedDeck = useSelectedDeck({
     autoReload: true,
@@ -117,6 +130,7 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
   const insets = useSafeAreaInsets();
   const presetState = useTranslationPreset();
   const languageName = useCurrentLanguageName();
+  const [isRandomEnabledResult] = useAsync(getRandomizerEnabled);
 
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
@@ -169,15 +183,77 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
       .filter(filterByLowercasedText(searchText.toLowerCase()));
   }, [filteredCards, searchText, isSearching]);
 
+  const plan = useMemo(() => studyPlan(new Date(), cards), [cards]);
+  const [collapsedSections, setCollapsedSections] = useState<string[]>([]);
+
+  const sections: Section[] = useMemo(() => {
+    const result = [
+      {
+        title: 'Planned for today',
+        data: collapsedSections.includes('today') ? [] : plan.today,
+        all: plan.today,
+        isFirst: false,
+        id: 'today',
+      },
+      {
+        title: 'To catch up',
+        data: collapsedSections.includes('expired') ? [] : plan.expired,
+        all: plan.expired,
+        isFirst: false,
+        id: 'expired',
+      },
+      {
+        title: 'Never studied',
+        data: collapsedSections.includes('notStarted') ? [] : plan.notStarted,
+        all: plan.notStarted,
+        isFirst: false,
+        id: 'notStarted',
+      },
+      {
+        title: 'Planned',
+        data: collapsedSections.includes('future') ? [] : plan.future,
+        all: plan.future,
+        isFirst: false,
+        id: 'future',
+      },
+    ].filter((item) => item.all.length > 0);
+
+    if (result.length > 0) {
+      result[0].isFirst = true;
+    }
+
+    return result;
+  }, [plan, collapsedSections]);
+
   const searchInputRef = useRef<DashboardSearchInputRef>(null);
 
-  if (deck.cards.length === 0 && status === 'loading') {
+  if (
+    (deck.cards.length === 0 && status === 'loading') ||
+    isRandomEnabledResult.status !== 'loaded'
+  ) {
     return <Loader>Loading cards...</Loader>;
   }
 
   const isEmpty = deck.cards.length === 0;
 
   const fontScale = Math.max(1, PixelRatio.getFontScale());
+
+  const today = new Date();
+  const todayTS = Date.UTC(
+    today.getUTCFullYear(),
+    today.getUTCMonth(),
+    today.getUTCDate()
+  );
+
+  const toggleSection = (sectionId: string) => {
+    setCollapsedSections((collapsedSections) => {
+      if (collapsedSections.includes(sectionId)) {
+        return collapsedSections.filter((s) => s !== sectionId);
+      } else {
+        return [...collapsedSections, sectionId];
+      }
+    });
+  };
 
   return (
     <ScreenLayout
@@ -363,15 +439,79 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
             paddingRight: insets.right,
           }}
         >
-          <SwipeListView<CardItem>
+          <SwipeListView
+            key={languageName + collapsedSections.join(',')}
             onRefresh={onRefresh}
             refreshing={refreshing}
             style={{
               width: '100%',
             }}
+            sections={sections}
             data={cards}
+            useSectionList={isRandomEnabledResult.value === false}
             ItemSeparatorComponent={Separator}
             keyExtractor={keyExtractor}
+            stickySectionHeadersEnabled={true}
+            renderSectionHeader={(section) => {
+              return (
+                <>
+                  <TouchableRipple
+                    onPress={() => toggleSection(section.section.id as string)}
+                    style={{
+                      zIndex: 1,
+                      paddingLeft: insets.left + mainPadding,
+                      paddingRight: insets.right + mainPadding,
+                      paddingTop: 16,
+                      paddingBottom: 16,
+                      // @ts-ignore
+                      backgroundColor: `rgba(${theme.colors.backgroundRgb}, 0.95)`,
+                    }}
+                  >
+                    <View
+                      style={{
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        gap: 16,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontSize: 22,
+                          color: theme.colors.secondary,
+                        }}
+                      >
+                        {section.section.title}
+                      </Text>
+                      <View
+                        style={{
+                          borderRadius: 16,
+                          paddingVertical: 4,
+                          paddingHorizontal: 8,
+                          alignItems: 'center',
+                          minWidth: 36,
+                          backgroundColor: theme.colors.secondary,
+                        }}
+                      >
+                        <Text style={{ color: theme.colors.onSecondary }}>
+                          {section.section.all.length}
+                        </Text>
+                      </View>
+                      <Icon
+                        name={
+                          collapsedSections.includes(
+                            section.section.id as string
+                          )
+                            ? 'chevron-right'
+                            : 'chevron-down'
+                        }
+                        size={24}
+                        color={theme.colors.onBackground}
+                      />
+                    </View>
+                  </TouchableRipple>
+                </>
+              );
+            }}
             renderItem={({ item }) => (
               <View
                 style={{
@@ -381,18 +521,35 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                   borderWidth: 1,
                   borderColor: 'transparent',
                   display: 'flex',
-                  flexDirection: 'row',
-                  alignItems: 'center',
+                  alignItems: 'flex-start',
                   justifyContent: 'center',
                   paddingHorizontal: mainPadding,
+                  paddingBottom: 16,
+                  paddingTop: 16,
                 }}
               >
                 <CardListItem
                   savingTagsInProgress={savingTagsForId === item.id}
                   card={item.data}
-                  style={{ flex: 1, paddingVertical: 16 }}
+                  style={{ flex: 1 }}
                   onTagsChange={onTagsChange(item)}
                 />
+                {isRandomEnabledResult.value === false &&
+                  todayTS < item.data.dueDate && (
+                    <View
+                      style={{
+                        marginTop: 8,
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        gap: 8,
+                      }}
+                    >
+                      <Icon name="school" color={theme.colors.secondary} />
+                      <Text style={{ color: theme.colors.secondary }}>
+                        {daysString(todayTS, item.data.dueDate)}
+                      </Text>
+                    </View>
+                  )}
               </View>
             )}
             renderHiddenItem={(data, rowMap) => (

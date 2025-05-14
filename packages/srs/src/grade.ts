@@ -12,25 +12,35 @@ export const grade = (
   let nextInterval: number;
   let nextRepetition: number;
   let nextEFactor: number;
+  let dueDate: number;
 
   if (score >= 3) {
-    if (item.repetition === 0) {
+    if (item.repetition < studyStrategy.length - 1) {
       nextInterval = 1;
-      nextRepetition = 1;
-    } else if (item.repetition === 1) {
+      nextRepetition = item.repetition + 1;
+      dueDate = buildDueDate(1);
+    } else if (item.repetition === studyStrategy.length - 1) {
       nextInterval = 6;
-      nextRepetition = 2;
-    } else {
+      dueDate = buildDueDate(6);
+      nextRepetition = item.repetition + 1;
+    } else if ((item.repetition + 1) % studyStrategy.length === 0) {
       nextInterval = Math.round(item.interval * item.eFactor);
       nextRepetition = item.repetition + 1;
+      dueDate = buildDueDate(nextInterval);
+    } else {
+      nextInterval = item.interval;
+      nextRepetition = item.repetition + 1;
+      dueDate = buildDueDate(1);
     }
   } else {
     nextInterval = 1;
     nextRepetition = 0;
+    dueDate = buildDueDate(1);
   }
 
   nextEFactor =
-    item.eFactor + (0.1 - (5 - score) * (0.08 + (5 - score) * 0.02));
+    item.eFactor +
+    (0.1 - (5 - score) * (0.08 + (5 - score) * 0.02)) / studyStrategy.length;
 
   if (nextEFactor < 1.3) nextEFactor = 1.3;
 
@@ -39,8 +49,8 @@ export const grade = (
   return {
     interval: nextInterval,
     repetition: nextRepetition,
-    eFactor: nextEFactor,
-    dueDate: buildDueDate(nextInterval),
+    eFactor: Math.round(nextEFactor * 100) / 100,
+    dueDate: dueDate,
     state: nextState,
   };
 };
