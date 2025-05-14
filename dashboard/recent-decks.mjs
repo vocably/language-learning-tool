@@ -103,7 +103,7 @@ try {
     console.log(
       `${deck.language}: ${Object.entries(plan)
         .map(([key, cards]) => `${key}: ${cards.length}`)
-        .join(', ')} - ${userEmail}`
+        .join(', ')} - ${deck.tags.length} tags - ${userEmail}`
     );
   }
 
