@@ -33,8 +33,6 @@ export const Grade: FC<Props> = ({
     prerenderedCards,
   });
 
-  console.log(card);
-
   const strategyStep = () => {
     switch (immediateStep.step) {
       case 'sb':
