@@ -51,7 +51,10 @@ export const craftTheStrategy = ({
     { step: 'sb', allowedFailures: 0 },
   ];
 
-  if (!isMultiChoiceEnabled) {
+  if (
+    !isMultiChoiceEnabled ||
+    (!card.data.translation && !card.data.definition)
+  ) {
     const { currentState } = spreadStrategy(card.data.state, swipeStrategy);
     return {
       strategy: swipeStrategy,

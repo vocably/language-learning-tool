@@ -5,13 +5,13 @@ import { StyleProp } from 'react-native';
 import { Text, useTheme } from 'react-native-paper';
 import { maskTheWord } from './maskTheWord';
 
-type CardDefinition = FC<{
+type Props = {
   card: Card;
   textStyle?: StyleProp<Text>;
   maskSource?: boolean;
-}>;
+};
 
-export const CardDefinition: CardDefinition = ({
+export const CardDefinition: FC<Props> = ({
   card,
   textStyle,
   maskSource = false,
