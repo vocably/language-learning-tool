@@ -31,14 +31,5 @@ describe('grade', () => {
     expect(item.repetition).toEqual(4);
     expect(item.interval).toEqual(6);
     expect(item.state.s).toEqual('mf');
-
-    item = grade(item, 5, strategy);
-    item = grade(item, 5, strategy);
-    item = grade(item, 5, strategy);
-    item = grade(item, 5, strategy);
-    item = grade(item, 5, strategy);
-    item = grade(item, 5, strategy);
-    item = grade(item, 5, strategy);
-    item = grade(item, 5, strategy);
   });
 });
