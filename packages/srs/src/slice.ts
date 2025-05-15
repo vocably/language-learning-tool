@@ -26,7 +26,12 @@ export const slice = (
   const now = new Date().getTime();
 
   if (planSection && plan[planSection]) {
-    return plan[planSection].filter(hasStudied(now)).slice(0, maxCards);
+    const candidates = plan[planSection].filter(hasStudied(now));
+    if (candidates.length > 0) {
+      return candidates.slice(0, maxCards);
+    }
+
+    return plan[planSection].slice(0, maxCards);
   }
 
   const result = plan.today;
@@ -47,9 +52,12 @@ export const slice = (
     return result;
   }
 
-  result.push(
-    ...plan.future.filter(hasStudied(now)).slice(0, maxCards - result.length)
-  );
+  let futureCandidates = plan.future.filter(hasStudied(now));
+  if (result.length === 0 && futureCandidates.length === 0) {
+    futureCandidates = plan.future;
+  }
+
+  result.push(...futureCandidates.slice(0, maxCards - result.length));
 
   return result;
 };
