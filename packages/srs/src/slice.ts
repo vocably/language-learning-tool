@@ -4,13 +4,19 @@ import { studyPlan } from './studyPlan';
 export const slice = (
   today: Date,
   maxCards: number,
-  list: CardItem[]
+  list: CardItem[],
+  planSection?: string
 ): CardItem[] => {
   if (list.length === 0) {
     return [];
   }
 
   const plan = studyPlan(today, list);
+
+  if (planSection && plan[planSection]) {
+    return plan[planSection].slice(0, maxCards);
+  }
+
   const result = plan.today;
 
   if (result.length >= maxCards) {

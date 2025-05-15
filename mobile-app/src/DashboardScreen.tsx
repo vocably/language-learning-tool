@@ -507,6 +507,21 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                         size={24}
                         color={theme.colors.onBackground}
                       />
+                      {section.section.id === 'future' && (
+                        <Button
+                          style={{ marginLeft: 'auto' }}
+                          onPress={() => {
+                            postHog.capture('studyForFuture', {
+                              items: section.section.all.length,
+                            });
+                            navigation.navigate('Study', {
+                              planSection: section.section.id,
+                            });
+                          }}
+                        >
+                          Study
+                        </Button>
+                      )}
                     </View>
                   </TouchableRipple>
                 </>

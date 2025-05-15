@@ -1,4 +1,4 @@
-import { NavigationProp } from '@react-navigation/native';
+import { NavigationProp, Route } from '@react-navigation/native';
 import { CardItem, GoogleLanguage, isGoogleLanguage } from '@vocably/model';
 import { grade, slice, SrsScore } from '@vocably/srs';
 import { setBadgeCount } from 'aws-amplify/push-notifications';
@@ -35,6 +35,7 @@ import { useTranslationLanguage } from './useTranslationLanguage';
 export const PADDING_VERTICAL = 40;
 
 type Props = FC<{
+  route: Route<string, any>;
   navigation: NavigationProp<any>;
 }>;
 
@@ -44,7 +45,7 @@ const isOkayForMnemonic = (cardItem: CardItem) => {
   );
 };
 
-export const StudyScreen: Props = ({ navigation }) => {
+export const StudyScreen: Props = ({ route, navigation }) => {
   const theme = useTheme();
 
   const [autoPlayResult, setAutoPlay] = useAsync(
@@ -122,10 +123,13 @@ export const StudyScreen: Props = ({ navigation }) => {
           maximumCardsPerSessionResult.value
         );
       } else {
+        const { planSection } =
+          route.params ?? ({} as { planSection?: string });
         sessionCards = slice(
           new Date(),
           maximumCardsPerSessionResult.value,
-          filteredCards
+          filteredCards,
+          planSection
         );
       }
 
