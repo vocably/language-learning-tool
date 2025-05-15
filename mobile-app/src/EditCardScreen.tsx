@@ -1,9 +1,10 @@
 import { NavigationProp, Route } from '@react-navigation/native';
 import { CardItem, TagItem } from '@vocably/model';
+import { createSrsItem } from '@vocably/srs';
+import { isNew } from '@vocably/srs/dist/esm/isNew';
 import React, { FC, useCallback, useEffect, useState } from 'react';
 import { Alert, View } from 'react-native';
 import { Appbar, Button, Chip, useTheme } from 'react-native-paper';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { CardForm } from './CardForm';
 import { useLanguageDeck } from './languageDeck/useLanguageDeck';
 import { Loader } from './loaders/Loader';
@@ -32,9 +33,9 @@ export const EditCardScreen: FC<Props> = ({ route, navigation }) => {
   const [isUpdating, setIsUpdating] = useState(false);
   const [savingTags, setSavingTags] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isResettingStudyProgress, setResettingStudyProgress] = useState(false);
+  const [hasReset, setHasReset] = useState(false);
   const theme = useTheme();
-
-  const insets = useSafeAreaInsets();
 
   useEffect(() => {
     setCardData({ ...card.data });
@@ -97,6 +98,40 @@ export const EditCardScreen: FC<Props> = ({ route, navigation }) => {
       </View>
     );
   }
+
+  const resetStudyProgress = () => {
+    Alert.alert(
+      'Reset study progress?',
+      'This operation can not be undone.',
+      [
+        {
+          text: 'Reset',
+          style: 'destructive',
+          onPress: async () => {
+            setResettingStudyProgress(true);
+
+            const updateResult = await deck.update(card.id, {
+              lastStudied: undefined,
+              state: undefined,
+              ...createSrsItem(),
+            });
+
+            setResettingStudyProgress(false);
+
+            if (updateResult.success === false) {
+              setIsDeleting(false);
+              Alert.alert('Unable to reset study progress. Please try again.');
+              return;
+            }
+
+            setHasReset(true);
+          },
+        },
+        { text: 'Cancel', onPress: () => {} },
+      ],
+      { cancelable: true }
+    );
+  };
 
   return (
     <>
@@ -172,14 +207,25 @@ export const EditCardScreen: FC<Props> = ({ route, navigation }) => {
             }}
           />
 
-          <Button
-            icon={'delete'}
-            textColor={theme.colors.error}
-            onPress={onDelete}
-            style={{ alignSelf: 'flex-start', marginTop: 24 }}
-          >
-            Delete this card
-          </Button>
+          <View style={{ flexDirection: 'row', marginTop: 24 }}>
+            <Button
+              icon={'delete'}
+              textColor={theme.colors.error}
+              onPress={onDelete}
+            >
+              Delete
+            </Button>
+            {
+              <Button
+                style={{ marginLeft: 'auto' }}
+                disabled={isNew(card) || hasReset || isResettingStudyProgress}
+                loading={isResettingStudyProgress}
+                onPress={resetStudyProgress}
+              >
+                Reset study progress
+              </Button>
+            }
+          </View>
         </View>
       </CustomScrollView>
     </>
