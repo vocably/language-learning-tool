@@ -29,6 +29,12 @@
           >
         </button>
         <mat-menu #menu="matMenu">
+          <ng-container *ngIf="isPaid !== null">
+            <a mat-menu-item [routerLink]="['/plan/upgrade']"
+              >Free plan <span class="upgrade-shield ml-0_5">Upgrade</span></a
+            >
+            <mat-divider></mat-divider>
+          </ng-container>
           <a mat-menu-item [routerLink]="['/settings']">Settings</a>
           <a mat-menu-item [routerLink]="['/import']">Import</a>
           <a mat-menu-item [routerLink]="['/feedback']">Feedback</a>

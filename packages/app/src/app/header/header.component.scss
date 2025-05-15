@@ -16,3 +16,17 @@
 a[mat-menu-item] {
   color: var(--emphasize-color);
 }
+
+.upgrade-button {
+  cursor: pointer;
+  margin: 0;
+  padding: 0.2rem 3rem;
+}
+
+.upgrade-shield {
+  background-color: var(--primary-color);
+  color: var(--button-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.4rem;
+  font-size: 90%;
+}

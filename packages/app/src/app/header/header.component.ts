@@ -14,15 +14,18 @@ export class HeaderComponent implements OnInit, OnDestroy {
   @Input() dense = false;
 
   isLoggedIn: boolean | null = null;
+  isPaid: boolean | null = null;
 
   constructor(public auth: AuthService) {}
 
-  ngOnInit(): void {
+  async ngOnInit() {
     this.auth.isLoggedIn$
       .pipe(takeUntil(this.destroy$))
       .subscribe((isLoggedIn) => {
         this.isLoggedIn = isLoggedIn;
       });
+
+    this.isPaid = await this.auth.isPaid();
   }
 
   ngOnDestroy() {
