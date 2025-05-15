@@ -1,6 +1,16 @@
 import { CardItem } from '@vocably/model';
 import { studyPlan } from './studyPlan';
 
+const hasStudied =
+  (now: number) =>
+  (item: CardItem): boolean => {
+    if (!item.data.lastStudied) {
+      return true;
+    }
+
+    return now - item.data.lastStudied > 1_800_000; // 1_800_000 is 30 minutes in milliseconds
+  };
+
 export const slice = (
   today: Date,
   maxCards: number,
@@ -13,17 +23,10 @@ export const slice = (
 
   const plan = studyPlan(today, list);
 
-  if (planSection && plan[planSection]) {
-    const now = new Date().getTime();
-    return plan[planSection]
-      .filter((item: CardItem) => {
-        if (!item.data.lastStudied) {
-          return true;
-        }
+  const now = new Date().getTime();
 
-        return now - item.data.lastStudied > 1_800_000; // 1_800_000 is 30 minutes in milliseconds
-      })
-      .slice(0, maxCards);
+  if (planSection && plan[planSection]) {
+    return plan[planSection].filter(hasStudied(now)).slice(0, maxCards);
   }
 
   const result = plan.today;
@@ -44,7 +47,9 @@ export const slice = (
     return result;
   }
 
-  result.push(...plan.future.slice(0, maxCards - result.length));
+  result.push(
+    ...plan.future.filter(hasStudied(now)).slice(0, maxCards - result.length)
+  );
 
   return result;
 };
