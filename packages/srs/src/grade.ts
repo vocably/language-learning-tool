@@ -45,7 +45,7 @@ export const grade = (
       isLastStrategyResponse(item, studyStrategy) ||
       (item.repetition + 1) % studyStrategy.length === 0
     ) {
-      nextInterval = Math.round(item.interval * item.eFactor);
+      nextInterval = Math.min(365, Math.round(item.interval * item.eFactor));
       nextRepetition = item.repetition + 1;
       dueDate = buildDueDate(nextInterval);
     } else {
