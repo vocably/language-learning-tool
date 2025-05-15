@@ -110,11 +110,12 @@ export const EditCardScreen: FC<Props> = ({ route, navigation }) => {
           onPress: async () => {
             setResettingStudyProgress(true);
 
-            const updateResult = await deck.update(card.id, {
+            const srsItemValues = {
               lastStudied: undefined,
               state: undefined,
               ...createSrsItem(),
-            });
+            };
+            const updateResult = await deck.update(card.id, srsItemValues);
 
             setResettingStudyProgress(false);
 
@@ -124,6 +125,10 @@ export const EditCardScreen: FC<Props> = ({ route, navigation }) => {
               return;
             }
 
+            setCardData((cardData) => ({
+              ...cardData,
+              ...srsItemValues,
+            }));
             setHasReset(true);
           },
         },
