@@ -49,6 +49,7 @@ export type SrsItem = {
   repetition: number;
   eFactor: number;
   dueDate: number;
+  lastStudied?: number;
   state?: SrsItemState;
 };
 

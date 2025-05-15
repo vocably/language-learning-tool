@@ -82,5 +82,6 @@ export const grade = (
     eFactor: Math.round(nextEFactor * 100) / 100,
     dueDate: dueDate,
     state: nextState,
+    lastStudied: new Date().getTime(),
   };
 };

@@ -14,7 +14,16 @@ export const slice = (
   const plan = studyPlan(today, list);
 
   if (planSection && plan[planSection]) {
-    return plan[planSection].slice(0, maxCards);
+    const now = new Date().getTime();
+    return plan[planSection]
+      .filter((item: CardItem) => {
+        if (!item.data.lastStudied) {
+          return true;
+        }
+
+        return now - item.data.lastStudied > 1_800_000; // 1_800_000 is 30 minutes in milliseconds
+      })
+      .slice(0, maxCards);
   }
 
   const result = plan.today;
