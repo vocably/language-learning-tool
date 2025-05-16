@@ -1,15 +1,17 @@
+import { SHOW_SRS_STATS } from '@env';
 import { NavigationProp, Route } from '@react-navigation/native';
 import { CardItem, TagItem } from '@vocably/model';
 import { createSrsItem } from '@vocably/srs';
 import { isNew } from '@vocably/srs/dist/esm/isNew';
 import React, { FC, useCallback, useEffect, useState } from 'react';
 import { Alert, View } from 'react-native';
-import { Appbar, Button, Chip, useTheme } from 'react-native-paper';
+import { Appbar, Button, Chip, Text, useTheme } from 'react-native-paper';
 import { CardForm } from './CardForm';
 import { useLanguageDeck } from './languageDeck/useLanguageDeck';
 import { Loader } from './loaders/Loader';
 import { TagsSelector } from './TagsSelector';
 import { CustomScrollView } from './ui/CustomScrollView';
+import { CustomSurface } from './ui/CustomSurface';
 import { ScreenTitle } from './ui/ScreenTitle';
 
 export type EditCardParams = {
@@ -231,6 +233,20 @@ export const EditCardScreen: FC<Props> = ({ route, navigation }) => {
               </Button>
             }
           </View>
+          {SHOW_SRS_STATS === 'true' && (
+            <CustomSurface
+              style={{
+                marginTop: 8,
+                backgroundColor: theme.colors.elevation.level2,
+                padding: 16,
+              }}
+              elevation={0}
+            >
+              <Text>Raw Card Data (Visible in Dev Mode only)</Text>
+
+              <Text>{JSON.stringify(card.data, null, 4)}</Text>
+            </CustomSurface>
+          )}
         </View>
       </CustomScrollView>
     </>
