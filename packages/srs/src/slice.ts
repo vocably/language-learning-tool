@@ -50,8 +50,14 @@ export const slice = (
 
   result.push(...plan.notStarted.slice(0, maxCards - result.length));
 
-  if (result.length >= maxCards) {
+  if (result.length > 0) {
     return result;
+  }
+
+  const tomorrowCandidates = plan.tomorrow.filter(hasStudied(now));
+
+  if (tomorrowCandidates.length > 0) {
+    return tomorrowCandidates.slice(0, maxCards);
   }
 
   const futureCards = plan.tomorrow.concat(plan.future);
