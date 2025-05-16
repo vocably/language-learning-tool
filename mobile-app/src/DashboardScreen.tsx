@@ -1,12 +1,13 @@
 import { useNetInfo } from '@react-native-community/netinfo';
 import { NavigationProp } from '@react-navigation/native';
 import { byDate, CardItem, TagItem } from '@vocably/model';
-import { studyPlan } from '@vocably/srs';
+import { studyPlan, STUDY_DELAY_MS } from '@vocably/srs';
 import { usePostHog } from 'posthog-react-native';
 import React, {
   FC,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useRef,
   useState,
@@ -35,6 +36,7 @@ import { useSelectedDeck } from './languageDeck/useSelectedDeck';
 import { LanguagesContext } from './languages/LanguagesContainer';
 import { LanguageSelector } from './LanguageSelector';
 import { Loader } from './loaders/Loader';
+import { plural } from './plural';
 import { getRandomizerEnabled } from './Settings/StudySettingsScreen';
 import { setSourceLanguage } from './SourceLanguageButton';
 import { swipeListButtonPressOpacity } from './stupidConstants';
@@ -237,6 +239,18 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
   }, [plan, collapsedSections]);
 
   const searchInputRef = useRef<DashboardSearchInputRef>(null);
+
+  const [nowTs, setNowTs] = useState(new Date().getTime());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setNowTs(new Date().getTime());
+    }, 60_000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   if (
     (deck.cards.length === 0 && status === 'loading') ||
@@ -576,6 +590,22 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                       <Text style={{ color: theme.colors.secondary }}>
                         {daysString(todayTS, item.data.dueDate)}
                       </Text>
+
+                      {nowTs - (item.data.lastStudied ?? 0) <
+                        STUDY_DELAY_MS && (
+                        <Text>
+                          - May be studied in{' '}
+                          {plural(
+                            Math.round(
+                              (STUDY_DELAY_MS -
+                                (nowTs - (item.data.lastStudied ?? 0))) /
+                                60_000
+                            ),
+                            'minute'
+                          )}
+                          .
+                        </Text>
+                      )}
                     </View>
                   )}
               </View>

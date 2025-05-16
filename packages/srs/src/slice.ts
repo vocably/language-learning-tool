@@ -1,6 +1,8 @@
 import { CardItem } from '@vocably/model';
 import { studyPlan } from './studyPlan';
 
+export const STUDY_DELAY_MS = 1_800_000; // 1_800_000 is 30 minutes in milliseconds
+
 const hasStudied =
   (now: number) =>
   (item: CardItem): boolean => {
@@ -8,7 +10,7 @@ const hasStudied =
       return true;
     }
 
-    return now - item.data.lastStudied > 1_800_000; // 1_800_000 is 30 minutes in milliseconds
+    return now - item.data.lastStudied > STUDY_DELAY_MS;
   };
 
 export const slice = (
