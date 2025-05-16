@@ -210,6 +210,13 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
         id: 'notStarted',
       },
       {
+        title: 'Tomorrow',
+        data: collapsedSections.includes('tomorrow') ? [] : plan.tomorrow,
+        all: plan.tomorrow,
+        isFirst: false,
+        id: 'tomorrow',
+      },
+      {
         title: 'Planned',
         data: collapsedSections.includes('future') ? [] : plan.future,
         all: plan.future,
@@ -507,21 +514,23 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                         size={24}
                         color={theme.colors.onBackground}
                       />
-                      {section.section.id === 'future' && (
-                        <Button
-                          style={{ marginLeft: 'auto' }}
-                          onPress={() => {
-                            postHog.capture('studyForFuture', {
-                              items: section.section.all.length,
-                            });
-                            navigation.navigate('Study', {
-                              planSection: section.section.id,
-                            });
-                          }}
-                        >
-                          Study
-                        </Button>
-                      )}
+                      {section.section.id === 'tomorrow' &&
+                        plan.expired.length > 0 &&
+                        plan.notStarted.length > 0 && (
+                          <Button
+                            style={{ marginLeft: 'auto' }}
+                            onPress={() => {
+                              postHog.capture('studyForFuture', {
+                                items: section.section.all.length,
+                              });
+                              navigation.navigate('Study', {
+                                planSection: section.section.id,
+                              });
+                            }}
+                          >
+                            Study
+                          </Button>
+                        )}
                     </View>
                   </TouchableRipple>
                 </>

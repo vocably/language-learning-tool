@@ -52,9 +52,11 @@ export const slice = (
     return result;
   }
 
-  let futureCandidates = plan.future.filter(hasStudied(now));
+  const futureCards = plan.tomorrow.concat(plan.future);
+
+  let futureCandidates = futureCards.filter(hasStudied(now));
   if (result.length === 0 && futureCandidates.length === 0) {
-    futureCandidates = plan.future;
+    futureCandidates = futureCards;
   }
 
   result.push(...futureCandidates.slice(0, maxCards - result.length));

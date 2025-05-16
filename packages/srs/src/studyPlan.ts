@@ -5,6 +5,7 @@ type StudyPlan = {
   today: CardItem[];
   expired: CardItem[];
   notStarted: CardItem[];
+  tomorrow: CardItem[];
   future: CardItem[];
 };
 
@@ -15,10 +16,17 @@ export const studyPlan = (today: Date, list: CardItem[]) => {
     today.getUTCDate()
   );
 
+  const tomorrowTs = Date.UTC(
+    today.getUTCFullYear(),
+    today.getUTCMonth(),
+    today.getUTCDate() + 1
+  );
+
   const result: StudyPlan = {
     today: [],
     expired: [],
     notStarted: [],
+    tomorrow: [],
     future: [],
   };
 
@@ -26,7 +34,11 @@ export const studyPlan = (today: Date, list: CardItem[]) => {
     if (item.data.dueDate === todayTS) {
       result.today.push(item);
     } else if (item.data.dueDate > todayTS) {
-      result.future.push(item);
+      if (item.data.dueDate === tomorrowTs) {
+        result.tomorrow.push(item);
+      } else {
+        result.future.push(item);
+      }
     } else if (item.data.dueDate < todayTS && isNew(item)) {
       result.notStarted.push(item);
     } else {
