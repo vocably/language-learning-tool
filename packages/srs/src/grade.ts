@@ -24,34 +24,47 @@ const isLastStrategyResponse = (
 export const grade = (
   item: SrsItem,
   score: SrsScore,
-  studyStrategy: StudyStrategy
+  studyStrategy: StudyStrategy,
+  now = new Date()
 ): SrsItem => {
   let nextInterval: number;
   let nextRepetition: number;
   let nextEFactor: number;
   let dueDate: number;
 
+  const todayTs = Date.UTC(
+    now.getUTCFullYear(),
+    now.getUTCMonth(),
+    now.getUTCDate()
+  );
+  const daysDifference = Math.round(
+    Math.max(0, item.dueDate - todayTs) / 86_400_000
+  );
+
   if (score === 5) {
     if (item.repetition < studyStrategy.length - 1) {
       nextInterval = 1;
       nextRepetition = item.repetition + 1;
-      dueDate = buildDueDate(1);
+      dueDate = Math.max(item.dueDate, buildDueDate(1));
     } else if (item.repetition === studyStrategy.length - 1) {
-      nextInterval = 6;
-      dueDate = buildDueDate(6);
+      nextInterval = Math.max(2, studyStrategy.length - daysDifference);
+      dueDate = Math.max(item.dueDate, buildDueDate(nextInterval));
       nextRepetition = item.repetition + 1;
     } else if (
       item.repetition + 1 >= studyStrategy.length * 2 ||
       isLastStrategyResponse(item, studyStrategy) ||
       (item.repetition + 1) % studyStrategy.length === 0
     ) {
-      nextInterval = Math.min(365, Math.round(item.interval * item.eFactor));
+      nextInterval = Math.max(
+        item.interval,
+        Math.min(365, Math.round(item.interval * item.eFactor)) - daysDifference
+      );
       nextRepetition = item.repetition + 1;
-      dueDate = buildDueDate(nextInterval);
+      dueDate = Math.max(item.dueDate, buildDueDate(nextInterval));
     } else {
       nextInterval = item.interval;
       nextRepetition = item.repetition + 1;
-      dueDate = buildDueDate(1);
+      dueDate = Math.max(item.dueDate, buildDueDate(1));
     }
 
     nextEFactor =
@@ -60,7 +73,7 @@ export const grade = (
   } else if (score >= 3) {
     nextInterval = item.interval;
     nextRepetition = item.repetition;
-    dueDate = buildDueDate(1);
+    dueDate = Math.max(item.dueDate, buildDueDate(1));
 
     nextEFactor =
       item.eFactor + (0.1 - (5 - score) * (0.08 + (5 - score) * 0.02));
