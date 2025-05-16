@@ -184,7 +184,11 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
   }, [filteredCards, searchText, isSearching]);
 
   const plan = useMemo(() => studyPlan(new Date(), cards), [cards]);
-  const [collapsedSections, setCollapsedSections] = useState<string[]>([]);
+  const [collapsedSections, setCollapsedSections] = useState<string[]>([
+    'expired',
+    'notStarted',
+    'future',
+  ]);
 
   const sections: Section[] = useMemo(() => {
     const result = [
