@@ -49,6 +49,7 @@ type Props = {
   streakHasBeenShown: boolean;
   streakDays: number;
   onShow: () => void;
+  canStudyAgain: boolean;
 };
 
 export const Completed: FC<Props> = ({
@@ -59,6 +60,7 @@ export const Completed: FC<Props> = ({
   streakHasBeenShown,
   streakDays,
   onShow,
+  canStudyAgain,
 }) => {
   const theme = useTheme();
   const [motivationalQuote, setMotivationalQuote] = useState('');
@@ -106,9 +108,11 @@ export const Completed: FC<Props> = ({
         <Button onPress={onDone} mode="contained" style={{ width: 230 }}>
           Finish
         </Button>
-        <Button onPress={onStudyAgain} style={{ width: 230 }}>
-          Take one more round
-        </Button>
+        {canStudyAgain && (
+          <Button onPress={onStudyAgain} style={{ width: 230 }}>
+            Take one more round
+          </Button>
+        )}
         {cards.length > 30 && (
           <RequestFeedback
             numberOfStudySessions={numberOfStudySessions}

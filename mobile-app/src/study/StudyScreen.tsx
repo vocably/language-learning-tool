@@ -110,6 +110,8 @@ export const StudyScreen: Props = ({ route, navigation }) => {
     }
   }, [studyStatsResult.status]);
 
+  const { planSection } = route.params ?? ({} as { planSection?: string });
+
   useEffect(() => {
     if (
       cardsStudied === 0 &&
@@ -123,8 +125,6 @@ export const StudyScreen: Props = ({ route, navigation }) => {
           maximumCardsPerSessionResult.value
         );
       } else {
-        const { planSection } =
-          route.params ?? ({} as { planSection?: string });
         sessionCards = slice(
           new Date(),
           maximumCardsPerSessionResult.value,
@@ -412,6 +412,7 @@ export const StudyScreen: Props = ({ route, navigation }) => {
               streakHasBeenShown={streakHasShownToday.value}
               streakDays={studyStatsResult.value.streak.days}
               onShow={() => setStreakHasShown()}
+              canStudyAgain={!planSection}
             ></Completed>
           )}
         </View>
