@@ -1,3 +1,4 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNetInfo } from '@react-native-community/netinfo';
 import { NavigationProp } from '@react-navigation/native';
 import { byDate, CardItem, TagItem } from '@vocably/model';
@@ -108,6 +109,13 @@ type Section = {
   id: string;
 };
 
+const STATS_VIEW_ENABLED_KEY = 'isStatsViewEnabled';
+export const getStatsViewEnabled = () =>
+  AsyncStorage.getItem(STATS_VIEW_ENABLED_KEY).then((res) => res === 'true');
+
+const storeStatsViewEnabled = (isEnabled: boolean) =>
+  AsyncStorage.setItem(STATS_VIEW_ENABLED_KEY, isEnabled ? 'true' : 'false');
+
 export const DashboardScreen: FC<Props> = ({ navigation }) => {
   const selectedDeck = useSelectedDeck({
     autoReload: true,
@@ -133,7 +141,10 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
   const presetState = useTranslationPreset();
   const languageName = useCurrentLanguageName();
   const [isRandomEnabledResult] = useAsync(getRandomizerEnabled);
-  const [isStatsViewEnabled, setIsStatsViewEnabled] = useState(false);
+  const [isStatsViewEnabledResult, setIsStatsViewEnabled] = useAsync(
+    getStatsViewEnabled,
+    storeStatsViewEnabled
+  );
 
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
@@ -258,7 +269,8 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
 
   if (
     (deck.cards.length === 0 && status === 'loading') ||
-    isRandomEnabledResult.status !== 'loaded'
+    isRandomEnabledResult.status !== 'loaded' ||
+    isStatsViewEnabledResult.status !== 'loaded'
   ) {
     return <Loader>Loading cards...</Loader>;
   }
@@ -309,9 +321,13 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                 {isRandomEnabledResult.value === false && (
                   <Appbar.Action
                     icon={
-                      isStatsViewEnabled ? 'chart-box' : 'chart-box-outline'
+                      isStatsViewEnabledResult.value
+                        ? 'chart-box'
+                        : 'chart-box-outline'
                     }
-                    onPress={() => setIsStatsViewEnabled(!isStatsViewEnabled)}
+                    onPress={() =>
+                      setIsStatsViewEnabled(!isStatsViewEnabledResult.value)
+                    }
                     size={24 * fontScale}
                     style={{ backgroundColor: 'transparent' }}
                   />
@@ -488,7 +504,8 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
             sections={sections}
             data={cards}
             useSectionList={
-              isRandomEnabledResult.value === false && isStatsViewEnabled
+              isRandomEnabledResult.value === false &&
+              isStatsViewEnabledResult.value
             }
             ItemSeparatorComponent={Separator}
             keyExtractor={keyExtractor}
