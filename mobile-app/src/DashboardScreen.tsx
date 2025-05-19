@@ -1,7 +1,7 @@
 import { useNetInfo } from '@react-native-community/netinfo';
 import { NavigationProp } from '@react-navigation/native';
 import { byDate, CardItem, TagItem } from '@vocably/model';
-import { studyPlan, STUDY_DELAY_MS } from '@vocably/srs';
+import { hasStudied, studyPlan, STUDY_DELAY_MS } from '@vocably/srs';
 import { usePostHog } from 'posthog-react-native';
 import React, {
   FC,
@@ -243,7 +243,8 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
 
   const searchInputRef = useRef<DashboardSearchInputRef>(null);
 
-  const [nowTs, setNowTs] = useState(new Date().getTime());
+  const now = new Date();
+  const [nowTs, setNowTs] = useState(now.getTime());
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -552,8 +553,13 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                         plan.notStarted.length > 0 && (
                           <Button
                             style={{ marginLeft: 'auto' }}
+                            disabled={
+                              section.section.all.filter(
+                                hasStudied(now.getTime())
+                              ).length === 0
+                            }
                             onPress={() => {
-                              postHog.capture('studyForFuture', {
+                              postHog.capture('studyForTomorrow', {
                                 items: section.section.all.length,
                               });
                               navigation.navigate('Study', {
@@ -561,7 +567,7 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                               });
                             }}
                           >
-                            Study
+                            I can't wait
                           </Button>
                         )}
                     </View>

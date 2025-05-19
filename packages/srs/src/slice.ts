@@ -3,7 +3,7 @@ import { studyPlan } from './studyPlan';
 
 export const STUDY_DELAY_MS = 1_800_000; // 1_800_000 is 30 minutes in milliseconds
 
-const hasStudied =
+export const hasStudied =
   (now: number) =>
   (item: CardItem): boolean => {
     if (!item.data.lastStudied) {
