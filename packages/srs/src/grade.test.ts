@@ -184,7 +184,7 @@ describe('grade', () => {
 
     expect(item.repetition).toEqual(4);
     expect(item.interval).toEqual(3);
-    expect(item.eFactor).toEqual(2.53);
+    expect(item.eFactor).toEqual(2.58);
     expect(item.dueDate).toEqual(threeDaysTs);
   });
 

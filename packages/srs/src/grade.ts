@@ -1,9 +1,16 @@
-import { SrsItem, StudyStrategy } from '@vocably/model';
+import { SrsItem, StrategyStep, StudyStrategy } from '@vocably/model';
 import { last } from 'lodash-es';
 import { buildDueDate } from './dueDate';
 import { pickNextItemState } from './pickNextItemState';
 
 export type SrsScore = 0 | 1 | 2 | 3 | 4 | 5;
+
+const stepWeights: Record<StrategyStep['step'], number> = {
+  sf: 0.8,
+  sb: 0.8,
+  mf: 0.25,
+  mb: 0.25,
+};
 
 const isLastStrategyResponse = (
   item: SrsItem,
@@ -41,6 +48,10 @@ export const grade = (
     Math.max(0, item.dueDate - todayTs) / 86_400_000
   );
 
+  const currentStrategyStep: StrategyStep['step'] = item.state
+    ? item.state.s
+    : studyStrategy[0].step;
+
   if (score === 5) {
     if (item.repetition < studyStrategy.length - 1) {
       nextInterval = 1;
@@ -69,7 +80,8 @@ export const grade = (
 
     nextEFactor =
       item.eFactor +
-      (0.1 - (5 - score) * (0.08 + (5 - score) * 0.02)) / studyStrategy.length;
+      (0.1 - (5 - score) * (0.08 + (5 - score) * 0.02)) *
+        (stepWeights[currentStrategyStep] ?? 1);
   } else if (score >= 3) {
     nextInterval = item.interval;
     nextRepetition = item.repetition;
