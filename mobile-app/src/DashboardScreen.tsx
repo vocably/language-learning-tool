@@ -133,6 +133,7 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
   const presetState = useTranslationPreset();
   const languageName = useCurrentLanguageName();
   const [isRandomEnabledResult] = useAsync(getRandomizerEnabled);
+  const [isStatsViewEnabled, setIsStatsViewEnabled] = useState(false);
 
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
@@ -187,8 +188,10 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
 
   const plan = useMemo(() => studyPlan(new Date(), cards), [cards]);
   const [collapsedSections, setCollapsedSections] = useState<string[]>([
+    'today',
     'expired',
     'notStarted',
+    'tomorrow',
     'future',
   ]);
 
@@ -302,6 +305,16 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
             {(!canBeSearched || !isSearching) && (
               <>
                 <LanguageSelector style={{ marginLeft: 12 }} />
+                {isRandomEnabledResult.value === false && (
+                  <Appbar.Action
+                    icon={
+                      isStatsViewEnabled ? 'chart-box' : 'chart-box-outline'
+                    }
+                    onPress={() => setIsStatsViewEnabled(!isStatsViewEnabled)}
+                    size={24 * fontScale}
+                    style={{ backgroundColor: 'transparent' }}
+                  />
+                )}
                 <View style={{ flexGrow: 1 }}></View>
                 <Appbar.Action
                   icon={'pencil-outline'}
@@ -473,7 +486,9 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
             }}
             sections={sections}
             data={cards}
-            useSectionList={isRandomEnabledResult.value === false}
+            useSectionList={
+              isRandomEnabledResult.value === false && isStatsViewEnabled
+            }
             ItemSeparatorComponent={Separator}
             keyExtractor={keyExtractor}
             stickySectionHeadersEnabled={true}
