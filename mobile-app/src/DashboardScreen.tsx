@@ -565,28 +565,26 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                         size={24}
                         color={theme.colors.onBackground}
                       />
-                      {section.section.id === 'tomorrow' &&
-                        plan.expired.length > 0 &&
-                        plan.notStarted.length > 0 && (
-                          <Button
-                            style={{ marginLeft: 'auto' }}
-                            disabled={
-                              section.section.all.filter(
-                                hasStudied(now.getTime())
-                              ).length === 0
-                            }
-                            onPress={() => {
-                              postHog.capture('studyForTomorrow', {
-                                items: section.section.all.length,
-                              });
-                              navigation.navigate('Study', {
-                                planSection: section.section.id,
-                              });
-                            }}
-                          >
-                            I can't wait
-                          </Button>
-                        )}
+                      {section.section.id === 'tomorrow' && (
+                        <Button
+                          style={{ marginLeft: 'auto' }}
+                          disabled={
+                            section.section.all.filter(
+                              hasStudied(now.getTime())
+                            ).length === 0
+                          }
+                          onPress={() => {
+                            postHog.capture('studyForTomorrow', {
+                              items: section.section.all.length,
+                            });
+                            navigation.navigate('Study', {
+                              planSection: section.section.id,
+                            });
+                          }}
+                        >
+                          I can't wait
+                        </Button>
+                      )}
                     </View>
                   </TouchableRipple>
                 </>
