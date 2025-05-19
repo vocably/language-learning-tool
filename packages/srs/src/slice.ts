@@ -30,6 +30,9 @@ export const slice = (
   if (planSection && plan[planSection]) {
     const candidates = plan[planSection].filter(hasStudied(now));
     if (candidates.length > 0) {
+      if (planSection === 'tomorrow') {
+        return candidates;
+      }
       return candidates.slice(0, maxCards);
     }
 
