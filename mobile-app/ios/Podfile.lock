@@ -1,4 +1,7 @@
 PODS:
+  - Adapty (3.1.0)
+  - AdaptyUI (3.1.0):
+    - Adapty (= 3.1.0)
   - AmplifyRTNCore (1.1.7):
     - React-Core
   - AmplifyRTNPushNotification (1.2.32):
@@ -896,6 +899,15 @@ PODS:
   - React-Mapbuffer (0.73.7):
     - glog
     - React-debug
+  - react-native-adapty-sdk (3.1.0):
+    - Adapty (= 3.1.0)
+    - AdaptyUI (= 3.1.0)
+    - React
+  - react-native-adapty-ui (3.1.0):
+    - Adapty (>= 3.1.0)
+    - AdaptyUI (= 3.1.0)
+    - React-Core
+    - react-native-adapty-sdk (>= 3.1.0)
   - react-native-get-random-values (1.11.0):
     - React-Core
   - react-native-netinfo (11.3.1):
@@ -1156,6 +1168,8 @@ DEPENDENCIES:
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector-modern`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - React-Mapbuffer (from `../node_modules/react-native/ReactCommon`)
+  - react-native-adapty-sdk (from `../node_modules/react-native-adapty`)
+  - "react-native-adapty-ui (from `../node_modules/@adapty/react-native-ui`)"
   - react-native-get-random-values (from `../node_modules/react-native-get-random-values`)
   - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
@@ -1198,6 +1212,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Adapty
+    - AdaptyUI
     - AmplifyUtilsNotifications
     - fmt
     - libevent
@@ -1268,6 +1284,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/logger"
   React-Mapbuffer:
     :path: "../node_modules/react-native/ReactCommon"
+  react-native-adapty-sdk:
+    :path: "../node_modules/react-native-adapty"
+  react-native-adapty-ui:
+    :path: "../node_modules/@adapty/react-native-ui"
   react-native-get-random-values:
     :path: "../node_modules/react-native-get-random-values"
   react-native-netinfo:
@@ -1348,6 +1368,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  Adapty: c2245830c811b0156b12b617956904ed06966638
+  AdaptyUI: 7ac79ee12f71ca92370f1a8ad3d9dd1748ac6129
   AmplifyRTNCore: 5c39677ce6ba15609b2f44a80d06ef237a7cdccd
   AmplifyRTNPushNotification: 4bc891c1161129fbdfaf9e2883c1848fdfbcb300
   AmplifyRTNWebBrowser: 56813d9858f5d196d096a598aa9aa8651c7863fd
@@ -1382,6 +1404,8 @@ SPEC CHECKSUMS:
   React-jsinspector: f356e49aa086380d3a4892708ca173ad31ac69c1
   React-logger: 7b19bdfb254772a0332d6cd4d66eceb0678b6730
   React-Mapbuffer: 6f392912435adb8fbf4c3eee0e79a0a0b4e4b717
+  react-native-adapty-sdk: 7bf88d070fb7b6a2d240894b7e6dd2155d9a637a
+  react-native-adapty-ui: 51d3797d65e8799a94969a8808d889bbc4d0cc70
   react-native-get-random-values: 21325b2244dfa6b58878f51f9aa42821e7ba3d06
   react-native-netinfo: bdb108d340cdb41875c9ced535977cac6d2ff321
   react-native-safe-area-context: dcab599c527c2d7de2d76507a523d20a0b83823d

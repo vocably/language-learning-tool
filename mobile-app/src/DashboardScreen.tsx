@@ -206,6 +206,18 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
     'future',
   ]);
 
+  // useEffect(() => {
+  //   adapty.getPaywall('onboarding-is-over').then(async (paywall) => {
+  //     const view = await createPaywallView(paywall);
+  //     view.registerEventHandlers({
+  //       onCloseButtonPress: () => {
+  //         view.dismiss();
+  //       },
+  //     });
+  //     await view.present();
+  //   });
+  // }, []);
+
   const sections: Section[] = useMemo(() => {
     const result = [
       {
