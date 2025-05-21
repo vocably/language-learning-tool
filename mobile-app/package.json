@@ -22,7 +22,6 @@
     "mobile-app": "npm start"
   },
   "dependencies": {
-    "@adapty/react-native-ui": "3.1.0",
     "@aws-amplify/react-native": "^1.1.7",
     "@aws-amplify/rtn-push-notification": "^1.2.32",
     "@aws-amplify/rtn-web-browser": "^1.1.1",
@@ -42,7 +41,6 @@
     "posthog-react-native": "^3.3.6",
     "react": "18.2.0",
     "react-native": "0.73.7",
-    "react-native-adapty": "3.1.0",
     "react-native-device-info": "^13.1.0",
     "react-native-gesture-handler": "2.16.0",
     "react-native-get-random-values": "1.11.0",

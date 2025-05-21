@@ -3,7 +3,6 @@ import { getCurrentUser } from 'aws-amplify/auth';
 import { Hub } from 'aws-amplify/utils';
 import { usePostHog } from 'posthog-react-native';
 import React, { FC, ReactNode, useEffect, useState } from 'react';
-import { adapty } from 'react-native-adapty';
 import { Sentry } from '../BetterSentry';
 import { facility } from '../facility';
 import { notificationsIdentifyUser } from '../notificationsIdentifyUser';
@@ -34,11 +33,6 @@ export const AuthContainer: FC<{
       }
 
       posthog.identify(attributes['sub'], {
-        email: attributes['email'],
-      });
-
-      await adapty.identify(attributes['email']);
-      await adapty.updateProfile({
         email: attributes['email'],
       });
     });
