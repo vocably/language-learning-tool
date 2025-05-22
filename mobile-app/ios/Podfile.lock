@@ -25,6 +25,8 @@ PODS:
     - hermes-engine/Pre-built (= 0.73.7)
   - hermes-engine/Pre-built (0.73.7)
   - libevent (2.1.12)
+  - PurchasesHybridCommon (13.32.0):
+    - RevenueCat (= 5.24.0)
   - RCT-Folly (2022.05.16.00):
     - boost
     - DoubleConversion
@@ -1071,6 +1073,7 @@ PODS:
     - React-jsi (= 0.73.7)
     - React-logger (= 0.73.7)
     - React-perflogger (= 0.73.7)
+  - RevenueCat (5.24.0)
   - RNCAsyncStorage (1.21.0):
     - React-Core
   - RNCMaskedView (0.3.1):
@@ -1086,6 +1089,9 @@ PODS:
     - RCT-Folly (= 2022.05.16.00)
     - React-Core
   - RNLocalize (3.4.1):
+    - React-Core
+  - RNPurchases (8.10.1):
+    - PurchasesHybridCommon (= 13.32.0)
     - React-Core
   - RNReactNativeSharedGroupPreferences (1.1.24):
     - React
@@ -1187,6 +1193,7 @@ DEPENDENCIES:
   - "RNFlashList (from `../node_modules/@shopify/flash-list`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNLocalize (from `../node_modules/react-native-localize`)
+  - RNPurchases (from `../node_modules/react-native-purchases`)
   - RNReactNativeSharedGroupPreferences (from `../node_modules/react-native-shared-group-preferences`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
@@ -1201,6 +1208,8 @@ SPEC REPOS:
     - AmplifyUtilsNotifications
     - fmt
     - libevent
+    - PurchasesHybridCommon
+    - RevenueCat
     - Sentry
     - SocketRocket
 
@@ -1330,6 +1339,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-gesture-handler"
   RNLocalize:
     :path: "../node_modules/react-native-localize"
+  RNPurchases:
+    :path: "../node_modules/react-native-purchases"
   RNReactNativeSharedGroupPreferences:
     :path: "../node_modules/react-native-shared-group-preferences"
   RNReanimated:
@@ -1361,6 +1372,7 @@ SPEC CHECKSUMS:
   glog: c5d68082e772fa1c511173d6b30a9de2c05a69a2
   hermes-engine: 39589e9c297d024e90fe68f6830ff86c4e01498a
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
+  PurchasesHybridCommon: 662aa1f4769ff4ef594e35adf1a5d0ad7b3d08b7
   RCT-Folly: 7169b2b1c44399c76a47b5deaaba715eeeb476c0
   RCTRequired: 77f73950d15b8c1a2b48ba5b79020c3003d1c9b5
   RCTTypeSafety: ede1e2576424d89471ef553b2aed09fbbcc038e3
@@ -1406,6 +1418,7 @@ SPEC CHECKSUMS:
   React-runtimescheduler: a884a55560e2a90caa1cbe0b9eaa24a5add4fa2c
   React-utils: d07d009101c7dabff68b710da5c4a47b7a850d98
   ReactCommon: 8cae78d3c3eceff20ee4bbca8bb73b675a45fd5d
+  RevenueCat: 2d3639d30b8a71cbfe3d99cef8243c602793e0ec
   RNCAsyncStorage: 618d03a5f52fbccb3d7010076bc54712844c18ef
   RNCMaskedView: 090213d32d8b3bb83a4dcb7d12c18f0152591906
   RNDateTimePicker: a793ed8822283f576dd0a205a0916c5098c2611f
@@ -1413,6 +1426,7 @@ SPEC CHECKSUMS:
   RNFlashList: b521ebdd7f9352673817f1d98e8bdc0c8cf8545b
   RNGestureHandler: bc2cdb2dc42facdf34992ae364b8a728e19a3686
   RNLocalize: 06991b9c31e7a898a9fa6ddb204ce0f53a967248
+  RNPurchases: 5633b8493fde5c2bcc5fe3edae46e8f141e419fc
   RNReactNativeSharedGroupPreferences: 29092869fc2e40d5baca5e15d82fa5c24a668977
   RNReanimated: e4276a6afc57c02056daa5ea1afb41a5ec497d9b
   RNScreens: 134a7511b12b8eb440b87aac21e36a71295d6024

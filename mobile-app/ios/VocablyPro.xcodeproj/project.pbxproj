@@ -19,6 +19,7 @@
 		3282EC5A2BA1A1D100B37D07 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 3282EC592BA1A1D100B37D07 /* images */; };
 		3282EC5C2BA1A1D100B37D07 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3282EC5B2BA1A1D100B37D07 /* manifest.json */; };
 		3282EC6A2BA1A1D100B37D07 /* Vocably for Safari.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3282EC522BA1A1D100B37D07 /* Vocably for Safari.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		32AEC3AE2DDF169F0028CB88 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32AEC3AD2DDF169F0028CB88 /* StoreKit.framework */; };
 		32C3B8372BA65FB5009AC5D1 /* service-worker.js in Resources */ = {isa = PBXBuildFile; fileRef = 32C3B8352BA65FB5009AC5D1 /* service-worker.js */; };
 		32C3B8382BA65FB5009AC5D1 /* content-script.js in Resources */ = {isa = PBXBuildFile; fileRef = 32C3B8362BA65FB5009AC5D1 /* content-script.js */; };
 		7699B88040F8A987B510C191 /* libPods-VocablyPro-VocablyProTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-VocablyPro-VocablyProTests.a */; };
@@ -89,6 +90,7 @@
 		3282EC672BA1A1D100B37D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3282EC6F2BA2696A00B37D07 /* VocablyPro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = VocablyPro.entitlements; path = VocablyPro/VocablyPro.entitlements; sourceTree = "<group>"; };
 		3282EC702BA26A1300B37D07 /* Vocably for Safari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Vocably for Safari.entitlements"; sourceTree = "<group>"; };
+		32AEC3AD2DDF169F0028CB88 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		32C3B8352BA65FB5009AC5D1 /* service-worker.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "service-worker.js"; sourceTree = "<group>"; };
 		32C3B8362BA65FB5009AC5D1 /* content-script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "content-script.js"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-VocablyPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VocablyPro.debug.xcconfig"; path = "Target Support Files/Pods-VocablyPro/Pods-VocablyPro.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C80B921A6F3F58F76C31292 /* libPods-VocablyPro.a in Frameworks */,
+				32AEC3AE2DDF169F0028CB88 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +203,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				32AEC3AD2DDF169F0028CB88 /* StoreKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-VocablyPro.a */,
 				19F6CBCC0A4E27FBF8BF4A61 /* libPods-VocablyPro-VocablyProTests.a */,
