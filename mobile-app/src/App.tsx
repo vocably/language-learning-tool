@@ -1,6 +1,9 @@
 import { API_BASE_URL, API_CARDS_BUCKET, API_REGION } from '@env';
 import { configureApi } from '@vocably/api';
 import { fetchAuthSession } from 'aws-amplify/auth';
+import { useEffect } from 'react';
+import { Platform } from 'react-native';
+import Purchases, { LOG_LEVEL } from 'react-native-purchases';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { AuthContainer } from './auth/AuthContainer';
 import { Login } from './auth/Login';
@@ -24,6 +27,16 @@ configureApi({
 });
 
 const App = () => {
+  useEffect(() => {
+    Purchases.setLogLevel(LOG_LEVEL.VERBOSE);
+
+    if (Platform.OS === 'ios') {
+      Purchases.configure({ apiKey: 'appl_FNZugGphmSHimfrAmGJlScQLYQO' });
+    } else if (Platform.OS === 'android') {
+      Purchases.configure({ apiKey: 'goog_qyWCrPaMtbeUbPMeTuhckfUuhzP' });
+    }
+  }, []);
+
   return (
     <ThemeProvider>
       <NavigationContainer>

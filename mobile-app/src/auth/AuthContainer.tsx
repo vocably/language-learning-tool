@@ -3,6 +3,7 @@ import { getCurrentUser } from 'aws-amplify/auth';
 import { Hub } from 'aws-amplify/utils';
 import { usePostHog } from 'posthog-react-native';
 import React, { FC, ReactNode, useEffect, useState } from 'react';
+import Purchases from 'react-native-purchases';
 import { Sentry } from '../BetterSentry';
 import { facility } from '../facility';
 import { notificationsIdentifyUser } from '../notificationsIdentifyUser';
@@ -35,6 +36,13 @@ export const AuthContainer: FC<{
       posthog.identify(attributes['sub'], {
         email: attributes['email'],
       });
+
+      const { customerInfo, created } = await Purchases.logIn(
+        attributes['email']
+      );
+
+      console.log(customerInfo.managementURL);
+      console.log(customerInfo.entitlements);
     });
   }, [authStatus]);
 
