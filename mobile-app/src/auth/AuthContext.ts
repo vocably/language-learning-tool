@@ -11,6 +11,10 @@ export type AuthStatus =
   | {
       status: 'logged-in';
       user: GetCurrentUserOutput;
+      attributes: {
+        sub: string;
+        email: string;
+      };
     }
   | {
       status: 'error';

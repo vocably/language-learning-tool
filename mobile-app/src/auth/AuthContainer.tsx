@@ -1,4 +1,5 @@
 import { postOnboardingAction } from '@vocably/api';
+import { Result } from '@vocably/model';
 import { getCurrentUser } from 'aws-amplify/auth';
 import { Hub } from 'aws-amplify/utils';
 import { usePostHog } from 'posthog-react-native';
@@ -9,6 +10,43 @@ import { facility } from '../facility';
 import { notificationsIdentifyUser } from '../notificationsIdentifyUser';
 import { AuthContext, AuthStatus } from './AuthContext';
 import { getFlatAttributes } from './getFlatAttributes';
+
+const getAttributes = async (): Promise<
+  Result<{
+    sub: string;
+    email: string;
+  }>
+> => {
+  try {
+    const flatAttributes = await getFlatAttributes();
+
+    if (!flatAttributes || !flatAttributes['sub'] || !flatAttributes['email']) {
+      return {
+        success: false,
+        errorCode: 'FUCKING_ERROR',
+        reason: 'Those flat attribute kind of suck',
+        extra: flatAttributes,
+      };
+    }
+
+    const { customerInfo } = await Purchases.logIn(flatAttributes['email']);
+
+    return {
+      success: true,
+      value: {
+        sub: flatAttributes.sub,
+        email: flatAttributes.email,
+      },
+    };
+  } catch (error) {
+    return {
+      success: false,
+      errorCode: 'FUCKING_ERROR',
+      reason: 'Unable to get flat attributes.',
+      extra: error,
+    };
+  }
+};
 
 export const AuthContainer: FC<{
   children?: ReactNode;
@@ -24,34 +62,22 @@ export const AuthContainer: FC<{
       return;
     }
 
-    getFlatAttributes().then(async (attributes) => {
-      if (!attributes) {
-        return;
-      }
-
-      if (!attributes['sub'] || !attributes['email']) {
-        return;
-      }
-
-      posthog.identify(attributes['sub'], {
-        email: attributes['email'],
-      });
-
-      const { customerInfo, created } = await Purchases.logIn(
-        attributes['email']
-      );
-
-      console.log(customerInfo.managementURL);
-      console.log(customerInfo.entitlements);
-    });
+    posthog.identify(authStatus.attributes['email']);
   }, [authStatus]);
 
   useEffect(() => {
     getCurrentUser()
-      .then((user) => {
+      .then(async (user) => {
+        const attributesResult = await getAttributes();
+
+        if (attributesResult.success === false) {
+          throw new Error('Unable to get extra shit.');
+        }
+
         setAuthStatus({
           status: 'logged-in',
           user,
+          attributes: attributesResult.value,
         });
       })
       .catch((error) => {
@@ -79,9 +105,16 @@ export const AuthContainer: FC<{
 
         getCurrentUser()
           .then(async (user) => {
+            const attributesResult = await getAttributes();
+
+            if (attributesResult.success === false) {
+              throw new Error('Unable to get extra shit.');
+            }
+
             setAuthStatus({
               status: 'logged-in',
               user,
+              attributes: attributesResult.value,
             });
 
             postOnboardingAction({

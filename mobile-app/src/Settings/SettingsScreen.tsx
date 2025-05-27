@@ -8,32 +8,13 @@ import { ENV_SUFFIX, SHOW_CLEAR_STORAGE_BUTTON } from '@env';
 import { languageList } from '@vocably/model';
 import { trimLanguage } from '@vocably/sulna';
 import { get } from 'lodash-es';
-import RevenueCatUI, { PAYWALL_RESULT } from 'react-native-purchases-ui';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { clearAll } from '../asyncAppStorage';
 import { LanguagesContext } from '../languages/LanguagesContainer';
 import { CustomScrollView } from '../ui/CustomScrollView';
 import { CustomSurface } from '../ui/CustomSurface';
 import { ListItem } from '../ui/ListItem';
-
-async function presentPaywall(): Promise<boolean> {
-  // Present paywall for current offering:
-  const paywallResult: PAYWALL_RESULT = await RevenueCatUI.presentPaywall();
-
-  console.log('PAYWALL RESULT', paywallResult);
-
-  switch (paywallResult) {
-    case PAYWALL_RESULT.NOT_PRESENTED:
-    case PAYWALL_RESULT.ERROR:
-    case PAYWALL_RESULT.CANCELLED:
-      return false;
-    case PAYWALL_RESULT.PURCHASED:
-    case PAYWALL_RESULT.RESTORED:
-      return true;
-    default:
-      return false;
-  }
-}
+import { Subscription } from './Subscription';
 
 type Props = {
   navigation: NavigationProp<any>;
@@ -70,15 +51,7 @@ export const SettingsScreen: FC<Props> = ({ navigation }) => {
         />
       </CustomSurface>
 
-      <CustomSurface style={{ marginBottom: 16 }}>
-        <ListItem
-          order="first"
-          leftIcon="crown-outline"
-          rightIcon=""
-          title="Subscribe"
-          onPress={() => presentPaywall()}
-        />
-      </CustomSurface>
+      <Subscription style={{ marginBottom: 16 }} />
 
       {selectedLanguage && (
         <>

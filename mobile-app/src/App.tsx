@@ -7,6 +7,7 @@ import Purchases, { LOG_LEVEL } from 'react-native-purchases';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { AuthContainer } from './auth/AuthContainer';
 import { Login } from './auth/Login';
+import { CustomerInfoContainer } from './CustomerInfoContainer';
 import { LanguagesContainer } from './languages/LanguagesContainer';
 import { NavigationContainer } from './NavigationContainer';
 import { NotificationsContainer } from './NotificationsContainer';
@@ -43,17 +44,19 @@ const App = () => {
         <PostHogProvider>
           <AuthContainer>
             <Login>
-              <NotificationsContainer>
-                <UserMetadataContainer>
-                  <LanguagesContainer refreshLanguagesOnActive={true}>
-                    <TranslationPresetContainer>
-                      <SafeAreaProvider>
-                        <RootModalStack />
-                      </SafeAreaProvider>
-                    </TranslationPresetContainer>
-                  </LanguagesContainer>
-                </UserMetadataContainer>
-              </NotificationsContainer>
+              <CustomerInfoContainer>
+                <NotificationsContainer>
+                  <UserMetadataContainer>
+                    <LanguagesContainer refreshLanguagesOnActive={true}>
+                      <TranslationPresetContainer>
+                        <SafeAreaProvider>
+                          <RootModalStack />
+                        </SafeAreaProvider>
+                      </TranslationPresetContainer>
+                    </LanguagesContainer>
+                  </UserMetadataContainer>
+                </NotificationsContainer>
+              </CustomerInfoContainer>
             </Login>
           </AuthContainer>
         </PostHogProvider>
