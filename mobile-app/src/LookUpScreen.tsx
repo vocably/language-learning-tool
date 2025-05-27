@@ -28,7 +28,7 @@ import { InlineLoader } from './loaders/InlineLoader';
 import { Loader } from './loaders/Loader';
 import { AnalyzeResult } from './LookUpScreen/AnalyzeResult';
 import { TranslationPresetForm } from './LookUpScreen/TranslationPresetForm';
-import { SearchInput } from './SearchInput';
+import { SearchInput, SearchInputRef } from './SearchInput';
 import { mainPadding } from './styles';
 import { Preset } from './TranslationPreset/TranslationPresetContainer';
 import { useTranslationPreset } from './TranslationPreset/useTranslationPreset';
@@ -99,6 +99,16 @@ export const LookUpScreen: FC<Props> = ({
 
     setIsAnalyzingPreset(false);
   };
+
+  const searchInputRef = useRef<SearchInputRef>(null);
+
+  useEffect(() => {
+    return navigation.addListener('focus', () => {
+      if (searchInputRef.current) {
+        searchInputRef.current.focus();
+      }
+    });
+  }, []);
 
   useEffect(() => {
     if (lookUpText === '') {
@@ -264,6 +274,7 @@ export const LookUpScreen: FC<Props> = ({
             }}
           >
             <SearchInput
+              ref={searchInputRef}
               value={lookUpText}
               multiline={false}
               placeholder={
