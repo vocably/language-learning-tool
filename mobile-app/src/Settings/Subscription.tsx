@@ -71,7 +71,6 @@ export const Subscription: FC<Props> = ({ style }) => {
           )}
           {!isPremium(customerInfoStatus.customerInformation) && (
             <ListItem
-              order="first"
               leftIcon="crown-outline"
               rightIcon=""
               title="Subscribe"

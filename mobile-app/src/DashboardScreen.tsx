@@ -320,6 +320,7 @@ export const DashboardScreen: FC<Props> = ({ navigation }) => {
                 <LanguageSelector style={{ marginLeft: 12 }} />
                 {isRandomEnabledResult.value === false && (
                   <Appbar.Action
+                    animated={false}
                     icon={
                       isStatsViewEnabledResult.value
                         ? 'chart-box'
