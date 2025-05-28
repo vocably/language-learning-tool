@@ -3,7 +3,7 @@ import { LexicalaSearchResultItemWithNormalHeadword } from './normalizeHeadword'
 export const getIpa = (
   item: LexicalaSearchResultItemWithNormalHeadword
 ): string => {
-  if (item.language === 'zh') {
+  if (item.language === 'zh' || item.language === 'tw') {
     const pinyin = item.headword.alternative_scripts?.find(
       (a) => a.type === 'pinyin'
     );

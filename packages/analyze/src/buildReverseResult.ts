@@ -43,6 +43,7 @@ export const buildReverseResult = async (
               sourceLanguage: payload.sourceLanguage,
               targetLanguage: payload.targetLanguage,
               partOfSpeech: translation.partOfSpeech,
+              transcript: translation.transcript,
             },
             lexicalaParams: {
               morph: 'false',

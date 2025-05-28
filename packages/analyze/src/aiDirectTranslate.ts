@@ -87,6 +87,7 @@ const internalAiDirectTranslate = async (
       sourceLanguage: payload.sourceLanguage,
       targetLanguage: payload.targetLanguage,
       partOfSpeech: response.partOfSpeech,
+      transcript: response.pinyin,
     },
   };
 };

@@ -744,4 +744,36 @@ describe('integration check for translate lambda', () => {
 
     expect(result.value.items[0].source).toEqual('en katt');
   });
+
+  it('pinyin for chinese simplified', async () => {
+    const result = await buildResult({
+      sourceLanguage: 'zh',
+      targetLanguage: 'en',
+      source: '星期二',
+    });
+
+    console.log(inspect(result));
+
+    if (result.success === false) {
+      throw 'Unexpected result';
+    }
+
+    expect(result.value.items[0].ipa).toEqual("xīngqī'èr");
+  });
+
+  it('pinyin for chinese traditional reverse translation', async () => {
+    const result = await buildResult({
+      sourceLanguage: 'zh',
+      targetLanguage: 'en',
+      target: 'Tuesday',
+    });
+
+    console.log(inspect(result));
+
+    if (result.success === false) {
+      throw 'Unexpected result';
+    }
+
+    expect(result.value.items[0].ipa).toEqual('xīngqī èr');
+  });
 });

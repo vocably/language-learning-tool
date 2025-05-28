@@ -7,6 +7,7 @@ export const translationToAnalysisItem = (
     source: translation.source,
     translation: translation.target,
     partOfSpeech: translation.partOfSpeech,
+    ipa: translation.transcript,
     definitions: [],
     examples: [],
   };

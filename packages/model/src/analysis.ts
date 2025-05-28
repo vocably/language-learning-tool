@@ -7,6 +7,7 @@ export type Translation = {
   targetLanguage: GoogleLanguage;
   partOfSpeech?: string;
   comesFromExplanation?: boolean;
+  transcript?: string;
 };
 
 export type DirectAnalyzePayload = {
@@ -15,6 +16,7 @@ export type DirectAnalyzePayload = {
   sourceLanguage: GoogleLanguage;
   targetLanguage: GoogleLanguage;
   partOfSpeech?: string;
+  transcript?: string;
   context?: string;
 };
 

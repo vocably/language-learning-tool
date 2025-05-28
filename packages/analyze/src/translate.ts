@@ -20,6 +20,7 @@ type Payload = {
   target?: string;
   context?: string;
   partOfSpeech?: string;
+  transcript?: string;
 };
 
 export const translate = async (
@@ -34,6 +35,7 @@ export const translate = async (
         sourceLanguage: payload.sourceLanguage,
         targetLanguage: payload.targetLanguage,
         partOfSpeech: payload.partOfSpeech,
+        transcript: payload.transcript,
       },
     };
   }
@@ -47,6 +49,7 @@ export const translate = async (
         sourceLanguage: payload.sourceLanguage,
         targetLanguage: payload.targetLanguage,
         partOfSpeech: payload.partOfSpeech,
+        transcript: payload.transcript,
       },
     };
   }

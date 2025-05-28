@@ -17,6 +17,7 @@ type Payload = {
 type AiTranslationVariant = {
   translation: string;
   partOfSpeech: string;
+  transcript: string;
 };
 
 type AiTranslationResult = {
@@ -43,8 +44,8 @@ export const aiReverseTranslate = async (
     '',
     `Respond in JSON, as in example: ${JSON.stringify({
       translations: [
-        { translation: 'word 1', partOfSpeech: 'noun' },
-        { translation: 'word 2', partOfSpeech: 'noun' },
+        { translation: 'word 1', partOfSpeech: 'noun', transcript: 'word 1' },
+        { translation: 'word 2', partOfSpeech: 'noun', transcript: 'word 2' },
       ],
     })}`,
   ].join('\n');
@@ -84,6 +85,7 @@ export const aiReverseTranslate = async (
       targetLanguage: payload.sourceLanguage,
       target: translationVariant.translation,
       partOfSpeech: translationVariant.partOfSpeech,
+      transcript: translationVariant.transcript,
     }));
 
   return {

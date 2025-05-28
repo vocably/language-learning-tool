@@ -108,4 +108,38 @@ describe('aiReverseTranslate', () => {
       expect(truncateText('a, b, c, d, e, f, g, h', 10)).toEqual('a, b, c, d');
     });
   });
+
+  describe('pinyin', () => {
+    it('chinese traditional', async () => {
+      const result = await aiReverseTranslate({
+        target: 'Tuesday',
+        sourceLanguage: 'zh-TW',
+        targetLanguage: 'ru',
+      });
+
+      if (result.success !== true) {
+        expect(result.reason).toBeFalsy();
+        return;
+      }
+
+      expect(result.value.length).toBeGreaterThanOrEqual(1);
+      expect(result.value[0].transcript).toEqual('xīngqī èr');
+    });
+
+    it('chinese simplified', async () => {
+      const result = await aiReverseTranslate({
+        target: 'Tuesday',
+        sourceLanguage: 'zh',
+        targetLanguage: 'ru',
+      });
+
+      if (result.success !== true) {
+        expect(result.reason).toBeFalsy();
+        return;
+      }
+
+      expect(result.value.length).toBeGreaterThanOrEqual(1);
+      expect(result.value[0].transcript).toEqual('xīngqī èr');
+    });
+  });
 });

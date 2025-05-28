@@ -208,4 +208,34 @@ describe('aiDirectTranslate', () => {
     expect(result.value.target).toHaveSomeOf(['цесарка']);
     expect(result.value.partOfSpeech).toBe('noun');
   });
+
+  it('pinyin for chinese traditional', async () => {
+    const result = await aiDirectTranslate({
+      source: '星期二',
+      sourceLanguage: 'zh-TW',
+      targetLanguage: 'ru',
+    });
+
+    if (result.success !== true) {
+      expect(result.reason).toBeFalsy();
+      return;
+    }
+
+    expect(result.value.transcript).toBe("xīngqī'èr");
+  });
+
+  it('pinyin for chinese simplified', async () => {
+    const result = await aiDirectTranslate({
+      source: '星期二',
+      sourceLanguage: 'zh',
+      targetLanguage: 'ru',
+    });
+
+    if (result.success !== true) {
+      expect(result.reason).toBeFalsy();
+      return;
+    }
+
+    expect(result.value.transcript).toBe("xīngqī'èr");
+  });
 });
