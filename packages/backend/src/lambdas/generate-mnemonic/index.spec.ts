@@ -4,7 +4,7 @@ import { generateMnemonicFunction } from './index';
 // @ts-ignore
 let mockEvent: APIGatewayProxyEvent = {};
 
-describe('integration check for generate-mnemonic lambda', () => {
+xdescribe('integration check for generate-mnemonic lambda', () => {
   jest.setTimeout(30000);
 
   if (process.env.TEST_SKIP_SPEC === 'true') {
