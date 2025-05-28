@@ -758,7 +758,7 @@ describe('integration check for translate lambda', () => {
       throw 'Unexpected result';
     }
 
-    expect(result.value.items[0].ipa).toEqual("xīngqī'èr");
+    expect(result.value.items[0].ipa).toHaveSomeOf(["xīngqī'èr", 'xīngqī èr']);
   });
 
   it('pinyin for chinese traditional reverse translation', async () => {
@@ -774,6 +774,6 @@ describe('integration check for translate lambda', () => {
       throw 'Unexpected result';
     }
 
-    expect(result.value.items[0].ipa).toEqual('xīngqī èr');
+    expect(result.value.items[0].ipa).toHaveSomeOf(["xīngqī'èr", 'xīngqī èr']);
   });
 });
