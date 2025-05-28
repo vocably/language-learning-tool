@@ -2,3 +2,4 @@
 .env.development
 deck.json
 deck-asis.json
+result.csv
