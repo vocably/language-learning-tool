@@ -331,6 +331,10 @@ export const registerServiceWorker = (
       payload.translationCards.translation.sourceLanguage
     );
 
+    posthog.capture('addCard', {
+      card: payload.card,
+    });
+
     if (getLanguageDeckResult.success === false) {
       return sendResponse(getLanguageDeckResult);
     }
