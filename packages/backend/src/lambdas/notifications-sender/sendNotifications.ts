@@ -38,6 +38,15 @@ export const sendNotifications = async (): Promise<Result<any>> => {
       continue;
     }
 
+    const updateItemResult = await updateSentTimestamp(
+      item.ID.S,
+      sentTimestamp
+    );
+    if (updateItemResult.success === false) {
+      console.error('Update notification item error', updateItemResult);
+      continue;
+    }
+
     const sendMessageResult = await sendPinpointMessage(
       sub,
       getBody(cardsDeckResult.value)
@@ -48,14 +57,6 @@ export const sendNotifications = async (): Promise<Result<any>> => {
         'Sending a message ended up with an error',
         sendMessageResult
       );
-    }
-
-    const updateItemResult = await updateSentTimestamp(
-      item.ID.S,
-      sentTimestamp
-    );
-    if (updateItemResult.success === false) {
-      console.error('Update notification item error', updateItemResult);
     }
   }
 
