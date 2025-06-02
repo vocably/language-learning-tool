@@ -28,12 +28,14 @@ import { InlineLoader } from './loaders/InlineLoader';
 import { Loader } from './loaders/Loader';
 import { AnalyzeResult } from './LookUpScreen/AnalyzeResult';
 import { TranslationPresetForm } from './LookUpScreen/TranslationPresetForm';
+import { plural } from './plural';
 import { SearchInput, SearchInputRef } from './SearchInput';
 import { mainPadding } from './styles';
 import { Preset } from './TranslationPreset/TranslationPresetContainer';
 import { useTranslationPreset } from './TranslationPreset/useTranslationPreset';
 import { ScreenLayout } from './ui/ScreenLayout';
 import { useAnalyzeOperations } from './useAnalyzeOperations';
+import { useMinutesBeforeNextTranslation } from './useMinutesBeforeNextTranslation';
 import { UserMetadataContext } from './UserMetadataContainer';
 
 const padding = 16;
@@ -124,6 +126,8 @@ export const LookUpScreen: FC<Props> = ({
   const updateMetadataTimeout = useRef<ReturnType<typeof setTimeout> | null>(
     null
   );
+
+  const minutesBeforeNextTranslation = useMinutesBeforeNextTranslation();
 
   const lookUp = async () => {
     cancelThePreviousLookUp();
@@ -308,10 +312,39 @@ export const LookUpScreen: FC<Props> = ({
               onChange={setLookUpText}
               onSubmit={lookUp}
               disabled={
+                minutesBeforeNextTranslation > 0 ||
                 !translationPresetState.preset.sourceLanguage ||
                 !translationPresetState.preset.translationLanguage
               }
             />
+          </View>
+          <View
+            style={{
+              paddingHorizontal: padding,
+              marginTop: padding,
+            }}
+          >
+            <View
+              style={{
+                padding: 12,
+                borderRadius: 12,
+                backgroundColor: theme.colors.inversePrimary,
+                gap: 12,
+                alignItems: 'center',
+              }}
+            >
+              <Text style={{ color: theme.colors.secondary }}>
+                Next translation available in{' '}
+                {plural(minutesBeforeNextTranslation, 'minute')}.
+              </Text>
+              <Button
+                mode="contained"
+                style={{ alignSelf: 'stretch' }}
+                onPress={() => {}}
+              >
+                Upgrade to Premium
+              </Button>
+            </View>
           </View>
         </Surface>
       }
