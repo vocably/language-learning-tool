@@ -4,7 +4,6 @@ import {
 } from '@vocably/api';
 import {
   defaultUserMetadata,
-  mergeUserMetadata,
   PartialUserMetadata,
   UserMetadata,
 } from '@vocably/model';
@@ -16,6 +15,8 @@ import {
   useEffect,
   useState,
 } from 'react';
+import { AppState } from 'react-native';
+import { Loader } from './loaders/Loader';
 
 type UserMetadataContextValues = {
   userMetadata: UserMetadata;
@@ -32,8 +33,7 @@ type UserMetadataContainer = FC<{
 }>;
 
 export const UserMetadataContainer: UserMetadataContainer = ({ children }) => {
-  const [userMetadata, setUserMetadata] =
-    useState<UserMetadata>(defaultUserMetadata);
+  const [userMetadata, setUserMetadata] = useState<UserMetadata | null>(null);
 
   useEffect(() => {
     apiGetUserMetadata().then((result) => {
@@ -43,18 +43,43 @@ export const UserMetadataContainer: UserMetadataContainer = ({ children }) => {
     });
   }, []);
 
+  useEffect(() => {
+    const onAppChangeListener = AppState.addEventListener(
+      'change',
+      (nextAppState) => {
+        if (nextAppState !== 'active') {
+          return;
+        }
+
+        console.log('Fetching user metadata');
+
+        apiGetUserMetadata().then((result) => {
+          if (result.success === true) {
+            setUserMetadata(result.value);
+          }
+        });
+      }
+    );
+
+    return () => {
+      onAppChangeListener.remove();
+    };
+  }, []);
+
   const updateUserMetadata = useCallback(
     async (metadata: PartialUserMetadata) => {
       const saveUserMetadataResult = await apiSaveUserMetadata(metadata);
 
       if (saveUserMetadataResult.success === true) {
         setUserMetadata(saveUserMetadataResult.value);
-      } else {
-        setUserMetadata(mergeUserMetadata(userMetadata, metadata));
       }
     },
     [setUserMetadata]
   );
+
+  if (userMetadata === null) {
+    return <Loader>Loading user metadata...</Loader>;
+  }
 
   return (
     <UserMetadataContext.Provider value={{ userMetadata, updateUserMetadata }}>

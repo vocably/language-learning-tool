@@ -16,14 +16,21 @@ export type OnboardingFlow = {
   language: string | null;
 };
 
+export type UsageStats = {
+  lastLookupTimestamp: number;
+  totalLookups: number;
+};
+
 export type UserMetadata = {
   onboardingFlow: OnboardingFlow;
   rate: Record<Platform, RateResponse | undefined>;
+  usageStats: UsageStats;
 };
 
 export type PartialUserMetadata = {
   rate?: Partial<UserMetadata['rate']>;
   onboardingFlow?: Partial<UserMetadata['onboardingFlow']>;
+  usageStats?: Partial<UserMetadata['usageStats']>;
 };
 
 export const defaultUserMetadata: UserMetadata = {
@@ -38,6 +45,10 @@ export const defaultUserMetadata: UserMetadata = {
     android: undefined,
     chromeExtension: undefined,
     safariExtension: undefined,
+  },
+  usageStats: {
+    lastLookupTimestamp: 0,
+    totalLookups: 0,
   },
 };
 
@@ -55,6 +66,10 @@ export const mergeUserMetadata = (
     onboardingFlow: {
       ...md1.onboardingFlow,
       ...md2.onboardingFlow,
+    },
+    usageStats: {
+      ...md1.usageStats,
+      ...md2.usageStats,
     },
   };
 };

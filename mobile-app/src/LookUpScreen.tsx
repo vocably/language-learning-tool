@@ -2,7 +2,7 @@ import { NavigationProp } from '@react-navigation/native';
 import { analyze } from '@vocably/api';
 import { AnalyzePayload, GoogleLanguage, languageList } from '@vocably/model';
 import { usePostHog } from 'posthog-react-native';
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useContext, useEffect, useRef, useState } from 'react';
 import {
   Alert,
   BackHandler,
@@ -34,6 +34,7 @@ import { Preset } from './TranslationPreset/TranslationPresetContainer';
 import { useTranslationPreset } from './TranslationPreset/useTranslationPreset';
 import { ScreenLayout } from './ui/ScreenLayout';
 import { useAnalyzeOperations } from './useAnalyzeOperations';
+import { UserMetadataContext } from './UserMetadataContainer';
 
 const padding = 16;
 
@@ -73,6 +74,7 @@ export const LookUpScreen: FC<Props> = ({
 }) => {
   const translationPresetState = useTranslationPreset();
   const [lookUpText, setLookUpText] = useState(initialText);
+  const { userMetadata, updateUserMetadata } = useContext(UserMetadataContext);
   const [isAnalyzingPreset, setIsAnalyzingPreset] = useState<Preset | false>(
     false
   );
@@ -119,6 +121,10 @@ export const LookUpScreen: FC<Props> = ({
 
   const abortControllerRef = useRef<AbortController | null>(null);
 
+  const updateMetdatadaTimeoutRef = useRef<ReturnType<
+    typeof setTimeout
+  > | null>(null);
+
   const lookUp = async () => {
     cancelThePreviousLookUp();
 
@@ -133,6 +139,20 @@ export const LookUpScreen: FC<Props> = ({
     if (translationPresetState.status === 'unknown') {
       return;
     }
+
+    if (updateMetdatadaTimeoutRef.current) {
+      clearTimeout(updateMetdatadaTimeoutRef.current);
+    }
+
+    updateMetdatadaTimeoutRef.current = setTimeout(() => {
+      console.log('Updating usage stats', userMetadata.usageStats);
+      updateUserMetadata({
+        usageStats: {
+          lastLookupTimestamp: new Date().getTime(),
+          totalLookups: userMetadata.usageStats.totalLookups + 1,
+        },
+      });
+    }, 10000);
 
     Keyboard.dismiss();
 
@@ -156,6 +176,7 @@ export const LookUpScreen: FC<Props> = ({
       lookupResult.success === false &&
       lookupResult.errorCode !== 'API_REQUEST_ABORTED'
     ) {
+      clearTimeout(updateMetdatadaTimeoutRef.current);
       Alert.alert(
         'Error: Look up failed',
         'Oops! Something went wrong while attempting to look up. Please try again later.'

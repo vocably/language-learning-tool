@@ -1,9 +1,9 @@
+import { parseJson } from '@vocably/api';
 import { Result, resultify } from '@vocably/model';
 import { get } from 'lodash';
 import type { ChatCompletionMessageParam } from 'openai/resources/chat';
 import { ChatCompletionCreateParamsBase } from 'openai/resources/chat/completions';
 import { getOpenAiClient } from './openAiClient';
-import { parseJson } from './parseJson';
 
 export const GPT_4O_MINI = 'gpt-4o-mini';
 export const GPT_4O = 'gpt-4o';

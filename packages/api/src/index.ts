@@ -12,6 +12,7 @@ export {
 export * from './mnemonics';
 export * from './notifications';
 export * from './onboarding';
+export * from './parseJson';
 export { playSound } from './playSound';
 export * from './studyStats';
 export { sendUserFeedback } from './userFeedback';
