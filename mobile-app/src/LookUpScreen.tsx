@@ -121,9 +121,9 @@ export const LookUpScreen: FC<Props> = ({
 
   const abortControllerRef = useRef<AbortController | null>(null);
 
-  const updateMetdatadaTimeoutRef = useRef<ReturnType<
-    typeof setTimeout
-  > | null>(null);
+  const updateMetadataTimeout = useRef<ReturnType<typeof setTimeout> | null>(
+    null
+  );
 
   const lookUp = async () => {
     cancelThePreviousLookUp();
@@ -140,19 +140,9 @@ export const LookUpScreen: FC<Props> = ({
       return;
     }
 
-    if (updateMetdatadaTimeoutRef.current) {
-      clearTimeout(updateMetdatadaTimeoutRef.current);
+    if (updateMetadataTimeout.current) {
+      clearTimeout(updateMetadataTimeout.current);
     }
-
-    updateMetdatadaTimeoutRef.current = setTimeout(() => {
-      console.log('Updating usage stats', userMetadata.usageStats);
-      updateUserMetadata({
-        usageStats: {
-          lastLookupTimestamp: new Date().getTime(),
-          totalLookups: userMetadata.usageStats.totalLookups + 1,
-        },
-      });
-    }, 10000);
 
     Keyboard.dismiss();
 
@@ -176,7 +166,6 @@ export const LookUpScreen: FC<Props> = ({
       lookupResult.success === false &&
       lookupResult.errorCode !== 'API_REQUEST_ABORTED'
     ) {
-      clearTimeout(updateMetdatadaTimeoutRef.current);
       Alert.alert(
         'Error: Look up failed',
         'Oops! Something went wrong while attempting to look up. Please try again later.'
@@ -189,6 +178,16 @@ export const LookUpScreen: FC<Props> = ({
     ) {
       return;
     }
+
+    updateMetadataTimeout.current = setTimeout(() => {
+      console.log('Updating usage stats', userMetadata.usageStats);
+      updateUserMetadata({
+        usageStats: {
+          lastLookupTimestamp: new Date().getTime(),
+          totalLookups: userMetadata.usageStats.totalLookups + 1,
+        },
+      });
+    }, 10000);
 
     setLookupResult(lookupResult);
     setIsAnalyzingPreset(false);

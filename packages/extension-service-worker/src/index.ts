@@ -223,6 +223,8 @@ export const registerServiceWorker = (
     ];
   };
 
+  let updateMetadataTimeout: ReturnType<typeof setTimeout> | null = null;
+
   onAnalyzeRequest(async (sendResponse, payload) => {
     if (payload.sourceLanguage) {
       await setSourceLanguage(payload.sourceLanguage);
@@ -241,6 +243,7 @@ export const registerServiceWorker = (
     };
 
     posthog.capture('analyze_requested', analyzePayload);
+    clearTimeout(updateMetadataTimeout);
 
     try {
       const [analysisResult, loadLanguageDeckResult] =
@@ -276,6 +279,24 @@ export const registerServiceWorker = (
       };
 
       addLanguage(value.translation.sourceLanguage);
+
+      updateMetadataTimeout = setTimeout(async () => {
+        const metadataResult = await getUserMetadata();
+        if (metadataResult.success === false) {
+          return;
+        }
+
+        console.log('Updating usage stats', metadataResult.value.usageStats);
+
+        await saveUserMetadata({
+          ...metadataResult.value,
+          usageStats: {
+            lastLookupTimestamp: new Date().getTime(),
+            totalLookups: metadataResult.value.usageStats.totalLookups + 1,
+          },
+        });
+      }, 10000);
+
       return sendResponse({
         success: true,
         value,
