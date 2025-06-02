@@ -8,7 +8,7 @@ const getMinutesBeforeNextTranslation = (
     (new Date().getTime() - lastTranslationTime) / 60_000
   );
 
-  return Math.max(0, 60 - minutesAfterLastTranslation);
+  return Math.max(0, 2 - minutesAfterLastTranslation);
 };
 
 export const useMinutesBeforeNextTranslation = () => {

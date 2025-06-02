@@ -27,8 +27,8 @@ import { useLanguageDeck } from './languageDeck/useLanguageDeck';
 import { InlineLoader } from './loaders/InlineLoader';
 import { Loader } from './loaders/Loader';
 import { AnalyzeResult } from './LookUpScreen/AnalyzeResult';
+import { PremiumCta } from './LookUpScreen/PremiumCta';
 import { TranslationPresetForm } from './LookUpScreen/TranslationPresetForm';
-import { plural } from './plural';
 import { SearchInput, SearchInputRef } from './SearchInput';
 import { mainPadding } from './styles';
 import { Preset } from './TranslationPreset/TranslationPresetContainer';
@@ -191,7 +191,7 @@ export const LookUpScreen: FC<Props> = ({
           totalLookups: userMetadata.usageStats.totalLookups + 1,
         },
       });
-    }, 10000);
+    }, 5_000);
 
     setLookupResult(lookupResult);
     setIsAnalyzingPreset(false);
@@ -318,34 +318,10 @@ export const LookUpScreen: FC<Props> = ({
               }
             />
           </View>
-          <View
-            style={{
-              paddingHorizontal: padding,
-              marginTop: padding,
-            }}
-          >
-            <View
-              style={{
-                padding: 12,
-                borderRadius: 12,
-                backgroundColor: theme.colors.inversePrimary,
-                gap: 12,
-                alignItems: 'center',
-              }}
-            >
-              <Text style={{ color: theme.colors.secondary }}>
-                Next translation available in{' '}
-                {plural(minutesBeforeNextTranslation, 'minute')}.
-              </Text>
-              <Button
-                mode="contained"
-                style={{ alignSelf: 'stretch' }}
-                onPress={() => {}}
-              >
-                Upgrade to Premium
-              </Button>
-            </View>
-          </View>
+          <PremiumCta
+            minutes={minutesBeforeNextTranslation}
+            padding={padding}
+          />
         </Surface>
       }
       content={
