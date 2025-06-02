@@ -3,6 +3,7 @@ import React, { FC } from 'react';
 import { StatusBar } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { AuthContainer } from '../auth/AuthContainer';
+import { configurePurchases } from '../configurePurchases';
 import { LanguagesContainer } from '../languages/LanguagesContainer';
 import { LanguageSelectorModal } from '../LanguageSelectorModal';
 import { NavigationContainer } from '../NavigationContainer';
@@ -20,6 +21,8 @@ type Props = {
 };
 
 export const ShareIntentAppBase: FC<Props> = ({ os }) => {
+  configurePurchases();
+
   return (
     <ThemeProvider>
       <StatusBar hidden />
