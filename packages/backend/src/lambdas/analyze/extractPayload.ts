@@ -5,13 +5,8 @@ import {
   isReverseAnalyzePayload,
 } from '@vocably/model';
 import { APIGatewayProxyEvent } from 'aws-lambda';
-import { get } from 'lodash-es';
 
-export type BackendPayload = AnalyzePayload & {
-  isPaid: boolean;
-};
-
-export const extractPayload = (event: APIGatewayProxyEvent): BackendPayload => {
+export const extractPayload = (event: APIGatewayProxyEvent): AnalyzePayload => {
   const payload = JSON.parse(event.body ?? '{}');
 
   if (!isDirectAnalyzePayload(payload) && !isReverseAnalyzePayload(payload)) {
@@ -41,8 +36,5 @@ export const extractPayload = (event: APIGatewayProxyEvent): BackendPayload => {
 
   return {
     ...payload,
-    isPaid: get(event, 'requestContext.authorizer.claims.cognito:groups', '')
-      .split(',')
-      .includes('paid'),
   };
 };

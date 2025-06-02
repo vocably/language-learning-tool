@@ -1,31 +1,10 @@
 import { Analysis, DirectAnalysis, ReverseAnalysis } from '@vocably/model';
 import { inspect } from '@vocably/node-sulna';
-import {
-  APIGatewayEventRequestContextWithAuthorizer,
-  APIGatewayProxyEvent,
-} from 'aws-lambda';
+import { APIGatewayProxyEvent } from 'aws-lambda';
 import { analyze } from './index';
 
 // @ts-ignore
 let mockEvent: APIGatewayProxyEvent = {};
-
-// @ts-ignore
-const paidRequestContext: APIGatewayEventRequestContextWithAuthorizer<any> = {
-  authorizer: {
-    claims: {
-      'cognito:groups': 'some-group,paid,some-other-group',
-    },
-  },
-};
-
-// @ts-ignore
-const unpaidRequestContext: APIGatewayEventRequestContextWithAuthorizer<any> = {
-  authorizer: {
-    claims: {
-      'cognito:groups': 'some-group,some-other-group',
-    },
-  },
-};
 
 describe('integration check for translate lambda', () => {
   jest.setTimeout(30000);
@@ -40,7 +19,6 @@ describe('integration check for translate lambda', () => {
       source: 'dankjewel',
       targetLanguage: 'en',
     });
-    mockEvent.requestContext = paidRequestContext;
     const result = await analyze(mockEvent);
     console.log(inspect({ result }));
     expect(result.statusCode).toEqual(200);
@@ -52,7 +30,6 @@ describe('integration check for translate lambda', () => {
       sourceLanguage: 'lt',
       targetLanguage: 'en',
     });
-    mockEvent.requestContext = paidRequestContext;
     const result = await analyze(mockEvent);
     console.log({ result });
     expect(result.statusCode).toEqual(200);
@@ -61,34 +38,12 @@ describe('integration check for translate lambda', () => {
     expect(resultBody.translation).toBeDefined();
   });
 
-  xit('performs cheap translation on unpaid items', async () => {
-    mockEvent.body = JSON.stringify({
-      source: 'gedaan',
-      sourceLanguage: 'nl',
-      targetLanguage: 'en',
-    });
-    mockEvent.requestContext = unpaidRequestContext;
-    const result = await analyze(mockEvent);
-    console.log({ result });
-    expect(result.statusCode).toEqual(200);
-    const analysis: Analysis = JSON.parse(result.body);
-    expect(analysis.source).toEqual('gedaan');
-    expect(analysis.translation).toEqual({
-      source: 'gedaan',
-      sourceLanguage: 'nl',
-      target: 'done',
-      targetLanguage: 'en',
-    });
-    expect(analysis.items).toBeUndefined();
-  });
-
   it('skips translation when source language equals to target language', async () => {
     mockEvent.body = JSON.stringify({
       source: 'asylum',
       sourceLanguage: 'en',
       targetLanguage: 'en',
     });
-    mockEvent.requestContext = paidRequestContext;
     const result = await analyze(mockEvent);
     console.log({ result });
     expect(result.statusCode).toEqual(200);
@@ -105,7 +60,6 @@ describe('integration check for translate lambda', () => {
       sourceLanguage: 'nl',
       targetLanguage: 'en',
     });
-    mockEvent.requestContext = paidRequestContext;
     const result = await analyze(mockEvent);
     console.log({ result });
     expect(result.statusCode).toEqual(200);
@@ -124,7 +78,6 @@ describe('integration check for translate lambda', () => {
       sourceLanguage: 'de',
       targetLanguage: 'en',
     });
-    mockEvent.requestContext = paidRequestContext;
     const result = await analyze(mockEvent);
     console.log({ result });
     expect(result.statusCode).toEqual(200);
@@ -144,7 +97,6 @@ describe('integration check for translate lambda', () => {
       sourceLanguage: 'nl',
       targetLanguage: 'ru',
     });
-    mockEvent.requestContext = paidRequestContext;
     const result = await analyze(mockEvent);
     console.log({ result });
     expect(result.statusCode).toEqual(200);
@@ -164,7 +116,6 @@ describe('integration check for translate lambda', () => {
       sourceLanguage: 'nl',
       targetLanguage: 'ru',
     });
-    mockEvent.requestContext = paidRequestContext;
     const result = await analyze(mockEvent);
     console.log({ result });
     expect(result.statusCode).toEqual(200);
@@ -184,7 +135,6 @@ describe('integration check for translate lambda', () => {
       sourceLanguage: 'nl',
       targetLanguage: 'en',
     });
-    mockEvent.requestContext = paidRequestContext;
     const result = await analyze(mockEvent);
     console.log({ result });
     expect(result.statusCode).toEqual(200);
@@ -204,7 +154,6 @@ describe('integration check for translate lambda', () => {
       sourceLanguage: 'nl',
       targetLanguage: 'ru',
     });
-    mockEvent.requestContext = paidRequestContext;
     const result = await analyze(mockEvent);
     expect(result.statusCode).toEqual(200);
     const resultBody: ReverseAnalysis = JSON.parse(result.body);
@@ -226,7 +175,6 @@ describe('integration check for translate lambda', () => {
       sourceLanguage: 'en',
       targetLanguage: 'ru',
     });
-    mockEvent.requestContext = paidRequestContext;
     const result = await analyze(mockEvent);
     expect(result.statusCode).toEqual(200);
     const resultBody: DirectAnalysis = JSON.parse(result.body);
@@ -239,7 +187,6 @@ describe('integration check for translate lambda', () => {
       sourceLanguage: 'en',
       targetLanguage: 'en',
     });
-    mockEvent.requestContext = paidRequestContext;
     const result = await analyze(mockEvent);
     expect(result.statusCode).toEqual(200);
     const resultBody: DirectAnalysis = JSON.parse(result.body);
@@ -253,7 +200,6 @@ describe('integration check for translate lambda', () => {
       sourceLanguage: 'nl',
       targetLanguage: 'ru',
     });
-    mockEvent.requestContext = paidRequestContext;
     const result = await analyze(mockEvent);
     expect(result.statusCode).toEqual(200);
     const resultBody: DirectAnalysis = JSON.parse(result.body);
@@ -268,7 +214,6 @@ describe('integration check for translate lambda', () => {
       sourceLanguage: 'nl',
       targetLanguage: 'en',
     });
-    mockEvent.requestContext = paidRequestContext;
     const result = await analyze(mockEvent);
     expect(result.statusCode).toEqual(200);
     const resultBody: DirectAnalysis = JSON.parse(result.body);
@@ -284,7 +229,6 @@ describe('integration check for translate lambda', () => {
       context:
         "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'",
     });
-    mockEvent.requestContext = paidRequestContext;
     const result = await analyze(mockEvent);
     expect(result.statusCode).toEqual(200);
     const resultBody: DirectAnalysis = JSON.parse(result.body);
