@@ -1,6 +1,6 @@
 import { postOnboardingAction } from '@vocably/api';
 import { Result } from '@vocably/model';
-import { getCurrentUser } from 'aws-amplify/auth';
+import { fetchAuthSession } from 'aws-amplify/auth';
 import { Hub } from 'aws-amplify/utils';
 import { usePostHog } from 'posthog-react-native';
 import React, { FC, ReactNode, useEffect, useState } from 'react';
@@ -24,7 +24,7 @@ const getAttributes = async (): Promise<
       return {
         success: false,
         errorCode: 'FUCKING_ERROR',
-        reason: 'Those flat attribute kind of suck',
+        reason: 'The flat attributes have no sufficient data',
         extra: flatAttributes,
       };
     }
@@ -66,17 +66,23 @@ export const AuthContainer: FC<{
   }, [authStatus]);
 
   useEffect(() => {
-    getCurrentUser()
-      .then(async (user) => {
+    fetchAuthSession()
+      .then(async (session) => {
+        if (!session.tokens) {
+          throw new Error('The fetched session has no access tokens.');
+        }
+
         const attributesResult = await getAttributes();
 
         if (attributesResult.success === false) {
-          throw new Error('Unable to get extra shit.');
+          throw new Error(
+            'Unable to get attributes (getAttributes) method is failing.'
+          );
         }
 
         setAuthStatus({
           status: 'logged-in',
-          user,
+          session,
           attributes: attributesResult.value,
         });
       })
@@ -103,17 +109,22 @@ export const AuthContainer: FC<{
       if (event.payload.event === 'signedIn') {
         notificationsIdentifyUser();
 
-        getCurrentUser()
-          .then(async (user) => {
+        fetchAuthSession()
+          .then(async (session) => {
+            if (!session.tokens) {
+              throw new Error('The fetched session has no access tokens.');
+            }
+
             const attributesResult = await getAttributes();
 
             if (attributesResult.success === false) {
-              throw new Error('Unable to get extra shit.');
+              throw new Error(
+                'Unable to get attributes (getAttributes) method is failing.'
+              );
             }
-
             setAuthStatus({
               status: 'logged-in',
-              user,
+              session,
               attributes: attributesResult.value,
             });
 

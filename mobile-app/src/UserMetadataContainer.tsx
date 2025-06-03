@@ -17,6 +17,7 @@ import {
 } from 'react';
 import { AppState } from 'react-native';
 import { Loader } from './loaders/Loader';
+import { retry } from './retry';
 
 type UserMetadataContextValues = {
   userMetadata: UserMetadata;
@@ -36,7 +37,7 @@ export const UserMetadataContainer: UserMetadataContainer = ({ children }) => {
   const [userMetadata, setUserMetadata] = useState<UserMetadata | null>(null);
 
   useEffect(() => {
-    apiGetUserMetadata().then((result) => {
+    retry(() => apiGetUserMetadata()).then((result) => {
       if (result.success === true) {
         setUserMetadata(result.value);
       }
