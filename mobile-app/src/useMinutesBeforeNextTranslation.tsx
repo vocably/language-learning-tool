@@ -1,12 +1,16 @@
 import { get } from 'lodash-es';
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext, AuthStatus } from './auth/AuthContext';
+import {
+  CustomerInfoContext,
+  CustomerInfoStatus,
+} from './CustomerInfoContainer';
 import { UserMetadataContext } from './UserMetadataContainer';
 
-const getMinutesBeforeNextTranslation = (
-  lastTranslationTime: number,
-  authStatus: AuthStatus
-): number => {
+const isPremium = (
+  authStatus: AuthStatus,
+  customerInfoStatus: CustomerInfoStatus
+): boolean => {
   if (
     authStatus.status === 'logged-in' &&
     (
@@ -17,6 +21,29 @@ const getMinutesBeforeNextTranslation = (
       ) as string[]
     ).includes('paid')
   ) {
+    return true;
+  }
+
+  if (
+    customerInfoStatus.status === 'loaded' &&
+    get(
+      customerInfoStatus.customerInformation,
+      'entitlements.active.premium',
+      false
+    )
+  ) {
+    return true;
+  }
+
+  return false;
+};
+
+const getMinutesBeforeNextTranslation = (
+  lastTranslationTime: number,
+  authStatus: AuthStatus,
+  customerInfoStatus: CustomerInfoStatus
+): number => {
+  if (isPremium(authStatus, customerInfoStatus)) {
     return 0;
   }
 
@@ -29,21 +56,29 @@ const getMinutesBeforeNextTranslation = (
 
 export const useMinutesBeforeNextTranslation = () => {
   const { userMetadata } = useContext(UserMetadataContext);
+  const customerInfoStatus = useContext(CustomerInfoContext);
   const authStatus = useContext(AuthContext);
 
   const [minutesBeforeNextTranslations, setMinutesBeforeNextTranslation] =
     useState<number>(
       getMinutesBeforeNextTranslation(
         userMetadata.usageStats.lastLookupTimestamp,
-        authStatus
+        authStatus,
+        customerInfoStatus
       )
     );
 
   useEffect(() => {
+    if (isPremium(authStatus, customerInfoStatus)) {
+      setMinutesBeforeNextTranslation(0);
+      return;
+    }
+
     setMinutesBeforeNextTranslation(
       getMinutesBeforeNextTranslation(
         userMetadata.usageStats.lastLookupTimestamp,
-        authStatus
+        authStatus,
+        customerInfoStatus
       )
     );
 
@@ -51,7 +86,8 @@ export const useMinutesBeforeNextTranslation = () => {
       setMinutesBeforeNextTranslation(
         getMinutesBeforeNextTranslation(
           userMetadata.usageStats.lastLookupTimestamp,
-          authStatus
+          authStatus,
+          customerInfoStatus
         )
       );
     }, 60_000);
@@ -59,7 +95,11 @@ export const useMinutesBeforeNextTranslation = () => {
     return () => {
       clearInterval(intervalId);
     };
-  }, [userMetadata.usageStats.lastLookupTimestamp, authStatus]);
+  }, [
+    userMetadata.usageStats.lastLookupTimestamp,
+    authStatus,
+    customerInfoStatus,
+  ]);
 
   return minutesBeforeNextTranslations;
 };
