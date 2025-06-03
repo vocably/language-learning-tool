@@ -24,9 +24,8 @@ export const IosLogin: FC<PropsWithChildren> = ({ children }) => {
       header={
         <View
           style={{
-            paddingTop: insets.top,
-            paddingLeft: insets.left + 16,
-            paddingRight: insets.right + 16,
+            paddingLeft: insets.left + 8,
+            paddingRight: insets.right + 8,
           }}
         >
           <IconButton
