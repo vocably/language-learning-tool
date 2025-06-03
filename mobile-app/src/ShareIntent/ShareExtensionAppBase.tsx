@@ -13,6 +13,7 @@ import { TranslationPresetContainer } from '../TranslationPreset/TranslationPres
 import { UserMetadataContainer } from '../UserMetadataContainer';
 import { Login } from './Login';
 import { ShareIntentLookUpScreen } from './ShareIntentLookUpScreen';
+import { Timer } from './Timer';
 import { Viewport } from './Viewport';
 
 const Stack = createStackNavigator();
@@ -33,32 +34,34 @@ export const ShareIntentAppBase: FC<Props> = ({ os }) => {
             <AuthContainer>
               <Login os={os}>
                 <UserMetadataContainer>
-                  <LanguagesContainer>
-                    <TranslationPresetContainer>
-                      <SafeAreaProvider>
-                        <Stack.Navigator>
-                          <Stack.Screen
-                            name="Vocably"
-                            component={ShareIntentLookUpScreen}
-                            options={{
-                              headerShown: false,
-                              presentation: 'card',
-                              gestureEnabled: true,
-                            }}
-                          />
-                          <Stack.Screen
-                            name="LanguageSelector"
-                            component={LanguageSelectorModal}
-                            options={{
-                              headerShown: false,
-                              presentation: 'modal',
-                              gestureEnabled: true,
-                            }}
-                          />
-                        </Stack.Navigator>
-                      </SafeAreaProvider>
-                    </TranslationPresetContainer>
-                  </LanguagesContainer>
+                  <Timer>
+                    <LanguagesContainer>
+                      <TranslationPresetContainer>
+                        <SafeAreaProvider>
+                          <Stack.Navigator>
+                            <Stack.Screen
+                              name="Vocably"
+                              component={ShareIntentLookUpScreen}
+                              options={{
+                                headerShown: false,
+                                presentation: 'card',
+                                gestureEnabled: true,
+                              }}
+                            />
+                            <Stack.Screen
+                              name="LanguageSelector"
+                              component={LanguageSelectorModal}
+                              options={{
+                                headerShown: false,
+                                presentation: 'modal',
+                                gestureEnabled: true,
+                              }}
+                            />
+                          </Stack.Navigator>
+                        </SafeAreaProvider>
+                      </TranslationPresetContainer>
+                    </LanguagesContainer>
+                  </Timer>
                 </UserMetadataContainer>
               </Login>
             </AuthContainer>

@@ -52,9 +52,7 @@ export const UserMetadataContainer: UserMetadataContainer = ({ children }) => {
           return;
         }
 
-        console.log('Fetching user metadata');
-
-        apiGetUserMetadata().then((result) => {
+        retry(() => apiGetUserMetadata()).then((result) => {
           if (result.success === true) {
             setUserMetadata(result.value);
           }

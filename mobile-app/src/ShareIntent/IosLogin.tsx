@@ -2,10 +2,9 @@ import React, { FC, PropsWithChildren, useContext } from 'react';
 import { View } from 'react-native';
 import { IconButton, Text } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { ShareMenuReactView } from 'react-native-share-menu';
 import { AuthContext } from '../auth/AuthContext';
+import { exitSharedScreen } from '../exitSharedScreen';
 import { Loader } from '../loaders/Loader';
-import { ScreenLayout } from '../ui/ScreenLayout';
 
 export const IosLogin: FC<PropsWithChildren> = ({ children }) => {
   const authStatus = useContext(AuthContext);
@@ -20,35 +19,33 @@ export const IosLogin: FC<PropsWithChildren> = ({ children }) => {
   }
 
   return (
-    <ScreenLayout
-      header={
-        <View
-          style={{
-            paddingLeft: insets.left + 8,
-            paddingRight: insets.right + 8,
-          }}
-        >
-          <IconButton
-            icon={'close'}
-            onPress={() => ShareMenuReactView.dismissExtension()}
-            style={{ alignSelf: 'flex-end' }}
-          />
-        </View>
-      }
-      content={
-        <View
-          style={{
-            flexGrow: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
-            padding: 24,
-            gap: 8,
-          }}
-        >
-          <Text variant="bodyLarge">You are not signed in.</Text>
-          <Text variant="bodyLarge">Open Vocably to sign in.</Text>
-        </View>
-      }
-    ></ScreenLayout>
+    <View
+      style={{
+        flexGrow: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 24,
+        gap: 8,
+        position: 'relative',
+      }}
+    >
+      <View
+        style={{
+          paddingLeft: insets.left + 8,
+          paddingRight: insets.right + 8,
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+        }}
+      >
+        <IconButton
+          icon={'close'}
+          onPress={exitSharedScreen}
+          style={{ alignSelf: 'flex-end' }}
+        />
+      </View>
+      <Text variant="bodyLarge">Open Vocably to sign in.</Text>
+    </View>
   );
 };

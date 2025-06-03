@@ -1,3 +1,4 @@
+import { UsageStats } from '@vocably/model';
 import { get } from 'lodash-es';
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext, AuthStatus } from './auth/AuthContext';
@@ -39,16 +40,20 @@ const isPremium = (
 };
 
 const getMinutesBeforeNextTranslation = (
-  lastTranslationTime: number,
+  usageStats: UsageStats,
   authStatus: AuthStatus,
   customerInfoStatus: CustomerInfoStatus
 ): number => {
+  if (usageStats.totalLookups < 50) {
+    return 0;
+  }
+
   if (isPremium(authStatus, customerInfoStatus)) {
     return 0;
   }
 
   const minutesAfterLastTranslation = Math.round(
-    (new Date().getTime() - lastTranslationTime) / 60_000
+    (new Date().getTime() - usageStats.lastLookupTimestamp) / 60_000
   );
 
   return Math.max(0, 2 - minutesAfterLastTranslation);
@@ -62,7 +67,7 @@ export const useMinutesBeforeNextTranslation = () => {
   const [minutesBeforeNextTranslations, setMinutesBeforeNextTranslation] =
     useState<number>(
       getMinutesBeforeNextTranslation(
-        userMetadata.usageStats.lastLookupTimestamp,
+        userMetadata.usageStats,
         authStatus,
         customerInfoStatus
       )
@@ -76,7 +81,7 @@ export const useMinutesBeforeNextTranslation = () => {
 
     setMinutesBeforeNextTranslation(
       getMinutesBeforeNextTranslation(
-        userMetadata.usageStats.lastLookupTimestamp,
+        userMetadata.usageStats,
         authStatus,
         customerInfoStatus
       )
@@ -85,7 +90,7 @@ export const useMinutesBeforeNextTranslation = () => {
     const intervalId = setInterval(async () => {
       setMinutesBeforeNextTranslation(
         getMinutesBeforeNextTranslation(
-          userMetadata.usageStats.lastLookupTimestamp,
+          userMetadata.usageStats,
           authStatus,
           customerInfoStatus
         )
@@ -95,11 +100,7 @@ export const useMinutesBeforeNextTranslation = () => {
     return () => {
       clearInterval(intervalId);
     };
-  }, [
-    userMetadata.usageStats.lastLookupTimestamp,
-    authStatus,
-    customerInfoStatus,
-  ]);
+  }, [userMetadata.usageStats, authStatus, customerInfoStatus]);
 
   return minutesBeforeNextTranslations;
 };

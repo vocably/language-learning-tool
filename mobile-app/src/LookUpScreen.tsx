@@ -5,7 +5,6 @@ import { usePostHog } from 'posthog-react-native';
 import { FC, useContext, useEffect, useRef, useState } from 'react';
 import {
   Alert,
-  BackHandler,
   Keyboard,
   Platform,
   ScrollView,
@@ -21,8 +20,8 @@ import {
 } from 'react-native-paper';
 import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { ShareMenuReactView } from 'react-native-share-menu';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { exitSharedScreen } from './exitSharedScreen';
 import { useLanguageDeck } from './languageDeck/useLanguageDeck';
 import { InlineLoader } from './loaders/InlineLoader';
 import { Loader } from './loaders/Loader';
@@ -129,6 +128,17 @@ export const LookUpScreen: FC<Props> = ({
 
   const minutesBeforeNextTranslation = useMinutesBeforeNextTranslation();
 
+  const updateUsageStats = async () => {
+    console.log('Updating usage stats', userMetadata.usageStats);
+    updateMetadataTimeout.current = null;
+    await updateUserMetadata({
+      usageStats: {
+        lastLookupTimestamp: new Date().getTime(),
+        totalLookups: userMetadata.usageStats.totalLookups + 1,
+      },
+    });
+  };
+
   const lookUp = async () => {
     cancelThePreviousLookUp();
 
@@ -146,6 +156,7 @@ export const LookUpScreen: FC<Props> = ({
 
     if (updateMetadataTimeout.current) {
       clearTimeout(updateMetadataTimeout.current);
+      updateMetadataTimeout.current = null;
     }
 
     Keyboard.dismiss();
@@ -183,15 +194,7 @@ export const LookUpScreen: FC<Props> = ({
       return;
     }
 
-    updateMetadataTimeout.current = setTimeout(() => {
-      console.log('Updating usage stats', userMetadata.usageStats);
-      updateUserMetadata({
-        usageStats: {
-          lastLookupTimestamp: new Date().getTime(),
-          totalLookups: userMetadata.usageStats.totalLookups + 1,
-        },
-      });
-    }, 5_000);
+    updateMetadataTimeout.current = setTimeout(updateUsageStats, 5_000);
 
     setLookupResult(lookupResult);
     setIsAnalyzingPreset(false);
@@ -269,11 +272,14 @@ export const LookUpScreen: FC<Props> = ({
               <Text style={{ fontSize: 18 }}>Vocably</Text>
               <Button
                 style={{ marginLeft: 'auto' }}
-                onPress={() =>
-                  Platform.OS === 'ios'
-                    ? ShareMenuReactView.dismissExtension()
-                    : BackHandler.exitApp()
-                }
+                onPress={async () => {
+                  if (updateMetadataTimeout.current) {
+                    clearTimeout(updateMetadataTimeout.current);
+                    updateMetadataTimeout.current = null;
+                    await updateUsageStats();
+                  }
+                  exitSharedScreen();
+                }}
               >
                 Done
               </Button>
