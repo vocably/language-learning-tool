@@ -1,20 +1,23 @@
 import { parseJson } from '@vocably/api';
 import {
-  defaultUserMetadata,
-  mergeUserMetadata,
-  PartialUserMetadata,
+  defaultUserStaticMetadata,
+  mergeUserStaticMetadata,
   Result,
-  UserMetadata,
+  UserStaticMetadata,
 } from '@vocably/model';
 import { nodeFetchS3File, nodePutS3File } from './nodeS3File';
 
-export const getFileName = (sub: string) => `${sub}/files/metadata.json`;
+export const getStaticMetadataFileName = (sub: string) =>
+  `${sub}/static-metadata.json`;
 
-export const nodeFetchUserMetadata = async (
+export const nodeFetchUserStaticMetadata = async (
   sub: string,
   bucket: string
-): Promise<Result<UserMetadata>> => {
-  const fetchS3FileResult = await nodeFetchS3File(bucket, getFileName(sub));
+): Promise<Result<UserStaticMetadata>> => {
+  const fetchS3FileResult = await nodeFetchS3File(
+    bucket,
+    getStaticMetadataFileName(sub)
+  );
 
   if (fetchS3FileResult.success === false) {
     return fetchS3FileResult;
@@ -23,7 +26,7 @@ export const nodeFetchUserMetadata = async (
   if (fetchS3FileResult.value === null) {
     return {
       success: true,
-      value: defaultUserMetadata,
+      value: defaultUserStaticMetadata,
     };
   }
 
@@ -35,28 +38,31 @@ export const nodeFetchUserMetadata = async (
 
   return {
     success: true,
-    value: mergeUserMetadata(defaultUserMetadata, fileJsonResult.value),
+    value: mergeUserStaticMetadata(
+      defaultUserStaticMetadata,
+      fileJsonResult.value
+    ),
   };
 };
 
-export const nodeSaveUserMetadata = async (
+export const nodeSaveUserStaticMetadata = async (
   sub: string,
   bucket: string,
-  partialUserMetadata: PartialUserMetadata
+  userStaticMetadata: Partial<UserStaticMetadata>
 ): Promise<Result<null>> => {
-  const userMetadataResult = await nodeFetchUserMetadata(sub, bucket);
+  const userMetadataResult = await nodeFetchUserStaticMetadata(sub, bucket);
   if (userMetadataResult.success === false) {
     return userMetadataResult;
   }
 
-  const userMetadata = mergeUserMetadata(
+  const userMetadata = mergeUserStaticMetadata(
     userMetadataResult.value,
-    partialUserMetadata
+    userStaticMetadata
   );
 
   const putFileResult = await nodePutS3File(
     bucket,
-    getFileName(sub),
+    getStaticMetadataFileName(sub),
     JSON.stringify(userMetadata)
   );
 

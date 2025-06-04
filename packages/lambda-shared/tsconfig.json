@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "strict": true,
     "outDir": "dist/esm",
     "module": "esnext",
     "target": "esnext",
