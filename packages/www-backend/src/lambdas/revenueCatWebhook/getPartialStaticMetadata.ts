@@ -2,9 +2,16 @@ import { Webhook } from '@puzzmo/revenue-cat-webhook-types';
 import { UserStaticMetadata } from '@vocably/model';
 
 export const getPartialStaticMetadata = (
-  action: Webhook
+  action: Webhook,
+  staticMetadata: UserStaticMetadata
 ): Partial<UserStaticMetadata> => {
-  let metadata: Partial<UserStaticMetadata> = {};
+  if (staticMetadata.premium_last_event_ms <= action.event.event_timestamp_ms) {
+    return {};
+  }
+
+  let metadata: Partial<UserStaticMetadata> = {
+    premium_last_event_ms: action.event.event_timestamp_ms,
+  };
 
   if (
     action.event.type === 'INITIAL_PURCHASE' ||

@@ -49,7 +49,7 @@ export const nodeSaveUserStaticMetadata = async (
   sub: string,
   bucket: string,
   userStaticMetadata: Partial<UserStaticMetadata>
-): Promise<Result<null>> => {
+): Promise<Result<UserStaticMetadata>> => {
   const userMetadataResult = await nodeFetchUserStaticMetadata(sub, bucket);
   if (userMetadataResult.success === false) {
     return userMetadataResult;
@@ -72,6 +72,6 @@ export const nodeSaveUserStaticMetadata = async (
 
   return {
     success: true,
-    value: null,
+    value: userMetadata,
   };
 };

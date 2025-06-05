@@ -1,5 +1,9 @@
 import { Webhook } from '@puzzmo/revenue-cat-webhook-types';
-import { getHeader, nodeSaveUserStaticMetadata } from '@vocably/lambda-shared';
+import {
+  getHeader,
+  nodeFetchUserStaticMetadata,
+  nodeSaveUserStaticMetadata,
+} from '@vocably/lambda-shared';
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
 import { lastValueFrom, mergeMap, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
@@ -50,10 +54,26 @@ export const revenueCatWebhook = async (
           });
         }
 
+        const staticMetadataResult = await nodeFetchUserStaticMetadata(
+          subResult.value,
+          process.env.STATIC_USER_FILES_BUCKET
+        );
+
+        if (staticMetadataResult.success === false) {
+          console.error('Fetch static metadata error', staticMetadataResult);
+          return buildResponse({
+            statusCode: 500,
+            body: JSON.stringify({
+              success: false,
+              reason: 'Unable to fetch user static metadata.',
+            }),
+          });
+        }
+
         const saveMetadataResult = await nodeSaveUserStaticMetadata(
           subResult.value,
           process.env.STATIC_USER_FILES_BUCKET,
-          getPartialStaticMetadata(action)
+          getPartialStaticMetadata(action, staticMetadataResult.value)
         );
 
         if (saveMetadataResult.success === false) {
@@ -68,7 +88,10 @@ export const revenueCatWebhook = async (
         }
 
         return buildResponse({
-          body: JSON.stringify({ success: true }),
+          body: JSON.stringify({
+            success: true,
+            metadata: saveMetadataResult.value,
+          }),
         });
       }),
       catchError(buildErrorResponse)
