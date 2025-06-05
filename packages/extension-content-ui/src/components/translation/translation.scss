@@ -111,7 +111,7 @@ $section-margin: 8px;
   position: absolute;
   width: 165px;
   top: 6px;
-  right: 40px;
+  right: 90px;
   animation: vocably-floating 3s ease-in-out infinite;
   opacity: 1;
   transition: opacity 200ms ease-in-out;
@@ -187,6 +187,7 @@ $container-padding: $input-padding-y $input-padding-x $input-padding-y
       outline: none;
       min-width: auto;
       box-shadow: none;
+      color: $v-light-color-primary;
 
       &:hover {
         filter: brightness(80%);
@@ -198,6 +199,21 @@ $container-padding: $input-padding-y $input-padding-x $input-padding-y
 
       & > * {
         vertical-align: middle;
+      }
+
+      &.vocably-card-add-button {
+        border: 2px solid $v-light-color-primary;
+        border-radius: 16px;
+        padding-right: 8px !important;
+        padding-left: 2px !important;
+        height: 32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        vocably-icon-spin {
+          --color: #{$v-light-color-primary};
+        }
       }
     }
   }

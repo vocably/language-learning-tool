@@ -54,6 +54,8 @@ export namespace Components {
     }
     interface VocablyIconPlayCircle {
     }
+    interface VocablyIconPlus {
+    }
     interface VocablyIconRemove {
     }
     interface VocablyIconSpin {
@@ -298,6 +300,12 @@ declare global {
         prototype: HTMLVocablyIconPlayCircleElement;
         new (): HTMLVocablyIconPlayCircleElement;
     };
+    interface HTMLVocablyIconPlusElement extends Components.VocablyIconPlus, HTMLStencilElement {
+    }
+    var HTMLVocablyIconPlusElement: {
+        prototype: HTMLVocablyIconPlusElement;
+        new (): HTMLVocablyIconPlusElement;
+    };
     interface HTMLVocablyIconRemoveElement extends Components.VocablyIconRemove, HTMLStencilElement {
     }
     var HTMLVocablyIconRemoveElement: {
@@ -442,6 +450,7 @@ declare global {
         "vocably-icon-edit": HTMLVocablyIconEditElement;
         "vocably-icon-error": HTMLVocablyIconErrorElement;
         "vocably-icon-play-circle": HTMLVocablyIconPlayCircleElement;
+        "vocably-icon-plus": HTMLVocablyIconPlusElement;
         "vocably-icon-remove": HTMLVocablyIconRemoveElement;
         "vocably-icon-spin": HTMLVocablyIconSpinElement;
         "vocably-icon-tag": HTMLVocablyIconTagElement;
@@ -514,6 +523,8 @@ declare namespace LocalJSX {
     interface VocablyIconError {
     }
     interface VocablyIconPlayCircle {
+    }
+    interface VocablyIconPlus {
     }
     interface VocablyIconRemove {
     }
@@ -645,6 +656,7 @@ declare namespace LocalJSX {
         "vocably-icon-edit": VocablyIconEdit;
         "vocably-icon-error": VocablyIconError;
         "vocably-icon-play-circle": VocablyIconPlayCircle;
+        "vocably-icon-plus": VocablyIconPlus;
         "vocably-icon-remove": VocablyIconRemove;
         "vocably-icon-spin": VocablyIconSpin;
         "vocably-icon-tag": VocablyIconTag;
@@ -689,6 +701,7 @@ declare module "@stencil/core" {
             "vocably-icon-edit": LocalJSX.VocablyIconEdit & JSXBase.HTMLAttributes<HTMLVocablyIconEditElement>;
             "vocably-icon-error": LocalJSX.VocablyIconError & JSXBase.HTMLAttributes<HTMLVocablyIconErrorElement>;
             "vocably-icon-play-circle": LocalJSX.VocablyIconPlayCircle & JSXBase.HTMLAttributes<HTMLVocablyIconPlayCircleElement>;
+            "vocably-icon-plus": LocalJSX.VocablyIconPlus & JSXBase.HTMLAttributes<HTMLVocablyIconPlusElement>;
             "vocably-icon-remove": LocalJSX.VocablyIconRemove & JSXBase.HTMLAttributes<HTMLVocablyIconRemoveElement>;
             "vocably-icon-spin": LocalJSX.VocablyIconSpin & JSXBase.HTMLAttributes<HTMLVocablyIconSpinElement>;
             "vocably-icon-tag": LocalJSX.VocablyIconTag & JSXBase.HTMLAttributes<HTMLVocablyIconTagElement>;

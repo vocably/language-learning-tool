@@ -55,7 +55,7 @@ registerContentScript({
     getSecondsBeforeNextTranslation: () => {
       return new Promise((resolve) => {
         setTimeout(() => {
-          resolve(4);
+          resolve(0);
         }, 200);
       });
     },

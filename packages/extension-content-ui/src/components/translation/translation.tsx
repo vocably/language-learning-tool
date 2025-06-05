@@ -526,7 +526,7 @@ export class VocablyTranslation {
                             )}
                             {isDetachedCardItem(card) && (
                               <button
-                                class="vocably-card-action-button"
+                                class="vocably-card-action-button vocably-card-add-button"
                                 title="Add card"
                                 disabled={this.isUpdating !== null}
                                 onClick={() => {
@@ -549,8 +549,17 @@ export class VocablyTranslation {
                                   <vocably-icon-spin></vocably-icon-spin>
                                 )}
                                 {this.isUpdating !== card && (
-                                  <vocably-icon-add></vocably-icon-add>
+                                  <vocably-icon-plus></vocably-icon-plus>
                                 )}
+                                <span
+                                  style={{
+                                    marginLeft: '2px',
+                                    display: 'inline-block',
+                                    fontSize: '16px',
+                                  }}
+                                >
+                                  Learn
+                                </span>
                               </button>
                             )}
                           </div>

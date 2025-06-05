@@ -2,14 +2,21 @@
 
 :host {
   --size: 24px;
+  --color: $v-light-color-body;
 
   // Reddit sets visibility: hidden for custom elements
   visibility: visible !important;
+  height: var(--size);
+  width: var(--size);
 }
 
 .svg {
   width: var(--size);
   height: var(--size);
+
+  circle {
+    fill: var(--color);
+  }
 }
 
 .spinner_VpEe {

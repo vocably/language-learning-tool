@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+
+:host {
+  --logo-color: #{$v-light-color-emphasize};
+
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+
+  // Reddit sets visibility: hidden for custom elements
+  visibility: visible !important;
+}
+
+.svg {
+  height: 100%;
+  width: auto;
+
+  fill: $v-light-color-primary;
+}
