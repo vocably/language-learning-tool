@@ -465,170 +465,6 @@ export class VocablyTranslation {
                     <div class="vocably-cards" data-test="cards">
                       {this.result.value.cards.map((card, itemIndex) => (
                         <div data-test="card" class="vocably-card">
-                          <div class="vocably-card-action">
-                            {isCardItem(card) && (
-                              <div
-                                style={{
-                                  display: 'flex',
-                                  flexDirection: 'column',
-                                  gap: '8px',
-                                }}
-                              >
-                                <button
-                                  class="vocably-card-action-button"
-                                  title="Remove card"
-                                  disabled={this.isUpdating !== null}
-                                  onClick={() => {
-                                    if (this.disabled) {
-                                      return false;
-                                    }
-
-                                    this.saveCardClicked = true;
-                                    if (this.addedItemIndex === itemIndex) {
-                                      this.addedItemIndex = -1;
-                                    }
-                                    this.result.success === true &&
-                                      this.removeCard.emit({
-                                        translationCards: this.result.value,
-                                        card,
-                                      });
-                                  }}
-                                >
-                                  {this.isUpdating === card && (
-                                    <vocably-icon-spin></vocably-icon-spin>
-                                  )}
-                                  {this.isUpdating !== card && (
-                                    <vocably-icon-bookmark-check></vocably-icon-bookmark-check>
-                                  )}
-                                </button>
-
-                                <button
-                                  class="vocably-card-action-button"
-                                  title="Edit tags"
-                                  disabled={this.isUpdating !== null}
-                                  onClick={(e) => {
-                                    if (this.disabled) {
-                                      return;
-                                    }
-
-                                    e.target &&
-                                      this.showTagMenu(
-                                        e.target as HTMLElement,
-                                        card.id
-                                      );
-                                  }}
-                                >
-                                  {this.isUpdating !== card && (
-                                    <vocably-icon-tag></vocably-icon-tag>
-                                  )}
-                                </button>
-                              </div>
-                            )}
-                            {isDetachedCardItem(card) && (
-                              <button
-                                class="vocably-card-action-button vocably-card-add-button"
-                                title="Add card"
-                                disabled={this.isUpdating !== null}
-                                onClick={() => {
-                                  if (this.disabled) {
-                                    return false;
-                                  }
-
-                                  this.saveCardClicked = true;
-                                  if (this.addedItemIndex === -1) {
-                                    this.addedItemIndex = itemIndex;
-                                  }
-                                  this.result.success === true &&
-                                    this.addCard.emit({
-                                      translationCards: this.result.value,
-                                      card,
-                                    });
-                                }}
-                              >
-                                {this.isUpdating === card && (
-                                  <vocably-icon-spin></vocably-icon-spin>
-                                )}
-                                {this.isUpdating !== card && (
-                                  <vocably-icon-plus></vocably-icon-plus>
-                                )}
-                                <span
-                                  style={{
-                                    marginLeft: '2px',
-                                    display: 'inline-block',
-                                    fontSize: '16px',
-                                  }}
-                                >
-                                  Learn
-                                </span>
-                              </button>
-                            )}
-                          </div>
-                          <div class="vocably-safe-action-area">
-                            <vocably-card-source
-                              card={card}
-                              playAudioPronunciation={
-                                this.playAudioPronunciation
-                              }
-                              class={{
-                                'vocably-mb-6': true,
-                                'vocably-card-hint-displayed':
-                                  itemIndex === 0 && this.showSaveHint,
-                              }}
-                            ></vocably-card-source>
-                            <vocably-card-definitions
-                              class="vocably-mb-6"
-                              card={card}
-                              updateCard={this.makeUpdateCard(card)}
-                            ></vocably-card-definitions>
-                            {card.data.example && (
-                              <div>
-                                <div class="vocably-small vocably-mb-6">
-                                  Example:
-                                </div>
-                                <vocably-card-examples
-                                  example={card.data.example}
-                                ></vocably-card-examples>
-                              </div>
-                            )}
-                            {isItem(card) && card.data.tags.length > 0 && (
-                              <div
-                                class="vocably-mt-12"
-                                style={{
-                                  display: 'flex',
-                                  gap: '6px',
-                                  flexWrap: 'wrap',
-                                }}
-                              >
-                                {card.data.tags.map((tagItem) => (
-                                  <div class="vocably-tag">
-                                    {tagItem.data.title}
-
-                                    <button
-                                      type="button"
-                                      class="vocably-tag-remove-button"
-                                      aria-label="Remove this tag from the card"
-                                      title="Remove this tag from the card"
-                                      onClick={this.detachTagClick(
-                                        card,
-                                        tagItem
-                                      )}
-                                    >
-                                      {this.removing &&
-                                        this.removing.card === card &&
-                                        this.removing.tag === tagItem && (
-                                          <vocably-icon-spin></vocably-icon-spin>
-                                        )}
-                                      {(!this.removing ||
-                                        this.removing.card !== card ||
-                                        this.removing.tag !== tagItem) && (
-                                        <vocably-icon-remove class="vocably-tag-remove-button-icon"></vocably-icon-remove>
-                                      )}
-                                    </button>
-                                  </div>
-                                ))}
-                              </div>
-                            )}
-                          </div>
                           {this.canCongratulate && (
                             <div
                               class={
@@ -645,6 +481,172 @@ export class VocablyTranslation {
                               </div>
                             </div>
                           )}
+                          <div class="vocably-card-container">
+                            <div class="vocably-card-action">
+                              {isCardItem(card) && (
+                                <div
+                                  style={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    gap: '8px',
+                                  }}
+                                >
+                                  <button
+                                    class="vocably-card-action-button"
+                                    title="Remove card"
+                                    disabled={this.isUpdating !== null}
+                                    onClick={() => {
+                                      if (this.disabled) {
+                                        return false;
+                                      }
+
+                                      this.saveCardClicked = true;
+                                      if (this.addedItemIndex === itemIndex) {
+                                        this.addedItemIndex = -1;
+                                      }
+                                      this.result.success === true &&
+                                        this.removeCard.emit({
+                                          translationCards: this.result.value,
+                                          card,
+                                        });
+                                    }}
+                                  >
+                                    {this.isUpdating === card && (
+                                      <vocably-icon-spin></vocably-icon-spin>
+                                    )}
+                                    {this.isUpdating !== card && (
+                                      <vocably-icon-bookmark-check></vocably-icon-bookmark-check>
+                                    )}
+                                  </button>
+
+                                  <button
+                                    class="vocably-card-action-button"
+                                    title="Edit tags"
+                                    disabled={this.isUpdating !== null}
+                                    onClick={(e) => {
+                                      if (this.disabled) {
+                                        return;
+                                      }
+
+                                      e.target &&
+                                        this.showTagMenu(
+                                          e.target as HTMLElement,
+                                          card.id
+                                        );
+                                    }}
+                                  >
+                                    {this.isUpdating !== card && (
+                                      <vocably-icon-tag></vocably-icon-tag>
+                                    )}
+                                  </button>
+                                </div>
+                              )}
+                              {isDetachedCardItem(card) && (
+                                <button
+                                  class="vocably-card-action-button vocably-card-add-button"
+                                  title="Add card"
+                                  disabled={this.isUpdating !== null}
+                                  onClick={() => {
+                                    if (this.disabled) {
+                                      return false;
+                                    }
+
+                                    this.saveCardClicked = true;
+                                    if (this.addedItemIndex === -1) {
+                                      this.addedItemIndex = itemIndex;
+                                    }
+                                    this.result.success === true &&
+                                      this.addCard.emit({
+                                        translationCards: this.result.value,
+                                        card,
+                                      });
+                                  }}
+                                >
+                                  {this.isUpdating === card && (
+                                    <vocably-icon-spin></vocably-icon-spin>
+                                  )}
+                                  {this.isUpdating !== card && (
+                                    <vocably-icon-plus></vocably-icon-plus>
+                                  )}
+                                  <span
+                                    style={{
+                                      marginLeft: '2px',
+                                      display: 'inline-block',
+                                      fontSize: '16px',
+                                    }}
+                                  >
+                                    Learn
+                                  </span>
+                                </button>
+                              )}
+                            </div>
+                            <div class="vocably-safe-action-area">
+                              <vocably-card-source
+                                card={card}
+                                playAudioPronunciation={
+                                  this.playAudioPronunciation
+                                }
+                                class={{
+                                  'vocably-mb-6': true,
+                                  'vocably-card-hint-displayed':
+                                    itemIndex === 0 && this.showSaveHint,
+                                }}
+                              ></vocably-card-source>
+                              <vocably-card-definitions
+                                class="vocably-mb-6"
+                                card={card}
+                                updateCard={this.makeUpdateCard(card)}
+                              ></vocably-card-definitions>
+                              {card.data.example && (
+                                <div>
+                                  <div class="vocably-small vocably-mb-6">
+                                    Example:
+                                  </div>
+                                  <vocably-card-examples
+                                    example={card.data.example}
+                                  ></vocably-card-examples>
+                                </div>
+                              )}
+                              {isItem(card) && card.data.tags.length > 0 && (
+                                <div
+                                  class="vocably-mt-12"
+                                  style={{
+                                    display: 'flex',
+                                    gap: '6px',
+                                    flexWrap: 'wrap',
+                                  }}
+                                >
+                                  {card.data.tags.map((tagItem) => (
+                                    <div class="vocably-tag">
+                                      {tagItem.data.title}
+
+                                      <button
+                                        type="button"
+                                        class="vocably-tag-remove-button"
+                                        aria-label="Remove this tag from the card"
+                                        title="Remove this tag from the card"
+                                        onClick={this.detachTagClick(
+                                          card,
+                                          tagItem
+                                        )}
+                                      >
+                                        {this.removing &&
+                                          this.removing.card === card &&
+                                          this.removing.tag === tagItem && (
+                                            <vocably-icon-spin></vocably-icon-spin>
+                                          )}
+                                        {(!this.removing ||
+                                          this.removing.card !== card ||
+                                          this.removing.tag !== tagItem) && (
+                                          <vocably-icon-remove class="vocably-tag-remove-button-icon"></vocably-icon-remove>
+                                        )}
+                                      </button>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          </div>
                         </div>
                       ))}
                     </div>

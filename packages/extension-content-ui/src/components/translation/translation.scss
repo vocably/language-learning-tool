@@ -111,7 +111,7 @@ $section-margin: 8px;
   position: absolute;
   width: 165px;
   top: 6px;
-  right: 90px;
+  right: 40px;
   animation: vocably-floating 3s ease-in-out infinite;
   opacity: 1;
   transition: opacity 200ms ease-in-out;
@@ -151,9 +151,12 @@ $container-padding: $input-padding-y $input-padding-x $input-padding-y
   margin-bottom: 1px;
 
   .vocably-card {
-    position: relative;
-    padding: $container-padding;
     border-top: $internal-border;
+
+    .vocably-card-container {
+      position: relative;
+      padding: $container-padding;
+    }
 
     .vocably-safe-action-area {
       padding-right: 34px;
@@ -202,7 +205,7 @@ $container-padding: $input-padding-y $input-padding-x $input-padding-y
       }
 
       &.vocably-card-add-button {
-        border: 2px solid $v-light-color-primary;
+        border: 1.5px solid $v-light-color-primary;
         border-radius: 16px;
         padding-right: 8px !important;
         padding-left: 2px !important;
@@ -261,12 +264,11 @@ vocably-play-sound {
 }
 
 .vocably-added-congratulation-content {
-  padding-top: 12px;
+  border-bottom: $internal-border;
 }
 
 .vocably-added-congratulation-content-1 {
-  padding: 12px;
-  background: white;
+  padding: $container-padding;
 }
 
 .vocably-list {

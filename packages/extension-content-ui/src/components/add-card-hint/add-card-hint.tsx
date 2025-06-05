@@ -11,7 +11,7 @@ export class VocablyAddCardHint {
   render() {
     return (
       <Host>
-        <span class="hint">Click here to save</span>
+        <span class="hint">Click here</span>
         <svg
           class="arrow"
           width="28"
