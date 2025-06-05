@@ -1,4 +1,4 @@
-import { GetCurrentUserOutput } from '@aws-amplify/auth';
+import { AuthSession } from '@aws-amplify/auth';
 import { createContext } from 'react';
 
 export type AuthStatus =
@@ -10,7 +10,7 @@ export type AuthStatus =
     }
   | {
       status: 'logged-in';
-      user: GetCurrentUserOutput;
+      session: AuthSession;
       attributes: {
         sub: string;
         email: string;

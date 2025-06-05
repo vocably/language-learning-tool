@@ -5,6 +5,8 @@ import {
   Result,
   UserMetadata,
 } from '@vocably/model';
+import { isString } from 'lodash-es';
+import { parseJson } from './parseJson';
 import { request } from './restClient';
 
 export const getUserMetadata = async (): Promise<Result<UserMetadata>> => {
@@ -16,9 +18,19 @@ export const getUserMetadata = async (): Promise<Result<UserMetadata>> => {
     return response;
   }
 
+  let responseJson = response.value;
+  if (isString(responseJson)) {
+    const parseJsonResult = parseJson(responseJson);
+    if (parseJsonResult.success === false) {
+      return parseJsonResult;
+    }
+
+    responseJson = parseJsonResult.value;
+  }
+
   return {
     success: true,
-    value: mapUserMetadata(response.value),
+    value: mapUserMetadata(responseJson),
   };
 };
 

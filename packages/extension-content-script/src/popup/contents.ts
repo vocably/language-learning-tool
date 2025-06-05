@@ -188,23 +188,29 @@ export const setContents = async ({
     popup.appendChild(translation);
   };
 
+  let timerElapsed = false;
+
   const isAlright = (): Promise<
-    [boolean, boolean, GoogleLanguage | null, GoogleLanguage | null]
+    [boolean, number, GoogleLanguage | null, GoogleLanguage | null]
   > => {
     return Promise.all([
       api.isLoggedIn(),
-      api.isActive(),
+      api.getSecondsBeforeNextTranslation(),
       api.getInternalSourceLanguage(),
       api.getInternalProxyLanguage(),
     ]);
   };
 
-  const [isLoggedIn, isActive, internalSourceLanguage, internalTargetLanguage] =
-    await isAlright();
+  const [
+    isLoggedIn,
+    secondsBeforeNextTranslation,
+    internalSourceLanguage,
+    internalTargetLanguage,
+  ] = await isAlright();
 
   if (
     isLoggedIn &&
-    isActive &&
+    (secondsBeforeNextTranslation === 0 || timerElapsed) &&
     internalSourceLanguage &&
     internalTargetLanguage
   ) {
@@ -216,7 +222,7 @@ export const setContents = async ({
 
   const updateAlertMessage = async (
     isLoggedIn: boolean,
-    isActive: boolean,
+    secondsBeforeNextTranslation: number,
     internalSourceLanguage: GoogleLanguage | null,
     internalTargetLanguage: GoogleLanguage | null
   ) => {
@@ -237,13 +243,18 @@ export const setContents = async ({
       return;
     }
 
-    if (!isActive) {
+    if (secondsBeforeNextTranslation > 0) {
       if (alert.dataset.message !== 'subscribe') {
-        const isEligibleForTrial = await api.isEligibleForTrial();
         alert.dataset.message = 'subscribe';
         alert.innerHTML = '';
-        const subscribeElement = document.createElement('vocably-subscribe');
-        subscribeElement.trial = isEligibleForTrial;
+        const subscribeElement = document.createElement(
+          'vocably-subscription-timer'
+        );
+        // @ts-ignore
+        subscribeElement.seconds = secondsBeforeNextTranslation;
+        subscribeElement.addEventListener('elapsed', () => {
+          timerElapsed = true;
+        });
         alert.appendChild(subscribeElement);
       }
       return;
@@ -276,7 +287,7 @@ export const setContents = async ({
 
   await updateAlertMessage(
     isLoggedIn,
-    isActive,
+    secondsBeforeNextTranslation,
     internalSourceLanguage,
     internalTargetLanguage
   );
@@ -293,13 +304,13 @@ export const setContents = async ({
   intervalId = setInterval(async () => {
     const [
       isLoggedIn,
-      isActive,
+      secondsBeforeNextTranslation,
       internalSourceLanguage,
       internalTargetLanguage,
     ] = await isAlright();
     if (
       isLoggedIn &&
-      isActive &&
+      (secondsBeforeNextTranslation === 0 || timerElapsed) &&
       internalSourceLanguage &&
       internalTargetLanguage
     ) {
@@ -310,7 +321,7 @@ export const setContents = async ({
     } else {
       await updateAlertMessage(
         isLoggedIn,
-        isActive,
+        secondsBeforeNextTranslation,
         internalSourceLanguage,
         internalTargetLanguage
       );

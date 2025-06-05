@@ -6,6 +6,7 @@
     "build": "webpack --config webpack.config.js",
     "test": "echo '@vocably/www-backend has no tests.'"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "@puzzmo/revenue-cat-webhook-types": "^0.3.0"
+  }
 }

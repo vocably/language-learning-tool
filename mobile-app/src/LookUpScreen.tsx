@@ -2,10 +2,9 @@ import { NavigationProp } from '@react-navigation/native';
 import { analyze } from '@vocably/api';
 import { AnalyzePayload, GoogleLanguage, languageList } from '@vocably/model';
 import { usePostHog } from 'posthog-react-native';
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useContext, useEffect, useRef, useState } from 'react';
 import {
   Alert,
-  BackHandler,
   Keyboard,
   Platform,
   ScrollView,
@@ -21,12 +20,13 @@ import {
 } from 'react-native-paper';
 import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { ShareMenuReactView } from 'react-native-share-menu';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { exitSharedScreen } from './exitSharedScreen';
 import { useLanguageDeck } from './languageDeck/useLanguageDeck';
 import { InlineLoader } from './loaders/InlineLoader';
 import { Loader } from './loaders/Loader';
 import { AnalyzeResult } from './LookUpScreen/AnalyzeResult';
+import { PremiumCta } from './LookUpScreen/PremiumCta';
 import { TranslationPresetForm } from './LookUpScreen/TranslationPresetForm';
 import { SearchInput, SearchInputRef } from './SearchInput';
 import { mainPadding } from './styles';
@@ -34,6 +34,8 @@ import { Preset } from './TranslationPreset/TranslationPresetContainer';
 import { useTranslationPreset } from './TranslationPreset/useTranslationPreset';
 import { ScreenLayout } from './ui/ScreenLayout';
 import { useAnalyzeOperations } from './useAnalyzeOperations';
+import { useMinutesBeforeNextTranslation } from './useMinutesBeforeNextTranslation';
+import { UserMetadataContext } from './UserMetadataContainer';
 
 const padding = 16;
 
@@ -73,6 +75,7 @@ export const LookUpScreen: FC<Props> = ({
 }) => {
   const translationPresetState = useTranslationPreset();
   const [lookUpText, setLookUpText] = useState(initialText);
+  const { userMetadata, updateUserMetadata } = useContext(UserMetadataContext);
   const [isAnalyzingPreset, setIsAnalyzingPreset] = useState<Preset | false>(
     false
   );
@@ -119,6 +122,23 @@ export const LookUpScreen: FC<Props> = ({
 
   const abortControllerRef = useRef<AbortController | null>(null);
 
+  const updateMetadataTimeout = useRef<ReturnType<typeof setTimeout> | null>(
+    null
+  );
+
+  const minutesBeforeNextTranslation = useMinutesBeforeNextTranslation();
+
+  const updateUsageStats = async () => {
+    console.log('Updating usage stats', userMetadata.usageStats);
+    updateMetadataTimeout.current = null;
+    await updateUserMetadata({
+      usageStats: {
+        lastLookupTimestamp: new Date().getTime(),
+        totalLookups: userMetadata.usageStats.totalLookups + 1,
+      },
+    });
+  };
+
   const lookUp = async () => {
     cancelThePreviousLookUp();
 
@@ -132,6 +152,11 @@ export const LookUpScreen: FC<Props> = ({
 
     if (translationPresetState.status === 'unknown') {
       return;
+    }
+
+    if (updateMetadataTimeout.current) {
+      clearTimeout(updateMetadataTimeout.current);
+      updateMetadataTimeout.current = null;
     }
 
     Keyboard.dismiss();
@@ -168,6 +193,8 @@ export const LookUpScreen: FC<Props> = ({
     ) {
       return;
     }
+
+    updateMetadataTimeout.current = setTimeout(updateUsageStats, 5_000);
 
     setLookupResult(lookupResult);
     setIsAnalyzingPreset(false);
@@ -245,11 +272,14 @@ export const LookUpScreen: FC<Props> = ({
               <Text style={{ fontSize: 18 }}>Vocably</Text>
               <Button
                 style={{ marginLeft: 'auto' }}
-                onPress={() =>
-                  Platform.OS === 'ios'
-                    ? ShareMenuReactView.dismissExtension()
-                    : BackHandler.exitApp()
-                }
+                onPress={async () => {
+                  if (updateMetadataTimeout.current) {
+                    clearTimeout(updateMetadataTimeout.current);
+                    updateMetadataTimeout.current = null;
+                    await updateUsageStats();
+                  }
+                  exitSharedScreen();
+                }}
               >
                 Done
               </Button>
@@ -288,11 +318,16 @@ export const LookUpScreen: FC<Props> = ({
               onChange={setLookUpText}
               onSubmit={lookUp}
               disabled={
+                minutesBeforeNextTranslation > 0 ||
                 !translationPresetState.preset.sourceLanguage ||
                 !translationPresetState.preset.translationLanguage
               }
             />
           </View>
+          <PremiumCta
+            minutes={minutesBeforeNextTranslation}
+            padding={padding}
+          />
         </Surface>
       }
       content={

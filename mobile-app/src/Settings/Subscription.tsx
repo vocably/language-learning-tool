@@ -23,8 +23,6 @@ export const Subscription: FC<Props> = ({ style }) => {
 
   const customerInfoStatus = useContext(CustomerInfoContext);
 
-  console.log(customerInfoStatus);
-
   async function presentPaywall(): Promise<boolean> {
     // Present paywall for current offering:
     const paywallResult: PAYWALL_RESULT = await RevenueCatUI.presentPaywall();

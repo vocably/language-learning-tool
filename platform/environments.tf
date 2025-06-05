@@ -127,13 +127,20 @@ resource "local_file" "analyze_test_environment" {
 
 locals {
   www_backend_env_content = <<EOT
-EMAILS_TABLE="${aws_dynamodb_table.emails.name}"
+USER_POOL_ID="${aws_cognito_user_pool.users.id}"
+STATIC_USER_FILES_BUCKET="${aws_s3_bucket.user_static_files.bucket}"
+REVENUE_CAT_AUTHORIZATION_HEADER="${var.revenue_cat_auth_header}"
   EOT
 }
 
 resource "local_file" "www_backend_environment" {
   content  = local.www_backend_env_content
   filename = "${local.www_backed_root}/.env.local"
+}
+
+resource "local_file" "www_backend_test_environment" {
+  content  = local.www_backend_env_content
+  filename = "${local.www_backed_root}/.env.test.local"
 }
 
 locals {

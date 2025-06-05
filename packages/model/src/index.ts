@@ -19,3 +19,4 @@ export * from './text-to-speech';
 export * from './translation-cards';
 export * from './user';
 export * from './user-metadata';
+export * from './user-static-metadata';

@@ -1,9 +1,4 @@
-import {
-  GetObjectCommand,
-  GetObjectCommandOutput,
-  PutObjectCommand,
-  S3Client,
-} from '@aws-sdk/client-s3';
+import { parseJson } from '@vocably/api';
 import {
   defaultUserMetadata,
   mergeUserMetadata,
@@ -11,58 +6,36 @@ import {
   Result,
   UserMetadata,
 } from '@vocably/model';
-import { Readable } from 'node:stream';
+import { nodeFetchS3File, nodePutS3File } from './nodeS3File';
 
-const s3Client = new S3Client({ region: process.env.AWS_REGION });
+export const getFileName = (sub: string) => `${sub}/files/metadata.json`;
 
 export const nodeFetchUserMetadata = async (
   sub: string,
   bucket: string
 ): Promise<Result<UserMetadata>> => {
-  const command = new GetObjectCommand({
-    Bucket: bucket,
-    Key: `${sub}/files/metadata.json`,
-  });
-  let response: GetObjectCommandOutput;
+  const fetchS3FileResult = await nodeFetchS3File(bucket, getFileName(sub));
 
-  try {
-    response = await s3Client.send(command);
-  } catch (e) {
-    if (e.Code === 'NoSuchKey') {
-      return {
-        success: true,
-        value: defaultUserMetadata,
-      };
-    }
-
-    return {
-      success: false,
-      errorCode: 'USER_METADATA_FETCH_ERROR',
-      reason: `Unable to fetch user metadata for ${sub}`,
-      extra: e,
-    };
+  if (fetchS3FileResult.success === false) {
+    return fetchS3FileResult;
   }
 
-  if (!response.Body) {
+  if (fetchS3FileResult.value === null) {
     return {
       success: true,
       value: defaultUserMetadata,
     };
   }
 
-  const stream = response.Body as Readable;
-  const chunks: Buffer[] = [];
+  const fileJsonResult = parseJson(fetchS3FileResult.value);
 
-  for await (const chunk of stream) {
-    chunks.push(chunk);
+  if (fileJsonResult.success === false) {
+    return fileJsonResult;
   }
 
   return {
     success: true,
-    value: mergeUserMetadata(
-      defaultUserMetadata,
-      JSON.parse(Buffer.concat(chunks).toString('utf-8'))
-    ),
+    value: mergeUserMetadata(defaultUserMetadata, fileJsonResult.value),
   };
 };
 
@@ -81,23 +54,18 @@ export const nodeSaveUserMetadata = async (
     partialUserMetadata
   );
 
-  try {
-    const command = new PutObjectCommand({
-      Bucket: bucket,
-      Key: `${sub}/files/metadata.json`,
-      Body: JSON.stringify(userMetadata),
-    });
-    await s3Client.send(command);
-    return {
-      success: true,
-      value: null,
-    };
-  } catch (error) {
-    return {
-      success: false,
-      errorCode: 'USER_METADATA_PUT_ERROR',
-      reason: `Unable to save user metadata for ${sub}`,
-      extra: error,
-    };
+  const putFileResult = await nodePutS3File(
+    bucket,
+    getFileName(sub),
+    JSON.stringify(userMetadata)
+  );
+
+  if (putFileResult.success === false) {
+    return putFileResult;
   }
+
+  return {
+    success: true,
+    value: null,
+  };
 };

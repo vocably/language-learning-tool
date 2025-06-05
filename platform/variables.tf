@@ -142,3 +142,8 @@ variable "openai_api_key" {
   type      = string
   sensitive = true
 }
+
+variable "revenue_cat_auth_header" {
+  type      = string
+  sensitive = true
+}

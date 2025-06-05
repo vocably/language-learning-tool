@@ -1,12 +1,14 @@
 import React, { FC, PropsWithChildren, useContext } from 'react';
 import { View } from 'react-native';
-import { Button, Text } from 'react-native-paper';
-import { ShareMenuReactView } from 'react-native-share-menu';
+import { IconButton, Text } from 'react-native-paper';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { AuthContext } from '../auth/AuthContext';
+import { exitSharedScreen } from '../exitSharedScreen';
 import { Loader } from '../loaders/Loader';
 
 export const IosLogin: FC<PropsWithChildren> = ({ children }) => {
   const authStatus = useContext(AuthContext);
+  const insets = useSafeAreaInsets();
 
   if (authStatus.status === 'undefined') {
     return <Loader>Authenticating...</Loader>;
@@ -22,21 +24,28 @@ export const IosLogin: FC<PropsWithChildren> = ({ children }) => {
         flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        padding: 24,
+        gap: 8,
+        position: 'relative',
       }}
     >
-      <Text
-        variant="bodyLarge"
-        style={{ marginBottom: 15, textAlign: 'center' }}
+      <View
+        style={{
+          paddingLeft: insets.left + 8,
+          paddingRight: insets.right + 8,
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+        }}
       >
-        Open App to sign in and try the Vocably experience.
-      </Text>
-      <Button
-        mode="contained"
-        onPress={ShareMenuReactView.openApp}
-        style={{ marginBottom: 20 }}
-      >
-        Open App
-      </Button>
+        <IconButton
+          icon={'close'}
+          onPress={exitSharedScreen}
+          style={{ alignSelf: 'flex-end' }}
+        />
+      </View>
+      <Text variant="bodyLarge">Open Vocably to sign in.</Text>
     </View>
   );
 };

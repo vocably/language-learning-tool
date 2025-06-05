@@ -25,6 +25,7 @@ declare -a variables=(
   "FASTFILE_MATCH_TYPE"
   "FASTFILE_TEAM_ID"
   "FASTFILE_USERNAME"
+  "REVENUE_CAT_AUTHORIZATION_HEADER"
 )
 
 for variable in "${variables[@]}"

@@ -11,6 +11,11 @@ module.exports = {
   entry: getModules('./src/lambdas'),
   externals: {
     'aws-sdk': 'aws-sdk',
+    '@aws-sdk/client-s3': '@aws-sdk/client-s3',
+    '@aws-sdk/client-cognito-identity-provider':
+      '@aws-sdk/client-cognito-identity-provider',
+    '@aws-sdk/client-dynamodb': '@aws-sdk/client-dynamodb',
+    '@aws-sdk/client-sesv2': '@aws-sdk/client-sesv2',
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
@@ -19,7 +24,7 @@ module.exports = {
   module: {
     rules: [{ test: /\.tsx?$/, loader: 'ts-loader' }],
   },
-  plugins: [new DefinePlugin(getEnvironmentVariables())],
+  plugins: [new DefinePlugin(getEnvironmentVariables().stringified)],
   output: {
     path: path.join(__dirname, 'dist'),
     libraryTarget: 'commonjs',

@@ -10,8 +10,10 @@ import { NavigationContainer } from '../NavigationContainer';
 import { PostHogProvider } from '../PostHogProvider';
 import { ThemeProvider } from '../ThemeProvider';
 import { TranslationPresetContainer } from '../TranslationPreset/TranslationPresetContainer';
+import { UserMetadataContainer } from '../UserMetadataContainer';
 import { Login } from './Login';
 import { ShareIntentLookUpScreen } from './ShareIntentLookUpScreen';
+import { Timer } from './Timer';
 import { Viewport } from './Viewport';
 
 const Stack = createStackNavigator();
@@ -31,32 +33,36 @@ export const ShareIntentAppBase: FC<Props> = ({ os }) => {
           <PostHogProvider>
             <AuthContainer>
               <Login os={os}>
-                <LanguagesContainer>
-                  <TranslationPresetContainer>
-                    <SafeAreaProvider>
-                      <Stack.Navigator>
-                        <Stack.Screen
-                          name="Vocably"
-                          component={ShareIntentLookUpScreen}
-                          options={{
-                            headerShown: false,
-                            presentation: 'card',
-                            gestureEnabled: true,
-                          }}
-                        />
-                        <Stack.Screen
-                          name="LanguageSelector"
-                          component={LanguageSelectorModal}
-                          options={{
-                            headerShown: false,
-                            presentation: 'modal',
-                            gestureEnabled: true,
-                          }}
-                        />
-                      </Stack.Navigator>
-                    </SafeAreaProvider>
-                  </TranslationPresetContainer>
-                </LanguagesContainer>
+                <UserMetadataContainer>
+                  <Timer>
+                    <LanguagesContainer>
+                      <TranslationPresetContainer>
+                        <SafeAreaProvider>
+                          <Stack.Navigator>
+                            <Stack.Screen
+                              name="Vocably"
+                              component={ShareIntentLookUpScreen}
+                              options={{
+                                headerShown: false,
+                                presentation: 'card',
+                                gestureEnabled: true,
+                              }}
+                            />
+                            <Stack.Screen
+                              name="LanguageSelector"
+                              component={LanguageSelectorModal}
+                              options={{
+                                headerShown: false,
+                                presentation: 'modal',
+                                gestureEnabled: true,
+                              }}
+                            />
+                          </Stack.Navigator>
+                        </SafeAreaProvider>
+                      </TranslationPresetContainer>
+                    </LanguagesContainer>
+                  </Timer>
+                </UserMetadataContainer>
               </Login>
             </AuthContainer>
           </PostHogProvider>

@@ -11,7 +11,7 @@ import { AuthContext } from './auth/AuthContext';
 
 type Props = {};
 
-type CustomerInfoStatus =
+export type CustomerInfoStatus =
   | {
       status: 'undefined';
     }
