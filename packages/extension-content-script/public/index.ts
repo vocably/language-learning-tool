@@ -52,6 +52,13 @@ registerContentScript({
       // @ts-ignore
       document.getElementById('hasProxyLanguage').checked = true;
     },
+    getSecondsBeforeNextTranslation: () => {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(4);
+        }, 200);
+      });
+    },
     isActive: () =>
       Promise.resolve(
         (document.getElementById('isActive') as HTMLInputElement).checked

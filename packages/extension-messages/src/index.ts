@@ -48,6 +48,11 @@ export const [setSettings, onSetSettingsRequest] = createScopedMessage<
   ExtensionSettings
 >('setSettings');
 
+export const [
+  getSecondsBeforeNextTranslation,
+  onGetSecondsBeforeNextTranslationRequest,
+] = createScopedMessage<void, number>('getSecondsBeforeNextTranslation');
+
 export const [isActive, onIsActiveRequest] = createScopedMessage<void, boolean>(
   'isActive'
 );

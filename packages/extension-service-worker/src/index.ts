@@ -24,6 +24,7 @@ import {
   onGetLanguagePairs,
   onGetLocationLanguageRequest,
   onGetProxyLanguage,
+  onGetSecondsBeforeNextTranslationRequest,
   onGetSettingsRequest,
   onGetSourceLanguage,
   onIsActiveRequest,
@@ -164,6 +165,10 @@ export const registerServiceWorker = (
     }
 
     return sendResponse(isLoggedIn);
+  });
+
+  onGetSecondsBeforeNextTranslationRequest(async (sendResponse) => {
+    return sendResponse(0);
   });
 
   onIsActiveRequest(async (sendResponse) => {
