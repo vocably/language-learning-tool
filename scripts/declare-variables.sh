@@ -14,6 +14,7 @@ declare -a variables=(
   "TF_VAR_apple_sign_in_key"
   "TF_VAR_brevo_api_key"
   "TF_VAR_openai_api_key"
+  "TF_VAR_revenue_cat_auth_header"
   "APP_STORE_CONNECT_API_KEY_KEY_ID"
   "APP_STORE_CONNECT_API_KEY_ISSUER_ID"
   "APP_STORE_CONNECT_API_KEY_KEY"
@@ -25,7 +26,6 @@ declare -a variables=(
   "FASTFILE_MATCH_TYPE"
   "FASTFILE_TEAM_ID"
   "FASTFILE_USERNAME"
-  "REVENUE_CAT_AUTHORIZATION_HEADER"
 )
 
 for variable in "${variables[@]}"
