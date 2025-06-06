@@ -106,7 +106,7 @@ if (document.getElementById('automatically-download-mobile-app')) {
     document.getElementById('mobile-app-ios-link').classList.add('d-none');
   } else if (isIos) {
     window.location.href =
-      'https://apps.apple.com/us/app/vocably-pro-language-cards/id1641258757';
+      'https://apps.apple.com/app/vocably-pro-language-cards/id1641258757';
     document.getElementById('mobile-app-android-link').classList.add('d-none');
   }
 

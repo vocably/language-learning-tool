@@ -18,6 +18,20 @@
     <link rel="canonical" href="{{htmlWebpackPlugin.options.canonicalHref}}" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <base href="/" />
+    <style>
+      .show-android,
+      .hide-android,
+      .show-ios,
+      .hide-ios,
+      .hide-chrome,
+      .hide-safari,
+      .show-chrome,
+      .show-safari,
+      .show-any,
+      .show-other {
+        visibility: hidden;
+      }
+    </style>
   </head>
   <body id="page-top" class="d-flex flex-column min-vh-100">
     {{#unless disableAnalytics}}
@@ -75,20 +89,19 @@
             <a
               href='https://chrome.google.com/webstore/detail/vocably/baocigmmhhdemijfjnjdidbkfgpgogmb'
               class='show-chrome btn btn-primary btn-sm rounded-pill px-5 text-sm'
-            >Get</a>
+            >Get started</a>
             <a
               href='https://apps.apple.com/app/id6464076425'
               class='show-safari btn btn-primary btn-sm rounded-pill px-5 text-sm'
-            >Get</a>
+            >Get started</a>
             <a
               href='https://play.google.com/store/apps/details?id=com.vocablypro'
               class='show-android btn btn-primary btn-sm rounded-pill px-5 text-sm'
-            >Get</a>
+            >Get started</a>
             <a
-              href='https://apps.apple.com/us/app/vocably-pro-language-cards/id1641258757'
+              href='https://apps.apple.com/app/vocably-pro-language-cards/id1641258757'
               class='show-ios btn btn-primary btn-sm rounded-pill px-5 text-sm'
-            >Get</a>
-            <div class="hide-other" style="font-size: 1rem; text-align: center; margin-top:0.2rem;">Vocably is free.</div>
+            >Get started</a>
           </div>
         </div>
       </nav>
@@ -102,7 +115,7 @@
         <div class="row g-3 justify-content-start justify-content-lg-center">
           <div class="col-lg-4 col-12 mb-4 mb-lg-0">
             <a href="/"><img src="/assets/logo-dark.svg" alt="Vocably" style="height: 1.3em;opacity: 0.5"/></a>
-            <div class="mt-3" style="line-height: 1rem;">Free and loved by hundreds of users.</div>
+            <div class="mt-3" style="line-height: 1rem;">New. Loved by<br />hundreds of users.</div>
             <style>
               .rating {
                 width: 80px;
@@ -149,7 +162,7 @@
               <li class="mb-2"><a href="https://apps.apple.com/app/id6464076425" target="_blank">Desktop Safari Extension</a></li>
               <li class="mb-2"><a href="/ios-safari-extension.html" target="_blank">iOS Safari Extension</a></li>
               <li class="mb-2"><a href="https://play.google.com/store/apps/details?id=com.vocablypro" target="_blank">Android App</a></li>
-              <li class="mb-2"><a href="https://apps.apple.com/us/app/vocably-pro-language-cards/id1641258757" target="_blank">iOS App</a></li>
+              <li class="mb-2"><a href="https://apps.apple.com/app/vocably-pro-language-cards/id1641258757" target="_blank">iOS App</a></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-4 col-6 mb-4 mb-md-0">
