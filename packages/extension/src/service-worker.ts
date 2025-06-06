@@ -46,3 +46,8 @@ chrome.runtime.onInstalled.addListener(async (details) => {
 });
 
 chrome.runtime.setUninstallURL('https://app.vocably.pro/page/uninstall');
+
+// @ts-ignore
+window.clearStorage = () => {
+  chrome.storage.sync.clear();
+};
