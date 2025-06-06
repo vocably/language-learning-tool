@@ -495,6 +495,7 @@ export class VocablyTranslation {
                                     class="vocably-card-action-button"
                                     title="Remove card"
                                     disabled={this.isUpdating !== null}
+                                    style={{ marginTop: '6px' }}
                                     onClick={() => {
                                       if (this.disabled) {
                                         return false;
@@ -586,8 +587,12 @@ export class VocablyTranslation {
                                 playAudioPronunciation={
                                   this.playAudioPronunciation
                                 }
+                                style={{
+                                  marginTop: '6px',
+                                  marginBottom: '6px',
+                                }}
                                 class={{
-                                  'vocably-mb-6': true,
+                                  'vocably-card-source': true,
                                   'vocably-card-hint-displayed':
                                     itemIndex === 0 && this.showSaveHint,
                                 }}
