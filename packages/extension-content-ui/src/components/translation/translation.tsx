@@ -476,7 +476,9 @@ export class VocablyTranslation {
                             >
                               <div class="vocably-added-congratulation-content">
                                 <div class="vocably-added-congratulation-content-1">
-                                  <vocably-first-translation-congratulation></vocably-first-translation-congratulation>
+                                  <vocably-first-translation-congratulation
+                                    card={card}
+                                  ></vocably-first-translation-congratulation>
                                 </div>
                               </div>
                             </div>

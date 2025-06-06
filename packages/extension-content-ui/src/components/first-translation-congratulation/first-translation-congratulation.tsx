@@ -1,4 +1,5 @@
-import { Component, h, Host } from '@stencil/core';
+import { Component, h, Host, Prop } from '@stencil/core';
+import { TranslationCard } from '@vocably/model';
 
 @Component({
   tag: 'vocably-first-translation-congratulation',
@@ -6,11 +7,14 @@ import { Component, h, Host } from '@stencil/core';
   shadow: true,
 })
 export class VocablyFirstTranslationCongratulation {
+  @Prop() card: TranslationCard;
   render() {
     return (
       <Host>
-        <p>You can translate words and add cards on any website.</p>
-        <p>Open the mobile app to review and study your cards.</p>
+        <p>
+          <strong>{this.card.data.source}</strong> is added to your collection.
+        </p>
+        <p>Open the mobile app to study your cards.</p>
         <p class="small">Scan the QR code to install the app.</p>
         <p>
           <vocably-qr-code style={{ width: '200px' }}></vocably-qr-code>

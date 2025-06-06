@@ -35,6 +35,7 @@ export namespace Components {
     interface VocablyCloseButton {
     }
     interface VocablyFirstTranslationCongratulation {
+        "card": TranslationCard;
     }
     interface VocablyIconAdd {
     }
@@ -505,6 +506,7 @@ declare namespace LocalJSX {
         "onClose"?: (event: VocablyCloseButtonCustomEvent<void>) => void;
     }
     interface VocablyFirstTranslationCongratulation {
+        "card"?: TranslationCard;
     }
     interface VocablyIconAdd {
     }
