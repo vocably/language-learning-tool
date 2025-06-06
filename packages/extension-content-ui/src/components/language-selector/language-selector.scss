@@ -1,0 +1,44 @@
+@import '../../styles/component';
+$input-padding-x: 14px;
+$input-padding-y: 10px;
+
+:host {
+  @include base-font();
+  display: inline-block;
+  // Reddit sets visibility: hidden for custom elements
+  visibility: visible !important;
+
+  --hint-width: 0px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.hint {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: $input-padding-x;
+  display: inline-flex;
+  align-items: center;
+  font-size: $base-font-size * 0.9 !important;
+  pointer-events: none;
+  padding-right: 4px;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
+.vocably-input-select {
+  width: 100%;
+  @include select($input-padding-x, $input-padding-y);
+
+  padding-left: calc(var(--hint-width) + #{$input-padding-x}) !important;
+  font-weight: bold;
+
+  @media screen and (max-width: 600px) {
+    font-weight: normal;
+  }
+}

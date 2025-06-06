@@ -327,43 +327,27 @@ export class VocablyTranslation {
 
   render() {
     const sourceLanguageSelector = this.result && this.result.success && (
-      <select
-        class="vocably-input-select"
+      <vocably-language-selector
+        hint={'I study'}
         disabled={this.loading || this.disabled}
-        onChange={(event) =>
-          this.changeSourceLanguage.emit(
-            (event.target as HTMLSelectElement).value
-          )
-        }
-      >
-        {Object.entries(languageList)
-          .sort(sortLanguages(this.existingSourceLanguages))
-          .map(([code, name]) => (
-            <option selected={this.sourceLanguage === code} value={code}>
-              {name}
-            </option>
-          ))}
-      </select>
+        onChoose={(event) => this.changeSourceLanguage.emit(event.detail)}
+        value={this.sourceLanguage}
+        languages={Object.entries(languageList).sort(
+          sortLanguages(this.existingSourceLanguages)
+        )}
+      ></vocably-language-selector>
     );
 
     const targetLanguageSelector = this.result && this.result.success && (
-      <select
-        class="vocably-input-select"
+      <vocably-language-selector
+        hint={'I speak'}
         disabled={this.loading || this.disabled}
-        onChange={(event) =>
-          this.changeTargetLanguage.emit(
-            (event.target as HTMLSelectElement).value
-          )
-        }
-      >
-        {Object.entries(languageList)
-          .sort(sortLanguages(this.existingTargetLanguages))
-          .map(([code, name]) => (
-            <option selected={this.targetLanguage === code} value={code}>
-              {name}
-            </option>
-          ))}
-      </select>
+        onChoose={(event) => this.changeTargetLanguage.emit(event.detail)}
+        value={this.targetLanguage}
+        languages={Object.entries(languageList).sort(
+          sortLanguages(this.existingTargetLanguages)
+        )}
+      ></vocably-language-selector>
     );
 
     const showChatGpt =

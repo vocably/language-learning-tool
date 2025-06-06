@@ -296,14 +296,10 @@ vocably-play-sound {
   .vocably-language-wrapper {
     width: 46%;
 
-    .vocably-input-select {
+    vocably-language-selector {
       width: 100%;
     }
   }
-}
-
-.vocably-input-select {
-  @include select($input-padding-x, $input-padding-y);
 }
 
 .vocably-button {

@@ -12,7 +12,10 @@ export class VocablyFirstTranslationCongratulation {
     return (
       <Host>
         <p>
-          <strong>{this.card.data.source}</strong> is added to your collection.
+          <strong style={{ fontWeight: 'bold' }}>
+            {this.card.data.source}
+          </strong>{' '}
+          is added to your collection.
         </p>
         <p>Open the mobile app to study your cards.</p>
         <p class="small">Scan the QR code to install the app.</p>

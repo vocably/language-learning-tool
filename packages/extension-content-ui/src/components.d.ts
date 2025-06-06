@@ -74,6 +74,12 @@ export namespace Components {
         "targetLanguage": string;
         "waiting": boolean;
     }
+    interface VocablyLanguageSelector {
+        "disabled": boolean;
+        "hint": string;
+        "languages": Array<[code: string, name: string]>;
+        "value": string;
+    }
     interface VocablyLogo {
     }
     interface VocablyMobileButton {
@@ -169,6 +175,10 @@ export interface VocablyCloseButtonCustomEvent<T> extends CustomEvent<T> {
 export interface VocablyLanguageCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLVocablyLanguageElement;
+}
+export interface VocablyLanguageSelectorCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLVocablyLanguageSelectorElement;
 }
 export interface VocablyPopupCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -349,6 +359,12 @@ declare global {
         prototype: HTMLVocablyLanguageElement;
         new (): HTMLVocablyLanguageElement;
     };
+    interface HTMLVocablyLanguageSelectorElement extends Components.VocablyLanguageSelector, HTMLStencilElement {
+    }
+    var HTMLVocablyLanguageSelectorElement: {
+        prototype: HTMLVocablyLanguageSelectorElement;
+        new (): HTMLVocablyLanguageSelectorElement;
+    };
     interface HTMLVocablyLogoElement extends Components.VocablyLogo, HTMLStencilElement {
     }
     var HTMLVocablyLogoElement: {
@@ -459,6 +475,7 @@ declare global {
         "vocably-icon-volume-medium": HTMLVocablyIconVolumeMediumElement;
         "vocably-icon-window-close": HTMLVocablyIconWindowCloseElement;
         "vocably-language": HTMLVocablyLanguageElement;
+        "vocably-language-selector": HTMLVocablyLanguageSelectorElement;
         "vocably-logo": HTMLVocablyLogoElement;
         "vocably-mobile-button": HTMLVocablyMobileButtonElement;
         "vocably-overlay": HTMLVocablyOverlayElement;
@@ -548,6 +565,13 @@ declare namespace LocalJSX {
         "sourceLanguage"?: string;
         "targetLanguage"?: string;
         "waiting"?: boolean;
+    }
+    interface VocablyLanguageSelector {
+        "disabled"?: boolean;
+        "hint"?: string;
+        "languages"?: Array<[code: string, name: string]>;
+        "onChoose"?: (event: VocablyLanguageSelectorCustomEvent<string>) => void;
+        "value"?: string;
     }
     interface VocablyLogo {
     }
@@ -666,6 +690,7 @@ declare namespace LocalJSX {
         "vocably-icon-volume-medium": VocablyIconVolumeMedium;
         "vocably-icon-window-close": VocablyIconWindowClose;
         "vocably-language": VocablyLanguage;
+        "vocably-language-selector": VocablyLanguageSelector;
         "vocably-logo": VocablyLogo;
         "vocably-mobile-button": VocablyMobileButton;
         "vocably-overlay": VocablyOverlay;
@@ -711,6 +736,7 @@ declare module "@stencil/core" {
             "vocably-icon-volume-medium": LocalJSX.VocablyIconVolumeMedium & JSXBase.HTMLAttributes<HTMLVocablyIconVolumeMediumElement>;
             "vocably-icon-window-close": LocalJSX.VocablyIconWindowClose & JSXBase.HTMLAttributes<HTMLVocablyIconWindowCloseElement>;
             "vocably-language": LocalJSX.VocablyLanguage & JSXBase.HTMLAttributes<HTMLVocablyLanguageElement>;
+            "vocably-language-selector": LocalJSX.VocablyLanguageSelector & JSXBase.HTMLAttributes<HTMLVocablyLanguageSelectorElement>;
             "vocably-logo": LocalJSX.VocablyLogo & JSXBase.HTMLAttributes<HTMLVocablyLogoElement>;
             "vocably-mobile-button": LocalJSX.VocablyMobileButton & JSXBase.HTMLAttributes<HTMLVocablyMobileButtonElement>;
             "vocably-overlay": LocalJSX.VocablyOverlay & JSXBase.HTMLAttributes<HTMLVocablyOverlayElement>;
