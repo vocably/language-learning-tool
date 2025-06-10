@@ -35,6 +35,7 @@ export class VocablyRate {
             OK, rate Vocably
           </a>
           <button
+            style={{ marginLeft: '8px' }}
             class="vocably-link-button"
             onClick={() => this.userSelected.emit('later')}
           >

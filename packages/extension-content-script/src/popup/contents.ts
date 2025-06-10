@@ -35,13 +35,14 @@ export const setContents = async ({
   autoPlay,
 }: Options): Promise<TearDown> => {
   let intervalId: ReturnType<typeof setInterval> | null = null;
+  let waitForPaymentIntervalId: ReturnType<typeof setInterval> | null = null;
   let explicitlySetLanguage: GoogleLanguage | null = null;
 
   const tearDown = () => {
-    if (intervalId !== null) {
-      clearInterval(intervalId);
-      intervalId = null;
-    }
+    clearInterval(intervalId);
+    intervalId = null;
+    clearInterval(waitForPaymentIntervalId);
+    waitForPaymentIntervalId = null;
   };
 
   const setTranslation = async () => {
@@ -151,6 +152,17 @@ export const setContents = async ({
         });
       }
     );
+
+    translation.addEventListener('watchMePaying', () => {
+      waitForPaymentIntervalId = setInterval(async () => {
+        const maxCards = await api.getMaxCards();
+        translation.maxCards = maxCards;
+        if (maxCards === 'unlimited') {
+          clearInterval(waitForPaymentIntervalId);
+          waitForPaymentIntervalId = null;
+        }
+      }, 10_000);
+    });
 
     translation.addEventListener(
       'changeTargetLanguage',
