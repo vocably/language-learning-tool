@@ -28,12 +28,14 @@ const simpletonTranslationResult: Result<TranslationCards> = {
       },
     ],
     tags: [],
+    collectionLength: 50,
   },
 };
 
 const successfulTranslationResult: Result<TranslationCards> = {
   success: true,
   value: {
+    collectionLength: 50,
     explanation: '',
     source: 'gemaakt',
     translation: {
@@ -85,6 +87,7 @@ const successfulTranslationResult: Result<TranslationCards> = {
 const englishTranslationResult: Result<TranslationCards> = {
   success: true,
   value: {
+    collectionLength: 50,
     explanation: '',
     cards: [
       {
@@ -127,6 +130,7 @@ const translationFirstTime = document.getElementById(
 translationFirstTime.result = {
   success: true,
   value: {
+    collectionLength: 50,
     source: 'Alice was beginning to get very tired of sitting',
     translation: {
       source: 'Alice was beginning to get very tired of sitting',
@@ -237,7 +241,26 @@ simpletonTranslation.askForRating = true;
 simpletonTranslation.extensionPlatform = {
   name: 'Chrome Web Store',
   url: 'https://chrome.google.com/webstore/detail/vocably/baocigmmhhdemijfjnjdidbkfgpgogmb',
+  platform: 'chromeExtension',
+  canPay: true,
 };
+
+// ---
+
+const paywaallTranslation = document.getElementById(
+  'paywallTranslation'
+) as HTMLVocablyTranslationElement;
+paywaallTranslation.existingSourceLanguages = ['en', 'nl'];
+paywaallTranslation.result = simpletonTranslationResult;
+paywaallTranslation.canCongratulate = true;
+paywaallTranslation.askForRating = true;
+paywaallTranslation.extensionPlatform = {
+  name: 'Chrome Web Store',
+  url: 'https://chrome.google.com/webstore/detail/vocably/baocigmmhhdemijfjnjdidbkfgpgogmb',
+  platform: 'chromeExtension',
+  canPay: true,
+};
+paywaallTranslation.maxCards = 50;
 
 // ---
 
@@ -294,6 +317,8 @@ translationAskForRating.askForRating = true;
 translationAskForRating.extensionPlatform = {
   name: 'Chrome Web Store',
   url: 'https://chrome.google.com/webstore/detail/vocably/baocigmmhhdemijfjnjdidbkfgpgogmb',
+  platform: 'chromeExtension',
+  canPay: true,
 };
 
 // ----

@@ -57,7 +57,8 @@
             "sourceLanguage": "nl",
             "target": "made",
             "targetLanguage": "en"
-        }
+        },
+        "collectionLength": 50
     }
 }`;
       const errorResponse = `{"success": false,
@@ -192,10 +193,22 @@
               >Hide the button</label
             >
           </div>
+
+          <div class="form-check form-check-inline form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="limitCards"
+              checked
+            />
+            <label class="form-check-label" for="limitCards"
+              >Max Cards 50</label
+            >
+          </div>
         </div>
         <div class="form-group mb-3">
           <label for="delay">Delay</label>
-          <input type="number" class="form-control" id="delay" value="1000" />
+          <input type="number" class="form-control" id="delay" value="300" />
         </div>
         <div class="form-group mb-3">
           <button

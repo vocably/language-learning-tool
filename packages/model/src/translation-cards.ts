@@ -17,6 +17,7 @@ export type TranslationCards = {
   translation: Translation;
   cards: TranslationCard[];
   tags: TagItem[];
+  collectionLength: number;
 };
 
 export type RemoveCardPayload = {

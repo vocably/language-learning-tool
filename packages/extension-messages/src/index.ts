@@ -60,6 +60,16 @@ export const [isActive, onIsActiveRequest] = createScopedMessage<void, boolean>(
 export const [isEligibleForTrial, onIsEligibleForTrialRequest] =
   createScopedMessage<void, boolean>('isEligibleForTrial');
 
+export const [getMaxCards, onGetMaxCardsRequest] = createScopedMessage<
+  void,
+  number | 'unlimited'
+>('getMaxCards');
+
+export const [getUserEmail, onGetUserEmail] = createScopedMessage<
+  void,
+  Result<string>
+>('getUserEmail');
+
 type AnalyzePayload = (
   | (Omit<DirectAnalyzePayload, 'targetLanguage'> &
       Partial<DirectAnalyzePayload>)
@@ -163,7 +173,10 @@ export const [getAudioPronunciation, onGetAudioPronunciation] =
 export const [askForRating, onAskForRating] = createScopedMessage<
   {
     translationResult: Result<TranslationCards>;
-    extensionPlatform: 'chromeExtension' | 'safariExtension';
+    extensionPlatform:
+      | 'chromeExtension'
+      | 'safariExtension'
+      | 'iosSafariExtension';
   },
   boolean
 >('askForRating');
@@ -171,7 +184,10 @@ export const [askForRating, onAskForRating] = createScopedMessage<
 export const [saveAskForRatingResponse, onSaveAskForRatingResponse] =
   createScopedMessage<
     {
-      extensionPlatform: 'chromeExtension' | 'safariExtension';
+      extensionPlatform:
+        | 'chromeExtension'
+        | 'safariExtension'
+        | 'iosSafariExtension';
       rateInteraction: RateInteractionPayload;
     },
     void

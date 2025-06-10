@@ -142,10 +142,17 @@ export namespace Components {
         "disabled": boolean;
         "existingSourceLanguages": GoogleLanguage[];
         "existingTargetLanguages": GoogleLanguage[];
-        "extensionPlatform": { name: string; url: string };
+        "extensionPlatform": {
+    name: string;
+    url: string;
+    platform: 'chromeExtension' | 'safariExtension' | 'iosSafariExtension';
+    canPay: boolean;
+  };
         "hideChatGpt": boolean;
         "isUpdating": TranslationCard | null;
         "loading": boolean;
+        "maxCards": number | 'unlimited';
+        "paymentLink": string;
         "phrase": string;
         "play": () => Promise<void>;
         "playAudioPronunciation": (
@@ -639,15 +646,23 @@ declare namespace LocalJSX {
         "disabled"?: boolean;
         "existingSourceLanguages"?: GoogleLanguage[];
         "existingTargetLanguages"?: GoogleLanguage[];
-        "extensionPlatform"?: { name: string; url: string };
+        "extensionPlatform"?: {
+    name: string;
+    url: string;
+    platform: 'chromeExtension' | 'safariExtension' | 'iosSafariExtension';
+    canPay: boolean;
+  };
         "hideChatGpt"?: boolean;
         "isUpdating"?: TranslationCard | null;
         "loading"?: boolean;
+        "maxCards"?: number | 'unlimited';
         "onAddCard"?: (event: VocablyTranslationCustomEvent<AddCardPayload>) => void;
         "onChangeSourceLanguage"?: (event: VocablyTranslationCustomEvent<string>) => void;
         "onChangeTargetLanguage"?: (event: VocablyTranslationCustomEvent<string>) => void;
         "onRatingInteraction"?: (event: VocablyTranslationCustomEvent<RateInteractionPayload>) => void;
         "onRemoveCard"?: (event: VocablyTranslationCustomEvent<RemoveCardPayload>) => void;
+        "onWatchMePaying"?: (event: VocablyTranslationCustomEvent<void>) => void;
+        "paymentLink"?: string;
         "phrase"?: string;
         "playAudioPronunciation"?: (
     payload: AudioPronunciationPayload

@@ -209,7 +209,11 @@ $container-padding: $input-padding-y $input-padding-x $input-padding-y
       }
 
       &.vocably-card-add-button {
-        border: 1.5px solid $v-light-color-primary;
+        --button-color: #{$v-light-color-primary};
+        --color: var(--button-color);
+
+        border: 1.5px solid var(--button-color);
+        color: var(--button-color);
         border-radius: 16px;
         padding-right: 8px !important;
         padding-left: 2px !important;
@@ -219,7 +223,15 @@ $container-padding: $input-padding-y $input-padding-x $input-padding-y
         justify-content: center;
 
         vocably-icon-spin {
-          --color: #{$v-light-color-primary};
+          --color: var(--button-color);
+        }
+
+        vocably-icon-plus {
+          --color: var(--button-color);
+        }
+
+        &.vocably-card-action-add-disabled {
+          --button-color: #{$v-light-color-muted};
         }
       }
     }
@@ -352,5 +364,38 @@ vocably-play-sound {
 
   &:hover {
     opacity: 1;
+  }
+}
+
+.max-limit-1 {
+  overflow: hidden;
+  color: $v-light-color-emphasize;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+
+  &.max-limit-visible {
+    max-height: 200px;
+  }
+
+  .max-limit-2 {
+    padding: $input-padding-y $input-padding-x 0 $input-padding-x;
+  }
+
+  .max-limit-3 {
+    background-color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .upgrade-button {
+    flex: 1;
+    @include button();
+    min-width: 200px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }

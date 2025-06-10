@@ -102,7 +102,17 @@ registerContentScript({
                     }
                   : card;
               }),
+              collectionLength: payload.translationCards.collectionLength + 1,
             },
+          });
+        }, 500);
+      }),
+    getUserEmail: () =>
+      new Promise((resolve) => {
+        setTimeout(() => {
+          resolve({
+            success: true,
+            value: 'dmytro@sneas.io',
           });
         }, 500);
       }),
@@ -120,6 +130,7 @@ registerContentScript({
                     }
                   : card;
               }),
+              collectionLength: payload.translationCards.collectionLength - 1,
             },
           });
         }, 500);
@@ -325,6 +336,17 @@ registerContentScript({
           });
         }, 1000)
       ),
+    getMaxCards: () => {
+      return new Promise((resolve) =>
+        setTimeout(() => {
+          resolve(
+            (document.getElementById('limitCards') as HTMLInputElement).checked
+              ? 50
+              : 'unlimited'
+          );
+        }, 200)
+      );
+    },
   },
   youTube: {
     ytHosts: ['localhost:8020'],
@@ -333,6 +355,7 @@ registerContentScript({
     askForRatingEnabled: true,
     displayMobileLookupButton: true,
     allowFirstTranslationCongratulation: true,
+    webPaymentLink: 'https://pay.rev.cat/sandbox/nhscxmehgplykyuc/',
   },
 }).then();
 

@@ -22,14 +22,11 @@
   font: inherit;
   font-weight: 500;
   cursor: pointer;
-  border-radius: $base-line-height;
+  border-radius: 12px;
   text-align: center;
   text-decoration: none;
-  width: calc(100% - #{$v-btn-shadow-spread} * 2);
+  width: 100%;
   transition: background-color 200ms;
-  margin: 0 $v-btn-shadow-spread ($v-btn-shadow-spread + $v-btn-shadow-v-offset);
-  box-shadow: 0 $v-btn-shadow-v-offset $v-btn-shadow-spread
-    rgba(0, 80, 255, 0.25);
   text-decoration: none !important;
 
   &:hover:not([disabled]),
@@ -39,7 +36,6 @@
 
   &:active:not([disabled]) {
     background: $v-light-btn-active-bg;
-    box-shadow: $v-light-btn-active-shadow;
   }
 
   &[disabled] {

@@ -15,6 +15,7 @@ declare -a variables=(
   "TF_VAR_brevo_api_key"
   "TF_VAR_openai_api_key"
   "TF_VAR_revenue_cat_auth_header"
+  "TF_VAR_revenue_cat_web_link"
   "APP_STORE_CONNECT_API_KEY_KEY_ID"
   "APP_STORE_CONNECT_API_KEY_ISSUER_ID"
   "APP_STORE_CONNECT_API_KEY_KEY"

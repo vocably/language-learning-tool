@@ -61,7 +61,12 @@ export class VocablyTranslation {
   @Prop() playAudioPronunciation: (
     payload: AudioPronunciationPayload
   ) => Promise<Result<true>>;
-  @Prop() extensionPlatform: { name: string; url: string };
+  @Prop() extensionPlatform: {
+    name: string;
+    url: string;
+    platform: 'chromeExtension' | 'safariExtension' | 'iosSafariExtension';
+    canPay: boolean;
+  };
   @Prop() updateCard: (
     payload: UpdateCardPayload
   ) => Promise<Result<TranslationCards>>;
@@ -80,6 +85,8 @@ export class VocablyTranslation {
   @Prop({ mutable: true }) disabled = false;
   @Prop() showLanguages: boolean = true;
   @Prop() hideChatGpt: boolean = false;
+  @Prop() maxCards: number | 'unlimited' = 'unlimited';
+  @Prop() paymentLink: string = 'https://pay.rev.cat/urzlhwdgumkzxmbw/';
 
   @Event() ratingInteraction: EventEmitter<RateInteractionPayload>;
 
@@ -87,9 +94,11 @@ export class VocablyTranslation {
   @Event() changeTargetLanguage: EventEmitter<string>;
   @Event() removeCard: EventEmitter<RemoveCardPayload>;
   @Event() addCard: EventEmitter<AddCardPayload>;
+  @Event() watchMePaying: EventEmitter<void>;
 
   @State() saveCardClicked = false;
   @State() addedItemIndex = -1;
+  @State() addAttemptIndex = -1;
   @State() removing: {
     card: CardItem;
     tag: TagItem;
@@ -360,6 +369,15 @@ export class VocablyTranslation {
       (this.result && this.result.success && this.result.value.explanation) ??
       '';
 
+    const canAdd =
+      this.maxCards === 'unlimited' ||
+      !this.paymentLink ||
+      !this.extensionPlatform?.canPay ||
+      (this.result.success === true &&
+        this.result.value.collectionLength < this.maxCards);
+
+    const isOkayToAskForRating = this.askForRating && canAdd;
+
     return (
       <Host data-test="translation-container">
         <div class="vocably-loading-container">
@@ -436,7 +454,7 @@ export class VocablyTranslation {
                     class="vocably-cards-container"
                     style={{ position: 'relative' }}
                   >
-                    {this.showSaveHint && (
+                    {this.showSaveHint && canAdd && (
                       <vocably-add-card-hint
                         class={{
                           'vocably-cards-save-hint': true,
@@ -463,6 +481,34 @@ export class VocablyTranslation {
                                   <vocably-first-translation-congratulation
                                     card={card}
                                   ></vocably-first-translation-congratulation>
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                          {!canAdd && (
+                            <div
+                              class={{
+                                'max-limit-1': true,
+                                'max-limit-visible':
+                                  this.addAttemptIndex === itemIndex,
+                              }}
+                            >
+                              <div class="max-limit-2">
+                                <div class="max-limit-3">
+                                  <div>
+                                    You have reached the limit of{' '}
+                                    {this.maxCards} cards.
+                                  </div>
+                                  <a
+                                    href={this.paymentLink}
+                                    target="_blank"
+                                    class="upgrade-button"
+                                    onClick={() => {
+                                      this.watchMePaying.emit();
+                                    }}
+                                  >
+                                    Make it unlimited
+                                  </a>
                                 </div>
                               </div>
                             </div>
@@ -530,12 +576,23 @@ export class VocablyTranslation {
                               )}
                               {isDetachedCardItem(card) && (
                                 <button
-                                  class="vocably-card-action-button vocably-card-add-button"
+                                  class={{
+                                    'vocably-card-action-button': true,
+                                    'vocably-card-add-button': true,
+                                    'vocably-card-action-add-disabled': !canAdd,
+                                  }}
                                   title="Add card"
                                   disabled={this.isUpdating !== null}
                                   onClick={() => {
                                     if (this.disabled) {
                                       return false;
+                                    }
+
+                                    if (!canAdd) {
+                                      this.addAttemptIndex = itemIndex;
+                                      return;
+                                    } else {
+                                      this.addAttemptIndex = -1;
                                     }
 
                                     this.saveCardClicked = true;
@@ -642,7 +699,7 @@ export class VocablyTranslation {
                       ))}
                     </div>
                   </div>
-                  {this.askForRating && (
+                  {isOkayToAskForRating && (
                     <div
                       class="vocably-rate-container"
                       ref={(el) => (this.askForRatingContainer = el)}

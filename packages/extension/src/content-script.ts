@@ -9,5 +9,6 @@ registerContentScript({
     askForRatingEnabled: true,
     displayMobileLookupButton: false,
     allowFirstTranslationCongratulation: true,
+    webPaymentLink: process.env.REVENUE_CAT_WEBLINK,
   },
 }).then();

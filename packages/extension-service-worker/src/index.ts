@@ -23,10 +23,12 @@ import {
   onGetInternalSourceLanguage,
   onGetLanguagePairs,
   onGetLocationLanguageRequest,
+  onGetMaxCardsRequest,
   onGetProxyLanguage,
   onGetSecondsBeforeNextTranslationRequest,
   onGetSettingsRequest,
   onGetSourceLanguage,
+  onGetUserEmail,
   onIsActiveRequest,
   onIsEligibleForTrialRequest,
   onIsLoggedInRequest,
@@ -76,6 +78,7 @@ import {
 import { browserEnv, hasOffscreen } from './browserEnv';
 import { createTranslationCards } from './createTranslationCards';
 import './fixAuth';
+import { getMaxCards } from './getMaxCards';
 import { getUserAttributes } from './getUserAttributes';
 import { addLanguage, getUserLanguages, removeLanguage } from './languageList';
 import { getLastUsedTagsIds, saveLastUsedTagsIds } from './lastUsedTagsIds';
@@ -200,6 +203,23 @@ export const registerServiceWorker = (
     return sendResponse(isEligibleForTrial(userData));
   });
 
+  onGetMaxCardsRequest(async (sendResponse) => {
+    return sendResponse(await getMaxCards());
+  });
+
+  onGetUserEmail(async (sendResponse) => {
+    const userAttributes = await getUserAttributes();
+
+    if (userAttributes.success === false) {
+      return sendResponse(userAttributes);
+    }
+
+    return sendResponse({
+      success: true,
+      value: userAttributes.value.email,
+    });
+  });
+
   const getAnalysisAndCards = async (
     analyzePayload: AnalyzePayload
   ): Promise<[Result<Analysis>, Result<LanguageDeck>]> => {
@@ -281,6 +301,7 @@ export const registerServiceWorker = (
         source: analysisResult.value.source,
         translation: analysisResult.value.translation,
         tags: loadLanguageDeckResult.value.tags,
+        collectionLength: loadLanguageDeckResult.value.cards.length,
       };
 
       addLanguage(value.translation.sourceLanguage);
@@ -348,6 +369,7 @@ export const registerServiceWorker = (
               }
             : item
         ),
+        collectionLength: getLanguageDeckResult.value.cards.length,
       },
     });
   });
@@ -395,6 +417,7 @@ export const registerServiceWorker = (
         cards: payload.translationCards.cards.map((item) =>
           isEqual(item, payload.card) ? addedCard : item
         ),
+        collectionLength: getLanguageDeckResult.value.cards.length,
       },
     });
   });

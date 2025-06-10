@@ -60,6 +60,7 @@ EXTERNALLY_CONNECTABLE_MATCHES='${var.extension_externally_connectable_matches}'
 EXTRA_PERMISSIONS='${var.extension_extra_permissions}'
 HOST_PERMISSIONS='${var.extension_host_permissions}'
 AUTO_RELOAD="${var.extension_auto_reload}"
+REVENUE_CAT_WEBLINK="${var.revenue_cat_web_link}"
   EOT
 }
 

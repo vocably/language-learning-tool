@@ -48,7 +48,6 @@ export class VocablyLanguageSelector {
 
   private updateHintWidth() {
     if (this.hintElement) {
-      console.log(this.el);
       this.el.style.setProperty(
         '--hint-width',
         `${this.hintElement.offsetWidth}px`

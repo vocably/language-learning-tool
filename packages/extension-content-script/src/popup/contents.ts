@@ -61,60 +61,75 @@ export const setContents = async ({
       targetLanguage?: GoogleLanguage;
     };
 
-    const analyze = ({
+    const analyze = async ({
       sourceLanguage,
       targetLanguage,
     }: AnalyzePayload = {}) => {
       translation.loading = true;
-      api
-        .analyze({
+
+      const [translationResult, maxCards, emailResult] = await Promise.all([
+        api.analyze({
           source,
           sourceLanguage,
           targetLanguage,
           context,
           initiator: 'content-script',
-        })
-        .finally(() => {
-          translation.loading = false;
-        })
-        .then(async (translationResult) => {
-          if (translationResult.success === false) {
-            console.error('Analyze error', translationResult);
-          }
+        }),
+        api.getMaxCards(),
+        api.getUserEmail(),
+      ]);
 
-          if (contentScriptConfiguration.askForRatingEnabled) {
-            api
-              .askForRating({
-                translationResult: translationResult,
-                extensionPlatform: extensionPlatform.platform,
-              })
-              .then((result) => {
-                translation.askForRating = result;
-              });
-          }
+      translation.maxCards = maxCards;
+      translation.loading = false;
 
-          translation.result = translationResult;
-          if (translationResult.success === true) {
-            translation.sourceLanguage =
-              translationResult.value.translation.sourceLanguage;
+      if (translationResult.success === false) {
+        console.error('Analyze error', translationResult);
+      }
 
-            translation.targetLanguage =
-              translationResult.value.translation.targetLanguage;
+      if (contentScriptConfiguration.askForRatingEnabled) {
+        api
+          .askForRating({
+            translationResult: translationResult,
+            extensionPlatform: extensionPlatform.platform,
+          })
+          .then((result) => {
+            translation.askForRating = result;
+          });
+      }
 
-            if (autoPlay) {
-              setTimeout(() => {
-                translation.play();
-              }, 50);
-            }
-          }
+      translation.result = translationResult;
+      if (translationResult.success === true) {
+        translation.sourceLanguage =
+          translationResult.value.translation.sourceLanguage;
 
-          const existingLanguagesResult = await api.listLanguages();
-          translation.existingSourceLanguages = existingLanguagesResult.success
-            ? existingLanguagesResult.value
-            : [];
-          const existingTargetLanguages = await api.listTargetLanguages();
-          translation.existingTargetLanguages = existingTargetLanguages;
-        });
+        translation.targetLanguage =
+          translationResult.value.translation.targetLanguage;
+
+        if (autoPlay) {
+          setTimeout(() => {
+            translation.play();
+          }, 50);
+        }
+      }
+
+      const existingLanguagesResult = await api.listLanguages();
+      translation.existingSourceLanguages = existingLanguagesResult.success
+        ? existingLanguagesResult.value
+        : [];
+      const existingTargetLanguages = await api.listTargetLanguages();
+      translation.existingTargetLanguages = existingTargetLanguages;
+
+      if (
+        extensionPlatform.platform === 'chromeExtension' &&
+        emailResult.success
+      ) {
+        translation.paymentLink =
+          contentScriptConfiguration.webPaymentLink + emailResult.value;
+      } else if (extensionPlatform.platform === 'iosSafariExtension') {
+        translation.paymentLink = 'vocably-pro://upgrade';
+      } else {
+        translation.paymentLink = '';
+      }
     };
 
     translation.updateCard = api.updateCard;
