@@ -32,10 +32,10 @@ export const revenueCatWebhook = async (
 
         if (!(action.event.entitlement_ids ?? []).includes('premium')) {
           return buildResponse({
-            statusCode: 500,
+            statusCode: 200,
             body: JSON.stringify({
-              success: false,
-              reason:
+              success: true,
+              message:
                 'This action does not include premium entitlements. Not sure what to do.',
             }),
           });

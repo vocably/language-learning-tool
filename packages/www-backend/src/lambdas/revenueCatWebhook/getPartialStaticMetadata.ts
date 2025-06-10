@@ -5,7 +5,7 @@ export const getPartialStaticMetadata = (
   action: Webhook,
   staticMetadata: UserStaticMetadata
 ): Partial<UserStaticMetadata> => {
-  if (staticMetadata.premium_last_event_ms <= action.event.event_timestamp_ms) {
+  if (staticMetadata.premium_last_event_ms > action.event.event_timestamp_ms) {
     return {};
   }
 
