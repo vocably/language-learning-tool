@@ -1,10 +1,13 @@
 import { Webhook } from '@puzzmo/revenue-cat-webhook-types';
+import { parseJson } from '@vocably/api';
 import {
   getHeader,
+  nodeFetchS3File,
   nodeFetchUserStaticMetadata,
   nodeSaveUserStaticMetadata,
 } from '@vocably/lambda-shared';
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
+import { get } from 'lodash-es';
 import { lastValueFrom, mergeMap, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { buildErrorResponse } from '../../utils/buildErrorResponse';
@@ -39,6 +42,48 @@ export const revenueCatWebhook = async (
                 'This action does not include premium entitlements. Not sure what to do.',
             }),
           });
+        }
+
+        if (get(action.event, 'environment') === 'SANDBOX') {
+          const allowedSandboxEmailsResult = await nodeFetchS3File(
+            process.env.STATIC_USER_FILES_BUCKET,
+            'allowed-sandbox-emails.json'
+          );
+          if (allowedSandboxEmailsResult.success === false) {
+            return buildResponse({
+              statusCode: 200,
+              body: JSON.stringify({
+                success: false,
+                message: 'Unable to download allowed-sandbox-emails.json',
+              }),
+            });
+          }
+
+          const parseResult = parseJson(allowedSandboxEmailsResult.value);
+
+          if (parseResult.success === false) {
+            return buildResponse({
+              statusCode: 200,
+              body: JSON.stringify({
+                success: false,
+                message: 'Unable to parse allowed-sandbox-emails.json',
+              }),
+            });
+          }
+
+          if (
+            !get(parseResult.value, 'allowedEmails', []).includes(
+              action.event.app_user_id
+            )
+          ) {
+            return buildResponse({
+              statusCode: 200,
+              body: JSON.stringify({
+                success: false,
+                message: `Unable to perform the operation for not allowed user ${action.event.app_user_id}`,
+              }),
+            });
+          }
         }
 
         const subResult = await getSub(action.event.app_user_id);
