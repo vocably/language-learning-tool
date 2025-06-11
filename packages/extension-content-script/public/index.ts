@@ -355,7 +355,7 @@ registerContentScript({
     askForRatingEnabled: true,
     displayMobileLookupButton: true,
     allowFirstTranslationCongratulation: true,
-    webPaymentLink: 'https://pay.rev.cat/sandbox/nhscxmehgplykyuc/',
+    webPaymentLink: 'http://localhost:8030/subsribe',
   },
 }).then();
 

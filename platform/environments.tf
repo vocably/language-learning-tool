@@ -13,6 +13,7 @@ export const environmentLocal = {
   piwikId: '${var.piwik_app_id}',
   sentryEnvironment: '${var.sentry_environment}',
   wwwBaseUrl: '${local.www_base_url}',
+  revenueCatWeblink: '${var.revenue_cat_web_link}',
   auth: {
     region: '${data.aws_region.current.name}',
     userPoolId: '${aws_cognito_user_pool.users.id}',
@@ -60,7 +61,6 @@ EXTERNALLY_CONNECTABLE_MATCHES='${var.extension_externally_connectable_matches}'
 EXTRA_PERMISSIONS='${var.extension_extra_permissions}'
 HOST_PERMISSIONS='${var.extension_host_permissions}'
 AUTO_RELOAD="${var.extension_auto_reload}"
-REVENUE_CAT_WEBLINK="${var.revenue_cat_web_link}"
   EOT
 }
 

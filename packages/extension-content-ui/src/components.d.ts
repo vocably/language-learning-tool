@@ -146,7 +146,7 @@ export namespace Components {
     name: string;
     url: string;
     platform: 'chromeExtension' | 'safariExtension' | 'iosSafariExtension';
-    canPay: boolean;
+    paymentLink: string | false;
   };
         "hideChatGpt": boolean;
         "isUpdating": TranslationCard | null;
@@ -650,7 +650,7 @@ declare namespace LocalJSX {
     name: string;
     url: string;
     platform: 'chromeExtension' | 'safariExtension' | 'iosSafariExtension';
-    canPay: boolean;
+    paymentLink: string | false;
   };
         "hideChatGpt"?: boolean;
         "isUpdating"?: TranslationCard | null;

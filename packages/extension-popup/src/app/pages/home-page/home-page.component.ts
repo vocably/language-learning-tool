@@ -14,7 +14,7 @@ import {
   UpdateCardPayload,
   UpdateTagPayload,
 } from '@vocably/model';
-import { first } from 'lodash-es';
+import { first, isString } from 'lodash-es';
 import { environment } from '../../../environments/environment';
 import { SearchValues } from '../../search-form/search-form.component';
 import { playDataUrl } from './playDataUrl';
@@ -31,6 +31,8 @@ export class HomePageComponent implements OnInit {
   isSearching: boolean = false;
   isTranslationLoading: boolean = false;
   searchResult: Result<TranslationCards> | null = null;
+  maxCards: number | 'unlimited' = 50;
+  paymentLink: string = '';
   extensionPlatform = detectExtensionPlatform();
   askForRating: boolean = false;
 
@@ -69,6 +71,14 @@ export class HomePageComponent implements OnInit {
         targetLanguage: pair[1].currentTargetLanguage,
       };
     });
+
+    if (this.extensionPlatform.paymentLink === 'web') {
+      this.paymentLink = environment.appBaseUrl + '/subscribe';
+    } else if (isString(this.extensionPlatform.paymentLink)) {
+      this.paymentLink = this.extensionPlatform.paymentLink;
+    } else {
+      this.paymentLink = '';
+    }
   }
 
   onSearchValuesChanged(values: SearchValues) {
@@ -86,28 +96,32 @@ export class HomePageComponent implements OnInit {
 
     this.isSearching = true;
 
-    const result = await environment.analyze(
-      values.isReversed
-        ? {
-            target: values.text,
-            sourceLanguage: values.sourceLanguage,
-            targetLanguage: values.targetLanguage,
-            initiator: 'popup',
-          }
-        : {
-            source: values.text,
-            sourceLanguage: values.sourceLanguage,
-            targetLanguage: values.targetLanguage,
-            initiator: 'popup',
-          }
-    );
+    const [analyzeResult, maxCards] = await Promise.all([
+      environment.analyze(
+        values.isReversed
+          ? {
+              target: values.text,
+              sourceLanguage: values.sourceLanguage,
+              targetLanguage: values.targetLanguage,
+              initiator: 'popup',
+            }
+          : {
+              source: values.text,
+              sourceLanguage: values.sourceLanguage,
+              targetLanguage: values.targetLanguage,
+              initiator: 'popup',
+            }
+      ),
+      environment.getMaxCards(),
+    ]);
 
-    this.searchResult = result;
+    this.searchResult = analyzeResult;
+    this.maxCards = maxCards;
 
-    if (result.success === true) {
+    if (analyzeResult.success === true) {
       environment
         .askForRating({
-          translationResult: result,
+          translationResult: analyzeResult,
           extensionPlatform: this.extensionPlatform.platform,
         })
         .then((result) => {

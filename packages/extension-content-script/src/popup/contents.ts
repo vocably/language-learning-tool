@@ -5,6 +5,7 @@ import {
   RateInteractionPayload,
   RemoveCardPayload,
 } from '@vocably/model';
+import { isString } from 'lodash-es';
 import { api } from '../api';
 import { contentScriptConfiguration } from '../configuration';
 import { playAudioPronunciation } from '../playAudioPronunciation';
@@ -68,7 +69,7 @@ export const setContents = async ({
     }: AnalyzePayload = {}) => {
       translation.loading = true;
 
-      const [translationResult, maxCards, emailResult] = await Promise.all([
+      const [translationResult, maxCards] = await Promise.all([
         api.analyze({
           source,
           sourceLanguage,
@@ -77,7 +78,6 @@ export const setContents = async ({
           initiator: 'content-script',
         }),
         api.getMaxCards(),
-        api.getUserEmail(),
       ]);
 
       translation.maxCards = maxCards;
@@ -118,19 +118,15 @@ export const setContents = async ({
         ? existingLanguagesResult.value
         : [];
       const existingTargetLanguages = await api.listTargetLanguages();
-      translation.existingTargetLanguages = existingTargetLanguages;
-
-      if (
-        extensionPlatform.platform === 'chromeExtension' &&
-        emailResult.success
-      ) {
-        translation.paymentLink =
-          contentScriptConfiguration.webPaymentLink + emailResult.value;
-      } else if (extensionPlatform.platform === 'iosSafariExtension') {
-        translation.paymentLink = 'vocably-pro://upgrade';
+      if (extensionPlatform.paymentLink === 'web') {
+        translation.paymentLink = contentScriptConfiguration.webPaymentLink;
+      } else if (isString(extensionPlatform.paymentLink)) {
+        translation.paymentLink = extensionPlatform.paymentLink;
       } else {
         translation.paymentLink = '';
       }
+
+      translation.existingTargetLanguages = existingTargetLanguages;
     };
 
     translation.updateCard = api.updateCard;

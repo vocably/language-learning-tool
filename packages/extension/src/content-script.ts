@@ -9,6 +9,6 @@ registerContentScript({
     askForRatingEnabled: true,
     displayMobileLookupButton: false,
     allowFirstTranslationCongratulation: true,
-    webPaymentLink: process.env.REVENUE_CAT_WEBLINK,
+    webPaymentLink: process.env.APP_BASE_URL + '/subscribe',
   },
 }).then();

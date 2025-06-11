@@ -9,6 +9,7 @@ import {
   getAudioPronunciation,
   getInternalSourceLanguage,
   getLanguagePairs,
+  getMaxCards,
   getSettings,
   isLoggedIn,
   removeCard,
@@ -108,6 +109,7 @@ const mockAnalyze: typeof analyze = async () => {
       },
       tags: [],
       explanation: 'Explanation example',
+      collectionLength: 50,
     },
   };
 };
@@ -131,6 +133,7 @@ const mockAddCard: typeof addCard = async (payload) => {
           data: translationCard.data,
         };
       }),
+      collectionLength: payload.translationCards.collectionLength + 1,
     },
   };
 };
@@ -151,6 +154,7 @@ const mockRemoveCard: typeof removeCard = async (payload) => {
           data: translationCard.data,
         };
       }),
+      collectionLength: payload.translationCards.collectionLength - 1,
     },
   };
 };
@@ -265,6 +269,11 @@ const saveAskForRatingResponseMock: typeof saveAskForRatingResponse = async (
   await timeout(500);
 };
 
+const getMaxCardsMock: typeof getMaxCards = async () => {
+  await timeout(500);
+  return 50;
+};
+
 export const environment = merge(environmentLocal, {
   production: false,
   analyze: mockAnalyze,
@@ -283,4 +292,5 @@ export const environment = merge(environmentLocal, {
   updateCard: mockUpdateCard,
   askForRating: askForRatingMock,
   saveAskForRatingResponse: saveAskForRatingResponseMock,
+  getMaxCards: getMaxCardsMock,
 });

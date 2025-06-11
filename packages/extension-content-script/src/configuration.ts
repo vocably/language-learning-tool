@@ -9,7 +9,7 @@ export let contentScriptConfiguration: ContentScriptConfiguration = {
   askForRatingEnabled: false,
   displayMobileLookupButton: false,
   allowFirstTranslationCongratulation: false,
-  webPaymentLink: 'https://pay.rev.cat/urzlhwdgumkzxmbw/',
+  webPaymentLink: 'https://app.vocably.pro/subscribe',
 };
 
 export const configureContentScript = (

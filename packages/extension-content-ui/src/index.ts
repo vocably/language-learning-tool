@@ -242,7 +242,7 @@ simpletonTranslation.extensionPlatform = {
   name: 'Chrome Web Store',
   url: 'https://chrome.google.com/webstore/detail/vocably/baocigmmhhdemijfjnjdidbkfgpgogmb',
   platform: 'chromeExtension',
-  canPay: true,
+  paymentLink: 'web',
 };
 
 // ---
@@ -258,7 +258,7 @@ paywaallTranslation.extensionPlatform = {
   name: 'Chrome Web Store',
   url: 'https://chrome.google.com/webstore/detail/vocably/baocigmmhhdemijfjnjdidbkfgpgogmb',
   platform: 'chromeExtension',
-  canPay: true,
+  paymentLink: 'web',
 };
 paywaallTranslation.maxCards = 50;
 
@@ -318,7 +318,7 @@ translationAskForRating.extensionPlatform = {
   name: 'Chrome Web Store',
   url: 'https://chrome.google.com/webstore/detail/vocably/baocigmmhhdemijfjnjdidbkfgpgogmb',
   platform: 'chromeExtension',
-  canPay: true,
+  paymentLink: 'web',
 };
 
 // ----

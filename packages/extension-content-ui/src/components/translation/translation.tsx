@@ -65,7 +65,7 @@ export class VocablyTranslation {
     name: string;
     url: string;
     platform: 'chromeExtension' | 'safariExtension' | 'iosSafariExtension';
-    canPay: boolean;
+    paymentLink: string | false;
   };
   @Prop() updateCard: (
     payload: UpdateCardPayload
@@ -86,7 +86,7 @@ export class VocablyTranslation {
   @Prop() showLanguages: boolean = true;
   @Prop() hideChatGpt: boolean = false;
   @Prop() maxCards: number | 'unlimited' = 'unlimited';
-  @Prop() paymentLink: string = 'https://pay.rev.cat/urzlhwdgumkzxmbw/';
+  @Prop() paymentLink: string = '';
 
   @Event() ratingInteraction: EventEmitter<RateInteractionPayload>;
 
@@ -372,7 +372,6 @@ export class VocablyTranslation {
     const canAdd =
       this.maxCards === 'unlimited' ||
       !this.paymentLink ||
-      !this.extensionPlatform?.canPay ||
       (this.result.success === true &&
         this.result.value.collectionLength < this.maxCards);
 

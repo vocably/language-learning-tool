@@ -8,6 +8,7 @@ import {
   getAudioPronunciation,
   getInternalSourceLanguage,
   getLanguagePairs,
+  getMaxCards,
   getSettings,
   isLoggedIn,
   removeCard,
@@ -37,4 +38,5 @@ export const environment = merge(environmentLocal, {
   getLanguagePairs: getLanguagePairs,
   askForRating: askForRating,
   saveAskForRatingResponse: saveAskForRatingResponse,
+  getMaxCards: getMaxCards,
 });

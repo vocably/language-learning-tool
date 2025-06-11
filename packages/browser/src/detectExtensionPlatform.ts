@@ -4,7 +4,7 @@ type ExtensionPlatform = {
   url: string;
   name: string;
   platform: 'chromeExtension' | 'safariExtension' | 'iosSafariExtension';
-  canPay: boolean;
+  paymentLink: string | 'web' | false;
 };
 
 export const detectExtensionPlatform = (): ExtensionPlatform => {
@@ -19,7 +19,7 @@ export const detectExtensionPlatform = (): ExtensionPlatform => {
       url: 'https://apps.apple.com/app/id6464076425',
       name: 'App Store',
       platform: 'safariExtension',
-      canPay: false,
+      paymentLink: false,
     };
   }
 
@@ -32,7 +32,7 @@ export const detectExtensionPlatform = (): ExtensionPlatform => {
       url: 'https://apps.apple.com/app/vocably-pro-language-cards/id1641258757',
       name: 'App Store',
       platform: 'iosSafariExtension',
-      canPay: true,
+      paymentLink: 'vocably-pro://upgrade',
     };
   }
 
@@ -40,6 +40,6 @@ export const detectExtensionPlatform = (): ExtensionPlatform => {
     url: 'https://chrome.google.com/webstore/detail/vocably/baocigmmhhdemijfjnjdidbkfgpgogmb',
     name: 'Chrome Web Store',
     platform: 'chromeExtension',
-    canPay: true,
+    paymentLink: 'web',
   };
 };

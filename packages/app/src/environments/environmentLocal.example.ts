@@ -5,6 +5,7 @@ export const environmentLocal = {
   piwikId: '25473e53-4fde-4fe1-a2ce-273ec6a4d0e3',
   sentryEnvironment: 'dev',
   wwwBaseUrl: 'https://dev.env.vocably.pro',
+  revenueCatWeblink: 'https://pay.rev.cat/sandbox/nhscxmehgplykyuc/',
   auth: {
     region: 'eu-central-1',
     userPoolId: 'eu-central-1_Tpn3gUQYg',
