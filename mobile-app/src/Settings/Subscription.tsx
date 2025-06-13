@@ -2,10 +2,10 @@ import { FC, useContext } from 'react';
 import { StyleProp, View, ViewStyle } from 'react-native';
 import { useTheme } from 'react-native-paper';
 import { CustomerInfo } from 'react-native-purchases';
-import RevenueCatUI, { PAYWALL_RESULT } from 'react-native-purchases-ui';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { CustomerInfoContext } from '../CustomerInfoContainer';
 import { InlineLoader } from '../loaders/InlineLoader';
+import { presentPaywall } from '../presentPaywall';
 import { CustomSurface } from '../ui/CustomSurface';
 import { ListItem } from '../ui/ListItem';
 import { Premium } from './Premium';
@@ -22,24 +22,6 @@ export const Subscription: FC<Props> = ({ style }) => {
   const theme = useTheme();
 
   const customerInfoStatus = useContext(CustomerInfoContext);
-
-  async function presentPaywall(): Promise<boolean> {
-    // Present paywall for current offering:
-    const paywallResult: PAYWALL_RESULT = await RevenueCatUI.presentPaywall();
-
-    switch (paywallResult) {
-      case PAYWALL_RESULT.NOT_PRESENTED:
-      case PAYWALL_RESULT.ERROR:
-      case PAYWALL_RESULT.CANCELLED:
-        return false;
-      case PAYWALL_RESULT.PURCHASED:
-      case PAYWALL_RESULT.RESTORED:
-        return true;
-      default:
-        return false;
-    }
-  }
-
   return (
     <CustomSurface style={style}>
       {customerInfoStatus.status === 'undefined' && (

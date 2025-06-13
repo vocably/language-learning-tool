@@ -1,6 +1,8 @@
 import { API_BASE_URL, API_CARDS_BUCKET, API_REGION } from '@env';
 import { configureApi } from '@vocably/api';
 import { fetchAuthSession } from 'aws-amplify/auth';
+import { useEffect } from 'react';
+import { Linking } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { AuthContainer } from './auth/AuthContainer';
 import { Login } from './auth/Login';
@@ -10,6 +12,7 @@ import { LanguagesContainer } from './languages/LanguagesContainer';
 import { NavigationContainer } from './NavigationContainer';
 import { NotificationsContainer } from './NotificationsContainer';
 import { PostHogProvider } from './PostHogProvider';
+import { presentPaywall } from './presentPaywall';
 import { RootModalStack } from './RootModalStack';
 import { ThemeProvider } from './ThemeProvider';
 import { TranslationPresetContainer } from './TranslationPreset/TranslationPresetContainer';
@@ -27,6 +30,19 @@ configureApi({
 
 const App = () => {
   configurePurchases();
+
+  useEffect(() => {
+    const presentPaywallIfNeeded = async (url: string | null) => {
+      if (url && url.endsWith('://upgrade')) {
+        await presentPaywall();
+      }
+    };
+
+    Linking.getInitialURL().then(presentPaywallIfNeeded);
+    Linking.addEventListener('url', async ({ url }) => {
+      await presentPaywallIfNeeded(url);
+    });
+  }, []);
 
   return (
     <ThemeProvider>
