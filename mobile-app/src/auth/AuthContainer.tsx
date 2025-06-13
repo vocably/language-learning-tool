@@ -8,6 +8,7 @@ import Purchases from 'react-native-purchases';
 import { Sentry } from '../BetterSentry';
 import { facility } from '../facility';
 import { notificationsIdentifyUser } from '../notificationsIdentifyUser';
+import { retry } from '../retry';
 import { AuthContext, AuthStatus } from './AuthContext';
 import { getFlatAttributes } from './getFlatAttributes';
 
@@ -68,31 +69,35 @@ export const AuthContainer: FC<{
   }, [authStatus]);
 
   useEffect(() => {
-    fetchAuthSession()
-      .then(async (session) => {
-        if (!session.tokens) {
-          throw new Error('The fetched session has no access tokens.');
-        }
+    retry(
+      () =>
+        fetchAuthSession().then(async (session) => {
+          if (!session.tokens) {
+            throw new Error('The fetched session has no access tokens.');
+          }
 
-        const attributesResult = await getAttributes();
+          const attributesResult = await getAttributes();
 
-        if (attributesResult.success === false) {
-          throw new Error(
-            'Unable to get attributes (getAttributes) method is failing.'
-          );
-        }
+          if (attributesResult.success === false) {
+            throw new Error(
+              'Unable to get attributes (getAttributes) method is failing.'
+            );
+          }
 
-        setAuthStatus({
-          status: 'logged-in',
-          session,
-          attributes: attributesResult.value,
-        });
-      })
-      .catch((error) => {
-        setAuthStatus({
-          status: 'not-logged-in',
-        });
+          setAuthStatus({
+            status: 'logged-in',
+            session,
+            attributes: attributesResult.value,
+          });
+        }),
+      3,
+      200
+    ).catch((error) => {
+      console.error('Unable to authenticate', error);
+      setAuthStatus({
+        status: 'not-logged-in',
       });
+    });
 
     return Hub.listen('auth', (event) => {
       if (event.payload.event === 'tokenRefresh_failure') {
