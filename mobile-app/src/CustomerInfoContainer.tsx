@@ -40,7 +40,6 @@ export const CustomerInfoContainer: FC<PropsWithChildren<Props>> = ({
     }
 
     const customerInfoRefreshed = (customerInfo: CustomerInfo) => {
-      console.log('Customer info refreshed', customerInfo);
       setCustomerInfoStatus({
         status: 'loaded',
         customerInformation: customerInfo,
@@ -49,7 +48,6 @@ export const CustomerInfoContainer: FC<PropsWithChildren<Props>> = ({
 
     Purchases.addCustomerInfoUpdateListener(customerInfoRefreshed);
     Purchases.logIn(authStatus.attributes.email).then(({ customerInfo }) => {
-      console.log('Customer logged in', customerInfo);
       setCustomerInfoStatus({
         status: 'loaded',
         customerInformation: customerInfo,

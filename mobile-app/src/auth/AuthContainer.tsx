@@ -62,7 +62,9 @@ export const AuthContainer: FC<{
       return;
     }
 
-    posthog.identify(authStatus.attributes['email']);
+    posthog.identify(authStatus.attributes['sub'], {
+      email: authStatus.attributes['email'],
+    });
   }, [authStatus]);
 
   useEffect(() => {
