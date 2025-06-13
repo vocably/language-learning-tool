@@ -24,11 +24,12 @@ type Props = {
   deck: Deck;
   leftInset?: number;
   rightInset?: number;
+  cardsLimit: number | 'unlimited';
 };
 
 export const AnalyzeResult: FC<Props> = ({
   analysis,
-  style,
+  cardsLimit,
   cards,
   onAdd,
   onRemove,
@@ -123,6 +124,7 @@ export const AnalyzeResult: FC<Props> = ({
             onTagsChange={onTagsChange}
             item={item}
             deck={deck}
+            cardsLimit={cardsLimit}
           />
         </View>
       ))}

@@ -1,9 +1,10 @@
 import { CardItem, Result, TagItem } from '@vocably/model';
-import React, { FC, useCallback, useState } from 'react';
+import React, { FC, useState } from 'react';
 import { PixelRatio, View } from 'react-native';
-import { IconButton, useTheme } from 'react-native-paper';
+import { Button, IconButton, Text, useTheme } from 'react-native-paper';
 import { CardListItem } from '../CardListItem';
 import { Deck } from '../languageDeck/useLanguageDeck';
+import { presentPaywall } from '../presentPaywall';
 import { mainPadding } from '../styles';
 import { TagsSelector } from '../TagsSelector';
 import { AssociatedCard } from './associateCards';
@@ -17,6 +18,7 @@ type AnalyzeResultItem = FC<{
   hideOperations?: boolean;
   leftInset?: number;
   rightInset?: number;
+  cardsLimit?: number | 'unlimited';
 }>;
 
 export const AnalyzeResultItem: AnalyzeResultItem = ({
@@ -28,18 +30,28 @@ export const AnalyzeResultItem: AnalyzeResultItem = ({
   hideOperations = false,
   leftInset = 0,
   rightInset = 0,
+  cardsLimit = 'unlimited',
 }) => {
   const theme = useTheme();
   const [isProcessing, setIsProcessing] = useState(false);
-  const toggleCard = useCallback(async () => {
+
+  const canAdd =
+    cardsLimit === 'unlimited' || cardsLimit > deck.deck.cards.length;
+
+  const [isBannerVisible, setIsBannerVisible] = useState(false);
+
+  const toggleCard = async () => {
     setIsProcessing(true);
     if (item.id) {
       await onRemove(item);
-    } else {
+      setIsBannerVisible(false);
+    } else if (canAdd) {
       await onAdd(item);
+    } else {
+      setIsBannerVisible(true);
     }
     setIsProcessing(false);
-  }, [setIsProcessing, onAdd, onRemove]);
+  };
 
   const [isSavingTags, setIsSavingTags] = useState(false);
 
@@ -58,60 +70,86 @@ export const AnalyzeResultItem: AnalyzeResultItem = ({
   const fontScale = PixelRatio.getFontScale();
 
   return (
-    <View
-      style={{
-        alignItems: 'flex-start',
-        justifyContent: 'center',
-        flexDirection: 'row',
-        paddingLeft: leftInset + mainPadding,
-        // Align ⊕ button with the 🔎
-        paddingRight: rightInset + 16,
-      }}
-    >
-      <CardListItem
-        card={item.card}
-        style={{ flex: 1, paddingVertical: 16 }}
-        showExamples={true}
-        savingTagsInProgress={isSavingTags}
-        onTagsChange={onTagsChange}
-        allowCopy={true}
-      />
-      {!hideOperations && (
+    <View>
+      {!canAdd && isBannerVisible && (
         <View
           style={{
-            marginTop: 16,
-            // To prevent jumping
-            height: 90,
+            paddingLeft: leftInset + mainPadding,
+            // Align ⊕ button with the 🔎
+            paddingRight: rightInset + 16,
+            paddingTop: 24,
+            flexDirection: 'column',
+            gap: 8,
           }}
         >
-          <IconButton
-            icon={!item.id ? 'plus-circle-outline' : 'bookmark-check'}
-            animated={true}
-            iconColor={theme.colors.primary}
-            onPress={toggleCard}
-            disabled={isProcessing}
-            style={{ margin: 0 }}
-            size={24 * fontScale}
-          />
-          {item.id && (
-            <TagsSelector
-              value={item.card.tags}
-              onChange={onTagsChange}
-              deck={deck}
-              renderAnchor={({ openMenu, disabled }) => (
-                <IconButton
-                  icon={'tag-plus'}
-                  iconColor={theme.colors.primary}
-                  onPress={openMenu}
-                  disabled={disabled}
-                  style={{ margin: 0 }}
-                  size={24 * fontScale}
-                />
-              )}
-            />
-          )}
+          <Text>
+            The size of your collection has reached the limited of {cardsLimit}{' '}
+            cards. Update your subscription to keep adding cards.
+          </Text>
+          <Button mode="contained" onPress={() => presentPaywall()}>
+            Upgrade
+          </Button>
         </View>
       )}
+      <View
+        style={{
+          alignItems: 'flex-start',
+          justifyContent: 'center',
+          flexDirection: 'row',
+          paddingLeft: leftInset + mainPadding,
+          // Align ⊕ button with the 🔎
+          paddingRight: rightInset + 16,
+        }}
+      >
+        <CardListItem
+          card={item.card}
+          style={{ flex: 1, paddingVertical: 16 }}
+          showExamples={true}
+          savingTagsInProgress={isSavingTags}
+          onTagsChange={onTagsChange}
+          allowCopy={true}
+        />
+        {!hideOperations && (
+          <View
+            style={{
+              marginTop: 16,
+              // To prevent jumping
+              height: 90,
+            }}
+          >
+            <IconButton
+              icon={!item.id ? 'plus-circle-outline' : 'bookmark-check'}
+              animated={true}
+              iconColor={
+                canAdd || item.id
+                  ? theme.colors.primary
+                  : theme.colors.onSurface
+              }
+              onPress={toggleCard}
+              disabled={isProcessing}
+              style={{ margin: 0 }}
+              size={24 * fontScale}
+            />
+            {item.id && (
+              <TagsSelector
+                value={item.card.tags}
+                onChange={onTagsChange}
+                deck={deck}
+                renderAnchor={({ openMenu, disabled }) => (
+                  <IconButton
+                    icon={'tag-plus'}
+                    iconColor={theme.colors.primary}
+                    onPress={openMenu}
+                    disabled={disabled}
+                    style={{ margin: 0 }}
+                    size={24 * fontScale}
+                  />
+                )}
+              />
+            )}
+          </View>
+        )}
+      </View>
     </View>
   );
 };

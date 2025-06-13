@@ -4,7 +4,6 @@ import { fetchAuthSession } from 'aws-amplify/auth';
 import { Hub } from 'aws-amplify/utils';
 import { usePostHog } from 'posthog-react-native';
 import React, { FC, ReactNode, useEffect, useState } from 'react';
-import Purchases from 'react-native-purchases';
 import { Sentry } from '../BetterSentry';
 import { facility } from '../facility';
 import { notificationsIdentifyUser } from '../notificationsIdentifyUser';
@@ -29,8 +28,6 @@ const getAttributes = async (): Promise<
         extra: flatAttributes,
       };
     }
-
-    const { customerInfo } = await Purchases.logIn(flatAttributes['email']);
 
     return {
       success: true,
