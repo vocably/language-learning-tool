@@ -35,7 +35,7 @@ writeFileSync(
   )
 );
 
-writeFileSync(`deck-asis.json`, deckAsIs);
+writeFileSync(`deck-as-is.json`, deckAsIs);
 
 console.log('cards', inspect(cards, { depth: null }));
 

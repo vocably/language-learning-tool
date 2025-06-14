@@ -1,7 +1,7 @@
 .env.local
 .env.development
 deck.json
-deck-asis.json
+deck*.json
 result.csv
 temp-metadata.json
 original-metadata.json
