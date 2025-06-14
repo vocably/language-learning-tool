@@ -2,6 +2,7 @@
 {
   "extends": "@react-native/typescript-config/tsconfig.json",
   "compilerOptions": {
+    "strict": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
     "allowImportingTsExtensions": false
