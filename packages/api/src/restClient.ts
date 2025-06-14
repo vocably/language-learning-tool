@@ -45,7 +45,7 @@ export const request = async (
       success: true,
       value: await response.text(),
     };
-  } catch (e) {
+  } catch (e: any) {
     if (e.name === 'AbortError') {
       return {
         success: false,

@@ -78,8 +78,8 @@ export const listLanguages = async (): Promise<Result<string[]>> => {
     }
 
     const languages = contents
-      .map((r) => r.Key)
-      .map((fileName) => fileName.split('/').pop());
+      .map((r: any) => r.Key)
+      .map((fileName: any) => fileName.split('/').pop());
 
     return {
       success: true,
