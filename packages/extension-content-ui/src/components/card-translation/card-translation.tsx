@@ -13,7 +13,7 @@ import {
 })
 export class VocablyCardTranslation {
   // @ts-ignore
-  private translationInput: HTMLInputElement;
+  private translationInput: HTMLInputElement | undefined;
 
   @Prop() card: TranslationCard;
   @Prop() updateCard: (
@@ -29,6 +29,10 @@ export class VocablyCardTranslation {
 
     if (this.isSaving) {
       return;
+    }
+
+    if (!this.translationInput) {
+      throw new Error('Translation input does not exist.');
     }
 
     if (this.translationInput.value.trim() === '') {
@@ -91,7 +95,7 @@ export class VocablyCardTranslation {
             this.translationInput = el;
             if (this.translationInput) {
               setTimeout(() => {
-                this.translationInput.focus();
+                this.translationInput && this.translationInput.focus();
               }, 200);
             }
           }}

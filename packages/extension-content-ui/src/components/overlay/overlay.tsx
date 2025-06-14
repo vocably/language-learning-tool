@@ -17,6 +17,10 @@ const onKeyboardEvent = (event: KeyboardEvent) => {
 
   const last = overlayStack.at(-1);
 
+  if (!last) {
+    return;
+  }
+
   if (!last.closeKeyCode.includes(event.code)) {
     return;
   }
@@ -34,8 +38,8 @@ export class VocablyOverlay {
 
   @Prop() closeKeyCode = ['Escape'];
 
-  private backdrop!: HTMLElement;
-  private overlay!: HTMLElement;
+  private backdrop!: HTMLElement | undefined;
+  private overlay!: HTMLElement | undefined;
 
   constructor() {}
 
@@ -49,6 +53,10 @@ export class VocablyOverlay {
       document.body.removeEventListener(keyboardEventName, onKeyboardEvent);
     }
 
+    if (!this.backdrop || !this.overlay) {
+      throw new Error(`Can't find overlay with backdrop element`);
+    }
+
     this.backdrop.style.opacity = '0';
     this.overlay.style.opacity = '0';
     await new Promise((resolve) => setTimeout(resolve, animationDuration));
@@ -57,6 +65,10 @@ export class VocablyOverlay {
 
   componentDidLoad() {
     overlayStack = [...overlayStack, this];
+
+    if (!this.backdrop || !this.overlay) {
+      throw new Error(`Can't find overlay with backdrop element`);
+    }
 
     if (overlayStack.length === 1) {
       pointerEventNames.forEach((pointerEvent) =>
@@ -70,6 +82,10 @@ export class VocablyOverlay {
     });
 
     setTimeout(() => {
+      if (!this.backdrop || !this.overlay) {
+        throw new Error(`Can't find overlay with backdrop element`);
+      }
+
       this.backdrop.style.transition = `opacity ${animationDuration}ms ease-in-out`;
       this.backdrop.style.opacity = `var(--backdropOpacity)`;
 

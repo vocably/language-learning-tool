@@ -34,6 +34,7 @@ import {
   UpdateCardPayload,
   UpdateTagPayload,
 } from '@vocably/model';
+// @ts-ignore
 import showdown from 'showdown';
 import { getSelectedTagIds } from './getSelectedTagIds';
 import { isDirectNecessary } from './isDirectNecessary';
@@ -48,7 +49,7 @@ const mdConverter = new showdown.Converter();
 })
 export class VocablyTranslation {
   @Prop() phrase: string;
-  @Prop() result: Result<TranslationCards> | null = null;
+  @Prop() result: Result<TranslationCards>;
   @Prop() loading: boolean = false;
   @Prop() existingSourceLanguages: GoogleLanguage[] = [];
   @Prop() existingTargetLanguages: GoogleLanguage[] = [];
@@ -109,6 +110,7 @@ export class VocablyTranslation {
   @Method()
   async play() {
     const playSoundElement =
+      this.el.shadowRoot &&
       this.el.shadowRoot.querySelector('vocably-play-sound');
 
     if (!playSoundElement) {
@@ -332,7 +334,7 @@ export class VocablyTranslation {
     }
   };
 
-  private askForRatingContainer: HTMLDivElement;
+  private askForRatingContainer: HTMLDivElement | undefined;
 
   render() {
     const sourceLanguageSelector = this.result && this.result.success && (
@@ -713,14 +715,16 @@ export class VocablyTranslation {
                                 case 'feedback':
                                   break;
                                 case 'later':
-                                  this.askForRatingContainer.classList.add(
-                                    'vocably-rate-container-hidden'
-                                  );
+                                  this.askForRatingContainer &&
+                                    this.askForRatingContainer.classList.add(
+                                      'vocably-rate-container-hidden'
+                                    );
                                   break;
                                 case 'never':
-                                  this.askForRatingContainer.classList.add(
-                                    'vocably-rate-container-hidden'
-                                  );
+                                  this.askForRatingContainer &&
+                                    this.askForRatingContainer.classList.add(
+                                      'vocably-rate-container-hidden'
+                                    );
                                   break;
                               }
 

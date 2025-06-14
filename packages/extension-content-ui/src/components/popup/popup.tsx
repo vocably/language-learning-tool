@@ -17,8 +17,17 @@ export class VocablyPopup {
   @Event() close: EventEmitter<void>;
 
   componentDidRender() {
+    if (!this.el.shadowRoot) {
+      throw new Error('Shadow root property is empty');
+    }
+
     const contentWrapper = this.el.shadowRoot.getElementById('content-wrapper');
     const content = this.el.shadowRoot.getElementById('content');
+
+    if (!content || !contentWrapper) {
+      throw new Error(`Can't find content or contentWrapper elements`);
+    }
+
     const resizeObserver = new ResizeObserver(() => {
       requestAnimationFrame(() => {
         const rect = content.getBoundingClientRect();

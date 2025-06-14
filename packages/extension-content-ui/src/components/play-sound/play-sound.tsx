@@ -47,7 +47,7 @@ export class VocablyPlaySound {
           title={
             this.isPlayError
               ? `Unfortunately, Vocably is unable to play the audio pronunciation on this website due to its security policies`
-              : null
+              : undefined
           }
         >
           {!this.isPlayError && !this.isLoading && !this.isPlaying && (

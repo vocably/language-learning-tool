@@ -222,12 +222,13 @@ menu.addEventListener('tagClick', (event) => {
 const popup = document.getElementById('popup');
 const closed = document.getElementById('closed');
 
-popup.addEventListener('close', () => {
-  closed.classList.remove('d-none');
-  setTimeout(() => {
-    closed.classList.add('d-none');
-  }, 2000);
-});
+popup &&
+  popup.addEventListener('close', () => {
+    closed && closed.classList.remove('d-none');
+    setTimeout(() => {
+      closed && closed.classList.add('d-none');
+    }, 2000);
+  });
 
 // ---
 
@@ -247,20 +248,21 @@ simpletonTranslation.extensionPlatform = {
 
 // ---
 
-const paywaallTranslation = document.getElementById(
+const paywallTranslation = document.getElementById(
   'paywallTranslation'
 ) as HTMLVocablyTranslationElement;
-paywaallTranslation.existingSourceLanguages = ['en', 'nl'];
-paywaallTranslation.result = simpletonTranslationResult;
-paywaallTranslation.canCongratulate = true;
-paywaallTranslation.askForRating = true;
-paywaallTranslation.extensionPlatform = {
+paywallTranslation.existingSourceLanguages = ['en', 'nl'];
+paywallTranslation.result = simpletonTranslationResult;
+paywallTranslation.canCongratulate = true;
+paywallTranslation.askForRating = true;
+paywallTranslation.extensionPlatform = {
   name: 'Chrome Web Store',
   url: 'https://chrome.google.com/webstore/detail/vocably/baocigmmhhdemijfjnjdidbkfgpgogmb',
   platform: 'chromeExtension',
   paymentLink: 'web',
 };
-paywaallTranslation.maxCards = 50;
+paywallTranslation.paymentLink = 'https://app.vocably.pro/subscribe';
+paywallTranslation.maxCards = 50;
 
 // ---
 

@@ -22,7 +22,7 @@ export class VocablyLanguageSelector {
 
   @Event() choose: EventEmitter<string>;
 
-  private hintElement: HTMLElement;
+  private hintElement: HTMLElement | undefined;
   private hintMutationObserver: MutationObserver;
 
   componentDidLoad() {
@@ -38,6 +38,10 @@ export class VocablyLanguageSelector {
     this.hintMutationObserver = new MutationObserver(() => {
       this.updateHintWidth();
     });
+
+    if (!this.hintElement) {
+      throw new Error(`Can't find hint element`);
+    }
 
     this.hintMutationObserver.observe(this.hintElement, {
       childList: true,
