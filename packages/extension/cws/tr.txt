@@ -1,16 +1,16 @@
 Language: Turkish
 
-Web sitelerini okurken ve YouTube videoları izlerken yabancı kelimeleri çevirin. Vocably, çevirilerinizi otomatik olarak ayrıntılı kelime bilgisi girişlerine dönüştürür ve bunları mobil veya web uygulamasında öğrenmenize olanak tanır.
+Web sitelerini okurken ve YouTube videoları izlerken yabancı kelimeleri çevirin. Vocably, çevirilerinizi otomatik olarak çalışma kartlarına dönüştürür ve bunları mobil veya web uygulamasında öğrenmenize olanak tanır.
 
-Baktığınız kelimeleri unutmayı bırakacaksınız — ve kelime dağarcığınızı akıcılık düzeyine kadar geliştireceksiniz.
+Baktığınız kelimeleri unutmayı bırakacaksınız ve kelime dağarcığınızı akıcılık düzeyine kadar geliştireceksiniz.
 
 Vocably, gerçek dünya tarama deneyimi için tasarlanmış akıllı bir dil asistanıdır. Herhangi bir web sitesinde veya YouTube videosunda anında metin çevirin ve uzun vadeli hafıza için kişisel koleksiyonunuza kaydedin.
 
-Bilimsel olarak kanıtlanmış Aralıklı Tekrar Sistemi'ni (SRS) kullanan Vocably, ilerlemenizi takip eder ve kelimeleri unutmak üzereyken tam zamanında tekrar etmenizi hatırlatır. Günlük internet kullanımınızı keyifli bir öğrenme alışkanlığına dönüştürün.
+Bilimsel olarak kanıtlanmış Aralıklı Tekrar Sistemini (SRS) kullanan Vocably, ilerlemenizi takip eder ve kelimeleri tam unutmak üzereyken size tekrar etmenizi hatırlatır. Günlük internet kullanımınızı keyifli bir öğrenme alışkanlığına dönüştürün.
 
-🌐 Zahmetsiz Çeviri ve Keşif
+＋ Zahmetsiz Çeviri ve Keşif
 
-Anında Çeviri: Herhangi bir web sayfasındaki kelime veya ifadeyi seçin ve anında çeviri ile yeni kelime hakkında ayrıntılı bilgi alın.
+Anında Çeviri: Herhangi bir web sayfasındaki herhangi bir kelimeyi veya ifadeyi seçerek çevirisini ve yeni kelime hakkında ayrıntılı bilgiyi alın.
 
 YouTube Entegrasyonu: YouTube altyazılarından doğrudan yabancı kelimeleri vurgulamak ve kaydetmek için Alt (veya Option ⌥) tuşunu basılı tutun.
 
@@ -18,7 +18,7 @@ Ayrıntılı Bilgi: Vocably net ve doğru tanımlar, fonetik transkripsiyon, ör
 
 Çok Dil Desteği: Vocably birden fazla dil öğrenmenize ve uzantı ile uygulama arayüzlerinde aralarında kolayca geçiş yapmanıza olanak tanır.
 
-🧠 Kaydedilen Kelimeleri Aralıklı Tekrarla Öğrenin
+＋ Kaydedilen Kelimeleri Aralıklı Tekrarla Öğrenin
 
 Aralıklı Tekrar (SRS): Otomatik tekrar programlarıyla kelimeleri kısa vadeli bellekten uzun vadeli belleğe verimli şekilde taşıyın.
 
@@ -26,9 +26,9 @@ Mobil Senkronizasyon: Kaydedilen kelimeleriniz her zaman yanınızda. iOS ve And
 
 Kişiselleştirilmiş Kartlar: Çevirdiğiniz her kelime otomatik olarak bir çalışma kartına dönüşür — manuel giriş gerekmez.
 
-🚀 Nasıl Başlanır
+＋ Nasıl Başlanır
 
-Seç ve Çevir: Bir web sitesinde herhangi bir kelime veya ifadeyi vurgulayın ve Vocably açılır penceresine tıklayın.
+Seç ve Çevir: Bir web sitesinde herhangi bir kelimeyi veya ifadeyi seçin ve açılan Vocably düğmesine tıklayın.
 
 Kaydet: Kelimeyi ve tanımını tek tıklamayla koleksiyonunuza ekleyin.
 

@@ -1,14 +1,14 @@
 Language: Spanish
 
-Traduce palabras desconocidas mientras navegas por sitios web y ves videos de YouTube. Vocably convierte automáticamente tus traducciones en entradas de vocabulario detalladas y te permite aprenderlas en la aplicación móvil o web.
+Traduce palabras desconocidas mientras navegas por sitios web y ves videos de YouTube. Vocably convierte automáticamente tus traducciones en tarjetas de estudio y te permite aprenderlas en la aplicación móvil o web.
 
-Dejarás de olvidar las palabras que buscaste — y ampliarás tu vocabulario hasta alcanzar la fluidez.
+Dejarás de olvidar las palabras que buscaste y ampliarás tu vocabulario hasta alcanzar la fluidez.
 
-Vocably es el asistente de idiomas inteligente diseñado para la navegación del mundo real. Traduce texto al instante en cualquier sitio web o video de YouTube y guárdalo en tu colección personal para una retención a largo plazo.
+Vocably es el asistente de idiomas inteligente diseñado para la navegación en el mundo real. Traduce texto al instante en cualquier sitio web o video de YouTube y guárdalo en tu colección personal para una retención a largo plazo.
 
 Usando un Sistema de Repetición Espaciada (SRS) científicamente probado, Vocably hace un seguimiento de tu progreso y te recuerda repasar las palabras exactamente cuando estás a punto de olvidarlas. Transforma tu uso diario de internet en un hábito de aprendizaje agradable.
 
-🌐 Traducción y Descubrimiento Sin Esfuerzo
+＋ Traducción y Descubrimiento Sin Esfuerzo
 
 Traducción Instantánea: Selecciona cualquier palabra o frase en cualquier página web para obtener una traducción e información detallada sobre la nueva palabra.
 
@@ -18,7 +18,7 @@ Información Detallada: Vocably proporciona definiciones claras y precisas, tran
 
 Soporte Multilingüe: Aprende varios idiomas y cambia entre ellos cómodamente en las interfaces de la extensión y la aplicación.
 
-🧠 Aprende las Palabras Guardadas con Repetición Espaciada
+＋ Aprende las Palabras Guardadas con Repetición Espaciada
 
 Repetición Espaciada (SRS): Mueve palabras eficientemente de la memoria a corto plazo a la memoria a largo plazo con programas de repaso automatizados.
 
@@ -26,7 +26,7 @@ Sincronización Móvil: Tus palabras guardadas siempre están contigo. Repásala
 
 Tarjetas Personalizadas: Cada palabra que traduces se convierte automáticamente en una tarjeta de estudio — sin necesidad de entrada manual.
 
-🚀 Cómo Empezar
+＋ Cómo Empezar
 
 Selecciona y Traduce: Resalta cualquier palabra o frase en un sitio web y haz clic en el botón emergente de Vocably.
 

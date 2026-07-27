@@ -1,14 +1,14 @@
 Language: Portuguese (Brazil)
 
-Traduza palavras desconhecidas enquanto navega em sites e assiste a vídeos no YouTube. O Vocably transforma automaticamente suas traduções em entradas detalhadas de vocabulário e permite que você as aprenda no aplicativo móvel ou web.
+Traduza palavras desconhecidas enquanto navega em sites e assiste a vídeos no YouTube. O Vocably transforma automaticamente suas traduções em cartões de estudo e permite que você as aprenda no aplicativo móvel ou web.
 
-Você vai parar de esquecer as palavras que pesquisou — e expandirá seu vocabulário até a fluência.
+Você vai parar de esquecer as palavras que traduziu e vai expandir seu vocabulário até a fluência.
 
-O Vocably é o assistente de idiomas inteligente projetado para a navegação no mundo real. Traduza instantaneamente textos em qualquer site ou vídeo do YouTube e salve-os em sua coleção pessoal para retenção a longo prazo.
+O Vocably é o assistente de idiomas inteligente criado para a navegação no mundo real. Traduza instantaneamente textos em qualquer site ou vídeo do YouTube e salve-os em sua coleção pessoal para retenção a longo prazo.
 
 Utilizando um Sistema de Repetição Espaçada (SRS) comprovado cientificamente, o Vocably acompanha seu progresso e lembra você de revisar as palavras exatamente quando você está prestes a esquecê-las. Transforme seu uso diário da internet em um hábito de aprendizado prazeroso.
 
-🌐 Tradução e Descoberta Sem Esforço
+＋ Tradução e Descoberta Sem Esforço
 
 Tradução Instantânea: Selecione qualquer palavra ou frase em qualquer página da web para obter uma tradução e informações detalhadas sobre o novo termo.
 
@@ -18,7 +18,7 @@ Informações Detalhadas: O Vocably fornece definições claras e precisas, tran
 
 Suporte Multilíngue: Aprenda vários idiomas e alterne convenientemente entre eles nas interfaces da extensão e do aplicativo.
 
-🧠 Aprenda Palavras Salvas com Repetição Espaçada
+＋ Aprenda Palavras Salvas com Repetição Espaçada
 
 Repetição Espaçada (SRS): Mova palavras da memória de curto prazo para a de longo prazo de forma eficiente com cronogramas de revisão automatizados.
 
@@ -26,7 +26,7 @@ Sincronização Móvel: Suas palavras salvas estão sempre com você. Revise-as 
 
 Flashcards Personalizados: Cada palavra que você traduz torna-se automaticamente um cartão de estudo — sem necessidade de digitação manual.
 
-🚀 Como Começar
+＋ Como Começar
 
 Selecione e Traduza: Destaque qualquer palavra ou frase em um site e clique no botão flutuante do Vocably.
 
