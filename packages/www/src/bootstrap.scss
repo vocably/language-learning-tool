@@ -22,8 +22,7 @@ $display-font-sizes: (
 $utilities: map-merge(
   $utilities,
   (
-    'font-size':
-      map-merge(
+    'font-size': map-merge(
         map-get($utilities, 'font-size'),
         (
           responsive: true,
@@ -35,8 +34,7 @@ $utilities: map-merge(
 $utilities: map-merge(
   $utilities,
   (
-    'width':
-      map-merge(
+    'width': map-merge(
         map-get($utilities, 'width'),
         (
           responsive: true,
@@ -80,3 +78,14 @@ $hero-bg-color-byte: 250;
 }
 
 @import './styles/search.scss';
+
+.tooltip {
+  .tooltip-inner {
+    line-height: 1.2;
+    text-align: left;
+    font-weight: 400;
+    font-size: 85%;
+    padding: 0.8rem;
+    border-radius: 1rem;
+  }
+}
