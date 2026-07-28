@@ -30,6 +30,28 @@
   }
 }
 
+// The four platform CTAs are all rendered server-side and only one of them
+// survives the platform detection in index.ts (the rest are removed from the
+// DOM). Stacking them into a single grid cell keeps the block exactly one
+// button tall both before and after that runs, so nothing reflows.
+.cta-buttons {
+  display: grid;
+
+  & > .cta-button {
+    grid-area: 1 / 1;
+  }
+}
+
+// Same idea for the two mutually exclusive labels of the platform row.
+.cta-supports-label {
+  display: inline-grid;
+
+  & > span {
+    grid-area: 1 / 1;
+    justify-self: center;
+  }
+}
+
 .cta-button {
   padding: 15px 40px;
   border: none;
