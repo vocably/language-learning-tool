@@ -1,0 +1,74 @@
+{{#> layout
+  title='The fastest way to learn a language'
+  metaDescription=''
+  url='/ai.html'
+  ogDescription=''
+  navbarAlwaysMurky=true
+  navbarSpacing="mb-0"
+  navbarContainerClass="container-md"
+  noCta=true
+  nonStickyNavbar=true
+  disabledAutoTrack=true
+}}
+  <div class="container-md">
+    <div class="pt-3 pb-5">
+      <h1 class="h3">The fasted way to learn a language.</h1>
+
+      <p>Do you know why children pick up languages almost immediately and adults struggle? Because:</p>
+
+      <ul>
+        <li>Children use language to ask questions and complain about problems</li>
+        <li>Adults mostly use language to answer questions and solve someone else's problems</li>
+      </ul>
+    </div>
+  </div>
+  <div style="background: #f9f9f9;">
+    <div class="container-md py-5" style="font-size: 80%">
+      <h2 class="h5" style="color: var(--bs-body-color); font-size: 140%">An AI prompt</h2>
+
+      <div class="mb-4">
+        <p>What language are you learning?</p>
+
+        <select id="language" name='language' aria-label='Language' class="form-select form-select-sm mb-4">
+          {{#each htmlWebpackPlugin.options.environment.languages}}
+            <option value='{{this.code}}'>{{this.label}}</option>
+          {{/each}}
+        </select>
+
+        <p>Awesome! Now copy this prompt:</p>
+
+        <style>
+          #prompt-wrapper {
+            --padding: 2rem;
+
+            font-size: 90%;
+            white-space: pre-wrap;
+            position: relative;
+            padding: var(--padding);
+
+            #copy-button {
+              position: absolute;
+              bottom: var(--padding);
+              right: var(--padding);
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              border-radius: 0.5rem;
+              letter-spacing: -0.02em;
+              font-size: 90%;
+            }
+          }
+        </style>
+
+        <pre class="bg-dark text-light" style="margin-bottom: 2rem;" id="prompt-wrapper"><code id="prompt"></code><button class="btn btn-secondary btn-sm" id="copy-button"><i class="bi bi-copy"></i><span>Copy</span></button></pre>
+
+        <p>You are amazing! Now add this prompt to the context of AI you are using:</p>
+
+<!--        Tab component goes here-->
+      </div>
+      {{> social-share
+      }}
+    </div>
+  </div>
+{{/layout}}
+
