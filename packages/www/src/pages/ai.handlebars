@@ -10,6 +10,80 @@
   nonStickyNavbar=true
   disabledAutoTrack=true
 }}
+  <style>
+    :root {
+      --info-radius: 0.75rem;
+      --info-padding: 1.25rem;
+    }
+
+    .select-language {
+      border-radius: var(--info-radius);
+      border: none;
+      box-shadow: none;
+      padding: var(--info-padding);
+    }
+
+    .info-panel {
+      padding: var(--info-padding);
+      background: #fff;
+      border-radius: var(--info-radius);
+    }
+
+    .info-panel[hidden] {
+      display: none;
+    }
+
+    #ai-tabs {
+      .ai-tabs-nav {
+        display: flex;
+        gap: 0.25rem;
+        padding: 0.25rem;
+        margin-bottom: 1rem;
+        background: #ececec;
+        border-radius: var(--info-radius);
+      }
+
+      .ai-tab {
+        flex: 1 1 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+        padding: 0.5rem 0.75rem;
+        border: 0;
+        background: transparent;
+        color: var(--bs-secondary-color);
+        border-radius: calc(var(--info-radius) - 0.25rem);
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+      }
+
+      .ai-tab:hover {
+        color: var(--bs-body-color);
+      }
+
+      .ai-tab[aria-selected='true'] {
+        background: #fff;
+        color: var(--bs-body-color);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+      }
+
+      .ai-tab .bi {
+        font-size: 1.15em;
+        line-height: 1;
+      }
+
+      .ai-instruction {
+        margin: 0;
+      }
+
+      .bi-box-arrow-up-right {
+        font-size: 0.85em;
+        margin-left: 0.35em;
+      }
+    }
+  </style>
   <div class="container-md">
     <div class="pt-3 pb-5">
       <h1 class="h3">The fasted way to learn a language.</h1>
@@ -29,7 +103,7 @@
       <div class="mb-4">
         <p>What language are you learning?</p>
 
-        <select id="language" name='language' aria-label='Language' class="form-select form-select-sm mb-4">
+        <select id="language" name='language' aria-label='Language' class="select-language form-select form-select-sm mb-4">
           {{#each htmlWebpackPlugin.options.environment.languages}}
             <option value='{{this.code}}'>{{this.label}}</option>
           {{/each}}
@@ -39,17 +113,14 @@
 
         <style>
           #prompt-wrapper {
-            --padding: 2rem;
-
             font-size: 90%;
             white-space: pre-wrap;
             position: relative;
-            padding: var(--padding);
 
             #copy-button {
               position: absolute;
-              bottom: var(--padding);
-              right: var(--padding);
+              bottom: var(--info-padding);
+              right: var(--info-padding);
               display: flex;
               align-items: center;
               gap: 0.5rem;
@@ -60,79 +131,9 @@
           }
         </style>
 
-        <pre class="bg-dark text-light" style="margin-bottom: 2rem;" id="prompt-wrapper"><code id="prompt"></code><button class="btn btn-secondary btn-sm" id="copy-button"><i class="bi bi-copy"></i><span>Copy</span></button></pre>
+        <pre class="info-panel" style="margin-bottom: 2rem;" id="prompt-wrapper"><code id="prompt"></code><button class="btn btn-secondary btn-sm" id="copy-button"><i class="bi bi-copy"></i><span>Copy</span></button></pre>
 
         <p>You are amazing! Now add this prompt to the context of AI you are using:</p>
-
-        <style>
-          #ai-tabs {
-            --ai-radius: 0.75rem;
-
-            .ai-tabs-nav {
-              display: flex;
-              gap: 0.25rem;
-              padding: 0.25rem;
-              margin-bottom: 1rem;
-              background: #ececec;
-              border-radius: var(--ai-radius);
-            }
-
-            .ai-tab {
-              flex: 1 1 0;
-              display: inline-flex;
-              align-items: center;
-              justify-content: center;
-              gap: 0.4rem;
-              padding: 0.5rem 0.75rem;
-              border: 0;
-              background: transparent;
-              color: var(--bs-secondary-color);
-              border-radius: calc(var(--ai-radius) - 0.25rem);
-              font-weight: 500;
-              cursor: pointer;
-              transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
-            }
-
-            .ai-tab:hover {
-              color: var(--bs-body-color);
-            }
-
-            .ai-tab[aria-selected='true'] {
-              background: #fff;
-              color: var(--bs-body-color);
-              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
-            }
-
-            .ai-tab .bi {
-              font-size: 1.15em;
-              line-height: 1;
-            }
-
-            .ai-panel {
-              padding: 1.25rem;
-              background: #fff;
-              border-radius: var(--ai-radius);
-            }
-
-            .ai-panel[hidden] {
-              display: none;
-            }
-
-            .ai-steps {
-              margin: 0;
-              padding-left: 1.2rem;
-            }
-
-            .ai-steps > li + li {
-              margin-top: 0.6rem;
-            }
-
-            .bi-box-arrow-up-right {
-              font-size: 0.85em;
-              margin-left: 0.35em;
-            }
-          }
-        </style>
 
         <div id="ai-tabs">
           <div class="ai-tabs-nav" role="tablist" aria-label="AI assistant">
@@ -168,68 +169,51 @@
           </div>
 
           <div
-            class="ai-panel"
+            class="info-panel"
             role="tabpanel"
             id="ai-panel-chatgpt"
             data-ai-panel="chatgpt"
             aria-labelledby="ai-tab-chatgpt"
           >
-            <ol class="ai-steps">
-              <li>
-                <a
-                  class="btn btn-dark btn-sm"
-                  href="https://chatgpt.com/#settings/Personalization"
-                  target="_blank"
-                  rel="noopener"
-                >Customize ChatGPT<i class="bi bi-box-arrow-up-right"></i></a>
-              </li>
-              <li>Paste the prompt into <strong>&ldquo;Anything else ChatGPT should know about you?&rdquo;</strong></li>
-              <li><strong>Save</strong> &rarr; open a new chat.</li>
-            </ol>
+            <p class="ai-instruction">Paste the prompt into the <strong>Custom instructions</strong> section of <a
+                href="https://chatgpt.com/#settings/Personalization"
+                target="_blank"
+                rel="noopener"
+                class="link-secondary"
+              >Personalization<i class="bi bi-box-arrow-up-right"></i></a>.</p>
           </div>
 
           <div
-            class="ai-panel"
+            class="info-panel"
             role="tabpanel"
             id="ai-panel-gemini"
             data-ai-panel="gemini"
             aria-labelledby="ai-tab-gemini"
             hidden
           >
-            <ol class="ai-steps">
-              <li>
-                <a
-                  class="btn btn-dark btn-sm"
-                  href="https://gemini.google.com/saved-info"
-                  target="_blank"
-                  rel="noopener"
-                >Saved info<i class="bi bi-box-arrow-up-right"></i></a>
-              </li>
-              <li><i class="bi bi-plus-lg"></i> <strong>Add info</strong> &rarr; paste the prompt.</li>
-              <li><strong>Save</strong> &rarr; open a new chat.</li>
-            </ol>
+            <p class="ai-instruction">Open <a
+                href="https://gemini.google.com/saved-info"
+                target="_blank"
+                rel="noopener"
+                class="link-secondary"
+              >Personal context<i class="bi bi-box-arrow-up-right"></i></a>, tick the <strong>Your instructions for
+                Gemini</strong> checkbox, then click <strong>+ Add</strong> and paste the prompt.</p>
           </div>
 
           <div
-            class="ai-panel"
+            class="info-panel"
             role="tabpanel"
             id="ai-panel-claude"
             data-ai-panel="claude"
             aria-labelledby="ai-tab-claude"
             hidden
           >
-            <ol class="ai-steps">
-              <li>
-                <a
-                  class="btn btn-dark btn-sm"
-                  href="https://claude.ai/settings/profile"
-                  target="_blank"
-                  rel="noopener"
-                >Claude settings &rarr; Profile<i class="bi bi-box-arrow-up-right"></i></a>
-              </li>
-              <li>Paste the prompt into <strong>&ldquo;What personal preferences should Claude consider in responses?&rdquo;</strong></li>
-              <li><strong>Save</strong> &rarr; open a new chat.</li>
-            </ol>
+            <p class="ai-instruction">Paste the prompt into the <strong>Instructions for Claude</strong> section of your <a
+                href="https://claude.ai/settings/profile"
+                target="_blank"
+                rel="noopener"
+                class="link-secondary"
+              >Claude Profile<i class="bi bi-box-arrow-up-right"></i></a>.</p>
           </div>
         </div>
       </div>
