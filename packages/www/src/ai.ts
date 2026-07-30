@@ -62,3 +62,46 @@ The rest of the response goes here.
 
 changeLanguage();
 languageSelector.addEventListener('change', changeLanguage);
+
+const tabsRoot = document.getElementById('ai-tabs') as HTMLElement;
+const tabs = Array.from(
+  tabsRoot.querySelectorAll<HTMLButtonElement>('[data-ai-tab]')
+);
+const panels = Array.from(
+  tabsRoot.querySelectorAll<HTMLElement>('[data-ai-panel]')
+);
+
+const selectTab = (name: string, focus = false) => {
+  tabs.forEach((tab) => {
+    const isSelected = tab.dataset.aiTab === name;
+    tab.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+    tab.tabIndex = isSelected ? 0 : -1;
+    if (isSelected && focus) {
+      tab.focus();
+    }
+  });
+
+  panels.forEach((panel) => {
+    panel.hidden = panel.dataset.aiPanel !== name;
+  });
+};
+
+tabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => selectTab(tab.dataset.aiTab ?? ''));
+
+  tab.addEventListener('keydown', (e) => {
+    const offset =
+      e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : undefined;
+    if (offset === undefined) return;
+    e.preventDefault();
+    const next = tabs[(index + offset + tabs.length) % tabs.length];
+    selectTab(next.dataset.aiTab ?? '', true);
+  });
+});
+
+const requestedTab = (queryParams.get('ai') ?? '').toLowerCase();
+selectTab(
+  tabs.some((tab) => tab.dataset.aiTab === requestedTab)
+    ? requestedTab
+    : 'chatgpt'
+);
