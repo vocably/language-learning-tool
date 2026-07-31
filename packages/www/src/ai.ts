@@ -58,6 +58,10 @@ The rest of the response goes here.
 ///////////////////////////////////////`;
 
   promptSnippet.innerText = prompt;
+
+  document
+    .querySelectorAll('[data-language-string]')
+    .forEach((e) => (e.textContent = languageName));
 };
 
 changeLanguage();

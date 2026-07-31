@@ -99,7 +99,9 @@
   </div>
   <div style="background: #f9f9f9;">
     <div class="container-md py-5" style="font-size: 80%">
-      <h2 class="h5" style="color: var(--bs-body-color); font-size: 140%">An AI prompt</h2>
+      <h2 class="h5" style="color: var(--bs-body-color); font-size: 140%">How to use AI to advance in your language-learning</h2>
+
+      <p>This section provides necessary steps on how to set up your AI provider (ChatGPT, Gemini, or Claude) to not only respond to you in your Target Language, but also evaluate and correct your grammar.</p>
 
       <div class="mb-5">
         <p>What language are you learning?</p>
@@ -110,7 +112,7 @@
           {{/each}}
         </select>
 
-        <p>Awesome! Now copy this prompt:</p>
+        <p>Copy the following prompt:</p>
 
         <style>
           #prompt-wrapper {
@@ -139,9 +141,9 @@
 
         <pre class="info-panel" id="prompt-wrapper"><code id="prompt"></code><button class="btn btn-secondary btn-sm" id="copy-button"><i class="bi bi-copy"></i><span>Copy</span></button></pre>
 
-        <p>You are amazing! Now add this prompt to the context of AI you are using:</p>
+        <p>Add the above prompt to the context of AI you are using:</p>
 
-        <div id="ai-tabs">
+        <div id="ai-tabs" class="mb-4">
           <div class="ai-tabs-nav" role="tablist" aria-label="AI assistant">
             <button
               type="button"
@@ -222,6 +224,8 @@
               >Claude Profile<i class="bi bi-box-arrow-up-right"></i></a>.</p>
           </div>
         </div>
+
+        <p>Now, the most difficult part: start solving your daily problems in <span data-language-string>your Target Language</span>. This won't be easy at the beginning and you will have to look up many new words while formulating the question and understanding the response. But this hardness is exactly how the fluency in a foreign language is created. You can do it.</p>
       </div>
       {{> social-share
         page="ai.html"
