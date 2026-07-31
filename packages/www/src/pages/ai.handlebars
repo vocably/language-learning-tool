@@ -88,7 +88,6 @@
 
     #ai-tabs {
       .ai-tabs-nav {
-        display: flex;
         gap: 0.25rem;
         padding: 0.25rem;
         margin-bottom: 1rem;
@@ -177,7 +176,7 @@
         <p>Add the copied prompt to your AI assistant's context:</p>
 
         <div id="ai-tabs" class="mb-4">
-          <div class="ai-tabs-nav" role="tablist" aria-label="AI assistant">
+          <div class="ai-tabs-nav d-flex flex-column flex-sm-row" role="tablist" aria-label="AI assistant">
             <button
               type="button"
               role="tab"
@@ -221,7 +220,7 @@
                 target="_blank"
                 rel="noopener"
                 class="link-secondary"
-              >Personalization<i class="bi bi-box-arrow-up-right"></i></a>.</p>
+              >ChatGPT Personalization<i class="bi bi-box-arrow-up-right"></i></a>.</p>
           </div>
 
           <div
@@ -237,7 +236,7 @@
                 target="_blank"
                 rel="noopener"
                 class="link-secondary"
-              >Personal context<i class="bi bi-box-arrow-up-right"></i></a>, tick the <strong>Your instructions for
+              >Gemini personal context<i class="bi bi-box-arrow-up-right"></i></a>, tick the <strong>Your instructions for
                 Gemini</strong> checkbox, then click <strong>+ Add</strong> and paste the prompt.</p>
           </div>
 
