@@ -1,5 +1,5 @@
 {{#> layout
-  title='The fastest way to learn a language'
+  title='The fastest way to language mastery'
   metaDescription=''
   url='/ai.html'
   ogDescription=''
@@ -32,6 +32,17 @@
 
     .info-panel[hidden] {
       display: none;
+    }
+
+    .call-out {
+      font-size: 1.5rem;
+      font-style: italic;
+      font-weight: 300;
+      padding: 0.5rem 2rem;
+      border-left: 4px solid #0050ff;
+      max-width: 600px;
+      line-height: 1.6;
+      margin: 2rem 0;
     }
 
     #ai-tabs {
@@ -87,27 +98,33 @@
   </style>
   <div class="container-md">
     <div class="pt-3 pb-5">
-      <h1 class="h3">The fasted way to language mastery.</h1>
+      <h1 class="h3">The fastest way to language mastery.</h1>
 
-      <p style="font-size: 80%;">This page was created based on a discovery I made and shared at <a href="https://www.reddit.com/r/learndutch/s/vlO10JmnUl" target="_blank">r/learndutch community of Reddit<i class="bi bi-box-arrow-up-right ms-2"></i></a>.</p>
+      <p style="font-size: 80%;">This page is based on a discovery I made and shared with the <a href="https://www.reddit.com/r/learndutch/s/vlO10JmnUl" target="_blank">r/learndutch community on Reddit<i class="bi bi-box-arrow-up-right ms-2"></i></a>.</p>
 
-      <p>Do you know why children pick up their first language almost effortlessly, while adults struggle with their second language?</p>
+      <p>Why do children pick up their first language almost effortlessly, while adults struggle with their second?</p>
 
-      <p>The difference is in the language application:</p>
+      <p>The difference is in what the language is used for:</p>
 
       <ul>
-        <li>Children use their first language to ask questions and complain about problems</li>
-        <li>Adults use their second language to answer someone's questions and solve someone else's problems</li>
+        <li>Children use their first language to ask their own questions and complain about their own problems</li>
+        <li>Adults use their second language to answer other people's questions and solve other people's problems</li>
       </ul>
 
-      <p>Children are way more motivated to use their first language because they receive immediate value out of it: their questions get answered and their daily problems get resolve.</p>
+      <p>Children are far more motivated, because the language pays them back immediately &ndash; their questions get answered and their problems get solved.</p>
+
+      <blockquote class="call-out">
+        Use the language you're learning to solve your own problems.
+      </blockquote>
+
+      <p>That used to be hard to arrange. Who listens to a beginner every single day? AI does. It answers in any language, at any level, on any topic &ndash; so every problem you bring to it pays you back the same way it pays a child. Setting it up takes a couple of minutes.</p>
     </div>
   </div>
   <div style="background: #f9f9f9;">
     <div class="container-md py-5" style="font-size: 80%">
-      <h2 class="h5" style="color: var(--bs-body-color); font-size: 140%">How to use AI to advance in your language-learning</h2>
+      <h2 class="h5" style="color: var(--bs-body-color); font-size: 140%">How to use AI to advance in your language learning</h2>
 
-      <p>This section provides necessary steps on how to set up your AI provider (ChatGPT, Gemini, or Claude) to not only respond to you in your Target Language, but also evaluate and correct your grammar.</p>
+      <p>Three steps to make your AI provider (ChatGPT, Gemini, or Claude) reply in the language you're learning and correct your grammar along the way.</p>
 
       <div class="mb-5">
         <p>What language are you learning?</p>
@@ -147,7 +164,7 @@
 
         <pre class="info-panel" id="prompt-wrapper"><code id="prompt"></code><button class="btn btn-secondary btn-sm" id="copy-button"><i class="bi bi-copy"></i><span>Copy</span></button></pre>
 
-        <p>Add the above prompt to the context of AI you are using:</p>
+        <p>Add it to the context of the AI you are using:</p>
 
         <div id="ai-tabs" class="mb-4">
           <div class="ai-tabs-nav" role="tablist" aria-label="AI assistant">
@@ -231,7 +248,7 @@
           </div>
         </div>
 
-        <p>Now, the most difficult part: start solving your daily problems in <span data-language-string>your Target Language</span>. This won't be easy at the beginning and you will have to look up many new words while formulating the question and understanding the response. But this hardness is exactly how the fluency in a foreign language is created. You can do it.</p>
+        <p>Now the hard part: start solving your daily problems in <span data-language-string>your target language</span>. At first you'll look up a lot of words just to ask the question and understand the answer. That difficulty is exactly what builds fluency. You can do it.</p>
       </div>
       {{> social-share
         page="ai.html"
