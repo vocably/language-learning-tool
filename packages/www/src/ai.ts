@@ -13,16 +13,19 @@ languageSelector.value = selectedLanguage;
 const promptSnippet = document.getElementById('prompt') as HTMLElement;
 const copyButton = document.getElementById('copy-button') as HTMLElement;
 
-promptSnippet.addEventListener('click', (e) => {
+const selectSnippet = () => {
   const range = document.createRange();
   range.selectNodeContents(promptSnippet);
   const selection = window.getSelection();
   selection?.removeAllRanges();
   selection?.addRange(range);
-});
+};
+
+promptSnippet.addEventListener('click', selectSnippet);
 
 copyButton.addEventListener('click', (e) => {
   e.stopPropagation();
+  selectSnippet();
   navigator.clipboard.writeText(promptSnippet.innerText);
   const icon = copyButton.querySelector('.bi');
   if (!icon) return;
