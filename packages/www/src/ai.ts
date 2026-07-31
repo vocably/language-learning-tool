@@ -1,12 +1,28 @@
-import { isGoogleLanguage, languageList } from '@vocably/model';
+import { GoogleLanguage, isGoogleLanguage, languageList } from '@vocably/model';
 import { trimLanguage } from '@vocably/sulna';
 import { promptTranslations } from './ai/promptTranslations';
+import { searchConfig } from './constants';
 
 const languageSelector = document.getElementById(
   'language'
 ) as HTMLSelectElement;
+
 const queryParams = new URLSearchParams(window.location.search);
-const selectedLanguage = queryParams.get('l') || 'en';
+
+const getSourceLanguage = () => {
+  if (isGoogleLanguage(window['searchFormSourceLanguage'])) {
+    return window['searchFormSourceLanguage'];
+  }
+
+  if (queryParams.has('l') && isGoogleLanguage(queryParams.get('l') ?? '')) {
+    return queryParams.get('l');
+  }
+  return (
+    localStorage.getItem(searchConfig.sourceLanguageLocalStorageKey) ?? 'en'
+  );
+};
+
+const selectedLanguage = getSourceLanguage();
 
 languageSelector.value = selectedLanguage;
 
@@ -41,6 +57,9 @@ const changeLanguage = () => {
   const language = isGoogleLanguage(languageSelector.value)
     ? languageSelector.value
     : 'en';
+
+  localStorage.setItem(searchConfig.sourceLanguageLocalStorageKey, language);
+
   const languageName = trimLanguage(languageList[language]);
 
   const prompt = `//////////////
