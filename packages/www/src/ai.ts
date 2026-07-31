@@ -40,7 +40,7 @@ const changeLanguage = () => {
     : 'en';
   const languageName = trimLanguage(languageList[language]);
 
-  const prompt = `///////////////////////////////////////
+  const prompt = `//////////////
 
 When I write a message in ${languageName}, respond in ${languageName} and also evaluate my grammar and suggest improvements.
 
@@ -55,7 +55,7 @@ Evaluation goes here
 
 The rest of the response goes here.
 
-///////////////////////////////////////`;
+//////////////`;
 
   promptSnippet.innerText = prompt;
 
