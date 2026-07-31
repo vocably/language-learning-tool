@@ -45,6 +45,47 @@
       margin: 2rem 0;
     }
 
+    .source-note {
+      font-size: 80%;
+      font-style: italic;
+    }
+
+    .setup-section {
+      background: #f9f9f9;
+    }
+
+    .setup-section > .container-md {
+      font-size: 80%;
+    }
+
+    .setup-section h2 {
+      color: var(--bs-body-color);
+      font-size: 140%;
+    }
+
+    #prompt-wrapper {
+      font-size: 90%;
+      white-space: pre-wrap;
+      position: relative;
+      margin-bottom: 2rem;
+
+      #prompt {
+        display: block;
+      }
+
+      #copy-button {
+        position: absolute;
+        bottom: var(--info-padding);
+        right: var(--info-padding);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: 0.5rem;
+        letter-spacing: -0.02em;
+        font-size: 90%;
+      }
+    }
+
     #ai-tabs {
       .ai-tabs-nav {
         display: flex;
@@ -68,7 +109,10 @@
         border-radius: calc(var(--info-radius) - 0.25rem);
         font-weight: 500;
         cursor: pointer;
-        transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+        transition:
+          background-color 0.15s ease,
+          color 0.15s ease,
+          box-shadow 0.15s ease;
       }
 
       .ai-tab:hover {
@@ -98,11 +142,11 @@
   </style>
   <div class="container-md">
     <div class="pt-3 pb-5">
-      <h1 class="h3">How to use AI to advance in your language learning.</h1>
+      <h1 class="h3">How to use AI to advance your language learning</h1>
 
-      <p style="font-size: 80%; font-style: italic;">This page is based on a discovery I made and shared with the <a href="https://www.reddit.com/r/learndutch/s/vlO10JmnUl" target="_blank" rel="noopener nofollow">r/learndutch community on Reddit<i class="bi bi-box-arrow-up-right ms-2"></i></a>.</p>
+      <p class="source-note">This page is based on a discovery I made and shared with the <a href="https://www.reddit.com/r/learndutch/s/vlO10JmnUl" target="_blank" rel="noopener nofollow">r/learndutch community on Reddit<i class="bi bi-box-arrow-up-right ms-2"></i></a>.</p>
 
-      <p>Probably, you already ask AI about work, recipes, and travel plans. The following global prompt makes it answer in the language you're learning and evaluate your grammar and style and suggest improvements along the way.</p>
+      <p>You probably already ask AI about work, recipes, and travel plans. The global prompt below makes it answer in the language you're learning, evaluate your grammar and style, and suggest improvements along the way.</p>
 
       <blockquote class="call-out">
         Solve your daily problems in the language you're learning &mdash; this is the fastest way to language mastery.
@@ -111,51 +155,26 @@
       <p>No extra study time. The practice happens while you get things done.</p>
     </div>
   </div>
-  <div style="background: #f9f9f9;">
-    <div class="container-md py-5" style="font-size: 80%">
-      <h2 class="h5" style="color: var(--bs-body-color); font-size: 140%">How to set it up</h2>
+  <div class="setup-section">
+    <div class="container-md py-5">
+      <h2 class="h5">How to set it up</h2>
 
       <p>Works with ChatGPT, Gemini, and Claude. Takes two minutes.</p>
 
       <div class="mb-5">
-        <p>What language are you learning?</p>
+        <p>Which language are you learning?</p>
 
-        <select id="language" name='language' aria-label='Language' class="select-language form-select form-select-sm mb-4">
+        <select id="language" name="language" aria-label="Language" class="select-language form-select form-select-sm mb-4">
           {{#each htmlWebpackPlugin.options.environment.languages}}
-            <option value='{{this.code}}'>{{this.label}}</option>
+            <option value="{{this.code}}">{{this.label}}</option>
           {{/each}}
         </select>
 
         <p>Copy this global prompt:</p>
 
-        <style>
-          #prompt-wrapper {
-            font-size: 90%;
-            white-space: pre-wrap;
-            position: relative;
-            margin-bottom: 2rem;
-
-            #prompt {
-              display: block;
-            }
-
-            #copy-button {
-              position: absolute;
-              bottom: var(--info-padding);
-              right: var(--info-padding);
-              display: flex;
-              align-items: center;
-              gap: 0.5rem;
-              border-radius: 0.5rem;
-              letter-spacing: -0.02em;
-              font-size: 90%;
-            }
-          }
-        </style>
-
         <pre class="info-panel" id="prompt-wrapper"><code id="prompt"></code><button class="btn btn-secondary btn-sm" id="copy-button"><i class="bi bi-copy"></i><span>Copy</span></button></pre>
 
-        <p>Add the copied global prompt to your AI's context:</p>
+        <p>Add the copied prompt to your AI assistant's context:</p>
 
         <div id="ai-tabs" class="mb-4">
           <div class="ai-tabs-nav" role="tablist" aria-label="AI assistant">
@@ -235,11 +254,11 @@
                 target="_blank"
                 rel="noopener"
                 class="link-secondary"
-              >Claude Profile<i class="bi bi-box-arrow-up-right"></i></a>.</p>
+              >Claude profile<i class="bi bi-box-arrow-up-right"></i></a>.</p>
           </div>
         </div>
 
-        <p>Now the hard part: bring your real questions to the AI in <span data-language-string>your target language</span>. At first, you'll look up a lot of words just to ask the question and read the answer. That difficulty is exactly what builds fluency.</p>
+        <p>Now the hard part: bring your real questions to the AI in <span data-language-string>your target language</span>. At first, you'll look up a lot of words just to ask a question and read the answer. That difficulty is exactly what builds fluency.</p>
       </div>
       {{> social-share
         page="ai.html"
@@ -247,4 +266,3 @@
     </div>
   </div>
 {{/layout}}
-
