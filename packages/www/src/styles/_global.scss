@@ -43,3 +43,9 @@ a {
 .lead {
   letter-spacing: -1px;
 }
+
+p:last-child,
+ul:last-child,
+ol:last-child {
+  margin-bottom: 0;
+}
