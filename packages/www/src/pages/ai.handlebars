@@ -124,9 +124,16 @@
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
       }
 
-      .ai-tab .bi {
-        font-size: 1.15em;
-        line-height: 1;
+      .ai-tab .ai-logo {
+        width: 1.15em;
+        height: 1.15em;
+        opacity: 0.55;
+        transition: opacity 0.15s ease;
+      }
+
+      .ai-tab:hover .ai-logo,
+      .ai-tab[aria-selected='true'] .ai-logo {
+        opacity: 1;
       }
 
       .ai-instruction {
@@ -191,7 +198,7 @@
               data-ai-tab="chatgpt"
               aria-controls="ai-panel-chatgpt"
               aria-selected="true"
-            ><i class="bi bi-chat-dots"></i>ChatGPT</button>
+            ><img class="ai-logo" src="assets/chatgpt.svg" aria-hidden="true" alt="" width="24" height="24" />ChatGPT</button>
             <button
               type="button"
               role="tab"
@@ -201,7 +208,7 @@
               aria-controls="ai-panel-gemini"
               aria-selected="false"
               tabindex="-1"
-            ><i class="bi bi-stars"></i>Gemini</button>
+            ><img class="ai-logo" src="assets/gemini.svg" aria-hidden="true" alt="" width="24" height="24" />Gemini</button>
             <button
               type="button"
               role="tab"
@@ -211,7 +218,7 @@
               aria-controls="ai-panel-claude"
               aria-selected="false"
               tabindex="-1"
-            ><i class="bi bi-asterisk"></i>Claude</button>
+            ><img class="ai-logo" src="assets/claude.svg" aria-hidden="true" alt="" width="24" height="24" />Claude</button>
           </div>
 
           <div
