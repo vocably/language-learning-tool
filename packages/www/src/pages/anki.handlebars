@@ -1,26 +1,31 @@
 {{#> layout
   title='Why not Anki?'
   url='/anki.html'
+  navbarContainerClass="container-md"
+  nonStickyNavbar=true
 }}
-  <div class="container-md">
-    <h1 class="mb-5 text-center">Why not Anki?</h1>
+  <div class="container-md my-5">
+    <h1 class="h3">Why not Anki?</h1>
 
-    <div class="mb-5 small bg-light rounded p-4">
-      <p>Disclaimer: I'm not trying to change the minds of Anki users, who are some of the most dedicated users I've ever encountered.</p>
-      <p class="mb-0">This article explains why Anki doesn’t meet <i>my</i> language-learning needs.</p>
+    <div class="mb-5 small bg-light rounded p-4 fst-italic">
+      <p class="mb-2">Disclaimer: I’m not trying to change the minds of Anki users — they are some of the most dedicated learners I’ve ever encountered.</p>
+      <p class="mb-0">This article explains why Anki doesn’t meet <i class="fst-normal">my</i> language-learning needs.</p>
     </div>
 
-    <p>People sometimes ask me why I don't just use Anki (or Quizlet or Memrise).</p>
+    <p>People sometimes ask me why I don’t just use Anki (or Quizlet, or Memrise).</p>
 
-    <p>I created Vocably because none of the existing solutions could create flashcards quickly enough.</p>
+    <p>I created Vocably because none of the existing solutions let me create flashcards quickly enough.</p>
 
-    <p>Here's how adding a new word to your collection works with Anki, Quizlet, or Memrise:</p>
+    <blockquote class="call-out">
+      It takes 12 steps to add a new word to Anki.
+    </blockquote>
+
+    <p>Here they are:</p>
 
     <ol>
-      <li>Read an article on a website.</li>
-      <li>Find a new word.</li>
-      <li>Select and translate it using Google Translate (or another tool).</li>
-      <li>Copy the unknown word.</li>
+      <li>See a new word on any website.</li>
+      <li>Select and translate it with Google Translate (or another tool).</li>
+      <li>Copy the word.</li>
       <li>Open Anki/Quizlet/Memrise.</li>
       <li>Click “Add new card.”</li>
       <li>Paste the word.</li>
@@ -32,35 +37,37 @@
       <li>Switch back to the website.</li>
     </ol>
 
-    <p>If you are watching YouTube videos, you’ll have even more steps to follow because you need to:</p>
+    <p>If you’re watching a YouTube video, there are even more steps, because you also have to:</p>
 
     <ol>
       <li>Open Google Translate.</li>
-      <li>Manually type the new word.</li>
-      <li>Manually add it to Anki/Quizlet/Memrise.</li>
+      <li>Type the new word manually.</li>
     </ol>
 
-    <p>If you want to avoid having plurals or past-tense verbs (for example, using the word 'acquire' instead of 'acquired'), you'll need to edit them manually, which involves typing and researching.</p>
+    <p>And if you want to store words in their base form instead of as plurals or past-tense verbs (“acquire” rather than “acquired”), you have to edit them by hand — which means even more typing and looking things up.</p>
 
-    <p>Here’s how the Vocably process works:</p>
+    <blockquote class="call-out">
+      Adding a new word to Vocably is just 3 steps.
+    </blockquote>
 
     <ol>
-      <li>You read an article or watch a YouTube video.</li>
-      <li>Come across a new word.</li>
-      <li>Select the word and translate it using Vocably (or click on it while watching YouTube).</li>
-      <li>Add a new card with definitions, parts of speech, translations, usage examples, and in its base form.</li>
+      <li>See a new word on a website or in a YouTube video.</li>
+      <li>Select it and translate with Vocably.</li>
+      <li>Save the card — it already includes definitions, parts of speech, translations, usage examples, and the word in its base form.</li>
     </ol>
 
+    <p>3 steps versus 12.</p>
 
-    <p>4 steps versus 13 steps.</p>
-
-    <p>So, in response to the question, 'Why not Anki?':</p>
+    <p>So, to answer the question <i>Why not Anki?</i>:</p>
 
     <ul>
       <li>Fewer steps to add a new word.</li>
       <li>No app switching — no losing focus while reading or watching.</li>
     </ul>
+
+    <div class="text-center" style="margin: 5rem 0;">
+      {{> cta }}
+    </div>
   </div>
 
 {{/layout}}
-
