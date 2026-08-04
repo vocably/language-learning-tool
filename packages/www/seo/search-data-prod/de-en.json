@@ -7165,65 +7165,6 @@
     },
     "items": [
       {
-        "source": "vorübergehen",
-        "translation": "pass, pass by, go by",
-        "definitions": [
-          "An etwas vorbeigehen",
-          "Vergehen, zu Ende gehen",
-          "Etwas ignorieren, über etwas hinwegsehen"
-        ],
-        "examples": [
-          "Die Zeit wird vorübergehen.",
-          "Er ließ die Bemerkung vorübergehen.",
-          "Wir sahen die Parade vorübergehen."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "foˈʁyːbɐˌɡeːən",
-        "number": "singular",
-        "pastTenses": "ging vorüber, ist vorübergegangen",
-        "presentTenses": "ich gehe vorüber, du gehst vorüber, er/sie/es geht vorüber",
-        "tense": "present"
-      },
-      {
-        "source": "vergehen",
-        "translation": "pass, elapse, commit, fade",
-        "definitions": [
-          "Verstreichen von Zeit",
-          "Vorübergehen, aufhören zu existieren",
-          "Sich vergehen (gegen etwas)",
-          "Verblassen, verschwinden"
-        ],
-        "examples": [
-          "Die Zeit wird schnell vergehen.",
-          "Blumen vergehen im Herbst.",
-          "Er hat sich an ihr vergangen.",
-          "Die Farben vergehen in der Sonne."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "fɛɐ̯ˈɡeːən",
-        "number": "singular",
-        "pastTenses": "verging, ist vergangen",
-        "presentTenses": "ich vergehe, du vergehst, er/sie/es vergeht",
-        "tense": "present"
-      },
-      {
-        "source": "der Passierschein",
-        "translation": "pass, permit",
-        "definitions": [
-          "Ein Dokument, das die Erlaubnis erteilt, eine Grenze, einen Kontrollpunkt oder ein gesperrtes Gebiet zu passieren."
-        ],
-        "examples": [
-          "Zeigen Sie Ihren Passierschein.",
-          "Der Passierschein A38.",
-          "Ohne Passierschein kein Zutritt."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "paˈsiːɐ̯ˌʃaɪ̯n",
-        "g": "masculine",
-        "number": "singular",
-        "pluralForm": "die Passierscheine"
-      },
-      {
         "source": "der Pass",
         "translation": "passport, pass, play",
         "definitions": [
@@ -7241,25 +7182,6 @@
         "g": "masculine",
         "number": "singular",
         "pluralForm": "die Pässe"
-      },
-      {
-        "source": "verbringen",
-        "translation": "spend, pass",
-        "definitions": [
-          "Zeit oder eine Periode an einem Ort oder mit einer Tätigkeit verbringen",
-          "etwas an einen anderen Ort bringen (veraltet oder regional)"
-        ],
-        "examples": [
-          "Wir verbringen den Urlaub am Meer.",
-          "Ich verbringe viel Zeit mit Lesen.",
-          "Sie verbringt die Nacht bei Freunden."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "fɛɐ̯ˈbrɪŋən",
-        "number": "plural",
-        "pastTenses": "verbrachte, hat verbracht",
-        "presentTenses": "ich verbringe, du verbringst, er/sie/es verbringt",
-        "tense": "present"
       },
       {
         "source": "bestehen",
@@ -7286,105 +7208,45 @@
         "tense": "present"
       },
       {
-        "source": "passieren",
-        "translation": "happen, pass, occur, cross",
+        "source": "vorbeigehen",
+        "translation": "pass by, go by, walk past",
         "definitions": [
-          "sich ereignen, geschehen",
-          "vorbeigehen, vorübergehen",
-          "durchlassen, passieren lassen (z.B. eine Grenze)",
-          "durch ein Sieb streichen, pürieren"
+          "An jemandem oder etwas vorbeigehen",
+          "Etwas ignorieren oder übersehen",
+          "Vergehen, vergehen (Zeit)"
         ],
         "examples": [
-          "Was ist passiert?",
-          "Wir passieren die Stadt.",
-          "Der Ball passiert die Linie.",
-          "Ich muss die Tomaten passieren."
+          "Ich sehe ihn oft vorbeigehen.",
+          "Die Zeit wird schnell vorbeigehen.",
+          "Man sollte nicht einfach an Problemen vorbeigehen."
         ],
         "partOfSpeech": "verb",
-        "ipa": "paˈsiːʁən",
+        "ipa": "foˈbaɪ̯ɡeːən",
         "number": "singular",
-        "pastTenses": "ist passiert, hat passiert",
-        "presentTenses": "ich passiere, du passierst, er/sie/es passiert",
+        "pastTenses": "ist vorbeigegangen, ging vorbei",
+        "presentTenses": "ich gehe vorbei, du gehst vorbei, er/sie/es geht vorbei",
         "tense": "present"
       },
       {
-        "source": "überholen",
-        "translation": "overtake, pass, overhaul",
+        "source": "reichen",
+        "translation": "to hand, to be enough, to extend",
         "definitions": [
-          "an jemandem oder etwas vorbeifahren oder -gehen, um vor ihm zu sein",
-          "etwas instand setzen oder reparieren, oft um die Leistung zu verbessern",
-          "jemanden in einer Entwicklung oder einem Fortschritt übertreffen"
+          "etwas übergeben oder darreichen",
+          "ausreichen, genügen",
+          "sich erstrecken, eine bestimmte Länge oder Ausdehnung haben",
+          "eine Hand oder einen Gruß anbieten"
         ],
         "examples": [
-          "Das Auto überholt den Lastwagen.",
-          "Wir müssen den Motor überholen lassen.",
-          "Die Technologie überholt sich ständig selbst."
+          "Kannst du mir bitte das Salz reichen?",
+          "Das Geld wird nicht reichen.",
+          "Der Wald reicht bis zum Fluss.",
+          "Er reichte ihr die Hand."
         ],
         "partOfSpeech": "verb",
-        "ipa": "ˈyːbɐˌhoːlən",
-        "number": "singular",
-        "pastTenses": "überholte, hat überholt",
-        "presentTenses": "ich überhole, du überholst, er/sie/es überholt",
-        "tense": "present"
-      },
-      {
-        "source": "vertreiben",
-        "translation": "drive out, pass, distribute",
-        "definitions": [
-          "jemanden oder etwas von einem Ort wegjagen oder entfernen",
-          "Zeit oder Langeweile durch eine Tätigkeit verbringen",
-          "Produkte oder Waren verkaufen oder vermarkten"
-        ],
-        "examples": [
-          "Sie mussten die Eindringlinge vertreiben.",
-          "Er vertreibt sich die Zeit mit Lesen.",
-          "Das Unternehmen vertreibt Software weltweit."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "fɛɐ̯ˈtraɪ̯bn̩",
-        "number": "singular",
-        "pastTenses": "vertrieb, hat vertrieben",
-        "presentTenses": "ich vertreibe, du vertreibst, er/sie/es vertreibt",
-        "tense": "present"
-      },
-      {
-        "source": "verabschiede",
-        "translation": "say goodbye to, pass, adopt",
-        "definitions": [
-          "jemanden beim Abschied grüßen",
-          "etwas beenden oder aufgeben",
-          "ein Gesetz oder eine Regelung annehmen"
-        ],
-        "examples": [
-          "Ich verabschiede mich jetzt.",
-          "Wir verabschiede das alte Jahr.",
-          "Das Parlament verabschiede ein neues Gesetz."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "fɛɐ̯ˈʔapʃiːdə",
-        "number": "singular",
-        "pastTenses": "verabschiedete, hat verabschiedet",
-        "presentTenses": "ich verabschiede, du verabschiedest, er/sie/es verabschiedet",
-        "tense": "present"
-      },
-      {
-        "source": "verabschieden",
-        "translation": "to dismiss, to say goodbye, to pass",
-        "definitions": [
-          "jemanden entlassen oder in den Ruhestand schicken",
-          "sich von jemandem oder etwas trennen",
-          "ein Gesetz oder einen Beschluss annehmen"
-        ],
-        "examples": [
-          "Wir müssen uns jetzt verabschieden.",
-          "Das Parlament wird das Gesetz verabschieden.",
-          "Sie haben den Mitarbeiter verabschiedet."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "fɛɐ̯ˈʔapʃiːdn̩",
-        "number": "singular",
-        "pastTenses": "verabschiedete, hat verabschiedet",
-        "presentTenses": "ich verabschiede, du verabschiedest, er/sie/es verabschiedet",
+        "ipa": "ˈʁaɪ̯çn̩",
+        "number": "plural",
+        "pastTenses": "reichte, hat gereicht",
+        "presentTenses": "ich reiche, du reichst, er/sie/es reicht",
         "tense": "present"
       }
     ],
@@ -18455,23 +18317,65 @@
     },
     "items": [
       {
-        "source": "zutreffen",
-        "translation": "apply, be correct, hold true",
+        "source": "anwenden",
+        "translation": "apply, use, employ",
         "definitions": [
-          "sich als richtig erweisen",
-          "der Wahrheit entsprechen",
-          "gültig sein"
+          "etwas benutzen oder gebrauchen",
+          "eine Methode oder Technik nutzen",
+          "in die Praxis umsetzen"
         ],
         "examples": [
-          "Die Beschreibung trifft zu.",
-          "Diese Aussage trifft nicht zu.",
-          "Es wird sich zeigen, ob die Prognose zutrifft."
+          "Er wird sein Wissen anwenden.",
+          "Sie müssen diese Regel anwenden.",
+          "Wir können verschiedene Strategien anwenden."
         ],
         "partOfSpeech": "verb",
-        "ipa": "ˈtsuːˌtʁɛfn̩",
+        "ipa": "ˈanvɛndn̩",
         "number": "singular",
-        "pastTenses": "traf zu, hat zugetroffen",
-        "presentTenses": "ich treffe zu, du triffst zu, er/sie/es trifft zu",
+        "pastTenses": "wandte an, hat angewandt",
+        "presentTenses": "ich wende an, du wendest an, er/sie/es wendet an",
+        "tense": "present"
+      },
+      {
+        "source": "gelten",
+        "translation": "to be valid, to apply, to be considered, to be worth",
+        "definitions": [
+          "gültig sein",
+          "als etwas angesehen werden",
+          "einen Wert haben",
+          "bestimmt sein für"
+        ],
+        "examples": [
+          "Das Gesetz gilt ab morgen.",
+          "Er gilt als Experte.",
+          "Sein Wort gilt viel.",
+          "Diese Regel gilt für alle."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈɡɛltn̩",
+        "number": "plural",
+        "pastTenses": "galt, hat gegolten",
+        "presentTenses": "ich gelte, du giltst, er/sie/es gilt",
+        "tense": "present"
+      },
+      {
+        "source": "verwenden",
+        "translation": "use, utilize, employ",
+        "definitions": [
+          "etwas für einen bestimmten Zweck benutzen",
+          "etwas gebrauchen",
+          "etwas einsetzen"
+        ],
+        "examples": [
+          "Wir verwenden recycelte Materialien.",
+          "Er verwendet viel Zeit auf sein Hobby.",
+          "Kannst du dieses Werkzeug verwenden?"
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "fɛɐ̯ˈvɛndn̩",
+        "number": "plural",
+        "pastTenses": "verwendete, hat verwendet",
+        "presentTenses": "ich verwende, du verwendest, er/sie/es verwendet",
         "tense": "present"
       },
       {
@@ -18491,46 +18395,6 @@
         "number": "singular",
         "pastTenses": "bewarb sich, hat sich beworben",
         "presentTenses": "ich bewerbe mich, du bewirbst dich, er/sie/es bewirbt sich",
-        "tense": "present"
-      },
-      {
-        "source": "bewerben",
-        "translation": "apply, advertise, compete",
-        "definitions": [
-          "Sich um eine Stelle oder Position bemühen",
-          "Sich für etwas anmelden oder registrieren",
-          "Werbung für etwas machen"
-        ],
-        "examples": [
-          "Er möchte sich um die Stelle bewerben.",
-          "Sie bewerben das neue Produkt.",
-          "Wir bewerben uns um ein Stipendium."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "bəˈvɛʁbn̩",
-        "number": "plural",
-        "pastTenses": "bewarb, hat beworben",
-        "presentTenses": "ich bewerbe, du bewirbst, er/sie/es bewirbt",
-        "tense": "present"
-      },
-      {
-        "source": "anwenden",
-        "translation": "apply, use, employ",
-        "definitions": [
-          "etwas benutzen oder gebrauchen",
-          "eine Methode oder Technik nutzen",
-          "in die Praxis umsetzen"
-        ],
-        "examples": [
-          "Er wird sein Wissen anwenden.",
-          "Sie müssen diese Regel anwenden.",
-          "Wir können verschiedene Strategien anwenden."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈanvɛndn̩",
-        "number": "singular",
-        "pastTenses": "wandte an, hat angewandt",
-        "presentTenses": "ich wende an, du wendest an, er/sie/es wendet an",
         "tense": "present"
       }
     ],
@@ -24472,125 +24336,85 @@
     },
     "items": [
       {
-        "source": "verwalten",
-        "translation": "manage, administer, supervise",
+        "source": "bewältigen",
+        "translation": "cope with, master, overcome",
         "definitions": [
-          "etwas leiten und organisieren",
-          "für etwas zuständig sein und es betreuen",
-          "Ressourcen oder Angelegenheiten managen"
+          "etwas Schwieriges erfolgreich zu Ende bringen",
+          "mit einer Aufgabe oder einem Problem fertigwerden",
+          "eine Herausforderung meistern"
         ],
         "examples": [
-          "Er muss das Erbe verwalten.",
-          "Die Stadtverwaltung verwaltet die öffentlichen Gelder.",
-          "Sie verwaltet ihre Zeit sehr effizient."
+          "Er muss diese Aufgabe bewältigen.",
+          "Wir können die Krise bewältigen.",
+          "Sie hat die Prüfung erfolgreich bewältigt."
         ],
         "partOfSpeech": "verb",
-        "ipa": "fɛɐ̯ˈvaltən",
+        "ipa": "bəˈvɛltɪɡn̩",
+        "number": "singular",
+        "pastTenses": "bewältigte, hat bewältigt",
+        "presentTenses": "ich bewältige, du bewältigst, er/sie/es bewältigt",
+        "tense": "present"
+      },
+      {
+        "source": "leiten",
+        "translation": "to lead, to manage, to direct, to conduct",
+        "definitions": [
+          "Führen, lenken, dirigieren",
+          "Verwalten, managen",
+          "Elektrischen Strom oder Wärme weitergeben"
+        ],
+        "examples": [
+          "Er wird das Projekt leiten.",
+          "Sie leitet ein großes Team.",
+          "Kupfer leitet Strom gut."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈlaɪ̯tn̩",
+        "number": "singular",
+        "pastTenses": "leitete, hat geleitet",
+        "presentTenses": "ich leite, du leitest, er/sie/es leitet",
+        "tense": "present"
+      },
+      {
+        "source": "führen",
+        "translation": "to lead, to guide, to manage, to conduct",
+        "definitions": [
+          "jemanden oder etwas leiten oder begleiten",
+          "an der Spitze von etwas stehen",
+          "etwas zu einem bestimmten Ergebnis bringen",
+          "etwas bei sich tragen oder besitzen"
+        ],
+        "examples": [
+          "Er wird das Team führen.",
+          "Der Weg führt zum Fluss.",
+          "Sie führt ein Geschäft.",
+          "Er führt ein Messer mit sich."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈfyːʁən",
+        "number": "singular",
+        "pastTenses": "führte, hat geführt",
+        "presentTenses": "ich führe, du führst, er/sie/es führt",
+        "tense": "present"
+      },
+      {
+        "source": "regeln",
+        "translation": "to regulate, to arrange, to settle",
+        "definitions": [
+          "etwas in Ordnung bringen, organisieren",
+          "eine Vorschrift oder Bestimmung festlegen",
+          "einen Konflikt oder eine Angelegenheit klären"
+        ],
+        "examples": [
+          "Wir müssen das Problem regeln.",
+          "Er regelt den Verkehr.",
+          "Die Firma regelt ihre Angelegenheiten selbst."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʁeːɡl̩n",
         "number": "plural",
-        "pastTenses": "verwaltete, hat verwaltet",
-        "presentTenses": "ich verwalte, du verwaltest, er/sie/es verwaltet",
-        "tense": "present"
-      },
-      {
-        "source": "hinkriegen",
-        "translation": "manage, accomplish, fix",
-        "definitions": [
-          "etwas erfolgreich bewerkstelligen",
-          "etwas schaffen oder regeln",
-          "eine Aufgabe lösen"
-        ],
-        "examples": [
-          "Das kriegen wir schon hin.",
-          "Ich muss das noch hinkriegen.",
-          "Hast du das hinkriegt?"
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈhɪnˌkriːɡn̩",
-        "pastTenses": "kriegte hin, hat hingekriegt",
-        "presentTenses": "ich kriege hin, du kriegst hin, er/sie/es kriegt hin",
-        "tense": "present"
-      },
-      {
-        "source": "zurechtkommen",
-        "translation": "cope, manage, get along",
-        "definitions": [
-          "Mit einer Situation oder Person umgehen können",
-          "Erfolgreich sein oder zurechtfinden",
-          "Klar kommen"
-        ],
-        "examples": [
-          "Ich komme mit der neuen Software gut zurecht.",
-          "Er kommt mit seinen Kollegen nicht zurecht.",
-          "Wie kommst du mit der Hitze zurecht?"
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "t͡suˈʁɛçtˌkɔmən",
-        "number": "singular",
-        "pastTenses": "kam zurecht, ist zurechtgekommen",
-        "presentTenses": "ich komme zurecht, du kommst zurecht, er/sie/es kommt zurecht",
-        "tense": "present"
-      },
-      {
-        "source": "schaffe",
-        "translation": "create, manage, work, accomplish",
-        "definitions": [
-          "etwas herstellen, anfertigen",
-          "eine Aufgabe, Arbeit erledigen",
-          "etwas bewältigen, erfolgreich sein",
-          "arbeiten, tätig sein"
-        ],
-        "examples": [
-          "Ich schaffe das nicht allein.",
-          "Wir schaffe heute bis spät in die Nacht.",
-          "Er schaffe ein neues Kunstwerk.",
-          "Schaffe, schaffe, Häusle baue."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈʃafə",
-        "number": "singular",
-        "pastTenses": "schuf, hat geschaffen",
-        "presentTenses": "ich schaffe, du schaffst, er/sie/es schafft",
-        "tense": "present"
-      },
-      {
-        "source": "schaffen",
-        "translation": "to manage, to create, to work",
-        "definitions": [
-          "etwas erzeugen, herstellen",
-          "etwas erfolgreich zu Ende bringen, bewältigen",
-          "arbeiten, tätig sein (veraltet oder regional)"
-        ],
-        "examples": [
-          "Wir schaffen das.",
-          "Er hat viel geschafft.",
-          "Was schaffst du heute?",
-          "Sie schaffen ein neues Werk."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈʃafn̩",
-        "number": "plural",
-        "pastTenses": "schuf, hat geschaffen",
-        "presentTenses": "ich schaffe, du schaffst, er/sie/es schafft",
-        "tense": "present"
-      },
-      {
-        "source": "auskommen",
-        "translation": "get along, manage, do without",
-        "definitions": [
-          "Mit jemandem oder etwas zurechtkommen.",
-          "Ohne etwas auskommen, etwas nicht benötigen.",
-          "Genügen, reichen."
-        ],
-        "examples": [
-          "Ich komme gut mit meinen Nachbarn aus.",
-          "Wir müssen mit dem Geld auskommen.",
-          "Er kann nicht ohne sein Handy auskommen."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈaʊ̯sˌkɔmən",
-        "number": "singular",
-        "pastTenses": "kam aus, ist ausgekommen",
-        "presentTenses": "ich komme aus, du kommst aus, er/sie/es kommt aus",
+        "pastTenses": "regelten, hat geregelt",
+        "presentTenses": "ich regele, du regelst, er/sie/es regelt",
         "tense": "present"
       }
     ],
@@ -49896,23 +49720,42 @@
         "pluralForm": "die Dünste"
       },
       {
-        "source": "die Wolke",
-        "translation": "cloud, haze, mist",
+        "source": "der Nebel",
+        "translation": "fog, mist",
         "definitions": [
-          "Sichtbare Ansammlung von Wasserpartikeln in der Atmosphäre",
-          "Dichte Ansammlung von Teilchen in der Luft (z. B. Staub, Rauch)",
-          "Abstrakte Ansammlung von Daten in einem Netzwerk (Cloud)"
+          "Ansammlung feinster Wassertröpfchen in der bodennahen Luft, die die Sichtweite einschränkt.",
+          "Eine Wolke aus Gas und Staub im interstellaren Raum."
         ],
         "examples": [
-          "Eine dunkle Wolke am Himmel.",
-          "Die Wolke verdeckt die Sonne.",
-          "Daten in der Wolke speichern."
+          "Dichter Nebel auf der Autobahn.",
+          "Der Nebel löst sich langsam auf.",
+          "Ein Blick durch das Teleskop auf den Orion-Nebel."
         ],
         "partOfSpeech": "noun",
-        "ipa": "ˈvɔlkə",
-        "g": "feminine",
+        "ipa": "ˈneːbl̩",
+        "g": "masculine",
         "number": "singular",
-        "pluralForm": "die Wolken"
+        "pluralForm": "die Nebel"
+      },
+      {
+        "source": "vernebeln",
+        "translation": "to fog, to obscure, to mislead",
+        "definitions": [
+          "Mit Nebel bedecken oder füllen",
+          "Undeutlich oder unklar machen",
+          "Täuschen, irreführen"
+        ],
+        "examples": [
+          "Die Chemikalie vernebelt den Raum.",
+          "Er versucht, die Fakten zu vernebeln.",
+          "Der Rauch vernebelte die Sicht."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "fɛɐ̯ˈneːbl̩n",
+        "number": "singular",
+        "pastTenses": "vernebelte, hat vernebelt",
+        "presentTenses": "ich verneble, du vernebelst, er/sie/es vernebelt",
+        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -67106,6 +66949,26 @@
         "tense": "present"
       },
       {
+        "source": "begreifen",
+        "translation": "grasp, comprehend, realize",
+        "definitions": [
+          "etwas mit den Händen erfassen",
+          "etwas intellektuell verstehen oder erfassen",
+          "eine bestimmte Haltung oder Einstellung zu etwas entwickeln"
+        ],
+        "examples": [
+          "Er konnte den Ball nicht begreifen.",
+          "Ich begreife die Situation nicht.",
+          "Sie begreift sich als Künstlerin."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "bəˈɡraɪ̯fn̩",
+        "number": "singular",
+        "pastTenses": "begriff, hat begriffen",
+        "presentTenses": "ich begreife, du begreifst, er/sie/es begreift",
+        "tense": "present"
+      },
+      {
         "source": "nachvollziehen",
         "translation": "understand, comprehend, reconstruct",
         "definitions": [
@@ -67123,108 +66986,6 @@
         "number": "singular",
         "pastTenses": "vollzog nach, hat nachvollzogen",
         "presentTenses": "ich vollziehe nach, du vollziehst nach, er/sie/es vollzieht nach",
-        "tense": "present"
-      },
-      {
-        "source": "sehe",
-        "translation": "see, understand, meet",
-        "definitions": [
-          "Ich nehme etwas mit den Augen wahr.",
-          "Ich verstehe oder erkenne etwas.",
-          "Ich treffe mich mit jemandem."
-        ],
-        "examples": [
-          "Ich sehe einen Vogel.",
-          "Ich sehe, was du meinst.",
-          "Ich sehe meine Freunde heute Abend."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈzeːə",
-        "number": "singular",
-        "pastTenses": "sah, hat gesehen",
-        "presentTenses": "ich sehe, du siehst, er/sie/es sieht",
-        "tense": "present"
-      },
-      {
-        "source": "sehen",
-        "translation": "see, saw, seen, seeing",
-        "definitions": [
-          "Mit den Augen wahrnehmen",
-          "Bemerken, erkennen",
-          "Verstehen, einsehen",
-          "Besuchen, treffen"
-        ],
-        "examples": [
-          "Ich sehe einen Vogel.",
-          "Siehst du das Problem?",
-          "Wir sehen uns morgen.",
-          "Er sieht fern."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈzeːən",
-        "number": "plural",
-        "pastTenses": "sah, hat gesehen",
-        "presentTenses": "ich sehe, du siehst, er/sie/es sieht",
-        "tense": "present"
-      },
-      {
-        "source": "weiss",
-        "translation": "know, understand, be aware of",
-        "definitions": [
-          "1. Kenntnis haben von etwas.",
-          "2. Eine Information oder Tatsache kennen.",
-          "3. Verstehen oder begreifen."
-        ],
-        "examples": [
-          "Ich weiss die Antwort.",
-          "Er weiss, was zu tun ist.",
-          "Sie weiss viel über Geschichte."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "vaɪs",
-        "number": "singular",
-        "pastTenses": "wusste, hat gewusst",
-        "presentTenses": "ich weiss, du weisst, er/sie/es weiss",
-        "tense": "present"
-      },
-      {
-        "source": "wissen",
-        "translation": "know, knew, known",
-        "definitions": [
-          "Informationen oder Kenntnisse über etwas haben",
-          "Fähig sein, etwas zu tun oder zu verstehen",
-          "Sich einer Tatsache bewusst sein"
-        ],
-        "examples": [
-          "Ich weiß die Antwort.",
-          "Er weiß, wie man das macht.",
-          "Wir wissen, dass es wahr ist."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈvɪsn̩",
-        "number": "plural",
-        "pastTenses": "wusste, hat gewusst",
-        "presentTenses": "ich weiß, du weißt, er/sie/es weiß",
-        "tense": "present"
-      },
-      {
-        "source": "checken",
-        "translation": "check, understand, check in",
-        "definitions": [
-          "etwas überprüfen oder kontrollieren",
-          "etwas verstehen oder begreifen",
-          "einchecken (z.B. im Hotel oder am Flughafen)"
-        ],
-        "examples": [
-          "Ich muss noch meine E-Mails checken.",
-          "Hast du das gecheckt?",
-          "Wir müssen früh genug checken."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈt͡ʃɛkn̩",
-        "number": "singular",
-        "pastTenses": "checkte, hat gecheckt",
-        "presentTenses": "ich checke, du checkst, er/sie/es checkt",
         "tense": "present"
       }
     ],
@@ -104770,18 +104531,36 @@
         "definitions": [
           "Eine verabredete Zusammenkunft von zwei oder mehr Personen.",
           "Eine sportliche Begegnung oder ein Wettkampf.",
-          "Ein kriegerisches Zusammentreffen; Gefecht."
+          "Ein zufälliges Zusammentreffen."
         ],
         "examples": [
-          "Ein gemütliches Treffen.",
+          "Ein wichtiges Treffen.",
           "Das Treffen findet morgen statt.",
-          "Ein sportliches Treffen."
+          "Ein gemütliches Treffen mit Freunden."
         ],
         "partOfSpeech": "noun",
         "ipa": "ˈtʁɛfn̩",
         "g": "neuter",
         "number": "singular",
         "pluralForm": "die Treffen"
+      },
+      {
+        "source": "die Besprechung",
+        "translation": "discussion, meeting, review",
+        "definitions": [
+          "Ein Gespräch zwischen mehreren Personen über eine bestimmte Sache oder ein Thema.",
+          "Eine kritische Beurteilung oder Rezension eines Werkes."
+        ],
+        "examples": [
+          "Die Besprechung dauert eine Stunde.",
+          "Wir haben morgen eine wichtige Besprechung.",
+          "Die Besprechung des neuen Romans war positiv."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "bəˈʃpʁɛçʊŋ",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Besprechungen"
       },
       {
         "source": "die Sitzung",
@@ -104822,41 +104601,22 @@
         "pluralForm": "die Versammlungen"
       },
       {
-        "source": "die Begegnung",
-        "translation": "encounter, meeting, match",
+        "source": "die Tagung",
+        "translation": "conference, session",
         "definitions": [
-          "Das Zusammentreffen von Personen oder Dingen",
-          "Ein sportlicher Wettkampf zwischen zwei Gegnern",
-          "Ein zufälliges oder geplantes Treffen"
+          "Eine mehrtägige Zusammenkunft von Fachleuten oder Mitgliedern einer Organisation.",
+          "Die Sitzungsperiode eines Parlaments oder Gremiums."
         ],
         "examples": [
-          "Eine flüchtige Begegnung.",
-          "Die sportliche Begegnung beginnt.",
-          "Eine unerwartete Begegnung im Park."
+          "Die Tagung findet in Berlin statt.",
+          "Er hielt einen Vortrag auf der Tagung.",
+          "Die jährliche Tagung der Delegierten."
         ],
         "partOfSpeech": "noun",
-        "ipa": "bəˈɡeːɡnʊŋ",
+        "ipa": "ˈtaːɡʊŋ",
         "g": "feminine",
         "number": "singular",
-        "pluralForm": "die Begegnungen"
-      },
-      {
-        "source": "die Besprechung",
-        "translation": "discussion, meeting, review",
-        "definitions": [
-          "Ein Gespräch zwischen mehreren Personen über eine bestimmte Sache oder ein Thema.",
-          "Eine kritische Beurteilung oder Rezension eines Werkes."
-        ],
-        "examples": [
-          "Die Besprechung dauert eine Stunde.",
-          "Wir haben morgen eine wichtige Besprechung.",
-          "Die Besprechung des neuen Romans war positiv."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "bəˈʃpʁɛçʊŋ",
-        "g": "feminine",
-        "number": "singular",
-        "pluralForm": "die Besprechungen"
+        "pluralForm": "die Tagungen"
       }
     ],
     "detectedInputType": "word",
@@ -161227,6 +160987,41 @@
     },
     "items": [
       {
+        "source": "tatsächlich",
+        "translation": "actually, in fact",
+        "definitions": [
+          "wirklich, in der Tat",
+          "eigentlich, genau genommen",
+          "erstaunlicherweise, unerwartet"
+        ],
+        "examples": [
+          "Das ist tatsächlich wahr.",
+          "Er hat es tatsächlich geschafft.",
+          "Bist du tatsächlich hier?",
+          "Sie war tatsächlich überrascht."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "ˈtatsɛçlɪç",
+        "number": "singular"
+      },
+      {
+        "source": "wirklich",
+        "translation": "really, actually, truly",
+        "definitions": [
+          "tatsächlich, in der Realität",
+          "echt, wahrhaftig",
+          "sehr, außerordentlich"
+        ],
+        "examples": [
+          "Ist das wirklich wahr?",
+          "Er hat es wirklich getan.",
+          "Das ist wirklich schön."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "ˈvɪʁklɪç",
+        "number": "singular"
+      },
+      {
         "source": "in der tat",
         "translation": "indeed, in fact, actually",
         "definitions": [
@@ -161244,22 +161039,22 @@
         "number": "singular"
       },
       {
-        "source": "tatsächlich",
-        "translation": "actually, in fact",
+        "source": "die Tat",
+        "translation": "act, deed",
         "definitions": [
-          "wirklich, in der Tat",
-          "eigentlich, genau genommen",
-          "erstaunlicherweise, unerwartet"
+          "Eine Handlung, die jemand bewusst vollbracht hat.",
+          "Ein Verbrechen oder eine Straftat."
         ],
         "examples": [
-          "Das ist tatsächlich wahr.",
-          "Er hat es tatsächlich geschafft.",
-          "Bist du tatsächlich hier?",
-          "Sie war tatsächlich überrascht."
+          "Er schritt zur Tat.",
+          "Die Tat geschah in der Nacht.",
+          "Worte und Taten."
         ],
-        "partOfSpeech": "adverb",
-        "ipa": "ˈtatsɛçlɪç",
-        "number": "singular"
+        "partOfSpeech": "noun",
+        "ipa": "taːt",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Taten"
       }
     ],
     "detectedInputType": "word",
@@ -175404,21 +175199,6 @@
     },
     "items": [
       {
-        "source": "stillgestanden",
-        "translation": "attention, at ease",
-        "definitions": [
-          "Befehl im Militär, um eine aufrechte, unbewegliche Haltung einzunehmen.",
-          "Aufforderung, ruhig und aufmerksam zu sein."
-        ],
-        "examples": [
-          "Stillgestanden! Der Kommandant kommt.",
-          "Kinder, stillgestanden, wenn der Lehrer spricht!"
-        ],
-        "partOfSpeech": "interjection",
-        "ipa": "ˈʃtɪlɡəˌʃtandn̩",
-        "number": "singular"
-      },
-      {
         "source": "die Aufmerksamkeit",
         "translation": "attention, courtesy",
         "definitions": [
@@ -175452,6 +175232,24 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Achtungen"
+      },
+      {
+        "source": "die Vorsicht",
+        "translation": "caution, care",
+        "definitions": [
+          "Erhöhte Aufmerksamkeit gegenüber möglichen Gefahren",
+          "Behutsamkeit im Handeln"
+        ],
+        "examples": [
+          "Vorsicht ist geboten.",
+          "Lass bitte Vorsicht walten.",
+          "Vorsicht an der Bahnsteigkante!"
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈfoːɐ̯zɪçt",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "none"
       }
     ],
     "detectedInputType": "word",
@@ -236008,6 +235806,25 @@
     },
     "items": [
       {
+        "source": "anrufen",
+        "translation": "call, ring up",
+        "definitions": [
+          "jemanden telefonisch kontaktieren",
+          "jemanden um Hilfe oder Beistand bitten"
+        ],
+        "examples": [
+          "Ich werde dich morgen anrufen.",
+          "Sie hat ihn gestern angerufen.",
+          "Kannst du bitte den Arzt anrufen?"
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈanˌʁuːfn̩",
+        "number": "singular",
+        "pastTenses": "rief an, hat angerufen",
+        "presentTenses": "ich rufe an, du rufst an, er/sie/es ruft an",
+        "tense": "present"
+      },
+      {
         "source": "rufen",
         "translation": "call, shout, cry, summon",
         "definitions": [
@@ -236023,22 +235840,6 @@
         "partOfSpeech": "verb",
         "ipa": "ˈʁuːfn̩",
         "number": "plural",
-        "pastTenses": "rief, hat gerufen",
-        "presentTenses": "ich rufe, du rufst, er/sie/es ruft",
-        "tense": "present"
-      },
-      {
-        "source": "ruf",
-        "translation": "call, shout, cry",
-        "definitions": [
-          "Imperativ Singular von rufen (du)",
-          "Aufforderung, jemanden herbeizurufen",
-          "Aufforderung, etwas zu benennen"
-        ],
-        "examples": ["Ruf mich an!", "Ruf die Polizei!", "Ruf deinen Hund!"],
-        "partOfSpeech": "verb",
-        "ipa": "ruːf",
-        "number": "singular",
         "pastTenses": "rief, hat gerufen",
         "presentTenses": "ich rufe, du rufst, er/sie/es ruft",
         "tense": "present"
@@ -236061,45 +235862,6 @@
         "g": "masculine",
         "number": "singular",
         "pluralForm": "die Rufe"
-      },
-      {
-        "source": "anrufen",
-        "translation": "call, ring up",
-        "definitions": [
-          "jemanden telefonisch kontaktieren",
-          "jemanden um Hilfe oder Beistand bitten"
-        ],
-        "examples": [
-          "Ich werde dich morgen anrufen.",
-          "Sie hat ihn gestern angerufen.",
-          "Kannst du bitte den Arzt anrufen?"
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈanˌʁuːfn̩",
-        "number": "singular",
-        "pastTenses": "rief an, hat angerufen",
-        "presentTenses": "ich rufe an, du rufst an, er/sie/es ruft an",
-        "tense": "present"
-      },
-      {
-        "source": "nennen",
-        "translation": "name, call, mention",
-        "definitions": [
-          "jemandem oder etwas einen Namen geben",
-          "bezeichnen, benennen",
-          "erwähnen, aufzählen"
-        ],
-        "examples": [
-          "Sie nennen ihn einen Freund.",
-          "Ich nenne dir die Gründe.",
-          "Man nennt es Liebe."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈnɛnən",
-        "number": "plural",
-        "pastTenses": "nannte, genannt haben",
-        "presentTenses": "ich nenne, du nennst, er/sie/es nennt",
-        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -269205,22 +268967,38 @@
     },
     "items": [
       {
-        "source": "nur",
-        "translation": "only, just, barely, merely",
+        "source": "allein",
+        "translation": "alone, lonely, sole",
+        "definitions": ["Ohne andere", "Einsam seiend", "Verlassen"],
+        "examples": ["Er ist allein.", "Allein zu Hause."],
+        "partOfSpeech": "adjective",
+        "ipa": "aˈlaɪ̯n",
+        "number": "singular"
+      },
+      {
+        "source": "bloß",
+        "translation": "bare, mere, naked",
         "definitions": [
-          "allein, ausschließlich",
-          "kaum mehr als",
-          "bloß, einfach",
-          "gerade noch, mit Mühe"
+          "nackt; ohne Kleidung",
+          "nur; lediglich",
+          "entkleidet; ohne Bedeckung"
         ],
         "examples": [
-          "Ich habe nur zwei Äpfel.",
-          "Das ist nur ein Missverständnis.",
-          "Er ist nur ein Kind.",
-          "Wir haben nur noch fünf Minuten."
+          "Er war bloß gestellt.",
+          "Es ist bloß eine Frage.",
+          "Der Boden war bloß."
         ],
-        "partOfSpeech": "adverb",
-        "ipa": "nuːɐ̯",
+        "partOfSpeech": "adjective",
+        "ipa": "bloːs",
+        "number": "singular"
+      },
+      {
+        "source": "einzig",
+        "translation": "only, unique",
+        "definitions": ["ungewöhnlich, einmalig", "allein vorhanden"],
+        "examples": ["einzigartige Erfahrung", "einziges Exemplar"],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈaɪntsɪç",
         "number": "singular"
       },
       {
@@ -269237,66 +269015,22 @@
         "number": "singular"
       },
       {
-        "source": "einzige",
-        "translation": "only, sole",
-        "definitions": ["ohne andere oder weitere", "allein vorhanden"],
-        "examples": ["das einzige Auto", "der einzige Ausweg"],
-        "partOfSpeech": "adjective",
-        "ipa": "ˈaɪnˌtsɪɡə",
-        "number": "singular"
-      },
-      {
-        "source": "einzig",
-        "translation": "only, unique",
-        "definitions": ["ungewöhnlich, einmalig", "allein vorhanden"],
-        "examples": ["einzigartige Erfahrung", "einziges Exemplar"],
-        "partOfSpeech": "adjective",
-        "ipa": "ˈaɪntsɪç",
-        "number": "singular"
-      },
-      {
-        "source": "einzig",
-        "translation": "only, unique",
-        "definitions": ["ungewöhnlich, einmalig", "allein vorhanden"],
-        "examples": ["einzigartige Erfahrung", "einziges Exemplar"],
-        "partOfSpeech": "adjective",
-        "ipa": "ˈaɪntsɪç",
-        "number": "singular"
-      },
-      {
-        "source": "bloß",
-        "translation": "only, just, bare",
+        "source": "nur",
+        "translation": "only, just, barely, merely",
         "definitions": [
-          "nur, lediglich",
-          "einfach, schlicht",
-          "unbekleidet, nackt"
+          "allein, ausschließlich",
+          "kaum mehr als",
+          "bloß, einfach",
+          "gerade noch, mit Mühe"
         ],
         "examples": [
-          "Das ist bloß ein Gerücht.",
-          "Er ist bloß ein Kind.",
-          "Sie ging bloßfüßig."
+          "Ich habe nur zwei Äpfel.",
+          "Das ist nur ein Missverständnis.",
+          "Er ist nur ein Kind.",
+          "Wir haben nur noch fünf Minuten."
         ],
         "partOfSpeech": "adverb",
-        "ipa": "bloːs",
-        "number": "singular"
-      },
-      {
-        "source": "bloß",
-        "translation": "just, only, simply, do",
-        "definitions": [
-          "Ausdruck der Ungeduld oder Verärgerung",
-          "Verstärkung einer Aufforderung oder Frage",
-          "Ausdruck der Beschränkung auf das Wesentliche",
-          "Ausdruck der Warnung oder des Verbots"
-        ],
-        "examples": [
-          "Was ist bloß los?",
-          "Sag bloß nichts Falsches!",
-          "Er hat bloß zugeschaut.",
-          "Bloß nicht anfassen!"
-        ],
-        "partOfSpeech": "particle",
-        "ipa": "bloːs",
+        "ipa": "nuːɐ̯",
         "number": "singular"
       }
     ],
@@ -282913,22 +282647,61 @@
         "pluralForm": "die Instrumente"
       },
       {
-        "source": "das Musikinstrument",
-        "translation": "musical instrument, instrument",
+        "source": "das Gerät",
+        "translation": "device, appliance",
         "definitions": [
-          "Ein Gerät zur Erzeugung von Musik.",
-          "Gegenstand, der Töne erzeugt und zur Aufführung von Musikstücken verwendet wird."
+          "Ein Gegenstand, mit dessen Hilfe etwas bearbeitet oder bewirkt wird.",
+          "Technische Apparatur oder Maschine."
         ],
         "examples": [
-          "Ein altes Musikinstrument.",
-          "Sie spielt ein Musikinstrument.",
-          "Das Musikinstrument ist kaputt."
+          "Das Gerät ist defekt.",
+          "Ein elektrisches Gerät.",
+          "Er schaltet das Gerät ein."
         ],
         "partOfSpeech": "noun",
-        "ipa": "muˈziːkɪnstʁuˌmɛnt",
+        "ipa": "ɡəˈʁɛːt",
         "g": "neuter",
         "number": "singular",
-        "pluralForm": "die Musikinstrumente"
+        "pluralForm": "die Geräte"
+      },
+      {
+        "source": "das Werkzeug",
+        "translation": "tool, implement",
+        "definitions": [
+          "Ein Gerät oder Instrument zur Verrichtung mechanischer Arbeit.",
+          "Mittel zum Zweck oder Hilfsmittel zur Ausführung einer Tätigkeit."
+        ],
+        "examples": [
+          "Das Werkzeug liegt im Kasten.",
+          "Er kaufte neues Werkzeug.",
+          "Die Zange ist ein nützliches Werkzeug."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈvɛrkˌt͡sɔɪ̯k",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Werkzeuge"
+      },
+      {
+        "source": "der Apparat",
+        "translation": "device, apparatus, system, phone",
+        "definitions": [
+          "Ein technisches Gerät oder eine Maschine mit einer bestimmten Funktion.",
+          "Die Gesamtheit der Institutionen und Personen einer Organisation.",
+          "Ein Telefonendgerät.",
+          "Wissenschaftliches Material zur Erschließung eines Textes."
+        ],
+        "examples": [
+          "Der Apparat läuft.",
+          "Bleiben Sie am Apparat.",
+          "Ein riesiger bürokratischer Apparat.",
+          "Der kritische Apparat des Buches."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "apaˈʁaːt",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Apparate"
       }
     ],
     "detectedInputType": "word",
@@ -321545,42 +321318,6 @@
     },
     "items": [
       {
-        "source": "Kompetenzen",
-        "translation": "skills, competencies",
-        "definitions": [
-          "Fähigkeiten und Kenntnisse, um Aufgaben erfolgreich zu bewältigen.",
-          "Befugnisse oder Zuständigkeiten in einem bestimmten Bereich."
-        ],
-        "examples": [
-          "Er verfügt über ausgezeichnete Kompetenzen.",
-          "Die Kompetenzen des Teams sind beeindruckend.",
-          "Sie erweitern ihre Kompetenzen ständig."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "kɔmpəˈtɛnt͡sən",
-        "g": "feminine",
-        "number": "plural",
-        "pluralForm": "die Kompetenzen"
-      },
-      {
-        "source": "die Kompetenz",
-        "translation": "competence, expertise",
-        "definitions": [
-          "Fähigkeit, Zuständigkeit oder Befugnis in einem bestimmten Bereich.",
-          "Sachverstand und Können."
-        ],
-        "examples": [
-          "Fachliche Kompetenz zeigen.",
-          "Seine Kompetenz überschreiten.",
-          "Soziale Kompetenz ist wichtig."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "kɔmpeˈtɛnt͡s",
-        "g": "feminine",
-        "number": "singular",
-        "pluralForm": "die Kompetenzen"
-      },
-      {
         "source": "Fähigkeiten",
         "translation": "skills, abilities",
         "definitions": [
@@ -321596,6 +321333,24 @@
         "ipa": "ˈfɛːɪçkaɪtn̩",
         "g": "feminine",
         "number": "plural"
+      },
+      {
+        "source": "die Fähigkeit",
+        "translation": "ability, skill",
+        "definitions": [
+          "Die geistige oder körperliche Kraft, etwas zu tun.",
+          "Eine erlernte oder angeborene Fertigkeit."
+        ],
+        "examples": [
+          "Seine kognitiven Fähigkeiten.",
+          "Die Fähigkeit zur Empathie.",
+          "Eine besondere Fähigkeit besitzen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈfɛːɪçkaɪ̯t",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Fähigkeiten"
       },
       {
         "source": "Fertigkeiten",
@@ -321633,6 +321388,37 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Fertigkeiten"
+      },
+      {
+        "source": "Kenntnisse",
+        "translation": "knowledge, familiarity",
+        "definitions": [
+          "Vertrautheit mit einer Sache",
+          "Gesamtheit dessen, was eine Person weiß"
+        ],
+        "examples": ["sprachliche Kenntnisse", "technische Kenntnisse"],
+        "partOfSpeech": "noun",
+        "ipa": "ˈkɛntnɪsə",
+        "g": "feminine",
+        "number": "plural"
+      },
+      {
+        "source": "die Kenntnis",
+        "translation": "knowledge, understanding",
+        "definitions": [
+          "Das Wissen über einen Sachverhalt oder eine Information.",
+          "Die durch Erfahrung oder Lernen erworbenen Einsichten."
+        ],
+        "examples": [
+          "Ich habe davon keine Kenntnis.",
+          "Er setzte mich davon in Kenntnis.",
+          "Umfangreiche Kenntnisse sind erforderlich."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈkɛntnɪs",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Kenntnisse"
       }
     ],
     "detectedInputType": "word",
