@@ -51375,15 +51375,6 @@
     },
     "items": [
       {
-        "source": "witzig",
-        "translation": "funny, witty",
-        "definitions": ["humorvoll", "amüsant"],
-        "examples": ["ein witziger Kommentar", "Das Buch ist witzig."],
-        "partOfSpeech": "adjective",
-        "ipa": "ˈvɪtsɪç",
-        "number": "singular"
-      },
-      {
         "source": "lustig",
         "translation": "funny, amusing",
         "definitions": ["scherzhaft oder humorvoll", "fröhlich oder amüsant"],
@@ -51392,29 +51383,21 @@
         "ipa": "ˈlʊstɪç"
       },
       {
-        "source": "putzig",
-        "translation": "cute, funny",
-        "definitions": [
-          "niedlich, drollig oder herzig anzusehen",
-          "auf amüsante Weise eigenartig oder seltsam"
-        ],
-        "examples": [
-          "Ein putziges Kerlchen.",
-          "Das ist ja putzig!",
-          "Ein putziges Kätzchen."
-        ],
-        "partOfSpeech": "adjective",
-        "ipa": "ˈpʊtsɪç",
-        "g": "neuter",
-        "number": "singular"
-      },
-      {
         "source": "komisch",
         "translation": "strange, funny",
         "definitions": ["merkwürdig, seltsam", "lustig, witzig"],
         "examples": ["ein komisches Gefühl", "eine komische Situation"],
         "partOfSpeech": "adjective",
         "ipa": "ˈkoːmɪʃ",
+        "number": "singular"
+      },
+      {
+        "source": "witzig",
+        "translation": "funny, witty",
+        "definitions": ["humorvoll", "amüsant"],
+        "examples": ["ein witziger Kommentar", "Das Buch ist witzig."],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈvɪtsɪç",
         "number": "singular"
       }
     ],
