@@ -9,4 +9,4 @@ cd -
 cd ../
 git add .
 git commit -m "feat(www-seo): regenerate seo pages"
-git push
+
