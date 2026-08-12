@@ -24,6 +24,26 @@
       text-decoration: underline;
     }
   }
+
+  .useful-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 0;
+
+    li {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+    }
+
+    .bi {
+      flex-shrink: 0;
+      width: 1.25em;
+      color: fade-out($white, 0.4);
+      text-align: center;
+    }
+  }
 }
 
 // Styling for links in the footer
