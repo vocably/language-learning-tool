@@ -43,169 +43,178 @@
     </style>
   </head>
   <body id="page-top" class="d-flex flex-column min-vh-100{{#unless hideNavBar}}{{#unless navbarContainerClass}} has-inline-navbar{{/unless}}{{/unless}}">
-    {{#unless disableAnalytics}}
-      <script defer src="https://cloud.umami.is/script.js" data-website-id="{{ htmlWebpackPlugin.options.environment.umamiWebsiteId }}" data-auto-track="{{#if disabledAutoTrack}}false{{else}}true{{/if}}"></script>
-    {{/unless}}
-    {{#unless hideNavBar}}
-      <style>
-        .navbar-bg {
-          background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.2) 100%);
-          backdrop-filter: blur(10px);
-        }
-
-        @media (width >= 1280px) {
+    <div>
+      {{#unless disableAnalytics}}
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="{{ htmlWebpackPlugin.options.environment.umamiWebsiteId }}" data-auto-track="{{#if disabledAutoTrack}}false{{else}}true{{/if}}"></script>
+      {{/unless}}
+      {{#unless hideNavBar}}
+        <style>
           .navbar-bg {
-            background: none;
-            backdrop-filter: none;
-          }
-        }
-
-        .sticky-menu {
-          position: sticky;
-          top: 0;
-          z-index: 1020;
-        }
-
-        .navbar-home-link {
-          flex: 0 1 auto;
-          align-self: self-start;
-          margin-top: 4px;
-        }
-
-        .nav-logo {
-          height: 1.6rem;
-        }
-
-        .navbar-container {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: 1rem;
-          width: 100%;
-          margin: 0 auto;
-        }
-
-        /*
-          On wide screens the full-width navbar wastes a whole band of vertical
-          space: the logo sits far left, the CTA far right, and the page heading
-          gets pushed below the empty middle.
-
-          `.has-inline-navbar` (set when the navbar spans the full width) turns
-          the body into a grid and puts the navbar and <main> into the same grid
-          cell, so the logo and the CTA end up on the same level as the heading.
-
-          The breakpoint is the narrowest width at which that is safe. The
-          headings of these pages live in a centred container of at most 720px,
-          while the navbar occupies 132px on the left (padding + logo) and 225px
-          on the right (CTA + padding), so at 1280px the content still clears the
-          CTA by ~55px. Below the breakpoint the navbar goes back to being a
-          separate block above the content.
-        */
-        @media (width >= 1280px) {
-          .has-inline-navbar {
-            /* !important is required to beat Bootstrap's `.d-flex` utility */
-            display: grid !important;
-            grid-template-columns: 100%;
-            grid-template-rows: 1fr auto;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.2) 100%);
+            backdrop-filter: blur(10px);
           }
 
-          .has-inline-navbar > nav,
-          .has-inline-navbar > main {
-            grid-row: 1;
-            grid-column: 1;
+          @media (width >= 1280px) {
+            .navbar-bg {
+              background: none;
+              backdrop-filter: none;
+            }
           }
 
-          .has-inline-navbar > footer {
-            grid-row: 2;
-            grid-column: 1;
-          }
-
-          .has-inline-navbar > nav {
-            /* keeps the navbar at its natural height so `position: sticky` still
-               has room to travel inside the shared grid area */
-            align-self: start;
-            /* grid items honour z-index without being positioned */
+          .sticky-menu {
+            position: sticky;
+            top: 0;
             z-index: 1020;
-            /* the navbar strip covers the top of the content, so only its own
-               controls may swallow clicks */
-            pointer-events: none;
-            /* nothing meaningful scrolls under the navbar here — the heading sits
-               next to it, not below it — so no murky backdrop */
-            background: none;
-            backdrop-filter: none;
           }
 
-          .has-inline-navbar > nav .navbar-home-link,
-          .has-inline-navbar > nav .get-button {
-            pointer-events: auto;
+          .navbar-home-link {
+            flex: 0 1 auto;
+            align-self: self-start;
+            margin-top: 4px;
           }
 
-          /* line the heading up with the navbar controls instead of the very top
-             of the viewport (matches the navbar's own vertical padding) */
-          .has-inline-navbar > main {
-            padding-top: 1rem;
-          }
-        }
-
-        @media (width < 1280px) {
-          .navbar {
-            margin-bottom: 3rem;
+          .nav-logo {
+            height: 1.6rem;
           }
 
           .navbar-container {
-            max-width: 720px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            margin: 0 auto;
           }
-        }
-      </style>
-      <nav class="navbar navbar-expand-lg navbar-light{{#unless nonStickyNavbar}} sticky-menu sticky-top{{/unless}} navbar-bg px-4" style="">
-        <div class="{{#if navbarContainerClass}}{{ navbarContainerClass }}{{else}}navbar-container{{/if}} p-0">
-          <a class="navbar-home-link" href="/">
-            <img
-              src="assets/logo.svg"
-              alt="Vocably"
-              class="nav-logo"
-            />
-          </a>
-          {{#unless noCta}}
-            <div class="d-flex flex-column get-button">
-              <a
-                href='https://chrome.google.com/webstore/detail/vocably/baocigmmhhdemijfjnjdidbkfgpgogmb'
-                class='show-chrome btn btn-primary btn-sm rounded-pill px-5 text-sm'
-                data-umami-event='CTA Click'
-                data-umami-event-label='Chrome Extension'
-              >Get started</a>
-              <a
-                href='https://apps.apple.com/app/id6464076425'
-                class='show-safari btn btn-primary btn-sm rounded-pill px-5 text-sm'
-                data-umami-event='CTA Click'
-                data-umami-event-label='Safari Extension'
-              >Get started</a>
-              <a
-                href='https://play.google.com/store/apps/details?id=com.vocablypro'
-                class='show-android btn btn-primary btn-sm rounded-pill px-5 text-sm'
-                data-umami-event='CTA Click'
-                data-umami-event-label='Android app'
-              >Get started</a>
-              <a
-                href='https://apps.apple.com/app/vocably-pro-language-cards/id1641258757'
-                class='show-ios btn btn-primary btn-sm rounded-pill px-5 text-sm'
-                data-umami-event='CTA Click'
-                data-umami-event-label='iOS app'
-              >Get started</a>
-            </div>
-          {{/unless}}
+
+          /*
+            On wide screens the full-width navbar wastes a whole band of vertical
+            space: the logo sits far left, the CTA far right, and the page heading
+            gets pushed below the empty middle.
+
+            `.has-inline-navbar` (set when the navbar spans the full width) turns
+            the body into a grid and puts the navbar and <main> into the same grid
+            cell, so the logo and the CTA end up on the same level as the heading.
+
+            The breakpoint is the narrowest width at which that is safe. The
+            headings of these pages live in a centred container of at most 720px,
+            while the navbar occupies 132px on the left (padding + logo) and 225px
+            on the right (CTA + padding), so at 1280px the content still clears the
+            CTA by ~55px. Below the breakpoint the navbar goes back to being a
+            separate block above the content.
+          */
+          @media (width >= 1280px) {
+            .has-inline-navbar {
+              /* !important is required to beat Bootstrap's `.d-flex` utility */
+              display: grid !important;
+              grid-template-columns: 100%;
+              grid-template-rows: 1fr auto;
+            }
+
+            .has-inline-navbar > nav,
+            .has-inline-navbar > main {
+              grid-row: 1;
+              grid-column: 1;
+            }
+
+            .has-inline-navbar > nav {
+              /* keeps the navbar at its natural height so `position: sticky` still
+                 has room to travel inside the shared grid area */
+              align-self: start;
+              /* grid items honour z-index without being positioned */
+              z-index: 1020;
+              /* the navbar strip covers the top of the content, so only its own
+                 controls may swallow clicks */
+              pointer-events: none;
+              /* nothing meaningful scrolls under the navbar here — the heading sits
+                 next to it, not below it — so no murky backdrop */
+              background: none;
+              backdrop-filter: none;
+            }
+
+            .has-inline-navbar > nav .navbar-home-link,
+            .has-inline-navbar > nav .get-button {
+              pointer-events: auto;
+            }
+
+            /* line the heading up with the navbar controls instead of the very top
+               of the viewport (matches the navbar's own vertical padding) */
+            .has-inline-navbar > main {
+              padding-top: 1rem;
+            }
+          }
+
+          @media (width < 1280px) {
+            .navbar {
+              margin-bottom: 3rem;
+            }
+
+            .navbar-container {
+              max-width: 720px;
+            }
+          }
+        </style>
+        <nav class="navbar navbar-expand-lg navbar-light{{#unless nonStickyNavbar}} sticky-menu sticky-top{{/unless}} navbar-bg px-4" style="">
+          <div class="{{#if navbarContainerClass}}{{ navbarContainerClass }}{{else}}navbar-container{{/if}} p-0">
+            <a class="navbar-home-link" href="/">
+              <img
+                src="assets/logo.svg"
+                alt="Vocably"
+                class="nav-logo"
+              />
+            </a>
+            {{#unless noCta}}
+              <div class="d-flex flex-column get-button">
+                <a
+                  href='https://chrome.google.com/webstore/detail/vocably/baocigmmhhdemijfjnjdidbkfgpgogmb'
+                  class='show-chrome btn btn-primary btn-sm rounded-pill px-5 text-sm'
+                  data-umami-event='CTA Click'
+                  data-umami-event-label='Chrome Extension'
+                >Get started</a>
+                <a
+                  href='https://apps.apple.com/app/id6464076425'
+                  class='show-safari btn btn-primary btn-sm rounded-pill px-5 text-sm'
+                  data-umami-event='CTA Click'
+                  data-umami-event-label='Safari Extension'
+                >Get started</a>
+                <a
+                  href='https://play.google.com/store/apps/details?id=com.vocablypro'
+                  class='show-android btn btn-primary btn-sm rounded-pill px-5 text-sm'
+                  data-umami-event='CTA Click'
+                  data-umami-event-label='Android app'
+                >Get started</a>
+                <a
+                  href='https://apps.apple.com/app/vocably-pro-language-cards/id1641258757'
+                  class='show-ios btn btn-primary btn-sm rounded-pill px-5 text-sm'
+                  data-umami-event='CTA Click'
+                  data-umami-event-label='iOS app'
+                >Get started</a>
+              </div>
+            {{/unless}}
+          </div>
+        </nav>
+      {{/unless}}
+      <main class="flex-shrink-0">
+        {{> @partial-block }}
+      </main>
+    </div>
+
+    <footer class="useful-links">
+      <div class="container-md py-5" aria-label="Tools and ideas">
+        <div class="mb-4">
+          <a href="/"><img src="/assets/logo-dark.svg" alt="Vocably" style="height: 0.8em;opacity: 0.8"/></a>
         </div>
-      </nav>
-    {{/unless}}
-    <main class="flex-shrink-0">
-      {{> @partial-block }}
-    </main>
+        <p class="h5">Language acquisition via real life usage</p>
+        <p>If you actually use your target language in daily life, these tools and techniques are for you:</p>
+        <ul>
+          {{#unless (eq url "/search.html")}}<li><a href="/search.html">Online Dictionary</a> - a dictionary created specifically for language learners</li>{{/unless}}
+          {{#unless (eq url "/grammar.html")}}<li><a href="/grammar.html">AI Grammar Checker</a> - the only checker that not only corrects your grammar, but also explains why</li>{{/unless}}
+          {{#unless (eq url "/ai.html")}}<li><a href="/ai.html">How to Use AI as a Language Learner</a> - the article explains how to properly setup your ChatGPT, Gemini, or Claude to help you in your language-learning journey</li>{{/unless}}
+        </ul>
+      </div>
+    </footer>
 
     <footer class="bg-gray mt-auto text-white-50" style="font-size: 1rem;">
       <div class="container-md py-5">
-        <div class="mb-4">
-          <a href="/"><img src="/assets/logo-dark.svg" alt="Vocably" style="height: 1.3em;opacity: 0.5"/></a>
-        </div>
         <div class="row g-3 justify-content-start justify-content-lg-center">
           <div class="col-6 col-md-4 mb-4 mb-lg-0">
             <ul class="list-unstyled mb-0">
@@ -234,8 +243,6 @@
           <div class="col-6 col-md-4 mb-4 mb-md-0">
             <ul class="list-unstyled mb-0">
               <li class="mb-2"><a href="/about.html">About</a></li>
-              <li class="mb-2"><a href="/search.html">Online Dictionary</a></li>
-              <li class="mb-2"><a href="/grammar.html">AI Grammar Checker</a></li>
               <li class="mb-2"><a href="/privacy-policy.html">Privacy Policy</a></li>
               <li class="mb-2"><a href="/terms-and-conditions.html">Terms and Conditions</a></li>
             </ul>

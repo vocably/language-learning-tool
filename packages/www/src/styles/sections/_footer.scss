@@ -2,6 +2,30 @@
 // Footer
 //
 
+.useful-links {
+  --color: rgba(255, 255, 255, 0.8);
+
+  background-color: rgb(52 58 64 / 0.81);
+  color: var(--color);
+
+  .h5 {
+    color: var(--color);
+  }
+
+  a {
+    color: var(--color);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: fade-out($white, 0.1);
+      text-decoration: underline;
+    }
+  }
+}
+
 // Styling for links in the footer
 footer {
   a {
