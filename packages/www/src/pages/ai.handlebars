@@ -1,5 +1,5 @@
 {{#> layout
-  title='How to learn a language with AI for free'
+  title='How to Use AI as a Language Learner'
   metaDescription='Ask ChatGPT, Gemini, or Claude your everyday questions in the language you are learning, and get replies plus grammar corrections. Ready-made prompt inside.'
   url='/ai.html'
   ogImage="ai.png"
@@ -133,26 +133,13 @@
   </style>
   <div class="container-md">
     <div class="pt-3 pb-5">
-      <h1 class="h3">How to learn a language with AI for free</h1>
+      <h1 class="h3">How to Use AI as a Language Learner</h1>
 
-      <div class="mb-4 small bg-light rounded p-4 fst-italic source-note" data-nosnippet>
-        <p class="mb-2">Disclaimer: at the time of writing, I'm at B1 in Dutch, but I think this technique works for anyone from A2 to C2.</p>
-        <p>Update on 4th of August, 2026. Today, my neighbour with whom we talk weekly, said that my Dutch had improved. Yoohoo!</p>
-      </div>
+      <p>If you're a language learner who's been thinking about using AI in your target language, you've found the right place.</p>
 
-      <p data-nosnippet>A month ago, I tuned the way I use AI for language learning and wrote about it in the <a class="link-secondary" href="https://www.reddit.com/r/learndutch/s/vlO10JmnUl" target="_blank" rel="noopener nofollow">r/learndutch community on Reddit<i class="bi bi-box-arrow-up-right ms-2"></i></a>.</p>
+      <p>My personal concern with using AI was: what if I make a mistake? How would I know?</p>
 
-      <p>After a month of using AI this way, I've gotten used to it, and it feels almost effortless now. Not gonna lie, I still suck at Dutch, but being able to solve my daily problems in my target language is very motivating.</p>
-
-      <p>The approach can be distilled into a single sentence:</p>
-
-      <blockquote class="call-out fw-bold">
-        Use AI in your Target Language.
-      </blockquote>
-
-      <p>But with a twist: the AI should correct and explain your grammatical mistakes.</p>
-
-      <p>Below you'll find a global prompt that turns your AI assistant into a language teacher.</p>
+      <p>To solve this problem, I created a universal prompt that you can add to ChatGPT, Gemini, or Claude. With it, the assistant doesn't just help you — it also evaluates and corrects your grammar.</p>
     </div>
   </div>
   <div class="setup-section">
@@ -161,109 +148,163 @@
 
       <p>Works with ChatGPT, Gemini, and Claude.</p>
 
-      <div class="mb-5">
-        <p class="fw-bold">1. Which language are you learning?</p>
+      <p class="fw-bold">1. Which language are you learning?</p>
 
-        <select id="language" name="language" aria-label="Language" class="select-language form-select form-select-sm mb-4">
-          {{#each htmlWebpackPlugin.options.environment.languages}}
-            <option value="{{this.code}}">{{this.label}}</option>
-          {{/each}}
-        </select>
+      <select id="language" name="language" aria-label="Language" class="select-language form-select form-select-sm mb-4">
+        {{#each htmlWebpackPlugin.options.environment.languages}}
+          <option value="{{this.code}}">{{this.label}}</option>
+        {{/each}}
+      </select>
 
-        <p class="fw-bold">2. Select and copy this global prompt.</p>
+      <p class="fw-bold">2. Select and copy this global prompt.</p>
 
-        <pre class="info-panel" id="prompt-wrapper" style="font-size:80%;"><code id="prompt"></code><button class="btn btn-secondary btn-sm" id="copy-button"><i class="bi bi-copy"></i><span>Select and Copy to Clipboard</span></button></pre>
+      <pre class="info-panel" id="prompt-wrapper" style="font-size:80%;"><code id="prompt"></code><button class="btn btn-secondary btn-sm" id="copy-button"><i class="bi bi-copy"></i><span>Select and Copy to Clipboard</span></button></pre>
 
-        <p class="fw-bold">3. Add the copied prompt to your AI assistant's context.</p>
+      <p class="fw-bold">3. Add the copied prompt to your AI assistant's context.</p>
 
-        <div id="ai-tabs" class="mb-4">
-          <div class="ai-tabs-nav d-flex flex-column flex-sm-row" role="tablist" aria-label="AI assistant">
-            <button
-              type="button"
-              role="tab"
-              class="ai-tab"
-              id="ai-tab-chatgpt"
-              data-ai-tab="chatgpt"
-              aria-controls="ai-panel-chatgpt"
-              aria-selected="true"
-            ><img class="ai-logo" src="assets/chatgpt.svg" aria-hidden="true" alt="" width="24" height="24" />ChatGPT</button>
-            <button
-              type="button"
-              role="tab"
-              class="ai-tab"
-              id="ai-tab-gemini"
-              data-ai-tab="gemini"
-              aria-controls="ai-panel-gemini"
-              aria-selected="false"
-              tabindex="-1"
-            ><img class="ai-logo" src="assets/gemini.svg" aria-hidden="true" alt="" width="24" height="24" />Gemini</button>
-            <button
-              type="button"
-              role="tab"
-              class="ai-tab"
-              id="ai-tab-claude"
-              data-ai-tab="claude"
-              aria-controls="ai-panel-claude"
-              aria-selected="false"
-              tabindex="-1"
-            ><img class="ai-logo" src="assets/claude.svg" aria-hidden="true" alt="" width="24" height="24" />Claude</button>
-          </div>
-
-          <div
-            class="info-panel"
-            role="tabpanel"
-            id="ai-panel-chatgpt"
-            data-ai-panel="chatgpt"
-            aria-labelledby="ai-tab-chatgpt"
-          >
-            <p class="ai-instruction">Paste the prompt into the <strong>Custom instructions</strong> section of <a
-                href="https://chatgpt.com/#settings/Personalization"
-                target="_blank"
-                rel="noopener"
-                class="link-secondary"
-              >ChatGPT Personalization<i class="bi bi-box-arrow-up-right"></i></a>.</p>
-          </div>
-
-          <div
-            class="info-panel"
-            role="tabpanel"
-            id="ai-panel-gemini"
-            data-ai-panel="gemini"
-            aria-labelledby="ai-tab-gemini"
-            hidden
-          >
-            <p class="ai-instruction">Open <a
-                href="https://gemini.google.com/saved-info"
-                target="_blank"
-                rel="noopener"
-                class="link-secondary"
-              >Gemini personal context<i class="bi bi-box-arrow-up-right"></i></a>, tick the <strong>Your instructions for
-                Gemini</strong> checkbox, then click <strong>+ Add</strong> and paste the prompt.</p>
-          </div>
-
-          <div
-            class="info-panel"
-            role="tabpanel"
-            id="ai-panel-claude"
-            data-ai-panel="claude"
-            aria-labelledby="ai-tab-claude"
-            hidden
-          >
-            <p class="ai-instruction">Paste the prompt into the <strong>Instructions for Claude</strong> section of your <a
-                href="https://claude.ai/settings/profile"
-                target="_blank"
-                rel="noopener"
-                class="link-secondary"
-              >Claude profile<i class="bi bi-box-arrow-up-right"></i></a>.</p>
-          </div>
+      <div id="ai-tabs" class="mb-4">
+        <div class="ai-tabs-nav d-flex flex-column flex-sm-row" role="tablist" aria-label="AI assistant">
+          <button
+            type="button"
+            role="tab"
+            class="ai-tab"
+            id="ai-tab-chatgpt"
+            data-ai-tab="chatgpt"
+            aria-controls="ai-panel-chatgpt"
+            aria-selected="true"
+          ><img class="ai-logo" src="assets/chatgpt.svg" aria-hidden="true" alt="" width="24" height="24" />ChatGPT</button>
+          <button
+            type="button"
+            role="tab"
+            class="ai-tab"
+            id="ai-tab-gemini"
+            data-ai-tab="gemini"
+            aria-controls="ai-panel-gemini"
+            aria-selected="false"
+            tabindex="-1"
+          ><img class="ai-logo" src="assets/gemini.svg" aria-hidden="true" alt="" width="24" height="24" />Gemini</button>
+          <button
+            type="button"
+            role="tab"
+            class="ai-tab"
+            id="ai-tab-claude"
+            data-ai-tab="claude"
+            aria-controls="ai-panel-claude"
+            aria-selected="false"
+            tabindex="-1"
+          ><img class="ai-logo" src="assets/claude.svg" aria-hidden="true" alt="" width="24" height="24" />Claude</button>
         </div>
 
-        <p>Now the hard part: bring your real questions to the AI in <span data-language-string>your target language</span>. At first, you'll look up a lot of words just to ask a question and understand the answer. That difficulty is exactly what builds fluency.</p>
+        <div
+          class="info-panel"
+          role="tabpanel"
+          id="ai-panel-chatgpt"
+          data-ai-panel="chatgpt"
+          aria-labelledby="ai-tab-chatgpt"
+        >
+          <p class="ai-instruction">Paste the prompt into the <strong>Custom instructions</strong> section of <a
+              href="https://chatgpt.com/#settings/Personalization"
+              target="_blank"
+              rel="noopener"
+              class="link-secondary"
+            >ChatGPT Personalization<i class="bi bi-box-arrow-up-right"></i></a>.</p>
+        </div>
 
-        <p class="show-chrome">This <a href="https://chrome.google.com/webstore/detail/vocably/baocigmmhhdemijfjnjdidbkfgpgogmb" class="link-secondary" data-umami-event='AI CTA Click' data-umami-event-label='Chrome'><img src="assets/chrome.svg" aria-hidden="true" style="width: 1.2em; text-decoration: none; margin-right: 0.2em; vertical-align: middle;">Chrome Extension</a> will help you a great deal with formulating your questions, translating AI responses, and learning the words you discover along the way.</p>
+        <div
+          class="info-panel"
+          role="tabpanel"
+          id="ai-panel-gemini"
+          data-ai-panel="gemini"
+          aria-labelledby="ai-tab-gemini"
+          hidden
+        >
+          <p class="ai-instruction">Open <a
+              href="https://gemini.google.com/saved-info"
+              target="_blank"
+              rel="noopener"
+              class="link-secondary"
+            >Gemini personal context<i class="bi bi-box-arrow-up-right"></i></a>, tick the <strong>Your instructions for
+              Gemini</strong> checkbox, then click <strong>+ Add</strong> and paste the prompt.</p>
+        </div>
+
+        <div
+          class="info-panel"
+          role="tabpanel"
+          id="ai-panel-claude"
+          data-ai-panel="claude"
+          aria-labelledby="ai-tab-claude"
+          hidden
+        >
+          <p class="ai-instruction">Paste the prompt into the <strong>Instructions for Claude</strong> section of your <a
+              href="https://claude.ai/settings/profile"
+              target="_blank"
+              rel="noopener"
+              class="link-secondary"
+            >Claude profile<i class="bi bi-box-arrow-up-right"></i></a>.</p>
+        </div>
       </div>
+    </div>
+  </div>
+
+  <div class="container-md py-5">
+
+    <p>Not gonna lie, it will be a bit difficult at the beginning. You will have to compose yourself to write your prompts to AI in a more-or-less sane way. But the more you do it, the better and easier it becomes.</p>
+
+    <div class="hide-ios hide-android">
+      <p>I have also created browser extensions that play out with this method extremely well.</p>
+
+      <style>
+        .extensions {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+        }
+
+        .install-extension-button {
+          --bg-color: #2c2c2c;
+          --bg-hover-color: #000;
+
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.65rem 1rem 0.65rem 3rem;
+          border-radius: 2rem;
+          font-size: 0.9rem;
+          font-weight: 200;
+          color: #fff;
+          text-decoration: none;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          transition: background-color 0.2s ease-in-out;
+
+          &.chrome {
+            background: var(--bg-color) url('assets/chrome.svg') 0.5rem center no-repeat;
+            background-size: 1.8rem;
+          }
+
+          &.safari {
+            background: var(--bg-color) url('assets/safari.svg') 0.5rem calc(50% + 0.05rem) no-repeat;
+            background-size: 1.9rem;
+          }
+
+          &:hover {
+            background-color: var(--bg-hover-color);
+          }
+        }
+      </style>
+      <div class="mb-4 extensions">
+        <a class="install-extension-button chrome" href="https://chrome.google.com/webstore/detail/vocably/baocigmmhhdemijfjnjdidbkfgpgogmb">
+          Chrome Extension
+        </a>
+        <a class="install-extension-button safari" href="https://apps.apple.com/us/app/vocably-for-safari/id6464076425">
+          Safari Extension
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-5">
       {{> social-share
         page="ai.html"
+        cta="Share this method with your friends"
       }}
     </div>
   </div>
