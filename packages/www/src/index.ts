@@ -169,7 +169,9 @@ const getSourceLanguage = () => {
 };
 
 const getTargetLanguage = () => {
-  const localStorageTargetLanguage = localStorage.getItem('targetLanguage');
+  const localStorageTargetLanguage = localStorage.getItem(
+    searchConfig.targetLanguageLocalStorageKey
+  );
   if (localStorageTargetLanguage) {
     return localStorageTargetLanguage;
   }
