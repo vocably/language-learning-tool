@@ -125,14 +125,14 @@ export const StudySettingsScreen: FC<Props> = () => {
               gap: 8,
             }}
           >
-            <Text style={{ fontSize: 16, width: 24 * fontScale }}>
+            <Text style={{ fontSize: 16, width: 36 * fontScale }}>
               {maximumCardsPerSession.value}
             </Text>
             <View style={{ flex: 1 }}>
               <Slider
                 minimumValue={5}
-                maximumValue={40}
-                step={1}
+                maximumValue={100}
+                step={5}
                 minimumTrackTintColor={theme.colors.primary}
                 thumbTintColor={theme.colors.primary}
                 value={maximumCardsPerSession.value}
@@ -166,7 +166,7 @@ export const StudySettingsScreen: FC<Props> = () => {
               gap: 8,
             }}
           >
-            <Text style={{ fontSize: 16, width: 24 * fontScale }}>
+            <Text style={{ fontSize: 16, width: 36 * fontScale }}>
               {maximumNeverStudiedCardsPerDay.value}
             </Text>
             <View style={{ flex: 1 }}>
