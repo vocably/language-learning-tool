@@ -15141,6 +15141,24 @@
     },
     "items": [
       {
+        "source": "die Verzögerung",
+        "translation": "delay, lag",
+        "definitions": [
+          "Das Späterwerden oder Hinausschieben eines Ereignisses oder Vorgangs.",
+          "Die Verlangsamung einer Bewegung oder Geschwindigkeit."
+        ],
+        "examples": [
+          "Die Verzögerung des Fluges.",
+          "Eine zeitliche Verzögerung.",
+          "Verzögerung im Betriebsablauf."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "fɛɐ̯ˈt͡søːɡəʁʊŋ",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Verzögerungen"
+      },
+      {
         "source": "die Verspätung",
         "translation": "delay, lateness",
         "definitions": [
@@ -29287,6 +29305,70 @@
     "extraItems": [],
     "explanation": ""
   },
+  "for example": {
+    "source": "for example",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "zum beispiel",
+        "translation": "for example, for instance",
+        "definitions": [
+          "Als Illustration oder Erklärung.",
+          "Um ein spezifisches Element aus einer Gruppe hervorzuheben."
+        ],
+        "examples": [
+          "Wir könnten, zum Beispiel, ins Kino gehen.",
+          "Viele Städte, zum Beispiel Berlin, haben gute öffentliche Verkehrsmittel.",
+          "Er mag viele Sportarten, zum Beispiel Fußball und Basketball."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "tsʊm ˈbaɪ̯ʃpiːl",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "for instance": {
+    "source": "for instance",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "zum beispiel",
+        "translation": "for example, for instance",
+        "definitions": [
+          "Als Illustration oder Erklärung.",
+          "Um ein spezifisches Element aus einer Gruppe hervorzuheben."
+        ],
+        "examples": [
+          "Wir könnten, zum Beispiel, ins Kino gehen.",
+          "Viele Städte, zum Beispiel Berlin, haben gute öffentliche Verkehrsmittel.",
+          "Er mag viele Sportarten, zum Beispiel Fußball und Basketball."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "tsʊm ˈbaɪ̯ʃpiːl",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "to express": {
     "source": "to express",
     "sourceLanguage": "de",
@@ -42442,6 +42524,25 @@
     },
     "items": [
       {
+        "source": "das Verderben",
+        "translation": "ruin, decay, perdition",
+        "definitions": [
+          "Zustand des moralischen oder physischen Ruins",
+          "Vorgang des Schlechtwerdens von Lebensmitteln",
+          "Unglück oder Unheil, das jemanden vernichtet"
+        ],
+        "examples": [
+          "Jemanden ins Verderben stürzen",
+          "Das Verderben der Speisen verhindern",
+          "Sein eigenes Verderben herbeiführen"
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "fɛɐ̯ˈdɛʁbn̩",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "none"
+      },
+      {
         "source": "die Ruine",
         "translation": "ruin, wreck",
         "definitions": [
@@ -42914,6 +43015,25 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Fäulnisse"
+      },
+      {
+        "source": "das Verderben",
+        "translation": "ruin, decay, perdition",
+        "definitions": [
+          "Zustand des moralischen oder physischen Ruins",
+          "Vorgang des Schlechtwerdens von Lebensmitteln",
+          "Unglück oder Unheil, das jemanden vernichtet"
+        ],
+        "examples": [
+          "Jemanden ins Verderben stürzen",
+          "Das Verderben der Speisen verhindern",
+          "Sein eigenes Verderben herbeiführen"
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "fɛɐ̯ˈdɛʁbn̩",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "none"
       },
       {
         "source": "verfallen",
@@ -65773,6 +65893,72 @@
     "extraItems": [],
     "explanation": ""
   },
+  "competitive": {
+    "source": "competitive",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "wettbewerbsorientiert",
+        "translation": "competitive, competition-oriented",
+        "definitions": [
+          "Auf den Wettbewerb ausgerichtet",
+          "Den Wettbewerb betonend",
+          "Im Hinblick auf den Wettbewerb handelnd"
+        ],
+        "examples": [
+          "Eine wettbewerbsorientierte Strategie",
+          "Ein wettbewerbsorientiertes Unternehmen",
+          "Wettbewerbsorientierte Preise"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "competition-oriented": {
+    "source": "competition-oriented",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "wettbewerbsorientiert",
+        "translation": "competitive, competition-oriented",
+        "definitions": [
+          "Auf den Wettbewerb ausgerichtet",
+          "Den Wettbewerb betonend",
+          "Im Hinblick auf den Wettbewerb handelnd"
+        ],
+        "examples": [
+          "Eine wettbewerbsorientierte Strategie",
+          "Ein wettbewerbsorientiertes Unternehmen",
+          "Wettbewerbsorientierte Preise"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "West": {
     "source": "West",
     "sourceLanguage": "de",
@@ -69265,6 +69451,91 @@
         "ipa": "veːɐ̯",
         "number": "singular",
         "pluralForm": "none"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "unless": {
+    "source": "unless",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "wenn nicht",
+        "translation": "unless, if not, except when",
+        "definitions": ["außer wenn", "falls nicht", "es sei denn, dass"],
+        "examples": [
+          "Ich komme, wenn nicht etwas dazwischenkommt.",
+          "Wir gehen spazieren, wenn nicht das Wetter schlecht wird.",
+          "Er hilft dir, wenn nicht du es selbst schaffst."
+        ],
+        "partOfSpeech": "conjunction",
+        "ipa": "vɛn nɪçt",
+        "number": "singular"
+      },
+      {
+        "source": "es sei denn",
+        "translation": "unless, except if, if not",
+        "definitions": ["außer wenn", "es sei denn, dass", "wenn nicht"],
+        "examples": [
+          "Ich komme, es sei denn, ich werde krank.",
+          "Wir gehen spazieren, es sei denn, es regnet.",
+          "Er hilft dir, es sei denn, er hat keine Zeit."
+        ],
+        "partOfSpeech": "conjunction",
+        "ipa": "ɛs zaɪ dɛn",
+        "number": "singular"
+      },
+      {
+        "source": "außer wenn",
+        "translation": "unless, except when",
+        "definitions": [
+          "leitet einen Nebensatz ein, der eine Ausnahme von der im Hauptsatz genannten Bedingung oder Situation beschreibt"
+        ],
+        "examples": [
+          "Ich komme vorbei, außer wenn es regnet.",
+          "Wir gehen spazieren, außer wenn es zu spät wird."
+        ],
+        "partOfSpeech": "conjunction",
+        "ipa": "ˈaʊ̯sɐ vɛn",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "if not": {
+    "source": "if not",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "wenn nicht",
+        "translation": "unless, if not, except when",
+        "definitions": ["außer wenn", "falls nicht", "es sei denn, dass"],
+        "examples": [
+          "Ich komme, wenn nicht etwas dazwischenkommt.",
+          "Wir gehen spazieren, wenn nicht das Wetter schlecht wird.",
+          "Er hilft dir, wenn nicht du es selbst schaffst."
+        ],
+        "partOfSpeech": "conjunction",
+        "ipa": "vɛn nɪçt",
+        "number": "singular"
       }
     ],
     "detectedInputType": "word",
@@ -83108,6 +83379,74 @@
     "extraItems": [],
     "explanation": ""
   },
+  "waffle": {
+    "source": "waffle",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Waffel",
+        "translation": "waffle, wafer",
+        "definitions": [
+          "Ein dünnes, knuspriges Gebäck, oft mit einem Muster",
+          "Eine Süßigkeit, die oft mit Sahne und Früchten serviert wird"
+        ],
+        "examples": [
+          "Ich esse gerne eine Waffel zum Frühstück.",
+          "Die Waffel war sehr lecker.",
+          "Sie bestellte eine Waffel mit Kirschen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈvafəl",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Waffeln"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "wafer": {
+    "source": "wafer",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Waffel",
+        "translation": "waffle, wafer",
+        "definitions": [
+          "Ein dünnes, knuspriges Gebäck, oft mit einem Muster",
+          "Eine Süßigkeit, die oft mit Sahne und Früchten serviert wird"
+        ],
+        "examples": [
+          "Ich esse gerne eine Waffel zum Frühstück.",
+          "Die Waffel war sehr lecker.",
+          "Sie bestellte eine Waffel mit Kirschen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈvafəl",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Waffeln"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "weapon": {
     "source": "weapon",
     "sourceLanguage": "de",
@@ -95956,6 +96295,108 @@
     "extraItems": [],
     "explanation": ""
   },
+  "ruffle": {
+    "source": "ruffle",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Volant",
+        "translation": "ruffle, steering wheel",
+        "definitions": [
+          "Ein Rüschen- oder Faltenbesatz an Kleidung oder Textilien.",
+          "Ein Lenkrad in einem Fahrzeug."
+        ],
+        "examples": [
+          "Der Volant am Kleid war wunderschön.",
+          "Er umfasste fest den Volant des Wagens."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "voˈlɑ̃ː",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Volants"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "steering wheel": {
+    "source": "steering wheel",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "das Lenkrad",
+        "translation": "steering wheel",
+        "definitions": [
+          "Ein kreisförmiges Bedienelement in Fahrzeugen, mit dem die Fahrtrichtung gesteuert wird."
+        ],
+        "examples": [
+          "Er hält das Lenkrad fest.",
+          "Das Lenkrad ist aus Leder.",
+          "Beide Hände ans Lenkrad!"
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈlɛŋkʁaːt",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Lenkräder"
+      },
+      {
+        "source": "das Steuerrad",
+        "translation": "steering wheel, helm, wheel",
+        "definitions": [
+          "Ein Rad, das zum Steuern eines Fahrzeugs oder Schiffes verwendet wird.",
+          "Lenkrad eines Autos.",
+          "Rad zur Richtungsänderung eines Bootes."
+        ],
+        "examples": [
+          "Das Steuerrad drehen.",
+          "Am Steuerrad sitzen.",
+          "Ein altes Steuerrad."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈʃtɔɪ̯ɐˌʁaːt",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Steuerräder"
+      },
+      {
+        "source": "der Volant",
+        "translation": "ruffle, steering wheel",
+        "definitions": [
+          "Ein Rüschen- oder Faltenbesatz an Kleidung oder Textilien.",
+          "Ein Lenkrad in einem Fahrzeug."
+        ],
+        "examples": [
+          "Der Volant am Kleid war wunderschön.",
+          "Er umfasste fest den Volant des Wagens."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "voˈlɑ̃ː",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Volants"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "rowanberry": {
     "source": "rowanberry",
     "sourceLanguage": "de",
@@ -98954,6 +99395,40 @@
     "extraItems": [],
     "explanation": ""
   },
+  "lag": {
+    "source": "lag",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Verzögerung",
+        "translation": "delay, lag",
+        "definitions": [
+          "Das Späterwerden oder Hinausschieben eines Ereignisses oder Vorgangs.",
+          "Die Verlangsamung einer Bewegung oder Geschwindigkeit."
+        ],
+        "examples": [
+          "Die Verzögerung des Fluges.",
+          "Eine zeitliche Verzögerung.",
+          "Verzögerung im Betriebsablauf."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "fɛɐ̯ˈt͡søːɡəʁʊŋ",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Verzögerungen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "despair": {
     "source": "despair",
     "sourceLanguage": "de",
@@ -100220,6 +100695,28 @@
     },
     "items": [
       {
+        "source": "verderben",
+        "translation": "spoil, go bad, corrupt, ruin",
+        "definitions": [
+          "schlecht werden, ungenießbar werden (von Lebensmitteln)",
+          "moralisch schlecht werden, verkommen",
+          "etwas zerstören, ruinieren",
+          "jemandem etwas zunichtemachen, vereiteln"
+        ],
+        "examples": [
+          "Die Milch ist verdorben.",
+          "Er hat sich durch schlechte Gesellschaft verdorben.",
+          "Der Regen hat das Picknick verdorben.",
+          "Das schlechte Wetter hat uns den Urlaub verdorben."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "fɛɐˈdɛʁbn̩",
+        "number": "singular",
+        "pastTenses": "verdarb, ist verdorben",
+        "presentTenses": "ich verderbe, du verdirbst, er/sie/es verdirbt",
+        "tense": "present"
+      },
+      {
         "source": "verwöhnen",
         "translation": "spoil, pamper",
         "definitions": [
@@ -100239,24 +100736,61 @@
         "tense": "present"
       },
       {
-        "source": "versauen",
-        "translation": "spoil, mess up, ruin",
+        "source": "das Verderben",
+        "translation": "ruin, decay, perdition",
         "definitions": [
-          "etwas verderben, ruinieren",
-          "unordentlich machen, beschmutzen",
-          "jemandem etwas verleiden"
+          "Zustand des moralischen oder physischen Ruins",
+          "Vorgang des Schlechtwerdens von Lebensmitteln",
+          "Unglück oder Unheil, das jemanden vernichtet"
         ],
         "examples": [
-          "Er hat die Prüfung versaut.",
-          "Du versaus t immer alles.",
-          "Das Wetter hat uns den Ausflug versaut."
+          "Jemanden ins Verderben stürzen",
+          "Das Verderben der Speisen verhindern",
+          "Sein eigenes Verderben herbeiführen"
         ],
-        "partOfSpeech": "verb",
-        "ipa": "fɛɐˈzaʊən",
-        "number": "plural",
-        "pastTenses": "versaut, hat versaut",
-        "presentTenses": "ich versaue, du versaust, er/sie/es versaut",
-        "tense": "present"
+        "partOfSpeech": "noun",
+        "ipa": "fɛɐ̯ˈdɛʁbn̩",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "none"
+      },
+      {
+        "source": "das Verderben",
+        "translation": "ruin, decay, perdition",
+        "definitions": [
+          "Zustand des moralischen oder physischen Ruins",
+          "Vorgang des Schlechtwerdens von Lebensmitteln",
+          "Unglück oder Unheil, das jemanden vernichtet"
+        ],
+        "examples": [
+          "Jemanden ins Verderben stürzen",
+          "Das Verderben der Speisen verhindern",
+          "Sein eigenes Verderben herbeiführen"
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "fɛɐ̯ˈdɛʁbn̩",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "none"
+      },
+      {
+        "source": "die Beute",
+        "translation": "booty, prey, hive",
+        "definitions": [
+          "Etwas, das jemandem durch Raub oder Diebstahl in die Hände gefallen ist.",
+          "Ein Tier, das von einem Raubtier gejagt und gefressen wird.",
+          "Ein künstliches Gehäuse für Bienen (Imkerei)."
+        ],
+        "examples": [
+          "Die Diebe machten reiche Beute.",
+          "Der Löwe bewacht seine Beute.",
+          "Der Imker kontrolliert die Beute."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈbɔɪ̯tə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Beuten"
       }
     ],
     "detectedInputType": "word",
@@ -100916,6 +101450,134 @@
         "number": "singular",
         "pastTenses": "hat verworfen, verwarf",
         "presentTenses": "ich verwerfe, du verwirfst, er/sie/es verwirft",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "involve": {
+    "source": "involve",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "beinhalten",
+        "translation": "include, contain, involve",
+        "definitions": ["etwas als Inhalt haben", "umfassen", "enthalten"],
+        "examples": [
+          "Der Vertrag beinhaltet wichtige Klauseln.",
+          "Was beinhaltet dieser Bericht?",
+          "Die Lösung beinhaltet mehrere Schritte."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "baɪ̯nˈhaltn̩",
+        "number": "singular",
+        "pastTenses": "beinhalten (hat beinhaltet)",
+        "presentTenses": "ich beinhalte, du beinhaltetst, er/sie/es beinhaltet",
+        "tense": "present"
+      },
+      {
+        "source": "beteiligen",
+        "translation": "participate, involve, take part",
+        "definitions": [
+          "jemanden an etwas teilhaben lassen",
+          "sich an etwas beteiligen: an etwas teilnehmen, mitwirken",
+          "jemanden finanziell an etwas beteiligen: Anteile geben"
+        ],
+        "examples": [
+          "Wir beteiligen uns an dem Projekt.",
+          "Er beteiligte sich rege an der Diskussion.",
+          "Die Firma beteiligte ihre Mitarbeiter am Gewinn."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "bəˈtaɪ̯lɪɡn̩",
+        "number": "plural",
+        "pastTenses": "beteiligte, hat beteiligt",
+        "presentTenses": "ich beteilige, du beteiligst, er/sie/es beteiligt",
+        "tense": "present"
+      },
+      {
+        "source": "verwickeln",
+        "translation": "involve, entangle, complicate",
+        "definitions": [
+          "Jemanden oder etwas in etwas Kompliziertes oder Schwieriges einbeziehen.",
+          "Etwas in einen Zustand der Unordnung oder Verwirrung bringen.",
+          "Sich in etwas verfangen oder verheddern."
+        ],
+        "examples": [
+          "Er ließ sich in eine Affäre verwickeln.",
+          "Die Katze verwickelte das Garn.",
+          "Sie verwickelte sich in Widersprüche."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "fɛɐ̯ˈvɪkl̩n",
+        "number": "singular",
+        "pastTenses": "verwickelte, hat verwickelt",
+        "presentTenses": "ich verwickle, du verwickelst, er/sie/es verwickelt",
+        "tense": "present"
+      },
+      {
+        "source": "einbeziehen",
+        "translation": "include, involve, incorporate",
+        "definitions": [
+          "jemanden oder etwas in etwas einschließen oder berücksichtigen",
+          "als Teil von etwas betrachten",
+          "integrieren"
+        ],
+        "examples": [
+          "Wir müssen alle Aspekte einbeziehen.",
+          "Die Kosten sind im Preis einbezogen.",
+          "Er wurde in die Diskussion einbezogen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈaɪ̯nˌbeˌt͡siːən",
+        "number": "plural",
+        "pastTenses": "bezog ein, hat einbezogen",
+        "presentTenses": "ich beziehe ein, du beziehst ein, er/sie/es bezieht ein",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "entangle": {
+    "source": "entangle",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "verwickeln",
+        "translation": "involve, entangle, complicate",
+        "definitions": [
+          "Jemanden oder etwas in etwas Kompliziertes oder Schwieriges einbeziehen.",
+          "Etwas in einen Zustand der Unordnung oder Verwirrung bringen.",
+          "Sich in etwas verfangen oder verheddern."
+        ],
+        "examples": [
+          "Er ließ sich in eine Affäre verwickeln.",
+          "Die Katze verwickelte das Garn.",
+          "Sie verwickelte sich in Widersprüche."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "fɛɐ̯ˈvɪkl̩n",
+        "number": "singular",
+        "pastTenses": "verwickelte, hat verwickelt",
+        "presentTenses": "ich verwickle, du verwickelst, er/sie/es verwickelt",
         "tense": "present"
       }
     ],
@@ -131912,6 +132574,44 @@
     "extraItems": [],
     "explanation": ""
   },
+  "go bad": {
+    "source": "go bad",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "verderben",
+        "translation": "spoil, go bad, corrupt, ruin",
+        "definitions": [
+          "schlecht werden, ungenießbar werden (von Lebensmitteln)",
+          "moralisch schlecht werden, verkommen",
+          "etwas zerstören, ruinieren",
+          "jemandem etwas zunichtemachen, vereiteln"
+        ],
+        "examples": [
+          "Die Milch ist verdorben.",
+          "Er hat sich durch schlechte Gesellschaft verdorben.",
+          "Der Regen hat das Picknick verdorben.",
+          "Das schlechte Wetter hat uns den Urlaub verdorben."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "fɛɐˈdɛʁbn̩",
+        "number": "singular",
+        "pastTenses": "verdarb, ist verdorben",
+        "presentTenses": "ich verderbe, du verdirbst, er/sie/es verdirbt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "covertly": {
     "source": "covertly",
     "sourceLanguage": "de",
@@ -140824,6 +141524,102 @@
         ],
         "partOfSpeech": "adjective",
         "ipa": "ˈʊntɐˌʃtʏt͡st"
+      },
+      {
+        "source": "unterstützen",
+        "translation": "to support, to help, to assist",
+        "definitions": [
+          "Jemandem oder einer Sache Hilfe leisten.",
+          "Jemandem beistehen oder zur Seite stehen.",
+          "Einen Vorschlag oder eine Idee befürworten."
+        ],
+        "examples": [
+          "Ich werde dich bei deinem Projekt unterstützen.",
+          "Sie unterstützen die lokale Wirtschaft.",
+          "Er hat die Entscheidung des Teams unterstützt."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˌʊntɐˈʃtʏtsn̩",
+        "number": "singular",
+        "pastTenses": "unterstützte, hat unterstützt",
+        "presentTenses": "ich unterstütze, du unterstützt, er/sie/es unterstützt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "supportive": {
+    "source": "supportive",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "unterstützend",
+        "translation": "supportive, assisting, contributory",
+        "definitions": ["Hilfe leistend", "fördernd", "beistandleistend"],
+        "examples": [
+          "eine unterstützende Rolle spielen",
+          "unterstützende Maßnahmen ergreifen",
+          "mit unterstützenden Worten"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈʊntɐˌʃtʏt͡sənt"
+      },
+      {
+        "source": "unterstützen",
+        "translation": "to support, to help, to assist",
+        "definitions": [
+          "Jemandem oder einer Sache Hilfe leisten.",
+          "Jemandem beistehen oder zur Seite stehen.",
+          "Einen Vorschlag oder eine Idee befürworten."
+        ],
+        "examples": [
+          "Ich werde dich bei deinem Projekt unterstützen.",
+          "Sie unterstützen die lokale Wirtschaft.",
+          "Er hat die Entscheidung des Teams unterstützt."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˌʊntɐˈʃtʏtsn̩",
+        "number": "singular",
+        "pastTenses": "unterstützte, hat unterstützt",
+        "presentTenses": "ich unterstütze, du unterstützt, er/sie/es unterstützt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "assisting": {
+    "source": "assisting",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "unterstützend",
+        "translation": "supportive, assisting, contributory",
+        "definitions": ["Hilfe leistend", "fördernd", "beistandleistend"],
+        "examples": [
+          "eine unterstützende Rolle spielen",
+          "unterstützende Maßnahmen ergreifen",
+          "mit unterstützenden Worten"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈʊntɐˌʃtʏt͡sənt"
       },
       {
         "source": "unterstützen",
@@ -151477,6 +152273,24 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Umleitungen"
+      },
+      {
+        "source": "der Abstecher",
+        "translation": "side trip, detour",
+        "definitions": [
+          "Ein kurzer Umweg von einer geplanten Route zu einem nahegelegenen Ziel.",
+          "Ein vorübergehender Wechsel zu einem anderen Thema oder einer anderen Tätigkeit."
+        ],
+        "examples": [
+          "Ein Abstecher zum See.",
+          "Wir machten einen Abstecher nach Paris.",
+          "Ein kurzer Abstecher in die Geschichte."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈapˌʃtɛçɐ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Abstecher"
       }
     ],
     "detectedInputType": "word",
@@ -154562,6 +155376,42 @@
         "number": "singular",
         "pastTenses": "schloss ein, hat eingeschlossen",
         "presentTenses": "ich schliesse ein, du schliesst ein, er/sie/es schliesst ein",
+        "tense": "present"
+      },
+      {
+        "source": "einbeziehen",
+        "translation": "include, involve, incorporate",
+        "definitions": [
+          "jemanden oder etwas in etwas einschließen oder berücksichtigen",
+          "als Teil von etwas betrachten",
+          "integrieren"
+        ],
+        "examples": [
+          "Wir müssen alle Aspekte einbeziehen.",
+          "Die Kosten sind im Preis einbezogen.",
+          "Er wurde in die Diskussion einbezogen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈaɪ̯nˌbeˌt͡siːən",
+        "number": "plural",
+        "pastTenses": "bezog ein, hat einbezogen",
+        "presentTenses": "ich beziehe ein, du beziehst ein, er/sie/es bezieht ein",
+        "tense": "present"
+      },
+      {
+        "source": "beinhalten",
+        "translation": "include, contain, involve",
+        "definitions": ["etwas als Inhalt haben", "umfassen", "enthalten"],
+        "examples": [
+          "Der Vertrag beinhaltet wichtige Klauseln.",
+          "Was beinhaltet dieser Bericht?",
+          "Die Lösung beinhaltet mehrere Schritte."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "baɪ̯nˈhaltn̩",
+        "number": "singular",
+        "pastTenses": "beinhalten (hat beinhaltet)",
+        "presentTenses": "ich beinhalte, du beinhaltetst, er/sie/es beinhaltet",
         "tense": "present"
       },
       {
@@ -173457,6 +174307,72 @@
     "extraItems": [],
     "explanation": ""
   },
+  "team-oriented": {
+    "source": "team-oriented",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "teamorientiert",
+        "translation": "team-oriented, team-focused, collaborative",
+        "definitions": [
+          "Auf Teamarbeit ausgerichtet",
+          "Die Zusammenarbeit im Team betonend",
+          "Bereit zur Kooperation in einer Gruppe"
+        ],
+        "examples": [
+          "ein teamorientierter Ansatz",
+          "eine teamorientierte Person",
+          "teamorientiertes Arbeiten"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "teːmʔoʁiɛnˈtiːɐ̯t",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "team-focused": {
+    "source": "team-focused",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "teamorientiert",
+        "translation": "team-oriented, team-focused, collaborative",
+        "definitions": [
+          "Auf Teamarbeit ausgerichtet",
+          "Die Zusammenarbeit im Team betonend",
+          "Bereit zur Kooperation in einer Gruppe"
+        ],
+        "examples": [
+          "ein teamorientierter Ansatz",
+          "eine teamorientierte Person",
+          "teamorientiertes Arbeiten"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "teːmʔoʁiɛnˈtiːɐ̯t",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "teamwork": {
     "source": "teamwork",
     "sourceLanguage": "de",
@@ -183021,6 +183937,70 @@
     "extraItems": [],
     "explanation": ""
   },
+  "structured": {
+    "source": "structured",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "strukturiert",
+        "translation": "structured, systematic, organized",
+        "definitions": [
+          "klar gegliedert und geordnet",
+          "mit einer bestimmten Struktur versehen",
+          "systematisch aufgebaut"
+        ],
+        "examples": [
+          "ein strukturiertes Vorgehen",
+          "eine strukturierte Oberfläche",
+          "ein strukturiertes Programm"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ʃtʁuktʊˈʁiːɐ̯t"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "systematic": {
+    "source": "systematic",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "strukturiert",
+        "translation": "structured, systematic, organized",
+        "definitions": [
+          "klar gegliedert und geordnet",
+          "mit einer bestimmten Struktur versehen",
+          "systematisch aufgebaut"
+        ],
+        "examples": [
+          "ein strukturiertes Vorgehen",
+          "eine strukturierte Oberfläche",
+          "ein strukturiertes Programm"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ʃtʁuktʊˈʁiːɐ̯t"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "structure": {
     "source": "structure",
     "sourceLanguage": "de",
@@ -187376,6 +188356,40 @@
     "extraItems": [],
     "explanation": ""
   },
+  "tusk": {
+    "source": "tusk",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Stoßzahn",
+        "translation": "tusk",
+        "definitions": [
+          "Ein langer, spitzer Zahn, der aus dem Mund einiger Tiere, wie Elefanten oder Walrossen, herausragt.",
+          "Ein Eckzahn, der bei bestimmten Säugetieren stark verlängert ist und als Waffe oder Werkzeug dient."
+        ],
+        "examples": [
+          "Der Elefant hatte beeindruckende Stoßzähne.",
+          "Elfenbein wird aus Stoßzähnen gewonnen.",
+          "Ein Walross benutzt seine Stoßzähne, um sich auf dem Eis fortzubewegen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈʃtoːsts͡aːn",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Stoßzähne"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "come across": {
     "source": "come across",
     "sourceLanguage": "de",
@@ -191334,6 +192348,59 @@
     "extraItems": [],
     "explanation": ""
   },
+  "helm": {
+    "source": "helm",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Helm",
+        "translation": "helmet, helm",
+        "definitions": [
+          "Eine schützende Kopfbedeckung gegen Verletzungen.",
+          "Der obere Teil bestimmter technischer Vorrichtungen oder Gebäude."
+        ],
+        "examples": [
+          "Er trägt einen Helm.",
+          "Der Helm schützt den Kopf.",
+          "Ein Helm beim Radfahren."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "hɛlm",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Helme"
+      },
+      {
+        "source": "das Steuerrad",
+        "translation": "steering wheel, helm, wheel",
+        "definitions": [
+          "Ein Rad, das zum Steuern eines Fahrzeugs oder Schiffes verwendet wird.",
+          "Lenkrad eines Autos.",
+          "Rad zur Richtungsänderung eines Bootes."
+        ],
+        "examples": [
+          "Das Steuerrad drehen.",
+          "Am Steuerrad sitzen.",
+          "Ein altes Steuerrad."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈʃtɔɪ̯ɐˌʁaːt",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Steuerräder"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "tax number": {
     "source": "tax number",
     "sourceLanguage": "de",
@@ -191522,56 +192589,6 @@
         "partOfSpeech": "adjective",
         "ipa": "ˈʃtɔɪ̯ɐlɪç",
         "number": "singular"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "steering wheel": {
-    "source": "steering wheel",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "das Lenkrad",
-        "translation": "steering wheel",
-        "definitions": [
-          "Ein kreisförmiges Bedienelement in Fahrzeugen, mit dem die Fahrtrichtung gesteuert wird."
-        ],
-        "examples": [
-          "Er hält das Lenkrad fest.",
-          "Das Lenkrad ist aus Leder.",
-          "Beide Hände ans Lenkrad!"
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ˈlɛŋkʁaːt",
-        "g": "neuter",
-        "number": "singular",
-        "pluralForm": "die Lenkräder"
-      },
-      {
-        "source": "Steuer",
-        "translation": "tax, steering wheel",
-        "definitions": [
-          "Abgabe an den Staat ohne Anspruch auf Gegenleistung",
-          "Vorrichtung zum Lenken eines Fahrzeugs"
-        ],
-        "examples": [
-          "Die Steuer zahlen.",
-          "Hinter dem Steuer sitzen.",
-          "Eine neue Steuer einführen."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ˈʃtɔɪ̯ɐ",
-        "number": "singular",
-        "pluralForm": "die Steuern"
       }
     ],
     "detectedInputType": "word",
@@ -196080,6 +197097,162 @@
         "partOfSpeech": "preposition",
         "ipa": "anˈʃtat",
         "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "statistics": {
+    "source": "statistics",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Statistiken",
+        "translation": "statistics, stats",
+        "definitions": [
+          "Sammlung und Auswertung von Daten",
+          "Wissenschaft, die sich mit der Erhebung, Analyse und Interpretation von Daten befasst"
+        ],
+        "examples": [
+          "Die Statistiken zeigen einen Aufwärtstrend.",
+          "Wir müssen die Statistiken genau prüfen.",
+          "Laut den neuesten Statistiken..."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ʃtaˈtɪstɪkn̩",
+        "g": "feminine",
+        "number": "plural",
+        "pluralForm": "die Statistiken"
+      },
+      {
+        "source": "die Statistik",
+        "translation": "statistics, statistic",
+        "definitions": [
+          "Lehre von der Erhebung und Auswertung von Daten.",
+          "Tabellarische oder grafische Darstellung von Datenmengen."
+        ],
+        "examples": [
+          "Die Statistik lügt nicht.",
+          "Eine neue Statistik wurde veröffentlicht.",
+          "Er führt eine private Statistik."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ʃtaˈtɪstɪk",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Statistiken"
+      },
+      {
+        "source": "die Statistik",
+        "translation": "statistics, statistic",
+        "definitions": [
+          "Lehre von der Erhebung und Auswertung von Daten.",
+          "Tabellarische oder grafische Darstellung von Datenmengen."
+        ],
+        "examples": [
+          "Die Statistik lügt nicht.",
+          "Eine neue Statistik wurde veröffentlicht.",
+          "Er führt eine private Statistik."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ʃtaˈtɪstɪk",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Statistiken"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "stats": {
+    "source": "stats",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Statistiken",
+        "translation": "statistics, stats",
+        "definitions": [
+          "Sammlung und Auswertung von Daten",
+          "Wissenschaft, die sich mit der Erhebung, Analyse und Interpretation von Daten befasst"
+        ],
+        "examples": [
+          "Die Statistiken zeigen einen Aufwärtstrend.",
+          "Wir müssen die Statistiken genau prüfen.",
+          "Laut den neuesten Statistiken..."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ʃtaˈtɪstɪkn̩",
+        "g": "feminine",
+        "number": "plural",
+        "pluralForm": "die Statistiken"
+      },
+      {
+        "source": "die Statistik",
+        "translation": "statistics, statistic",
+        "definitions": [
+          "Lehre von der Erhebung und Auswertung von Daten.",
+          "Tabellarische oder grafische Darstellung von Datenmengen."
+        ],
+        "examples": [
+          "Die Statistik lügt nicht.",
+          "Eine neue Statistik wurde veröffentlicht.",
+          "Er führt eine private Statistik."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ʃtaˈtɪstɪk",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Statistiken"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "statistic": {
+    "source": "statistic",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Statistik",
+        "translation": "statistics, statistic",
+        "definitions": [
+          "Lehre von der Erhebung und Auswertung von Daten.",
+          "Tabellarische oder grafische Darstellung von Datenmengen."
+        ],
+        "examples": [
+          "Die Statistik lügt nicht.",
+          "Eine neue Statistik wurde veröffentlicht.",
+          "Er führt eine private Statistik."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ʃtaˈtɪstɪk",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Statistiken"
       }
     ],
     "detectedInputType": "word",
@@ -219529,6 +220702,72 @@
     "extraItems": [],
     "explanation": ""
   },
+  "to set a goal": {
+    "source": "to set a goal",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "sich ein ziel setzen",
+        "translation": "to set a goal, to set oneself a goal, to set a target",
+        "definitions": [
+          "Eine Absicht oder ein Vorhaben festlegen.",
+          "Sich auf ein bestimmtes Ergebnis oder einen Zweck konzentrieren.",
+          "Einen Plan oder eine Strategie entwickeln, um etwas zu erreichen."
+        ],
+        "examples": [
+          "Wir müssen uns klare Ziele setzen.",
+          "Es ist wichtig, sich realistische Ziele zu setzen.",
+          "Bevor du anfängst, solltest du dir ein Ziel setzen."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "zɪç aɪn t͡siːl ˈzɛt͡sn̩",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to set oneself a goal": {
+    "source": "to set oneself a goal",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "sich ein ziel setzen",
+        "translation": "to set a goal, to set oneself a goal, to set a target",
+        "definitions": [
+          "Eine Absicht oder ein Vorhaben festlegen.",
+          "Sich auf ein bestimmtes Ergebnis oder einen Zweck konzentrieren.",
+          "Einen Plan oder eine Strategie entwickeln, um etwas zu erreichen."
+        ],
+        "examples": [
+          "Wir müssen uns klare Ziele setzen.",
+          "Es ist wichtig, sich realistische Ziele zu setzen.",
+          "Bevor du anfängst, solltest du dir ein Ziel setzen."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "zɪç aɪn t͡siːl ˈzɛt͡sn̩",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "to be suitable": {
     "source": "to be suitable",
     "sourceLanguage": "de",
@@ -239671,6 +240910,70 @@
     "extraItems": [],
     "explanation": ""
   },
+  "to have butterflies in one's stomach": {
+    "source": "to have butterflies in one's stomach",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Schmetterlinge im Bauch haben",
+        "translation": "to have butterflies in one's stomach, to have butterflies",
+        "definitions": [
+          "Ein Gefühl der Verliebtheit oder Aufregung empfinden.",
+          "Nervös oder aufgeregt sein, besonders in Bezug auf romantische Gefühle."
+        ],
+        "examples": [
+          "Sie hatte Schmetterlinge im Bauch, als er sie ansah.",
+          "Vor dem ersten Date hatte er Schmetterlinge im Bauch.",
+          "Immer wenn sie ihn traf, bekam sie Schmetterlinge im Bauch."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "plural"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to have butterflies": {
+    "source": "to have butterflies",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Schmetterlinge im Bauch haben",
+        "translation": "to have butterflies in one's stomach, to have butterflies",
+        "definitions": [
+          "Ein Gefühl der Verliebtheit oder Aufregung empfinden.",
+          "Nervös oder aufgeregt sein, besonders in Bezug auf romantische Gefühle."
+        ],
+        "examples": [
+          "Sie hatte Schmetterlinge im Bauch, als er sie ansah.",
+          "Vor dem ersten Date hatte er Schmetterlinge im Bauch.",
+          "Immer wenn sie ihn traf, bekam sie Schmetterlinge im Bauch."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "plural"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "butterflies": {
     "source": "butterflies",
     "sourceLanguage": "de",
@@ -244269,6 +245572,24 @@
     },
     "items": [
       {
+        "source": "die Schlacht",
+        "translation": "battle, slaughter",
+        "definitions": [
+          "Ein Kampf zwischen zwei Armeen oder Streitkräften.",
+          "Ein großes, oft blutiges Gefecht."
+        ],
+        "examples": [
+          "Die Schlacht dauerte den ganzen Tag.",
+          "Er überlebte die Schlacht.",
+          "Die Schlacht war verloren."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "diː ˈʃlaxt",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Schlachten"
+      },
+      {
         "source": "Schlachten",
         "translation": "battles, slaughter",
         "definitions": [
@@ -244284,24 +245605,6 @@
         "ipa": "ˈʃlaxtn̩",
         "g": "feminine",
         "number": "plural",
-        "pluralForm": "die Schlachten"
-      },
-      {
-        "source": "die Schlacht",
-        "translation": "battle, struggle",
-        "definitions": [
-          "Ein bewaffneter Kampf zwischen militärischen Einheiten im Krieg.",
-          "Eine heftige Auseinandersetzung oder ein sportlicher Wettkampf."
-        ],
-        "examples": [
-          "Die Schlacht bei Waterloo.",
-          "Eine blutige Schlacht.",
-          "Die Schlacht um die Meisterschaft."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ʃlaxt",
-        "g": "feminine",
-        "number": "singular",
         "pluralForm": "die Schlachten"
       }
     ],
@@ -277859,6 +279162,54 @@
     "extraItems": [],
     "explanation": ""
   },
+  "productive": {
+    "source": "productive",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "produktiv",
+        "translation": "productive, fruitful, useful",
+        "definitions": ["ertragreich", "schöpferisch", "nützlich"],
+        "examples": ["eine produktive Phase", "produktiv arbeiten"],
+        "partOfSpeech": "adjective",
+        "ipa": "pʀoˈdʊktiv"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "fruitful": {
+    "source": "fruitful",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "produktiv",
+        "translation": "productive, fruitful, useful",
+        "definitions": ["ertragreich", "schöpferisch", "nützlich"],
+        "examples": ["eine produktive Phase", "produktiv arbeiten"],
+        "partOfSpeech": "adjective",
+        "ipa": "pʀoˈdʊktiv"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "product": {
     "source": "product",
     "sourceLanguage": "de",
@@ -310116,6 +311467,38 @@
     "extraItems": [],
     "explanation": ""
   },
+  "monotonous": {
+    "source": "monotonous",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "monoton",
+        "translation": "monotonous, dull",
+        "definitions": [
+          "eintönig, gleichförmig, ohne Abwechslung",
+          "langweilig, ermüdend durch ständige Wiederholung"
+        ],
+        "examples": [
+          "eine monotone Arbeit",
+          "ein monotoner Klang",
+          "monoton sprechen"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "monoˈtoːn",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "monograph": {
     "source": "monograph",
     "sourceLanguage": "de",
@@ -333163,6 +334546,24 @@
     },
     "items": [
       {
+        "source": "das Finale",
+        "translation": "final, finale",
+        "definitions": [
+          "Der letzte, entscheidende Teil eines Wettbewerbs oder einer Veranstaltung.",
+          "Der Schlusssatz eines mehrsätzigen Instrumentalwerkes."
+        ],
+        "examples": [
+          "Sie erreichten das Finale.",
+          "Das Finale der Sinfonie war grandios.",
+          "Ein spannendes Finale."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "fiˈnaːlə",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Finales"
+      },
+      {
         "source": "finale",
         "translation": "final, conclusive",
         "definitions": [
@@ -341405,6 +342806,18 @@
       "language": "de"
     },
     "items": [
+      {
+        "source": "kreativ",
+        "translation": "creative",
+        "definitions": [
+          "schöpferisch tätig",
+          "initiativreich und einfallsreich"
+        ],
+        "examples": ["kreative Ideen", "eine kreative Lösung"],
+        "partOfSpeech": "adjective",
+        "ipa": "kʁɛˈaːtɪv",
+        "number": "singular"
+      },
       {
         "source": "künstlerische",
         "translation": "artistic, creative",
@@ -363714,6 +365127,87 @@
     "extraItems": [],
     "explanation": ""
   },
+  "to get cold feet": {
+    "source": "to get cold feet",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "kalte Füße bekommen",
+        "translation": "to get cold feet, to chicken out",
+        "definitions": [
+          "Angst bekommen oder unsicher werden, kurz bevor man etwas Wichtiges tun muss.",
+          "Zögern oder einen Rückzieher machen, weil man Bedenken hat."
+        ],
+        "examples": [
+          "Er wollte heiraten, bekam aber kalte Füße.",
+          "Kurz vor dem Sprung bekam sie kalte Füße.",
+          "Viele Investoren bekommen kalte Füße, wenn der Markt fällt."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "ˈkaltə ˈfyːsə bəˈkɔmən",
+        "number": "plural"
+      },
+      {
+        "source": "das Zittern bekommen",
+        "translation": "to get the jitters, to get cold feet, to get the shakes",
+        "definitions": [
+          "Angst oder Furcht empfinden",
+          "nervös oder ängstlich werden",
+          "in einen Zustand der Besorgnis geraten"
+        ],
+        "examples": [
+          "Als er die Nachricht hörte, bekam er das Zittern.",
+          "Vor der Prüfung bekam sie das Zittern.",
+          "Bei dem Gedanken an die Aufgabe bekam er das Zittern."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "das ˈtsɪtɐn bəˈkɔmən",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to chicken out": {
+    "source": "to chicken out",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "kalte Füße bekommen",
+        "translation": "to get cold feet, to chicken out",
+        "definitions": [
+          "Angst bekommen oder unsicher werden, kurz bevor man etwas Wichtiges tun muss.",
+          "Zögern oder einen Rückzieher machen, weil man Bedenken hat."
+        ],
+        "examples": [
+          "Er wollte heiraten, bekam aber kalte Füße.",
+          "Kurz vor dem Sprung bekam sie kalte Füße.",
+          "Viele Investoren bekommen kalte Füße, wenn der Markt fällt."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "ˈkaltə ˈfyːsə bəˈkɔmən",
+        "number": "plural"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "cold": {
     "source": "cold",
     "sourceLanguage": "de",
@@ -366984,6 +368478,23 @@
         "partOfSpeech": "idiom",
         "ipa": "",
         "number": "singular"
+      },
+      {
+        "source": "jemandem auf den Geist gehen",
+        "translation": "to get on someone's nerves, to get on someone's wick, to annoy someone",
+        "definitions": [
+          "jemanden nerven oder belästigen",
+          "jemandem lästig fallen",
+          "jemanden irritieren oder ärgern"
+        ],
+        "examples": [
+          "Deine ständigen Fragen gehen mir auf den Geist.",
+          "Es geht mir auf den Geist, wenn du immer zu spät kommst.",
+          "Sein lautes Kauen ging ihr auf den Geist."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
       }
     ],
     "detectedInputType": "word",
@@ -367029,6 +368540,39 @@
           "Sein ständiges Gejammer geht mir auf den Keks.",
           "Es geht mir auf den Keks, wenn du immer zu spät kommst.",
           "Die laute Musik geht den Nachbarn auf den Keks."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to get on someone's wick": {
+    "source": "to get on someone's wick",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "jemandem auf den Geist gehen",
+        "translation": "to get on someone's nerves, to get on someone's wick, to annoy someone",
+        "definitions": [
+          "jemanden nerven oder belästigen",
+          "jemandem lästig fallen",
+          "jemanden irritieren oder ärgern"
+        ],
+        "examples": [
+          "Deine ständigen Fragen gehen mir auf den Geist.",
+          "Es geht mir auf den Geist, wenn du immer zu spät kommst.",
+          "Sein lautes Kauen ging ihr auf den Geist."
         ],
         "partOfSpeech": "idiom",
         "ipa": "",
@@ -386776,6 +388320,70 @@
     "extraItems": [],
     "explanation": ""
   },
+  "to be scared to death": {
+    "source": "to be scared to death",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "himmelangst haben",
+        "translation": "to be scared to death, to be scared stiff",
+        "definitions": [
+          "Große Angst oder Furcht empfinden.",
+          "Sehr ängstlich sein."
+        ],
+        "examples": [
+          "Als der Blitz einschlug, hatte er Himmelangst.",
+          "Sie hatte Himmelangst vor der Prüfung.",
+          "Die Kinder hatten Himmelangst im dunklen Wald."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "ˈhɪml̩ˌʔaŋst ˈhaːbn̩",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to be scared stiff": {
+    "source": "to be scared stiff",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "himmelangst haben",
+        "translation": "to be scared to death, to be scared stiff",
+        "definitions": [
+          "Große Angst oder Furcht empfinden.",
+          "Sehr ängstlich sein."
+        ],
+        "examples": [
+          "Als der Blitz einschlug, hatte er Himmelangst.",
+          "Sie hatte Himmelangst vor der Prüfung.",
+          "Die Kinder hatten Himmelangst im dunklen Wald."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "ˈhɪml̩ˌʔaŋst ˈhaːbn̩",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "sky": {
     "source": "sky",
     "sourceLanguage": "de",
@@ -391278,40 +392886,6 @@
   },
   "helmet": {
     "source": "helmet",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "der Helm",
-        "translation": "helmet, helm",
-        "definitions": [
-          "Eine schützende Kopfbedeckung gegen Verletzungen.",
-          "Der obere Teil bestimmter technischer Vorrichtungen oder Gebäude."
-        ],
-        "examples": [
-          "Er trägt einen Helm.",
-          "Der Helm schützt den Kopf.",
-          "Ein Helm beim Radfahren."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "hɛlm",
-        "g": "masculine",
-        "number": "singular",
-        "pluralForm": "die Helme"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "helm": {
-    "source": "helm",
     "sourceLanguage": "de",
     "targetLanguage": "en",
     "isDirect": false,
@@ -404191,6 +405765,42 @@
     },
     "items": [
       {
+        "source": "große",
+        "translation": "big, large, great",
+        "definitions": [
+          "umfangreich an Dimensionen",
+          "beträchtlich in Menge oder Anzahl",
+          "von bedeutender Wichtigkeit"
+        ],
+        "examples": [
+          "ein großes Haus",
+          "große Fortschritte",
+          "eine große Entscheidung"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ɡʀoːsə",
+        "number": "plural"
+      },
+      {
+        "source": "gross",
+        "translation": "large, big, great",
+        "definitions": [
+          "von beträchtlicher Ausdehnung oder Größe",
+          "umfangreich, bedeutend",
+          "erwachsen, nicht klein",
+          "schwerwiegend, erheblich"
+        ],
+        "examples": [
+          "ein grosser Baum",
+          "die grosse Mehrheit",
+          "ein grosses Problem",
+          "eine grosse Leistung"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ɡʁoːs",
+        "number": "singular"
+      },
+      {
         "source": "die Große",
         "translation": "great, big",
         "definitions": [
@@ -404226,6 +405836,58 @@
         "partOfSpeech": "adjective",
         "ipa": "ɡʁoːs",
         "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "large": {
+    "source": "large",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "gross",
+        "translation": "large, big, great",
+        "definitions": [
+          "von beträchtlicher Ausdehnung oder Größe",
+          "umfangreich, bedeutend",
+          "erwachsen, nicht klein",
+          "schwerwiegend, erheblich"
+        ],
+        "examples": [
+          "ein grosser Baum",
+          "die grosse Mehrheit",
+          "ein grosses Problem",
+          "eine grosse Leistung"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ɡʁoːs",
+        "number": "singular"
+      },
+      {
+        "source": "große",
+        "translation": "big, large, great",
+        "definitions": [
+          "umfangreich an Dimensionen",
+          "beträchtlich in Menge oder Anzahl",
+          "von bedeutender Wichtigkeit"
+        ],
+        "examples": [
+          "ein großes Haus",
+          "große Fortschritte",
+          "eine große Entscheidung"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ɡʀoːsə",
+        "number": "plural"
       }
     ],
     "detectedInputType": "word",
@@ -404271,41 +405933,6 @@
         ],
         "partOfSpeech": "adjective",
         "ipa": "ˈɡʁoːsʔaːʁtɪç",
-        "number": "singular"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "large": {
-    "source": "large",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "gross",
-        "translation": "large, big, great",
-        "definitions": [
-          "von beträchtlicher Ausdehnung oder Größe",
-          "umfangreich, bedeutend",
-          "erwachsen, nicht klein",
-          "schwerwiegend, erheblich"
-        ],
-        "examples": [
-          "ein grosser Baum",
-          "die grosse Mehrheit",
-          "ein grosses Problem",
-          "eine grosse Leistung"
-        ],
-        "partOfSpeech": "adjective",
-        "ipa": "ɡʁoːs",
         "number": "singular"
       }
     ],
@@ -422675,6 +424302,38 @@
         "partOfSpeech": "adjective",
         "ipa": "ɡəˈnant",
         "number": "singular"
+      },
+      {
+        "source": "betitelt",
+        "translation": "titled, named, designated",
+        "definitions": ["mit einem Titel versehen", "benannt", "bezeichnet"],
+        "examples": [
+          "Das betitelte Buch liegt auf dem Tisch.",
+          "Die betitelte Arbeit wurde eingereicht.",
+          "Ein betiteltes Dokument wurde gefunden."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "bəˈtiːtəlt",
+        "number": "singular"
+      },
+      {
+        "source": "betiteln",
+        "translation": "to title, to call",
+        "definitions": [
+          "Einen Titel oder eine Überschrift geben",
+          "Benennen, bezeichnen"
+        ],
+        "examples": [
+          "Er betitelt sein neues Buch.",
+          "Wie soll ich diesen Artikel betiteln?",
+          "Sie betitelte ihn als Genie."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "bəˈtiːtəln",
+        "number": "singular",
+        "pastTenses": "betitelte, hat betitelt",
+        "presentTenses": "ich betitle, du betitelst, er/sie/es betitelt",
+        "tense": "present"
       },
       {
         "source": "bezeichnet",
@@ -450041,6 +451700,40 @@
     "extraItems": [],
     "explanation": ""
   },
+  "finale": {
+    "source": "finale",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "das Finale",
+        "translation": "final, finale",
+        "definitions": [
+          "Der letzte, entscheidende Teil eines Wettbewerbs oder einer Veranstaltung.",
+          "Der Schlusssatz eines mehrsätzigen Instrumentalwerkes."
+        ],
+        "examples": [
+          "Sie erreichten das Finale.",
+          "Das Finale der Sinfonie war grandios.",
+          "Ein spannendes Finale."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "fiˈnaːlə",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Finales"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "conclusive": {
     "source": "conclusive",
     "sourceLanguage": "de",
@@ -460570,6 +462263,72 @@
     "extraItems": [],
     "explanation": ""
   },
+  "to take something lightly": {
+    "source": "to take something lightly",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "etwas auf die leichte Schulter nehmen",
+        "translation": "to take something lightly, to make light of something, to shrug something off",
+        "definitions": [
+          "Eine Sache nicht ernst genug nehmen",
+          "Etwas als unwichtig oder harmlos betrachten",
+          "Sich über etwas keine großen Gedanken machen"
+        ],
+        "examples": [
+          "Du solltest deine Prüfungen nicht auf die leichte Schulter nehmen.",
+          "Er nimmt die Warnungen immer auf die leichte Schulter.",
+          "Manche Leute nehmen das Leben zu sehr auf die leichte Schulter."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to make light of something": {
+    "source": "to make light of something",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "etwas auf die leichte Schulter nehmen",
+        "translation": "to take something lightly, to make light of something, to shrug something off",
+        "definitions": [
+          "Eine Sache nicht ernst genug nehmen",
+          "Etwas als unwichtig oder harmlos betrachten",
+          "Sich über etwas keine großen Gedanken machen"
+        ],
+        "examples": [
+          "Du solltest deine Prüfungen nicht auf die leichte Schulter nehmen.",
+          "Er nimmt die Warnungen immer auf die leichte Schulter.",
+          "Manche Leute nehmen das Leben zu sehr auf die leichte Schulter."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "to put something on the back burner": {
     "source": "to put something on the back burner",
     "sourceLanguage": "de",
@@ -461404,35 +463163,6 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Eselsbrücken"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "unless": {
-    "source": "unless",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "es sei denn",
-        "translation": "unless, except if, if not",
-        "definitions": ["außer wenn", "es sei denn, dass", "wenn nicht"],
-        "examples": [
-          "Ich komme, es sei denn, ich werde krank.",
-          "Wir gehen spazieren, es sei denn, es regnet.",
-          "Er hilft dir, es sei denn, er hat keine Zeit."
-        ],
-        "partOfSpeech": "conjunction",
-        "ipa": "ɛs zaɪ dɛn",
-        "number": "singular"
       }
     ],
     "detectedInputType": "word",
@@ -476075,6 +477805,22 @@
         "pastTenses": "enthielt, hat enthalten",
         "presentTenses": "ich enthalte, du enthältst, er/sie/es enthält",
         "tense": "present"
+      },
+      {
+        "source": "beinhalten",
+        "translation": "include, contain, involve",
+        "definitions": ["etwas als Inhalt haben", "umfassen", "enthalten"],
+        "examples": [
+          "Der Vertrag beinhaltet wichtige Klauseln.",
+          "Was beinhaltet dieser Bericht?",
+          "Die Lösung beinhaltet mehrere Schritte."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "baɪ̯nˈhaltn̩",
+        "number": "singular",
+        "pastTenses": "beinhalten (hat beinhaltet)",
+        "presentTenses": "ich beinhalte, du beinhaltetst, er/sie/es beinhaltet",
+        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -488208,6 +489954,78 @@
     "extraItems": [],
     "explanation": ""
   },
+  "integrate": {
+    "source": "integrate",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "einbinden",
+        "translation": "integrate, bind, involve",
+        "definitions": [
+          "etwas in etwas anderes integrieren oder integriert werden",
+          "etwas mit einem Band oder Seil befestigen",
+          "jemanden in eine Aktivität oder Gruppe einbeziehen"
+        ],
+        "examples": [
+          "Wir müssen die neuen Daten in das System einbinden.",
+          "Er wird die Bücher neu einbinden.",
+          "Sie wollen alle Mitarbeiter in den Prozess einbinden."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈaɪ̯nˌbɪndn̩",
+        "number": "singular",
+        "pastTenses": "band ein, hat eingebunden",
+        "presentTenses": "ich binde ein, du bindest ein, er/sie/es bindet ein",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "bind": {
+    "source": "bind",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "einbinden",
+        "translation": "integrate, bind, involve",
+        "definitions": [
+          "etwas in etwas anderes integrieren oder integriert werden",
+          "etwas mit einem Band oder Seil befestigen",
+          "jemanden in eine Aktivität oder Gruppe einbeziehen"
+        ],
+        "examples": [
+          "Wir müssen die neuen Daten in das System einbinden.",
+          "Er wird die Bücher neu einbinden.",
+          "Sie wollen alle Mitarbeiter in den Prozess einbinden."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈaɪ̯nˌbɪndn̩",
+        "number": "singular",
+        "pastTenses": "band ein, hat eingebunden",
+        "presentTenses": "ich binde ein, du bindest ein, er/sie/es bindet ein",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "fitting": {
     "source": "fitting",
     "sourceLanguage": "de",
@@ -488454,6 +490272,70 @@
     "extraItems": [],
     "explanation": ""
   },
+  "a weight off one's mind": {
+    "source": "a weight off one's mind",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "ein Stein vom Herzen fallen",
+        "translation": "a weight off one's mind, a load off one's mind",
+        "definitions": [
+          "Erleichterung oder Beruhigung empfinden, nachdem eine Sorge oder Last weggefallen ist.",
+          "Sich von einer großen Last befreit fühlen."
+        ],
+        "examples": [
+          "Als die Prüfungsergebnisse endlich da waren und positiv ausfielen, ist mir ein Stein vom Herzen gefallen.",
+          "Nachdem er die Wahrheit gesagt hatte, ist ihm ein Stein vom Herzen gefallen.",
+          "Mir ist ein Stein vom Herzen gefallen, als ich hörte, dass alles in Ordnung ist."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "a load off one's mind": {
+    "source": "a load off one's mind",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "ein Stein vom Herzen fallen",
+        "translation": "a weight off one's mind, a load off one's mind",
+        "definitions": [
+          "Erleichterung oder Beruhigung empfinden, nachdem eine Sorge oder Last weggefallen ist.",
+          "Sich von einer großen Last befreit fühlen."
+        ],
+        "examples": [
+          "Als die Prüfungsergebnisse endlich da waren und positiv ausfielen, ist mir ein Stein vom Herzen gefallen.",
+          "Nachdem er die Wahrheit gesagt hatte, ist ihm ein Stein vom Herzen gefallen.",
+          "Mir ist ein Stein vom Herzen gefallen, als ich hörte, dass alles in Ordnung ist."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "to lead a life": {
     "source": "to lead a life",
     "sourceLanguage": "de",
@@ -488511,6 +490393,68 @@
         ],
         "partOfSpeech": "idiom",
         "ipa": "aɪn ˈleːbn̩ ˈfyːʁən",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to have a thick skin": {
+    "source": "to have a thick skin",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "ein dickes Fell haben",
+        "translation": "to have a thick skin, to be thick-skinned",
+        "definitions": [
+          "Unempfindlich gegenüber Kritik oder negativen Äußerungen sein.",
+          "Widerstandsfähig gegenüber Schwierigkeiten oder Rückschlägen sein."
+        ],
+        "examples": [
+          "Als Politiker muss man ein dickes Fell haben.",
+          "Sie hat ein dickes Fell, das lässt sie nicht so schnell unterkriegen."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to be thick-skinned": {
+    "source": "to be thick-skinned",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "ein dickes Fell haben",
+        "translation": "to have a thick skin, to be thick-skinned",
+        "definitions": [
+          "Unempfindlich gegenüber Kritik oder negativen Äußerungen sein.",
+          "Widerstandsfähig gegenüber Schwierigkeiten oder Rückschlägen sein."
+        ],
+        "examples": [
+          "Als Politiker muss man ein dickes Fell haben.",
+          "Sie hat ein dickes Fell, das lässt sie nicht so schnell unterkriegen."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
         "number": "singular"
       }
     ],
@@ -491704,6 +493648,72 @@
         "g": "masculine",
         "number": "singular",
         "pluralForm": "die Dämonen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "dynamic": {
+    "source": "dynamic",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "dynamisch",
+        "translation": "dynamic, energetic, dynamic (computing)",
+        "definitions": [
+          "Voller Kraft und Energie; schwungvoll.",
+          "Sich ständig verändernd oder entwickelnd.",
+          "Eine Bewegung oder Entwicklung betreffend."
+        ],
+        "examples": [
+          "ein dynamisches Team",
+          "eine dynamische Entwicklung",
+          "dynamische Prozesse"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "dyˈnaːmɪʃ",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "energetic": {
+    "source": "energetic",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "dynamisch",
+        "translation": "dynamic, energetic, dynamic (computing)",
+        "definitions": [
+          "Voller Kraft und Energie; schwungvoll.",
+          "Sich ständig verändernd oder entwickelnd.",
+          "Eine Bewegung oder Entwicklung betreffend."
+        ],
+        "examples": [
+          "ein dynamisches Team",
+          "eine dynamische Entwicklung",
+          "dynamische Prozesse"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "dyˈnaːmɪʃ",
+        "number": "singular"
       }
     ],
     "detectedInputType": "word",
@@ -501008,6 +503018,76 @@
     "extraItems": [],
     "explanation": ""
   },
+  "cartridge": {
+    "source": "cartridge",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Patrone",
+        "translation": "cartridge, ink cartridge, canister",
+        "definitions": [
+          "Hülse mit Treibladung und Geschoss für Schusswaffen",
+          "Behälter für Tinte in Füllfederhaltern oder Druckern",
+          "Behälter für Gas oder andere Flüssigkeiten"
+        ],
+        "examples": [
+          "Die Patrone ist leer.",
+          "Eine Patrone für den Drucker.",
+          "Er wechselte die Patrone."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "paˈtʁoːnə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Patronen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "ink cartridge": {
+    "source": "ink cartridge",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Patrone",
+        "translation": "cartridge, ink cartridge, canister",
+        "definitions": [
+          "Hülse mit Treibladung und Geschoss für Schusswaffen",
+          "Behälter für Tinte in Füllfederhaltern oder Druckern",
+          "Behälter für Gas oder andere Flüssigkeiten"
+        ],
+        "examples": [
+          "Die Patrone ist leer.",
+          "Eine Patrone für den Drucker.",
+          "Er wechselte die Patrone."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "paˈtʁoːnə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Patronen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "debenture": {
     "source": "debenture",
     "sourceLanguage": "de",
@@ -501104,6 +503184,72 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Nebenwirkungen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to be fed up with something": {
+    "source": "to be fed up with something",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Nase voll haben",
+        "translation": "to be fed up with something, to be sick of something, to have had enough of something",
+        "definitions": [
+          "Es satt haben",
+          "Genug haben",
+          "Einer Sache überdrüssig sein"
+        ],
+        "examples": [
+          "Ich habe die Nase voll von deinen Ausreden.",
+          "Wir haben die Nase voll von dem schlechten Wetter.",
+          "Sie hat die Nase voll von der ständigen Kritik."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "diː naːzə fɔl haːbn̩",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to be sick of something": {
+    "source": "to be sick of something",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Nase voll haben",
+        "translation": "to be fed up with something, to be sick of something, to have had enough of something",
+        "definitions": [
+          "Es satt haben",
+          "Genug haben",
+          "Einer Sache überdrüssig sein"
+        ],
+        "examples": [
+          "Ich habe die Nase voll von deinen Ausreden.",
+          "Wir haben die Nase voll von dem schlechten Wetter.",
+          "Sie hat die Nase voll von der ständigen Kritik."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "diː naːzə fɔl haːbn̩",
+        "number": "singular"
       }
     ],
     "detectedInputType": "word",
@@ -502226,6 +504372,74 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Kathedralen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "barracks": {
+    "source": "barracks",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Kaserne",
+        "translation": "barracks, garrison",
+        "definitions": [
+          "Gebäude oder Gebäudekomplex zur Unterbringung von Soldaten",
+          "Militärische Unterkunft"
+        ],
+        "examples": [
+          "Die Kaserne wurde neu gebaut.",
+          "Soldaten leben in der Kaserne.",
+          "Brand in der Kaserne."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "diː kaˈzɛrnə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Kasernen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "garrison": {
+    "source": "garrison",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Kaserne",
+        "translation": "barracks, garrison",
+        "definitions": [
+          "Gebäude oder Gebäudekomplex zur Unterbringung von Soldaten",
+          "Militärische Unterkunft"
+        ],
+        "examples": [
+          "Die Kaserne wurde neu gebaut.",
+          "Soldaten leben in der Kaserne.",
+          "Brand in der Kaserne."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "diː kaˈzɛrnə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Kasernen"
       }
     ],
     "detectedInputType": "word",
@@ -510407,6 +512621,60 @@
     "extraItems": [],
     "explanation": ""
   },
+  "officer": {
+    "source": "officer",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Offizier",
+        "translation": "officer",
+        "definitions": [
+          "Person, die in einer Armee, Marine oder Luftwaffe eine Führungsposition innehat.",
+          "Militärischer Rang über dem Unteroffizier."
+        ],
+        "examples": [
+          "Der Offizier gab Befehle.",
+          "Ein Offizier der Bundeswehr.",
+          "Sie sprach mit dem Offizier."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "dɛɐ ˌɔfɪˈtsiːɐ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Offiziere"
+      },
+      {
+        "source": "beamte",
+        "translation": "appoint, officer",
+        "definitions": [
+          "ernannte jemanden zum Beamten",
+          "verbeamtete jemanden",
+          "stellte jemanden in den öffentlichen Dienst ein"
+        ],
+        "examples": [
+          "Der Bürgermeister beamtete den neuen Mitarbeiter.",
+          "Man beamtete sie nach erfolgreicher Probezeit.",
+          "Er wurde gestern beamtet."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "bəˈamtə",
+        "number": "singular",
+        "pastTenses": "verbeamtete, hat verbeamtet",
+        "presentTenses": "ich verbeamte, du verbeamtest, er/sie/es verbeamtet",
+        "tense": "past"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "northern part": {
     "source": "northern part",
     "sourceLanguage": "de",
@@ -513943,6 +516211,72 @@
     "extraItems": [],
     "explanation": ""
   },
+  "bury one's head in the sand": {
+    "source": "bury one's head in the sand",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "den Kopf in den Sand stecken",
+        "translation": "bury one's head in the sand, stick one's head in the sand, be an ostrich",
+        "definitions": [
+          "Problemen ausweichen oder sie ignorieren",
+          "sich weigern, eine unangenehme Realität anzuerkennen",
+          "eine Vogel-Strauß-Politik betreiben"
+        ],
+        "examples": [
+          "Anstatt den Kopf in den Sand zu stecken, sollten wir eine Lösung finden.",
+          "Es bringt nichts, den Kopf in den Sand zu stecken und zu hoffen, dass das Problem von alleine verschwindet.",
+          "Wer den Kopf in den Sand steckt, wird die Gefahr nicht kommen sehen."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "stick one's head in the sand": {
+    "source": "stick one's head in the sand",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "den Kopf in den Sand stecken",
+        "translation": "bury one's head in the sand, stick one's head in the sand, be an ostrich",
+        "definitions": [
+          "Problemen ausweichen oder sie ignorieren",
+          "sich weigern, eine unangenehme Realität anzuerkennen",
+          "eine Vogel-Strauß-Politik betreiben"
+        ],
+        "examples": [
+          "Anstatt den Kopf in den Sand zu stecken, sollten wir eine Lösung finden.",
+          "Es bringt nichts, den Kopf in den Sand zu stecken und zu hoffen, dass das Problem von alleine verschwindet.",
+          "Wer den Kopf in den Sand steckt, wird die Gefahr nicht kommen sehen."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "to engage a gear": {
     "source": "to engage a gear",
     "sourceLanguage": "de",
@@ -515973,39 +518307,6 @@
   },
   "to get the jitters": {
     "source": "to get the jitters",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "das Zittern bekommen",
-        "translation": "to get the jitters, to get cold feet, to get the shakes",
-        "definitions": [
-          "Angst oder Furcht empfinden",
-          "nervös oder ängstlich werden",
-          "in einen Zustand der Besorgnis geraten"
-        ],
-        "examples": [
-          "Als er die Nachricht hörte, bekam er das Zittern.",
-          "Vor der Prüfung bekam sie das Zittern.",
-          "Bei dem Gedanken an die Aufgabe bekam er das Zittern."
-        ],
-        "partOfSpeech": "idiom",
-        "ipa": "das ˈtsɪtɐn bəˈkɔmən",
-        "number": "singular"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "to get cold feet": {
-    "source": "to get cold feet",
     "sourceLanguage": "de",
     "targetLanguage": "en",
     "isDirect": false,
@@ -532391,6 +534692,25 @@
         "pastTenses": "rief auf, hat aufgerufen",
         "presentTenses": "ich rufe auf, du rufst auf, er/sie/es ruft auf",
         "tense": "present"
+      },
+      {
+        "source": "betiteln",
+        "translation": "to title, to call",
+        "definitions": [
+          "Einen Titel oder eine Überschrift geben",
+          "Benennen, bezeichnen"
+        ],
+        "examples": [
+          "Er betitelt sein neues Buch.",
+          "Wie soll ich diesen Artikel betiteln?",
+          "Sie betitelte ihn als Genie."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "bəˈtiːtəln",
+        "number": "singular",
+        "pastTenses": "betitelte, hat betitelt",
+        "presentTenses": "ich betitle, du betitelst, er/sie/es betitelt",
+        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -536206,6 +538526,89 @@
     "extraItems": [],
     "explanation": ""
   },
+  "titled": {
+    "source": "titled",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "betitelt",
+        "translation": "titled, named, designated",
+        "definitions": ["mit einem Titel versehen", "benannt", "bezeichnet"],
+        "examples": [
+          "Das betitelte Buch liegt auf dem Tisch.",
+          "Die betitelte Arbeit wurde eingereicht.",
+          "Ein betiteltes Dokument wurde gefunden."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "bəˈtiːtəlt",
+        "number": "singular"
+      },
+      {
+        "source": "betiteln",
+        "translation": "to title, to call",
+        "definitions": [
+          "Einen Titel oder eine Überschrift geben",
+          "Benennen, bezeichnen"
+        ],
+        "examples": [
+          "Er betitelt sein neues Buch.",
+          "Wie soll ich diesen Artikel betiteln?",
+          "Sie betitelte ihn als Genie."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "bəˈtiːtəln",
+        "number": "singular",
+        "pastTenses": "betitelte, hat betitelt",
+        "presentTenses": "ich betitle, du betitelst, er/sie/es betitelt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to title": {
+    "source": "to title",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "betiteln",
+        "translation": "to title, to call",
+        "definitions": [
+          "Einen Titel oder eine Überschrift geben",
+          "Benennen, bezeichnen"
+        ],
+        "examples": [
+          "Er betitelt sein neues Buch.",
+          "Wie soll ich diesen Artikel betiteln?",
+          "Sie betitelte ihn als Genie."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "bəˈtiːtəln",
+        "number": "singular",
+        "pastTenses": "betitelte, hat betitelt",
+        "presentTenses": "ich betitle, du betitelst, er/sie/es betitelt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "pray": {
     "source": "pray",
     "sourceLanguage": "de",
@@ -536456,42 +538859,6 @@
         "examples": ["an einem Projekt beteiligt", "beteiligte Personen"],
         "partOfSpeech": "adjective",
         "ipa": "bəˈtaɪ̯lɪçt"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "involve": {
-    "source": "involve",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "beteiligen",
-        "translation": "participate, involve, take part",
-        "definitions": [
-          "jemanden an etwas teilhaben lassen",
-          "sich an etwas beteiligen: an etwas teilnehmen, mitwirken",
-          "jemanden finanziell an etwas beteiligen: Anteile geben"
-        ],
-        "examples": [
-          "Wir beteiligen uns an dem Projekt.",
-          "Er beteiligte sich rege an der Diskussion.",
-          "Die Firma beteiligte ihre Mitarbeiter am Gewinn."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "bəˈtaɪ̯lɪɡn̩",
-        "number": "plural",
-        "pastTenses": "beteiligte, hat beteiligt",
-        "presentTenses": "ich beteilige, du beteiligst, er/sie/es beteiligt",
-        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -552826,42 +555193,6 @@
     "extraItems": [],
     "explanation": ""
   },
-  "officer": {
-    "source": "officer",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "beamte",
-        "translation": "appoint, officer",
-        "definitions": [
-          "ernannte jemanden zum Beamten",
-          "verbeamtete jemanden",
-          "stellte jemanden in den öffentlichen Dienst ein"
-        ],
-        "examples": [
-          "Der Bürgermeister beamtete den neuen Mitarbeiter.",
-          "Man beamtete sie nach erfolgreicher Probezeit.",
-          "Er wurde gestern beamtet."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "bəˈamtə",
-        "number": "singular",
-        "pastTenses": "verbeamtete, hat verbeamtet",
-        "presentTenses": "ich verbeamte, du verbeamtest, er/sie/es verbeamtet",
-        "tense": "past"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
   "beamer": {
     "source": "beamer",
     "sourceLanguage": "de",
@@ -554664,6 +556995,36 @@
         ],
         "partOfSpeech": "adjective",
         "ipa": "ˈaʊ̯sɐɡəˌvøːnlɪç",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "except when": {
+    "source": "except when",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "außer wenn",
+        "translation": "unless, except when",
+        "definitions": [
+          "leitet einen Nebensatz ein, der eine Ausnahme von der im Hauptsatz genannten Bedingung oder Situation beschreibt"
+        ],
+        "examples": [
+          "Ich komme vorbei, außer wenn es regnet.",
+          "Wir gehen spazieren, außer wenn es zu spät wird."
+        ],
+        "partOfSpeech": "conjunction",
+        "ipa": "ˈaʊ̯sɐ vɛn",
         "number": "singular"
       }
     ],
@@ -561696,6 +564057,24 @@
         "g": "masculine",
         "number": "singular",
         "pluralForm": "die Ausflüge"
+      },
+      {
+        "source": "der Abstecher",
+        "translation": "side trip, detour",
+        "definitions": [
+          "Ein kurzer Umweg von einer geplanten Route zu einem nahegelegenen Ziel.",
+          "Ein vorübergehender Wechsel zu einem anderen Thema oder einer anderen Tätigkeit."
+        ],
+        "examples": [
+          "Ein Abstecher zum See.",
+          "Wir machten einen Abstecher nach Paris.",
+          "Ein kurzer Abstecher in die Geschichte."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈapˌʃtɛçɐ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Abstecher"
       }
     ],
     "detectedInputType": "word",
@@ -562865,6 +565244,68 @@
         "pastTenses": "war aus, ist aus gewesen",
         "presentTenses": "ich bin aus, du bist aus, er/sie/es ist aus",
         "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to jump out of one's skin": {
+    "source": "to jump out of one's skin",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "aus der Haut fahren",
+        "translation": "to jump out of one's skin, to fly off the handle",
+        "definitions": [
+          "Sich sehr aufregen oder wütend werden",
+          "Die Beherrschung verlieren"
+        ],
+        "examples": [
+          "Er ist fast aus der Haut gefahren, als er die Nachricht hörte.",
+          "Bei so viel Ungerechtigkeit könnte ich aus der Haut fahren."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "aʊ̯s deːɐ̯ haʊ̯t faːʁən",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to fly off the handle": {
+    "source": "to fly off the handle",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "aus der Haut fahren",
+        "translation": "to jump out of one's skin, to fly off the handle",
+        "definitions": [
+          "Sich sehr aufregen oder wütend werden",
+          "Die Beherrschung verlieren"
+        ],
+        "examples": [
+          "Er ist fast aus der Haut gefahren, als er die Nachricht hörte.",
+          "Bei so viel Ungerechtigkeit könnte ich aus der Haut fahren."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "aʊ̯s deːɐ̯ haʊ̯t faːʁən",
+        "number": "singular"
       }
     ],
     "detectedInputType": "word",
@@ -576659,6 +579100,72 @@
     "extraItems": [],
     "explanation": ""
   },
+  "to be devastated": {
+    "source": "to be devastated",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "am Boden zerstört sein",
+        "translation": "to be devastated, to be heartbroken, to be shattered",
+        "definitions": [
+          "Völlig verzweifelt oder untröstlich sein.",
+          "Extrem traurig oder niedergeschlagen sein.",
+          "Sich in einem Zustand großer emotionaler Zerstörung befinden."
+        ],
+        "examples": [
+          "Nach der Nachricht war sie am Boden zerstört.",
+          "Er war am Boden zerstört, als er die Prüfung nicht bestand.",
+          "Sie waren am Boden zerstört, als ihr Haus abbrannte."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to be heartbroken": {
+    "source": "to be heartbroken",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "am Boden zerstört sein",
+        "translation": "to be devastated, to be heartbroken, to be shattered",
+        "definitions": [
+          "Völlig verzweifelt oder untröstlich sein.",
+          "Extrem traurig oder niedergeschlagen sein.",
+          "Sich in einem Zustand großer emotionaler Zerstörung befinden."
+        ],
+        "examples": [
+          "Nach der Nachricht war sie am Boden zerstört.",
+          "Er war am Boden zerstört, als er die Prüfung nicht bestand.",
+          "Sie waren am Boden zerstört, als ihr Haus abbrannte."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "at the beginning": {
     "source": "at the beginning",
     "sourceLanguage": "de",
@@ -581814,6 +584321,40 @@
         "pastTenses": "hat abgestellt, stellte ab",
         "presentTenses": "ich stelle ab, du stellst ab, er/sie/es stellt ab",
         "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "side trip": {
+    "source": "side trip",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Abstecher",
+        "translation": "side trip, detour",
+        "definitions": [
+          "Ein kurzer Umweg von einer geplanten Route zu einem nahegelegenen Ziel.",
+          "Ein vorübergehender Wechsel zu einem anderen Thema oder einer anderen Tätigkeit."
+        ],
+        "examples": [
+          "Ein Abstecher zum See.",
+          "Wir machten einen Abstecher nach Paris.",
+          "Ein kurzer Abstecher in die Geschichte."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈapˌʃtɛçɐ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Abstecher"
       }
     ],
     "detectedInputType": "word",
