@@ -1,5 +1,5 @@
 <style>
-  .search-form {
+  .search-input {
     --border-radius: 3rem;
     --height: 4rem;
 
@@ -110,6 +110,29 @@
       }
     }
   }
+
+  .search-form-hint {
+    margin-top: 0.5rem;
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+    font-size: 80%;
+    text-align: left;
+
+    button {
+      font-size: inherit;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+      color: inherit;
+      font-weight: inherit;
+      text-decoration: underline;
+      text-decoration-style: dashed;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+  }
 </style>
 {{#if sourceLanguage}}
   <script type='text/javascript'>
@@ -117,42 +140,52 @@
   </script>
 {{/if}}
 <form
-  class='search-form'
   id='searchForm'
+  class='search-form'
   action='/search.html'
   role='search'
   aria-label='Translate a word or phrase'
 >
-  <div class='language-selector-wrapper'>
-    <div class='label' aria-hidden='true'></div>
-    <select name='sourceLanguage' aria-label='Source language'>
-      {{#each htmlWebpackPlugin.options.environment.languages}}
-        <option value='{{this.code}}'>{{this.label}}</option>
-      {{/each}}
-    </select>
+  <div class='search-input'>
+    <div class='language-selector-wrapper'>
+      <div class='label' aria-hidden='true'></div>
+      <select name='sourceLanguage' aria-label='Source language'>
+        {{#each htmlWebpackPlugin.options.environment.languages}}
+          <option value='{{this.code}}'>{{this.label}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <i class='bi bi-chevron-compact-right' aria-hidden='true'></i>
+    <div class='language-selector-wrapper delimiter'>
+      <div class='label' aria-hidden='true'></div>
+      <select name='targetLanguage' aria-label='Target language'>
+        {{#each htmlWebpackPlugin.options.environment.languages}}
+          <option value='{{this.code}}'>{{this.label}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <input
+      type='text'
+      class='text-input'
+      name='text'
+      aria-label='Word or phrase to translate'
+      autocomplete='off'
+      autocorrect='off'
+      autocapitalize='none'
+      value='{{query}}'
+    />
+    <input type='hidden' name='isReversed' value='false' />
+    <button type='submit' class='submit-button' aria-label='Search'><i
+        class='bi bi-search'
+        aria-hidden='true'
+      ></i></button>
   </div>
-  <i class='bi bi-chevron-compact-right' aria-hidden='true'></i>
-  <div class='language-selector-wrapper delimiter'>
-    <div class='label' aria-hidden='true'></div>
-    <select name='targetLanguage' aria-label='Target language'>
-      {{#each htmlWebpackPlugin.options.environment.languages}}
-        <option value='{{this.code}}'>{{this.label}}</option>
-      {{/each}}
-    </select>
+  <div class='search-form-hint invisible' data-nosnippet>
+    For example,
+    <button type='button' data-search-source-example>apple</button><span
+      data-search-relevant-target
+    >
+      or
+      <button type='button' data-search-target-example>banana</button></span>.
   </div>
-  <input
-    type='text'
-    class='text-input'
-    name='text'
-    aria-label='Word or phrase to translate'
-    autocomplete='off'
-    autocorrect='off'
-    autocapitalize='none'
-    value='{{query}}'
-  />
-  <input type='hidden' name='isReversed' value='false' />
-  <button type='submit' class='submit-button' aria-label='Search'><i
-      class='bi bi-search'
-      aria-hidden='true'
-    ></i></button>
 </form>

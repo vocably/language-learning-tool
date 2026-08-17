@@ -7,6 +7,7 @@ import { track } from './analytics';
 import './bootstrap.scss';
 import './styles.scss';
 import { searchConfig } from './constants';
+import { words } from './search/words';
 
 const browser = Bowser.getParser(window.navigator.userAgent);
 const isAndroid = browser.is('android');
@@ -191,56 +192,109 @@ const getTargetLanguage = () => {
   return 'en';
 };
 
-document.querySelectorAll('#searchForm').forEach((searchForm) => {
-  const sourceLanguageSelect = searchForm.querySelector(
-    '[name=sourceLanguage]'
-  ) as HTMLSelectElement;
-  const targetLanguageSelect = searchForm.querySelector(
-    '[name=targetLanguage]'
-  ) as HTMLSelectElement;
+document
+  .querySelectorAll('#searchForm')
+  .forEach((searchForm: HTMLFormElement) => {
+    const sourceLanguageSelect = searchForm.querySelector(
+      '[name=sourceLanguage]'
+    ) as HTMLSelectElement;
+    const targetLanguageSelect = searchForm.querySelector(
+      '[name=targetLanguage]'
+    ) as HTMLSelectElement;
 
-  sourceLanguageSelect.value = getSourceLanguage();
-  let targetLanguage = getTargetLanguage();
-  if (targetLanguage === 'en-GB' && sourceLanguageSelect.value === 'en') {
-    targetLanguage = 'en';
-  }
-  targetLanguageSelect.value = targetLanguage;
-  const textInput = searchForm.querySelector('[name=text]') as HTMLInputElement;
-
-  const updatePlaceholder = () => {
-    if (window.innerWidth < 600) {
-      textInput.placeholder = 'Search...';
-      return;
+    sourceLanguageSelect.value = getSourceLanguage();
+    let targetLanguage = getTargetLanguage();
+    if (targetLanguage === 'en-GB' && sourceLanguageSelect.value === 'en') {
+      targetLanguage = 'en';
     }
+    targetLanguageSelect.value = targetLanguage;
+    const textInput = searchForm.querySelector(
+      '[name=text]'
+    ) as HTMLInputElement;
 
-    if (sourceLanguageSelect.value === targetLanguageSelect.value) {
-      textInput.placeholder = 'Search for any word...';
-      return;
-    }
+    const updatePlaceholder = () => {
+      if (window.innerWidth < 600) {
+        textInput.placeholder = 'Search...';
+        return;
+      }
 
-    textInput.placeholder = 'Search for any word or phrase...';
-  };
+      if (sourceLanguageSelect.value === targetLanguageSelect.value) {
+        textInput.placeholder = 'Search for any word...';
+        return;
+      }
 
-  updatePlaceholder();
+      textInput.placeholder = 'Search for any word or phrase...';
+    };
 
-  searchForm
-    .querySelectorAll('.language-selector-wrapper')
-    .forEach((languageSelectorWrapper) => {
-      const label = languageSelectorWrapper.querySelector('.label');
-      const select = languageSelectorWrapper.querySelector('select');
+    updatePlaceholder();
 
-      const setLabel = () => {
-        label.innerHTML = select.value.slice(0, 2);
-      };
+    searchForm
+      .querySelectorAll('.language-selector-wrapper')
+      .forEach((languageSelectorWrapper) => {
+        const label = languageSelectorWrapper.querySelector('.label');
+        const select = languageSelectorWrapper.querySelector('select');
 
-      select.addEventListener('change', () => {
+        const setLabel = () => {
+          label.innerHTML = select.value.slice(0, 2);
+        };
+
+        select.addEventListener('change', () => {
+          setLabel();
+          updatePlaceholder();
+        });
+
         setLabel();
-        updatePlaceholder();
       });
 
-      setLabel();
-    });
-});
+    const exampleContainer = searchForm.querySelector('.search-form-hint');
+    const sourceExampleButton = searchForm.querySelector(
+      '[data-search-source-example]'
+    ) as HTMLButtonElement;
+    const translationExampleContainer = searchForm.querySelector(
+      `[data-search-relevant-target]`
+    );
+    const targetExampleButton = searchForm.querySelector(
+      '[data-search-target-example]'
+    ) as HTMLButtonElement;
+
+    const onLanguageChange = () => {
+      if (
+        !isGoogleLanguage(sourceLanguageSelect.value) ||
+        !isGoogleLanguage(targetLanguageSelect.value)
+      ) {
+        return;
+      }
+      const isRelevantTranslationLanguage =
+        sourceLanguageSelect.value !== targetLanguageSelect.value;
+      sourceExampleButton.innerHTML = words[sourceLanguageSelect.value];
+      targetExampleButton.innerHTML = words[targetLanguageSelect.value];
+      if (!isRelevantTranslationLanguage) {
+        translationExampleContainer.classList.add('d-none');
+        targetExampleButton.disabled = true;
+      } else {
+        translationExampleContainer.classList.remove('d-none');
+        targetExampleButton.disabled = false;
+      }
+      exampleContainer.classList.remove('invisible');
+    };
+
+    onLanguageChange();
+    sourceLanguageSelect.addEventListener('change', onLanguageChange);
+    targetLanguageSelect.addEventListener('change', onLanguageChange);
+
+    const onExampleClick = (e: Event) => {
+      const word = e.target['innerHTML'];
+      if (!word) {
+        return;
+      }
+
+      textInput.value = word;
+      searchForm.submit();
+    };
+
+    sourceExampleButton.addEventListener('click', onExampleClick);
+    targetExampleButton.addEventListener('click', onExampleClick);
+  });
 
 initializePaddle({
   token: window['paddleClientSideToken'],
