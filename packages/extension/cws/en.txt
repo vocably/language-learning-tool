@@ -2,6 +2,8 @@ Language: English
 
 Translate new words while reading websites and watching YouTube videos. Vocably automatically turns your translations into flashcards and lets you learn them in the mobile or web app.
 
+The dictionary supports 109 languages, including 🇬🇧 English, 🇪🇸 Spanish, 🇩🇪 German, 🇫🇷 French, 🇮🇹 Italian, and more.
+
 You'll stop forgetting the words you've looked up and expand your vocabulary all the way to fluency.
 
 Vocably is the intelligent language assistant designed for real-world browsing. Instantly translate text on any website or YouTube video and save it to your personal collection for long-term retention.

@@ -2,6 +2,8 @@ Language: Portuguese (Brazil)
 
 Traduza palavras desconhecidas enquanto navega em sites e assiste a vídeos no YouTube. O Vocably transforma automaticamente suas traduções em cartões de estudo e permite que você as aprenda no aplicativo móvel ou web.
 
+O dicionário oferece suporte a 109 idiomas, incluindo 🇬🇧 inglês, 🇪🇸 espanhol, 🇩🇪 alemão, 🇫🇷 francês, 🇮🇹 italiano e muitos outros.
+
 Você vai parar de esquecer as palavras que traduziu e vai expandir seu vocabulário até a fluência.
 
 O Vocably é o assistente de idiomas inteligente criado para a navegação no mundo real. Traduza instantaneamente textos em qualquer site ou vídeo do YouTube e salve-os em sua coleção pessoal para retenção a longo prazo.

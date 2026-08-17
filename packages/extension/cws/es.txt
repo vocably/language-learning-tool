@@ -2,6 +2,8 @@ Language: Spanish
 
 Traduce palabras desconocidas mientras navegas por sitios web y ves videos de YouTube. Vocably convierte automáticamente tus traducciones en tarjetas de estudio y te permite aprenderlas en la aplicación móvil o web.
 
+El diccionario admite 109 idiomas, entre ellos 🇬🇧 inglés, 🇵🇹 portugués, 🇩🇪 alemán, 🇫🇷 francés, 🇮🇹 italiano y muchos más.
+
 Dejarás de olvidar las palabras que buscaste y ampliarás tu vocabulario hasta alcanzar la fluidez.
 
 Vocably es el asistente de idiomas inteligente diseñado para la navegación en el mundo real. Traduce texto al instante en cualquier sitio web o video de YouTube y guárdalo en tu colección personal para una retención a largo plazo.

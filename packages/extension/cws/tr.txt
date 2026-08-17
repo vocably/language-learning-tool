@@ -2,6 +2,8 @@ Language: Turkish
 
 Web sitelerini okurken ve YouTube videoları izlerken yabancı kelimeleri çevirin. Vocably, çevirilerinizi otomatik olarak çalışma kartlarına dönüştürür ve bunları mobil veya web uygulamasında öğrenmenize olanak tanır.
 
+Sözlük; 🇬🇧 İngilizce, 🇪🇸 İspanyolca, 🇩🇪 Almanca, 🇫🇷 Fransızca, 🇮🇹 İtalyanca ve daha birçok dil dahil olmak üzere 109 dili destekler.
+
 Baktığınız kelimeleri unutmayı bırakacaksınız ve kelime dağarcığınızı akıcılık düzeyine kadar geliştireceksiniz.
 
 Vocably, gerçek dünya tarama deneyimi için tasarlanmış akıllı bir dil asistanıdır. Herhangi bir web sitesinde veya YouTube videosunda anında metin çevirin ve uzun vadeli hafıza için kişisel koleksiyonunuza kaydedin.

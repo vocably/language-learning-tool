@@ -2,6 +2,8 @@ Language: Vietnamese
 
 Dịch những từ lạ ngay khi đọc trang web và xem video YouTube. Vocably tự động biến các bản dịch của bạn thành những thẻ học và cho phép bạn học chúng trong ứng dụng di động hoặc web.
 
+Từ điển hỗ trợ 109 ngôn ngữ, bao gồm 🇬🇧 tiếng Anh, 🇪🇸 tiếng Tây Ban Nha, 🇩🇪 tiếng Đức, 🇫🇷 tiếng Pháp, 🇮🇹 tiếng Ý và nhiều ngôn ngữ khác.
+
 Bạn sẽ không còn quên những từ đã tra cứu và mở rộng vốn từ vựng đến mức thành thạo.
 
 Vocably là trợ lý ngôn ngữ thông minh được thiết kế cho việc duyệt web thực tế. Dịch ngay lập tức văn bản trên bất kỳ trang web hoặc video YouTube nào và lưu vào bộ sưu tập cá nhân để ghi nhớ lâu dài.
