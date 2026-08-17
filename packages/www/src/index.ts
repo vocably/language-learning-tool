@@ -246,54 +246,63 @@ document
         setLabel();
       });
 
-    const exampleContainer = searchForm.querySelector('.search-form-hint');
-    const sourceExampleButton = searchForm.querySelector(
-      '[data-search-source-example]'
-    ) as HTMLButtonElement;
-    const translationExampleContainer = searchForm.querySelector(
-      `[data-search-relevant-target]`
-    );
-    const targetExampleButton = searchForm.querySelector(
-      '[data-search-target-example]'
-    ) as HTMLButtonElement;
+    const setUpExample = () => {
+      const exampleContainer = searchForm.querySelector('.search-form-hint');
 
-    const onLanguageChange = () => {
-      if (
-        !isGoogleLanguage(sourceLanguageSelect.value) ||
-        !isGoogleLanguage(targetLanguageSelect.value)
-      ) {
-        return;
-      }
-      const isRelevantTranslationLanguage =
-        sourceLanguageSelect.value !== targetLanguageSelect.value;
-      sourceExampleButton.innerHTML = words[sourceLanguageSelect.value];
-      targetExampleButton.innerHTML = words[targetLanguageSelect.value];
-      if (!isRelevantTranslationLanguage) {
-        translationExampleContainer.classList.add('d-none');
-        targetExampleButton.disabled = true;
-      } else {
-        translationExampleContainer.classList.remove('d-none');
-        targetExampleButton.disabled = false;
-      }
-      exampleContainer.classList.remove('invisible');
-    };
-
-    onLanguageChange();
-    sourceLanguageSelect.addEventListener('change', onLanguageChange);
-    targetLanguageSelect.addEventListener('change', onLanguageChange);
-
-    const onExampleClick = (e: Event) => {
-      const word = e.target['innerHTML'];
-      if (!word) {
+      if (!exampleContainer) {
         return;
       }
 
-      textInput.value = word;
-      searchForm.submit();
+      const sourceExampleButton = searchForm.querySelector(
+        '[data-search-source-example]'
+      ) as HTMLButtonElement;
+      const translationExampleContainer = searchForm.querySelector(
+        `[data-search-relevant-target]`
+      );
+      const targetExampleButton = searchForm.querySelector(
+        '[data-search-target-example]'
+      ) as HTMLButtonElement;
+
+      const onLanguageChange = () => {
+        if (
+          !isGoogleLanguage(sourceLanguageSelect.value) ||
+          !isGoogleLanguage(targetLanguageSelect.value)
+        ) {
+          return;
+        }
+        const isRelevantTranslationLanguage =
+          sourceLanguageSelect.value !== targetLanguageSelect.value;
+        sourceExampleButton.innerHTML = words[sourceLanguageSelect.value];
+        targetExampleButton.innerHTML = words[targetLanguageSelect.value];
+        if (!isRelevantTranslationLanguage) {
+          translationExampleContainer.classList.add('d-none');
+          targetExampleButton.disabled = true;
+        } else {
+          translationExampleContainer.classList.remove('d-none');
+          targetExampleButton.disabled = false;
+        }
+        exampleContainer.classList.remove('invisible');
+      };
+
+      onLanguageChange();
+      sourceLanguageSelect.addEventListener('change', onLanguageChange);
+      targetLanguageSelect.addEventListener('change', onLanguageChange);
+
+      const onExampleClick = (e: Event) => {
+        const word = e.target['innerHTML'];
+        if (!word) {
+          return;
+        }
+
+        textInput.value = word;
+        searchForm.submit();
+      };
+
+      sourceExampleButton.addEventListener('click', onExampleClick);
+      targetExampleButton.addEventListener('click', onExampleClick);
     };
 
-    sourceExampleButton.addEventListener('click', onExampleClick);
-    targetExampleButton.addEventListener('click', onExampleClick);
+    setUpExample();
   });
 
 initializePaddle({

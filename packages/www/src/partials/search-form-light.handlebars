@@ -180,12 +180,14 @@
         aria-hidden='true'
       ></i></button>
   </div>
-  <div class='search-form-hint invisible' data-nosnippet>
-    For example,
-    <button type='button' data-search-source-example>apple</button><span
-      data-search-relevant-target
-    >
-      or
-      <button type='button' data-search-target-example>banana</button></span>.
-  </div>
+  {{#unless query}}
+    <div class='search-form-hint invisible' data-nosnippet>
+      For example,
+      <button type='button' data-search-source-example>apple</button><span
+        data-search-relevant-target
+      >
+        or
+        <button type='button' data-search-target-example>banana</button></span>.
+    </div>
+  {{/unless}}
 </form>
