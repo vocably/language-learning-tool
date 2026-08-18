@@ -148,7 +148,7 @@
 >
   <div class='search-input'>
     <div class='language-selector-wrapper'>
-      <div class='label' aria-hidden='true'></div>
+      <div class='label' aria-hidden='true' translate='no'></div>
       <select name='sourceLanguage' aria-label='Source language'>
         {{#each htmlWebpackPlugin.options.environment.languages}}
           <option value='{{this.code}}'>{{this.label}}</option>
@@ -157,7 +157,7 @@
     </div>
     <i class='bi bi-chevron-compact-right' aria-hidden='true'></i>
     <div class='language-selector-wrapper delimiter'>
-      <div class='label' aria-hidden='true'></div>
+      <div class='label' aria-hidden='true' translate='no'></div>
       <select name='targetLanguage' aria-label='Target language'>
         {{#each htmlWebpackPlugin.options.environment.languages}}
           <option value='{{this.code}}'>{{this.label}}</option>
@@ -183,11 +183,17 @@
   {{#unless query}}
     <div class='search-form-hint invisible' data-nosnippet>
       For example,
-      <button type='button' data-search-source-example>apple</button><span
-        data-search-relevant-target
-      >
+      <button
+        type='button'
+        data-search-source-example
+        translate='no'
+      >apple</button><span data-search-relevant-target>
         or
-        <button type='button' data-search-target-example>banana</button></span>.
+        <button
+          type='button'
+          data-search-target-example
+          translate='no'
+        >banana</button></span>.
     </div>
   {{/unless}}
 </form>

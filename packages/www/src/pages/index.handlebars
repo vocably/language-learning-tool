@@ -895,12 +895,12 @@
   <section class="vocab-wall-section" data-nosnippet>
     <div class="container-xl py-5">
       <h2 class="h3 mb-1 text-lg-center">Language use is the only path to fluency.</h2>
-      <p class="lead text-lg-center">Vocably is loved by those who get it.</p>
+      <p class="lead text-lg-center">Vocably is loved by those who get this.</p>
 
-      <div class="wall-wrapper" id="wallWrapper">
+      <div class="wall-wrapper" id="wallWrapper" >
         <div class="wall-grid">
           {{#each htmlWebpackPlugin.options.environment.reviews}}
-            <div class="review-card {{#if (is-greater @index 10)}}d-none d-md-block{{/if}}">
+            <div class="review-card {{#if (is-greater @index 10)}}d-none d-md-block{{/if}}" translate="no">
               <div class="review-header">
                 <a href="{{this.url}}" class="name" target="_blank">{{this.name}}</a>
                 <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
