@@ -28237,6 +28237,144 @@
     "extraItems": [],
     "explanation": ""
   },
+  "impositions": {
+    "source": "impositions",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Zumutungen",
+        "translation": "impositions, unreasonable demands",
+        "definitions": [
+          "Dinge, die jemandem zugemutet werden und die als Belastung oder Unannehmlichkeit empfunden werden.",
+          "Anforderungen oder Erwartungen, die als übertrieben oder unbillig angesehen werden."
+        ],
+        "examples": [
+          "Die ständigen Zumutungen der Arbeit.",
+          "Er wehrte sich gegen die Zumutungen.",
+          "Politische Zumutungen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈtsuːmuːtʊŋən",
+        "g": "feminine",
+        "number": "plural",
+        "pluralForm": "die Zumutungen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "unreasonable demands": {
+    "source": "unreasonable demands",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Zumutungen",
+        "translation": "impositions, unreasonable demands",
+        "definitions": [
+          "Dinge, die jemandem zugemutet werden und die als Belastung oder Unannehmlichkeit empfunden werden.",
+          "Anforderungen oder Erwartungen, die als übertrieben oder unbillig angesehen werden."
+        ],
+        "examples": [
+          "Die ständigen Zumutungen der Arbeit.",
+          "Er wehrte sich gegen die Zumutungen.",
+          "Politische Zumutungen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈtsuːmuːtʊŋən",
+        "g": "feminine",
+        "number": "plural",
+        "pluralForm": "die Zumutungen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "expect of": {
+    "source": "expect of",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "zumuten",
+        "translation": "expect of, ask of",
+        "definitions": [
+          "Von jemandem etwas verlangen, was für ihn eine Belastung darstellt oder schwierig zu bewältigen ist.",
+          "Jemandem etwas zutrauen, was möglicherweise über seine Fähigkeiten hinausgeht."
+        ],
+        "examples": [
+          "Das kann man ihm nicht zumuten.",
+          "Sie mutet sich zu viel zu.",
+          "Ich möchte dir das nicht zumuten."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈtsuːˌmuːtn̩",
+        "number": "singular",
+        "pastTenses": "zugemutet haben, zugemutet sein",
+        "presentTenses": "ich mute zu, du mutest zu, er/sie/es mutet zu",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "ask of": {
+    "source": "ask of",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "zumuten",
+        "translation": "expect of, ask of",
+        "definitions": [
+          "Von jemandem etwas verlangen, was für ihn eine Belastung darstellt oder schwierig zu bewältigen ist.",
+          "Jemandem etwas zutrauen, was möglicherweise über seine Fähigkeiten hinausgeht."
+        ],
+        "examples": [
+          "Das kann man ihm nicht zumuten.",
+          "Sie mutet sich zu viel zu.",
+          "Ich möchte dir das nicht zumuten."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈtsuːˌmuːtn̩",
+        "number": "singular",
+        "pastTenses": "zugemutet haben, zugemutet sein",
+        "presentTenses": "ich mute zu, du mutest zu, er/sie/es mutet zu",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "inclined": {
     "source": "inclined",
     "sourceLanguage": "de",
@@ -35626,6 +35764,261 @@
         "partOfSpeech": "idiom",
         "ipa": "tsuː tuːn haːbn mɪt",
         "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to take": {
+    "source": "to take",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "zu sich nehmen",
+        "translation": "to take, to consume",
+        "definitions": [
+          "Essen oder Trinken konsumieren",
+          "etwas in den Körper aufnehmen (z.B. Medikamente)"
+        ],
+        "examples": [
+          "Er muss regelmäßig Medikamente zu sich nehmen.",
+          "Bitte nehmen Sie ausreichend Flüssigkeit zu sich.",
+          "Sie nahm eine leichte Mahlzeit zu sich."
+        ],
+        "partOfSpeech": "phrasal verb",
+        "ipa": "tsuː zɪç ˈneːmən",
+        "number": "singular",
+        "pastTenses": "nahm zu sich, hat zu sich genommen",
+        "presentTenses": "ich nehme zu sich, du nimmst zu sich, er/sie/es nimmt zu sich",
+        "tense": "present"
+      },
+      {
+        "source": "greifen",
+        "translation": "to grab, to take, to seize, to reach",
+        "definitions": [
+          "etwas mit der Hand nehmen oder festhalten",
+          "nach etwas fassen",
+          "eine Wirkung haben, wirksam sein",
+          "sich auf etwas beziehen"
+        ],
+        "examples": [
+          "Er greift nach dem Ball.",
+          "Der Mechanismus greift nicht.",
+          "Das Gesetz greift in diesem Fall.",
+          "Sie greift zum Telefon."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈɡʁaɪ̯fn̩",
+        "pastTenses": "griff, hat gegriffen",
+        "presentTenses": "ich greife, du greifst, er/sie/es greift",
+        "tense": "present"
+      },
+      {
+        "source": "dauern",
+        "translation": "to last, to take, to continue",
+        "definitions": [
+          "zeitlich andauern",
+          "eine bestimmte Zeit in Anspruch nehmen",
+          "fortbestehen"
+        ],
+        "examples": [
+          "Wie lange wird es dauern?",
+          "Der Film dauert zwei Stunden.",
+          "Es dauert ewig.",
+          "Die Reparatur kann dauern."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈdaʊɐn",
+        "number": "singular",
+        "pastTenses": "dauerte, hat gedauert",
+        "presentTenses": "ich dauere, du dauerst, er/sie/es dauert",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to consume": {
+    "source": "to consume",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "verbrauchen",
+        "translation": "to consume, to use up, to expend",
+        "definitions": [
+          "etwas vollständig aufbrauchen oder konsumieren",
+          "etwas durch Gebrauch oder Nutzung reduzieren oder erschöpfen",
+          "Ressourcen oder Energie nutzen, bis sie nicht mehr verfügbar sind"
+        ],
+        "examples": [
+          "Wir verbrauchen zu viel Wasser.",
+          "Das Auto verbraucht viel Benzin.",
+          "Sie verbraucht ihre ganze Energie für die Arbeit."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "fɛɐ̯ˈbʁaʊ̯xn̩",
+        "number": "plural",
+        "pastTenses": "hat verbraucht, verbrauchte",
+        "presentTenses": "ich verbrauche, du verbrauchst, er/sie/es verbraucht",
+        "tense": "present"
+      },
+      {
+        "source": "zu sich nehmen",
+        "translation": "to eat, to consume",
+        "definitions": [
+          "Essen oder Trinken konsumieren",
+          "Nahrung oder Flüssigkeit aufnehmen"
+        ],
+        "examples": [
+          "Er muss regelmäßig Mahlzeiten zu sich nehmen.",
+          "Bitte nehmen Sie die Medikamente wie verordnet zu sich.",
+          "Es ist wichtig, ausreichend Flüssigkeit zu sich zu nehmen."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "tsuː zɪç ˈneːmən",
+        "number": "singular"
+      },
+      {
+        "source": "zu sich nehmen",
+        "translation": "to take, to consume",
+        "definitions": [
+          "Essen oder Trinken konsumieren",
+          "etwas in den Körper aufnehmen (z.B. Medikamente)"
+        ],
+        "examples": [
+          "Er muss regelmäßig Medikamente zu sich nehmen.",
+          "Bitte nehmen Sie ausreichend Flüssigkeit zu sich.",
+          "Sie nahm eine leichte Mahlzeit zu sich."
+        ],
+        "partOfSpeech": "phrasal verb",
+        "ipa": "tsuː zɪç ˈneːmən",
+        "number": "singular",
+        "pastTenses": "nahm zu sich, hat zu sich genommen",
+        "presentTenses": "ich nehme zu sich, du nimmst zu sich, er/sie/es nimmt zu sich",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to eat": {
+    "source": "to eat",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "zu sich nehmen",
+        "translation": "to eat, to consume",
+        "definitions": [
+          "Essen oder Trinken konsumieren",
+          "Nahrung oder Flüssigkeit aufnehmen"
+        ],
+        "examples": [
+          "Er muss regelmäßig Mahlzeiten zu sich nehmen.",
+          "Bitte nehmen Sie die Medikamente wie verordnet zu sich.",
+          "Es ist wichtig, ausreichend Flüssigkeit zu sich zu nehmen."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "tsuː zɪç ˈneːmən",
+        "number": "singular"
+      },
+      {
+        "source": "futtern",
+        "translation": "to eat, to feed",
+        "definitions": [
+          "Essen zu sich nehmen, besonders in großen Mengen oder mit Genuss",
+          "Tiere füttern"
+        ],
+        "examples": [
+          "Die Kinder futtern die Kekse.",
+          "Er futtert den ganzen Tag Schokolade.",
+          "Wir müssen die Hühner futtern."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈfʊtɐn",
+        "number": "plural",
+        "pastTenses": "futterte, hat gefuttert",
+        "presentTenses": "ich futtere, du futterst, er/sie/es futtert",
+        "tense": "present"
+      },
+      {
+        "source": "essen",
+        "translation": "to eat, to have a meal, to consume",
+        "definitions": ["Nahrung zu sich nehmen", "speisen", "verzehren"],
+        "examples": [
+          "Ich esse einen Apfel.",
+          "Wir essen zu Abend.",
+          "Was isst du gern?"
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈɛsn̩",
+        "number": "plural",
+        "pastTenses": "aß, hat gegessen",
+        "presentTenses": "ich esse, du isst, er/sie/es isst",
+        "tense": "present"
+      },
+      {
+        "source": "sich ernähren",
+        "translation": "to feed oneself, to eat",
+        "definitions": [
+          "Nahrung zu sich nehmen",
+          "sich von etwas oder jemandem ernähren",
+          "jemandem Nahrung geben"
+        ],
+        "examples": [
+          "Er ernährt sich vegetarisch.",
+          "Die Familie ernährt sich von dem, was der Garten hergibt.",
+          "Sie ernährt ihre Kinder gut."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "zɪç ɛɐ̯ˈnɛːʁən",
+        "number": "singular",
+        "pastTenses": "ernährte sich, hat sich ernährt",
+        "presentTenses": "ich ernähre mich, du ernährst dich, er/sie/es ernährt sich",
+        "tense": "present"
+      },
+      {
+        "source": "ernähren",
+        "translation": "feed, support, nourish",
+        "definitions": [
+          "jemandem oder einem Tier Nahrung geben",
+          "sich von etwas ernähren",
+          "für den Lebensunterhalt sorgen"
+        ],
+        "examples": [
+          "Die Mutter ernährt ihre Kinder.",
+          "Er ernährt sich vegetarisch.",
+          "Sie muss eine große Familie ernähren."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ɛɐ̯ˈnɛːʁən",
+        "number": "singular",
+        "pastTenses": "ernährte, hat ernährt",
+        "presentTenses": "ich ernähre, du ernährst, er/sie/es ernährt",
+        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -44028,6 +44421,24 @@
         "partOfSpeech": "noun",
         "ipa": "ɛˈseː",
         "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Essays"
+      },
+      {
+        "source": "das Essay",
+        "translation": "essay, paper",
+        "definitions": [
+          "Ein kurzer, wissenschaftlicher oder literarischer Aufsatz, der eine bestimmte Thematik behandelt.",
+          "Eine schriftliche Abhandlung, die persönliche Ansichten oder Überlegungen zu einem Thema darlegt."
+        ],
+        "examples": [
+          "Das Essay wurde in einer Zeitschrift veröffentlicht.",
+          "Sie schrieb ein Essay über die moderne Kunst.",
+          "Für die Prüfung mussten wir ein Essay verfassen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "das ɛˈseː",
+        "g": "neuter",
         "number": "singular",
         "pluralForm": "die Essays"
       },
@@ -63199,6 +63610,72 @@
     "extraItems": [],
     "explanation": ""
   },
+  "like two peas in a pod": {
+    "source": "like two peas in a pod",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "wie Pech und Schwefel",
+        "translation": "like two peas in a pod, thick as thieves, joined at the hip",
+        "definitions": [
+          "Sehr eng befreundet sein",
+          "Unzertrennlich sein",
+          "Immer zusammen sein"
+        ],
+        "examples": [
+          "Die beiden sind wie Pech und Schwefel.",
+          "Seit ihrer Kindheit sind sie wie Pech und Schwefel.",
+          "Man sieht sie selten getrennt, sie sind wie Pech und Schwefel."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "thick as thieves": {
+    "source": "thick as thieves",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "wie Pech und Schwefel",
+        "translation": "like two peas in a pod, thick as thieves, joined at the hip",
+        "definitions": [
+          "Sehr eng befreundet sein",
+          "Unzertrennlich sein",
+          "Immer zusammen sein"
+        ],
+        "examples": [
+          "Die beiden sind wie Pech und Schwefel.",
+          "Seit ihrer Kindheit sind sie wie Pech und Schwefel.",
+          "Man sieht sie selten getrennt, sie sind wie Pech und Schwefel."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "How are you?": {
     "source": "How are you?",
     "sourceLanguage": "de",
@@ -66480,6 +66957,22 @@
         ],
         "partOfSpeech": "adjective",
         "ipa": "ˈveːzntl̩ɪç",
+        "number": "singular"
+      },
+      {
+        "source": "elementar",
+        "translation": "elementary, fundamental",
+        "definitions": [
+          "Die grundlegenden Prinzipien oder Bestandteile betreffend.",
+          "Von grundlegender, wesentlicher Bedeutung; unerlässlich."
+        ],
+        "examples": [
+          "elementare Bedürfnisse",
+          "elementare Kenntnisse",
+          "elementare Teilchen"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "eləmɛnˈtaːɐ̯",
         "number": "singular"
       }
     ],
@@ -78804,6 +79297,74 @@
         "g": "neuter",
         "number": "singular",
         "pluralForm": "die Wechselgelder"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "intermittent fever": {
+    "source": "intermittent fever",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "das Wechselfieber",
+        "translation": "intermittent fever, restlessness",
+        "definitions": [
+          "Eine Krankheit, die durch Fieberanfälle in bestimmten Intervallen gekennzeichnet ist, oft Malaria.",
+          "Umgangssprachlich: Eine starke, oft unbegründete Sehnsucht nach Veränderung oder einem neuen Partner."
+        ],
+        "examples": [
+          "Er litt an Wechselfieber.",
+          "Das Wechselfieber packte sie.",
+          "Viele Menschen kennen das Wechselfieber in Beziehungen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈvɛksl̩ˌfiːbɐ",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Wechselfieber"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "restlessness": {
+    "source": "restlessness",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "das Wechselfieber",
+        "translation": "intermittent fever, restlessness",
+        "definitions": [
+          "Eine Krankheit, die durch Fieberanfälle in bestimmten Intervallen gekennzeichnet ist, oft Malaria.",
+          "Umgangssprachlich: Eine starke, oft unbegründete Sehnsucht nach Veränderung oder einem neuen Partner."
+        ],
+        "examples": [
+          "Er litt an Wechselfieber.",
+          "Das Wechselfieber packte sie.",
+          "Viele Menschen kennen das Wechselfieber in Beziehungen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈvɛksl̩ˌfiːbɐ",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Wechselfieber"
       }
     ],
     "detectedInputType": "word",
@@ -98064,6 +98625,38 @@
         "number": "singular"
       },
       {
+        "source": "Danke schön.",
+        "translation": "Thank you very much, Thank you",
+        "definitions": [
+          "Ausdruck des Dankes",
+          "Höflicher Ausdruck der Anerkennung oder des Dankes"
+        ],
+        "examples": [
+          "Danke schön für die Blumen!",
+          "„Hier ist Ihr Kaffee.“ – „Danke schön.“",
+          "Danke schön, das ist sehr nett von Ihnen."
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ˈdaŋkə ʃøːn",
+        "number": "singular"
+      },
+      {
+        "source": "Danke schön",
+        "translation": "Thank you very much, Thank you",
+        "definitions": [
+          "Ausdruck des Dankes",
+          "Höflicher Ausdruck der Wertschätzung"
+        ],
+        "examples": [
+          "Danke schön für die Hilfe!",
+          "„Hier ist Ihr Kaffee.“ – „Danke schön!“",
+          "Danke schön, das ist sehr nett von Ihnen."
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ˈdaŋkə ʃøːn",
+        "number": "singular"
+      },
+      {
         "source": "Danke schön",
         "translation": "Thank you very much, Thank you",
         "definitions": [
@@ -105243,6 +105836,22 @@
         "partOfSpeech": "adverb",
         "ipa": "fɛɐ̯ˈtʁaʊ̯lɪç",
         "number": "singular"
+      },
+      {
+        "source": "unter vier Augen",
+        "translation": "between ourselves, privately",
+        "definitions": [
+          "Im privaten Gespräch, ohne Zeugen.",
+          "Vertraulich, nur zwischen zwei Personen."
+        ],
+        "examples": [
+          "Ich muss dich mal unter vier Augen sprechen.",
+          "Sie besprachen die Angelegenheit unter vier Augen.",
+          "Das ist etwas, das wir unter vier Augen klären sollten."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "ˈʊntɐ fiːɐ ˈaʊɡn̩",
+        "number": "plural"
       }
     ],
     "detectedInputType": "word",
@@ -116061,6 +116670,24 @@
         "pluralForm": "die Borde"
       },
       {
+        "source": "die Kost",
+        "translation": "food, board",
+        "definitions": [
+          "Nahrung, Speise, Verpflegung",
+          "Lebensunterhalt, den man durch Essen und Trinken bestreitet"
+        ],
+        "examples": [
+          "Die Kost war einfach, aber nahrhaft.",
+          "Er musste für Kost und Logis aufkommen.",
+          "Sie bot ihm freie Kost an."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "diː kɔst",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Kosten"
+      },
+      {
         "source": "die Verpflegung",
         "translation": "catering, board",
         "definitions": [
@@ -121186,6 +121813,100 @@
         "g": "masculine",
         "number": "singular",
         "pluralForm": "die Verlage"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "shorten": {
+    "source": "shorten",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "verkürzen",
+        "translation": "shorten, abbreviate, cut short",
+        "definitions": [
+          "etwas kürzer machen",
+          "die Dauer von etwas reduzieren",
+          "eine Strecke oder Distanz verringern"
+        ],
+        "examples": [
+          "Wir müssen den Rock verkürzen.",
+          "Die Besprechung wurde verkürzt.",
+          "Er wollte den Weg verkürzen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "fɛɐ̯ˈkʏʁt͡sn̩",
+        "number": "plural",
+        "pastTenses": "verkürzte, hat verkürzt",
+        "presentTenses": "ich verkürze, du verkürzt, er/sie/es verkürzt",
+        "tense": "present"
+      },
+      {
+        "source": "kürzen",
+        "translation": "shorten, reduce, cut, trim",
+        "definitions": [
+          "etwas kürzer machen",
+          "reduzieren",
+          "einen Text oder eine Rede verkürzen",
+          "Haare schneiden, um sie kürzer zu machen"
+        ],
+        "examples": [
+          "Wir müssen die Ausgaben kürzen.",
+          "Der Redakteur wird den Artikel kürzen.",
+          "Sie lässt sich die Haare kürzen.",
+          "Die Firma plant, die Arbeitszeiten zu kürzen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈkʏʁt͡sn̩",
+        "number": "plural",
+        "pastTenses": "kürzte, hat gekürzt",
+        "presentTenses": "ich kürze, du kürzt, er/sie/es kürzt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "abbreviate": {
+    "source": "abbreviate",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "verkürzen",
+        "translation": "shorten, abbreviate, cut short",
+        "definitions": [
+          "etwas kürzer machen",
+          "die Dauer von etwas reduzieren",
+          "eine Strecke oder Distanz verringern"
+        ],
+        "examples": [
+          "Wir müssen den Rock verkürzen.",
+          "Die Besprechung wurde verkürzt.",
+          "Er wollte den Weg verkürzen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "fɛɐ̯ˈkʏʁt͡sn̩",
+        "number": "plural",
+        "pastTenses": "verkürzte, hat verkürzt",
+        "presentTenses": "ich verkürze, du verkürzt, er/sie/es verkürzt",
+        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -134097,42 +134818,6 @@
     "extraItems": [],
     "explanation": ""
   },
-  "to consume": {
-    "source": "to consume",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "verbrauchen",
-        "translation": "to consume, to use up, to expend",
-        "definitions": [
-          "etwas vollständig aufbrauchen oder konsumieren",
-          "etwas durch Gebrauch oder Nutzung reduzieren oder erschöpfen",
-          "Ressourcen oder Energie nutzen, bis sie nicht mehr verfügbar sind"
-        ],
-        "examples": [
-          "Wir verbrauchen zu viel Wasser.",
-          "Das Auto verbraucht viel Benzin.",
-          "Sie verbraucht ihre ganze Energie für die Arbeit."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "fɛɐ̯ˈbʁaʊ̯xn̩",
-        "number": "plural",
-        "pastTenses": "hat verbraucht, verbrauchte",
-        "presentTenses": "ich verbrauche, du verbrauchst, er/sie/es verbraucht",
-        "tense": "present"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
   "to use up": {
     "source": "to use up",
     "sourceLanguage": "de",
@@ -145553,6 +146238,38 @@
         "partOfSpeech": "adjective",
         "ipa": "ˈʊntɐbəˌvʊst",
         "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "between ourselves": {
+    "source": "between ourselves",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "unter vier Augen",
+        "translation": "between ourselves, privately",
+        "definitions": [
+          "Im privaten Gespräch, ohne Zeugen.",
+          "Vertraulich, nur zwischen zwei Personen."
+        ],
+        "examples": [
+          "Ich muss dich mal unter vier Augen sprechen.",
+          "Sie besprachen die Angelegenheit unter vier Augen.",
+          "Das ist etwas, das wir unter vier Augen klären sollten."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "ˈʊntɐ fiːɐ ˈaʊɡn̩",
+        "number": "plural"
       }
     ],
     "detectedInputType": "word",
@@ -190082,6 +190799,116 @@
     "extraItems": [],
     "explanation": ""
   },
+  "Right.": {
+    "source": "Right.",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "stimmt",
+        "translation": "Right., That's right., True.",
+        "definitions": [
+          "Ausdruck der Zustimmung oder Bestätigung",
+          "Kurzform für „Das stimmt.“",
+          "Wird verwendet, um zu sagen, dass etwas richtig ist"
+        ],
+        "examples": [
+          "„Wir treffen uns um fünf.“ – „Stimmt.“",
+          "„Das ist eine gute Idee, stimmt?“",
+          "„Stimmt, das habe ich vergessen.“"
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ʃtɪmt",
+        "number": "singular"
+      },
+      {
+        "source": "stimmen",
+        "translation": "to be correct, to be right, to be true, to be in agreement",
+        "definitions": [
+          "richtig sein, der Wahrheit entsprechen",
+          "übereinstimmen, passend sein",
+          "eine Abstimmung durchführen",
+          "ein Musikinstrument auf die richtige Tonhöhe einstellen"
+        ],
+        "examples": [
+          "Das Ergebnis stimmt.",
+          "Deine Aussage stimmt nicht mit den Fakten überein.",
+          "Wir müssen über den Vorschlag stimmen.",
+          "Der Pianist stimmt den Flügel."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʃtɪmən",
+        "number": "plural",
+        "pastTenses": "stimmte, hat gestimmt",
+        "presentTenses": "ich stimme, du stimmst, er/sie/es stimmt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "That's right.": {
+    "source": "That's right.",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "stimmt",
+        "translation": "Right., That's right., True.",
+        "definitions": [
+          "Ausdruck der Zustimmung oder Bestätigung",
+          "Kurzform für „Das stimmt.“",
+          "Wird verwendet, um zu sagen, dass etwas richtig ist"
+        ],
+        "examples": [
+          "„Wir treffen uns um fünf.“ – „Stimmt.“",
+          "„Das ist eine gute Idee, stimmt?“",
+          "„Stimmt, das habe ich vergessen.“"
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ʃtɪmt",
+        "number": "singular"
+      },
+      {
+        "source": "stimmen",
+        "translation": "to be correct, to be right, to be true, to be in agreement",
+        "definitions": [
+          "richtig sein, der Wahrheit entsprechen",
+          "übereinstimmen, passend sein",
+          "eine Abstimmung durchführen",
+          "ein Musikinstrument auf die richtige Tonhöhe einstellen"
+        ],
+        "examples": [
+          "Das Ergebnis stimmt.",
+          "Deine Aussage stimmt nicht mit den Fakten überein.",
+          "Wir müssen über den Vorschlag stimmen.",
+          "Der Pianist stimmt den Flügel."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʃtɪmən",
+        "number": "plural",
+        "pastTenses": "stimmte, hat gestimmt",
+        "presentTenses": "ich stimme, du stimmst, er/sie/es stimmt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "That's right": {
     "source": "That's right",
     "sourceLanguage": "de",
@@ -205678,6 +206505,24 @@
         "pluralForm": "die Futter"
       },
       {
+        "source": "die Kost",
+        "translation": "food, board",
+        "definitions": [
+          "Nahrung, Speise, Verpflegung",
+          "Lebensunterhalt, den man durch Essen und Trinken bestreitet"
+        ],
+        "examples": [
+          "Die Kost war einfach, aber nahrhaft.",
+          "Er musste für Kost und Logis aufkommen.",
+          "Sie bot ihm freie Kost an."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "diː kɔst",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Kosten"
+      },
+      {
         "source": "das Essen",
         "translation": "meal, food, eating",
         "definitions": [
@@ -215711,6 +216556,72 @@
     "extraItems": [],
     "explanation": ""
   },
+  "to take one's time": {
+    "source": "to take one's time",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "sich Zeit nehmen",
+        "translation": "to take one's time, to take time, to take your time",
+        "definitions": [
+          "Genügend Zeit für etwas aufwenden",
+          "Etwas ohne Eile tun",
+          "Sich nicht hetzen lassen"
+        ],
+        "examples": [
+          "Nimm dir Zeit für die wichtigen Dinge im Leben.",
+          "Er hat sich viel Zeit genommen, um das Problem zu lösen.",
+          "Wir sollten uns Zeit nehmen, um die Details zu besprechen."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "zɪç tsaɪt ˈneːmən",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to take time": {
+    "source": "to take time",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "sich Zeit nehmen",
+        "translation": "to take one's time, to take time, to take your time",
+        "definitions": [
+          "Genügend Zeit für etwas aufwenden",
+          "Etwas ohne Eile tun",
+          "Sich nicht hetzen lassen"
+        ],
+        "examples": [
+          "Nimm dir Zeit für die wichtigen Dinge im Leben.",
+          "Er hat sich viel Zeit genommen, um das Problem zu lösen.",
+          "Wir sollten uns Zeit nehmen, um die Details zu besprechen."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "zɪç tsaɪt ˈneːmən",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "to show itself": {
     "source": "to show itself",
     "sourceLanguage": "de",
@@ -215896,6 +216807,70 @@
         "pastTenses": "wunderte sich, hat sich gewundert",
         "presentTenses": "ich wundere mich, du wunderst dich, er/sie/es wundert sich",
         "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to feel like one has been run over by a truck": {
+    "source": "to feel like one has been run over by a truck",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "sich wie gerädert fühlen",
+        "translation": "to feel like one has been run over by a truck, to feel like death warmed over",
+        "definitions": [
+          "Sich extrem müde, erschöpft oder zerschlagen fühlen.",
+          "Sich nach großer Anstrengung oder wenig Schlaf körperlich sehr schlecht fühlen."
+        ],
+        "examples": [
+          "Nach der langen Wanderung fühlte ich mich wie gerädert.",
+          "Er fühlte sich wie gerädert, nachdem er die ganze Nacht durchgearbeitet hatte.",
+          "Am Morgen nach der Party fühlte sie sich wie gerädert."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to feel like death warmed over": {
+    "source": "to feel like death warmed over",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "sich wie gerädert fühlen",
+        "translation": "to feel like one has been run over by a truck, to feel like death warmed over",
+        "definitions": [
+          "Sich extrem müde, erschöpft oder zerschlagen fühlen.",
+          "Sich nach großer Anstrengung oder wenig Schlaf körperlich sehr schlecht fühlen."
+        ],
+        "examples": [
+          "Nach der langen Wanderung fühlte ich mich wie gerädert.",
+          "Er fühlte sich wie gerädert, nachdem er die ganze Nacht durchgearbeitet hatte.",
+          "Am Morgen nach der Party fühlte sie sich wie gerädert."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
       }
     ],
     "detectedInputType": "word",
@@ -219563,97 +220538,6 @@
       "language": "de"
     },
     "items": [
-      {
-        "source": "sich ernähren",
-        "translation": "to feed oneself, to eat",
-        "definitions": [
-          "Nahrung zu sich nehmen",
-          "sich von etwas oder jemandem ernähren",
-          "jemandem Nahrung geben"
-        ],
-        "examples": [
-          "Er ernährt sich vegetarisch.",
-          "Die Familie ernährt sich von dem, was der Garten hergibt.",
-          "Sie ernährt ihre Kinder gut."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "zɪç ɛɐ̯ˈnɛːʁən",
-        "number": "singular",
-        "pastTenses": "ernährte sich, hat sich ernährt",
-        "presentTenses": "ich ernähre mich, du ernährst dich, er/sie/es ernährt sich",
-        "tense": "present"
-      },
-      {
-        "source": "ernähren",
-        "translation": "feed, support, nourish",
-        "definitions": [
-          "jemandem oder einem Tier Nahrung geben",
-          "sich von etwas ernähren",
-          "für den Lebensunterhalt sorgen"
-        ],
-        "examples": [
-          "Die Mutter ernährt ihre Kinder.",
-          "Er ernährt sich vegetarisch.",
-          "Sie muss eine große Familie ernähren."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ɛɐ̯ˈnɛːʁən",
-        "number": "singular",
-        "pastTenses": "ernährte, hat ernährt",
-        "presentTenses": "ich ernähre, du ernährst, er/sie/es ernährt",
-        "tense": "present"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "to eat": {
-    "source": "to eat",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "futtern",
-        "translation": "to eat, to feed",
-        "definitions": [
-          "Essen zu sich nehmen, besonders in großen Mengen oder mit Genuss",
-          "Tiere füttern"
-        ],
-        "examples": [
-          "Die Kinder futtern die Kekse.",
-          "Er futtert den ganzen Tag Schokolade.",
-          "Wir müssen die Hühner futtern."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈfʊtɐn",
-        "number": "plural",
-        "pastTenses": "futterte, hat gefuttert",
-        "presentTenses": "ich futtere, du futterst, er/sie/es futtert",
-        "tense": "present"
-      },
-      {
-        "source": "essen",
-        "translation": "to eat, to have a meal, to consume",
-        "definitions": ["Nahrung zu sich nehmen", "speisen", "verzehren"],
-        "examples": [
-          "Ich esse einen Apfel.",
-          "Wir essen zu Abend.",
-          "Was isst du gern?"
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈɛsn̩",
-        "number": "plural",
-        "pastTenses": "aß, hat gegessen",
-        "presentTenses": "ich esse, du isst, er/sie/es isst",
-        "tense": "present"
-      },
       {
         "source": "sich ernähren",
         "translation": "to feed oneself, to eat",
@@ -228521,6 +229405,184 @@
     "extraItems": [],
     "explanation": ""
   },
+  "blessings": {
+    "source": "blessings",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Segnungen",
+        "translation": "blessings, benefits",
+        "definitions": [
+          "Handlungen oder Worte, die Segen spenden",
+          "Wohltaten oder positive Auswirkungen"
+        ],
+        "examples": [
+          "Die Segnungen des Friedens.",
+          "Er empfing die Segnungen der Kirche.",
+          "Die Segnungen der modernen Technik."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈzeːɡnʊŋən",
+        "g": "feminine",
+        "number": "plural",
+        "pluralForm": "die Segnungen"
+      },
+      {
+        "source": "der Segen",
+        "translation": "blessing, boon, consent",
+        "definitions": [
+          "Religiöser Zuspruch göttlicher Gnade",
+          "Ein glücklicher Umstand oder eine Wohltat",
+          "Die Erlaubnis oder Zustimmung zu einem Vorhaben"
+        ],
+        "examples": [
+          "Der priesterliche Segen.",
+          "Der Regen war ein Segen für die Ernte.",
+          "Sie gaben ihren Segen zur Hochzeit."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈzeːɡn̩",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Segen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "benefits": {
+    "source": "benefits",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Segnungen",
+        "translation": "blessings, benefits",
+        "definitions": [
+          "Handlungen oder Worte, die Segen spenden",
+          "Wohltaten oder positive Auswirkungen"
+        ],
+        "examples": [
+          "Die Segnungen des Friedens.",
+          "Er empfing die Segnungen der Kirche.",
+          "Die Segnungen der modernen Technik."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈzeːɡnʊŋən",
+        "g": "feminine",
+        "number": "plural",
+        "pluralForm": "die Segnungen"
+      },
+      {
+        "source": "der Segen",
+        "translation": "blessing, boon, consent",
+        "definitions": [
+          "Religiöser Zuspruch göttlicher Gnade",
+          "Ein glücklicher Umstand oder eine Wohltat",
+          "Die Erlaubnis oder Zustimmung zu einem Vorhaben"
+        ],
+        "examples": [
+          "Der priesterliche Segen.",
+          "Der Regen war ein Segen für die Ernte.",
+          "Sie gaben ihren Segen zur Hochzeit."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈzeːɡn̩",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Segen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "bless": {
+    "source": "bless",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "segnen",
+        "translation": "bless, consecrate, sanctify",
+        "definitions": [
+          "Jemandem oder etwas Segen spenden.",
+          "Heilige Weihe erteilen.",
+          "Glück oder Gedeihen wünschen."
+        ],
+        "examples": [
+          "Der Priester wird die Gemeinde segnen.",
+          "Möge Gott dich segnen.",
+          "Sie segnete das neue Haus."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈzeːɡnən",
+        "number": "singular",
+        "pastTenses": "segnete, hat gesegnet",
+        "presentTenses": "ich segne, du segnest, er/sie/es segnet",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "consecrate": {
+    "source": "consecrate",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "segnen",
+        "translation": "bless, consecrate, sanctify",
+        "definitions": [
+          "Jemandem oder etwas Segen spenden.",
+          "Heilige Weihe erteilen.",
+          "Glück oder Gedeihen wünschen."
+        ],
+        "examples": [
+          "Der Priester wird die Gemeinde segnen.",
+          "Möge Gott dich segnen.",
+          "Sie segnete das neue Haus."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈzeːɡnən",
+        "number": "singular",
+        "pastTenses": "segnete, hat gesegnet",
+        "presentTenses": "ich segne, du segnest, er/sie/es segnet",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "blessing": {
     "source": "blessing",
     "sourceLanguage": "de",
@@ -230153,6 +231215,102 @@
         "pastTenses": "schöpfte, hat geschöpft",
         "presentTenses": "ich schöpfe, du schöpfst, er/sie/es schöpft",
         "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "Have a nice weekend!": {
+    "source": "Have a nice weekend!",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Schönes Wochenende!",
+        "translation": "Have a nice weekend!, Have a good weekend!",
+        "definitions": [
+          "Ein Wunsch für ein angenehmes Wochenende.",
+          "Ausdruck der Freude auf das Wochenende."
+        ],
+        "examples": [
+          "Schönes Wochenende! Wir sehen uns am Montag.",
+          "Ich fahre jetzt nach Hause. Schönes Wochenende!"
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ˈʃøːnəs ˈvɔxn̩ˌɛndə",
+        "number": "singular"
+      },
+      {
+        "source": "das Wochenende",
+        "translation": "weekend",
+        "definitions": [
+          "Zeitraum am Ende der Woche, meist Samstag und Sonntag."
+        ],
+        "examples": [
+          "Schönes Wochenende!",
+          "Am Wochenende verreisen wir.",
+          "Das Wochenende war erholsam."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈvɔxn̩ˌʔɛndə",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Wochenenden"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "Have a good weekend!": {
+    "source": "Have a good weekend!",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Schönes Wochenende!",
+        "translation": "Have a nice weekend!, Have a good weekend!",
+        "definitions": [
+          "Ein Wunsch für ein angenehmes Wochenende.",
+          "Ausdruck der Freude auf das Wochenende."
+        ],
+        "examples": [
+          "Schönes Wochenende! Wir sehen uns am Montag.",
+          "Ich fahre jetzt nach Hause. Schönes Wochenende!"
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ˈʃøːnəs ˈvɔxn̩ˌɛndə",
+        "number": "singular"
+      },
+      {
+        "source": "das Wochenende",
+        "translation": "weekend",
+        "definitions": [
+          "Zeitraum am Ende der Woche, meist Samstag und Sonntag."
+        ],
+        "examples": [
+          "Schönes Wochenende!",
+          "Am Wochenende verreisen wir.",
+          "Das Wochenende war erholsam."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈvɔxn̩ˌʔɛndə",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Wochenenden"
       }
     ],
     "detectedInputType": "word",
@@ -240936,6 +242094,22 @@
         "partOfSpeech": "idiom",
         "ipa": "",
         "number": "plural"
+      },
+      {
+        "source": "Herzklopfen haben",
+        "translation": "to have butterflies in one's stomach, to have a pounding heart",
+        "definitions": [
+          "Ein Gefühl der Aufregung oder Nervosität verspüren",
+          "Starkes Herzklopfen aufgrund von Emotionen haben"
+        ],
+        "examples": [
+          "Vor dem ersten Date hatte sie Herzklopfen.",
+          "Jedes Mal, wenn er die Bühne betrat, bekam er Herzklopfen.",
+          "Sie gestand, dass sie Herzklopfen hatte, als sie die Nachricht hörte."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "ˈhɛʁt͡sklɔp͡fn̩ ˈhaːbn̩",
+        "number": "singular"
       }
     ],
     "detectedInputType": "word",
@@ -260746,6 +261920,92 @@
     "extraItems": [],
     "explanation": ""
   },
+  "Right?": {
+    "source": "Right?",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Richtig?",
+        "translation": "Right?, Correct?",
+        "definitions": [
+          "Wird verwendet, um die Zustimmung oder Bestätigung des Gesprächspartners einzuholen.",
+          "Frage, ob etwas korrekt oder wahr ist."
+        ],
+        "examples": [
+          "Wir treffen uns um acht, richtig?",
+          "Du kommst doch mit, richtig?",
+          "Das ist doch der Plan, richtig?"
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ˈrɪçtɪç",
+        "number": "singular"
+      },
+      {
+        "source": "richtig",
+        "translation": "right, correct, appropriate",
+        "definitions": ["korrekt", "zutreffend", "angemessen"],
+        "examples": [
+          "Die Antwort ist richtig.",
+          "Das ist die richtige Entscheidung."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈʁɪçtɪç"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "Correct?": {
+    "source": "Correct?",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Richtig?",
+        "translation": "Right?, Correct?",
+        "definitions": [
+          "Wird verwendet, um die Zustimmung oder Bestätigung des Gesprächspartners einzuholen.",
+          "Frage, ob etwas korrekt oder wahr ist."
+        ],
+        "examples": [
+          "Wir treffen uns um acht, richtig?",
+          "Du kommst doch mit, richtig?",
+          "Das ist doch der Plan, richtig?"
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ˈrɪçtɪç",
+        "number": "singular"
+      },
+      {
+        "source": "richtig",
+        "translation": "right, correct, appropriate",
+        "definitions": ["korrekt", "zutreffend", "angemessen"],
+        "examples": [
+          "Die Antwort ist richtig.",
+          "Das ist die richtige Entscheidung."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈʁɪçtɪç"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "right": {
     "source": "right",
     "sourceLanguage": "de",
@@ -280480,6 +281740,91 @@
     "extraItems": [],
     "explanation": ""
   },
+  "prime minister": {
+    "source": "prime minister",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Ministerpräsident",
+        "translation": "premier, state premier",
+        "definitions": [
+          "Regierungschef eines deutschen Bundeslandes",
+          "Vorsitzender einer Regierung in bestimmten Staaten"
+        ],
+        "examples": [
+          "Der Ministerpräsident hielt eine Rede.",
+          "Wahl des Ministerpräsidenten."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "mɪˈnɪstɐpʁɛziˌdɛnt",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Ministerpräsidenten"
+      },
+      {
+        "source": "die Ministerpräsidentin",
+        "translation": "premier, state premier",
+        "definitions": [
+          "Regierungschefin eines Bundeslandes in Deutschland",
+          "Weibliche Form von Ministerpräsident"
+        ],
+        "examples": [
+          "Die Ministerpräsidentin hielt eine Rede.",
+          "Wahl der Ministerpräsidentin.",
+          "Die Ministerpräsidentin besuchte die Schule."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "mɪˈnɪstɐˌprɛziˌdɛntɪn",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Ministerpräsidentinnen"
+      },
+      {
+        "source": "der Premierminister",
+        "translation": "prime minister",
+        "definitions": [
+          "Der Regierungschef in bestimmten parlamentarischen Systemen."
+        ],
+        "examples": [
+          "Der Premierminister hielt eine Rede.",
+          "Treffen mit dem britischen Premierminister."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "pʁeˈmi̯eːmiˌnɪstɐ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Premierminister"
+      },
+      {
+        "source": "die Premierministerin",
+        "translation": "prime minister",
+        "definitions": [
+          "weibliches Staatsoberhaupt einer Regierung",
+          "Regierungschefin eines Landes"
+        ],
+        "examples": [
+          "Die Premierministerin hielt eine Rede.",
+          "Sie wurde zur Premierministerin gewählt.",
+          "Die Entscheidung der Premierministerin war umstritten."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "pʁeˈmi̯eːɐ̯ˌmɪnɪstəʁɪn",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Premierministerinnen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "inexpensive": {
     "source": "inexpensive",
     "sourceLanguage": "de",
@@ -282813,38 +284158,6 @@
   },
   "PM": {
     "source": "PM",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "Pm",
-        "translation": "PM, prime minister",
-        "definitions": [
-          "Abkürzung für Post meridiem (nach Mittag)",
-          "Abkürzung für Premierminister/in"
-        ],
-        "examples": [
-          "Die Sitzung ist um 3 PM.",
-          "Die PM gab eine Erklärung ab."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "peːˈʔɛm",
-        "number": "singular",
-        "pluralForm": "die PMs"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "prime minister": {
-    "source": "prime minister",
     "sourceLanguage": "de",
     "targetLanguage": "en",
     "isDirect": false,
@@ -305466,6 +306779,140 @@
     "extraItems": [],
     "explanation": ""
   },
+  "Of course!": {
+    "source": "Of course!",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Na klar!",
+        "translation": "Of course!, Sure!",
+        "definitions": [
+          "Ausdruck der Zustimmung oder Bestätigung.",
+          "Bedeutet 'selbstverständlich' oder 'natürlich'."
+        ],
+        "examples": [
+          "Kommst du mit? Na klar!",
+          "Hast du das verstanden? Na klar!",
+          "Na klar, das machen wir so."
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "naː klaːɐ̯",
+        "number": "singular"
+      },
+      {
+        "source": "klar",
+        "translation": "clear, plain, distinct, obvious",
+        "definitions": [
+          "deutlich wahrnehmbar",
+          "leicht zu verstehen",
+          "eindeutig und unmissverständlich",
+          "hell und durchsichtig"
+        ],
+        "examples": [
+          "ein klares Bild",
+          "eine klare Antwort",
+          "Die Luft ist klar"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "klaːɐ̯",
+        "number": "singular"
+      },
+      {
+        "source": "Klar!",
+        "translation": "Sure!, Of course!, Clearly!",
+        "definitions": [
+          "Ausdruck der Zustimmung oder Bestätigung.",
+          "Ausdruck, dass etwas verstanden wurde.",
+          "Ausdruck der Selbstverständlichkeit."
+        ],
+        "examples": [
+          "„Kommst du mit?“ – „Klar!“",
+          "„Hast du das verstanden?“ – „Klar!“",
+          "„Das ist doch klar!“"
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "klaːɐ̯",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "Sure!": {
+    "source": "Sure!",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Klar!",
+        "translation": "Sure!, Of course!, Clearly!",
+        "definitions": [
+          "Ausdruck der Zustimmung oder Bestätigung.",
+          "Ausdruck, dass etwas verstanden wurde.",
+          "Ausdruck der Selbstverständlichkeit."
+        ],
+        "examples": [
+          "„Kommst du mit?“ – „Klar!“",
+          "„Hast du das verstanden?“ – „Klar!“",
+          "„Das ist doch klar!“"
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "klaːɐ̯",
+        "number": "singular"
+      },
+      {
+        "source": "klar",
+        "translation": "clear, plain, distinct, obvious",
+        "definitions": [
+          "deutlich wahrnehmbar",
+          "leicht zu verstehen",
+          "eindeutig und unmissverständlich",
+          "hell und durchsichtig"
+        ],
+        "examples": [
+          "ein klares Bild",
+          "eine klare Antwort",
+          "Die Luft ist klar"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "klaːɐ̯",
+        "number": "singular"
+      },
+      {
+        "source": "Na klar!",
+        "translation": "Of course!, Sure!",
+        "definitions": [
+          "Ausdruck der Zustimmung oder Bestätigung.",
+          "Bedeutet 'selbstverständlich' oder 'natürlich'."
+        ],
+        "examples": [
+          "Kommst du mit? Na klar!",
+          "Hast du das verstanden? Na klar!",
+          "Na klar, das machen wir so."
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "naː klaːɐ̯",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "Well": {
     "source": "Well",
     "sourceLanguage": "de",
@@ -311564,18 +313011,18 @@
     "items": [
       {
         "source": "die Abhandlung",
-        "translation": "treatise, discussion",
+        "translation": "treatise, essay",
         "definitions": [
-          "Eine eingehende schriftliche Untersuchung oder Darstellung eines bestimmten Themas.",
-          "Der Vorgang des Erörterns oder Behandelns einer Materie."
+          "Eine schriftliche Arbeit, die ein bestimmtes Thema ausführlich behandelt.",
+          "Eine wissenschaftliche oder literarische Erörterung eines Themas."
         ],
         "examples": [
-          "Eine wissenschaftliche Abhandlung.",
-          "Er schrieb eine Abhandlung über Ethik.",
-          "Die Abhandlung des Themas war präzise."
+          "Die Abhandlung wurde in einer Fachzeitschrift veröffentlicht.",
+          "Er schrieb eine lange Abhandlung über die Geschichte der Philosophie.",
+          "Diese Abhandlung bietet neue Einblicke in das Thema."
         ],
         "partOfSpeech": "noun",
-        "ipa": "ˈapˌhandlʊŋ",
+        "ipa": "diː ˈapˌhandlʊŋ",
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Abhandlungen"
@@ -313674,6 +315121,25 @@
         "g": "neuter",
         "number": "singular",
         "pluralForm": "die Abendessen"
+      },
+      {
+        "source": "die Mahlzeit",
+        "translation": "meal, dinner, lunch",
+        "definitions": [
+          "Das Einnehmen von Speisen zu einer bestimmten Zeit",
+          "Die Speise selbst, die zu einer bestimmten Zeit gegessen wird",
+          "Ein Gruß unter Kollegen oder Bekannten zur Mittagszeit"
+        ],
+        "examples": [
+          "Eine warme Mahlzeit.",
+          "Mahlzeit zusammen!",
+          "Drei Mahlzeiten am Tag."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈmaːlˌtsaɪ̯t",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Mahlzeiten"
       },
       {
         "source": "das Mittagessen",
@@ -317236,6 +318702,108 @@
         "g": "masculine",
         "number": "singular",
         "pluralForm": "die Minuspunkte"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "premier": {
+    "source": "premier",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Ministerpräsidentin",
+        "translation": "premier, state premier",
+        "definitions": [
+          "Regierungschefin eines Bundeslandes in Deutschland",
+          "Weibliche Form von Ministerpräsident"
+        ],
+        "examples": [
+          "Die Ministerpräsidentin hielt eine Rede.",
+          "Wahl der Ministerpräsidentin.",
+          "Die Ministerpräsidentin besuchte die Schule."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "mɪˈnɪstɐˌprɛziˌdɛntɪn",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Ministerpräsidentinnen"
+      },
+      {
+        "source": "der Ministerpräsident",
+        "translation": "premier, state premier",
+        "definitions": [
+          "Regierungschef eines deutschen Bundeslandes",
+          "Vorsitzender einer Regierung in bestimmten Staaten"
+        ],
+        "examples": [
+          "Der Ministerpräsident hielt eine Rede.",
+          "Wahl des Ministerpräsidenten."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "mɪˈnɪstɐpʁɛziˌdɛnt",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Ministerpräsidenten"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "state premier": {
+    "source": "state premier",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Ministerpräsidentin",
+        "translation": "premier, state premier",
+        "definitions": [
+          "Regierungschefin eines Bundeslandes in Deutschland",
+          "Weibliche Form von Ministerpräsident"
+        ],
+        "examples": [
+          "Die Ministerpräsidentin hielt eine Rede.",
+          "Wahl der Ministerpräsidentin.",
+          "Die Ministerpräsidentin besuchte die Schule."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "mɪˈnɪstɐˌprɛziˌdɛntɪn",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Ministerpräsidentinnen"
+      },
+      {
+        "source": "der Ministerpräsident",
+        "translation": "premier, state premier",
+        "definitions": [
+          "Regierungschef eines deutschen Bundeslandes",
+          "Vorsitzender einer Regierung in bestimmten Staaten"
+        ],
+        "examples": [
+          "Der Ministerpräsident hielt eine Rede.",
+          "Wahl des Ministerpräsidenten."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "mɪˈnɪstɐpʁɛziˌdɛnt",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Ministerpräsidenten"
       }
     ],
     "detectedInputType": "word",
@@ -326624,6 +328192,79 @@
     "extraItems": [],
     "explanation": ""
   },
+  "meal": {
+    "source": "meal",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Mahlzeit",
+        "translation": "meal, dinner, lunch",
+        "definitions": [
+          "Das Einnehmen von Speisen zu einer bestimmten Zeit",
+          "Die Speise selbst, die zu einer bestimmten Zeit gegessen wird",
+          "Ein Gruß unter Kollegen oder Bekannten zur Mittagszeit"
+        ],
+        "examples": [
+          "Eine warme Mahlzeit.",
+          "Mahlzeit zusammen!",
+          "Drei Mahlzeiten am Tag."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈmaːlˌtsaɪ̯t",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Mahlzeiten"
+      },
+      {
+        "source": "das Essen",
+        "translation": "meal, food, eating",
+        "definitions": [
+          "Die Aufnahme von Nahrung",
+          "Eine zubereitete Mahlzeit",
+          "Nahrungsmittel im Allgemeinen"
+        ],
+        "examples": [
+          "Das Essen ist fertig.",
+          "Ein gesundes Essen.",
+          "Viel Essen einkaufen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈɛsn̩",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Essen"
+      },
+      {
+        "source": "der Tisch",
+        "translation": "table, meal",
+        "definitions": [
+          "Möbelstück mit einer Platte und meist vier Beinen, das zum Essen, Arbeiten oder Abstellen von Gegenständen dient.",
+          "Eine Mahlzeit, die an einem Tisch eingenommen wird."
+        ],
+        "examples": [
+          "Der Tisch ist gedeckt.",
+          "Wir sitzen am Tisch.",
+          "Stell das Glas auf den Tisch.",
+          "Guten Tisch!"
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "tɪʃ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Tische"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "do like": {
     "source": "do like",
     "sourceLanguage": "de",
@@ -327020,6 +328661,136 @@
         "number": "singular",
         "pastTenses": "akkumulierte, hat akkumuliert",
         "presentTenses": "ich akkumuliere, du akkumulierst, er/sie/es akkumuliert",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "It doesn't matter.": {
+    "source": "It doesn't matter.",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Macht nichts.",
+        "translation": "It doesn't matter., No problem., It's nothing.",
+        "definitions": [
+          "Es ist nicht schlimm.",
+          "Es spielt keine Rolle.",
+          "Kein Problem."
+        ],
+        "examples": [
+          "Oh, du hast meinen Stift fallen lassen? Macht nichts.",
+          "Ich bin zu spät, tut mir leid. Macht nichts.",
+          "Das Essen ist kalt geworden. Macht nichts, ich esse es trotzdem."
+        ],
+        "partOfSpeech": "sentence",
+        "ipa": "maxt nɪçt͡s",
+        "number": "singular"
+      },
+      {
+        "source": "machen",
+        "translation": "to make, to do, to cause, to become",
+        "definitions": [
+          "etwas herstellen oder anfertigen",
+          "eine Handlung ausführen",
+          "bewirken, dass etwas geschieht",
+          "eine bestimmte Wirkung haben",
+          "sich entwickeln oder verändern"
+        ],
+        "examples": [
+          "Wir machen einen Kuchen.",
+          "Was machst du gerade?",
+          "Das macht mir Freude.",
+          "Er macht sich Sorgen.",
+          "Das macht keinen Sinn."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈmaxn̩",
+        "number": "plural",
+        "pastTenses": "machte, hat gemacht",
+        "presentTenses": "ich mache, du machst, er/sie/es macht",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "No problem.": {
+    "source": "No problem.",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Kein Problem.",
+        "translation": "No problem., No worries.",
+        "definitions": [
+          "Ausdruck der Zustimmung oder Bestätigung, dass etwas einfach ist oder keine Schwierigkeiten bereitet.",
+          "Antwort auf eine Entschuldigung oder einen Dank, um auszudrücken, dass es keine Umstände gemacht hat."
+        ],
+        "examples": [
+          "„Kannst du mir helfen?“ – „Kein Problem.“",
+          "„Danke für deine Hilfe!“ – „Kein Problem.“",
+          "„Entschuldige die Verspätung.“ – „Kein Problem.“"
+        ],
+        "partOfSpeech": "sentence",
+        "ipa": "kaɪn proˈbleːm",
+        "number": "singular"
+      },
+      {
+        "source": "Macht nichts.",
+        "translation": "It doesn't matter., No problem., It's nothing.",
+        "definitions": [
+          "Es ist nicht schlimm.",
+          "Es spielt keine Rolle.",
+          "Kein Problem."
+        ],
+        "examples": [
+          "Oh, du hast meinen Stift fallen lassen? Macht nichts.",
+          "Ich bin zu spät, tut mir leid. Macht nichts.",
+          "Das Essen ist kalt geworden. Macht nichts, ich esse es trotzdem."
+        ],
+        "partOfSpeech": "sentence",
+        "ipa": "maxt nɪçt͡s",
+        "number": "singular"
+      },
+      {
+        "source": "machen",
+        "translation": "to make, to do, to cause, to become",
+        "definitions": [
+          "etwas herstellen oder anfertigen",
+          "eine Handlung ausführen",
+          "bewirken, dass etwas geschieht",
+          "eine bestimmte Wirkung haben",
+          "sich entwickeln oder verändern"
+        ],
+        "examples": [
+          "Wir machen einen Kuchen.",
+          "Was machst du gerade?",
+          "Das macht mir Freude.",
+          "Er macht sich Sorgen.",
+          "Das macht keinen Sinn."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈmaxn̩",
+        "number": "plural",
+        "pastTenses": "machte, hat gemacht",
+        "presentTenses": "ich mache, du machst, er/sie/es macht",
         "tense": "present"
       }
     ],
@@ -334424,6 +336195,38 @@
         "ipa": "ˈlɔɪ̯tə",
         "number": "plural",
         "pluralForm": "die Leute"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "lighthouse": {
+    "source": "lighthouse",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Leuchtturm",
+        "translation": "lighthouse",
+        "definitions": [
+          "Ein Turm mit einem starken Leuchtfeuer zur Orientierung der Schifffahrt."
+        ],
+        "examples": [
+          "Der Leuchtturm weist den Schiffen den Weg.",
+          "Ein alter Leuchtturm an der Küste."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈlɔʏ̯çtˌtʊʁm",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Leuchttürme"
       }
     ],
     "detectedInputType": "word",
@@ -342563,44 +344366,6 @@
         "partOfSpeech": "adverb",
         "ipa": "ˈkʏʁtslɪç",
         "number": "singular"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "shorten": {
-    "source": "shorten",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "kürzen",
-        "translation": "shorten, reduce, cut, trim",
-        "definitions": [
-          "etwas kürzer machen",
-          "reduzieren",
-          "einen Text oder eine Rede verkürzen",
-          "Haare schneiden, um sie kürzer zu machen"
-        ],
-        "examples": [
-          "Wir müssen die Ausgaben kürzen.",
-          "Der Redakteur wird den Artikel kürzen.",
-          "Sie lässt sich die Haare kürzen.",
-          "Die Firma plant, die Arbeitszeiten zu kürzen."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈkʏʁt͡sn̩",
-        "number": "plural",
-        "pastTenses": "kürzte, hat gekürzt",
-        "presentTenses": "ich kürze, du kürzt, er/sie/es kürzt",
-        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -359503,108 +361268,6 @@
     "extraItems": [],
     "explanation": ""
   },
-  "Sure!": {
-    "source": "Sure!",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "Klar!",
-        "translation": "Sure!, Of course!, Clearly!",
-        "definitions": [
-          "Ausdruck der Zustimmung oder Bestätigung.",
-          "Ausdruck, dass etwas verstanden wurde.",
-          "Ausdruck der Selbstverständlichkeit."
-        ],
-        "examples": [
-          "„Kommst du mit?“ – „Klar!“",
-          "„Hast du das verstanden?“ – „Klar!“",
-          "„Das ist doch klar!“"
-        ],
-        "partOfSpeech": "interjection",
-        "ipa": "klaːɐ̯",
-        "number": "singular"
-      },
-      {
-        "source": "klar",
-        "translation": "clear, plain, distinct, obvious",
-        "definitions": [
-          "deutlich wahrnehmbar",
-          "leicht zu verstehen",
-          "eindeutig und unmissverständlich",
-          "hell und durchsichtig"
-        ],
-        "examples": [
-          "ein klares Bild",
-          "eine klare Antwort",
-          "Die Luft ist klar"
-        ],
-        "partOfSpeech": "adjective",
-        "ipa": "klaːɐ̯",
-        "number": "singular"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "Of course!": {
-    "source": "Of course!",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "Klar!",
-        "translation": "Sure!, Of course!, Clearly!",
-        "definitions": [
-          "Ausdruck der Zustimmung oder Bestätigung.",
-          "Ausdruck, dass etwas verstanden wurde.",
-          "Ausdruck der Selbstverständlichkeit."
-        ],
-        "examples": [
-          "„Kommst du mit?“ – „Klar!“",
-          "„Hast du das verstanden?“ – „Klar!“",
-          "„Das ist doch klar!“"
-        ],
-        "partOfSpeech": "interjection",
-        "ipa": "klaːɐ̯",
-        "number": "singular"
-      },
-      {
-        "source": "klar",
-        "translation": "clear, plain, distinct, obvious",
-        "definitions": [
-          "deutlich wahrnehmbar",
-          "leicht zu verstehen",
-          "eindeutig und unmissverständlich",
-          "hell und durchsichtig"
-        ],
-        "examples": [
-          "ein klares Bild",
-          "eine klare Antwort",
-          "Die Luft ist klar"
-        ],
-        "partOfSpeech": "adjective",
-        "ipa": "klaːɐ̯",
-        "number": "singular"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
   "tone": {
     "source": "tone",
     "sourceLanguage": "de",
@@ -362640,6 +364303,38 @@
         ],
         "partOfSpeech": "idiom",
         "ipa": "ˈkaɪnə ˈaːnʊŋ ˈhaːbn̩",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "No worries.": {
+    "source": "No worries.",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Kein Problem.",
+        "translation": "No problem., No worries.",
+        "definitions": [
+          "Ausdruck der Zustimmung oder Bestätigung, dass etwas einfach ist oder keine Schwierigkeiten bereitet.",
+          "Antwort auf eine Entschuldigung oder einen Dank, um auszudrücken, dass es keine Umstände gemacht hat."
+        ],
+        "examples": [
+          "„Kannst du mir helfen?“ – „Kein Problem.“",
+          "„Danke für deine Hilfe!“ – „Kein Problem.“",
+          "„Entschuldige die Verspätung.“ – „Kein Problem.“"
+        ],
+        "partOfSpeech": "sentence",
+        "ipa": "kaɪn proˈbleːm",
         "number": "singular"
       }
     ],
@@ -368159,6 +369854,70 @@
     "extraItems": [],
     "explanation": ""
   },
+  "someone's patience snaps": {
+    "source": "someone's patience snaps",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "jemandem platzt der Kragen",
+        "translation": "someone's patience snaps, someone blows their top",
+        "definitions": [
+          "Jemand ist extrem wütend oder verärgert.",
+          "Die Geduld oder Beherrschung von jemandem ist am Ende."
+        ],
+        "examples": [
+          "Nach all den Verzögerungen platzt ihm der Kragen.",
+          "Wenn das so weitergeht, platzt ihr bald der Kragen.",
+          "Mir platzt der Kragen bei so viel Ungerechtigkeit."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "someone blows their top": {
+    "source": "someone blows their top",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "jemandem platzt der Kragen",
+        "translation": "someone's patience snaps, someone blows their top",
+        "definitions": [
+          "Jemand ist extrem wütend oder verärgert.",
+          "Die Geduld oder Beherrschung von jemandem ist am Ende."
+        ],
+        "examples": [
+          "Nach all den Verzögerungen platzt ihm der Kragen.",
+          "Wenn das so weitergeht, platzt ihr bald der Kragen.",
+          "Mir platzt der Kragen bei so viel Ungerechtigkeit."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "to butter someone up": {
     "source": "to butter someone up",
     "sourceLanguage": "de",
@@ -368225,6 +369984,72 @@
     "extraItems": [],
     "explanation": ""
   },
+  "for someone the penny drops": {
+    "source": "for someone the penny drops",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "jemandem geht ein Licht auf",
+        "translation": "for someone the penny drops, for someone the light dawns, for someone a light goes on",
+        "definitions": [
+          "Jemand versteht plötzlich etwas.",
+          "Jemand erkennt die Lösung eines Problems.",
+          "Jemand begreift einen Sachverhalt."
+        ],
+        "examples": [
+          "Nach langem Nachdenken ging ihr endlich ein Licht auf.",
+          "Als er die Erklärung hörte, ging ihm sofort ein Licht auf.",
+          "Mir ging ein Licht auf, als ich die Zusammenhänge erkannte."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "for someone the light dawns": {
+    "source": "for someone the light dawns",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "jemandem geht ein Licht auf",
+        "translation": "for someone the penny drops, for someone the light dawns, for someone a light goes on",
+        "definitions": [
+          "Jemand versteht plötzlich etwas.",
+          "Jemand erkennt die Lösung eines Problems.",
+          "Jemand begreift einen Sachverhalt."
+        ],
+        "examples": [
+          "Nach langem Nachdenken ging ihr endlich ein Licht auf.",
+          "Als er die Erklärung hörte, ging ihm sofort ein Licht auf.",
+          "Mir ging ein Licht auf, als ich die Zusammenhänge erkannte."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "to pull someone's leg": {
     "source": "to pull someone's leg",
     "sourceLanguage": "de",
@@ -368281,6 +370106,72 @@
           "Er hat mir erzählt, er sei Millionär, aber ich glaube, er wollte mir nur einen Bären aufbinden.",
           "Lass dir von ihm keinen Bären aufbinden, das stimmt doch alles nicht!",
           "Sie versuchte, uns einen Bären aufzubinden, aber wir haben den Schwindel schnell durchschaut."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to stand by someone": {
+    "source": "to stand by someone",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "jemandem die Stange halten",
+        "translation": "to stand by someone, to stick up for someone, to back someone up",
+        "definitions": [
+          "jemanden unterstützen oder verteidigen, besonders in schwierigen Situationen",
+          "zu jemandem stehen und ihn nicht im Stich lassen",
+          "jemandem beistehen und ihn verteidigen"
+        ],
+        "examples": [
+          "Trotz aller Kritik hat er seinem Freund immer die Stange gehalten.",
+          "Sie hielt ihm die Stange, obwohl alle anderen gegen ihn waren.",
+          "Es ist wichtig, jemandem die Stange zu halten, wenn er ungerecht behandelt wird."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to stick up for someone": {
+    "source": "to stick up for someone",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "jemandem die Stange halten",
+        "translation": "to stand by someone, to stick up for someone, to back someone up",
+        "definitions": [
+          "jemanden unterstützen oder verteidigen, besonders in schwierigen Situationen",
+          "zu jemandem stehen und ihn nicht im Stich lassen",
+          "jemandem beistehen und ihn verteidigen"
+        ],
+        "examples": [
+          "Trotz aller Kritik hat er seinem Freund immer die Stange gehalten.",
+          "Sie hielt ihm die Stange, obwohl alle anderen gegen ihn waren.",
+          "Es ist wichtig, jemandem die Stange zu halten, wenn er ungerecht behandelt wird."
         ],
         "partOfSpeech": "idiom",
         "ipa": "",
@@ -373167,6 +375058,70 @@
     "extraItems": [],
     "explanation": ""
   },
+  "to be thrown in at the deep end": {
+    "source": "to be thrown in at the deep end",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "ins kalte Wasser springen",
+        "translation": "to be thrown in at the deep end, to jump in at the deep end",
+        "definitions": [
+          "Sich einer neuen, unbekannten oder schwierigen Situation stellen, ohne darauf vorbereitet zu sein.",
+          "Eine Herausforderung annehmen, ohne vorherige Erfahrung oder Training."
+        ],
+        "examples": [
+          "Er musste ins kalte Wasser springen, als sein Chef unerwartet kündigte.",
+          "Manchmal muss man einfach ins kalte Wasser springen, um etwas Neues zu lernen.",
+          "Sie sprang ins kalte Wasser und gründete ihr eigenes Unternehmen."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to jump in at the deep end": {
+    "source": "to jump in at the deep end",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "ins kalte Wasser springen",
+        "translation": "to be thrown in at the deep end, to jump in at the deep end",
+        "definitions": [
+          "Sich einer neuen, unbekannten oder schwierigen Situation stellen, ohne darauf vorbereitet zu sein.",
+          "Eine Herausforderung annehmen, ohne vorherige Erfahrung oder Training."
+        ],
+        "examples": [
+          "Er musste ins kalte Wasser springen, als sein Chef unerwartet kündigte.",
+          "Manchmal muss man einfach ins kalte Wasser springen, um etwas Neues zu lernen.",
+          "Sie sprang ins kalte Wasser und gründete ihr eigenes Unternehmen."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "to bite the dust": {
     "source": "to bite the dust",
     "sourceLanguage": "de",
@@ -373331,6 +375286,72 @@
         "g": "neuter",
         "number": "singular",
         "pluralForm": "die Fitnessstudios"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to put one's foot in it": {
+    "source": "to put one's foot in it",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "ins Fettnäpfchen treten",
+        "translation": "to put one's foot in it, to make a gaffe, to drop a brick",
+        "definitions": [
+          "Sich ungeschickt oder taktlos verhalten.",
+          "Durch eine unbedachte Äußerung oder Handlung jemanden beleidigen oder in Verlegenheit bringen.",
+          "Einen Fauxpas begehen."
+        ],
+        "examples": [
+          "Er wollte nur helfen, ist aber leider ins Fettnäpfchen getreten.",
+          "Mit dieser Bemerkung ist sie direkt ins Fettnäpfchen getreten.",
+          "Man sollte aufpassen, nicht ins Fettnäpfchen zu treten, besonders bei offiziellen Anlässen."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to make a gaffe": {
+    "source": "to make a gaffe",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "ins Fettnäpfchen treten",
+        "translation": "to put one's foot in it, to make a gaffe, to drop a brick",
+        "definitions": [
+          "Sich ungeschickt oder taktlos verhalten.",
+          "Durch eine unbedachte Äußerung oder Handlung jemanden beleidigen oder in Verlegenheit bringen.",
+          "Einen Fauxpas begehen."
+        ],
+        "examples": [
+          "Er wollte nur helfen, ist aber leider ins Fettnäpfchen getreten.",
+          "Mit dieser Bemerkung ist sie direkt ins Fettnäpfchen getreten.",
+          "Man sollte aufpassen, nicht ins Fettnäpfchen zu treten, besonders bei offiziellen Anlässen."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
       }
     ],
     "detectedInputType": "word",
@@ -378961,6 +380982,108 @@
     "extraItems": [],
     "explanation": ""
   },
+  "I agree.": {
+    "source": "I agree.",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Ich stimme zu.",
+        "translation": "I agree., I consent.",
+        "definitions": [
+          "Ausdruck der Zustimmung oder Einigkeit.",
+          "Bestätigung einer Aussage oder Meinung."
+        ],
+        "examples": [
+          "Ich stimme zu, das ist eine gute Idee.",
+          "Wenn du das sagst, ich stimme zu."
+        ],
+        "partOfSpeech": "sentence",
+        "ipa": "ɪç ˈʃtɪmə tsuː",
+        "number": "singular"
+      },
+      {
+        "source": "zustimmen",
+        "translation": "agree, consent",
+        "definitions": [
+          "Eine Meinung oder einem Vorschlag beipflichten",
+          "Einverständnis erklären",
+          "Etwas als richtig oder annehmbar anerkennen"
+        ],
+        "examples": [
+          "Ich stimme dir zu.",
+          "Er stimmte dem Plan zu.",
+          "Wir müssen zustimmen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈtsuːˌʃtɪmən",
+        "number": "singular",
+        "pastTenses": "stimmte zu, hat zugestimmt",
+        "presentTenses": "ich stimme zu, du stimmst zu, er/sie/es stimmt zu",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "I consent.": {
+    "source": "I consent.",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Ich stimme zu.",
+        "translation": "I agree., I consent.",
+        "definitions": [
+          "Ausdruck der Zustimmung oder Einigkeit.",
+          "Bestätigung einer Aussage oder Meinung."
+        ],
+        "examples": [
+          "Ich stimme zu, das ist eine gute Idee.",
+          "Wenn du das sagst, ich stimme zu."
+        ],
+        "partOfSpeech": "sentence",
+        "ipa": "ɪç ˈʃtɪmə tsuː",
+        "number": "singular"
+      },
+      {
+        "source": "zustimmen",
+        "translation": "agree, consent",
+        "definitions": [
+          "Eine Meinung oder einem Vorschlag beipflichten",
+          "Einverständnis erklären",
+          "Etwas als richtig oder annehmbar anerkennen"
+        ],
+        "examples": [
+          "Ich stimme dir zu.",
+          "Er stimmte dem Plan zu.",
+          "Wir müssen zustimmen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈtsuːˌʃtɪmən",
+        "number": "singular",
+        "pastTenses": "stimmte zu, hat zugestimmt",
+        "presentTenses": "ich stimme zu, du stimmst zu, er/sie/es stimmt zu",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "I must": {
     "source": "I must",
     "sourceLanguage": "de",
@@ -379247,6 +381370,68 @@
     "extraItems": [],
     "explanation": ""
   },
+  "I'm hungry.": {
+    "source": "I'm hungry.",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Ich habe Hunger.",
+        "translation": "I'm hungry., I have hunger.",
+        "definitions": [
+          "Ausdruck, um zu sagen, dass man essen möchte.",
+          "Gefühl des Verlangens nach Nahrung."
+        ],
+        "examples": [
+          "Ich habe Hunger, lass uns etwas essen.",
+          "Nach dem Sport habe ich immer Hunger."
+        ],
+        "partOfSpeech": "sentence",
+        "ipa": "ɪç haːbə hʊŋɐ",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "I have hunger.": {
+    "source": "I have hunger.",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Ich habe Hunger.",
+        "translation": "I'm hungry., I have hunger.",
+        "definitions": [
+          "Ausdruck, um zu sagen, dass man essen möchte.",
+          "Gefühl des Verlangens nach Nahrung."
+        ],
+        "examples": [
+          "Ich habe Hunger, lass uns etwas essen.",
+          "Nach dem Sport habe ich immer Hunger."
+        ],
+        "partOfSpeech": "sentence",
+        "ipa": "ɪç haːbə hʊŋɐ",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "I am a vegetarian/vegan.": {
     "source": "I am a vegetarian/vegan.",
     "sourceLanguage": "de",
@@ -379302,6 +381487,70 @@
         ],
         "partOfSpeech": "sentence",
         "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "I am tired.": {
+    "source": "I am tired.",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Ich bin müde.",
+        "translation": "I am tired., I'm tired.",
+        "definitions": [
+          "Zustand der Erschöpfung oder des Bedürfnisses nach Schlaf.",
+          "Ausdruck, um zu sagen, dass man sich erschöpft fühlt."
+        ],
+        "examples": [
+          "Ich bin müde, ich gehe jetzt ins Bett.",
+          "Nach einem langen Arbeitstag bin ich müde.",
+          "Ich bin müde, aber ich muss noch weiterarbeiten."
+        ],
+        "partOfSpeech": "sentence",
+        "ipa": "ɪç bɪn ˈmyːdə",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "I'm tired.": {
+    "source": "I'm tired.",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Ich bin müde.",
+        "translation": "I am tired., I'm tired.",
+        "definitions": [
+          "Zustand der Erschöpfung oder des Bedürfnisses nach Schlaf.",
+          "Ausdruck, um zu sagen, dass man sich erschöpft fühlt."
+        ],
+        "examples": [
+          "Ich bin müde, ich gehe jetzt ins Bett.",
+          "Nach einem langen Arbeitstag bin ich müde.",
+          "Ich bin müde, aber ich muss noch weiterarbeiten."
+        ],
+        "partOfSpeech": "sentence",
+        "ipa": "ɪç bɪn ˈmyːdə",
         "number": "singular"
       }
     ],
@@ -389929,6 +392178,38 @@
     "extraItems": [],
     "explanation": ""
   },
+  "to have a pounding heart": {
+    "source": "to have a pounding heart",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Herzklopfen haben",
+        "translation": "to have butterflies in one's stomach, to have a pounding heart",
+        "definitions": [
+          "Ein Gefühl der Aufregung oder Nervosität verspüren",
+          "Starkes Herzklopfen aufgrund von Emotionen haben"
+        ],
+        "examples": [
+          "Vor dem ersten Date hatte sie Herzklopfen.",
+          "Jedes Mal, wenn er die Bühne betrat, bekam er Herzklopfen.",
+          "Sie gestand, dass sie Herzklopfen hatte, als sie die Nachricht hörte."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "ˈhɛʁt͡sklɔp͡fn̩ ˈhaːbn̩",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "to hug": {
     "source": "to hug",
     "sourceLanguage": "de",
@@ -395699,11 +397980,20 @@
       },
       {
         "source": "hallo",
-        "translation": "Hello, Hi",
-        "definitions": ["Begrüßung", "Ausruf der Aufmerksamkeit"],
-        "examples": ["Hallo! Wie geht's?", "Hallo, ist da jemand?"],
+        "translation": "Hello, Hi, Hey",
+        "definitions": [
+          "Begrüßung",
+          "Ausdruck der Überraschung",
+          "Aufforderung zur Aufmerksamkeit"
+        ],
+        "examples": [
+          "Hallo, wie geht es dir?",
+          "Hallo, bist du da?",
+          "Hallo, was ist denn hier los?"
+        ],
         "partOfSpeech": "interjection",
-        "ipa": "ˈhaloː"
+        "ipa": "ˈhaloː",
+        "number": "singular"
       }
     ],
     "detectedInputType": "word",
@@ -400493,6 +402783,83 @@
     "extraItems": [],
     "explanation": ""
   },
+  "Break a leg!": {
+    "source": "Break a leg!",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Hals- und Beinbruch!",
+        "translation": "Break a leg!",
+        "definitions": [
+          "Ein Wunsch, der jemandem viel Glück für eine bevorstehende, oft schwierige oder riskante Unternehmung wünscht.",
+          "Wird verwendet, um jemandem Erfolg zu wünschen, insbesondere vor einer Prüfung, einem Auftritt oder einer Herausforderung."
+        ],
+        "examples": [
+          "Morgen hast du deine Fahrprüfung, Hals- und Beinbruch!",
+          "Vor dem großen Konzert sagte der Dirigent: „Hals- und Beinbruch, meine Damen und Herren!“",
+          "„Hals- und Beinbruch für deine Präsentation!“, rief sie ihm zu."
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "hals ʊnt baɪ̯nbʁʊx",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "Hello": {
+    "source": "Hello",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "hallo",
+        "translation": "Hello, Hi, Hey",
+        "definitions": [
+          "Begrüßung",
+          "Ausdruck der Überraschung",
+          "Aufforderung zur Aufmerksamkeit"
+        ],
+        "examples": [
+          "Hallo, wie geht es dir?",
+          "Hallo, bist du da?",
+          "Hallo, was ist denn hier los?"
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ˈhaloː",
+        "number": "singular"
+      },
+      {
+        "source": "Guten Tag",
+        "translation": "Good day, Hello",
+        "definitions": ["Begrüßung am Tag", "Höfliche Anrede"],
+        "examples": [
+          "Guten Tag, wie geht es Ihnen?",
+          "Guten Tag, Herr Müller."
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ˈɡuːtn̩ taːk",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "Hello!": {
     "source": "Hello!",
     "sourceLanguage": "de",
@@ -400571,42 +402938,6 @@
         "g": "neuter",
         "number": "singular",
         "pluralForm": "die Getümmel"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "Hello": {
-    "source": "Hello",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "hallo",
-        "translation": "Hello, Hi",
-        "definitions": ["Begrüßung", "Ausruf der Aufmerksamkeit"],
-        "examples": ["Hallo! Wie geht's?", "Hallo, ist da jemand?"],
-        "partOfSpeech": "interjection",
-        "ipa": "ˈhaloː"
-      },
-      {
-        "source": "Guten Tag",
-        "translation": "Good day, Hello",
-        "definitions": ["Begrüßung am Tag", "Höfliche Anrede"],
-        "examples": [
-          "Guten Tag, wie geht es Ihnen?",
-          "Guten Tag, Herr Müller."
-        ],
-        "partOfSpeech": "interjection",
-        "ipa": "ˈɡuːtn̩ taːk",
-        "number": "singular"
       }
     ],
     "detectedInputType": "word",
@@ -402876,6 +405207,70 @@
     "extraItems": [],
     "explanation": ""
   },
+  "Happy New Year!": {
+    "source": "Happy New Year!",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Guten Rutsch!",
+        "translation": "Happy New Year!, Happy New Year's!",
+        "definitions": [
+          "Wunsch für einen guten Übergang in das neue Jahr.",
+          "Glückwunsch zum Jahreswechsel."
+        ],
+        "examples": [
+          "Wir sehen uns nächstes Jahr, guten Rutsch!",
+          "Guten Rutsch euch allen und ein frohes neues Jahr!"
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ˈɡuːtn̩ ˈʁʊtʃ",
+        "g": "masculine",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "Happy New Year's!": {
+    "source": "Happy New Year's!",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Guten Rutsch!",
+        "translation": "Happy New Year!, Happy New Year's!",
+        "definitions": [
+          "Wunsch für einen guten Übergang in das neue Jahr.",
+          "Glückwunsch zum Jahreswechsel."
+        ],
+        "examples": [
+          "Wir sehen uns nächstes Jahr, guten Rutsch!",
+          "Guten Rutsch euch allen und ein frohes neues Jahr!"
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ˈɡuːtn̩ ˈʁʊtʃ",
+        "g": "masculine",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "in a good mood": {
     "source": "in a good mood",
     "sourceLanguage": "de",
@@ -403819,6 +406214,62 @@
     "extraItems": [],
     "explanation": ""
   },
+  "to be green with envy": {
+    "source": "to be green with envy",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "grün vor Neid sein",
+        "translation": "to be green with envy, to be eaten up with envy",
+        "definitions": ["Sehr neidisch sein.", "Jemanden um etwas beneiden."],
+        "examples": [
+          "Sie war grün vor Neid, als er das neue Auto kaufte.",
+          "Er wurde grün vor Neid, als er ihren Erfolg sah."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "ɡryːn foːɐ̯ naɪ̯t zaɪ̯n",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to be eaten up with envy": {
+    "source": "to be eaten up with envy",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "grün vor Neid sein",
+        "translation": "to be green with envy, to be eaten up with envy",
+        "definitions": ["Sehr neidisch sein.", "Jemanden um etwas beneiden."],
+        "examples": [
+          "Sie war grün vor Neid, als er das neue Auto kaufte.",
+          "Er wurde grün vor Neid, als er ihren Erfolg sah."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "ɡryːn foːɐ̯ naɪ̯t zaɪ̯n",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "green": {
     "source": "green",
     "sourceLanguage": "de",
@@ -404193,26 +406644,6 @@
     },
     "items": [
       {
-        "source": "grundsätzlich",
-        "translation": "fundamental, basic, in principle",
-        "definitions": ["von den Grundsätzen her", "im Prinzip", "wesentlich"],
-        "examples": [
-          "Das ist grundsätzlich verboten.",
-          "Grundsätzlich stimme ich zu."
-        ],
-        "partOfSpeech": "adjective",
-        "ipa": "ˈɡʀʊntzɛtslɪç",
-        "number": "singular"
-      },
-      {
-        "source": "grundlegende",
-        "translation": "fundamental, basic, essential",
-        "definitions": ["wesentlich", "fundamental", "elementar"],
-        "examples": ["grundlegende Fragen", "eine grundlegende Veränderung"],
-        "partOfSpeech": "adjective",
-        "ipa": "ˈɡʁʊntˌleːɡəndə"
-      },
-      {
         "source": "grundlegend",
         "translation": "fundamental, basic, essential",
         "definitions": [
@@ -404230,20 +406661,28 @@
         "number": "singular"
       },
       {
-        "source": "grundlegend",
-        "translation": "fundamental, basic, essential",
+        "source": "einfach",
+        "translation": "simple, easy, straightforward",
+        "definitions": ["nicht kompliziert", "schlicht", "geradlinig"],
+        "examples": ["einfacher Plan", "einfach leben", "einfach zu lösen"],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈaɪ̯nfaχ",
+        "number": "singular"
+      },
+      {
+        "source": "elementar",
+        "translation": "elementary, fundamental",
         "definitions": [
-          "die Basis oder das Fundament bildend",
-          "von entscheidender, wesentlicher Bedeutung",
-          "elementar oder fundamental"
+          "Die grundlegenden Prinzipien oder Bestandteile betreffend.",
+          "Von grundlegender, wesentlicher Bedeutung; unerlässlich."
         ],
         "examples": [
-          "ein grundlegendes Problem",
-          "grundlegende Reformen",
-          "eine grundlegende Änderung"
+          "elementare Bedürfnisse",
+          "elementare Kenntnisse",
+          "elementare Teilchen"
         ],
         "partOfSpeech": "adjective",
-        "ipa": "ˈɡʁʊntˌleːɡn̩t",
+        "ipa": "eləmɛnˈtaːɐ̯",
         "number": "singular"
       }
     ],
@@ -406547,64 +408986,6 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Grenzen"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "to take": {
-    "source": "to take",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "greifen",
-        "translation": "to grab, to take, to seize, to reach",
-        "definitions": [
-          "etwas mit der Hand nehmen oder festhalten",
-          "nach etwas fassen",
-          "eine Wirkung haben, wirksam sein",
-          "sich auf etwas beziehen"
-        ],
-        "examples": [
-          "Er greift nach dem Ball.",
-          "Der Mechanismus greift nicht.",
-          "Das Gesetz greift in diesem Fall.",
-          "Sie greift zum Telefon."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈɡʁaɪ̯fn̩",
-        "pastTenses": "griff, hat gegriffen",
-        "presentTenses": "ich greife, du greifst, er/sie/es greift",
-        "tense": "present"
-      },
-      {
-        "source": "dauern",
-        "translation": "to last, to take, to continue",
-        "definitions": [
-          "zeitlich andauern",
-          "eine bestimmte Zeit in Anspruch nehmen",
-          "fortbestehen"
-        ],
-        "examples": [
-          "Wie lange wird es dauern?",
-          "Der Film dauert zwei Stunden.",
-          "Es dauert ewig.",
-          "Die Reparatur kann dauern."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈdaʊɐn",
-        "number": "singular",
-        "pastTenses": "dauerte, hat gedauert",
-        "presentTenses": "ich dauere, du dauerst, er/sie/es dauert",
-        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -421096,17 +423477,21 @@
         "number": "singular"
       },
       {
-        "source": "bitte",
-        "translation": "please, you're welcome, go ahead",
+        "source": "Bitte.",
+        "translation": "please, you're welcome, pardon, here you go, come in",
         "definitions": [
-          "Ein Ausdruck des Bittens oder der Bitte.",
-          "Wird verwendet, um eine Aufforderung oder Einladung zu machen.",
-          "Antwort auf 'danke'."
+          "Ausdruck der Höflichkeit bei einer Bitte oder Aufforderung.",
+          "Antwort auf „Danke“.",
+          "Ausdruck der Überraschung oder Ungläubigkeit.",
+          "Aufforderung zum Eintreten oder Nehmen.",
+          "Aufforderung zur Wiederholung, wenn man etwas nicht verstanden hat."
         ],
         "examples": [
-          "Bitte, können Sie helfen?",
-          "Kannst du das bitte wiederholen?",
-          "Geben Sie mir bitte das Buch."
+          "Könnten Sie mir bitte helfen?",
+          "„Danke schön!“ – „Bitte sehr!“",
+          "Bitte, was sagst du da?",
+          "Bitte, nehmen Sie Platz.",
+          "Bitte? Könnten Sie das wiederholen?"
         ],
         "partOfSpeech": "interjection",
         "ipa": "ˈbɪtə",
@@ -421131,6 +423516,23 @@
         "pastTenses": "bat, gebeten haben",
         "presentTenses": "ich bitte, du bittest, er/sie/es bittet",
         "tense": "present"
+      },
+      {
+        "source": "bitte",
+        "translation": "please, you're welcome, go ahead",
+        "definitions": [
+          "Ein Ausdruck des Bittens oder der Bitte.",
+          "Wird verwendet, um eine Aufforderung oder Einladung zu machen.",
+          "Antwort auf 'danke'."
+        ],
+        "examples": [
+          "Bitte, können Sie helfen?",
+          "Kannst du das bitte wiederholen?",
+          "Geben Sie mir bitte das Buch."
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ˈbɪtə",
+        "number": "singular"
       },
       {
         "source": "bitte",
@@ -429912,6 +432314,118 @@
         "number": "plural",
         "pastTenses": "gehörte, hat gehört",
         "presentTenses": "ich gehöre, du gehörst, er/sie/es gehört",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "It's okay.": {
+    "source": "It's okay.",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Geht so.",
+        "translation": "It's okay., It's so-so.",
+        "definitions": [
+          "Ausdruck, um auszudrücken, dass etwas weder besonders gut noch besonders schlecht ist.",
+          "Antwort auf die Frage nach dem Befinden oder der Qualität von etwas, die Mittelmäßigkeit andeutet."
+        ],
+        "examples": [
+          "„Wie geht's dir?“ – „Geht so.“",
+          "„Hat dir der Film gefallen?“ – „Geht so.“",
+          "„Das Essen war okay, geht so.“"
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ɡeːt zoː",
+        "number": "singular"
+      },
+      {
+        "source": "gehen",
+        "translation": "to go, to walk, to work, to be possible, to run",
+        "definitions": [
+          "sich fortbewegen, einen Schritt vor den anderen setzen",
+          "sich zu Fuß begeben",
+          "funktionieren, in Betrieb sein",
+          "möglich sein, erlaubt sein",
+          "sich erstrecken, reichen"
+        ],
+        "examples": [
+          "Ich gehe nach Hause.",
+          "Die Uhr geht genau.",
+          "Das geht in Ordnung.",
+          "Der Weg geht bis zum Fluss.",
+          "Wie geht es dir?"
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈɡeːən",
+        "number": "plural",
+        "pastTenses": "ging, ist gegangen",
+        "presentTenses": "ich gehe, du gehst, er/sie/es geht",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "It's so-so.": {
+    "source": "It's so-so.",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Geht so.",
+        "translation": "It's okay., It's so-so.",
+        "definitions": [
+          "Ausdruck, um auszudrücken, dass etwas weder besonders gut noch besonders schlecht ist.",
+          "Antwort auf die Frage nach dem Befinden oder der Qualität von etwas, die Mittelmäßigkeit andeutet."
+        ],
+        "examples": [
+          "„Wie geht's dir?“ – „Geht so.“",
+          "„Hat dir der Film gefallen?“ – „Geht so.“",
+          "„Das Essen war okay, geht so.“"
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ɡeːt zoː",
+        "number": "singular"
+      },
+      {
+        "source": "gehen",
+        "translation": "to go, to walk, to work, to be possible, to run",
+        "definitions": [
+          "sich fortbewegen, einen Schritt vor den anderen setzen",
+          "sich zu Fuß begeben",
+          "funktionieren, in Betrieb sein",
+          "möglich sein, erlaubt sein",
+          "sich erstrecken, reichen"
+        ],
+        "examples": [
+          "Ich gehe nach Hause.",
+          "Die Uhr geht genau.",
+          "Das geht in Ordnung.",
+          "Der Weg geht bis zum Fluss.",
+          "Wie geht es dir?"
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈɡeːən",
+        "number": "plural",
+        "pastTenses": "ging, ist gegangen",
+        "presentTenses": "ich gehe, du gehst, er/sie/es geht",
         "tense": "present"
       }
     ],
@@ -461963,6 +464477,72 @@
     "extraItems": [],
     "explanation": ""
   },
+  "to have a grip on something": {
+    "source": "to have a grip on something",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "etwas im Griff haben",
+        "translation": "to have a grip on something, to have something under control, to have a handle on something",
+        "definitions": [
+          "Eine Situation oder Sache unter Kontrolle haben.",
+          "Fähig sein, mit etwas umzugehen oder es zu bewältigen.",
+          "Meister einer Aufgabe oder Herausforderung sein."
+        ],
+        "examples": [
+          "Er hat die neue Software schnell im Griff gehabt.",
+          "Nach ein paar Wochen hatte sie den Job voll im Griff.",
+          "Wir müssen die Kosten im Griff haben, sonst gibt es Probleme."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "ˈɛtvas ɪm ɡrɪf ˈhaːbn̩",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to have something under control": {
+    "source": "to have something under control",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "etwas im Griff haben",
+        "translation": "to have a grip on something, to have something under control, to have a handle on something",
+        "definitions": [
+          "Eine Situation oder Sache unter Kontrolle haben.",
+          "Fähig sein, mit etwas umzugehen oder es zu bewältigen.",
+          "Meister einer Aufgabe oder Herausforderung sein."
+        ],
+        "examples": [
+          "Er hat die neue Software schnell im Griff gehabt.",
+          "Nach ein paar Wochen hatte sie den Job voll im Griff.",
+          "Wir müssen die Kosten im Griff haben, sonst gibt es Probleme."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "ˈɛtvas ɪm ɡrɪf ˈhaːbn̩",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "some money": {
     "source": "some money",
     "sourceLanguage": "de",
@@ -462415,6 +464995,72 @@
           "Wir sollten das Projekt nicht auf die lange Bank schieben.",
           "Er neigt dazu, wichtige Aufgaben auf die lange Bank zu schieben.",
           "Diese Angelegenheit darf nicht auf die lange Bank geschoben werden."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to have something on the ball": {
+    "source": "to have something on the ball",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "etwas auf dem Kasten haben",
+        "translation": "to have something on the ball, to have a good head on one's shoulders, to have brains",
+        "definitions": [
+          "Intelligent oder klug sein",
+          "Fähigkeiten oder Wissen besitzen",
+          "Etwas gut können"
+        ],
+        "examples": [
+          "Er hat wirklich etwas auf dem Kasten, wenn es um Mathematik geht.",
+          "Zeig mal, was du auf dem Kasten hast!",
+          "Sie muss etwas auf dem Kasten haben, um diese komplexe Aufgabe zu lösen."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to have a good head on one's shoulders": {
+    "source": "to have a good head on one's shoulders",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "etwas auf dem Kasten haben",
+        "translation": "to have something on the ball, to have a good head on one's shoulders, to have brains",
+        "definitions": [
+          "Intelligent oder klug sein",
+          "Fähigkeiten oder Wissen besitzen",
+          "Etwas gut können"
+        ],
+        "examples": [
+          "Er hat wirklich etwas auf dem Kasten, wenn es um Mathematik geht.",
+          "Zeig mal, was du auf dem Kasten hast!",
+          "Sie muss etwas auf dem Kasten haben, um diese komplexe Aufgabe zu lösen."
         ],
         "partOfSpeech": "idiom",
         "ipa": "",
@@ -462923,60 +465569,6 @@
     "extraItems": [],
     "explanation": ""
   },
-  "meal": {
-    "source": "meal",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "das Essen",
-        "translation": "meal, food, eating",
-        "definitions": [
-          "Die Aufnahme von Nahrung",
-          "Eine zubereitete Mahlzeit",
-          "Nahrungsmittel im Allgemeinen"
-        ],
-        "examples": [
-          "Das Essen ist fertig.",
-          "Ein gesundes Essen.",
-          "Viel Essen einkaufen."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ˈɛsn̩",
-        "g": "neuter",
-        "number": "singular",
-        "pluralForm": "die Essen"
-      },
-      {
-        "source": "der Tisch",
-        "translation": "table, meal",
-        "definitions": [
-          "Möbelstück mit einer Platte und meist vier Beinen, das zum Essen, Arbeiten oder Abstellen von Gegenständen dient.",
-          "Eine Mahlzeit, die an einem Tisch eingenommen wird."
-        ],
-        "examples": [
-          "Der Tisch ist gedeckt.",
-          "Wir sitzen am Tisch.",
-          "Stell das Glas auf den Tisch.",
-          "Guten Tisch!"
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "tɪʃ",
-        "g": "masculine",
-        "number": "singular",
-        "pluralForm": "die Tische"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
   "edible fruits": {
     "source": "edible fruits",
     "sourceLanguage": "de",
@@ -463113,6 +465705,80 @@
     },
     "items": [
       {
+        "source": "der Aufsatz",
+        "translation": "essay, attachment, article",
+        "definitions": [
+          "Eine schriftliche Darstellung eines Themas im schulischen Kontext.",
+          "Ein ergänzendes Teil, das auf etwas anderes gesetzt wird.",
+          "Ein wissenschaftlicher oder journalistischer Artikel."
+        ],
+        "examples": [
+          "Er schreibt einen Aufsatz über Goethe.",
+          "Der Schrank hat einen dekorativen Aufsatz.",
+          "Sie veröffentlichte einen Aufsatz in der Fachzeitschrift."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈaʊ̯fˌzat͡s",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Aufsätze"
+      },
+      {
+        "source": "der Aufsatz",
+        "translation": "essay, article, composition",
+        "definitions": [
+          "kurze schriftliche Arbeit, besonders in der Schule oder Universität",
+          "Teil eines Ganzen, der oben aufgesetzt ist",
+          "Aufsatz im Sinne von Essay oder Artikel"
+        ],
+        "examples": [
+          "Der Aufsatz war sehr gut.",
+          "Sie schrieb einen Aufsatz über die Geschichte.",
+          "Der Aufsatz auf dem Schrank ist staubig."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈaʊ̯fˌzat͡s",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Aufsätze"
+      },
+      {
+        "source": "die Abhandlung",
+        "translation": "treatise, discussion",
+        "definitions": [
+          "Eine eingehende schriftliche Untersuchung oder Darstellung eines bestimmten Themas.",
+          "Der Vorgang des Erörterns oder Behandelns einer Materie."
+        ],
+        "examples": [
+          "Eine wissenschaftliche Abhandlung.",
+          "Er schrieb eine Abhandlung über Ethik.",
+          "Die Abhandlung des Themas war präzise."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈapˌhandlʊŋ",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Abhandlungen"
+      },
+      {
+        "source": "die Abhandlung",
+        "translation": "treatise, essay",
+        "definitions": [
+          "Eine schriftliche Arbeit, die ein bestimmtes Thema ausführlich behandelt.",
+          "Eine wissenschaftliche oder literarische Erörterung eines Themas."
+        ],
+        "examples": [
+          "Die Abhandlung wurde in einer Fachzeitschrift veröffentlicht.",
+          "Er schrieb eine lange Abhandlung über die Geschichte der Philosophie.",
+          "Diese Abhandlung bietet neue Einblicke in das Thema."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "diː ˈapˌhandlʊŋ",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Abhandlungen"
+      },
+      {
         "source": "der Essay",
         "translation": "essay, paper",
         "definitions": [
@@ -463127,6 +465793,24 @@
         "partOfSpeech": "noun",
         "ipa": "ɛˈseː",
         "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Essays"
+      },
+      {
+        "source": "das Essay",
+        "translation": "essay, paper",
+        "definitions": [
+          "Ein kurzer, wissenschaftlicher oder literarischer Aufsatz, der eine bestimmte Thematik behandelt.",
+          "Eine schriftliche Abhandlung, die persönliche Ansichten oder Überlegungen zu einem Thema darlegt."
+        ],
+        "examples": [
+          "Das Essay wurde in einer Zeitschrift veröffentlicht.",
+          "Sie schrieb ein Essay über die moderne Kunst.",
+          "Für die Prüfung mussten wir ein Essay verfassen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "das ɛˈseː",
+        "g": "neuter",
         "number": "singular",
         "pluralForm": "die Essays"
       }
@@ -480556,6 +483240,38 @@
     "extraItems": [],
     "explanation": ""
   },
+  "elementary": {
+    "source": "elementary",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "elementar",
+        "translation": "elementary, fundamental",
+        "definitions": [
+          "Die grundlegenden Prinzipien oder Bestandteile betreffend.",
+          "Von grundlegender, wesentlicher Bedeutung; unerlässlich."
+        ],
+        "examples": [
+          "elementare Bedürfnisse",
+          "elementare Kenntnisse",
+          "elementare Teilchen"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "eləmɛnˈtaːɐ̯",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "electrical engineer": {
     "source": "electrical engineer",
     "sourceLanguage": "de",
@@ -490400,6 +493116,74 @@
     "extraItems": [],
     "explanation": ""
   },
+  "a stone's throw away": {
+    "source": "a stone's throw away",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "ein Katzensprung",
+        "translation": "a stone's throw away, a hop, skip, and a jump, a short distance",
+        "definitions": [
+          "Eine sehr kurze Entfernung.",
+          "Ein geringer Abstand.",
+          "Etwas, das sehr nah ist."
+        ],
+        "examples": [
+          "Der Bahnhof ist nur ein Katzensprung von hier entfernt.",
+          "Zum Bäcker ist es nur ein Katzensprung.",
+          "Von unserem Haus zum See ist es ein Katzensprung."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "aɪn ˈkatsənˌʃpruŋ",
+        "g": "masculine",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "a hop, skip, and a jump": {
+    "source": "a hop, skip, and a jump",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "ein Katzensprung",
+        "translation": "a stone's throw away, a hop, skip, and a jump, a short distance",
+        "definitions": [
+          "Eine sehr kurze Entfernung.",
+          "Ein geringer Abstand.",
+          "Etwas, das sehr nah ist."
+        ],
+        "examples": [
+          "Der Bahnhof ist nur ein Katzensprung von hier entfernt.",
+          "Zum Bäcker ist es nur ein Katzensprung.",
+          "Von unserem Haus zum See ist es ein Katzensprung."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "aɪn ˈkatsənˌʃpruŋ",
+        "g": "masculine",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "to have a thick skin": {
     "source": "to have a thick skin",
     "sourceLanguage": "de",
@@ -490519,6 +493303,70 @@
         "partOfSpeech": "idiom",
         "ipa": "aɪ̯n ˈaʊ̯ɡə tsuːˌdʁʏkn̩",
         "g": "neuter",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to be an old hand": {
+    "source": "to be an old hand",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "ein alter Hase sein",
+        "translation": "to be an old hand, to be an old-timer",
+        "definitions": [
+          "Jemand, der viel Erfahrung in einem bestimmten Bereich hat.",
+          "Eine Person, die schon lange dabei ist und sich gut auskennt."
+        ],
+        "examples": [
+          "Er ist schon ein alter Hase in diesem Geschäft.",
+          "Als alter Hase weiß sie genau, wie man das macht.",
+          "Man merkt, dass er ein alter Hase ist, er hat alles im Griff."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "aɪn ˈaltɐ ˈhaːzə zaɪn",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to be an old-timer": {
+    "source": "to be an old-timer",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "ein alter Hase sein",
+        "translation": "to be an old hand, to be an old-timer",
+        "definitions": [
+          "Jemand, der viel Erfahrung in einem bestimmten Bereich hat.",
+          "Eine Person, die schon lange dabei ist und sich gut auskennt."
+        ],
+        "examples": [
+          "Er ist schon ein alter Hase in diesem Geschäft.",
+          "Als alter Hase weiß sie genau, wie man das macht.",
+          "Man merkt, dass er ein alter Hase ist, er hat alles im Griff."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "aɪn ˈaltɐ ˈhaːzə zaɪn",
         "number": "singular"
       }
     ],
@@ -503122,6 +505970,72 @@
     "extraItems": [],
     "explanation": ""
   },
+  "lose one's nerve": {
+    "source": "lose one's nerve",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Nerven verlieren",
+        "translation": "lose one's nerve, lose one's cool, lose one's head",
+        "definitions": [
+          "Die Beherrschung verlieren",
+          "Panisch oder ängstlich werden",
+          "Die Kontrolle über sich selbst verlieren"
+        ],
+        "examples": [
+          "Bei der Prüfung hat er die Nerven verloren.",
+          "Sie darf jetzt nicht die Nerven verlieren.",
+          "Trotz des Drucks hat sie nie die Nerven verloren."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "diː ˈnɛʁfn̩ fɛɐ̯ˈliːʁən",
+        "number": "plural"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "lose one's cool": {
+    "source": "lose one's cool",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Nerven verlieren",
+        "translation": "lose one's nerve, lose one's cool, lose one's head",
+        "definitions": [
+          "Die Beherrschung verlieren",
+          "Panisch oder ängstlich werden",
+          "Die Kontrolle über sich selbst verlieren"
+        ],
+        "examples": [
+          "Bei der Prüfung hat er die Nerven verloren.",
+          "Sie darf jetzt nicht die Nerven verlieren.",
+          "Trotz des Drucks hat sie nie die Nerven verloren."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "diː ˈnɛʁfn̩ fɛɐ̯ˈliːʁən",
+        "number": "plural"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "side effect": {
     "source": "side effect",
     "sourceLanguage": "de",
@@ -515258,6 +518172,41 @@
     "extraItems": [],
     "explanation": ""
   },
+  "article": {
+    "source": "article",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Aufsatz",
+        "translation": "essay, article, composition",
+        "definitions": [
+          "kurze schriftliche Arbeit, besonders in der Schule oder Universität",
+          "Teil eines Ganzen, der oben aufgesetzt ist",
+          "Aufsatz im Sinne von Essay oder Artikel"
+        ],
+        "examples": [
+          "Der Aufsatz war sehr gut.",
+          "Sie schrieb einen Aufsatz über die Geschichte.",
+          "Der Aufsatz auf dem Schrank ist staubig."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈaʊ̯fˌzat͡s",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Aufsätze"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "ashtray": {
     "source": "ashtray",
     "sourceLanguage": "de",
@@ -517467,6 +520416,68 @@
     "extraItems": [],
     "explanation": ""
   },
+  "Fingers crossed!": {
+    "source": "Fingers crossed!",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Daumen drücken!",
+        "translation": "Fingers crossed!, Good luck!",
+        "definitions": [
+          "Ausdruck des Wunsches nach Glück oder Erfolg für jemanden.",
+          "Aufforderung, jemandem die Daumen zu drücken."
+        ],
+        "examples": [
+          "Ich habe morgen eine Prüfung, Daumen drücken!",
+          "Daumen drücken, dass alles gut geht!",
+          "Wir drücken dir die Daumen für dein Vorstellungsgespräch!"
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ˈdaʊ̯mən ˈdrʏkn̩"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "Good luck!": {
+    "source": "Good luck!",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Daumen drücken!",
+        "translation": "Fingers crossed!, Good luck!",
+        "definitions": [
+          "Ausdruck des Wunsches nach Glück oder Erfolg für jemanden.",
+          "Aufforderung, jemandem die Daumen zu drücken."
+        ],
+        "examples": [
+          "Ich habe morgen eine Prüfung, Daumen drücken!",
+          "Daumen drücken, dass alles gut geht!",
+          "Wir drücken dir die Daumen für dein Vorstellungsgespräch!"
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ˈdaʊ̯mən ˈdrʏkn̩"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "to keep one's fingers crossed": {
     "source": "to keep one's fingers crossed",
     "sourceLanguage": "de",
@@ -519151,6 +522162,70 @@
         "g": "neuter",
         "number": "singular",
         "pluralForm": "die Kinne"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "That's crazy!": {
+    "source": "That's crazy!",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Das ist verrückt!",
+        "translation": "That's crazy!, That's insane!",
+        "definitions": [
+          "Ausdruck des Erstaunens oder der Ungläubigkeit über etwas Unerwartetes oder Außergewöhnliches.",
+          "Kann verwendet werden, um eine Situation oder Handlung als unsinnig, extrem oder unglaublich zu beschreiben."
+        ],
+        "examples": [
+          "Du hast den Marathon in zwei Stunden gelaufen? Das ist verrückt!",
+          "Sie hat das ganze Haus in einer Woche renoviert, das ist verrückt!",
+          "Der Preis für das Ticket ist so hoch, das ist verrückt!"
+        ],
+        "partOfSpeech": "sentence",
+        "ipa": "das ɪst fɛˈrʏkt",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "That's insane!": {
+    "source": "That's insane!",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Das ist verrückt!",
+        "translation": "That's crazy!, That's insane!",
+        "definitions": [
+          "Ausdruck des Erstaunens oder der Ungläubigkeit über etwas Unerwartetes oder Außergewöhnliches.",
+          "Kann verwendet werden, um eine Situation oder Handlung als unsinnig, extrem oder unglaublich zu beschreiben."
+        ],
+        "examples": [
+          "Du hast den Marathon in zwei Stunden gelaufen? Das ist verrückt!",
+          "Sie hat das ganze Haus in einer Woche renoviert, das ist verrückt!",
+          "Der Preis für das Ticket ist so hoch, das ist verrückt!"
+        ],
+        "partOfSpeech": "sentence",
+        "ipa": "das ɪst fɛˈrʏkt",
+        "number": "singular"
       }
     ],
     "detectedInputType": "word",
@@ -521207,6 +524282,38 @@
       "language": "de"
     },
     "items": [
+      {
+        "source": "Danke schön.",
+        "translation": "Thank you very much, Thank you",
+        "definitions": [
+          "Ausdruck des Dankes",
+          "Höflicher Ausdruck der Anerkennung oder des Dankes"
+        ],
+        "examples": [
+          "Danke schön für die Blumen!",
+          "„Hier ist Ihr Kaffee.“ – „Danke schön.“",
+          "Danke schön, das ist sehr nett von Ihnen."
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ˈdaŋkə ʃøːn",
+        "number": "singular"
+      },
+      {
+        "source": "Danke schön",
+        "translation": "Thank you very much, Thank you",
+        "definitions": [
+          "Ausdruck des Dankes",
+          "Höflicher Ausdruck der Wertschätzung"
+        ],
+        "examples": [
+          "Danke schön für die Hilfe!",
+          "„Hier ist Ihr Kaffee.“ – „Danke schön!“",
+          "Danke schön, das ist sehr nett von Ihnen."
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ˈdaŋkə ʃøːn",
+        "number": "singular"
+      },
       {
         "source": "Danke schön",
         "translation": "Thank you very much, Thank you",
@@ -532021,6 +535128,99 @@
     "extraItems": [],
     "explanation": ""
   },
+  "please": {
+    "source": "please",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Bitte.",
+        "translation": "please, you're welcome, pardon, here you go, come in",
+        "definitions": [
+          "Ausdruck der Höflichkeit bei einer Bitte oder Aufforderung.",
+          "Antwort auf „Danke“.",
+          "Ausdruck der Überraschung oder Ungläubigkeit.",
+          "Aufforderung zum Eintreten oder Nehmen.",
+          "Aufforderung zur Wiederholung, wenn man etwas nicht verstanden hat."
+        ],
+        "examples": [
+          "Könnten Sie mir bitte helfen?",
+          "„Danke schön!“ – „Bitte sehr!“",
+          "Bitte, was sagst du da?",
+          "Bitte, nehmen Sie Platz.",
+          "Bitte? Könnten Sie das wiederholen?"
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ˈbɪtə",
+        "number": "singular"
+      },
+      {
+        "source": "bitten",
+        "translation": "ask, request, invite",
+        "definitions": [
+          "jemanden höflich auffordern, etwas zu tun",
+          "um etwas ersuchen",
+          "einladen"
+        ],
+        "examples": [
+          "Ich bitte dich um Hilfe.",
+          "Er bat sie herein.",
+          "Wir bitten zum Essen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈbɪtn̩",
+        "number": "plural",
+        "pastTenses": "bat, gebeten haben",
+        "presentTenses": "ich bitte, du bittest, er/sie/es bittet",
+        "tense": "present"
+      },
+      {
+        "source": "bitte",
+        "translation": "please, you're welcome, go ahead",
+        "definitions": [
+          "Ein Ausdruck des Bittens oder der Bitte.",
+          "Wird verwendet, um eine Aufforderung oder Einladung zu machen.",
+          "Antwort auf 'danke'."
+        ],
+        "examples": [
+          "Bitte, können Sie helfen?",
+          "Kannst du das bitte wiederholen?",
+          "Geben Sie mir bitte das Buch."
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ˈbɪtə",
+        "number": "singular"
+      },
+      {
+        "source": "bitte",
+        "translation": "please, you're welcome, if you please",
+        "definitions": [
+          "Ausdruck der Höflichkeit bei Bitten",
+          "Ausdruck der Höflichkeit bei Angeboten",
+          "Ausdruck der Höflichkeit bei Entschuldigungen",
+          "Ausdruck der Höflichkeit bei Danksagungen"
+        ],
+        "examples": [
+          "Kannst du mir bitte helfen?",
+          "Möchten Sie bitte eintreten?",
+          "Entschuldigen Sie bitte die Störung.",
+          "Gern geschehen, bitte sehr."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "ˈbɪtə",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "Spell that!": {
     "source": "Spell that!",
     "sourceLanguage": "de",
@@ -532072,78 +535272,6 @@
         ],
         "partOfSpeech": "interjection",
         "ipa": "",
-        "number": "singular"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "please": {
-    "source": "please",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "bitte",
-        "translation": "please, you're welcome, go ahead",
-        "definitions": [
-          "Ein Ausdruck des Bittens oder der Bitte.",
-          "Wird verwendet, um eine Aufforderung oder Einladung zu machen.",
-          "Antwort auf 'danke'."
-        ],
-        "examples": [
-          "Bitte, können Sie helfen?",
-          "Kannst du das bitte wiederholen?",
-          "Geben Sie mir bitte das Buch."
-        ],
-        "partOfSpeech": "interjection",
-        "ipa": "ˈbɪtə",
-        "number": "singular"
-      },
-      {
-        "source": "bitten",
-        "translation": "ask, request, invite",
-        "definitions": [
-          "jemanden höflich auffordern, etwas zu tun",
-          "um etwas ersuchen",
-          "einladen"
-        ],
-        "examples": [
-          "Ich bitte dich um Hilfe.",
-          "Er bat sie herein.",
-          "Wir bitten zum Essen."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈbɪtn̩",
-        "number": "plural",
-        "pastTenses": "bat, gebeten haben",
-        "presentTenses": "ich bitte, du bittest, er/sie/es bittet",
-        "tense": "present"
-      },
-      {
-        "source": "bitte",
-        "translation": "please, you're welcome, if you please",
-        "definitions": [
-          "Ausdruck der Höflichkeit bei Bitten",
-          "Ausdruck der Höflichkeit bei Angeboten",
-          "Ausdruck der Höflichkeit bei Entschuldigungen",
-          "Ausdruck der Höflichkeit bei Danksagungen"
-        ],
-        "examples": [
-          "Kannst du mir bitte helfen?",
-          "Möchten Sie bitte eintreten?",
-          "Entschuldigen Sie bitte die Störung.",
-          "Gern geschehen, bitte sehr."
-        ],
-        "partOfSpeech": "adverb",
-        "ipa": "ˈbɪtə",
         "number": "singular"
       }
     ],
@@ -566888,6 +570016,60 @@
     "extraItems": [],
     "explanation": ""
   },
+  "attachment": {
+    "source": "attachment",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Aufsatz",
+        "translation": "essay, attachment, article",
+        "definitions": [
+          "Eine schriftliche Darstellung eines Themas im schulischen Kontext.",
+          "Ein ergänzendes Teil, das auf etwas anderes gesetzt wird.",
+          "Ein wissenschaftlicher oder journalistischer Artikel."
+        ],
+        "examples": [
+          "Er schreibt einen Aufsatz über Goethe.",
+          "Der Schrank hat einen dekorativen Aufsatz.",
+          "Sie veröffentlichte einen Aufsatz in der Fachzeitschrift."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈaʊ̯fˌzat͡s",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Aufsätze"
+      },
+      {
+        "source": "der Anhang",
+        "translation": "appendix, attachment, entourage",
+        "definitions": [
+          "Zusatz am Ende eines Schriftstücks oder Buches",
+          "Datei, die einer E-Mail beigefügt ist",
+          "Personen, die jemanden begleiten oder zu jemandem gehören"
+        ],
+        "examples": [
+          "Siehe Anhang A.",
+          "Die Datei befindet sich im Anhang.",
+          "Er kam mit seinem gesamten Anhang."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈanˌhaŋ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Anhänge"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "to upgrade": {
     "source": "to upgrade",
     "sourceLanguage": "de",
@@ -575748,41 +578930,6 @@
     "extraItems": [],
     "explanation": ""
   },
-  "attachment": {
-    "source": "attachment",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "der Anhang",
-        "translation": "appendix, attachment, entourage",
-        "definitions": [
-          "Zusatz am Ende eines Schriftstücks oder Buches",
-          "Datei, die einer E-Mail beigefügt ist",
-          "Personen, die jemanden begleiten oder zu jemandem gehören"
-        ],
-        "examples": [
-          "Siehe Anhang A.",
-          "Die Datei befindet sich im Anhang.",
-          "Er kam mit seinem gesamten Anhang."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ˈanˌhaŋ",
-        "g": "masculine",
-        "number": "singular",
-        "pluralForm": "die Anhänge"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
   "based on": {
     "source": "based on",
     "sourceLanguage": "de",
@@ -579166,6 +582313,72 @@
     "extraItems": [],
     "explanation": ""
   },
+  "stay on the ball": {
+    "source": "stay on the ball",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "am Ball bleiben",
+        "translation": "stay on the ball, stay with it, keep at it",
+        "definitions": [
+          "Sich weiterhin intensiv mit einer Sache beschäftigen.",
+          "Dranbleiben, nicht aufgeben.",
+          "Auf dem Laufenden bleiben."
+        ],
+        "examples": [
+          "Es ist wichtig, am Ball zu bleiben, um erfolgreich zu sein.",
+          "Auch wenn es schwierig wird, müssen wir am Ball bleiben.",
+          "Um die neuesten Entwicklungen zu verstehen, muss man am Ball bleiben."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "am bal blaɪbn̩",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "stay with it": {
+    "source": "stay with it",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "am Ball bleiben",
+        "translation": "stay on the ball, stay with it, keep at it",
+        "definitions": [
+          "Sich weiterhin intensiv mit einer Sache beschäftigen.",
+          "Dranbleiben, nicht aufgeben.",
+          "Auf dem Laufenden bleiben."
+        ],
+        "examples": [
+          "Es ist wichtig, am Ball zu bleiben, um erfolgreich zu sein.",
+          "Auch wenn es schwierig wird, müssen wir am Ball bleiben.",
+          "Um die neuesten Entwicklungen zu verstehen, muss man am Ball bleiben."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "am bal blaɪbn̩",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "at the beginning": {
     "source": "at the beginning",
     "sourceLanguage": "de",
@@ -580484,6 +583697,72 @@
         ],
         "partOfSpeech": "idiom",
         "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "Alright?": {
+    "source": "Alright?",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Alles klar?",
+        "translation": "Alright?, Okay?, All clear?",
+        "definitions": [
+          "Frage, ob alles in Ordnung ist.",
+          "Frage, ob jemand verstanden hat.",
+          "Bestätigung, dass etwas in Ordnung ist oder verstanden wurde."
+        ],
+        "examples": [
+          "Wir treffen uns um acht, alles klar?",
+          "Nach dem Sturm war zum Glück alles klar.",
+          "Du hast die Anweisungen verstanden, alles klar?"
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ˈaləs klaːɐ̯",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "Okay?": {
+    "source": "Okay?",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Alles klar?",
+        "translation": "Alright?, Okay?, All clear?",
+        "definitions": [
+          "Frage, ob alles in Ordnung ist.",
+          "Frage, ob jemand verstanden hat.",
+          "Bestätigung, dass etwas in Ordnung ist oder verstanden wurde."
+        ],
+        "examples": [
+          "Wir treffen uns um acht, alles klar?",
+          "Nach dem Sturm war zum Glück alles klar.",
+          "Du hast die Anweisungen verstanden, alles klar?"
+        ],
+        "partOfSpeech": "interjection",
+        "ipa": "ˈaləs klaːɐ̯",
         "number": "singular"
       }
     ],
@@ -586734,6 +590013,28 @@
     },
     "items": [
       {
+        "source": "kürzen",
+        "translation": "shorten, reduce, cut, trim",
+        "definitions": [
+          "etwas kürzer machen",
+          "reduzieren",
+          "einen Text oder eine Rede verkürzen",
+          "Haare schneiden, um sie kürzer zu machen"
+        ],
+        "examples": [
+          "Wir müssen die Ausgaben kürzen.",
+          "Der Redakteur wird den Artikel kürzen.",
+          "Sie lässt sich die Haare kürzen.",
+          "Die Firma plant, die Arbeitszeiten zu kürzen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈkʏʁt͡sn̩",
+        "number": "plural",
+        "pastTenses": "kürzte, hat gekürzt",
+        "presentTenses": "ich kürze, du kürzt, er/sie/es kürzt",
+        "tense": "present"
+      },
+      {
         "source": "abkürzen",
         "translation": "to shorten, to cut across, to abbreviate",
         "definitions": [
@@ -586750,6 +590051,26 @@
         "number": "singular",
         "pastTenses": "kürzte ab, hat abgekürzt",
         "presentTenses": "ich kürze ab, du kürzt ab, er/sie/es kürzt ab",
+        "tense": "present"
+      },
+      {
+        "source": "verkürzen",
+        "translation": "shorten, abbreviate, cut short",
+        "definitions": [
+          "etwas kürzer machen",
+          "die Dauer von etwas reduzieren",
+          "eine Strecke oder Distanz verringern"
+        ],
+        "examples": [
+          "Wir müssen den Rock verkürzen.",
+          "Die Besprechung wurde verkürzt.",
+          "Er wollte den Weg verkürzen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "fɛɐ̯ˈkʏʁt͡sn̩",
+        "number": "plural",
+        "pastTenses": "verkürzte, hat verkürzt",
+        "presentTenses": "ich verkürze, du verkürzt, er/sie/es verkürzt",
         "tense": "present"
       }
     ],
