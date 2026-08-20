@@ -88,7 +88,7 @@ export class StudyStepsComponent implements OnInit {
   }
 
   getPreviewUrl(step: StudyFlowType): string {
-    return `/settings/preview-study-step?step=${step.id}&sourceLanguage=${this.sourceLanguage}&translationLanguage=${this.translationLanguage}`;
+    return `settings/preview-study-step?step=${step.id}&sourceLanguage=${this.sourceLanguage}&translationLanguage=${this.translationLanguage}`;
   }
 
   async onToggle(index: number) {
