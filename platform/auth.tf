@@ -315,19 +315,29 @@ resource "aws_route53_record" "auth-cognito-A" {
 }
 
 locals {
-  auto_sign_in_confirmation_url   = "https://${local.app_domain}/${local.auto_sign_in_confirmation_path}"
-  manual_sign_in_confurmation_url = "https://${local.app_domain}/${local.manual_sign_in_confirmation_path}"
+  auto_sign_in_confirmation_url   = "${local.app_url}/${local.auto_sign_in_confirmation_path}"
+  manual_sign_in_confurmation_url = "${local.app_url}/${local.manual_sign_in_confirmation_path}"
   mobile_app_auth_url             = "vocably-pro://auth"
+
+  # app.vocably.pro only 301s to local.app_url now, but extensions that were
+  # installed before the move still start their OAuth flow there, and Cognito
+  # matches redirect_uri exactly.
+  legacy_app_urls = [
+    local.legacy_app_url,
+    "${local.legacy_app_url}/${local.auto_sign_in_confirmation_path}",
+    "${local.legacy_app_url}/${local.manual_sign_in_confirmation_path}",
+  ]
 }
 
 locals {
   available_urls = concat(
     [
-      "https://${local.app_domain}",
+      local.app_url,
       local.auto_sign_in_confirmation_url,
       local.manual_sign_in_confurmation_url,
       local.mobile_app_auth_url
     ],
+    local.legacy_app_urls,
     local.dev_urls
   )
 }

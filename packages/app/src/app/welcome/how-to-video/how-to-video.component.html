@@ -2,22 +2,22 @@
   controls
   style="width: 100%; cursor: pointer"
   class="rounded"
-  [poster]="'/assets/how-to/' + videoLanguage + '/poster.png'"
+  [poster]="'assets/how-to/' + videoLanguage + '/poster.png'"
   (play)="onPlay()"
 >
   <source
-    [src]="'/assets/how-to/' + videoLanguage + '/how-to.webm'"
+    [src]="'assets/how-to/' + videoLanguage + '/how-to.webm'"
     type="video/webm"
   />
   <source
-    [src]="'/assets/how-to/' + videoLanguage + '/how-to.mp4'"
+    [src]="'assets/how-to/' + videoLanguage + '/how-to.mp4'"
     type="video/mp4"
   />
   <track
     kind="subtitles"
     [label]="languageList[videoLanguage]"
     [srclang]="videoLanguage"
-    [src]="'/assets/how-to/' + videoLanguage + '/how-to.vtt'"
+    [src]="'assets/how-to/' + videoLanguage + '/how-to.vtt'"
     default
   />
   <track
@@ -25,7 +25,7 @@
     kind="subtitles"
     srclang="ar"
     label="Arabic"
-    src="/assets/how-to/en/ar.vtt"
+    src="assets/how-to/en/ar.vtt"
     default
   />
   <track
@@ -33,7 +33,7 @@
     kind="subtitles"
     srclang="zh-CN"
     label="Chinese"
-    src="/assets/how-to/en/zh.vtt"
+    src="assets/how-to/en/zh.vtt"
     default
   />
   <track
@@ -41,7 +41,7 @@
     kind="subtitles"
     srclang="cs"
     label="Czech"
-    src="/assets/how-to/en/cs.vtt"
+    src="assets/how-to/en/cs.vtt"
     default
   />
   <track
@@ -49,7 +49,7 @@
     kind="subtitles"
     srclang="el"
     label="Greek"
-    src="/assets/how-to/en/el.vtt"
+    src="assets/how-to/en/el.vtt"
     default
   />
   <track
@@ -57,7 +57,7 @@
     kind="subtitles"
     srclang="hi"
     label="Hindi"
-    src="/assets/how-to/en/hi.vtt"
+    src="assets/how-to/en/hi.vtt"
     default
   />
   <track
@@ -65,7 +65,7 @@
     kind="subtitles"
     srclang="hu"
     label="Hungarian"
-    src="/assets/how-to/en/hu.vtt"
+    src="assets/how-to/en/hu.vtt"
     default
   />
   <track
@@ -73,7 +73,7 @@
     kind="subtitles"
     srclang="id"
     label="Indonesian"
-    src="/assets/how-to/en/id.vtt"
+    src="assets/how-to/en/id.vtt"
     default
   />
   <track
@@ -81,7 +81,7 @@
     kind="subtitles"
     srclang="ja"
     label="Japanese"
-    src="/assets/how-to/en/ja.vtt"
+    src="assets/how-to/en/ja.vtt"
     default
   />
   <track
@@ -89,7 +89,7 @@
     kind="subtitles"
     srclang="fa"
     label="Persian"
-    src="/assets/how-to/en/fa.vtt"
+    src="assets/how-to/en/fa.vtt"
     default
   />
   <track
@@ -97,7 +97,7 @@
     kind="subtitles"
     srclang="pl"
     label="Polish"
-    src="/assets/how-to/en/pl.vtt"
+    src="assets/how-to/en/pl.vtt"
     default
   />
   <track
@@ -105,7 +105,7 @@
     kind="subtitles"
     srclang="th"
     label="Thai"
-    src="/assets/how-to/en/th.vtt"
+    src="assets/how-to/en/th.vtt"
     default
   />
 </video>

@@ -1,6 +1,7 @@
 locals {
   auth_domain                      = "auth.${var.root_domain}"
   app_domain                       = "app.${var.root_domain}"
+  app_path                         = "app"
   api_domain                       = "api.${var.root_domain}"
   www_api_domain                   = "www-api.${var.root_domain}"
   public_api_domain                = "public-api.${var.root_domain}"
