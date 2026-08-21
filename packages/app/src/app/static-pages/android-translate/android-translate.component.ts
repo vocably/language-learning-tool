@@ -165,7 +165,7 @@ export class AndroidTranslateComponent implements OnInit, OnDestroy {
 
           return from(
             fetch(
-              `/assets/language-text-examples/${params['sourceLanguage']}.html`
+              `assets/language-text-examples/${params['sourceLanguage']}.html`
             ).then((res) => {
               if (!res.ok) {
                 throw new Error('No example available');

@@ -85,7 +85,7 @@ Select word on page
 
 ### 2. Web Dashboard
 
-Full-page Angular SPA at `app.vocably.pro`. Route-based lazy-loaded modules.
+Full-page Angular SPA at `vocably.pro/app` (`app.vocably.pro` 301s there). Route-based lazy-loaded modules.
 
 **Screens:**
 

@@ -1,4 +1,5 @@
 import { AppAuthStorage } from '@vocably/pontis';
+import { appBaseUrl } from './app-base-url';
 import { merge } from 'lodash-es';
 import { environment } from './environments/environment';
 import { extensionId } from './extension';
@@ -18,14 +19,15 @@ if (
 }
 
 const constructRedirectSignInUrl = (): string => {
-  const basePath = `${location.protocol}//${location.host}`;
-  const currentPath = location.pathname.substring(1);
+  const currentPath = location.href
+    .replace(/[?#].*$/, '')
+    .substring(appBaseUrl.length + 1);
 
   if ([autoSignInPath, autoSignInConfirmationPath].includes(currentPath)) {
-    return basePath + `/${autoSignInConfirmationPath}`;
+    return appBaseUrl + `/${autoSignInConfirmationPath}`;
   }
 
-  return basePath + `/${manualSignInConfirmationPath}`;
+  return appBaseUrl + `/${manualSignInConfirmationPath}`;
 };
 
 export const authConfig = {
@@ -36,7 +38,7 @@ export const authConfig = {
     {
       oauth: {
         redirectSignIn: constructRedirectSignInUrl(),
-        redirectSignOut: `${location.protocol}//${location.host}`,
+        redirectSignOut: appBaseUrl,
       },
     },
     environment.auth

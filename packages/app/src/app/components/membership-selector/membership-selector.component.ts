@@ -11,6 +11,7 @@ import {
 } from '../../subscription-products';
 import { UserStaticMetadata } from '@vocably/model';
 import { getUserStaticMetadata } from '@vocably/api';
+import { appBaseUrl } from '../../../app-base-url';
 
 @Component({
   selector: 'app-membership-selector',
@@ -60,8 +61,7 @@ export class MembershipSelectorComponent implements OnInit, OnDestroy {
             revenue_cat_id: userData.sub,
           },
           settings: {
-            successUrl:
-              location.origin + `/subscribe/success/${product.priceId}`,
+            successUrl: appBaseUrl + `/subscribe/success/${product.priceId}`,
           },
         });
       });

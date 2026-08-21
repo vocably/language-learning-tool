@@ -1,6 +1,7 @@
 locals {
   auth_domain                      = "auth.${var.root_domain}"
   app_domain                       = "app.${var.root_domain}"
+  app_path                         = "app"
   api_domain                       = "api.${var.root_domain}"
   www_api_domain                   = "www-api.${var.root_domain}"
   public_api_domain                = "public-api.${var.root_domain}"
@@ -20,9 +21,12 @@ locals {
   manual_sign_in_confirmation_path = "portal"
   www_base_url                     = "https://${var.root_domain}"
   dev_urls = [
-    "http://localhost:8030",
-    "http://localhost:8030/${local.auto_sign_in_confirmation_path}",
-    "http://localhost:8030/${local.manual_sign_in_confirmation_path}",
+    "http://localhost:8030/app",
+    "http://localhost:8030/app/${local.auto_sign_in_confirmation_path}",
+    "http://localhost:8030/app/${local.manual_sign_in_confirmation_path}",
+    "http://localhost:8050/app",
+    "http://localhost:8050/app/${local.auto_sign_in_confirmation_path}",
+    "http://localhost:8050/app/${local.manual_sign_in_confirmation_path}",
     "https://oauth.pstmn.io/v1/callback"
   ]
 }
