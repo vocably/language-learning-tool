@@ -116,6 +116,7 @@
               "outputHashing": "all"
             },
             "development": {
+              "baseHref": "/app/",
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
