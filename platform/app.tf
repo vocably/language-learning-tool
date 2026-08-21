@@ -1,6 +1,13 @@
 locals {
   app_bucket = "vocably-${terraform.workspace}-app"
-  app_url    = "https://${local.app_domain}"
+
+  # The bucket below is still the app's origin, but it is now reached through
+  # the www distribution under /app rather than through app.vocably.pro.
+  app_url = "${local.www_base_url}/${local.app_path}"
+
+  # app.vocably.pro only redirects to local.app_url now, but old extension
+  # builds and bookmarks still point at it.
+  legacy_app_url = "https://${local.app_domain}"
 }
 
 resource "aws_s3_bucket" "app" {
@@ -56,6 +63,18 @@ resource "aws_cloudfront_origin_access_identity" "app" {
   comment = "${local.app_bucket}-cloudfront-origin-access-identity"
 }
 
+resource "aws_cloudfront_function" "app_redirect" {
+  name    = "vocably-${terraform.workspace}-app-redirect"
+  runtime = "cloudfront-js-2.0"
+  comment = "Redirects ${local.app_domain} to ${local.app_url}"
+  publish = true
+
+  code = templatefile("${path.module}/cloudfront-functions/app-redirect.js", {
+    app_url    = local.app_url
+    app_domain = local.app_domain
+  })
+}
+
 resource "aws_cloudfront_distribution" "app" {
   origin {
     domain_name = aws_s3_bucket.app.bucket_regional_domain_name
@@ -77,6 +96,13 @@ resource "aws_cloudfront_distribution" "app" {
     cached_methods         = ["HEAD", "GET"]
     target_origin_id       = aws_s3_bucket.app.bucket_regional_domain_name
     viewer_protocol_policy = "redirect-to-https"
+
+    # Viewer-request functions run on every request and their responses are not
+    # cached, so this distribution never reaches its origin any more.
+    function_association {
+      event_type   = "viewer-request"
+      function_arn = aws_cloudfront_function.app_redirect.arn
+    }
 
     forwarded_values {
       query_string = false

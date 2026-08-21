@@ -123,6 +123,14 @@ module.exports = (env) => {
       port: 8050,
       hot: false,
       liveReload: true,
+      proxy: {
+        '/app': {
+          target: 'http://localhost:8030', // the other app's real port
+          changeOrigin: true, // rewrites the Host header to match target
+          secure: false, // set false if target uses a self-signed https cert
+          ws: true, // forward websocket upgrades (needed for HMR)
+        },
+      },
     },
   };
 };

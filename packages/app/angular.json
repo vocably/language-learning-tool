@@ -94,6 +94,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/app/",
               "budgets": [
                 {
                   "type": "initial",
@@ -115,6 +116,7 @@
               "outputHashing": "all"
             },
             "development": {
+              "baseHref": "/app/",
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,

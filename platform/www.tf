@@ -95,6 +95,17 @@ resource "aws_cloudfront_origin_access_identity" "www" {
   comment = "${local.www_bucket}-cloudfront-origin-access-identity"
 }
 
+resource "aws_cloudfront_function" "www_app" {
+  name    = "vocably-${terraform.workspace}-www-app"
+  runtime = "cloudfront-js-2.0"
+  comment = "Serves the app bucket under /${local.app_path} of ${var.root_domain}"
+  publish = true
+
+  code = templatefile("${path.module}/cloudfront-functions/www-app.js", {
+    app_path = local.app_path
+  })
+}
+
 resource "aws_cloudfront_distribution" "www" {
   origin {
     domain_name = aws_s3_bucket.www.bucket_regional_domain_name
@@ -102,6 +113,15 @@ resource "aws_cloudfront_distribution" "www" {
 
     s3_origin_config {
       origin_access_identity = aws_cloudfront_origin_access_identity.www.cloudfront_access_identity_path
+    }
+  }
+
+  origin {
+    domain_name = aws_s3_bucket.app.bucket_regional_domain_name
+    origin_id   = aws_s3_bucket.app.bucket_regional_domain_name
+
+    s3_origin_config {
+      origin_access_identity = aws_cloudfront_origin_access_identity.app.cloudfront_access_identity_path
     }
   }
 
@@ -116,6 +136,50 @@ resource "aws_cloudfront_distribution" "www" {
     cached_methods         = ["HEAD", "GET"]
     target_origin_id       = aws_s3_bucket.www.bucket_regional_domain_name
     viewer_protocol_policy = "redirect-to-https"
+
+    forwarded_values {
+      query_string = false
+
+      cookies {
+        forward = "none"
+      }
+    }
+  }
+
+  # Two patterns instead of a single "/app*", which would also swallow www
+  # pages such as /apple-shortcuts.
+  ordered_cache_behavior {
+    path_pattern           = "/${local.app_path}"
+    allowed_methods        = ["HEAD", "GET"]
+    cached_methods         = ["HEAD", "GET"]
+    target_origin_id       = aws_s3_bucket.app.bucket_regional_domain_name
+    viewer_protocol_policy = "redirect-to-https"
+
+    function_association {
+      event_type   = "viewer-request"
+      function_arn = aws_cloudfront_function.www_app.arn
+    }
+
+    forwarded_values {
+      query_string = false
+
+      cookies {
+        forward = "none"
+      }
+    }
+  }
+
+  ordered_cache_behavior {
+    path_pattern           = "/${local.app_path}/*"
+    allowed_methods        = ["HEAD", "GET"]
+    cached_methods         = ["HEAD", "GET"]
+    target_origin_id       = aws_s3_bucket.app.bucket_regional_domain_name
+    viewer_protocol_policy = "redirect-to-https"
+
+    function_association {
+      event_type   = "viewer-request"
+      function_arn = aws_cloudfront_function.www_app.arn
+    }
 
     forwarded_values {
       query_string = false
