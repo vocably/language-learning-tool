@@ -49,7 +49,7 @@ export const detectInputTypeGemini = async ({
               },
               isDirect: {
                 type: 'boolean',
-                description: `true when the input ${quiteLikelyAWord ? 'is valid in' : 'can be'} ${languageList[language]}. false when the input is not valid ${languageList[language]}`,
+                description: `false when the input is not in ${languageList[language]}. true when the input ${quiteLikelyAWord ? 'is valid in' : 'can be'} ${languageList[language]}`,
               },
             },
             required: ['type', 'isDirect'],

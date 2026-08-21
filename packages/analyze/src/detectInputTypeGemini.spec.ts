@@ -264,4 +264,36 @@ describe('detectInputTypeGemini', () => {
     expect(responseResult.value.type).toEqual('word');
     expect(responseResult.value.isDirect).toEqual(false);
   });
+
+  it('german bay', async () => {
+    const responseResult = await detectInputTypeGemini({
+      language: 'de',
+      source: 'bay',
+    });
+
+    console.log(inspect(responseResult));
+
+    expect(responseResult.success).toEqual(true);
+    if (responseResult.success === false) {
+      return;
+    }
+    expect(responseResult.value.type).toEqual('word');
+    expect(responseResult.value.isDirect).toEqual(false);
+  });
+
+  it('creeren nl', async () => {
+    const responseResult = await detectInputTypeGemini({
+      language: 'nl',
+      source: 'creeren',
+    });
+
+    console.log(inspect(responseResult));
+
+    expect(responseResult.success).toEqual(true);
+    if (responseResult.success === false) {
+      return;
+    }
+    expect(responseResult.value.type).toEqual('word');
+    expect(responseResult.value.isDirect).toEqual(true);
+  });
 });

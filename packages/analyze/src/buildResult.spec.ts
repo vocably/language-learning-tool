@@ -1113,4 +1113,18 @@ describe('integration check for translate lambda', () => {
 
     expect(result.value.items[0].translation).toEqual('');
   });
+
+  it('bay to German', async () => {
+    const result = await buildResult({
+      sourceLanguage: 'de',
+      targetLanguage: 'en',
+      source: 'bay',
+    });
+
+    if (result.success === false) {
+      throw 'Unexpected result';
+    }
+
+    expect(result.value.items[0].source).toEqual('die Bucht');
+  });
 });
