@@ -1099,4 +1099,18 @@ describe('integration check for translate lambda', () => {
 
     expect(result.value.items[0].source).toEqual('adonnante');
   });
+
+  it('avoid translating en-US to en-GB and visa versa', async () => {
+    const result = await buildResult({
+      sourceLanguage: 'en',
+      targetLanguage: 'en-GB',
+      source: 'apple',
+    });
+
+    if (result.success === false) {
+      throw 'Unexpected result';
+    }
+
+    expect(result.value.items[0].translation).toEqual('');
+  });
 });

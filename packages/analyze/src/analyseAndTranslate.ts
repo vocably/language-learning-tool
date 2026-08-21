@@ -71,6 +71,24 @@ export const aiAnalysisToItem = ({
   return analysisItem;
 };
 
+const translationMakesSense = (
+  sourceLanguage: GoogleLanguage,
+  targetLanguage: GoogleLanguage
+): boolean => {
+  if (sourceLanguage === targetLanguage) {
+    return false;
+  }
+
+  if (
+    ['en', 'en-GB'].includes(sourceLanguage) &&
+    ['en', 'en-GB'].includes(targetLanguage)
+  ) {
+    return false;
+  }
+
+  return true;
+};
+
 export const analyseAndTranslate = async (
   payload: AnalyseAndTranslatePayload
 ): Promise<Result<AnalysisItem>> => {
@@ -92,7 +110,7 @@ export const analyseAndTranslate = async (
 
   let translations: string[] = [];
 
-  if (payload.sourceLanguage !== payload.targetLanguage) {
+  if (translationMakesSense(payload.sourceLanguage, payload.targetLanguage)) {
     const translationResult = await translateUnitOfSpeech({
       source: payload.source,
       sourceLanguage: payload.sourceLanguage,
