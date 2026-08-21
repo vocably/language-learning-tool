@@ -1,4 +1,4 @@
-import { trimArticle } from './trimArticle';
+import { trimArticle, trimSenselessArticle } from './trimArticle';
 
 describe('trimArticle', () => {
   it('nl', () => {
@@ -28,6 +28,22 @@ describe('trimArticle', () => {
 
     expect(trimArticle('it', 'lo studente')).toEqual({
       source: 'studente',
+    });
+  });
+
+  it('french', () => {
+    expect(trimArticle('fr', "l'adonnante")).toEqual({
+      source: 'adonnante',
+    });
+  });
+
+  describe('trimSenselessArticle', () => {
+    it('french', () => {
+      expect(trimSenselessArticle('fr', "l'adonnante")).toEqual('adonnante');
+      expect(trimSenselessArticle('fr', 'la adonnante')).toEqual('adonnante');
+      expect(trimSenselessArticle('fr', 'un adonnante')).toEqual(
+        'un adonnante'
+      );
     });
   });
 });

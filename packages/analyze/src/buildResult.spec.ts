@@ -1085,4 +1085,18 @@ describe('integration check for translate lambda', () => {
 
     expect(result.value.items[0].partOfSpeech).toEqual('noun');
   });
+
+  it('french articles', async () => {
+    const result = await buildResult({
+      sourceLanguage: 'fr',
+      targetLanguage: 'en',
+      source: "l'adonnante",
+    });
+
+    if (result.success === false) {
+      throw 'Unexpected result';
+    }
+
+    expect(result.value.items[0].source).toEqual('adonnante');
+  });
 });
