@@ -1053,12 +1053,31 @@
     },
     "items": [
       {
-        "source": "üblich",
-        "translation": "common, usual",
-        "definitions": ["allgemein anerkannt", "gängigerweise vorkommend"],
-        "examples": ["die übliche Weise", "wie üblich"],
+        "source": "gemeinsam",
+        "translation": "common, joint",
+        "definitions": [
+          "zusammen getan oder vorhanden",
+          "verbunden durch gemeinsame Interessen oder Ziele"
+        ],
+        "examples": ["Wir arbeiten gemeinsam.", "Ein gemeinsamer Freund."],
         "partOfSpeech": "adjective",
-        "ipa": "ˈʔyːblɪç",
+        "ipa": "ɡəˈmaɪ̯nzaːm"
+      },
+      {
+        "source": "allgemein",
+        "translation": "general, common, main",
+        "definitions": [
+          "nicht speziell auf eine Sache bezogen",
+          "für viele oder alle Personen zutreffend",
+          "überwiegend oder hauptsächlich"
+        ],
+        "examples": [
+          "Allgemeine Informationen",
+          "Eine allgemeine Regel",
+          "Allgemein bekannt"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈalɡəˌmaɪn",
         "number": "singular"
       },
       {
@@ -1075,90 +1094,12 @@
         "number": "singular"
       },
       {
-        "source": "gemeinsam",
-        "translation": "common, joint",
-        "definitions": [
-          "zusammen getan oder vorhanden",
-          "verbunden durch gemeinsame Interessen oder Ziele"
-        ],
-        "examples": ["Wir arbeiten gemeinsam.", "Ein gemeinsamer Freund."],
+        "source": "üblich",
+        "translation": "common, usual",
+        "definitions": ["allgemein anerkannt", "gängigerweise vorkommend"],
+        "examples": ["die übliche Weise", "wie üblich"],
         "partOfSpeech": "adjective",
-        "ipa": "ɡəˈmaɪ̯nzaːm"
-      },
-      {
-        "source": "populär",
-        "translation": "popular, common, favoUrite",
-        "definitions": [
-          "bei vielen Menschen angesehen",
-          "allgemein verbreitet",
-          "beliebt"
-        ],
-        "examples": [
-          "Der Sänger ist sehr populär.",
-          "Das Buch ist populär geworden.",
-          "Eine populäre Theorie"
-        ],
-        "partOfSpeech": "adjective",
-        "ipa": "po.puˈlɛːɐ̯",
-        "number": "singular"
-      },
-      {
-        "source": "allgemeines",
-        "translation": "general, common",
-        "definitions": ["allgemein; nicht spezifisch", "allgemein gültig"],
-        "examples": ["allgemeine Regeln", "allgemeine Informationen"],
-        "partOfSpeech": "adjective",
-        "ipa": "ˌalɡəˈmaɪ̯nəs",
-        "number": "singular"
-      },
-      {
-        "source": "allgemein",
-        "translation": "general, common, main",
-        "definitions": [
-          "nicht speziell auf eine Sache bezogen",
-          "für viele oder alle Personen zutreffend",
-          "überwiegend oder hauptsächlich"
-        ],
-        "examples": [
-          "Allgemeine Informationen",
-          "Eine allgemeine Regel",
-          "Allgemein bekannt"
-        ],
-        "partOfSpeech": "adjective",
-        "ipa": "ˈalɡəˌmaɪn",
-        "number": "singular"
-      },
-      {
-        "source": "allgemeine",
-        "translation": "general, common",
-        "definitions": [
-          "im Allgemeinen vorkommend oder zutreffend",
-          "nicht auf eine spezielle Art oder Weise beschränkt"
-        ],
-        "examples": [
-          "allgemeine Regeln",
-          "allgemeine Informationen",
-          "eine allgemeine Meinung"
-        ],
-        "partOfSpeech": "adjective",
-        "ipa": "ˈalɡəˌmaɪ̯nə",
-        "number": "singular"
-      },
-      {
-        "source": "allgemein",
-        "translation": "general, common, main",
-        "definitions": [
-          "nicht speziell auf eine Sache bezogen",
-          "für viele oder alle Personen zutreffend",
-          "überwiegend oder hauptsächlich"
-        ],
-        "examples": [
-          "Allgemeine Informationen",
-          "Eine allgemeine Regel",
-          "Allgemein bekannt"
-        ],
-        "partOfSpeech": "adjective",
-        "ipa": "ˈalɡəˌmaɪn",
+        "ipa": "ˈʔyːblɪç",
         "number": "singular"
       },
       {
@@ -1168,34 +1109,6 @@
         "examples": ["häufig gestellte Fragen", "häufige Besucher"],
         "partOfSpeech": "adjective",
         "ipa": "ˈhɔʏfɪç",
-        "number": "singular"
-      },
-      {
-        "source": "alltäglich",
-        "translation": "everyday, common",
-        "definitions": [
-          "gewöhnlich, normal, jeden Tag vorkommend",
-          "nicht besonders oder außergewöhnlich"
-        ],
-        "examples": [
-          "alltägliche Probleme",
-          "alltägliche Kleidung",
-          "alltägliche Ereignisse"
-        ],
-        "partOfSpeech": "adjective",
-        "ipa": "ˈalˌtɛːɡlɪç",
-        "number": "singular"
-      },
-      {
-        "source": "bekannt",
-        "translation": "well-known, common",
-        "definitions": ["weit verbreitet", "allgemein bekannt"],
-        "examples": [
-          "ein bekannter Künstler",
-          "bekannt durch Funk und Fernsehen"
-        ],
-        "partOfSpeech": "adjective",
-        "ipa": "bəˈkant",
         "number": "singular"
       }
     ],
@@ -12352,6 +12265,100 @@
         ],
         "partOfSpeech": "adjective",
         "ipa": "ˈɔɪ̯sɐ",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "corrosive": {
+    "source": "corrosive",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "ätzendes",
+        "translation": "corrosive, caustic",
+        "definitions": [
+          "korrosiv, zersetzend",
+          "sarkastisch, beißend (über Bemerkungen, Humor)"
+        ],
+        "examples": ["ätzendes Mittel", "ätzendes Lachen", "ätzendes Gefühl"],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈɛt͡sn̩dəs",
+        "g": "neuter",
+        "number": "singular"
+      },
+      {
+        "source": "ätzend",
+        "translation": "caustic, corrosive",
+        "definitions": ["chemisch zersetzend", "unangenehm, nervig"],
+        "examples": [
+          "Die Chemikalie ist ätzend.",
+          "Sein Verhalten ist ätzend."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈɛːtsn̩t",
+        "number": "singular"
+      },
+      {
+        "source": "ätzend",
+        "translation": "caustic, corrosive",
+        "definitions": ["chemisch zersetzend", "unangenehm, nervig"],
+        "examples": [
+          "Die Chemikalie ist ätzend.",
+          "Sein Verhalten ist ätzend."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈɛːtsn̩t",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "caustic": {
+    "source": "caustic",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "ätzend",
+        "translation": "caustic, corrosive",
+        "definitions": ["chemisch zersetzend", "unangenehm, nervig"],
+        "examples": [
+          "Die Chemikalie ist ätzend.",
+          "Sein Verhalten ist ätzend."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈɛːtsn̩t",
+        "number": "singular"
+      },
+      {
+        "source": "ätzendes",
+        "translation": "corrosive, caustic",
+        "definitions": [
+          "korrosiv, zersetzend",
+          "sarkastisch, beißend (über Bemerkungen, Humor)"
+        ],
+        "examples": ["ätzendes Mittel", "ätzendes Lachen", "ätzendes Gefühl"],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈɛt͡sn̩dəs",
+        "g": "neuter",
         "number": "singular"
       }
     ],
@@ -23757,6 +23764,158 @@
     "extraItems": [],
     "explanation": ""
   },
+  "to reject": {
+    "source": "to reject",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "zurückzuweisen",
+        "translation": "to reject, to dismiss, to repudiate",
+        "definitions": [
+          "etwas oder jemanden ablehnen oder nicht akzeptieren",
+          "eine Behauptung oder Anschuldigung als falsch oder unbegründet zurückweisen",
+          "jemanden abweisen oder nicht zulassen"
+        ],
+        "examples": [
+          "Es ist wichtig, solche Vorwürfe entschieden zurückzuweisen.",
+          "Die Aufgabe ist, die Beschwerde formell zurückzuweisen.",
+          "Man muss lernen, unfaire Forderungen zurückzuweisen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "tsuˈʁʏktsuˌvaɪ̯zn̩",
+        "number": "singular",
+        "pastTenses": "wies zurück, hat zurückgewiesen",
+        "presentTenses": "ich weise zurück, du weist zurück, er/sie/es weist zurück",
+        "tense": "present"
+      },
+      {
+        "source": "zurückweisen",
+        "translation": "reject, refuse, repudiate",
+        "definitions": [
+          "etwas oder jemanden ablehnen, nicht akzeptieren",
+          "einen Antrag, eine Beschwerde oder Ähnliches nicht zulassen",
+          "jemanden abweisen, nicht empfangen"
+        ],
+        "examples": [
+          "Er musste das Angebot zurückweisen.",
+          "Die Kommission wird den Antrag zurückweisen.",
+          "Sie hat alle Vorwürfe zurückgewiesen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "t͡suˈʁʏkˌvaɪ̯zn̩",
+        "number": "singular",
+        "pastTenses": "wies zurück, hat zurückgewiesen",
+        "presentTenses": "ich weise zurück, du weist zurück, er/sie/es weist zurück",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to dismiss": {
+    "source": "to dismiss",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "verabschieden",
+        "translation": "to dismiss, to say goodbye, to pass",
+        "definitions": [
+          "jemanden entlassen oder in den Ruhestand schicken",
+          "sich von jemandem oder etwas trennen",
+          "ein Gesetz oder einen Beschluss annehmen"
+        ],
+        "examples": [
+          "Wir müssen uns jetzt verabschieden.",
+          "Das Parlament wird das Gesetz verabschieden.",
+          "Sie haben den Mitarbeiter verabschiedet."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "fɛɐ̯ˈʔapʃiːdn̩",
+        "number": "singular",
+        "pastTenses": "verabschiedete, hat verabschiedet",
+        "presentTenses": "ich verabschiede, du verabschiedest, er/sie/es verabschiedet",
+        "tense": "present"
+      },
+      {
+        "source": "entlassen",
+        "translation": "to dismiss, to release, to discharge",
+        "definitions": [
+          "Jemanden aus einer Anstellung oder Position entfernen.",
+          "Jemanden aus dem Gefängnis oder einer Haft entlassen.",
+          "Jemanden aus dem Krankenhaus entlassen."
+        ],
+        "examples": [
+          "Der Chef wird ihn entlassen.",
+          "Er wurde aus dem Gefängnis entlassen.",
+          "Die Ärzte entlassen den Patienten morgen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ɛntˈlasn̩",
+        "number": "plural",
+        "pastTenses": "entließ, hat entlassen",
+        "presentTenses": "ich entlasse, du entlässt, er/sie/es entlässt",
+        "tense": "present"
+      },
+      {
+        "source": "zurückzuweisen",
+        "translation": "to reject, to dismiss, to repudiate",
+        "definitions": [
+          "etwas oder jemanden ablehnen oder nicht akzeptieren",
+          "eine Behauptung oder Anschuldigung als falsch oder unbegründet zurückweisen",
+          "jemanden abweisen oder nicht zulassen"
+        ],
+        "examples": [
+          "Es ist wichtig, solche Vorwürfe entschieden zurückzuweisen.",
+          "Die Aufgabe ist, die Beschwerde formell zurückzuweisen.",
+          "Man muss lernen, unfaire Forderungen zurückzuweisen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "tsuˈʁʏktsuˌvaɪ̯zn̩",
+        "number": "singular",
+        "pastTenses": "wies zurück, hat zurückgewiesen",
+        "presentTenses": "ich weise zurück, du weist zurück, er/sie/es weist zurück",
+        "tense": "present"
+      },
+      {
+        "source": "zurückweisen",
+        "translation": "reject, refuse, repudiate",
+        "definitions": [
+          "etwas oder jemanden ablehnen, nicht akzeptieren",
+          "einen Antrag, eine Beschwerde oder Ähnliches nicht zulassen",
+          "jemanden abweisen, nicht empfangen"
+        ],
+        "examples": [
+          "Er musste das Angebot zurückweisen.",
+          "Die Kommission wird den Antrag zurückweisen.",
+          "Sie hat alle Vorwürfe zurückgewiesen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "t͡suˈʁʏkˌvaɪ̯zn̩",
+        "number": "singular",
+        "pastTenses": "wies zurück, hat zurückgewiesen",
+        "presentTenses": "ich weise zurück, du weist zurück, er/sie/es weist zurück",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "pull back": {
     "source": "pull back",
     "sourceLanguage": "de",
@@ -23932,6 +24091,26 @@
         "pluralForm": "die Zurückweisungen"
       },
       {
+        "source": "zurückweisen",
+        "translation": "reject, refuse, repudiate",
+        "definitions": [
+          "etwas oder jemanden ablehnen, nicht akzeptieren",
+          "einen Antrag, eine Beschwerde oder Ähnliches nicht zulassen",
+          "jemanden abweisen, nicht empfangen"
+        ],
+        "examples": [
+          "Er musste das Angebot zurückweisen.",
+          "Die Kommission wird den Antrag zurückweisen.",
+          "Sie hat alle Vorwürfe zurückgewiesen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "t͡suˈʁʏkˌvaɪ̯zn̩",
+        "number": "singular",
+        "pastTenses": "wies zurück, hat zurückgewiesen",
+        "presentTenses": "ich weise zurück, du weist zurück, er/sie/es weist zurück",
+        "tense": "present"
+      },
+      {
         "source": "die Rückweisung",
         "translation": "rejection, repudiation, return",
         "definitions": [
@@ -24040,6 +24219,26 @@
         "pluralForm": "die Zurückweisungen"
       },
       {
+        "source": "zurückweisen",
+        "translation": "reject, refuse, repudiate",
+        "definitions": [
+          "etwas oder jemanden ablehnen, nicht akzeptieren",
+          "einen Antrag, eine Beschwerde oder Ähnliches nicht zulassen",
+          "jemanden abweisen, nicht empfangen"
+        ],
+        "examples": [
+          "Er musste das Angebot zurückweisen.",
+          "Die Kommission wird den Antrag zurückweisen.",
+          "Sie hat alle Vorwürfe zurückgewiesen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "t͡suˈʁʏkˌvaɪ̯zn̩",
+        "number": "singular",
+        "pastTenses": "wies zurück, hat zurückgewiesen",
+        "presentTenses": "ich weise zurück, du weist zurück, er/sie/es weist zurück",
+        "tense": "present"
+      },
+      {
         "source": "die Ablehnung",
         "translation": "rejection, refusal",
         "definitions": [
@@ -24056,6 +24255,158 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Ablehnungen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "reject": {
+    "source": "reject",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "zurückweisen",
+        "translation": "reject, refuse, repudiate",
+        "definitions": [
+          "etwas oder jemanden ablehnen, nicht akzeptieren",
+          "einen Antrag, eine Beschwerde oder Ähnliches nicht zulassen",
+          "jemanden abweisen, nicht empfangen"
+        ],
+        "examples": [
+          "Er musste das Angebot zurückweisen.",
+          "Die Kommission wird den Antrag zurückweisen.",
+          "Sie hat alle Vorwürfe zurückgewiesen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "t͡suˈʁʏkˌvaɪ̯zn̩",
+        "number": "singular",
+        "pastTenses": "wies zurück, hat zurückgewiesen",
+        "presentTenses": "ich weise zurück, du weist zurück, er/sie/es weist zurück",
+        "tense": "present"
+      },
+      {
+        "source": "verwerfen",
+        "translation": "reject, discard, abandon, dislocate",
+        "definitions": [
+          "etwas als ungeeignet ablehnen",
+          "einen Plan oder eine Idee aufgeben",
+          "sich krümmen oder verziehen (Holz)"
+        ],
+        "examples": [
+          "Er musste den ersten Entwurf verwerfen.",
+          "Das Holz hat sich durch die Feuchtigkeit verworfen.",
+          "Wir sollten diese Option nicht gleich verwerfen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "fɛɐ̯ˈvɛʁfn̩",
+        "number": "singular",
+        "pastTenses": "hat verworfen, verwarf",
+        "presentTenses": "ich verwerfe, du verwirfst, er/sie/es verwirft",
+        "tense": "present"
+      },
+      {
+        "source": "ablehnen",
+        "translation": "reject, decline, refuse",
+        "definitions": [
+          "etwas nicht annehmen oder akzeptieren",
+          "einen Vorschlag oder Antrag zurückweisen",
+          "eine Person oder Sache nicht mögen oder missbilligen"
+        ],
+        "examples": [
+          "Er wird den Vorschlag ablehnen.",
+          "Sie lehnte das Geschenk ab.",
+          "Wir müssen die Idee ablehnen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈapˌleːnən",
+        "number": "singular",
+        "pastTenses": "lehnte ab, hat abgelehnt",
+        "presentTenses": "ich lehne ab, du lehnst ab, er/sie/es lehnt ab",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "refuse": {
+    "source": "refuse",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "weigern",
+        "translation": "refuse, decline, resist",
+        "definitions": [
+          "Sich weigern, etwas zu tun oder zu lassen.",
+          "Einen Befehl oder eine Anweisung nicht ausführen wollen.",
+          "Widerstand leisten gegen eine Forderung oder Bitte."
+        ],
+        "examples": [
+          "Er weigert sich, die Wahrheit zu sagen.",
+          "Sie weigerten sich, den Anweisungen zu folgen.",
+          "Ich werde mich nicht weigern, dir zu helfen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈvaɪ̯ɡɐn",
+        "number": "plural",
+        "pastTenses": "hat sich geweigert, weigerte sich",
+        "presentTenses": "ich weigere mich, du weigerst dich, er/sie/es weigert sich",
+        "tense": "present"
+      },
+      {
+        "source": "sich weigern",
+        "translation": "refuse, decline",
+        "definitions": [
+          "ablehnen, etwas zu tun",
+          "Widerstand leisten",
+          "sich weigern, Anweisungen zu befolgen"
+        ],
+        "examples": [
+          "Er weigerte sich zu gehen.",
+          "Sie weigern sich, die Regeln zu akzeptieren.",
+          "Wir weigern uns, aufzugeben."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "zɪç ˈvaɪ̯ɡɐn",
+        "number": "singular",
+        "pastTenses": "weigerte sich, hat sich geweigert",
+        "presentTenses": "ich weigere mich, du weigerst dich, er/sie/es weigert sich",
+        "tense": "present"
+      },
+      {
+        "source": "zurückweisen",
+        "translation": "reject, refuse, repudiate",
+        "definitions": [
+          "etwas oder jemanden ablehnen, nicht akzeptieren",
+          "einen Antrag, eine Beschwerde oder Ähnliches nicht zulassen",
+          "jemanden abweisen, nicht empfangen"
+        ],
+        "examples": [
+          "Er musste das Angebot zurückweisen.",
+          "Die Kommission wird den Antrag zurückweisen.",
+          "Sie hat alle Vorwürfe zurückgewiesen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "t͡suˈʁʏkˌvaɪ̯zn̩",
+        "number": "singular",
+        "pastTenses": "wies zurück, hat zurückgewiesen",
+        "presentTenses": "ich weise zurück, du weist zurück, er/sie/es weist zurück",
+        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -30329,6 +30680,74 @@
     "extraItems": [],
     "explanation": ""
   },
+  "applaud": {
+    "source": "applaud",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "zuklatschen",
+        "translation": "applaud, slam",
+        "definitions": [
+          "Beifall klatschen (für jemanden)",
+          "etwas zuschlagen, zuknallen"
+        ],
+        "examples": [
+          "Sie begannen, ihm zuzuklatschen.",
+          "Er wollte die Tür zuklatschen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈtsuːˌklatʃn̩",
+        "number": "singular",
+        "pastTenses": "klatschte zu, hat zugeklatscht",
+        "presentTenses": "ich klatsche zu, du klatschst zu, er/sie/es klatscht zu",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "slam": {
+    "source": "slam",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "zuklatschen",
+        "translation": "applaud, slam",
+        "definitions": [
+          "Beifall klatschen (für jemanden)",
+          "etwas zuschlagen, zuknallen"
+        ],
+        "examples": [
+          "Sie begannen, ihm zuzuklatschen.",
+          "Er wollte die Tür zuklatschen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈtsuːˌklatʃn̩",
+        "number": "singular",
+        "pastTenses": "klatschte zu, hat zugeklatscht",
+        "presentTenses": "ich klatsche zu, du klatschst zu, er/sie/es klatscht zu",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "audience": {
     "source": "audience",
     "sourceLanguage": "de",
@@ -31701,6 +32120,76 @@
         "partOfSpeech": "adjective",
         "ipa": "ˈtsuːɡəˌʃvaɪ̯st",
         "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "chatted up": {
+    "source": "chatted up",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "zugequatscht",
+        "translation": "chatted up, talked into",
+        "definitions": [
+          "Mit Gerede belästigt oder überhäuft.",
+          "Jemanden durch ständiges Reden daran gehindert, etwas zu tun oder zu sagen."
+        ],
+        "examples": [
+          "Er hat mich total zugequatscht.",
+          "Sie wurde von ihm zugequatscht.",
+          "Ich bin den ganzen Abend zugequatscht worden."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈtsuːɡəˌkvatʃt",
+        "number": "singular",
+        "pastTenses": "zugequatscht, hat zugequatscht",
+        "presentTenses": "ich quatsche zu, du quatschst zu, er/sie/es quatscht zu",
+        "tense": "past"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "talked into": {
+    "source": "talked into",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "zugequatscht",
+        "translation": "chatted up, talked into",
+        "definitions": [
+          "Mit Gerede belästigt oder überhäuft.",
+          "Jemanden durch ständiges Reden daran gehindert, etwas zu tun oder zu sagen."
+        ],
+        "examples": [
+          "Er hat mich total zugequatscht.",
+          "Sie wurde von ihm zugequatscht.",
+          "Ich bin den ganzen Abend zugequatscht worden."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈtsuːɡəˌkvatʃt",
+        "number": "singular",
+        "pastTenses": "zugequatscht, hat zugequatscht",
+        "presentTenses": "ich quatsche zu, du quatschst zu, er/sie/es quatscht zu",
+        "tense": "past"
       }
     ],
     "detectedInputType": "word",
@@ -38650,6 +39139,111 @@
     "extraItems": [],
     "explanation": ""
   },
+  "lemons": {
+    "source": "lemons",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Zitronen",
+        "translation": "lemons",
+        "definitions": [
+          "Gelbe, saure Südfrüchte",
+          "Pflanzen, die diese Früchte tragen"
+        ],
+        "examples": [
+          "Ich kaufe Zitronen.",
+          "Der Baum trägt viele Zitronen.",
+          "Zitronen sind sauer."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "tsɪˈtʁoːnən",
+        "g": "feminine",
+        "number": "plural",
+        "pluralForm": "die Zitronen"
+      },
+      {
+        "source": "die Zitrone",
+        "translation": "lemon",
+        "definitions": [
+          "Die gelbe, säuerliche Frucht des Zitronenbaums.",
+          "Kurzform für den Zitronenbaum."
+        ],
+        "examples": [
+          "Saft einer Zitrone.",
+          "Sauer wie eine Zitrone.",
+          "Zitrone auspressen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "t͡siˈtʁoːnə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Zitronen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "lemon": {
+    "source": "lemon",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Zitrone",
+        "translation": "lemon",
+        "definitions": [
+          "Die gelbe, säuerliche Frucht des Zitronenbaums.",
+          "Kurzform für den Zitronenbaum."
+        ],
+        "examples": [
+          "Saft einer Zitrone.",
+          "Sauer wie eine Zitrone.",
+          "Zitrone auspressen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "t͡siˈtʁoːnə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Zitronen"
+      },
+      {
+        "source": "die Gurke",
+        "translation": "cucumber, lemon, hooter",
+        "definitions": [
+          "Längliche, grüne Frucht einer Kletterpflanze, die als Gemüse gegessen wird.",
+          "Umgangssprachlich für ein altes, minderwertiges Fahrzeug oder Gerät.",
+          "Salopp für die menschliche Nase."
+        ],
+        "examples": [
+          "Ich schneide die Gurke.",
+          "Was für eine alte Gurke!",
+          "Er hat eine krumme Gurke."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈɡʊrkə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Gurken"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "quote": {
     "source": "quote",
     "sourceLanguage": "de",
@@ -41503,6 +42097,40 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Fotzen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "brick": {
+    "source": "brick",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Ziegelstein",
+        "translation": "brick",
+        "definitions": [
+          "Ein aus Ton gebrannter Baustein.",
+          "Ein quaderförmiger Stein, der zum Bau von Mauern verwendet wird."
+        ],
+        "examples": [
+          "Der Ziegelstein ist rot.",
+          "Viele Ziegelsteine bilden eine Wand.",
+          "Ein Haus aus Ziegelsteinen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈtsiːɡl̩ˌʃtaɪ̯n",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Ziegelsteine"
       }
     ],
     "detectedInputType": "word",
@@ -48858,6 +49486,156 @@
     "extraItems": [],
     "explanation": ""
   },
+  "throws": {
+    "source": "throws",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "wirft",
+        "translation": "throws, gives birth, has young",
+        "definitions": [
+          "3. Person Singular Präsens Indikativ des Verbs „werfen“",
+          "schleudert etwas mit Kraft von sich",
+          "produziert Nachwuchs (bei Tieren)"
+        ],
+        "examples": [
+          "Er wirft den Ball.",
+          "Die Katze wirft Junge.",
+          "Der Baum wirft Schatten."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "vɪʁft",
+        "number": "singular",
+        "pastTenses": "warf, hat geworfen",
+        "presentTenses": "ich werfe, du wirfst, er/sie/es wirft",
+        "tense": "present"
+      },
+      {
+        "source": "werfen",
+        "translation": "throw, have, dash",
+        "definitions": [
+          "etwas mit Kraft durch die Luft schleudern",
+          "ein Tier, das Junge zur Welt bringt",
+          "sich schnell in eine bestimmte Richtung bewegen"
+        ],
+        "examples": [
+          "Er kann einen Ball sehr weit werfen.",
+          "Die Katze wird bald Junge werfen.",
+          "Sie werfen sich ins Getümmel."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈvɛʁfn̩",
+        "number": "plural",
+        "pastTenses": "warf, hat geworfen",
+        "presentTenses": "ich werfe, du wirfst, er/sie/es wirft",
+        "tense": "present"
+      },
+      {
+        "source": "Würfe",
+        "translation": "throws, litters, casts",
+        "definitions": [
+          "Plural von Wurf",
+          "Handlung des Werfens",
+          "Ergebnis des Werfens",
+          "Anzahl der bei einer Geburt zur Welt gekommenen Jungtiere"
+        ],
+        "examples": [
+          "Die Würfe waren präzise.",
+          "Mehrere Würfe waren nötig.",
+          "Die Katze hatte drei Würfe."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈvʏʁfə",
+        "g": "masculine",
+        "number": "plural",
+        "pluralForm": "die Würfe"
+      },
+      {
+        "source": "der Wurf",
+        "translation": "throw, litter, success",
+        "definitions": [
+          "Das Schleudern eines Gegenstandes mit der Hand",
+          "Die Gesamtheit der Jungen, die ein Tier bei einer Geburt zur Welt bringt",
+          "Ein gelungener Entwurf oder eine Schöpfung"
+        ],
+        "examples": [
+          "Ein weiter Wurf.",
+          "Die Hündin hat einen großen Wurf.",
+          "Der neue Roman ist ein großer Wurf."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "vʊʁf",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Würfe"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "litters": {
+    "source": "litters",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Würfe",
+        "translation": "throws, litters, casts",
+        "definitions": [
+          "Plural von Wurf",
+          "Handlung des Werfens",
+          "Ergebnis des Werfens",
+          "Anzahl der bei einer Geburt zur Welt gekommenen Jungtiere"
+        ],
+        "examples": [
+          "Die Würfe waren präzise.",
+          "Mehrere Würfe waren nötig.",
+          "Die Katze hatte drei Würfe."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈvʏʁfə",
+        "g": "masculine",
+        "number": "plural",
+        "pluralForm": "die Würfe"
+      },
+      {
+        "source": "der Wurf",
+        "translation": "throw, litter, success",
+        "definitions": [
+          "Das Schleudern eines Gegenstandes mit der Hand",
+          "Die Gesamtheit der Jungen, die ein Tier bei einer Geburt zur Welt bringt",
+          "Ein gelungener Entwurf oder eine Schöpfung"
+        ],
+        "examples": [
+          "Ein weiter Wurf.",
+          "Die Hündin hat einen großen Wurf.",
+          "Der neue Roman ist ein großer Wurf."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "vʊʁf",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Würfe"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "appreciate": {
     "source": "appreciate",
     "sourceLanguage": "de",
@@ -51626,6 +52404,140 @@
         "g": "masculine",
         "number": "singular",
         "pluralForm": "die Würmer"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "throw": {
+    "source": "throw",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Wurf",
+        "translation": "throw, litter, success",
+        "definitions": [
+          "Das Schleudern eines Gegenstandes mit der Hand",
+          "Die Gesamtheit der Jungen, die ein Tier bei einer Geburt zur Welt bringt",
+          "Ein gelungener Entwurf oder eine Schöpfung"
+        ],
+        "examples": [
+          "Ein weiter Wurf.",
+          "Die Hündin hat einen großen Wurf.",
+          "Der neue Roman ist ein großer Wurf."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "vʊʁf",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Würfe"
+      },
+      {
+        "source": "werfen",
+        "translation": "throw, have, dash",
+        "definitions": [
+          "etwas mit Kraft durch die Luft schleudern",
+          "ein Tier, das Junge zur Welt bringt",
+          "sich schnell in eine bestimmte Richtung bewegen"
+        ],
+        "examples": [
+          "Er kann einen Ball sehr weit werfen.",
+          "Die Katze wird bald Junge werfen.",
+          "Sie werfen sich ins Getümmel."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈvɛʁfn̩",
+        "number": "plural",
+        "pastTenses": "warf, hat geworfen",
+        "presentTenses": "ich werfe, du wirfst, er/sie/es wirft",
+        "tense": "present"
+      },
+      {
+        "source": "schmeißen",
+        "translation": "throw, toss, hurl, fling",
+        "definitions": [
+          "etwas werfen, schleudern",
+          "jemanden entlassen, hinauswerfen",
+          "eine Party veranstalten",
+          "etwas aufgeben, hinschmeißen"
+        ],
+        "examples": [
+          "Er will den Ball schmeißen.",
+          "Sie haben ihn aus der Firma geschmissen.",
+          "Wir schmeißen eine große Party.",
+          "Ich schmeiße den Job hin."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʃmaɪ̯sn̩",
+        "number": "plural",
+        "pastTenses": "schmiss, hat geschmissen",
+        "presentTenses": "ich schmeiße, du schmeißt, er/sie/es schmeißt",
+        "tense": "present"
+      },
+      {
+        "source": "schmeiß",
+        "translation": "throw, chuck, toss",
+        "definitions": [
+          "werfen, schleudern",
+          "etwas wegwerfen, entsorgen",
+          "eine Party veranstalten (umgangssprachlich)",
+          "jemanden entlassen (umgangssprachlich)"
+        ],
+        "examples": [
+          "Schmeiß den Ball!",
+          "Schmeiß das alte Brot weg.",
+          "Schmeißt du eine Party?",
+          "Er schmeißt ihn raus."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ʃmaɪs",
+        "number": "singular",
+        "pastTenses": "schmiss, hat geschmissen",
+        "presentTenses": "ich schmeiße, du schmeißt, er/sie/es schmeißt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "litter": {
+    "source": "litter",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Wurf",
+        "translation": "throw, litter, success",
+        "definitions": [
+          "Das Schleudern eines Gegenstandes mit der Hand",
+          "Die Gesamtheit der Jungen, die ein Tier bei einer Geburt zur Welt bringt",
+          "Ein gelungener Entwurf oder eine Schöpfung"
+        ],
+        "examples": [
+          "Ein weiter Wurf.",
+          "Die Hündin hat einen großen Wurf.",
+          "Der neue Roman ist ein großer Wurf."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "vʊʁf",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Würfe"
       }
     ],
     "detectedInputType": "word",
@@ -58886,6 +59798,26 @@
         "tense": "present"
       },
       {
+        "source": "wirke",
+        "translation": "work, seem, influence",
+        "definitions": [
+          "Ich wirke als Arzt.",
+          "Ich wirke müde.",
+          "Ich wirke auf ihn ein."
+        ],
+        "examples": [
+          "Ich wirke hier.",
+          "Ich wirke sehr glücklich.",
+          "Ich wirke auf die Entscheidung ein."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈvɪʁkə",
+        "number": "singular",
+        "pastTenses": "wirkte, hat gewirkt",
+        "presentTenses": "ich wirke, du wirkst, er/sie/es wirkt",
+        "tense": "present"
+      },
+      {
         "source": "schein",
         "translation": "shine, seem, appear",
         "definitions": [
@@ -59676,6 +60608,40 @@
         "number": "singular"
       },
       {
+        "source": "wahrhaftige",
+        "translation": "true, real",
+        "definitions": [
+          "echt, wirklich, den Tatsachen entsprechend",
+          "aufrichtig, ehrlich, authentisch"
+        ],
+        "examples": [
+          "Die wahrhaftige Geschichte.",
+          "Eine wahrhaftige Freundschaft.",
+          "Die wahrhaftige Bedeutung."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "vaːɐ̯ˈhaftɪɡə",
+        "number": "singular"
+      },
+      {
+        "source": "wahrhaftig",
+        "translation": "true, real, sincere",
+        "definitions": ["tatsächlich", "echt", "aufrichtig"],
+        "examples": ["ein wahrhaftiger Mensch", "wahrhaftige Gefühle"],
+        "partOfSpeech": "adjective",
+        "ipa": "vaːɐ̯ˈhaftɪç",
+        "number": "singular"
+      },
+      {
+        "source": "wahrhaftig",
+        "translation": "true, real, sincere",
+        "definitions": ["tatsächlich", "echt", "aufrichtig"],
+        "examples": ["ein wahrhaftiger Mensch", "wahrhaftige Gefühle"],
+        "partOfSpeech": "adjective",
+        "ipa": "vaːɐ̯ˈhaftɪç",
+        "number": "singular"
+      },
+      {
         "source": "wahr",
         "translation": "true, real, authentic",
         "definitions": [
@@ -59911,8 +60877,8 @@
     "extraItems": [],
     "explanation": ""
   },
-  "throws": {
-    "source": "throws",
+  "work": {
+    "source": "work",
     "sourceLanguage": "de",
     "targetLanguage": "en",
     "isDirect": false,
@@ -59923,44 +60889,143 @@
     },
     "items": [
       {
-        "source": "wirft",
-        "translation": "throws, gives birth, has young",
+        "source": "wirke",
+        "translation": "work, seem, influence",
         "definitions": [
-          "3. Person Singular Präsens Indikativ des Verbs „werfen“",
-          "schleudert etwas mit Kraft von sich",
-          "produziert Nachwuchs (bei Tieren)"
+          "Ich wirke als Arzt.",
+          "Ich wirke müde.",
+          "Ich wirke auf ihn ein."
         ],
         "examples": [
-          "Er wirft den Ball.",
-          "Die Katze wirft Junge.",
-          "Der Baum wirft Schatten."
+          "Ich wirke hier.",
+          "Ich wirke sehr glücklich.",
+          "Ich wirke auf die Entscheidung ein."
         ],
         "partOfSpeech": "verb",
-        "ipa": "vɪʁft",
+        "ipa": "ˈvɪʁkə",
         "number": "singular",
-        "pastTenses": "warf, hat geworfen",
-        "presentTenses": "ich werfe, du wirfst, er/sie/es wirft",
+        "pastTenses": "wirkte, hat gewirkt",
+        "presentTenses": "ich wirke, du wirkst, er/sie/es wirkt",
         "tense": "present"
       },
       {
-        "source": "werfen",
-        "translation": "throw, have, dash",
+        "source": "wirken",
+        "translation": "to have an effect, to work, to seem, to knit",
         "definitions": [
-          "etwas mit Kraft durch die Luft schleudern",
-          "ein Tier, das Junge zur Welt bringt",
-          "sich schnell in eine bestimmte Richtung bewegen"
+          "Einen Effekt oder eine Auswirkung haben.",
+          "Tätig sein, arbeiten.",
+          "Einen bestimmten Eindruck machen, erscheinen.",
+          "Etwas herstellen, anfertigen (veraltet oder regional)."
         ],
         "examples": [
-          "Er kann einen Ball sehr weit werfen.",
-          "Die Katze wird bald Junge werfen.",
-          "Sie werfen sich ins Getümmel."
+          "Die Medizin wird schnell wirken.",
+          "Er wirkt sehr müde.",
+          "Sie wirken an einem neuen Projekt.",
+          "Das Licht wirkt warm."
         ],
         "partOfSpeech": "verb",
-        "ipa": "ˈvɛʁfn̩",
+        "ipa": "ˈvɪʁkn̩",
         "number": "plural",
-        "pastTenses": "warf, hat geworfen",
-        "presentTenses": "ich werfe, du wirfst, er/sie/es wirft",
+        "pastTenses": "wirkte, hat gewirkt",
+        "presentTenses": "ich wirke, du wirkst, er/sie/es wirkt",
         "tense": "present"
+      },
+      {
+        "source": "das Werk",
+        "translation": "work, plant, movement",
+        "definitions": [
+          "Das Ergebnis einer schöpferischen Arbeit oder Tätigkeit.",
+          "Eine industrielle Produktionsstätte oder Fabrik.",
+          "Ein Mechanismus oder Getriebe in einem Gerät."
+        ],
+        "examples": [
+          "Ein bedeutendes Werk der Literatur.",
+          "Das Werk produziert Motoren.",
+          "Das Uhrwerk läuft präzise."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "vɛrk",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Werke"
+      },
+      {
+        "source": "funktionieren",
+        "translation": "work, function, operate",
+        "definitions": [
+          "arbeiten, in Betrieb sein",
+          "erfolgreich sein, klappen",
+          "seinen Zweck erfüllen"
+        ],
+        "examples": [
+          "Das Gerät muss funktionieren.",
+          "Der Plan wird funktionieren.",
+          "Es hat gut funktioniert."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "fʊnkˈt͡si̯oːnɪʁən",
+        "number": "singular",
+        "pastTenses": "funktionierte, hat funktioniert",
+        "presentTenses": "ich funktioniere, du funktionierst, er/sie/es funktioniert",
+        "tense": "present"
+      },
+      {
+        "source": "arbeiten",
+        "translation": "work, be employed, function",
+        "definitions": [
+          "Tätig sein, eine Arbeit verrichten",
+          "Beruflich tätig sein",
+          "Funktionieren, in Betrieb sein"
+        ],
+        "examples": [
+          "Ich arbeite jeden Tag.",
+          "Sie arbeiten an einem neuen Projekt.",
+          "Die Maschine arbeitet einwandfrei."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈaʁbaɪtn̩",
+        "number": "plural",
+        "pastTenses": "arbeitete, hat gearbeitet",
+        "presentTenses": "ich arbeite, du arbeitest, er/sie/es arbeitet",
+        "tense": "present"
+      },
+      {
+        "source": "die Arbeit",
+        "translation": "work, job, labor, employment",
+        "definitions": [
+          "Tätigkeit zur Erreichung eines Ziels",
+          "Berufliche Beschäftigung",
+          "Ergebnis einer geistigen oder körperlichen Leistung",
+          "Physikalische Größe (Kraft mal Weg)"
+        ],
+        "examples": [
+          "Ich gehe zur Arbeit.",
+          "Die Arbeit macht Spaß.",
+          "Eine schwere Arbeit verrichten."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈarbait",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Arbeiten"
+      },
+      {
+        "source": "die Tätigkeit",
+        "translation": "activity, work",
+        "definitions": [
+          "Das Ausüben einer bestimmten Arbeit oder Beschäftigung.",
+          "Ein Zustand des Tätigseins oder Wirkens."
+        ],
+        "examples": [
+          "Eine berufliche Tätigkeit.",
+          "Die Tätigkeit einstellen.",
+          "In ehrenamtlicher Tätigkeit."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈtɛːtɪçkaɪ̯t",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Tätigkeiten"
       }
     ],
     "detectedInputType": "word",
@@ -68880,119 +69945,6 @@
     "extraItems": [],
     "explanation": ""
   },
-  "work": {
-    "source": "work",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "das Werk",
-        "translation": "work, plant, movement",
-        "definitions": [
-          "Das Ergebnis einer schöpferischen Arbeit oder Tätigkeit.",
-          "Eine industrielle Produktionsstätte oder Fabrik.",
-          "Ein Mechanismus oder Getriebe in einem Gerät."
-        ],
-        "examples": [
-          "Ein bedeutendes Werk der Literatur.",
-          "Das Werk produziert Motoren.",
-          "Das Uhrwerk läuft präzise."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "vɛrk",
-        "g": "neuter",
-        "number": "singular",
-        "pluralForm": "die Werke"
-      },
-      {
-        "source": "funktionieren",
-        "translation": "work, function, operate",
-        "definitions": [
-          "arbeiten, in Betrieb sein",
-          "erfolgreich sein, klappen",
-          "seinen Zweck erfüllen"
-        ],
-        "examples": [
-          "Das Gerät muss funktionieren.",
-          "Der Plan wird funktionieren.",
-          "Es hat gut funktioniert."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "fʊnkˈt͡si̯oːnɪʁən",
-        "number": "singular",
-        "pastTenses": "funktionierte, hat funktioniert",
-        "presentTenses": "ich funktioniere, du funktionierst, er/sie/es funktioniert",
-        "tense": "present"
-      },
-      {
-        "source": "arbeiten",
-        "translation": "work, be employed, function",
-        "definitions": [
-          "Tätig sein, eine Arbeit verrichten",
-          "Beruflich tätig sein",
-          "Funktionieren, in Betrieb sein"
-        ],
-        "examples": [
-          "Ich arbeite jeden Tag.",
-          "Sie arbeiten an einem neuen Projekt.",
-          "Die Maschine arbeitet einwandfrei."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈaʁbaɪtn̩",
-        "number": "plural",
-        "pastTenses": "arbeitete, hat gearbeitet",
-        "presentTenses": "ich arbeite, du arbeitest, er/sie/es arbeitet",
-        "tense": "present"
-      },
-      {
-        "source": "die Arbeit",
-        "translation": "work, job, labor, employment",
-        "definitions": [
-          "Tätigkeit zur Erreichung eines Ziels",
-          "Berufliche Beschäftigung",
-          "Ergebnis einer geistigen oder körperlichen Leistung",
-          "Physikalische Größe (Kraft mal Weg)"
-        ],
-        "examples": [
-          "Ich gehe zur Arbeit.",
-          "Die Arbeit macht Spaß.",
-          "Eine schwere Arbeit verrichten."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ˈarbait",
-        "g": "feminine",
-        "number": "singular",
-        "pluralForm": "die Arbeiten"
-      },
-      {
-        "source": "die Tätigkeit",
-        "translation": "activity, work",
-        "definitions": [
-          "Das Ausüben einer bestimmten Arbeit oder Beschäftigung.",
-          "Ein Zustand des Tätigseins oder Wirkens."
-        ],
-        "examples": [
-          "Eine berufliche Tätigkeit.",
-          "Die Tätigkeit einstellen.",
-          "In ehrenamtlicher Tätigkeit."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ˈtɛːtɪçkaɪ̯t",
-        "g": "feminine",
-        "number": "singular",
-        "pluralForm": "die Tätigkeiten"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
   "plant": {
     "source": "plant",
     "sourceLanguage": "de",
@@ -69124,105 +70076,6 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Werften"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "throw": {
-    "source": "throw",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "werfen",
-        "translation": "throw, have, dash",
-        "definitions": [
-          "etwas mit Kraft durch die Luft schleudern",
-          "ein Tier, das Junge zur Welt bringt",
-          "sich schnell in eine bestimmte Richtung bewegen"
-        ],
-        "examples": [
-          "Er kann einen Ball sehr weit werfen.",
-          "Die Katze wird bald Junge werfen.",
-          "Sie werfen sich ins Getümmel."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈvɛʁfn̩",
-        "number": "plural",
-        "pastTenses": "warf, hat geworfen",
-        "presentTenses": "ich werfe, du wirfst, er/sie/es wirft",
-        "tense": "present"
-      },
-      {
-        "source": "schmeißen",
-        "translation": "throw, toss, hurl, fling",
-        "definitions": [
-          "etwas werfen, schleudern",
-          "jemanden entlassen, hinauswerfen",
-          "eine Party veranstalten",
-          "etwas aufgeben, hinschmeißen"
-        ],
-        "examples": [
-          "Er will den Ball schmeißen.",
-          "Sie haben ihn aus der Firma geschmissen.",
-          "Wir schmeißen eine große Party.",
-          "Ich schmeiße den Job hin."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈʃmaɪ̯sn̩",
-        "number": "plural",
-        "pastTenses": "schmiss, hat geschmissen",
-        "presentTenses": "ich schmeiße, du schmeißt, er/sie/es schmeißt",
-        "tense": "present"
-      },
-      {
-        "source": "schmeiß",
-        "translation": "throw, chuck, toss",
-        "definitions": [
-          "werfen, schleudern",
-          "etwas wegwerfen, entsorgen",
-          "eine Party veranstalten (umgangssprachlich)",
-          "jemanden entlassen (umgangssprachlich)"
-        ],
-        "examples": [
-          "Schmeiß den Ball!",
-          "Schmeiß das alte Brot weg.",
-          "Schmeißt du eine Party?",
-          "Er schmeißt ihn raus."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ʃmaɪs",
-        "number": "singular",
-        "pastTenses": "schmiss, hat geschmissen",
-        "presentTenses": "ich schmeiße, du schmeißt, er/sie/es schmeißt",
-        "tense": "present"
-      },
-      {
-        "source": "der Wurf",
-        "translation": "throw, litter, cast",
-        "definitions": [
-          "Die Handlung des Werfens oder Schleuderns von etwas.",
-          "Das Ergebnis des Werfens, z.B. eines Balls oder Würfels.",
-          "Eine Gruppe von Jungtieren, die gleichzeitig geboren wurden."
-        ],
-        "examples": [
-          "Der Wurf war präzise.",
-          "Ein guter Wurf beim Basketball.",
-          "Der Wurf der Welpen war gesund."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "dɛɐ̯ vʊʁf",
-        "g": "masculine",
-        "number": "singular",
-        "pluralForm": "die Würfe"
       }
     ],
     "detectedInputType": "word",
@@ -75907,62 +76760,6 @@
     "extraItems": [],
     "explanation": ""
   },
-  "refuse": {
-    "source": "refuse",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "weigern",
-        "translation": "refuse, decline, resist",
-        "definitions": [
-          "Sich weigern, etwas zu tun oder zu lassen.",
-          "Einen Befehl oder eine Anweisung nicht ausführen wollen.",
-          "Widerstand leisten gegen eine Forderung oder Bitte."
-        ],
-        "examples": [
-          "Er weigert sich, die Wahrheit zu sagen.",
-          "Sie weigerten sich, den Anweisungen zu folgen.",
-          "Ich werde mich nicht weigern, dir zu helfen."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈvaɪ̯ɡɐn",
-        "number": "plural",
-        "pastTenses": "hat sich geweigert, weigerte sich",
-        "presentTenses": "ich weigere mich, du weigerst dich, er/sie/es weigert sich",
-        "tense": "present"
-      },
-      {
-        "source": "sich weigern",
-        "translation": "refuse, decline",
-        "definitions": [
-          "ablehnen, etwas zu tun",
-          "Widerstand leisten",
-          "sich weigern, Anweisungen zu befolgen"
-        ],
-        "examples": [
-          "Er weigerte sich zu gehen.",
-          "Sie weigern sich, die Regeln zu akzeptieren.",
-          "Wir weigern uns, aufzugeben."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "zɪç ˈvaɪ̯ɡɐn",
-        "number": "singular",
-        "pastTenses": "weigerte sich, hat sich geweigert",
-        "presentTenses": "ich weigere mich, du weigerst dich, er/sie/es weigert sich",
-        "tense": "present"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
   "decline": {
     "source": "decline",
     "sourceLanguage": "de",
@@ -80932,6 +81729,57 @@
     },
     "items": [
       {
+        "source": "die Ware",
+        "translation": "good, merchandise",
+        "definitions": [
+          "Ein Gut, das zum Verkauf oder Tausch angeboten wird.",
+          "Erzeugnis oder Produkt eines Gewerbes."
+        ],
+        "examples": [
+          "Frische Ware.",
+          "Die Ware wird geliefert.",
+          "Hochwertige Waren im Regal."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈvaːʁə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Waren"
+      },
+      {
+        "source": "Güter",
+        "translation": "goods, freight, commodities",
+        "definitions": [
+          "Verkaufbare Waren oder Produkte",
+          "Wohlstand oder Besitz",
+          "Transportwaren in der Logistik"
+        ],
+        "examples": ["Die Güter wurden verladen", "Transport von Gütern"],
+        "partOfSpeech": "noun",
+        "ipa": "ˈɡyːtɐ",
+        "g": "neuter",
+        "number": "plural"
+      },
+      {
+        "source": "das Gut",
+        "translation": "asset, estate, good",
+        "definitions": [
+          "Ein materieller oder immaterieller Besitzwert.",
+          "Ein landwirtschaftlicher Betrieb oder ein großes Anwesen.",
+          "Waren, die transportiert werden."
+        ],
+        "examples": [
+          "Das höchste Gut.",
+          "Ein landwirtschaftliches Gut.",
+          "Transport von Gütern."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ɡuːt",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Güter"
+      },
+      {
         "source": "Waren",
         "translation": "goods, wares",
         "definitions": ["Güter oder Artikel, die zum Verkauf angeboten werden"],
@@ -81086,6 +81934,15 @@
         ],
         "partOfSpeech": "adverb",
         "ipa": "ɡuːt",
+        "number": "singular"
+      },
+      {
+        "source": "artig",
+        "translation": "well-behaved, good, nice",
+        "definitions": ["brav", "gehorsam", "wohlverhalten"],
+        "examples": ["ein artiges Kind", "artig und freundlich sein"],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈaːɐ̯tɪç",
         "number": "singular"
       }
     ],
@@ -82196,6 +83053,26 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Gangarten"
+      },
+      {
+        "source": "beschreiten",
+        "translation": "tread, walk, embark on",
+        "definitions": [
+          "einen Weg, Pfad oder eine Strecke betreten und darauf gehen",
+          "einen bestimmten Weg oder eine Methode wählen, um ein Ziel zu erreichen",
+          "etwas Neues oder Ungewöhnliches beginnen"
+        ],
+        "examples": [
+          "Wir müssen neue Wege beschreiten.",
+          "Er beschreitet den Pfad der Tugend.",
+          "Sie beschreiten gemeinsam einen neuen Lebensabschnitt."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "bəˈʃraɪ̯tn̩",
+        "number": "plural",
+        "pastTenses": "beschritt, hat beschritten",
+        "presentTenses": "ich beschreite, du beschreitest, er/sie/es beschreitet",
+        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -83233,6 +84110,40 @@
     },
     "items": [
       {
+        "source": "wahrhaftige",
+        "translation": "true, real",
+        "definitions": [
+          "echt, wirklich, den Tatsachen entsprechend",
+          "aufrichtig, ehrlich, authentisch"
+        ],
+        "examples": [
+          "Die wahrhaftige Geschichte.",
+          "Eine wahrhaftige Freundschaft.",
+          "Die wahrhaftige Bedeutung."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "vaːɐ̯ˈhaftɪɡə",
+        "number": "singular"
+      },
+      {
+        "source": "wahrhaftig",
+        "translation": "true, real, sincere",
+        "definitions": ["tatsächlich", "echt", "aufrichtig"],
+        "examples": ["ein wahrhaftiger Mensch", "wahrhaftige Gefühle"],
+        "partOfSpeech": "adjective",
+        "ipa": "vaːɐ̯ˈhaftɪç",
+        "number": "singular"
+      },
+      {
+        "source": "wahrhaftig",
+        "translation": "true, real, sincere",
+        "definitions": ["tatsächlich", "echt", "aufrichtig"],
+        "examples": ["ein wahrhaftiger Mensch", "wahrhaftige Gefühle"],
+        "partOfSpeech": "adjective",
+        "ipa": "vaːɐ̯ˈhaftɪç",
+        "number": "singular"
+      },
+      {
         "source": "wahr",
         "translation": "true, real, authentic",
         "definitions": [
@@ -83638,6 +84549,24 @@
         "g": "neuter",
         "number": "singular",
         "pluralForm": "die Wahlverhalten"
+      },
+      {
+        "source": "das Abstimmungsverhalten",
+        "translation": "voting behavior, voting pattern",
+        "definitions": [
+          "Art und Weise, wie jemand bei einer Abstimmung seine Stimme abgibt",
+          "Das Verhalten von Wählern oder Abgeordneten bei Abstimmungen"
+        ],
+        "examples": [
+          "Das Abstimmungsverhalten der Partei war überraschend.",
+          "Sein Abstimmungsverhalten wurde kritisiert.",
+          "Das Abstimmungsverhalten der Bevölkerung ist entscheidend."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈapˌʃtɪmʊŋsfɛɐ̯ˌhaltn̩",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Abstimmungsverhalten"
       }
     ],
     "detectedInputType": "word",
@@ -102689,62 +103618,6 @@
     "extraItems": [],
     "explanation": ""
   },
-  "reject": {
-    "source": "reject",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "verwerfen",
-        "translation": "reject, discard, abandon, dislocate",
-        "definitions": [
-          "etwas als ungeeignet ablehnen",
-          "einen Plan oder eine Idee aufgeben",
-          "sich krümmen oder verziehen (Holz)"
-        ],
-        "examples": [
-          "Er musste den ersten Entwurf verwerfen.",
-          "Das Holz hat sich durch die Feuchtigkeit verworfen.",
-          "Wir sollten diese Option nicht gleich verwerfen."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "fɛɐ̯ˈvɛʁfn̩",
-        "number": "singular",
-        "pastTenses": "hat verworfen, verwarf",
-        "presentTenses": "ich verwerfe, du verwirfst, er/sie/es verwirft",
-        "tense": "present"
-      },
-      {
-        "source": "ablehnen",
-        "translation": "reject, decline, refuse",
-        "definitions": [
-          "etwas nicht annehmen oder akzeptieren",
-          "einen Vorschlag oder Antrag zurückweisen",
-          "eine Person oder Sache nicht mögen oder missbilligen"
-        ],
-        "examples": [
-          "Er wird den Vorschlag ablehnen.",
-          "Sie lehnte das Geschenk ab.",
-          "Wir müssen die Idee ablehnen."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈapˌleːnən",
-        "number": "singular",
-        "pastTenses": "lehnte ab, hat abgelehnt",
-        "presentTenses": "ich lehne ab, du lehnst ab, er/sie/es lehnt ab",
-        "tense": "present"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
   "uses": {
     "source": "uses",
     "sourceLanguage": "de",
@@ -103074,6 +103947,26 @@
         "tense": "present"
       },
       {
+        "source": "gebrauchen",
+        "translation": "use, make use of, need",
+        "definitions": [
+          "etwas benutzen, verwenden",
+          "Nutzen aus etwas ziehen",
+          "nötig haben, brauchen"
+        ],
+        "examples": [
+          "Kannst du dieses Werkzeug gebrauchen?",
+          "Ich könnte jetzt einen Kaffee gebrauchen.",
+          "Diese alten Bücher kann man noch gut gebrauchen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ɡəˈbʁaʊ̯xn̩",
+        "number": "plural",
+        "pastTenses": "gebrauchte, hat gebraucht",
+        "presentTenses": "ich gebrauche, du gebrauchst, er/sie/es gebraucht",
+        "tense": "present"
+      },
+      {
         "source": "der Einsatz",
         "translation": "use, operation, bet, insert, entry",
         "definitions": [
@@ -103394,6 +104287,26 @@
         "pastTenses": "hat gebraucht, wurde gebraucht",
         "presentTenses": "ich gebrauche, du gebrauchst, er/sie/es gebraucht",
         "tense": "past"
+      },
+      {
+        "source": "gebrauchen",
+        "translation": "use, make use of, need",
+        "definitions": [
+          "etwas benutzen, verwenden",
+          "Nutzen aus etwas ziehen",
+          "nötig haben, brauchen"
+        ],
+        "examples": [
+          "Kannst du dieses Werkzeug gebrauchen?",
+          "Ich könnte jetzt einen Kaffee gebrauchen.",
+          "Diese alten Bücher kann man noch gut gebrauchen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ɡəˈbʁaʊ̯xn̩",
+        "number": "plural",
+        "pastTenses": "gebrauchte, hat gebraucht",
+        "presentTenses": "ich gebrauche, du gebrauchst, er/sie/es gebraucht",
+        "tense": "present"
       },
       {
         "source": "gebraucht",
@@ -118642,6 +119555,131 @@
     "extraItems": [],
     "explanation": ""
   },
+  "assets": {
+    "source": "assets",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Vermögenswerte",
+        "translation": "assets, property",
+        "definitions": [
+          "Gegenstände oder Rechte, die einen wirtschaftlichen Wert haben und einer Person oder einem Unternehmen gehören.",
+          "Alle materiellen und immateriellen Güter, die im Besitz einer natürlichen oder juristischen Person sind und einen Geldwert darstellen."
+        ],
+        "examples": [
+          "Die Bank verwaltet die Vermögenswerte ihrer Kunden.",
+          "Im Falle einer Scheidung werden die Vermögenswerte aufgeteilt.",
+          "Das Unternehmen hat seine Vermögenswerte neu bewertet."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "fɛɐˈmøːɡn̩sˌvɛʁtə",
+        "number": "plural",
+        "pluralForm": "die Vermögenswerte"
+      },
+      {
+        "source": "das Vermögen",
+        "translation": "assets, fortune, ability, power",
+        "definitions": [
+          "Gesamtheit des Besitzes und der finanziellen Mittel",
+          "Fähigkeit oder Kraft, etwas zu tun"
+        ],
+        "examples": [
+          "Er besitzt ein großes Vermögen.",
+          "Das übersteigt mein geistiges Vermögen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "fɛɐ̯ˈmøːɡn̩",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Vermögen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "property": {
+    "source": "property",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Vermögenswerte",
+        "translation": "assets, property",
+        "definitions": [
+          "Gegenstände oder Rechte, die einen wirtschaftlichen Wert haben und einer Person oder einem Unternehmen gehören.",
+          "Alle materiellen und immateriellen Güter, die im Besitz einer natürlichen oder juristischen Person sind und einen Geldwert darstellen."
+        ],
+        "examples": [
+          "Die Bank verwaltet die Vermögenswerte ihrer Kunden.",
+          "Im Falle einer Scheidung werden die Vermögenswerte aufgeteilt.",
+          "Das Unternehmen hat seine Vermögenswerte neu bewertet."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "fɛɐˈmøːɡn̩sˌvɛʁtə",
+        "number": "plural",
+        "pluralForm": "die Vermögenswerte"
+      },
+      {
+        "source": "Immobilien",
+        "translation": "real estate, property",
+        "definitions": ["Sachwerte in Form von Gebäuden oder Grundstücken"],
+        "examples": ["Immobilien kaufen", "markt für Immobilien"],
+        "partOfSpeech": "noun",
+        "ipa": "ˈɪmoˌbiːli̯ən",
+        "g": "feminine",
+        "number": "plural"
+      },
+      {
+        "source": "die Immobilie",
+        "translation": "real estate, property",
+        "definitions": [
+          "Ein unbewegliches Sachgut, insbesondere ein Grundstück oder ein Gebäude."
+        ],
+        "examples": [
+          "Die Immobilie wird verkauft.",
+          "Investition in eine Immobilie."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ɪˈmoːbiːli̯ə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Immobilien"
+      },
+      {
+        "source": "die Immobilie",
+        "translation": "real estate, property",
+        "definitions": [
+          "Ein unbewegliches Sachgut, insbesondere ein Grundstück oder ein Gebäude."
+        ],
+        "examples": [
+          "Die Immobilie wird verkauft.",
+          "Investition in eine Immobilie."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ɪˈmoːbiːli̯ə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Immobilien"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "wealthy": {
     "source": "wealthy",
     "sourceLanguage": "de",
@@ -119006,39 +120044,6 @@
         "pastTenses": "vermochte, hat vermocht",
         "presentTenses": "ich vermag, du vermagst, er/sie/es vermag",
         "tense": "present"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "assets": {
-    "source": "assets",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "das Vermögen",
-        "translation": "assets, fortune, ability, power",
-        "definitions": [
-          "Gesamtheit des Besitzes und der finanziellen Mittel",
-          "Fähigkeit oder Kraft, etwas zu tun"
-        ],
-        "examples": [
-          "Er besitzt ein großes Vermögen.",
-          "Das übersteigt mein geistiges Vermögen."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "fɛɐ̯ˈmøːɡn̩",
-        "g": "neuter",
-        "number": "singular",
-        "pluralForm": "die Vermögen"
       }
     ],
     "detectedInputType": "word",
@@ -138667,62 +139672,6 @@
     "extraItems": [],
     "explanation": ""
   },
-  "to dismiss": {
-    "source": "to dismiss",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "verabschieden",
-        "translation": "to dismiss, to say goodbye, to pass",
-        "definitions": [
-          "jemanden entlassen oder in den Ruhestand schicken",
-          "sich von jemandem oder etwas trennen",
-          "ein Gesetz oder einen Beschluss annehmen"
-        ],
-        "examples": [
-          "Wir müssen uns jetzt verabschieden.",
-          "Das Parlament wird das Gesetz verabschieden.",
-          "Sie haben den Mitarbeiter verabschiedet."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "fɛɐ̯ˈʔapʃiːdn̩",
-        "number": "singular",
-        "pastTenses": "verabschiedete, hat verabschiedet",
-        "presentTenses": "ich verabschiede, du verabschiedest, er/sie/es verabschiedet",
-        "tense": "present"
-      },
-      {
-        "source": "entlassen",
-        "translation": "to dismiss, to release, to discharge",
-        "definitions": [
-          "Jemanden aus einer Anstellung oder Position entfernen.",
-          "Jemanden aus dem Gefängnis oder einer Haft entlassen.",
-          "Jemanden aus dem Krankenhaus entlassen."
-        ],
-        "examples": [
-          "Der Chef wird ihn entlassen.",
-          "Er wurde aus dem Gefängnis entlassen.",
-          "Die Ärzte entlassen den Patienten morgen."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ɛntˈlasn̩",
-        "number": "plural",
-        "pastTenses": "entließ, hat entlassen",
-        "presentTenses": "ich entlasse, du entlässt, er/sie/es entlässt",
-        "tense": "present"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
   "to say goodbye": {
     "source": "to say goodbye",
     "sourceLanguage": "de",
@@ -150667,6 +151616,70 @@
     "extraItems": [],
     "explanation": ""
   },
+  "honestly": {
+    "source": "honestly",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "ungelogen",
+        "translation": "honestly, no lie",
+        "definitions": [
+          "wahrheitsgemäß, ehrlich gesagt",
+          "tatsächlich, wirklich"
+        ],
+        "examples": [
+          "Ungelogen, das war das Beste, was ich je gegessen habe.",
+          "Ungelogen, ich habe ihn gestern gesehen.",
+          "Das ist ungelogen die Wahrheit."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "ˈʊnɡəˌloːɡn̩",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "no lie": {
+    "source": "no lie",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "ungelogen",
+        "translation": "honestly, no lie",
+        "definitions": [
+          "wahrheitsgemäß, ehrlich gesagt",
+          "tatsächlich, wirklich"
+        ],
+        "examples": [
+          "Ungelogen, das war das Beste, was ich je gegessen habe.",
+          "Ungelogen, ich habe ihn gestern gesehen.",
+          "Das ist ungelogen die Wahrheit."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "ˈʊnɡəˌloːɡn̩",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "unkissed": {
     "source": "unkissed",
     "sourceLanguage": "de",
@@ -151755,6 +152768,74 @@
     "extraItems": [],
     "explanation": ""
   },
+  "relentlessness": {
+    "source": "relentlessness",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Unerbittlichkeit",
+        "translation": "relentlessness, inexorability",
+        "definitions": [
+          "Mangel an Nachgiebigkeit oder Gnade",
+          "Härte und Kompromisslosigkeit"
+        ],
+        "examples": [
+          "Die Unerbittlichkeit des Schicksals.",
+          "Mit Unerbittlichkeit forderte er sein Recht.",
+          "Die Unerbittlichkeit der Naturgesetze."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈʊnɛɐ̯ˌbɪtlɪçkaɪ̯t",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Unerbittlichkeiten"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "inexorability": {
+    "source": "inexorability",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Unerbittlichkeit",
+        "translation": "relentlessness, inexorability",
+        "definitions": [
+          "Mangel an Nachgiebigkeit oder Gnade",
+          "Härte und Kompromisslosigkeit"
+        ],
+        "examples": [
+          "Die Unerbittlichkeit des Schicksals.",
+          "Mit Unerbittlichkeit forderte er sein Recht.",
+          "Die Unerbittlichkeit der Naturgesetze."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈʊnɛɐ̯ˌbɪtlɪçkaɪ̯t",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Unerbittlichkeiten"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "relentless": {
     "source": "relentless",
     "sourceLanguage": "de",
@@ -152113,6 +153194,24 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Sauereien"
+      },
+      {
+        "source": "die Schande",
+        "translation": "shame, disgrace",
+        "definitions": [
+          "Zustand der Ehrlosigkeit oder Demütigung",
+          "Etwas, das als beschämend oder empörend empfunden wird"
+        ],
+        "examples": [
+          "Das ist eine Schande!",
+          "Er brachte Schande über die Familie.",
+          "Es wäre eine Schande, das wegzuwerfen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈʃandə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Schanden"
       },
       {
         "source": "die Unehr",
@@ -164730,6 +165829,26 @@
       "language": "de"
     },
     "items": [
+      {
+        "source": "beschreiten",
+        "translation": "tread, walk, embark on",
+        "definitions": [
+          "einen Weg, Pfad oder eine Strecke betreten und darauf gehen",
+          "einen bestimmten Weg oder eine Methode wählen, um ein Ziel zu erreichen",
+          "etwas Neues oder Ungewöhnliches beginnen"
+        ],
+        "examples": [
+          "Wir müssen neue Wege beschreiten.",
+          "Er beschreitet den Pfad der Tugend.",
+          "Sie beschreiten gemeinsam einen neuen Lebensabschnitt."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "bəˈʃraɪ̯tn̩",
+        "number": "plural",
+        "pastTenses": "beschritt, hat beschritten",
+        "presentTenses": "ich beschreite, du beschreitest, er/sie/es beschreitet",
+        "tense": "present"
+      },
       {
         "source": "tretet",
         "translation": "step, tread, kick, enter",
@@ -199451,6 +200570,218 @@
     "extraItems": [],
     "explanation": ""
   },
+  "to station": {
+    "source": "to station",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "stationieren",
+        "translation": "to station, to post",
+        "definitions": [
+          "Truppen, Personal oder Geräte an einem bestimmten Ort unterbringen oder aufstellen",
+          "einen festen Standort zuweisen"
+        ],
+        "examples": [
+          "Die Soldaten stationieren in der Kaserne.",
+          "Wir stationieren die Ausrüstung im Lager.",
+          "Sie stationieren ihre Mitarbeiter weltweit."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ʃtaˈt͡si̯oˌniːʁən",
+        "number": "plural",
+        "pastTenses": "stationierte, hat stationiert",
+        "presentTenses": "ich stationiere, du stationierst, er/sie/es stationiert",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to post": {
+    "source": "to post",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "stationieren",
+        "translation": "to station, to post",
+        "definitions": [
+          "Truppen, Personal oder Geräte an einem bestimmten Ort unterbringen oder aufstellen",
+          "einen festen Standort zuweisen"
+        ],
+        "examples": [
+          "Die Soldaten stationieren in der Kaserne.",
+          "Wir stationieren die Ausrüstung im Lager.",
+          "Sie stationieren ihre Mitarbeiter weltweit."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ʃtaˈt͡si̯oˌniːʁən",
+        "number": "plural",
+        "pastTenses": "stationierte, hat stationiert",
+        "presentTenses": "ich stationiere, du stationierst, er/sie/es stationiert",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "station": {
+    "source": "station",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Bahnhof",
+        "translation": "train station, station",
+        "definitions": [
+          "Anlage zum Ein- und Aussteigen bei der Eisenbahn",
+          "Gebäude für den Eisenbahnverkehr"
+        ],
+        "examples": [
+          "Der Zug fährt in den Bahnhof ein.",
+          "Wir treffen uns am Bahnhof."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈbaːnˌhoːf",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Bahnhöfe"
+      },
+      {
+        "source": "die Station",
+        "translation": "station, ward, stage",
+        "definitions": [
+          "Ein Ort, an dem Fahrzeuge planmäßig halten",
+          "Eine Abteilung in einem Krankenhaus",
+          "Ein bestimmter Punkt oder Abschnitt in einem Prozess oder einer Entwicklung"
+        ],
+        "examples": [
+          "Die nächste Station ist Hauptbahnhof.",
+          "Sie arbeitet auf der chirurgischen Station.",
+          "Das war eine wichtige Station in seinem Leben."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ʃtaˈt͡si̯oːn",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Stationen"
+      },
+      {
+        "source": "der Sender",
+        "translation": "transmitter, broadcaster, sender",
+        "definitions": [
+          "Eine Person oder Institution, die Nachrichten oder Signale übermittelt.",
+          "Ein technisches Gerät zur Ausstrahlung von elektromagnetischen Wellen.",
+          "Ein Unternehmen, das Rundfunk- oder Fernsehprogramme produziert und ausstrahlt."
+        ],
+        "examples": [
+          "Der Sender strahlt das Signal aus.",
+          "Welcher Sender zeigt das Spiel?",
+          "Der Sender der Nachricht ist unbekannt."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈzɛndɐ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Sender"
+      },
+      {
+        "source": "der Funkort",
+        "translation": "radio location, radio position",
+        "definitions": [
+          "Ein Ort, der durch Funkwellen bestimmt wird.",
+          "Position, die mittels Funkpeilung oder ähnlicher Funktechnik ermittelt wurde."
+        ],
+        "examples": [
+          "Der Funkort des Schiffes wurde übermittelt.",
+          "Sie bestimmten den Funkort des Senders."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈfʊŋkˌɔʁt",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Funkorte"
+      },
+      {
+        "source": "stationieren",
+        "translation": "to station, to post",
+        "definitions": [
+          "Truppen, Personal oder Geräte an einem bestimmten Ort unterbringen oder aufstellen",
+          "einen festen Standort zuweisen"
+        ],
+        "examples": [
+          "Die Soldaten stationieren in der Kaserne.",
+          "Wir stationieren die Ausrüstung im Lager.",
+          "Sie stationieren ihre Mitarbeiter weltweit."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ʃtaˈt͡si̯oˌniːʁən",
+        "number": "plural",
+        "pastTenses": "stationierte, hat stationiert",
+        "presentTenses": "ich stationiere, du stationierst, er/sie/es stationiert",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "ward": {
+    "source": "ward",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Station",
+        "translation": "station, ward, stage",
+        "definitions": [
+          "Ein Ort, an dem Fahrzeuge planmäßig halten",
+          "Eine Abteilung in einem Krankenhaus",
+          "Ein bestimmter Punkt oder Abschnitt in einem Prozess oder einer Entwicklung"
+        ],
+        "examples": [
+          "Die nächste Station ist Hauptbahnhof.",
+          "Sie arbeitet auf der chirurgischen Station.",
+          "Das war eine wichtige Station in seinem Leben."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ʃtaˈt͡si̯oːn",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Stationen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "to start": {
     "source": "to start",
     "sourceLanguage": "de",
@@ -203858,6 +205189,56 @@
         "pastTenses": "sprang, ist gesprungen",
         "presentTenses": "ich springe, du springst, er/sie/es springt",
         "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "fountain": {
+    "source": "fountain",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Springbrunnen",
+        "translation": "fountain",
+        "definitions": [
+          "Eine Anlage, bei der Wasser durch Düsen in die Luft gespritzt wird."
+        ],
+        "examples": [
+          "Der Springbrunnen plätschert.",
+          "Ein großer Springbrunnen im Park."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈʃpʁɪŋˌbʁʊnən",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Springbrunnen"
+      },
+      {
+        "source": "der Brunnen",
+        "translation": "well, fountain",
+        "definitions": [
+          "Eine künstlich angelegte Anlage zur Gewinnung von Wasser aus dem Boden.",
+          "Ein dekoratives Bauwerk, aus dem Wasser sprudelt."
+        ],
+        "examples": [
+          "Der tiefe Brunnen.",
+          "Wasser aus dem Brunnen schöpfen.",
+          "Ein Brunnen auf dem Marktplatz."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈbʁʊnən",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Brunnen"
       }
     ],
     "detectedInputType": "word",
@@ -218864,6 +220245,26 @@
         "pastTenses": "schaute sich um, hat sich umgeschaut",
         "presentTenses": "ich schaue mich um, du schaust dich um, er/sie/es schaut sich um",
         "tense": "present"
+      },
+      {
+        "source": "rumgucken",
+        "translation": "look around, look around a bit, look around a little",
+        "definitions": [
+          "umherblicken, sich umschauen",
+          "neugierig beobachten",
+          "sich orientieren"
+        ],
+        "examples": [
+          "Er guckt gern rum.",
+          "Wir gucken mal rum.",
+          "Sie guckte nur rum."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈrʊmˌɡʊkn̩",
+        "number": "singular",
+        "pastTenses": "guckte rum, hat rumgeguckt",
+        "presentTenses": "ich gucke rum, du guckst rum, er/sie/es guckt rum",
+        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -226974,68 +228375,6 @@
     },
     "items": [
       {
-        "source": "seriously",
-        "translation": "seriously, earnestly",
-        "definitions": [
-          "auf ernste Weise",
-          "ernsthaft",
-          "bedeutend",
-          "schwerwiegend"
-        ],
-        "examples": [
-          "Er nahm die Aufgabe seriously.",
-          "Sie war seriously krank.",
-          "Das Problem wurde seriously diskutiert."
-        ],
-        "partOfSpeech": "adverb",
-        "ipa": "ˈziːʁi̯ʊsly",
-        "number": "singular"
-      },
-      {
-        "source": "seriös",
-        "translation": "seriously, earnestly, gravely",
-        "definitions": ["vertrauenswürdig", "ernsthaft", "zuverlässig"],
-        "examples": ["ein seriöser Geschäftsmann", "seriöse Absichten"],
-        "partOfSpeech": "adjective",
-        "ipa": "ˈziːʁi̯øz",
-        "number": "singular"
-      },
-      {
-        "source": "in earnest",
-        "translation": "seriously, earnestly, sincerely",
-        "definitions": [
-          "ernsthaft",
-          "im Ernst",
-          "eifrig",
-          "mit voller Absicht"
-        ],
-        "examples": [
-          "The work began in earnest.",
-          "He started to study in earnest.",
-          "The competition got underway in earnest."
-        ],
-        "partOfSpeech": "adverb",
-        "ipa": "ɪn ˈɜːnɪst",
-        "number": "singular"
-      },
-      {
-        "source": "ernstlich",
-        "translation": "seriously, earnestly, really",
-        "definitions": [
-          "auf ernsthafte Weise",
-          "mit Ernst und Nachdruck",
-          "wirklich, tatsächlich"
-        ],
-        "examples": [
-          "Er hat sich ernstlich bemüht.",
-          "Sie war ernstlich besorgt.",
-          "Das ist ernstlich zu nehmen."
-        ],
-        "partOfSpeech": "adverb",
-        "ipa": "ˈɛʁnstlɪç",
-        "number": "singular"
-      },
-      {
         "source": "ernsthaft",
         "translation": "seriously, really",
         "definitions": [
@@ -227049,6 +228388,55 @@
         ],
         "partOfSpeech": "adverb",
         "ipa": "ˈɛʁnsthaft",
+        "number": "singular"
+      },
+      {
+        "source": "im Ernst",
+        "translation": "seriously, in earnest, for real",
+        "definitions": ["wirklich", "ernsthaft gemeint", "ohne Scherz"],
+        "examples": [
+          "Meinst du das im Ernst?",
+          "Im Ernst, das ist wichtig.",
+          "Er sagte es im Ernst."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "ɪm ɛʁnst",
+        "number": "singular"
+      },
+      {
+        "source": "der Ernst",
+        "translation": "seriousness, gravity, Ernst",
+        "definitions": [
+          "Zustand des Fehlens von Scherzhaftigkeit oder Leichtfertigkeit",
+          "Gefährlichkeit oder Wichtigkeit einer Situation",
+          "Ein männlicher Vorname"
+        ],
+        "examples": [
+          "Das ist mein voller Ernst.",
+          "Der Ernst der Lage ist erkannt.",
+          "Er macht Ernst mit seinen Plänen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ɛʁnst",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Ernste"
+      },
+      {
+        "source": "wirklich",
+        "translation": "really, actually, truly",
+        "definitions": [
+          "tatsächlich, in der Realität",
+          "echt, wahrhaftig",
+          "sehr, außerordentlich"
+        ],
+        "examples": [
+          "Ist das wirklich wahr?",
+          "Er hat es wirklich getan.",
+          "Das ist wirklich schön."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "ˈvɪʁklɪç",
         "number": "singular"
       }
     ],
@@ -227772,6 +229160,76 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Sendungen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "transmitter": {
+    "source": "transmitter",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Sender",
+        "translation": "transmitter, broadcaster, sender",
+        "definitions": [
+          "Eine Person oder Institution, die Nachrichten oder Signale übermittelt.",
+          "Ein technisches Gerät zur Ausstrahlung von elektromagnetischen Wellen.",
+          "Ein Unternehmen, das Rundfunk- oder Fernsehprogramme produziert und ausstrahlt."
+        ],
+        "examples": [
+          "Der Sender strahlt das Signal aus.",
+          "Welcher Sender zeigt das Spiel?",
+          "Der Sender der Nachricht ist unbekannt."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈzɛndɐ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Sender"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "broadcaster": {
+    "source": "broadcaster",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Sender",
+        "translation": "transmitter, broadcaster, sender",
+        "definitions": [
+          "Eine Person oder Institution, die Nachrichten oder Signale übermittelt.",
+          "Ein technisches Gerät zur Ausstrahlung von elektromagnetischen Wellen.",
+          "Ein Unternehmen, das Rundfunk- oder Fernsehprogramme produziert und ausstrahlt."
+        ],
+        "examples": [
+          "Der Sender strahlt das Signal aus.",
+          "Welcher Sender zeigt das Spiel?",
+          "Der Sender der Nachricht ist unbekannt."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈzɛndɐ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Sender"
       }
     ],
     "detectedInputType": "word",
@@ -242310,6 +243768,110 @@
     "extraItems": [],
     "explanation": ""
   },
+  "snorer": {
+    "source": "snorer",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Schnarcher",
+        "translation": "snorer, snore",
+        "definitions": [
+          "Eine Person, die schnarcht.",
+          "Geräusch, das beim Schnarchen entsteht."
+        ],
+        "examples": [
+          "Mein Nachbar ist ein lauter Schnarcher.",
+          "Das Schnarcher-Geräusch störte meinen Schlaf."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈʃnaʁçɐ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Schnarcher"
+      },
+      {
+        "source": "schnarchen",
+        "translation": "to snore",
+        "definitions": [
+          "Geräusche beim Atmen im Schlaf machen",
+          "laute Atemgeräusche während des Schlafens von sich geben"
+        ],
+        "examples": [
+          "Er schnarcht jede Nacht.",
+          "Sie hat die ganze Nacht geschnarcht.",
+          "Das Baby schnarcht leise."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʃnaʁçn̩",
+        "number": "singular",
+        "pastTenses": "schnarchte, hat geschnarcht",
+        "presentTenses": "ich schnarche, du schnarchst, er/sie/es schnarcht",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "snore": {
+    "source": "snore",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Schnarcher",
+        "translation": "snorer, snore",
+        "definitions": [
+          "Eine Person, die schnarcht.",
+          "Geräusch, das beim Schnarchen entsteht."
+        ],
+        "examples": [
+          "Mein Nachbar ist ein lauter Schnarcher.",
+          "Das Schnarcher-Geräusch störte meinen Schlaf."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈʃnaʁçɐ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Schnarcher"
+      },
+      {
+        "source": "schnarchen",
+        "translation": "to snore",
+        "definitions": [
+          "Geräusche beim Atmen im Schlaf machen",
+          "laute Atemgeräusche während des Schlafens von sich geben"
+        ],
+        "examples": [
+          "Er schnarcht jede Nacht.",
+          "Sie hat die ganze Nacht geschnarcht.",
+          "Das Baby schnarcht leise."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʃnaʁçn̩",
+        "number": "singular",
+        "pastTenses": "schnarchte, hat geschnarcht",
+        "presentTenses": "ich schnarche, du schnarchst, er/sie/es schnarcht",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "to snore": {
     "source": "to snore",
     "sourceLanguage": "de",
@@ -242545,6 +244107,120 @@
     "extraItems": [],
     "explanation": ""
   },
+  "buckles": {
+    "source": "buckles",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "schnallt",
+        "translation": "buckles, fastens, gets it",
+        "definitions": [
+          "befestigt etwas mit einer Schnalle",
+          "versteht etwas (umgangssprachlich)",
+          "schnallt sich an (z.B. im Auto)"
+        ],
+        "examples": [
+          "Er schnallt den Gurt.",
+          "Sie schnallt die Tasche zu.",
+          "Er schnallt, was gemeint ist.",
+          "Man schnallt sich im Flugzeug an."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ʃnalt",
+        "number": "singular",
+        "pastTenses": "schnallte, hat geschnallt",
+        "presentTenses": "ich schnalle, du schnallst, er/sie/es schnallt",
+        "tense": "present"
+      },
+      {
+        "source": "schnallen",
+        "translation": "buckle, get, fasten one's seatbelt",
+        "definitions": [
+          "etwas mit einer Schnalle befestigen",
+          "etwas verstehen oder begreifen (umgangssprachlich)",
+          "einen Gurt oder Riemen schließen"
+        ],
+        "examples": [
+          "Er schnallt den Helm fest.",
+          "Hast du das geschnallt?",
+          "Sie schnallte den Sicherheitsgurt."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʃnalən",
+        "number": "plural",
+        "pastTenses": "schnallte, hat geschnallt",
+        "presentTenses": "ich schnalle, du schnallst, er/sie/es schnallt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "fastens": {
+    "source": "fastens",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "schnallt",
+        "translation": "buckles, fastens, gets it",
+        "definitions": [
+          "befestigt etwas mit einer Schnalle",
+          "versteht etwas (umgangssprachlich)",
+          "schnallt sich an (z.B. im Auto)"
+        ],
+        "examples": [
+          "Er schnallt den Gurt.",
+          "Sie schnallt die Tasche zu.",
+          "Er schnallt, was gemeint ist.",
+          "Man schnallt sich im Flugzeug an."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ʃnalt",
+        "number": "singular",
+        "pastTenses": "schnallte, hat geschnallt",
+        "presentTenses": "ich schnalle, du schnallst, er/sie/es schnallt",
+        "tense": "present"
+      },
+      {
+        "source": "schnallen",
+        "translation": "buckle, get, fasten one's seatbelt",
+        "definitions": [
+          "etwas mit einer Schnalle befestigen",
+          "etwas verstehen oder begreifen (umgangssprachlich)",
+          "einen Gurt oder Riemen schließen"
+        ],
+        "examples": [
+          "Er schnallt den Helm fest.",
+          "Hast du das geschnallt?",
+          "Sie schnallte den Sicherheitsgurt."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʃnalən",
+        "number": "plural",
+        "pastTenses": "schnallte, hat geschnallt",
+        "presentTenses": "ich schnalle, du schnallst, er/sie/es schnallt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "buckle": {
     "source": "buckle",
     "sourceLanguage": "de",
@@ -242727,6 +244403,26 @@
         "number": "singular",
         "pastTenses": "bekam, hat bekommen",
         "presentTenses": "ich bekomme, du bekommst, er/sie/es bekommt",
+        "tense": "present"
+      },
+      {
+        "source": "abkriegen",
+        "translation": "get, receive, take off",
+        "definitions": [
+          "etwas erhalten, abbekommen (oft im Sinne von Schlägen, Tadel)",
+          "etwas entfernen können, ablösen",
+          "einen Anteil von etwas bekommen"
+        ],
+        "examples": [
+          "Er hat ordentlich Schelte abbekommen.",
+          "Ich konnte den Fleck nicht abkriegen.",
+          "Jeder wollte etwas vom Kuchen abkriegen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈapˌkriːɡn̩",
+        "number": "singular",
+        "pastTenses": "kriegte ab, hat abgekriegt",
+        "presentTenses": "ich kriege ab, du kriegst ab, er/sie/es kriegt ab",
         "tense": "present"
       },
       {
@@ -253649,6 +255345,24 @@
         "g": "masculine",
         "number": "singular",
         "pluralForm": "die Schatten"
+      },
+      {
+        "source": "beschatten",
+        "translation": "shade, shadow",
+        "definitions": [
+          "Schatten auf etwas werfen",
+          "jemanden heimlich beobachten, verfolgen"
+        ],
+        "examples": [
+          "Der Baum beschattet den Garten.",
+          "Die Detektive beschatteten den Verdächtigen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "bəˈʃatn̩",
+        "number": "singular",
+        "pastTenses": "beschattete, hat beschattet",
+        "presentTenses": "ich beschatte, du beschattest, er/sie/es beschattet",
+        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -253666,6 +255380,24 @@
       "language": "de"
     },
     "items": [
+      {
+        "source": "beschatten",
+        "translation": "shade, shadow",
+        "definitions": [
+          "Schatten auf etwas werfen",
+          "jemanden heimlich beobachten, verfolgen"
+        ],
+        "examples": [
+          "Der Baum beschattet den Garten.",
+          "Die Detektive beschatteten den Verdächtigen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "bəˈʃatn̩",
+        "number": "singular",
+        "pastTenses": "beschattete, hat beschattet",
+        "presentTenses": "ich beschatte, du beschattest, er/sie/es beschattet",
+        "tense": "present"
+      },
       {
         "source": "der Schatten",
         "translation": "shadow, shade",
@@ -253908,6 +255640,40 @@
         "pastTenses": "scharten, haben geschart",
         "presentTenses": "ich schare, du scharst, er/sie/es schart",
         "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "shame": {
+    "source": "shame",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Schande",
+        "translation": "shame, disgrace",
+        "definitions": [
+          "Zustand der Ehrlosigkeit oder Demütigung",
+          "Etwas, das als beschämend oder empörend empfunden wird"
+        ],
+        "examples": [
+          "Das ist eine Schande!",
+          "Er brachte Schande über die Familie.",
+          "Es wäre eine Schande, das wegzuwerfen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈʃandə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Schanden"
       }
     ],
     "detectedInputType": "word",
@@ -254488,6 +256254,201 @@
         "partOfSpeech": "adjective",
         "ipa": "ʃaːl",
         "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "creates": {
+    "source": "creates",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "schafft",
+        "translation": "creates, works, transports",
+        "definitions": [
+          "erstellt, produziert, bewirkt",
+          "arbeitet, leistet Arbeit",
+          "bringt etwas an einen Ort, befördert"
+        ],
+        "examples": [
+          "Er schafft Großes.",
+          "Sie schafft täglich acht Stunden.",
+          "Der Kran schafft die Last nach oben."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ʃaft",
+        "number": "singular",
+        "pastTenses": "schuf, hat geschaffen",
+        "presentTenses": "ich schaffe, du schaffst, er/sie/es schafft",
+        "tense": "present"
+      },
+      {
+        "source": "schaffen",
+        "translation": "to manage, to create, to work",
+        "definitions": [
+          "etwas erzeugen, herstellen",
+          "etwas erfolgreich zu Ende bringen, bewältigen",
+          "arbeiten, tätig sein (veraltet oder regional)"
+        ],
+        "examples": [
+          "Wir schaffen das.",
+          "Er hat viel geschafft.",
+          "Was schaffst du heute?",
+          "Sie schaffen ein neues Werk."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʃafn̩",
+        "number": "plural",
+        "pastTenses": "schuf, hat geschaffen",
+        "presentTenses": "ich schaffe, du schaffst, er/sie/es schafft",
+        "tense": "present"
+      },
+      {
+        "source": "bildet",
+        "translation": "forms, creates, educates",
+        "definitions": [
+          "Formt, erstellt oder konstruiert etwas.",
+          "Stellt dar oder repräsentiert etwas.",
+          "Erzieht oder schult jemanden."
+        ],
+        "examples": [
+          "Das Kind bildet einen Turm aus Bauklötzen.",
+          "Der Fluss bildet die natürliche Grenze.",
+          "Die Schule bildet junge Menschen aus."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈbɪldət",
+        "number": "singular",
+        "pastTenses": "bildete, hat gebildet",
+        "presentTenses": "ich bilde, du bildest, er/sie/es bildet",
+        "tense": "present"
+      },
+      {
+        "source": "bilden",
+        "translation": "form, create, develop, educate",
+        "definitions": [
+          "etwas formen oder gestalten",
+          "etwas gründen oder aufbauen",
+          "sich entwickeln oder entstehen",
+          "jemanden erziehen oder ausbilden"
+        ],
+        "examples": [
+          "Wir bilden einen Kreis.",
+          "Sie bilden eine neue Regierung.",
+          "Wolken bilden sich am Himmel.",
+          "Die Schule bildet junge Menschen aus."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈbɪldn̩",
+        "number": "plural",
+        "pastTenses": "bildete, hat gebildet",
+        "presentTenses": "ich bilde, du bildest, er/sie/es bildet",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "works": {
+    "source": "works",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "schafft",
+        "translation": "creates, works, transports",
+        "definitions": [
+          "erstellt, produziert, bewirkt",
+          "arbeitet, leistet Arbeit",
+          "bringt etwas an einen Ort, befördert"
+        ],
+        "examples": [
+          "Er schafft Großes.",
+          "Sie schafft täglich acht Stunden.",
+          "Der Kran schafft die Last nach oben."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ʃaft",
+        "number": "singular",
+        "pastTenses": "schuf, hat geschaffen",
+        "presentTenses": "ich schaffe, du schaffst, er/sie/es schafft",
+        "tense": "present"
+      },
+      {
+        "source": "schaffen",
+        "translation": "to manage, to create, to work",
+        "definitions": [
+          "etwas erzeugen, herstellen",
+          "etwas erfolgreich zu Ende bringen, bewältigen",
+          "arbeiten, tätig sein (veraltet oder regional)"
+        ],
+        "examples": [
+          "Wir schaffen das.",
+          "Er hat viel geschafft.",
+          "Was schaffst du heute?",
+          "Sie schaffen ein neues Werk."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʃafn̩",
+        "number": "plural",
+        "pastTenses": "schuf, hat geschaffen",
+        "presentTenses": "ich schaffe, du schaffst, er/sie/es schafft",
+        "tense": "present"
+      },
+      {
+        "source": "gelingt",
+        "translation": "succeeds, works, is successful",
+        "definitions": [
+          "Es ist erfolgreich oder glückt.",
+          "Jemandem gelingt etwas, wenn er es schafft oder erreicht."
+        ],
+        "examples": [
+          "Der Versuch gelingt.",
+          "Ihm gelingt es, die Aufgabe zu lösen.",
+          "Das Projekt gelingt gut."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ɡəˈlɪŋt",
+        "number": "singular",
+        "pastTenses": "ist gelungen, gelang",
+        "presentTenses": "ich gelinge, du gelingst, er/sie/es gelingt",
+        "tense": "present"
+      },
+      {
+        "source": "gelingen",
+        "translation": "succeed, work out, turn out",
+        "definitions": [
+          "etwas erfolgreich ausführen oder erreichen",
+          "ein positives Ergebnis haben",
+          "glücken, klappen"
+        ],
+        "examples": [
+          "Das Experiment wird gelingen.",
+          "Es ist ihm gut gelungen.",
+          "Möge es dir gelingen!"
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ɡəˈlɪŋən",
+        "number": "singular",
+        "pastTenses": "gelang, ist gelungen",
+        "presentTenses": "ich gelinge, du gelingst, er/sie/es gelingt",
+        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -255857,6 +257818,72 @@
         "g": "masculine",
         "number": "singular",
         "pluralForm": "die Saturne"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "semitrailer": {
+    "source": "semitrailer",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Sattelschlepper",
+        "translation": "semitrailer, tractor-trailer",
+        "definitions": [
+          "Ein Lastkraftwagen, der einen Auflieger zieht.",
+          "Ein Zugfahrzeug für Sattelauflieger."
+        ],
+        "examples": [
+          "Der Sattelschlepper fuhr auf der Autobahn.",
+          "Ein Sattelschlepper transportiert Güter."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈzatl̩ˌʃlɛpɐ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Sattelschlepper"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "tractor-trailer": {
+    "source": "tractor-trailer",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Sattelschlepper",
+        "translation": "semitrailer, tractor-trailer",
+        "definitions": [
+          "Ein Lastkraftwagen, der einen Auflieger zieht.",
+          "Ein Zugfahrzeug für Sattelauflieger."
+        ],
+        "examples": [
+          "Der Sattelschlepper fuhr auf der Autobahn.",
+          "Ein Sattelschlepper transportiert Güter."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈzatl̩ˌʃlɛpɐ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Sattelschlepper"
       }
     ],
     "detectedInputType": "word",
@@ -260721,6 +262748,42 @@
     "extraItems": [],
     "explanation": ""
   },
+  "look around a bit": {
+    "source": "look around a bit",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "rumgucken",
+        "translation": "look around, look around a bit, look around a little",
+        "definitions": [
+          "umherblicken, sich umschauen",
+          "neugierig beobachten",
+          "sich orientieren"
+        ],
+        "examples": [
+          "Er guckt gern rum.",
+          "Wir gucken mal rum.",
+          "Sie guckte nur rum."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈrʊmˌɡʊkn̩",
+        "number": "singular",
+        "pastTenses": "guckte rum, hat rumgeguckt",
+        "presentTenses": "ich gucke rum, du guckst rum, er/sie/es guckt rum",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "rested": {
     "source": "rested",
     "sourceLanguage": "de",
@@ -261931,6 +263994,76 @@
         "ipa": "ˈʁoːʁə",
         "g": "neuter",
         "number": "plural"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "crudeness": {
+    "source": "crudeness",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Rohheit",
+        "translation": "crudeness, rawness, brutality",
+        "definitions": [
+          "Mangel an Feinheit oder Zartheit",
+          "Grobes, unzivilisiertes Verhalten",
+          "Unbearbeiteter, ursprünglicher Zustand"
+        ],
+        "examples": [
+          "Die Rohheit seiner Manieren war offensichtlich.",
+          "Manche Gerichte bewahren eine gewisse Rohheit.",
+          "Die Rohheit der Natur beeindruckte ihn."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈʁoːhaɪ̯t",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Rohheiten"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "rawness": {
+    "source": "rawness",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Rohheit",
+        "translation": "crudeness, rawness, brutality",
+        "definitions": [
+          "Mangel an Feinheit oder Zartheit",
+          "Grobes, unzivilisiertes Verhalten",
+          "Unbearbeiteter, ursprünglicher Zustand"
+        ],
+        "examples": [
+          "Die Rohheit seiner Manieren war offensichtlich.",
+          "Manche Gerichte bewahren eine gewisse Rohheit.",
+          "Die Rohheit der Natur beeindruckte ihn."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈʁoːhaɪ̯t",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Rohheiten"
       }
     ],
     "detectedInputType": "word",
@@ -268683,6 +270816,76 @@
     "extraItems": [],
     "explanation": ""
   },
+  "to buckle down": {
+    "source": "to buckle down",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "reinknien",
+        "translation": "to buckle down, to throw oneself into",
+        "definitions": [
+          "Sich intensiv und mit großem Engagement einer Sache widmen.",
+          "Sich mit voller Kraft und Konzentration in eine Aufgabe vertiefen."
+        ],
+        "examples": [
+          "Er muss sich in das Projekt reinknien.",
+          "Wenn du Erfolg haben willst, musst du dich reinknien.",
+          "Sie hat sich richtig reingekniet, um die Prüfung zu bestehen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʁaɪ̯nˌkniːən",
+        "number": "singular",
+        "pastTenses": "hat sich reingekniet",
+        "presentTenses": "ich knie mich rein, du kniest dich rein, er/sie/es kniet sich rein",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to throw oneself into": {
+    "source": "to throw oneself into",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "reinknien",
+        "translation": "to buckle down, to throw oneself into",
+        "definitions": [
+          "Sich intensiv und mit großem Engagement einer Sache widmen.",
+          "Sich mit voller Kraft und Konzentration in eine Aufgabe vertiefen."
+        ],
+        "examples": [
+          "Er muss sich in das Projekt reinknien.",
+          "Wenn du Erfolg haben willst, musst du dich reinknien.",
+          "Sie hat sich richtig reingekniet, um die Prüfung zu bestehen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʁaɪ̯nˌkniːən",
+        "number": "singular",
+        "pastTenses": "hat sich reingekniet",
+        "presentTenses": "ich knie mich rein, du kniest dich rein, er/sie/es kniet sich rein",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "to bang in": {
     "source": "to bang in",
     "sourceLanguage": "de",
@@ -268989,6 +271192,116 @@
         "g": "neuter",
         "number": "singular",
         "pluralForm": "die Reinheitsgebote"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "knelt down": {
+    "source": "knelt down",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "reingekniet",
+        "translation": "knelt down, got stuck in, put a lot of effort in",
+        "definitions": [
+          "Sich mit großem Engagement einer Sache widmen",
+          "Sich intensiv für etwas einsetzen",
+          "Sich sehr anstrengen, um etwas zu erreichen"
+        ],
+        "examples": [
+          "Er hat sich richtig reingekniet, um das Projekt abzuschließen.",
+          "Sie hat sich in die Aufgabe reingekniet und eine tolle Lösung gefunden.",
+          "Wir haben uns alle reingekniet, damit die Veranstaltung ein Erfolg wird."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʁaɪ̯nɡəˌkniːt",
+        "number": "singular",
+        "pastTenses": "hat reingekniet, hat sich reingekniet",
+        "presentTenses": "ich knie mich rein, du kniest dich rein, er/sie/es kniet sich rein",
+        "tense": "past"
+      },
+      {
+        "source": "reinknien",
+        "translation": "to buckle down, to throw oneself into",
+        "definitions": [
+          "Sich intensiv und mit großem Engagement einer Sache widmen.",
+          "Sich mit voller Kraft und Konzentration in eine Aufgabe vertiefen."
+        ],
+        "examples": [
+          "Er muss sich in das Projekt reinknien.",
+          "Wenn du Erfolg haben willst, musst du dich reinknien.",
+          "Sie hat sich richtig reingekniet, um die Prüfung zu bestehen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʁaɪ̯nˌkniːən",
+        "number": "singular",
+        "pastTenses": "hat sich reingekniet",
+        "presentTenses": "ich knie mich rein, du kniest dich rein, er/sie/es kniet sich rein",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "got stuck in": {
+    "source": "got stuck in",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "reingekniet",
+        "translation": "knelt down, got stuck in, put a lot of effort in",
+        "definitions": [
+          "Sich mit großem Engagement einer Sache widmen",
+          "Sich intensiv für etwas einsetzen",
+          "Sich sehr anstrengen, um etwas zu erreichen"
+        ],
+        "examples": [
+          "Er hat sich richtig reingekniet, um das Projekt abzuschließen.",
+          "Sie hat sich in die Aufgabe reingekniet und eine tolle Lösung gefunden.",
+          "Wir haben uns alle reingekniet, damit die Veranstaltung ein Erfolg wird."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʁaɪ̯nɡəˌkniːt",
+        "number": "singular",
+        "pastTenses": "hat reingekniet, hat sich reingekniet",
+        "presentTenses": "ich knie mich rein, du kniest dich rein, er/sie/es kniet sich rein",
+        "tense": "past"
+      },
+      {
+        "source": "reinknien",
+        "translation": "to buckle down, to throw oneself into",
+        "definitions": [
+          "Sich intensiv und mit großem Engagement einer Sache widmen.",
+          "Sich mit voller Kraft und Konzentration in eine Aufgabe vertiefen."
+        ],
+        "examples": [
+          "Er muss sich in das Projekt reinknien.",
+          "Wenn du Erfolg haben willst, musst du dich reinknien.",
+          "Sie hat sich richtig reingekniet, um die Prüfung zu bestehen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʁaɪ̯nˌkniːən",
+        "number": "singular",
+        "pastTenses": "hat sich reingekniet",
+        "presentTenses": "ich knie mich rein, du kniest dich rein, er/sie/es kniet sich rein",
+        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -270905,6 +273218,19 @@
         "number": "singular"
       },
       {
+        "source": "munter",
+        "translation": "lively, cheerful, awake",
+        "definitions": [
+          "lebhaft und aktiv",
+          "fröhlich und heiter",
+          "wach und aufmerksam"
+        ],
+        "examples": ["ein munteres Kind", "munterer Tag", "munter plaudern"],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈmʊntɐ",
+        "number": "singular"
+      },
+      {
         "source": "lebhaft",
         "translation": "lively, vivid, spirited",
         "definitions": [
@@ -270983,6 +273309,23 @@
         "pastTenses": "regte an, hat angeregt",
         "presentTenses": "ich rege an, du regst an, er/sie/es regt an",
         "tense": "present"
+      },
+      {
+        "source": "munter",
+        "translation": "cheerfully, lively, briskly",
+        "definitions": [
+          "fröhlich und lebhaft",
+          "wach und aufmerksam",
+          "schnell und zügig"
+        ],
+        "examples": [
+          "Sie sang munter ein Lied.",
+          "Er war wieder munter nach dem Schlaf.",
+          "Die Arbeit ging munter voran."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "ˈmʊntɐ",
+        "number": "singular"
       }
     ],
     "detectedInputType": "word",
@@ -284860,6 +287203,112 @@
     "extraItems": [],
     "explanation": ""
   },
+  "positioning": {
+    "source": "positioning",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Positionierung",
+        "translation": "positioning, placement",
+        "definitions": [
+          "Die strategische Platzierung eines Produkts oder einer Marke im Markt.",
+          "Der Akt des Positionierens oder Ausrichtens von etwas."
+        ],
+        "examples": [
+          "Die Positionierung des neuen Produkts war entscheidend.",
+          "Eine klare Positionierung hilft, sich von Mitbewerbern abzuheben.",
+          "Die Positionierung der Möbel im Raum."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "poziʦi̯oˈniːrʊŋ",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Positionierungen"
+      },
+      {
+        "source": "die Platzierung",
+        "translation": "placement, positioning, allotment",
+        "definitions": [
+          "Das Platzieren oder Positionieren von etwas.",
+          "Die Art und Weise, wie etwas platziert oder angeordnet ist.",
+          "Die Vergabe oder Zuteilung von Wertpapieren oder Produkten an Investoren oder Kunden."
+        ],
+        "examples": [
+          "Die Platzierung der Möbel war perfekt.",
+          "Eine gute Platzierung im Wettbewerb ist wichtig.",
+          "Die Platzierung der neuen Anleihe war erfolgreich."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "plaˈtsiːrʊŋ",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Platzierungen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "placement": {
+    "source": "placement",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Platzierung",
+        "translation": "placement, positioning, allotment",
+        "definitions": [
+          "Das Platzieren oder Positionieren von etwas.",
+          "Die Art und Weise, wie etwas platziert oder angeordnet ist.",
+          "Die Vergabe oder Zuteilung von Wertpapieren oder Produkten an Investoren oder Kunden."
+        ],
+        "examples": [
+          "Die Platzierung der Möbel war perfekt.",
+          "Eine gute Platzierung im Wettbewerb ist wichtig.",
+          "Die Platzierung der neuen Anleihe war erfolgreich."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "plaˈtsiːrʊŋ",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Platzierungen"
+      },
+      {
+        "source": "die Positionierung",
+        "translation": "positioning, placement",
+        "definitions": [
+          "Die strategische Platzierung eines Produkts oder einer Marke im Markt.",
+          "Der Akt des Positionierens oder Ausrichtens von etwas."
+        ],
+        "examples": [
+          "Die Positionierung des neuen Produkts war entscheidend.",
+          "Eine klare Positionierung hilft, sich von Mitbewerbern abzuheben.",
+          "Die Positionierung der Möbel im Raum."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "poziʦi̯oˈniːrʊŋ",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Positionierungen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "wallet": {
     "source": "wallet",
     "sourceLanguage": "de",
@@ -286505,76 +288954,6 @@
         "g": "masculine",
         "number": "singular",
         "pluralForm": "die Plot-Twists"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "placement": {
-    "source": "placement",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "die Platzierung",
-        "translation": "placement, positioning, allotment",
-        "definitions": [
-          "Das Platzieren oder Positionieren von etwas.",
-          "Die Art und Weise, wie etwas platziert oder angeordnet ist.",
-          "Die Vergabe oder Zuteilung von Wertpapieren oder Produkten an Investoren oder Kunden."
-        ],
-        "examples": [
-          "Die Platzierung der Möbel war perfekt.",
-          "Eine gute Platzierung im Wettbewerb ist wichtig.",
-          "Die Platzierung der neuen Anleihe war erfolgreich."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "plaˈtsiːrʊŋ",
-        "g": "feminine",
-        "number": "singular",
-        "pluralForm": "die Platzierungen"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "positioning": {
-    "source": "positioning",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "die Platzierung",
-        "translation": "placement, positioning, allotment",
-        "definitions": [
-          "Das Platzieren oder Positionieren von etwas.",
-          "Die Art und Weise, wie etwas platziert oder angeordnet ist.",
-          "Die Vergabe oder Zuteilung von Wertpapieren oder Produkten an Investoren oder Kunden."
-        ],
-        "examples": [
-          "Die Platzierung der Möbel war perfekt.",
-          "Eine gute Platzierung im Wettbewerb ist wichtig.",
-          "Die Platzierung der neuen Anleihe war erfolgreich."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "plaˈtsiːrʊŋ",
-        "g": "feminine",
-        "number": "singular",
-        "pluralForm": "die Platzierungen"
       }
     ],
     "detectedInputType": "word",
@@ -294465,6 +296844,74 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Oliven"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "fainting spell": {
+    "source": "fainting spell",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Ohnmacht",
+        "translation": "fainting spell, powerlessness",
+        "definitions": [
+          "Zustand vorübergehender Bewusstlosigkeit",
+          "Gefühl der Hilflosigkeit oder Machtlosigkeit gegenüber einer Situation"
+        ],
+        "examples": [
+          "In Ohnmacht fallen.",
+          "Ein Gefühl tiefer Ohnmacht.",
+          "Aus der Ohnmacht erwachen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈoːnˌmaxt",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Ohnmachten"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "powerlessness": {
+    "source": "powerlessness",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Ohnmacht",
+        "translation": "fainting spell, powerlessness",
+        "definitions": [
+          "Zustand vorübergehender Bewusstlosigkeit",
+          "Gefühl der Hilflosigkeit oder Machtlosigkeit gegenüber einer Situation"
+        ],
+        "examples": [
+          "In Ohnmacht fallen.",
+          "Ein Gefühl tiefer Ohnmacht.",
+          "Aus der Ohnmacht erwachen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈoːnˌmaxt",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Ohnmachten"
       }
     ],
     "detectedInputType": "word",
@@ -313707,6 +316154,89 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Muschis"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "cheerfully": {
+    "source": "cheerfully",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "munter",
+        "translation": "cheerfully, lively, briskly",
+        "definitions": [
+          "fröhlich und lebhaft",
+          "wach und aufmerksam",
+          "schnell und zügig"
+        ],
+        "examples": [
+          "Sie sang munter ein Lied.",
+          "Er war wieder munter nach dem Schlaf.",
+          "Die Arbeit ging munter voran."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "ˈmʊntɐ",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "cheerful": {
+    "source": "cheerful",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "fröhlich",
+        "translation": "cheerful, merry",
+        "definitions": ["voll Freude", "heiter gestimmt"],
+        "examples": ["ein fröhliches Lachen", "fröhliche Kinder"],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈfrøːlɪç",
+        "number": "singular"
+      },
+      {
+        "source": "munter",
+        "translation": "lively, cheerful, awake",
+        "definitions": [
+          "lebhaft und aktiv",
+          "fröhlich und heiter",
+          "wach und aufmerksam"
+        ],
+        "examples": ["ein munteres Kind", "munterer Tag", "munter plaudern"],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈmʊntɐ",
+        "number": "singular"
+      },
+      {
+        "source": "froh",
+        "translation": "joyful, cheerful",
+        "definitions": [
+          "fühlend oder voller Freude",
+          "fröhlich oder heiter gestimmt"
+        ],
+        "examples": ["Ich bin froh.", "ein frohes Gesicht"],
+        "partOfSpeech": "adjective",
+        "ipa": "fʁoː",
+        "number": "singular"
       }
     ],
     "detectedInputType": "word",
@@ -335281,6 +337811,163 @@
     "extraItems": [],
     "explanation": ""
   },
+  "truck": {
+    "source": "truck",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Lastkraftwagen",
+        "translation": "truck, lorry",
+        "definitions": [
+          "Ein Kraftfahrzeug, das zur Beförderung von Gütern bestimmt ist."
+        ],
+        "examples": [
+          "Der Lastkraftwagen liefert die Ware.",
+          "Ein schwerer Lastkraftwagen auf der Autobahn."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈlastkraftvaːɡn̩",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Lastkraftwagen"
+      },
+      {
+        "source": "der Lkw",
+        "translation": "truck, lorry",
+        "definitions": [
+          "Ein Kraftfahrzeug, das zum Transport von Gütern bestimmt ist."
+        ],
+        "examples": ["Der LKW fährt auf der Autobahn.", "Ein beladener LKW."],
+        "partOfSpeech": "noun",
+        "ipa": "ɛlkaˈveː",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die LKW / die LKWs"
+      },
+      {
+        "source": "der Lastwagen",
+        "translation": "truck, lorry",
+        "definitions": [
+          "Ein großes, schweres Kraftfahrzeug, das zum Transport von Gütern und Lasten bestimmt ist."
+        ],
+        "examples": [
+          "Der Lastwagen liefert die Ware.",
+          "Ein schwerer Lastwagen auf der Autobahn."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈlastˌvaːɡn̩",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Lastwagen"
+      },
+      {
+        "source": "der Sattelschlepper",
+        "translation": "semitrailer, tractor-trailer",
+        "definitions": [
+          "Ein Lastkraftwagen, der einen Auflieger zieht.",
+          "Ein Zugfahrzeug für Sattelauflieger."
+        ],
+        "examples": [
+          "Der Sattelschlepper fuhr auf der Autobahn.",
+          "Ein Sattelschlepper transportiert Güter."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈzatl̩ˌʃlɛpɐ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Sattelschlepper"
+      },
+      {
+        "source": "der Lastzug",
+        "translation": "articulated lorry, semi-trailer truck",
+        "definitions": [
+          "Ein Lastkraftwagen mit einem oder mehreren Anhängern.",
+          "Eine Kombination aus Zugmaschine und Anhänger zum Transport von Gütern."
+        ],
+        "examples": [
+          "Der Lastzug fuhr langsam die Steigung hinauf.",
+          "Ein Lastzug blockierte die Autobahn.",
+          "Viele Lastzüge passieren täglich die Grenze."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈlastˌt͡suːk",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Lastzüge"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "lorry": {
+    "source": "lorry",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Lkw",
+        "translation": "truck, lorry",
+        "definitions": [
+          "Ein Kraftfahrzeug, das zum Transport von Gütern bestimmt ist."
+        ],
+        "examples": ["Der LKW fährt auf der Autobahn.", "Ein beladener LKW."],
+        "partOfSpeech": "noun",
+        "ipa": "ɛlkaˈveː",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die LKW / die LKWs"
+      },
+      {
+        "source": "der Lastwagen",
+        "translation": "truck, lorry",
+        "definitions": [
+          "Ein großes, schweres Kraftfahrzeug, das zum Transport von Gütern und Lasten bestimmt ist."
+        ],
+        "examples": [
+          "Der Lastwagen liefert die Ware.",
+          "Ein schwerer Lastwagen auf der Autobahn."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈlastˌvaːɡn̩",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Lastwagen"
+      },
+      {
+        "source": "der Lastkraftwagen",
+        "translation": "truck, lorry",
+        "definitions": [
+          "Ein Kraftfahrzeug, das zur Beförderung von Gütern bestimmt ist."
+        ],
+        "examples": [
+          "Der Lastkraftwagen liefert die Ware.",
+          "Ein schwerer Lastkraftwagen auf der Autobahn."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈlastkraftvaːɡn̩",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Lastkraftwagen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "livestream": {
     "source": "livestream",
     "sourceLanguage": "de",
@@ -343745,8 +346432,8 @@
     "extraItems": [],
     "explanation": ""
   },
-  "truck": {
-    "source": "truck",
+  "articulated lorry": {
+    "source": "articulated lorry",
     "sourceLanguage": "de",
     "targetLanguage": "en",
     "isDirect": false,
@@ -343757,81 +346444,30 @@
     },
     "items": [
       {
-        "source": "der Lastkraftwagen",
-        "translation": "truck, lorry",
+        "source": "der Lastzug",
+        "translation": "articulated lorry, semi-trailer truck",
         "definitions": [
-          "Ein Kraftfahrzeug, das zur Beförderung von Gütern bestimmt ist."
+          "Ein Lastkraftwagen mit einem oder mehreren Anhängern.",
+          "Eine Kombination aus Zugmaschine und Anhänger zum Transport von Gütern."
         ],
         "examples": [
-          "Der Lastkraftwagen liefert die Ware.",
-          "Ein schwerer Lastkraftwagen auf der Autobahn."
+          "Der Lastzug fuhr langsam die Steigung hinauf.",
+          "Ein Lastzug blockierte die Autobahn.",
+          "Viele Lastzüge passieren täglich die Grenze."
         ],
         "partOfSpeech": "noun",
-        "ipa": "ˈlastkraftvaːɡn̩",
+        "ipa": "ˈlastˌt͡suːk",
         "g": "masculine",
         "number": "singular",
-        "pluralForm": "die Lastkraftwagen"
-      },
-      {
-        "source": "der LKW",
-        "translation": "truck, lorry",
-        "definitions": [
-          "Ein Kraftfahrzeug zum Transport von Gütern.",
-          "Lastkraftwagen."
-        ],
-        "examples": [
-          "Der LKW fährt auf der Autobahn.",
-          "Wir beladen den LKW.",
-          "Ein LKW-Fahrer lieferte die Ware."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "deː ɛlkaːˈveː",
-        "g": "masculine",
-        "number": "singular",
-        "pluralForm": "die LKWs"
-      },
-      {
-        "source": "der Lastwagen",
-        "translation": "truck, lorry",
-        "definitions": [
-          "Ein großes Kraftfahrzeug zum Transport von Gütern.",
-          "Fahrzeug mit Ladefläche für schwere Lasten."
-        ],
-        "examples": [
-          "Der Lastwagen fuhr auf der Autobahn.",
-          "Ein Lastwagen lieferte die Möbel.",
-          "Der Fahrer des Lastwagens war müde."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "deːɐ̯ ˈlastˌvaːɡn̩",
-        "g": "masculine",
-        "number": "singular",
-        "pluralForm": "die Lastwagen"
-      },
-      {
-        "source": "der Laster",
-        "translation": "vice, truck",
-        "definitions": [
-          "Eine schlechte Angewohnheit oder eine moralisch verwerfliche Eigenschaft.",
-          "Kurzform für Lastkraftwagen (LKW)."
-        ],
-        "examples": [
-          "Rauchen ist sein einziges Laster.",
-          "Der schwere Laster blockiert die Straße."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ˈlastɐ",
-        "g": "masculine",
-        "number": "singular",
-        "pluralForm": "die Laster"
+        "pluralForm": "die Lastzüge"
       }
     ],
     "detectedInputType": "word",
     "extraItems": [],
     "explanation": ""
   },
-  "lorry": {
-    "source": "lorry",
+  "semi-trailer truck": {
+    "source": "semi-trailer truck",
     "sourceLanguage": "de",
     "targetLanguage": "en",
     "isDirect": false,
@@ -343842,56 +346478,22 @@
     },
     "items": [
       {
-        "source": "der Lastkraftwagen",
-        "translation": "truck, lorry",
+        "source": "der Lastzug",
+        "translation": "articulated lorry, semi-trailer truck",
         "definitions": [
-          "Ein Kraftfahrzeug, das zur Beförderung von Gütern bestimmt ist."
+          "Ein Lastkraftwagen mit einem oder mehreren Anhängern.",
+          "Eine Kombination aus Zugmaschine und Anhänger zum Transport von Gütern."
         ],
         "examples": [
-          "Der Lastkraftwagen liefert die Ware.",
-          "Ein schwerer Lastkraftwagen auf der Autobahn."
+          "Der Lastzug fuhr langsam die Steigung hinauf.",
+          "Ein Lastzug blockierte die Autobahn.",
+          "Viele Lastzüge passieren täglich die Grenze."
         ],
         "partOfSpeech": "noun",
-        "ipa": "ˈlastkraftvaːɡn̩",
+        "ipa": "ˈlastˌt͡suːk",
         "g": "masculine",
         "number": "singular",
-        "pluralForm": "die Lastkraftwagen"
-      },
-      {
-        "source": "der LKW",
-        "translation": "truck, lorry",
-        "definitions": [
-          "Ein Kraftfahrzeug zum Transport von Gütern.",
-          "Lastkraftwagen."
-        ],
-        "examples": [
-          "Der LKW fährt auf der Autobahn.",
-          "Wir beladen den LKW.",
-          "Ein LKW-Fahrer lieferte die Ware."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "deː ɛlkaːˈveː",
-        "g": "masculine",
-        "number": "singular",
-        "pluralForm": "die LKWs"
-      },
-      {
-        "source": "der Lastwagen",
-        "translation": "truck, lorry",
-        "definitions": [
-          "Ein großes Kraftfahrzeug zum Transport von Gütern.",
-          "Fahrzeug mit Ladefläche für schwere Lasten."
-        ],
-        "examples": [
-          "Der Lastwagen fuhr auf der Autobahn.",
-          "Ein Lastwagen lieferte die Möbel.",
-          "Der Fahrer des Lastwagens war müde."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "deːɐ̯ ˈlastˌvaːɡn̩",
-        "g": "masculine",
-        "number": "singular",
-        "pluralForm": "die Lastwagen"
+        "pluralForm": "die Lastzüge"
       }
     ],
     "detectedInputType": "word",
@@ -354030,6 +356632,25 @@
         "pastTenses": "kostete, hat gekostet",
         "presentTenses": "ich koste, du kostest, er/sie/es kostet",
         "tense": "present"
+      },
+      {
+        "source": "gekostet",
+        "translation": "tasted, cost",
+        "definitions": [
+          "Partizip II von kosten (Geschmack prüfen)",
+          "Partizip II von kosten (Preis haben)"
+        ],
+        "examples": [
+          "Er hat das Essen gekostet.",
+          "Das Auto hat viel Geld gekostet.",
+          "Sie hat den Wein gekostet."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ɡəˈkɔstət",
+        "number": "singular",
+        "pastTenses": "hat gekostet, hat gekostet",
+        "presentTenses": "ich koste, du kostest, er/sie/es kostet",
+        "tense": "past"
       }
     ],
     "detectedInputType": "word",
@@ -381700,64 +384321,6 @@
     "extraItems": [],
     "explanation": ""
   },
-  "property": {
-    "source": "property",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "Immobilien",
-        "translation": "real estate, property",
-        "definitions": ["Sachwerte in Form von Gebäuden oder Grundstücken"],
-        "examples": ["Immobilien kaufen", "markt für Immobilien"],
-        "partOfSpeech": "noun",
-        "ipa": "ˈɪmoˌbiːli̯ən",
-        "g": "feminine",
-        "number": "plural"
-      },
-      {
-        "source": "die Immobilie",
-        "translation": "real estate, property",
-        "definitions": [
-          "Ein unbewegliches Sachgut, insbesondere ein Grundstück oder ein Gebäude."
-        ],
-        "examples": [
-          "Die Immobilie wird verkauft.",
-          "Investition in eine Immobilie."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ɪˈmoːbiːli̯ə",
-        "g": "feminine",
-        "number": "singular",
-        "pluralForm": "die Immobilien"
-      },
-      {
-        "source": "die Immobilie",
-        "translation": "real estate, property",
-        "definitions": [
-          "Ein unbewegliches Sachgut, insbesondere ein Grundstück oder ein Gebäude."
-        ],
-        "examples": [
-          "Die Immobilie wird verkauft.",
-          "Investition in eine Immobilie."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ɪˈmoːbiːli̯ə",
-        "g": "feminine",
-        "number": "singular",
-        "pluralForm": "die Immobilien"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
   "whenever": {
     "source": "whenever",
     "sourceLanguage": "de",
@@ -382567,6 +385130,70 @@
     "extraItems": [],
     "explanation": ""
   },
+  "sleep outdoors": {
+    "source": "sleep outdoors",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "im Freien übernachten",
+        "translation": "sleep outdoors, sleep rough",
+        "definitions": [
+          "Die Nacht unter freiem Himmel verbringen.",
+          "Draußen schlafen, ohne festes Dach über dem Kopf."
+        ],
+        "examples": [
+          "Wir werden heute Nacht im Freien übernachten.",
+          "Man kann im Freien übernachten, wenn das Wetter gut ist.",
+          "Viele Abenteurer lieben es, im Freien zu übernachten."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "sleep rough": {
+    "source": "sleep rough",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "im Freien übernachten",
+        "translation": "sleep outdoors, sleep rough",
+        "definitions": [
+          "Die Nacht unter freiem Himmel verbringen.",
+          "Draußen schlafen, ohne festes Dach über dem Kopf."
+        ],
+        "examples": [
+          "Wir werden heute Nacht im Freien übernachten.",
+          "Man kann im Freien übernachten, wenn das Wetter gut ist.",
+          "Viele Abenteurer lieben es, im Freien zu übernachten."
+        ],
+        "partOfSpeech": "idiom",
+        "ipa": "",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "in conclusion": {
     "source": "in conclusion",
     "sourceLanguage": "de",
@@ -382671,6 +385298,54 @@
         "g": "neuter",
         "number": "singular",
         "pluralForm": "die Fazite"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "in earnest": {
+    "source": "in earnest",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "im Ernst",
+        "translation": "seriously, in earnest, for real",
+        "definitions": ["wirklich", "ernsthaft gemeint", "ohne Scherz"],
+        "examples": [
+          "Meinst du das im Ernst?",
+          "Im Ernst, das ist wichtig.",
+          "Er sagte es im Ernst."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "ɪm ɛʁnst",
+        "number": "singular"
+      },
+      {
+        "source": "der Ernst",
+        "translation": "seriousness, gravity, Ernst",
+        "definitions": [
+          "Zustand des Fehlens von Scherzhaftigkeit oder Leichtfertigkeit",
+          "Gefährlichkeit oder Wichtigkeit einer Situation",
+          "Ein männlicher Vorname"
+        ],
+        "examples": [
+          "Das ist mein voller Ernst.",
+          "Der Ernst der Lage ist erkannt.",
+          "Er macht Ernst mit seinen Plänen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ɛʁnst",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Ernste"
       }
     ],
     "detectedInputType": "word",
@@ -388992,6 +391667,45 @@
         "pastTenses": "bekam, hat bekommen",
         "presentTenses": "ich bekomme, du bekommst, er/sie/es bekommt",
         "tense": "present"
+      },
+      {
+        "source": "abkriegt",
+        "translation": "gets off, gets",
+        "definitions": [
+          "erhält, bekommt (oft nach Anstrengung oder Kampf)",
+          "entfernt, löst ab (z.B. Schmutz, Farbe)"
+        ],
+        "examples": [
+          "Er kriegt den Fleck nicht ab.",
+          "Sie kriegt das Paket ab.",
+          "Man kriegt die Farbe schlecht ab."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈapˌkriːkt",
+        "number": "singular",
+        "pastTenses": "kriegte ab, hat abgekriegt",
+        "presentTenses": "ich kriege ab, du kriegst ab, er/sie/es kriegt ab",
+        "tense": "present"
+      },
+      {
+        "source": "abkriegen",
+        "translation": "get, receive, take off",
+        "definitions": [
+          "etwas erhalten, abbekommen (oft im Sinne von Schlägen, Tadel)",
+          "etwas entfernen können, ablösen",
+          "einen Anteil von etwas bekommen"
+        ],
+        "examples": [
+          "Er hat ordentlich Schelte abbekommen.",
+          "Ich konnte den Fleck nicht abkriegen.",
+          "Jeder wollte etwas vom Kuchen abkriegen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈapˌkriːɡn̩",
+        "number": "singular",
+        "pastTenses": "kriegte ab, hat abgekriegt",
+        "presentTenses": "ich kriege ab, du kriegst ab, er/sie/es kriegt ab",
+        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -390616,6 +393330,74 @@
         "partOfSpeech": "adjective",
         "ipa": "hɪsˈtoːrɪʃ",
         "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "millet": {
+    "source": "millet",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Hirse",
+        "translation": "millet, millet seeds",
+        "definitions": [
+          "Eine Getreideart, die kleine Samen produziert und in trockenen Regionen angebaut wird.",
+          "Die Samen dieser Pflanze, die als Nahrungsmittel für Menschen und Tiere dienen."
+        ],
+        "examples": [
+          "Hirse ist glutenfrei.",
+          "Man kann Hirse zu Brei kochen.",
+          "Vögel fressen gerne Hirse."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈhɪrzə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Hirsen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "millet seeds": {
+    "source": "millet seeds",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Hirse",
+        "translation": "millet, millet seeds",
+        "definitions": [
+          "Eine Getreideart, die kleine Samen produziert und in trockenen Regionen angebaut wird.",
+          "Die Samen dieser Pflanze, die als Nahrungsmittel für Menschen und Tiere dienen."
+        ],
+        "examples": [
+          "Hirse ist glutenfrei.",
+          "Man kann Hirse zu Brei kochen.",
+          "Vögel fressen gerne Hirse."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈhɪrzə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Hirsen"
       }
     ],
     "detectedInputType": "word",
@@ -405444,56 +408226,6 @@
     "extraItems": [],
     "explanation": ""
   },
-  "station": {
-    "source": "station",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "die Haltestelle",
-        "translation": "stop, station",
-        "definitions": [
-          "Ein festgelegter Punkt, an dem öffentliche Verkehrsmittel planmäßig zum Ein- und Aussteigen halten."
-        ],
-        "examples": [
-          "An der Haltestelle warten.",
-          "Die nächste Haltestelle ist der Hauptbahnhof.",
-          "Wo ist die Haltestelle?"
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ˈhaltəˌʃtɛlə",
-        "g": "feminine",
-        "number": "singular",
-        "pluralForm": "die Haltestellen"
-      },
-      {
-        "source": "der Bahnhof",
-        "translation": "train station, station",
-        "definitions": [
-          "Anlage zum Ein- und Aussteigen bei der Eisenbahn",
-          "Gebäude für den Eisenbahnverkehr"
-        ],
-        "examples": [
-          "Der Zug fährt in den Bahnhof ein.",
-          "Wir treffen uns am Bahnhof."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ˈbaːnˌhoːf",
-        "g": "masculine",
-        "number": "singular",
-        "pluralForm": "die Bahnhöfe"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
   "think of": {
     "source": "think of",
     "sourceLanguage": "de",
@@ -406870,6 +409602,71 @@
     "extraItems": [],
     "explanation": ""
   },
+  "freight": {
+    "source": "freight",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "das Frachtgut",
+        "translation": "freight, cargo",
+        "definitions": [
+          "Waren, die gewerbsmäßig durch ein Transportmittel befördert werden."
+        ],
+        "examples": [
+          "Das Frachtgut wurde verladen.",
+          "Empfindliches Frachtgut benötigt Kühlung."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈfʁaxtˌɡuːt",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Frachtgüter"
+      },
+      {
+        "source": "Güter",
+        "translation": "goods, freight, commodities",
+        "definitions": [
+          "Verkaufbare Waren oder Produkte",
+          "Wohlstand oder Besitz",
+          "Transportwaren in der Logistik"
+        ],
+        "examples": ["Die Güter wurden verladen", "Transport von Gütern"],
+        "partOfSpeech": "noun",
+        "ipa": "ˈɡyːtɐ",
+        "g": "neuter",
+        "number": "plural"
+      },
+      {
+        "source": "das Gut",
+        "translation": "asset, estate, good",
+        "definitions": [
+          "Ein materieller oder immaterieller Besitzwert.",
+          "Ein landwirtschaftlicher Betrieb oder ein großes Anwesen.",
+          "Waren, die transportiert werden."
+        ],
+        "examples": [
+          "Das höchste Gut.",
+          "Ein landwirtschaftliches Gut.",
+          "Transport von Gütern."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ɡuːt",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Güter"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "belt": {
     "source": "belt",
     "sourceLanguage": "de",
@@ -408225,6 +411022,106 @@
     "extraItems": [],
     "explanation": ""
   },
+  "well-behaved": {
+    "source": "well-behaved",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "brav",
+        "translation": "good, well-behaved, obedient",
+        "definitions": ["wohl erzogen", "artig", "gehorsam"],
+        "examples": ["braves Kind", "braver Hund"],
+        "partOfSpeech": "adjective",
+        "ipa": "braːf",
+        "number": "singular"
+      },
+      {
+        "source": "artig",
+        "translation": "well-behaved, good, nice",
+        "definitions": ["brav", "gehorsam", "wohlverhalten"],
+        "examples": ["ein artiges Kind", "artig und freundlich sein"],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈaːɐ̯tɪç",
+        "number": "singular"
+      },
+      {
+        "source": "gut erzogen",
+        "translation": "well-behaved, well-bred",
+        "definitions": [
+          "Höflich und mit guten Manieren",
+          "Hat eine gute Erziehung genossen"
+        ],
+        "examples": [
+          "Ein gut erzogenes Kind",
+          "Sie ist sehr gut erzogen",
+          "Die gut erzogenen Hunde"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ɡuːt ɛɐ̯ˈt͡soːɡn̩"
+      },
+      {
+        "source": "erziehen",
+        "translation": "educate, raise, bring up",
+        "definitions": [
+          "jemanden durch Erziehung zu einem bestimmten Verhalten oder Charakter formen",
+          "Kinder oder Jugendliche in ihrer Entwicklung begleiten und anleiten",
+          "jemandem bestimmte Werte oder Fähigkeiten vermitteln"
+        ],
+        "examples": [
+          "Sie muss ihre Kinder gut erziehen.",
+          "Er wurde streng erzogen.",
+          "Die Schule hilft, die Schüler zu erziehen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ɛɐ̯ˈt͡siːən",
+        "number": "singular",
+        "pastTenses": "erzog, hat erzogen",
+        "presentTenses": "ich erziehe, du erziehst, er/sie/es erzieht",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "well-bred": {
+    "source": "well-bred",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "gut erzogen",
+        "translation": "well-behaved, well-bred",
+        "definitions": [
+          "Höflich und mit guten Manieren",
+          "Hat eine gute Erziehung genossen"
+        ],
+        "examples": [
+          "Ein gut erzogenes Kind",
+          "Sie ist sehr gut erzogen",
+          "Die gut erzogenen Hunde"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ɡuːt ɛɐ̯ˈt͡soːɡn̩"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "in a good mood": {
     "source": "in a good mood",
     "sourceLanguage": "de",
@@ -408765,41 +411662,6 @@
   },
   "cucumber": {
     "source": "cucumber",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "die Gurke",
-        "translation": "cucumber, lemon, hooter",
-        "definitions": [
-          "Längliche, grüne Frucht einer Kletterpflanze, die als Gemüse gegessen wird.",
-          "Umgangssprachlich für ein altes, minderwertiges Fahrzeug oder Gerät.",
-          "Salopp für die menschliche Nase."
-        ],
-        "examples": [
-          "Ich schneide die Gurke.",
-          "Was für eine alte Gurke!",
-          "Er hat eine krumme Gurke."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ˈɡʊrkə",
-        "g": "feminine",
-        "number": "singular",
-        "pluralForm": "die Gurken"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "lemon": {
-    "source": "lemon",
     "sourceLanguage": "de",
     "targetLanguage": "en",
     "isDirect": false,
@@ -412109,6 +414971,43 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Grausamkeiten"
+      },
+      {
+        "source": "die Unerbittlichkeit",
+        "translation": "relentlessness, inexorability",
+        "definitions": [
+          "Mangel an Nachgiebigkeit oder Gnade",
+          "Härte und Kompromisslosigkeit"
+        ],
+        "examples": [
+          "Die Unerbittlichkeit des Schicksals.",
+          "Mit Unerbittlichkeit forderte er sein Recht.",
+          "Die Unerbittlichkeit der Naturgesetze."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈʊnɛɐ̯ˌbɪtlɪçkaɪ̯t",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Unerbittlichkeiten"
+      },
+      {
+        "source": "die Rohheit",
+        "translation": "crudeness, rawness, brutality",
+        "definitions": [
+          "Mangel an Feinheit oder Zartheit",
+          "Grobes, unzivilisiertes Verhalten",
+          "Unbearbeiteter, ursprünglicher Zustand"
+        ],
+        "examples": [
+          "Die Rohheit seiner Manieren war offensichtlich.",
+          "Manche Gerichte bewahren eine gewisse Rohheit.",
+          "Die Rohheit der Natur beeindruckte ihn."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈʁoːhaɪ̯t",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Rohheiten"
       }
     ],
     "detectedInputType": "word",
@@ -430597,6 +433496,22 @@
         "tense": "present"
       },
       {
+        "source": "angekündigten",
+        "translation": "announced, advertised",
+        "definitions": [
+          "Bezieht sich auf etwas, das zuvor bekannt gegeben oder angekündigt wurde.",
+          "Etwas, das im Voraus mitgeteilt wurde."
+        ],
+        "examples": [
+          "Die angekündigten Maßnahmen wurden umgesetzt.",
+          "Wir warten auf die angekündigten Ergebnisse.",
+          "Trotz der angekündigten Schwierigkeiten verlief alles reibungslos."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈanɡəˌkʏndɪçtn̩",
+        "number": "plural"
+      },
+      {
         "source": "angekündigt",
         "translation": "announced, advertised, notified",
         "definitions": [
@@ -431964,61 +434879,6 @@
     "extraItems": [],
     "explanation": ""
   },
-  "works": {
-    "source": "works",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "gelingt",
-        "translation": "succeeds, works, is successful",
-        "definitions": [
-          "Es ist erfolgreich oder glückt.",
-          "Jemandem gelingt etwas, wenn er es schafft oder erreicht."
-        ],
-        "examples": [
-          "Der Versuch gelingt.",
-          "Ihm gelingt es, die Aufgabe zu lösen.",
-          "Das Projekt gelingt gut."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ɡəˈlɪŋt",
-        "number": "singular",
-        "pastTenses": "ist gelungen, gelang",
-        "presentTenses": "ich gelinge, du gelingst, er/sie/es gelingt",
-        "tense": "present"
-      },
-      {
-        "source": "gelingen",
-        "translation": "succeed, work out, turn out",
-        "definitions": [
-          "etwas erfolgreich ausführen oder erreichen",
-          "ein positives Ergebnis haben",
-          "glücken, klappen"
-        ],
-        "examples": [
-          "Das Experiment wird gelingen.",
-          "Es ist ihm gut gelungen.",
-          "Möge es dir gelingen!"
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ɡəˈlɪŋən",
-        "number": "singular",
-        "pastTenses": "gelang, ist gelungen",
-        "presentTenses": "ich gelinge, du gelingst, er/sie/es gelingt",
-        "tense": "present"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
   "succeed": {
     "source": "succeed",
     "sourceLanguage": "de",
@@ -432381,6 +435241,93 @@
         "pastTenses": "leitete, hat geleitet",
         "presentTenses": "ich leite, du leitest, er/sie/es leitet",
         "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "escort": {
+    "source": "escort",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "das Geleit",
+        "translation": "escort, convoy",
+        "definitions": [
+          "Begleitung zum Schutz oder zur Ehre",
+          "Gruppe von Personen oder Fahrzeugen, die jemanden begleiten"
+        ],
+        "examples": [
+          "Sicheres Geleit",
+          "Ehrenvolles Geleit",
+          "Das Geleit der Schiffe"
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ɡəˈlaɪ̯t",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Geleite"
+      },
+      {
+        "source": "der Begleiter",
+        "translation": "companion, escort, attendant",
+        "definitions": [
+          "Eine Person, die jemanden auf einem Weg oder bei einer Unternehmung begleitet.",
+          "Ein Gegenstand, der ständig mitgeführt wird.",
+          "In der Grammatik ein Wort, das ein Substantiv näher bestimmt (z. B. Artikel)."
+        ],
+        "examples": [
+          "Ein treuer Begleiter.",
+          "Er war mein Begleiter auf der Reise.",
+          "Das Buch ist ein ständiger Begleiter."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "bəˈɡlaɪ̯tɐ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Begleiter"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "convoy": {
+    "source": "convoy",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "das Geleit",
+        "translation": "escort, convoy",
+        "definitions": [
+          "Begleitung zum Schutz oder zur Ehre",
+          "Gruppe von Personen oder Fahrzeugen, die jemanden begleiten"
+        ],
+        "examples": [
+          "Sicheres Geleit",
+          "Ehrenvolles Geleit",
+          "Das Geleit der Schiffe"
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ɡəˈlaɪ̯t",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Geleite"
       }
     ],
     "detectedInputType": "word",
@@ -434085,6 +437032,61 @@
         "ipa": "ˈkɛmp͡fn̩",
         "pastTenses": "kämpfte, hat gekämpft",
         "presentTenses": "ich kämpfe, du kämpfst, er/sie/es kämpft",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "tasted": {
+    "source": "tasted",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "gekostet",
+        "translation": "tasted, cost",
+        "definitions": [
+          "Partizip II von kosten (Geschmack prüfen)",
+          "Partizip II von kosten (Preis haben)"
+        ],
+        "examples": [
+          "Er hat das Essen gekostet.",
+          "Das Auto hat viel Geld gekostet.",
+          "Sie hat den Wein gekostet."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ɡəˈkɔstət",
+        "number": "singular",
+        "pastTenses": "hat gekostet, hat gekostet",
+        "presentTenses": "ich koste, du kostest, er/sie/es kostet",
+        "tense": "past"
+      },
+      {
+        "source": "kosten",
+        "translation": "cost, taste, try",
+        "definitions": [
+          "einen Preis haben",
+          "probieren, versuchen (Essen oder Getränke)",
+          "aufwenden müssen (Zeit, Mühe)"
+        ],
+        "examples": [
+          "Das Buch kostet 20 Euro.",
+          "Ich möchte den Wein kosten.",
+          "Das Projekt wird viel Zeit kosten."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈkɔstn̩",
+        "number": "plural",
+        "pastTenses": "kostete, hat gekostet",
+        "presentTenses": "ich koste, du kostest, er/sie/es kostet",
         "tense": "present"
       }
     ],
@@ -441895,20 +444897,16 @@
     },
     "items": [
       {
-        "source": "benötigten",
-        "translation": "needed, required",
-        "definitions": ["brauchten", "erforderten", "hatten nötig"],
+        "source": "benötigt",
+        "translation": "needed, required, necessary",
+        "definitions": ["erforderlich", "notwendig", "gebraucht"],
         "examples": [
-          "Sie benötigten mehr Zeit.",
-          "Wir benötigten die Unterlagen dringend.",
-          "Die Kinder benötigten Hilfe bei den Hausaufgaben."
+          "Das benötigte Werkzeug.",
+          "Die benötigte Zeit.",
+          "Benötigte Unterlagen."
         ],
-        "partOfSpeech": "verb",
-        "ipa": "bəˈnøːtɪçtn̩",
-        "number": "plural",
-        "pastTenses": "benötigten, haben benötigt",
-        "presentTenses": "ich benötige, du benötigst, er/sie/es benötigt",
-        "tense": "past"
+        "partOfSpeech": "adjective",
+        "ipa": "bəˈnøːtɪçt"
       },
       {
         "source": "benötigen",
@@ -441931,36 +444929,46 @@
         "tense": "present"
       },
       {
-        "source": "benötigt",
-        "translation": "needed, required, necessary",
-        "definitions": ["erforderlich", "notwendig", "gebraucht"],
-        "examples": [
-          "Das benötigte Werkzeug.",
-          "Die benötigte Zeit.",
-          "Benötigte Unterlagen."
-        ],
+        "source": "gebraucht",
+        "translation": "used, secondhand",
+        "definitions": ["nicht neu", "benutzt", "schon zuvor verwendet"],
+        "examples": ["gebrauchte Bücher", "ein gebrauchtes Auto"],
         "partOfSpeech": "adjective",
-        "ipa": "bəˈnøːtɪçt"
+        "ipa": "ɡəˈbʁaʊ̯χt",
+        "number": "singular"
       },
       {
-        "source": "gebraucht",
-        "translation": "used, needed",
+        "source": "gebrauchen",
+        "translation": "use, make use of, need",
         "definitions": [
-          "verwendet, benutzt",
-          "benötigt, erforderlich",
-          "aus zweiter Hand, nicht neu"
+          "etwas benutzen, verwenden",
+          "Nutzen aus etwas ziehen",
+          "nötig haben, brauchen"
         ],
         "examples": [
-          "Das Auto wird täglich gebraucht.",
-          "Er hat das Werkzeug gebraucht.",
-          "Die gebrauchten Bücher sind günstig."
+          "Kannst du dieses Werkzeug gebrauchen?",
+          "Ich könnte jetzt einen Kaffee gebrauchen.",
+          "Diese alten Bücher kann man noch gut gebrauchen."
         ],
         "partOfSpeech": "verb",
-        "ipa": "ɡəˈbʁaʊxt",
-        "number": "singular",
-        "pastTenses": "hat gebraucht, wurde gebraucht",
+        "ipa": "ɡəˈbʁaʊ̯xn̩",
+        "number": "plural",
+        "pastTenses": "gebrauchte, hat gebraucht",
         "presentTenses": "ich gebrauche, du gebrauchst, er/sie/es gebraucht",
-        "tense": "past"
+        "tense": "present"
+      },
+      {
+        "source": "erforderlich",
+        "translation": "necessary, required, essential",
+        "definitions": ["notwendig", "unerlässlich", "geboten"],
+        "examples": [
+          "Erforderliche Maßnahme",
+          "Dokumente erforderlich",
+          "Zeit erforderlich"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ɛɐ̯ˈfɔʁdəʁlɪç",
+        "number": "singular"
       }
     ],
     "detectedInputType": "word",
@@ -441986,6 +444994,26 @@
         "partOfSpeech": "adjective",
         "ipa": "ɡəˈbʁaʊ̯χt",
         "number": "singular"
+      },
+      {
+        "source": "gebrauchen",
+        "translation": "use, make use of, need",
+        "definitions": [
+          "etwas benutzen, verwenden",
+          "Nutzen aus etwas ziehen",
+          "nötig haben, brauchen"
+        ],
+        "examples": [
+          "Kannst du dieses Werkzeug gebrauchen?",
+          "Ich könnte jetzt einen Kaffee gebrauchen.",
+          "Diese alten Bücher kann man noch gut gebrauchen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ɡəˈbʁaʊ̯xn̩",
+        "number": "plural",
+        "pastTenses": "gebrauchte, hat gebraucht",
+        "presentTenses": "ich gebrauche, du gebrauchst, er/sie/es gebraucht",
+        "tense": "present"
       },
       {
         "source": "benutzt",
@@ -442121,6 +445149,42 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Gebrauchsanweisungen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "make use of": {
+    "source": "make use of",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "gebrauchen",
+        "translation": "use, make use of, need",
+        "definitions": [
+          "etwas benutzen, verwenden",
+          "Nutzen aus etwas ziehen",
+          "nötig haben, brauchen"
+        ],
+        "examples": [
+          "Kannst du dieses Werkzeug gebrauchen?",
+          "Ich könnte jetzt einen Kaffee gebrauchen.",
+          "Diese alten Bücher kann man noch gut gebrauchen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ɡəˈbʁaʊ̯xn̩",
+        "number": "plural",
+        "pastTenses": "gebrauchte, hat gebraucht",
+        "presentTenses": "ich gebrauche, du gebrauchst, er/sie/es gebraucht",
+        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -447681,6 +450745,72 @@
     "extraItems": [],
     "explanation": ""
   },
+  "radio location": {
+    "source": "radio location",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Funkort",
+        "translation": "radio location, radio position",
+        "definitions": [
+          "Ein Ort, der durch Funkwellen bestimmt wird.",
+          "Position, die mittels Funkpeilung oder ähnlicher Funktechnik ermittelt wurde."
+        ],
+        "examples": [
+          "Der Funkort des Schiffes wurde übermittelt.",
+          "Sie bestimmten den Funkort des Senders."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈfʊŋkˌɔʁt",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Funkorte"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "radio position": {
+    "source": "radio position",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Funkort",
+        "translation": "radio location, radio position",
+        "definitions": [
+          "Ein Ort, der durch Funkwellen bestimmt wird.",
+          "Position, die mittels Funkpeilung oder ähnlicher Funktechnik ermittelt wurde."
+        ],
+        "examples": [
+          "Der Funkort des Schiffes wurde übermittelt.",
+          "Sie bestimmten den Funkort des Senders."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈfʊŋkˌɔʁt",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Funkorte"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "twinkle": {
     "source": "twinkle",
     "sourceLanguage": "de",
@@ -448829,43 +451959,6 @@
         ],
         "partOfSpeech": "adverb",
         "ipa": "fʁyː",
-        "number": "singular"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "cheerful": {
-    "source": "cheerful",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "fröhlich",
-        "translation": "cheerful, merry",
-        "definitions": ["voll Freude", "heiter gestimmt"],
-        "examples": ["ein fröhliches Lachen", "fröhliche Kinder"],
-        "partOfSpeech": "adjective",
-        "ipa": "ˈfrøːlɪç",
-        "number": "singular"
-      },
-      {
-        "source": "froh",
-        "translation": "joyful, cheerful",
-        "definitions": [
-          "fühlend oder voller Freude",
-          "fröhlich oder heiter gestimmt"
-        ],
-        "examples": ["Ich bin froh.", "ein frohes Gesicht"],
-        "partOfSpeech": "adjective",
-        "ipa": "fʁoː",
         "number": "singular"
       }
     ],
@@ -452039,38 +455132,6 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Fragen"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "freight": {
-    "source": "freight",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "das Frachtgut",
-        "translation": "freight, cargo",
-        "definitions": [
-          "Waren, die gewerbsmäßig durch ein Transportmittel befördert werden."
-        ],
-        "examples": [
-          "Das Frachtgut wurde verladen.",
-          "Empfindliches Frachtgut benötigt Kühlung."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ˈfʁaxtˌɡuːt",
-        "g": "neuter",
-        "number": "singular",
-        "pluralForm": "die Frachtgüter"
       }
     ],
     "detectedInputType": "word",
@@ -462487,6 +465548,76 @@
     "extraItems": [],
     "explanation": ""
   },
+  "fist": {
+    "source": "fist",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Faust",
+        "translation": "fist, clenched hand, hand",
+        "definitions": [
+          "Die geballte Hand eines Menschen.",
+          "Ein Werkzeug oder Teil einer Maschine in Form einer Faust.",
+          "Metapher für Gewalt oder Macht."
+        ],
+        "examples": [
+          "Er ballte die Faust.",
+          "Die Faust auf den Tisch schlagen.",
+          "Mit eiserner Faust regieren."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "faʊ̯st",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Fäuste"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "clenched hand": {
+    "source": "clenched hand",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Faust",
+        "translation": "fist, clenched hand, hand",
+        "definitions": [
+          "Die geballte Hand eines Menschen.",
+          "Ein Werkzeug oder Teil einer Maschine in Form einer Faust.",
+          "Metapher für Gewalt oder Macht."
+        ],
+        "examples": [
+          "Er ballte die Faust.",
+          "Die Faust auf den Tisch schlagen.",
+          "Mit eiserner Faust regieren."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "faʊ̯st",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Fäuste"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "to laze": {
     "source": "to laze",
     "sourceLanguage": "de",
@@ -464679,20 +467810,56 @@
     },
     "items": [
       {
-        "source": "fair",
-        "translation": "fairly, justly, properly",
+        "source": "ziemlich",
+        "translation": "quite, pretty, rather",
         "definitions": [
-          "gerecht, anständig",
-          "ehrlich, aufrichtig",
-          "angemessen, passend"
+          "in gewissem Maße; ziemlich",
+          "eher; relativ",
+          "ganz; sehr"
         ],
         "examples": [
-          "Er spielt immer fair.",
-          "Beurteile die Situation fair.",
-          "Sie behandelt alle fair."
+          "Das ist ziemlich gut.",
+          "Es ist ziemlich kalt heute.",
+          "Sie war ziemlich müde."
         ],
         "partOfSpeech": "adverb",
-        "ipa": "faɪ̯ɐ",
+        "ipa": "ˈt͡siːmlɪç",
+        "number": "singular"
+      },
+      {
+        "source": "recht",
+        "translation": "quite, pretty, very, rather",
+        "definitions": [
+          "ziemlich, ganz",
+          "sehr, überaus",
+          "gerade, genau",
+          "wohl, wahrscheinlich"
+        ],
+        "examples": [
+          "Das ist recht gut.",
+          "Es ist mir recht lieb.",
+          "Das kommt mir recht.",
+          "Er wird recht müde sein."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "ʁɛçt",
+        "number": "singular"
+      },
+      {
+        "source": "gerecht",
+        "translation": "fair, just, equitable",
+        "definitions": ["fair", "just", "equitable"],
+        "examples": ["ein gerechtes Urteil", "eine gerechte Entscheidung"],
+        "partOfSpeech": "adjective",
+        "ipa": "ɡəˈʁɛçt"
+      },
+      {
+        "source": "billig",
+        "translation": "cheap, inexpensive",
+        "definitions": ["nicht teuer", "preiswert"],
+        "examples": ["billige Waren", "billige Preise"],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈbɪlɪç",
         "number": "singular"
       }
     ],
@@ -486367,6 +489534,26 @@
         "number": "singular",
         "pastTenses": "bekam, hat bekommen",
         "presentTenses": "ich bekomme, du bekommst, er/sie/es bekommt",
+        "tense": "present"
+      },
+      {
+        "source": "abkriegen",
+        "translation": "get, receive, take off",
+        "definitions": [
+          "etwas erhalten, abbekommen (oft im Sinne von Schlägen, Tadel)",
+          "etwas entfernen können, ablösen",
+          "einen Anteil von etwas bekommen"
+        ],
+        "examples": [
+          "Er hat ordentlich Schelte abbekommen.",
+          "Ich konnte den Fleck nicht abkriegen.",
+          "Jeder wollte etwas vom Kuchen abkriegen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈapˌkriːɡn̩",
+        "number": "singular",
+        "pastTenses": "kriegte ab, hat abgekriegt",
+        "presentTenses": "ich kriege ab, du kriegst ab, er/sie/es kriegt ab",
         "tense": "present"
       }
     ],
@@ -517286,41 +520473,6 @@
     "extraItems": [],
     "explanation": ""
   },
-  "litter": {
-    "source": "litter",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "der Wurf",
-        "translation": "throw, litter, cast",
-        "definitions": [
-          "Die Handlung des Werfens oder Schleuderns von etwas.",
-          "Das Ergebnis des Werfens, z.B. eines Balls oder Würfels.",
-          "Eine Gruppe von Jungtieren, die gleichzeitig geboren wurden."
-        ],
-        "examples": [
-          "Der Wurf war präzise.",
-          "Ein guter Wurf beim Basketball.",
-          "Der Wurf der Welpen war gesund."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "dɛɐ̯ vʊʁf",
-        "g": "masculine",
-        "number": "singular",
-        "pluralForm": "die Würfe"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
   "west": {
     "source": "west",
     "sourceLanguage": "de",
@@ -535668,40 +538820,6 @@
     "extraItems": [],
     "explanation": ""
   },
-  "fountain": {
-    "source": "fountain",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "der Brunnen",
-        "translation": "well, fountain",
-        "definitions": [
-          "Eine künstlich angelegte Anlage zur Gewinnung von Wasser aus dem Boden.",
-          "Ein dekoratives Bauwerk, aus dem Wasser sprudelt."
-        ],
-        "examples": [
-          "Der tiefe Brunnen.",
-          "Wasser aus dem Brunnen schöpfen.",
-          "Ein Brunnen auf dem Marktplatz."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ˈbʁʊnən",
-        "g": "masculine",
-        "number": "singular",
-        "pluralForm": "die Brunnen"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
   "brother": {
     "source": "brother",
     "sourceLanguage": "de",
@@ -536512,31 +539630,6 @@
         ],
         "partOfSpeech": "adjective",
         "ipa": "braɪt",
-        "number": "singular"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "well-behaved": {
-    "source": "well-behaved",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "brav",
-        "translation": "good, well-behaved, obedient",
-        "definitions": ["wohl erzogen", "artig", "gehorsam"],
-        "examples": ["braves Kind", "braver Hund"],
-        "partOfSpeech": "adjective",
-        "ipa": "braːf",
         "number": "singular"
       }
     ],
@@ -540612,64 +543705,6 @@
   },
   "forms": {
     "source": "forms",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "bildet",
-        "translation": "forms, creates, educates",
-        "definitions": [
-          "Formt, erstellt oder konstruiert etwas.",
-          "Stellt dar oder repräsentiert etwas.",
-          "Erzieht oder schult jemanden."
-        ],
-        "examples": [
-          "Das Kind bildet einen Turm aus Bauklötzen.",
-          "Der Fluss bildet die natürliche Grenze.",
-          "Die Schule bildet junge Menschen aus."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈbɪldət",
-        "number": "singular",
-        "pastTenses": "bildete, hat gebildet",
-        "presentTenses": "ich bilde, du bildest, er/sie/es bildet",
-        "tense": "present"
-      },
-      {
-        "source": "bilden",
-        "translation": "form, create, develop, educate",
-        "definitions": [
-          "etwas formen oder gestalten",
-          "etwas gründen oder aufbauen",
-          "sich entwickeln oder entstehen",
-          "jemanden erziehen oder ausbilden"
-        ],
-        "examples": [
-          "Wir bilden einen Kreis.",
-          "Sie bilden eine neue Regierung.",
-          "Wolken bilden sich am Himmel.",
-          "Die Schule bildet junge Menschen aus."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈbɪldn̩",
-        "number": "plural",
-        "pastTenses": "bildete, hat gebildet",
-        "presentTenses": "ich bilde, du bildest, er/sie/es bildet",
-        "tense": "present"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "creates": {
-    "source": "creates",
     "sourceLanguage": "de",
     "targetLanguage": "en",
     "isDirect": false,
@@ -559189,41 +562224,6 @@
   },
   "companion": {
     "source": "companion",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "der Begleiter",
-        "translation": "companion, escort, attendant",
-        "definitions": [
-          "Eine Person, die jemanden auf einem Weg oder bei einer Unternehmung begleitet.",
-          "Ein Gegenstand, der ständig mitgeführt wird.",
-          "In der Grammatik ein Wort, das ein Substantiv näher bestimmt (z. B. Artikel)."
-        ],
-        "examples": [
-          "Ein treuer Begleiter.",
-          "Er war mein Begleiter auf der Reise.",
-          "Das Buch ist ein ständiger Begleiter."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "bəˈɡlaɪ̯tɐ",
-        "g": "masculine",
-        "number": "singular",
-        "pluralForm": "die Begleiter"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "escort": {
-    "source": "escort",
     "sourceLanguage": "de",
     "targetLanguage": "en",
     "isDirect": false,
@@ -583494,6 +586494,72 @@
     "extraItems": [],
     "explanation": ""
   },
+  "defendant's dock": {
+    "source": "defendant's dock",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Anklagebank",
+        "translation": "defendant's dock, the dock",
+        "definitions": [
+          "Platz im Gerichtssaal, auf dem der Angeklagte während der Verhandlung sitzt",
+          "Metaphorisch für die Situation, in der jemand kritisiert oder beschuldigt wird"
+        ],
+        "examples": [
+          "Der Angeklagte nahm auf der Anklagebank Platz.",
+          "Er geriet auf die Anklagebank der öffentlichen Meinung."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈanklaːɡəˌbaŋk",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Anklagebänke"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "the dock": {
+    "source": "the dock",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Anklagebank",
+        "translation": "defendant's dock, the dock",
+        "definitions": [
+          "Platz im Gerichtssaal, auf dem der Angeklagte während der Verhandlung sitzt",
+          "Metaphorisch für die Situation, in der jemand kritisiert oder beschuldigt wird"
+        ],
+        "examples": [
+          "Der Angeklagte nahm auf der Anklagebank Platz.",
+          "Er geriet auf die Anklagebank der öffentlichen Meinung."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈanklaːɡəˌbaŋk",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Anklagebänke"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "indictment": {
     "source": "indictment",
     "sourceLanguage": "de",
@@ -584732,6 +587798,22 @@
       "language": "de"
     },
     "items": [
+      {
+        "source": "angekündigten",
+        "translation": "announced, advertised",
+        "definitions": [
+          "Bezieht sich auf etwas, das zuvor bekannt gegeben oder angekündigt wurde.",
+          "Etwas, das im Voraus mitgeteilt wurde."
+        ],
+        "examples": [
+          "Die angekündigten Maßnahmen wurden umgesetzt.",
+          "Wir warten auf die angekündigten Ergebnisse.",
+          "Trotz der angekündigten Schwierigkeiten verlief alles reibungslos."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈanɡəˌkʏndɪçtn̩",
+        "number": "plural"
+      },
       {
         "source": "angekündigt",
         "translation": "announced, advertised, notified",
@@ -592265,6 +595347,40 @@
     "extraItems": [],
     "explanation": ""
   },
+  "voting pattern": {
+    "source": "voting pattern",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "das Abstimmungsverhalten",
+        "translation": "voting behavior, voting pattern",
+        "definitions": [
+          "Art und Weise, wie jemand bei einer Abstimmung seine Stimme abgibt",
+          "Das Verhalten von Wählern oder Abgeordneten bei Abstimmungen"
+        ],
+        "examples": [
+          "Das Abstimmungsverhalten der Partei war überraschend.",
+          "Sein Abstimmungsverhalten wurde kritisiert.",
+          "Das Abstimmungsverhalten der Bevölkerung ist entscheidend."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈapˌʃtɪmʊŋsfɛɐ̯ˌhaltn̩",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Abstimmungsverhalten"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "coordinate": {
     "source": "coordinate",
     "sourceLanguage": "de",
@@ -594939,6 +598055,61 @@
         "number": "singular",
         "pastTenses": "kürzte ab, hat abgekürzt",
         "presentTenses": "ich kürze ab, du kürzt ab, er/sie/es kürzt ab",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "gets off": {
+    "source": "gets off",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "abkriegt",
+        "translation": "gets off, gets",
+        "definitions": [
+          "erhält, bekommt (oft nach Anstrengung oder Kampf)",
+          "entfernt, löst ab (z.B. Schmutz, Farbe)"
+        ],
+        "examples": [
+          "Er kriegt den Fleck nicht ab.",
+          "Sie kriegt das Paket ab.",
+          "Man kriegt die Farbe schlecht ab."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈapˌkriːkt",
+        "number": "singular",
+        "pastTenses": "kriegte ab, hat abgekriegt",
+        "presentTenses": "ich kriege ab, du kriegst ab, er/sie/es kriegt ab",
+        "tense": "present"
+      },
+      {
+        "source": "abkriegen",
+        "translation": "get, receive, take off",
+        "definitions": [
+          "etwas erhalten, abbekommen (oft im Sinne von Schlägen, Tadel)",
+          "etwas entfernen können, ablösen",
+          "einen Anteil von etwas bekommen"
+        ],
+        "examples": [
+          "Er hat ordentlich Schelte abbekommen.",
+          "Ich konnte den Fleck nicht abkriegen.",
+          "Jeder wollte etwas vom Kuchen abkriegen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈapˌkriːɡn̩",
+        "number": "singular",
+        "pastTenses": "kriegte ab, hat abgekriegt",
+        "presentTenses": "ich kriege ab, du kriegst ab, er/sie/es kriegt ab",
         "tense": "present"
       }
     ],
