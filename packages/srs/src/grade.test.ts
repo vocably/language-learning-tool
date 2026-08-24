@@ -190,10 +190,10 @@ describe('grade', () => {
 
   it('should consider that the card is old and from the future', () => {
     const now = new Date();
-    const threeDaysTs = Date.UTC(
+    const futureDueDateTs = Date.UTC(
       now.getFullYear(),
       now.getMonth(),
-      now.getDate() + 3
+      now.getDate() + 1
     );
 
     let item = createSrsItem();
@@ -204,7 +204,7 @@ describe('grade', () => {
     item.eFactor = 2.5;
     item.interval = 15;
     item.repetition = 10;
-    item.dueDate = threeDaysTs;
+    item.dueDate = futureDueDateTs;
 
     const strategy: StudyStrategy = [
       { step: 'mf', allowedFailures: null },
@@ -217,9 +217,77 @@ describe('grade', () => {
 
     expect(item.repetition).toEqual(11);
     expect(item.eFactor).toEqual(2.58);
-    expect(item.interval).toEqual(35);
+    expect(item.interval).toEqual(37);
     expect(item.dueDate).toEqual(
-      Date.UTC(now.getFullYear(), now.getMonth(), now.getDate() + 35)
+      Date.UTC(now.getFullYear(), now.getMonth(), now.getDate() + 37)
+    );
+  });
+
+  it('should not update optimistic dueDate, eFactor, and interval for cards that two or more days in the future', () => {
+    const now = new Date();
+    const futureDueDateTs = Date.UTC(
+      now.getFullYear(),
+      now.getMonth(),
+      now.getDate() + 2
+    );
+
+    let item = createSrsItem();
+    item.state = {
+      s: 'sf',
+      f: 0,
+    };
+    item.eFactor = 2.5;
+    item.interval = 15;
+    item.repetition = 10;
+    item.dueDate = futureDueDateTs;
+
+    const strategy: StudyStrategy = [
+      { step: 'mf', allowedFailures: null },
+      { step: 'sf', allowedFailures: 0 },
+      { step: 'mb', allowedFailures: null },
+      { step: 'sb', allowedFailures: 0 },
+    ];
+
+    item = grade(item, 5, strategy, 1, now);
+
+    expect(item.repetition).toEqual(11);
+    expect(item.eFactor).toEqual(2.5);
+    expect(item.interval).toEqual(15);
+    expect(item.dueDate).toEqual(futureDueDateTs);
+  });
+
+  it('should update pessimistic dueDate, eFactor, and interval for cards that two or more days in the future', () => {
+    const now = new Date();
+    const futureDueDateTs = Date.UTC(
+      now.getFullYear(),
+      now.getMonth(),
+      now.getDate() + 5
+    );
+
+    let item = createSrsItem();
+    item.state = {
+      s: 'sf',
+      f: 0,
+    };
+    item.eFactor = 2.5;
+    item.interval = 1;
+    item.repetition = 10;
+    item.dueDate = futureDueDateTs;
+
+    const strategy: StudyStrategy = [
+      { step: 'mf', allowedFailures: null },
+      { step: 'sf', allowedFailures: 0 },
+      { step: 'mb', allowedFailures: null },
+      { step: 'sb', allowedFailures: 0 },
+    ];
+
+    item = grade(item, 1, strategy, 1, now);
+
+    expect(item.repetition).toEqual(10);
+    expect(item.eFactor).toEqual(2.36);
+    expect(item.interval).toEqual(1);
+    expect(item.dueDate).toEqual(
+      Date.UTC(now.getFullYear(), now.getMonth(), now.getDate() + 1)
     );
   });
 
@@ -291,10 +359,10 @@ describe('grade', () => {
 
   it('should see a weak as strong option of there are no strong queued', () => {
     const now = new Date();
-    const threeDaysTs = Date.UTC(
+    const currentDueDateTs = Date.UTC(
       now.getFullYear(),
       now.getMonth(),
-      now.getDate() + 3
+      now.getDate()
     );
 
     let item = createSrsItem();
@@ -305,7 +373,7 @@ describe('grade', () => {
     item.eFactor = 2.5;
     item.interval = 15;
     item.repetition = 10;
-    item.dueDate = threeDaysTs;
+    item.dueDate = currentDueDateTs;
 
     const strategy: StudyStrategy = [
       { step: 'mf', allowedFailures: null },
@@ -316,9 +384,9 @@ describe('grade', () => {
 
     expect(item.repetition).toEqual(11);
     expect(item.eFactor).toEqual(2.53);
-    expect(item.interval).toEqual(35);
+    expect(item.interval).toEqual(38);
     expect(item.dueDate).toEqual(
-      Date.UTC(now.getFullYear(), now.getMonth(), now.getDate() + 35)
+      Date.UTC(now.getFullYear(), now.getMonth(), now.getDate() + 38)
     );
   });
 });

@@ -84,8 +84,7 @@ export const grade = (
         isStrongStep && !hasStudiedToday
           ? Math.max(
               item.interval,
-              Math.min(365, Math.round(item.interval * item.eFactor)) -
-                daysDifference
+              Math.round(item.interval * item.eFactor) - daysDifference
             )
           : item.interval;
       nextRepetition = item.repetition + 1;
@@ -132,10 +131,17 @@ export const grade = (
   }
 
   return {
-    interval: nextInterval,
     repetition: nextRepetition,
-    eFactor: Math.round(nextEFactor * 100) / 100,
-    dueDate: dueDate,
+    interval:
+      daysDifference <= 1 || item.interval > nextInterval
+        ? nextInterval
+        : item.interval,
+    eFactor:
+      daysDifference <= 1 || item.eFactor > nextEFactor
+        ? Math.round(nextEFactor * 100) / 100
+        : item.eFactor,
+    dueDate:
+      daysDifference <= 1 || item.dueDate > dueDate ? dueDate : item.dueDate,
     state: nextState,
     firstStudied: firstStudied,
     lastStudied: new Date().getTime(),
