@@ -16,7 +16,7 @@ import {
 import { Appbar, useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { generateUnitsOfSpeech } from '../api';
-import { ChatTextInput } from '../Chat/ChatTextInput';
+import { ChatTextInput, ChatTextInputRef } from '../Chat/ChatTextInput';
 import { Message } from '../Chat/Message';
 import { Thinking } from '../Chat/Thinking';
 import { useLanguageDeck } from '../languageDeck/useLanguageDeck';
@@ -57,8 +57,8 @@ export const GenerateCardsModal: FC<Props> = ({ route, navigation }) => {
   const insets = useSafeAreaInsets();
   const translationPresetState = useTranslationPreset();
   const theme = useTheme();
-  const [inputText, setInputText] = useState('');
   const scrollViewRef = useRef<ScrollView>(null);
+  const inputRef = useRef<ChatTextInputRef>(null);
   const posthog = usePostHog();
   const cardsLimit = useCardsLimit();
 
@@ -143,7 +143,7 @@ export const GenerateCardsModal: FC<Props> = ({ route, navigation }) => {
       }
     }, 200);
 
-    setInputText('');
+    inputRef.current?.setValue('');
     setIsThinking(true);
 
     const preferredLanguage = isGoogleLanguage(i18n.language)
@@ -162,7 +162,7 @@ export const GenerateCardsModal: FC<Props> = ({ route, navigation }) => {
         setIsThinking(false);
         return;
       }
-      lastMessage && setInputText(lastMessage.text);
+      lastMessage && inputRef.current?.setValue(lastMessage.text);
       setMessages(newMessages.slice(0, -1));
       setIsThinking(false);
 
@@ -365,8 +365,7 @@ export const GenerateCardsModal: FC<Props> = ({ route, navigation }) => {
               onChange={translationPresetState.setPreset}
             />
             <ChatTextInput
-              value={inputText}
-              onChange={setInputText}
+              ref={inputRef}
               placeholder={
                 messages.length === 0 ? t('generateCards.placeholder') : ''
               }

@@ -1,17 +1,18 @@
 import React, {
   forwardRef,
+  useCallback,
   useImperativeHandle,
   useRef,
   useState,
 } from 'react';
-import { Animated, Platform, TextInput } from 'react-native';
+import { Animated, Platform, Text, TextInput, View } from 'react-native';
 import { IconButton } from 'react-native-paper';
 import { useAppTheme } from '../ThemeProvider';
 
 type Props = {
-  value: string;
+  initialValue?: string;
   placeholder: string;
-  onChange: (value: string) => void;
+  onChange?: (value: string) => void;
   onSubmit: (value: string) => void;
   disabled?: boolean;
   multiline?: boolean;
@@ -21,14 +22,22 @@ type Props = {
 
 export type ChatTextInputRef = {
   focus: () => void;
+  getValue: () => string;
+  setValue: (value: string) => void;
 };
 
 const initialMinHeight = 24;
 
+const textStyle = {
+  fontSize: 18,
+  paddingTop: Platform.OS === 'android' ? 11 : 12,
+  paddingBottom: 10,
+};
+
 export const ChatTextInput = forwardRef<ChatTextInputRef, Props>(
   (
     {
-      value,
+      initialValue = '',
       placeholder,
       onChange,
       onSubmit,
@@ -41,6 +50,23 @@ export const ChatTextInput = forwardRef<ChatTextInputRef, Props>(
     const theme = useAppTheme();
     const inputRef = useRef<TextInput>(null);
     const focusAnimation = useRef(new Animated.Value(0)).current;
+
+    // The input is intentionally uncontrolled. Writing the value back into the
+    // native input on every keystroke re-assigns its attributed text, which
+    // terminates an in-flight iOS dictation session after the first word.
+    const valueRef = useRef(initialValue);
+    const [defaultValue, setDefaultValue] = useState(initialValue);
+    const [remountKey, setRemountKey] = useState(0);
+    const [isEmpty, setIsEmpty] = useState(initialValue === '');
+
+    // An uncontrolled input never tells the shadow tree what the text is, and
+    // on iOS the layout is measured from the shadow tree, so the input would
+    // stay one line tall forever. The invisible text below mirrors the value
+    // and its measured height becomes the height of the input. Android grows
+    // on its own and reports the content size, so it doesn't need the mirror.
+    const measureWithMirror = Platform.OS === 'ios' && multiline;
+    const [mirrorValue, setMirrorValue] = useState(initialValue);
+    const [minHeight, setMinHeight] = useState(initialMinHeight);
 
     const handleFocus = () => {
       Animated.timing(focusAnimation, {
@@ -58,24 +84,65 @@ export const ChatTextInput = forwardRef<ChatTextInputRef, Props>(
       }).start();
     };
 
-    useImperativeHandle(ref, () => ({
-      focus: () => {
-        if (inputRef.current) {
-          setTimeout(() => {
-            inputRef.current && inputRef.current.focus();
-          }, 100);
+    const focus = useCallback(() => {
+      if (inputRef.current) {
+        setTimeout(() => {
+          inputRef.current && inputRef.current.focus();
+        }, 100);
+      }
+    }, []);
+
+    const setValue = useCallback(
+      (value: string) => {
+        const wasFocused = inputRef.current?.isFocused() ?? false;
+        valueRef.current = value;
+        setIsEmpty(value === '');
+        setMirrorValue(value);
+
+        if (value === '') {
+          // Clearing goes through the native command, so the keyboard and the
+          // focus stay in place.
+          inputRef.current?.clear();
+          return;
+        }
+
+        // Setting an arbitrary text is only possible by remounting an
+        // uncontrolled input with a new default value.
+        setDefaultValue(value);
+        setRemountKey((key) => key + 1);
+
+        if (wasFocused) {
+          focus();
         }
       },
-    }));
+      [focus]
+    );
 
-    const [minHeight, setMinHeight] = useState(initialMinHeight);
+    useImperativeHandle(
+      ref,
+      () => ({
+        focus,
+        getValue: () => valueRef.current,
+        setValue,
+      }),
+      [focus, setValue]
+    );
+
+    const handleChangeText = (text: string) => {
+      valueRef.current = text;
+      // Neither of these writes into the native input, so the text the user is
+      // typing or dictating is left alone.
+      setIsEmpty(text === '');
+      setMirrorValue(text);
+      onChange && onChange(text);
+    };
 
     const backgroundColor = focusAnimation.interpolate({
       inputRange: [0, 1],
       outputRange: [theme.colors.inputBg, theme.colors.inputBgFocused],
     });
 
-    const isSearchDisabled = value === '';
+    const isSearchDisabled = isEmpty;
     return (
       <Animated.View
         style={{
@@ -89,38 +156,60 @@ export const ChatTextInput = forwardRef<ChatTextInputRef, Props>(
           paddingLeft: 12,
         }}
       >
-        <TextInput
-          ref={inputRef}
-          style={{
-            flex: 1,
-            color: theme.colors.secondary,
-            fontSize: 18,
-            minHeight: minHeight,
-            paddingTop: Platform.OS === 'android' ? 11 : 12,
-            paddingBottom: 10,
-          }}
-          multiline={multiline}
-          onContentSizeChange={(event) => {
-            if (Platform.OS === 'android') {
-              setMinHeight(event.nativeEvent.contentSize.height);
-            }
-          }}
-          editable={!disabled}
-          onFocus={() => {
-            handleFocus();
-          }}
-          onBlur={() => {
-            handleBlur();
-          }}
-          value={value}
-          autoCapitalize={'none'}
-          onChangeText={onChange}
-          placeholder={placeholder}
-          placeholderTextColor={theme.colors.tertiary}
-          returnKeyType={'search'}
-          onSubmitEditing={() => onSubmit(value)}
-          autoFocus={autoFocus}
-        />
+        <View style={{ flex: 1 }}>
+          {measureWithMirror && (
+            <Text
+              style={{
+                ...textStyle,
+                position: 'absolute',
+                left: 0,
+                right: 0,
+                top: 0,
+                opacity: 0,
+                pointerEvents: 'none',
+              }}
+              accessible={false}
+              importantForAccessibility={'no-hide-descendants'}
+              onLayout={(event) => {
+                setMinHeight(event.nativeEvent.layout.height);
+              }}
+            >
+              {mirrorValue === '' || mirrorValue.endsWith('\n')
+                ? `${mirrorValue} `
+                : mirrorValue}
+            </Text>
+          )}
+          <TextInput
+            key={remountKey}
+            ref={inputRef}
+            style={{
+              ...textStyle,
+              color: theme.colors.secondary,
+              minHeight: minHeight,
+            }}
+            multiline={multiline}
+            onContentSizeChange={(event) => {
+              if (Platform.OS === 'android') {
+                setMinHeight(event.nativeEvent.contentSize.height);
+              }
+            }}
+            editable={!disabled}
+            onFocus={() => {
+              handleFocus();
+            }}
+            onBlur={() => {
+              handleBlur();
+            }}
+            defaultValue={defaultValue}
+            autoCapitalize={'none'}
+            onChangeText={handleChangeText}
+            placeholder={placeholder}
+            placeholderTextColor={theme.colors.tertiary}
+            returnKeyType={'search'}
+            onSubmitEditing={() => onSubmit(valueRef.current)}
+            autoFocus={autoFocus}
+          />
+        </View>
         <IconButton
           icon={'send-circle'}
           size={32}
@@ -130,7 +219,7 @@ export const ChatTextInput = forwardRef<ChatTextInputRef, Props>(
             backgroundColor: 'transparent',
             alignSelf: multiline ? 'flex-end' : undefined,
           }}
-          onPress={() => onSubmit(value)}
+          onPress={() => onSubmit(valueRef.current)}
           disabled={isSearchDisabled}
         />
       </Animated.View>

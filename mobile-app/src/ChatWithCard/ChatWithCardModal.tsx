@@ -13,7 +13,7 @@ import { KeyboardAvoidingView } from 'react-native-keyboard-controller';
 import { Button, useTheme } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { chatWithCard } from '../api';
-import { ChatTextInput } from '../Chat/ChatTextInput';
+import { ChatTextInput, ChatTextInputRef } from '../Chat/ChatTextInput';
 import { Message } from '../Chat/Message';
 import { Thinking } from '../Chat/Thinking';
 import { ScreenLayout } from '../ui/ScreenLayout';
@@ -34,8 +34,8 @@ export const ChatWithCardModal: FC<Props> = ({ route, navigation }) => {
   const { card } = route.params as ChatWithCardParams;
   const insets = useSafeAreaInsets();
   const scrollViewRef = useRef<ScrollView>(null);
+  const inputRef = useRef<ChatTextInputRef>(null);
 
-  const [inputValue, setInputValue] = useState('');
   const [messages, setMessages] = useState<ChatWithCardMessage[]>([]);
   const [lastMessageError, setLastMessageError] = useState<string | null>(null);
   const [isThinking, setIsThinking] = useState(false);
@@ -76,7 +76,7 @@ export const ChatWithCardModal: FC<Props> = ({ route, navigation }) => {
       {
         timestamp: new Date().getTime(),
         role: 'user',
-        message: message ?? inputValue,
+        message: message ?? inputRef.current?.getValue() ?? '',
       },
     ];
     setMessages(newMessages);
@@ -87,7 +87,7 @@ export const ChatWithCardModal: FC<Props> = ({ route, navigation }) => {
     });
 
     if (!message) {
-      setInputValue('');
+      inputRef.current?.setValue('');
     }
 
     setIsThinking(true);
@@ -111,7 +111,7 @@ export const ChatWithCardModal: FC<Props> = ({ route, navigation }) => {
     } else {
       setLastMessageError(t('chat.errorOccurred'));
       const lastMessage = last(newMessages);
-      lastMessage && setInputValue(lastMessage.message);
+      lastMessage && inputRef.current?.setValue(lastMessage.message);
       setMessages(newMessages.slice(0, -1));
     }
 
@@ -246,15 +246,14 @@ export const ChatWithCardModal: FC<Props> = ({ route, navigation }) => {
               </Button>
             </View>
             <ChatTextInput
+              ref={inputRef}
               disabled={isThinking}
-              value={inputValue}
               placeholder={
                 isThinking
                   ? t('chat.inputDisabled')
                   : t('chat.inputPlaceholder')
               }
               multiline={true}
-              onChange={setInputValue}
               onSubmit={() => send()}
               autoFocus={true}
             />
