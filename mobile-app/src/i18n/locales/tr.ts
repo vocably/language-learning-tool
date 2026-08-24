@@ -3,6 +3,7 @@ import { languageTranslations } from '@vocably/i18n';
 
 const translations: BaseTranslations = {
   common: {
+    reset: 'Sıfırla',
     cancel: 'İptal',
     delete: 'Sil',
     save: 'Tamam',

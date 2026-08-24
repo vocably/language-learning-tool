@@ -2,6 +2,7 @@ import { languageTranslations } from '@vocably/i18n';
 
 const translations = {
   common: {
+    reset: 'Reset',
     cancel: 'Cancel',
     delete: 'Delete',
     save: 'Save',

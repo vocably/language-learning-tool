@@ -3,6 +3,7 @@ import { languageTranslations } from '@vocably/i18n';
 
 const translations: BaseTranslations = {
   common: {
+    reset: 'Đặt lại',
     cancel: 'Hủy',
     delete: 'Xóa',
     save: 'Lưu',

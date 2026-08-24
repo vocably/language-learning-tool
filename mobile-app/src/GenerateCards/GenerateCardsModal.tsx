@@ -93,7 +93,7 @@ export const GenerateCardsModal: FC<Props> = ({ route, navigation }) => {
           textColor={theme.colors.onBackground}
           style={{ marginRight: 8 }}
         >
-          Reset
+          {t('common.reset')}
         </Button>
       ),
     });
