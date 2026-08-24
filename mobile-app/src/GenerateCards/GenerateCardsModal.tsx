@@ -13,7 +13,7 @@ import {
   KeyboardAvoidingView,
   KeyboardAwareScrollView,
 } from 'react-native-keyboard-controller';
-import { Appbar, useTheme } from 'react-native-paper';
+import { Appbar, useTheme, Button } from 'react-native-paper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { generateUnitsOfSpeech } from '../api';
 import { ChatTextInput, ChatTextInputRef } from '../Chat/ChatTextInput';
@@ -84,13 +84,17 @@ export const GenerateCardsModal: FC<Props> = ({ route, navigation }) => {
         backgroundColor: theme.colors.elevation.level1,
       },
       headerRight: () => (
-        <Appbar.Action
-          icon={'trash-can-outline'}
+        <Button
+          icon={'restart'}
           onPress={() => {
             setMessages([]);
             posthog.capture('generator-refresh');
           }}
-        />
+          textColor={theme.colors.onBackground}
+          style={{ marginRight: 8 }}
+        >
+          Reset
+        </Button>
       ),
     });
   }, []);

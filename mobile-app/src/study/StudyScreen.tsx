@@ -377,7 +377,7 @@ export const StudyScreen: Props = ({ route, navigation }) => {
   const previousIsAllowed = isPremium || !usedPrevious;
   const nextIsPossible = currentCardIndex < cardsStudied;
 
-  const nextPreviousActiveOpacity = 0.6;
+  const nextPreviousActiveOpacity = 1;
   const nextPreviousInactiveOpacity = 0.3;
 
   return (
@@ -455,10 +455,10 @@ export const StudyScreen: Props = ({ route, navigation }) => {
                 }}
               >
                 <IconButton
-                  icon={'menu-left'}
+                  icon={'chevron-left'}
                   loading={isPrevPaying}
                   disabled={!previousIsPossible}
-                  iconColor={theme.colors.onBackground}
+                  iconColor={theme.colors.primary}
                   style={{
                     opacity: previousIsPossible
                       ? nextPreviousActiveOpacity
@@ -497,7 +497,7 @@ export const StudyScreen: Props = ({ route, navigation }) => {
                     <Icon
                       name="crown-outline"
                       size={12}
-                      color={theme.colors.onBackground}
+                      color={theme.colors.primary}
                       style={{
                         opacity: nextPreviousActiveOpacity,
                       }}
@@ -513,9 +513,9 @@ export const StudyScreen: Props = ({ route, navigation }) => {
                 {cards.length}
               </Text>
               <IconButton
-                icon={'menu-right'}
+                icon={'chevron-right'}
                 disabled={!nextIsPossible}
-                iconColor={theme.colors.onBackground}
+                iconColor={theme.colors.primary}
                 style={{
                   opacity: nextIsPossible
                     ? nextPreviousActiveOpacity
