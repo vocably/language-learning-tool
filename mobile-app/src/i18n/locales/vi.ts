@@ -598,7 +598,9 @@ const translations: BaseTranslations = {
   },
   requestFeedback: {
     question:
-      'Bạn có thích Vocably không? Đánh giá trên {{storeName}} chỉ mất chưa đầy một phút và sẽ giúp dự án này rất nhiều.',
+      'Mọi người tìm thấy những ứng dụng như Vocably nhờ các đánh giá. Đánh giá của bạn có thể giúp ai đó chọn ứng dụng này.',
+    questionSub:
+      'Việc này mất chưa đầy một phút và sẽ có ý nghĩa rất lớn với tôi.',
     rateButton: 'Đánh giá Vocably trên {{storeName}}',
     later: 'Hỏi tôi sau',
     feedbackBefore:

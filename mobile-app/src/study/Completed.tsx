@@ -89,7 +89,7 @@ export const Completed: FC<Props> = ({
             {t('study.takeOneMoreRound')}
           </Button>
         )}
-        {cards.length > 30 && (
+        {cards.length >= 10 && (
           <RequestFeedback
             numberOfStudySessions={numberOfStudySessions}
             style={{

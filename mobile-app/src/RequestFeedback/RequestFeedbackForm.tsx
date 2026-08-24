@@ -36,13 +36,22 @@ export const RequestFeedbackForm: FC<Props> = ({
           {t('requestFeedback.question', { storeName: mobileStoreName })}
         </Text>
       </View>
+      <View>
+        <Text style={{ textAlign: 'center' }}>
+          {t('requestFeedback.questionSub', { storeName: mobileStoreName })}
+        </Text>
+      </View>
       <View style={{ alignSelf: 'stretch' }}>
-        <Button mode={'outlined'} onPress={() => onAction('review')}>
+        <Button mode={'contained'} onPress={() => onAction('review')}>
           {t('requestFeedback.rateButton', { storeName: mobileStoreName })}
         </Button>
       </View>
-      <View style={{ alignSelf: 'stretch' }}>
-        <Button mode={'text'} onPress={() => onAction('later')}>
+      <View>
+        <Button
+          mode={'text'}
+          textColor={theme.colors.onSurface}
+          onPress={() => onAction('later')}
+        >
           {t('requestFeedback.later')}
         </Button>
       </View>

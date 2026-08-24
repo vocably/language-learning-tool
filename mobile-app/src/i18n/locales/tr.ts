@@ -608,7 +608,8 @@ const translations: BaseTranslations = {
   },
   requestFeedback: {
     question:
-      "Vocably'yi sevdin mi? {{storeName}}'daki değerlendirmen bir dakikadan az sürer ve bu projeye yardımcı olur.",
+      'İnsanlar Vocably gibi uygulamaları değerlendirmeler sayesinde keşfeder. Senin değerlendirmen de birinin bu uygulamayı seçmesine yardımcı olabilir.',
+    questionSub: 'Bir dakikadan az sürer ve benim için çok şey ifade eder.',
     rateButton: "Vocably'yi {{storeName}}'da değerlendir",
     later: 'Daha sonra sor',
     feedbackBefore:

@@ -611,7 +611,9 @@ const translations = {
   },
   requestFeedback: {
     question:
-      'Do you like Vocably? Your rating on {{storeName}} will take less than a minute and help this project.',
+      'People discover apps like Vocably through ratings. Your rating could help someone choose this app.',
+    questionSub:
+      "It'll take less than a minute, and it would mean a lot to me.",
     rateButton: 'Rate Vocably on {{storeName}}',
     later: 'Ask me later',
     feedbackBefore:

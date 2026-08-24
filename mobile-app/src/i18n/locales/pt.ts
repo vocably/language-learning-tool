@@ -609,9 +609,10 @@ const translations: BaseTranslations = {
   },
   requestFeedback: {
     question:
-      'Está gostando do Vocably? Sua avaliação na {{storeName}} leva menos de um minuto e ajuda este projeto.',
+      'As pessoas descobrem apps como o Vocably graças às avaliações. A sua avaliação pode ajudar alguém a escolher este app.',
+    questionSub: 'Leva menos de um minuto e significaria muito para mim.',
     rateButton: 'Avaliar o Vocably na {{storeName}}',
-    later: 'Pergunte-me mais tarde',
+    later: 'Peça-me mais tarde',
     feedbackBefore:
       'Se está faltando algo ou se você não gostou de algo, sempre pode',
     feedbackLink: 'me avisar',

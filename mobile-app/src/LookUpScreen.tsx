@@ -578,6 +578,7 @@ export const LookUpScreen: FC<Props> = ({
                   deck={deck}
                   isSharedLookup={isSharedLookUp}
                   onLookUpModalOpen={onLookUpModalOpen}
+                  requestFeedback={true}
                 />
                 {explainStatus.status === 'loading' && (
                   <View
@@ -611,6 +612,7 @@ export const LookUpScreen: FC<Props> = ({
                       leftInset={insets.left}
                       rightInset={insets.right}
                       cardsLimit={cardsLimit}
+                      requestFeedback={true}
                     />
                   </>
                 )}

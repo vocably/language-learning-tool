@@ -5,14 +5,21 @@ import {
   Result,
   TagItem,
 } from '@vocably/model';
-import { FC } from 'react';
+import { FC, useContext, useState } from 'react';
 import { StyleProp, View, ViewStyle } from 'react-native';
 import { Separator } from '../CardListItem';
 import { Deck } from '../languageDeck/useLanguageDeck';
+import { isOkayToAskAfterCardAdded } from '../RequestFeedback/isOkayToAskAfterCardAdded';
+import { RequestFeedbackSlideDown } from '../RequestFeedback/RequestFeedbackSlideDown';
+import { mainPadding } from '../styles';
 import { Displayer } from '../study/Displayer';
+import { UserMetadataContext } from '../UserMetadataContainer';
 import { AnalyzeResultItem } from './AnalyzeResultItem';
 import { associateCards, AssociatedCard } from './associateCards';
 import { makeCards } from './makeCards';
+
+const cardKey = (card: AssociatedCard): string =>
+  `${card.card.source}${card.card.partOfSpeech}`;
 
 type Props = {
   analysis: Analysis;
@@ -28,6 +35,7 @@ type Props = {
   isSharedLookup: boolean;
   alwaysShowSeparator?: boolean;
   onLookUpModalOpen?: () => void;
+  requestFeedback?: boolean;
 };
 
 export const AnalyzeResult: FC<Props> = ({
@@ -43,18 +51,42 @@ export const AnalyzeResult: FC<Props> = ({
   isSharedLookup = false,
   alwaysShowSeparator = false,
   onLookUpModalOpen,
+  requestFeedback = false,
 }) => {
   const associatedCards = associateCards(makeCards(analysis), cards);
+
+  const { userMetadata } = useContext(UserMetadataContext);
+  // The card which addition has triggered the feedback request.
+  const [feedbackCardKey, setFeedbackCardKey] = useState<string | null>(null);
+
+  const onCardAdd = async (card: AssociatedCard): Promise<Result<CardItem>> => {
+    // The deck doesn't contain the new card yet, hence the + 1.
+    const numberOfCards = deck.deck.cards.length + 1;
+    const result = await onAdd(card);
+
+    if (!requestFeedback) {
+      return result;
+    }
+
+    if (
+      result.success &&
+      isOkayToAskAfterCardAdded({ userMetadata, numberOfCards })
+    ) {
+      setFeedbackCardKey(cardKey(card));
+    }
+
+    return result;
+  };
 
   return (
     <Displayer scaleAnimationEnabled={false}>
       {associatedCards.map((item, index) => (
-        <View key={`${item.card.source}${item.card.partOfSpeech}`}>
+        <View key={cardKey(item)}>
           {(index > 0 || alwaysShowSeparator) && <Separator />}
           <AnalyzeResultItem
             leftInset={leftInset}
             rightInset={rightInset}
-            onAdd={onAdd}
+            onAdd={onCardAdd}
             onRemove={onRemove}
             onTagsChange={onTagsChange}
             item={item}
@@ -63,6 +95,19 @@ export const AnalyzeResult: FC<Props> = ({
             isSharedLookup={isSharedLookup}
             onLookUpModalOpen={onLookUpModalOpen}
           />
+          {!isSharedLookup &&
+            requestFeedback &&
+            feedbackCardKey === cardKey(item) && (
+              <RequestFeedbackSlideDown
+                visible={true}
+                source={'card-added'}
+                style={{
+                  paddingLeft: leftInset + mainPadding,
+                  paddingRight: rightInset + mainPadding,
+                  paddingBottom: 16,
+                }}
+              />
+            )}
         </View>
       ))}
     </Displayer>

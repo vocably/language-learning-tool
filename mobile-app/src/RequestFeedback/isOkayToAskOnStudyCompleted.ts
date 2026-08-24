@@ -1,14 +1,12 @@
 import { UserMetadata } from '@vocably/model';
-import { Platform } from 'react-native';
+import { hasFinalRateResponse } from './hasFinalRateResponse';
 
 type Payload = {
   userMetadata: UserMetadata;
   numberOfStudySessions: number;
 };
 
-const platform: 'ios' | 'android' = Platform.OS === 'ios' ? 'ios' : 'android';
-
-export const isOkayToAsk = async ({
+export const isOkayToAskOnStudyCompleted = async ({
   userMetadata,
   numberOfStudySessions,
 }: Payload): Promise<boolean> => {
@@ -16,11 +14,7 @@ export const isOkayToAsk = async ({
     return false;
   }
 
-  if (
-    userMetadata.rate[platform] !== undefined &&
-    (userMetadata.rate[platform]?.response === 'never' ||
-      userMetadata.rate[platform]?.response === 'review')
-  ) {
+  if (hasFinalRateResponse(userMetadata)) {
     return false;
   }
 

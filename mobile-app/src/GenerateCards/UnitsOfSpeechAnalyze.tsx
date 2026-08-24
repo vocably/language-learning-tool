@@ -33,6 +33,7 @@ type Props = {
   alwaysShowSeparator?: boolean;
   leftInset?: number;
   rightInset?: number;
+  requestFeedback?: boolean;
 };
 
 const UnitsOfSpeechAnalyze: FC<Props> = ({
@@ -50,6 +51,7 @@ const UnitsOfSpeechAnalyze: FC<Props> = ({
   leftInset,
   rightInset,
   cardsLimit,
+  requestFeedback = false,
 }) => {
   const { t } = useTranslation();
   const [analysisItems, setAnalysisItems] = useState<AnalysisItem[]>([]);
@@ -125,6 +127,7 @@ const UnitsOfSpeechAnalyze: FC<Props> = ({
         leftInset={leftInset}
         rightInset={rightInset}
         cardsLimit={cardsLimit}
+        requestFeedback={requestFeedback}
       />
       {unitsToProcess.length > 0 && (
         <View style={[wrapperStyle, { gap: 16 }]}>
