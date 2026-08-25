@@ -4,10 +4,10 @@ import {
   configureApi,
   explain,
   loadLanguageDeck,
-  playSound,
   postOnboardingAction,
   publicAnalyzeUnitsOfSpeech,
   saveLanguageDeck,
+  tts,
 } from '@vocably/api';
 import { isItem, makeCreate, makeDelete, makeUpdate } from '@vocably/crud';
 import {
@@ -491,7 +491,21 @@ export const registerServiceWorker = (
   });
 
   onGetAudioPronunciation(async (sendResponse, payload) => {
-    return sendResponse(await playSound(payload));
+    const ttsResult = await tts(registerServiceWorkerOptions.api.baseUrl, {
+      text: payload.text,
+      language: payload.language,
+    });
+
+    if (ttsResult.success === false) {
+      return sendResponse(ttsResult);
+    }
+
+    return sendResponse({
+      success: true,
+      value: {
+        url: 'data:audio/mpeg;base64,' + ttsResult.value.audioContent,
+      },
+    });
   });
 
   onAskForRating(async (sendResponse, payload) => {
