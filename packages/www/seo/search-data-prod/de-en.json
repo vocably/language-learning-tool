@@ -29592,6 +29592,42 @@
         "number": "singular"
       },
       {
+        "source": "am Ende",
+        "translation": "in the end, eventually, after all",
+        "definitions": [
+          "schließlich, letztendlich",
+          "zum Schluss, nach allem",
+          "im Grunde genommen, eigentlich"
+        ],
+        "examples": [
+          "Am Ende hat er doch gewonnen.",
+          "Was ist am Ende dabei herausgekommen?",
+          "Am Ende ist es doch egal."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "am ˈɛndə",
+        "number": "singular"
+      },
+      {
+        "source": "das Ende",
+        "translation": "end, close, conclusion",
+        "definitions": [
+          "Der räumliche oder zeitliche Abschluss von etwas.",
+          "Der letzte Teil eines Objekts oder Zeitraums.",
+          "Das Aufhören oder der Tod."
+        ],
+        "examples": [
+          "Das Ende des Films.",
+          "Am Ende der Straße.",
+          "Ein glückliches Ende."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈɛndə",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Enden"
+      },
+      {
         "source": "zuletzt",
         "translation": "lastly, in the end, recently",
         "definitions": ["als Letztes", "am Ende", "vor Kurzem"],
@@ -38364,25 +38400,21 @@
         "tense": "present"
       },
       {
-        "source": "riss",
+        "source": "rissen",
         "translation": "tore, pulled, ripped",
         "definitions": [
-          "brach entzwei",
-          "trennte sich plötzlich",
-          "zerfiel",
-          "riss ab",
-          "riss ein"
+          "1. Zerrten, zogen (Vergangenheitsform von reißen)",
+          "2. Rissen, brachen (Vergangenheitsform von reißen)",
+          "3. Entrissen, entrissen sich (Vergangenheitsform von reißen)"
         ],
         "examples": [
-          "Der Faden riss.",
-          "Ein lauter Schrei riss ihn aus dem Schlaf.",
-          "Die Geduld riss ihm.",
-          "Der Damm riss.",
-          "Die Verbindung riss."
+          "Sie rissen das Papier entzwei.",
+          "Die Hunde rissen an der Leine.",
+          "Die Wolken rissen auf."
         ],
         "partOfSpeech": "verb",
-        "ipa": "rɪs",
-        "number": "singular",
+        "ipa": "ˈrɪsn̩",
+        "number": "plural",
         "pastTenses": "riss, hat gerissen",
         "presentTenses": "ich reiße, du reißt, er/sie/es reißt",
         "tense": "past"
@@ -38408,6 +38440,30 @@
         "pastTenses": "riss, hat gerissen",
         "presentTenses": "ich reiße, du reißt, er/sie/es reißt",
         "tense": "present"
+      },
+      {
+        "source": "riss",
+        "translation": "tore, pulled, ripped",
+        "definitions": [
+          "brach entzwei",
+          "trennte sich plötzlich",
+          "zerfiel",
+          "riss ab",
+          "riss ein"
+        ],
+        "examples": [
+          "Der Faden riss.",
+          "Ein lauter Schrei riss ihn aus dem Schlaf.",
+          "Die Geduld riss ihm.",
+          "Der Damm riss.",
+          "Die Verbindung riss."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "rɪs",
+        "number": "singular",
+        "pastTenses": "riss, hat gerissen",
+        "presentTenses": "ich reiße, du reißt, er/sie/es reißt",
+        "tense": "past"
       },
       {
         "source": "zogen",
@@ -48156,6 +48212,228 @@
     "extraItems": [],
     "explanation": ""
   },
+  "gears": {
+    "source": "gears",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Zahnräder",
+        "translation": "gears, cogwheels",
+        "definitions": [
+          "Maschinenelemente zur Übertragung von Drehbewegungen und Drehmomenten",
+          "Räder mit Zähnen am Umfang, die ineinandergreifen"
+        ],
+        "examples": [
+          "Die Zahnräder greifen ineinander.",
+          "Ein Getriebe besteht aus Zahnrädern.",
+          "Alte Zahnräder wurden ersetzt."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈt͡saːnˌʁɛːdɐ",
+        "number": "plural",
+        "pluralForm": "die Zahnräder"
+      },
+      {
+        "source": "das Zahnrad",
+        "translation": "gear, cogwheel",
+        "definitions": [
+          "Ein Rad mit Zähnen, das in ein anderes Zahnrad oder eine Zahnstange greift, um eine Drehbewegung oder Kraft zu übertragen.",
+          "Bestandteil eines Getriebes."
+        ],
+        "examples": [
+          "Das Zahnrad dreht sich.",
+          "Ein defektes Zahnrad verursachte den Ausfall.",
+          "Die Zahnräder greifen ineinander."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈt͡saːnˌʁaːt",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Zahnräder"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "cogwheels": {
+    "source": "cogwheels",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Zahnräder",
+        "translation": "gears, cogwheels",
+        "definitions": [
+          "Maschinenelemente zur Übertragung von Drehbewegungen und Drehmomenten",
+          "Räder mit Zähnen am Umfang, die ineinandergreifen"
+        ],
+        "examples": [
+          "Die Zahnräder greifen ineinander.",
+          "Ein Getriebe besteht aus Zahnrädern.",
+          "Alte Zahnräder wurden ersetzt."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈt͡saːnˌʁɛːdɐ",
+        "number": "plural",
+        "pluralForm": "die Zahnräder"
+      },
+      {
+        "source": "das Zahnrad",
+        "translation": "gear, cogwheel",
+        "definitions": [
+          "Ein Rad mit Zähnen, das in ein anderes Zahnrad oder eine Zahnstange greift, um eine Drehbewegung oder Kraft zu übertragen.",
+          "Bestandteil eines Getriebes."
+        ],
+        "examples": [
+          "Das Zahnrad dreht sich.",
+          "Ein defektes Zahnrad verursachte den Ausfall.",
+          "Die Zahnräder greifen ineinander."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈt͡saːnˌʁaːt",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Zahnräder"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "gear": {
+    "source": "gear",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "das Zahnrad",
+        "translation": "gear, cogwheel",
+        "definitions": [
+          "Ein Rad mit Zähnen, das in ein anderes Zahnrad oder eine Zahnstange greift, um eine Drehbewegung oder Kraft zu übertragen.",
+          "Bestandteil eines Getriebes."
+        ],
+        "examples": [
+          "Das Zahnrad dreht sich.",
+          "Ein defektes Zahnrad verursachte den Ausfall.",
+          "Die Zahnräder greifen ineinander."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈt͡saːnˌʁaːt",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Zahnräder"
+      },
+      {
+        "source": "Klamotten",
+        "translation": "clothes, gear",
+        "definitions": [
+          "umgangssprachlich für Kleidung",
+          "alte oder abgetragene Kleider"
+        ],
+        "examples": [
+          "Er hat seine Klamotten im Schrank aufgeräumt.",
+          "Sie trägt immer stylische Klamotten."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "klaˈmɔtn̩",
+        "number": "plural"
+      },
+      {
+        "source": "die Klamotte",
+        "translation": "piece of clothing, old junk, funny old film",
+        "definitions": [
+          "Ein Kleidungsstück",
+          "Ein minderwertiges oder veraltetes Theaterstück oder Film",
+          "Ein wertloser Gegenstand oder Brocken"
+        ],
+        "examples": [
+          "Zieh deine Klamotten an.",
+          "Das ist eine alte Klamotte.",
+          "Was für eine lustige Klamotte!"
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "klaˈmɔtə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Klamotten"
+      },
+      {
+        "source": "die Ausrüstung",
+        "translation": "equipment, gear",
+        "definitions": [
+          "Gesamtheit der Gegenstände, die für eine bestimmte Tätigkeit oder einen Zweck benötigt werden.",
+          "Vorgang des Ausstattens mit notwendigen Dingen."
+        ],
+        "examples": [
+          "Die militärische Ausrüstung.",
+          "Eine teure Ausrüstung kaufen.",
+          "Die Ausrüstung für die Expedition ist bereit."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈaʊ̯sˌʁʏstʊŋ",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Ausrüstungen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "cogwheel": {
+    "source": "cogwheel",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "das Zahnrad",
+        "translation": "gear, cogwheel",
+        "definitions": [
+          "Ein Rad mit Zähnen, das in ein anderes Zahnrad oder eine Zahnstange greift, um eine Drehbewegung oder Kraft zu übertragen.",
+          "Bestandteil eines Getriebes."
+        ],
+        "examples": [
+          "Das Zahnrad dreht sich.",
+          "Ein defektes Zahnrad verursachte den Ausfall.",
+          "Die Zahnräder greifen ineinander."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈt͡saːnˌʁaːt",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Zahnräder"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "toothpaste": {
     "source": "toothpaste",
     "sourceLanguage": "de",
@@ -48456,6 +48734,26 @@
       "language": "de"
     },
     "items": [
+      {
+        "source": "schlichten",
+        "translation": "settle, mediate, smooth",
+        "definitions": [
+          "einen Streit beilegen",
+          "vermitteln",
+          "ordnen, glätten"
+        ],
+        "examples": [
+          "Er muss den Konflikt schlichten.",
+          "Sie schlichtet oft zwischen ihren Freunden.",
+          "Die Haare schlichten."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʃlɪçtn̩",
+        "number": "singular",
+        "pastTenses": "schlichtete, hat geschlichtet",
+        "presentTenses": "ich schlichte, du schlichtest, er/sie/es schlichtet",
+        "tense": "present"
+      },
       {
         "source": "besiedeln",
         "translation": "settle, colonize, populate",
@@ -84499,6 +84797,21 @@
       "language": "de"
     },
     "items": [
+      {
+        "source": "paranoid",
+        "translation": "paranoid",
+        "definitions": [
+          "Verfolgungswahn habend",
+          "unter Wahnvorstellungen leidend"
+        ],
+        "examples": [
+          "Er wurde paranoid.",
+          "Sie ist oft paranoid in Menschenmengen."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "paʁaˈnɔɪ̯t",
+        "number": "singular"
+      },
       {
         "source": "wahnhaft",
         "translation": "delusional, paranoid, fanciful",
@@ -120749,6 +121062,26 @@
         "tense": "present"
       },
       {
+        "source": "schlichten",
+        "translation": "settle, mediate, smooth",
+        "definitions": [
+          "einen Streit beilegen",
+          "vermitteln",
+          "ordnen, glätten"
+        ],
+        "examples": [
+          "Er muss den Konflikt schlichten.",
+          "Sie schlichtet oft zwischen ihren Freunden.",
+          "Die Haare schlichten."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʃlɪçtn̩",
+        "number": "singular",
+        "pastTenses": "schlichtete, hat geschlichtet",
+        "presentTenses": "ich schlichte, du schlichtest, er/sie/es schlichtet",
+        "tense": "present"
+      },
+      {
         "source": "mitteln",
         "translation": "average, mediate, be in the middle",
         "definitions": [
@@ -139037,6 +139370,28 @@
         "tense": "present"
       },
       {
+        "source": "hielt",
+        "translation": "held, stopped, lasted, considered",
+        "definitions": [
+          "Vergangenheitsform von halten (festhalten, anhalten, dauern, meinen)",
+          "hatte in der Hand",
+          "blieb stehen",
+          "galt als"
+        ],
+        "examples": [
+          "Er hielt den Ball fest.",
+          "Das Auto hielt an der Ampel.",
+          "Die Party hielt bis spät in die Nacht.",
+          "Sie hielt ihn für einen Freund."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "hiːlt",
+        "number": "singular",
+        "pastTenses": "hielt, hat gehalten",
+        "presentTenses": "ich halte, du hältst, er/sie/es hält",
+        "tense": "past"
+      },
+      {
         "source": "veranstaltete",
         "translation": "organized, held",
         "definitions": [
@@ -148861,6 +149216,38 @@
         "number": "singular"
       },
       {
+        "source": "schlicht",
+        "translation": "simple, plain, simply",
+        "definitions": [
+          "einfach, schmucklos",
+          "geradeheraus, offen",
+          "lediglich, einfachhin"
+        ],
+        "examples": [
+          "Das Design ist schlicht und elegant.",
+          "Er sagte es schlicht und einfach.",
+          "Das ist schlicht unmöglich."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "ʃlɪçt",
+        "number": "singular"
+      },
+      {
+        "source": "schlicht",
+        "translation": "simple, plain",
+        "definitions": [
+          "einfach und ohne Verzierung",
+          "bescheiden und anspruchslos"
+        ],
+        "examples": [
+          "ein schlichtes Kleid",
+          "Der Raum ist schlicht eingerichtet."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ʃlɪçt",
+        "number": "singular"
+      },
+      {
         "source": "unscheinbar",
         "translation": "unassuming, plain, modest",
         "definitions": [
@@ -152220,6 +152607,32 @@
         ],
         "partOfSpeech": "adjective",
         "ipa": "ʁaʊ̯",
+        "number": "singular"
+      },
+      {
+        "source": "grob",
+        "translation": "rough, coarse",
+        "definitions": ["nicht fein oder eben", "unhöflich oder rücksichtslos"],
+        "examples": ["eine grobe Textur", "ein grober Fehler", "grob werden"],
+        "partOfSpeech": "adjective",
+        "ipa": "ɡʁoːp"
+      },
+      {
+        "source": "grobem",
+        "translation": "coarse, rough, rude, crude",
+        "definitions": [
+          "Dativ Singular Maskulinum der starken Deklination des Adjektivs grob",
+          "Dativ Singular Neutrum der starken Deklination des Adjektivs grob",
+          "Dativ Singular Maskulinum der gemischten Deklination des Adjektivs grob",
+          "Dativ Singular Neutrum der gemischten Deklination des Adjektivs grob"
+        ],
+        "examples": [
+          "mit grobem Sand",
+          "zu grobem Mehl",
+          "einem grobem Fehler"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈɡʁoːbm̩",
         "number": "singular"
       },
       {
@@ -162080,6 +162493,24 @@
         "tense": "present"
       },
       {
+        "source": "das Geflüster",
+        "translation": "whisper, rumor",
+        "definitions": [
+          "Leises Sprechen oder Geräusch",
+          "Geheime oder vertrauliche Unterhaltung"
+        ],
+        "examples": [
+          "Das Geflüster im Publikum war kaum hörbar.",
+          "Ein Geflüster ging durch die Reihen.",
+          "Sie hörte ein leises Geflüster."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ɡəˈflʏstɐ",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "das Geflüster"
+      },
+      {
         "source": "flüstern",
         "translation": "whisper, gossip",
         "definitions": [
@@ -164445,6 +164876,46 @@
     },
     "items": [
       {
+        "source": "trommeln",
+        "translation": "drum, beat, drum on",
+        "definitions": [
+          "Auf einer Trommel spielen",
+          "Ein trommelndes Geräusch erzeugen",
+          "Etwas schnell und rhythmisch schlagen"
+        ],
+        "examples": [
+          "Er kann gut trommeln.",
+          "Der Regen trommelt ans Fenster.",
+          "Sie trommelte mit den Fingern auf den Tisch."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈtʁɔml̩n",
+        "number": "singular",
+        "pastTenses": "trommelte, hat getrommelt",
+        "presentTenses": "ich trommle, du trommelst, er/sie/es trommelt",
+        "tense": "present"
+      },
+      {
+        "source": "trommel",
+        "translation": "drum, beat, tap",
+        "definitions": [
+          "Ein Musikinstrument schlagen, um Töne zu erzeugen.",
+          "Etwas wiederholt und rhythmisch schlagen oder klopfen.",
+          "Sich schnell und geräuschvoll bewegen, oft mit den Füßen."
+        ],
+        "examples": [
+          "Er trommelte auf die Tür.",
+          "Die Kinder trommeln im Takt.",
+          "Sie trommelte mit den Fingern auf den Tisch."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈtʁɔml̩",
+        "number": "singular",
+        "pastTenses": "trommelte, hat getrommelt",
+        "presentTenses": "ich trommle, du trommelst, er/sie/es trommelt",
+        "tense": "present"
+      },
+      {
         "source": "die Trommel",
         "translation": "drum, cylinder",
         "definitions": [
@@ -164461,6 +164932,224 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Trommeln"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "beat": {
+    "source": "beat",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "prügelten",
+        "translation": "beat, thrashed",
+        "definitions": [
+          "schlugen wiederholt und heftig",
+          "verabreichten Schläge"
+        ],
+        "examples": [
+          "Sie prügelten den Teppich aus.",
+          "Die Kinder prügelten sich auf dem Schulhof.",
+          "Sie prügelten ihn zu Boden."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈpryːɡl̩tn̩",
+        "number": "plural",
+        "pastTenses": "prügelte, hat geprügelt",
+        "presentTenses": "ich prügele, du prügelst, er/sie/es prügelt",
+        "tense": "past"
+      },
+      {
+        "source": "prügeln",
+        "translation": "beat, thrash, flog",
+        "definitions": [
+          "jemanden oder etwas wiederholt mit Schlägen traktieren",
+          "sich schlagen, kämpfen"
+        ],
+        "examples": [
+          "Er prügelt den Teppich aus.",
+          "Sie prügelten sich auf der Straße.",
+          "Die Kinder prügeln sich um das Spielzeug."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈpryːɡl̩n",
+        "number": "plural",
+        "pastTenses": "prügelte, hat geprügelt",
+        "presentTenses": "ich prügele, du prügelst, er/sie/es prügelt",
+        "tense": "present"
+      },
+      {
+        "source": "prügeln",
+        "translation": "beat, thrash, flog",
+        "definitions": [
+          "jemanden oder etwas wiederholt mit Schlägen traktieren",
+          "sich schlagen, kämpfen"
+        ],
+        "examples": [
+          "Er prügelt den Teppich aus.",
+          "Sie prügelten sich auf der Straße.",
+          "Die Kinder prügeln sich um das Spielzeug."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈpryːɡl̩n",
+        "number": "plural",
+        "pastTenses": "prügelte, hat geprügelt",
+        "presentTenses": "ich prügele, du prügelst, er/sie/es prügelt",
+        "tense": "present"
+      },
+      {
+        "source": "schlägst",
+        "translation": "hit, beat, strike, suggest",
+        "definitions": [
+          "Du triffst etwas mit der Hand oder einem Werkzeug.",
+          "Du besiegst jemanden in einem Kampf oder Wettbewerb.",
+          "Du machst eine schnelle Bewegung mit einem Körperteil.",
+          "Du schlägst einen Weg ein oder eine Richtung vor."
+        ],
+        "examples": [
+          "Du schlägst den Ball weit.",
+          "Du schlägst deinen Gegner im Schach.",
+          "Du schlägst die Augen auf.",
+          "Du schlägst einen neuen Kurs vor."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ʃlɛːkst",
+        "number": "singular",
+        "pastTenses": "schlug, hat geschlagen",
+        "presentTenses": "ich schlage, du schlägst, er/sie/es schlägt",
+        "tense": "present"
+      },
+      {
+        "source": "schlagen",
+        "translation": "to hit, to beat, to strike, to punch, to defeat",
+        "definitions": [
+          "jemanden oder etwas mit der Hand oder einem Gegenstand wiederholt treffen",
+          "etwas durch Schlagen in eine bestimmte Form bringen",
+          "einen Kampf oder Wettbewerb gewinnen",
+          "schnell und rhythmisch pochen (Herz)",
+          "eine bestimmte Zeit anzeigen (Uhr)"
+        ],
+        "examples": [
+          "Er schlägt den Ball.",
+          "Sie schlägt Sahne.",
+          "Wir schlagen den Gegner.",
+          "Sein Herz schlägt schnell.",
+          "Die Uhr schlägt zwölf."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʃlaːɡn̩",
+        "number": "plural",
+        "pastTenses": "schlug, hat geschlagen",
+        "presentTenses": "ich schlage, du schlägst, er/sie/es schlägt",
+        "tense": "present"
+      },
+      {
+        "source": "schlug",
+        "translation": "hit, beat, took",
+        "definitions": [
+          "Präteritum von schlagen (jemanden oder etwas mit der Hand oder einem Gegenstand treffen)",
+          "Präteritum von schlagen (einen Schlag ausführen)",
+          "Präteritum von schlagen (etwas in eine bestimmte Form bringen, z.B. Sahne schlagen)",
+          "Präteritum von schlagen (eine Uhr schlägt die Stunde)"
+        ],
+        "examples": [
+          "Er schlug den Ball weit.",
+          "Sie schlug die Tür zu.",
+          "Das Herz schlug schnell.",
+          "Der Blitz schlug ein."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ʃluːk",
+        "number": "singular",
+        "pastTenses": "schlug, hat geschlagen",
+        "presentTenses": "ich schlage, du schlägst, er/sie/es schlägt",
+        "tense": "past"
+      },
+      {
+        "source": "trommeln",
+        "translation": "drum, beat, drum on",
+        "definitions": [
+          "Auf einer Trommel spielen",
+          "Ein trommelndes Geräusch erzeugen",
+          "Etwas schnell und rhythmisch schlagen"
+        ],
+        "examples": [
+          "Er kann gut trommeln.",
+          "Der Regen trommelt ans Fenster.",
+          "Sie trommelte mit den Fingern auf den Tisch."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈtʁɔml̩n",
+        "number": "singular",
+        "pastTenses": "trommelte, hat getrommelt",
+        "presentTenses": "ich trommle, du trommelst, er/sie/es trommelt",
+        "tense": "present"
+      },
+      {
+        "source": "trommel",
+        "translation": "drum, beat, tap",
+        "definitions": [
+          "Ein Musikinstrument schlagen, um Töne zu erzeugen.",
+          "Etwas wiederholt und rhythmisch schlagen oder klopfen.",
+          "Sich schnell und geräuschvoll bewegen, oft mit den Füßen."
+        ],
+        "examples": [
+          "Er trommelte auf die Tür.",
+          "Die Kinder trommeln im Takt.",
+          "Sie trommelte mit den Fingern auf den Tisch."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈtʁɔml̩",
+        "number": "singular",
+        "pastTenses": "trommelte, hat getrommelt",
+        "presentTenses": "ich trommle, du trommelst, er/sie/es trommelt",
+        "tense": "present"
+      },
+      {
+        "source": "der Puls",
+        "translation": "pulse, beat",
+        "definitions": [
+          "Anstoß der Blutwelle an die Arterienwände",
+          "Regelmäßiger Schlag oder Rhythmus"
+        ],
+        "examples": [
+          "Der Puls ist ruhig.",
+          "Sie fühlte seinen Puls.",
+          "Den Puls der Zeit fühlen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "pʊls",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Pulse"
+      },
+      {
+        "source": "der Rhythmus",
+        "translation": "rhythm, beat, cadence",
+        "definitions": [
+          "Gleichmäßige Abfolge von Bewegungen oder Lauten",
+          "Strukturierte zeitliche Gliederung in der Musik oder Sprache",
+          "Regelmäßige Wiederkehr bestimmter Vorgänge"
+        ],
+        "examples": [
+          "Der Rhythmus der Musik.",
+          "Ein biologischer Rhythmus.",
+          "Im Rhythmus klatschen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈrʏtmʊs",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Rhythmen"
       }
     ],
     "detectedInputType": "word",
@@ -171687,6 +172376,74 @@
     "extraItems": [],
     "explanation": ""
   },
+  "table edge": {
+    "source": "table edge",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Tischkante",
+        "translation": "table edge, edge of the table",
+        "definitions": [
+          "Der Rand oder die Seite eines Tisches.",
+          "Die äußere Begrenzung der Tischplatte."
+        ],
+        "examples": [
+          "Sie stieß sich an der Tischkante.",
+          "Die Tischkante war scharf.",
+          "Er saß an der Tischkante."
+        ],
+        "partOfSpeech": "feminine noun",
+        "ipa": "ˈtɪʃˌkantə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Tischkanten"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "edge of the table": {
+    "source": "edge of the table",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Tischkante",
+        "translation": "table edge, edge of the table",
+        "definitions": [
+          "Der Rand oder die Seite eines Tisches.",
+          "Die äußere Begrenzung der Tischplatte."
+        ],
+        "examples": [
+          "Sie stieß sich an der Tischkante.",
+          "Die Tischkante war scharf.",
+          "Er saß an der Tischkante."
+        ],
+        "partOfSpeech": "feminine noun",
+        "ipa": "ˈtɪʃˌkantə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Tischkanten"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "table": {
     "source": "table",
     "sourceLanguage": "de",
@@ -178045,6 +178802,41 @@
         "partOfSpeech": "adjective",
         "ipa": "taʊ̯b",
         "number": "singular"
+      },
+      {
+        "source": "gelähmt",
+        "translation": "paralyzed, numb",
+        "definitions": [
+          "unfähig sich zu bewegen",
+          "bewegungsunfähig durch Schock oder Angst"
+        ],
+        "examples": [
+          "Er war vor Angst wie gelähmt.",
+          "Die Glieder sind gelähmt."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ɡəˈlɛːmt",
+        "number": "singular"
+      },
+      {
+        "source": "lähmen",
+        "translation": "paralyze, cripple, immobilize",
+        "definitions": [
+          "Bewegungsfähigkeit oder Funktion einschränken oder aufheben",
+          "jemanden handlungsunfähig machen",
+          "etwas zum Stillstand bringen"
+        ],
+        "examples": [
+          "Die Krankheit kann die Muskeln lähmen.",
+          "Der Schock lähmte sie völlig.",
+          "Ein Streik könnte den Verkehr lähmen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈlɛːmən",
+        "number": "singular",
+        "pastTenses": "lähmte, hat gelähmt",
+        "presentTenses": "ich lähme, du lähmst, er/sie/es lähmt",
+        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -184361,59 +185153,6 @@
     },
     "items": [
       {
-        "source": "störrisch",
-        "translation": "stubborn, obstinate",
-        "definitions": ["eigensinnig", "widerspenstig"],
-        "examples": [
-          "ein störrisches Kind",
-          "störrisch sein",
-          "störrisch widerstehen"
-        ],
-        "partOfSpeech": "adjective",
-        "ipa": "ˈʃtœrɪʃ",
-        "number": "singular"
-      },
-      {
-        "source": "bock",
-        "translation": "stubborn, obstinate, headstrong, willful",
-        "definitions": [
-          "ein männliches Tier, insbesondere ein Ziegenbock oder Rehbock",
-          "ein starkes Bier, oft dunkler und malziger",
-          "umgangssprachlich für 'Lust' oder 'Verlangen'",
-          "ein Fehler oder Missgeschick"
-        ],
-        "examples": [
-          "Der Bock springt über den Zaun.",
-          "Ich trinke gerne einen dunklen Bock.",
-          "Ich habe Bock auf Pizza.",
-          "Er hat einen Bock geschossen."
-        ],
-        "partOfSpeech": "adjective",
-        "ipa": "bɔk",
-        "g": "masculine",
-        "number": "singular"
-      },
-      {
-        "source": "der Bock",
-        "translation": "buck, Bock beer",
-        "definitions": [
-          "Männliches Tier bei bestimmten Säugetieren (z. B. Reh, Ziege).",
-          "Lust oder Motivation, etwas zu tun.",
-          "Ein Gestell aus Holz oder Metall zum Stützen.",
-          "Ein grober Fehler."
-        ],
-        "examples": [
-          "Ich habe keinen Bock.",
-          "Der Bock steht auf der Weide.",
-          "Er hat einen Bock geschossen."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "bɔk",
-        "g": "masculine",
-        "number": "singular",
-        "pluralForm": "die Böcke"
-      },
-      {
         "source": "hartnäckig",
         "translation": "persistent, stubborn",
         "definitions": [
@@ -184427,6 +185166,36 @@
         ],
         "partOfSpeech": "adjective",
         "ipa": "ˈhaʁtnɛkɪç",
+        "number": "singular"
+      },
+      {
+        "source": "eigensinnig",
+        "translation": "stubborn, headstrong, wilful",
+        "definitions": [
+          "Starrköpfig, nicht bereit, die Meinung zu ändern",
+          "Hartnäckig, auf dem eigenen Willen beharrend",
+          "Unbeugsam, widerwillig, sich anzupassen"
+        ],
+        "examples": [
+          "ein eigensinniges Kind",
+          "eine eigensinnige Entscheidung",
+          "er ist sehr eigensinnig"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈaɪ̯ɡn̩ˌzɪnɪç",
+        "number": "singular"
+      },
+      {
+        "source": "stur",
+        "translation": "stubborn, obstinate, pigheaded",
+        "definitions": [
+          "eigensinnig",
+          "unbeweglich",
+          "unvernünftig auf einer Meinung bestehend"
+        ],
+        "examples": ["Stur bleiben", "Er ist stur", "Eine sture Haltung"],
+        "partOfSpeech": "adjective",
+        "ipa": "ʃtuːɐ̯",
         "number": "singular"
       }
     ],
@@ -184456,6 +185225,19 @@
         ],
         "partOfSpeech": "adjective",
         "ipa": "ˈʃtœrɪʃ",
+        "number": "singular"
+      },
+      {
+        "source": "stur",
+        "translation": "stubborn, obstinate, pigheaded",
+        "definitions": [
+          "eigensinnig",
+          "unbeweglich",
+          "unvernünftig auf einer Meinung bestehend"
+        ],
+        "examples": ["Stur bleiben", "Er ist stur", "Eine sture Haltung"],
+        "partOfSpeech": "adjective",
+        "ipa": "ʃtuːɐ̯",
         "number": "singular"
       },
       {
@@ -185690,6 +186472,25 @@
       "language": "de"
     },
     "items": [
+      {
+        "source": "stumpf",
+        "translation": "blunt, dull, stupidly, insensitively",
+        "definitions": [
+          "nicht scharf",
+          "ohne Spitze",
+          "geistig träge, dumm",
+          "ohne Empfindlichkeit, gefühllos"
+        ],
+        "examples": [
+          "Das Messer schneidet stumpf.",
+          "Er reagierte stumpf auf die Nachricht.",
+          "Die Klinge ist stumpf geworden.",
+          "Sie starrte stumpf vor sich hin."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "ʃtʊmpf",
+        "number": "singular"
+      },
       {
         "source": "stumpf",
         "translation": "blunt, dull, obtuse",
@@ -192169,6 +192970,52 @@
         "pastTenses": "stoppte, hat gestoppt",
         "presentTenses": "ich stoppe, du stoppst, er/sie/es stoppt",
         "tense": "present"
+      },
+      {
+        "source": "hielt",
+        "translation": "held, stopped, lasted, considered",
+        "definitions": [
+          "Vergangenheitsform von halten (festhalten, anhalten, dauern, meinen)",
+          "hatte in der Hand",
+          "blieb stehen",
+          "galt als"
+        ],
+        "examples": [
+          "Er hielt den Ball fest.",
+          "Das Auto hielt an der Ampel.",
+          "Die Party hielt bis spät in die Nacht.",
+          "Sie hielt ihn für einen Freund."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "hiːlt",
+        "number": "singular",
+        "pastTenses": "hielt, hat gehalten",
+        "presentTenses": "ich halte, du hältst, er/sie/es hält",
+        "tense": "past"
+      },
+      {
+        "source": "halten",
+        "translation": "hold, keep, maintain, consider, stick to",
+        "definitions": [
+          "etwas in der Hand oder an einem Ort festhalten",
+          "eine bestimmte Position oder Richtung beibehalten",
+          "eine Meinung oder Überzeugung haben",
+          "ein Versprechen oder eine Vereinbarung einhalten",
+          "für etwas halten, einschätzen"
+        ],
+        "examples": [
+          "Er hält den Ball fest.",
+          "Das Schiff hält Kurs auf den Hafen.",
+          "Ich halte das für eine gute Idee.",
+          "Sie hält immer ihr Wort.",
+          "Man hält ihn für sehr intelligent."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈhaltn̩",
+        "number": "singular",
+        "pastTenses": "hielt, hat gehalten",
+        "presentTenses": "ich halte, du hältst, er/sie/es hält",
+        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -192938,6 +193785,110 @@
         "g": "masculine",
         "number": "singular",
         "pluralForm": "die Böden"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "forehead": {
+    "source": "forehead",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Stirn",
+        "translation": "forehead, front",
+        "definitions": [
+          "Oberer Teil des Gesichts zwischen Augenbrauen und Haaransatz",
+          "Vorderseite oder Stirnseite eines Gegenstandes"
+        ],
+        "examples": [
+          "Sie runzelte die Stirn.",
+          "Er küsste sie auf die Stirn.",
+          "Die Stirn des Gebäudes."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ʃtɪʁn",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Stirnen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "front": {
+    "source": "front",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Nase",
+        "translation": "nose, front",
+        "definitions": [
+          "Organ am Kopf von Menschen und Tieren, das zum Riechen und Atmen dient",
+          "Vorderster Teil eines Objekts, oft spitz zulaufend"
+        ],
+        "examples": [
+          "Sie hat eine kleine Nase.",
+          "Er steckt seine Nase überall rein.",
+          "Das Flugzeug hat eine lange Nase."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "diː ˈnaːzə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Nasen"
+      },
+      {
+        "source": "die Fassade",
+        "translation": "facade, front, exterior",
+        "definitions": [
+          "Die Außenseite eines Gebäudes, meist die Vorderseite.",
+          "Ein trügerischer Schein oder ein Verhalten, das die wahren Gefühle verbirgt."
+        ],
+        "examples": [
+          "Die Fassade wird renoviert.",
+          "Hinter der Fassade bröckelt es.",
+          "Er wahrte stets seine Fassade."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "faˈsaːdə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Fassaden"
+      },
+      {
+        "source": "die Stirn",
+        "translation": "forehead, front",
+        "definitions": [
+          "Oberer Teil des Gesichts zwischen Augenbrauen und Haaransatz",
+          "Vorderseite oder Stirnseite eines Gegenstandes"
+        ],
+        "examples": [
+          "Sie runzelte die Stirn.",
+          "Er küsste sie auf die Stirn.",
+          "Die Stirn des Gebäudes."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ʃtɪʁn",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Stirnen"
       }
     ],
     "detectedInputType": "word",
@@ -203004,6 +203955,26 @@
         "tense": "present"
       },
       {
+        "source": "spüre",
+        "translation": "feel, sense, perceive",
+        "definitions": [
+          "Wahrnehmen mit den Sinnen",
+          "Fühlen einer Empfindung",
+          "Erkennen einer Präsenz"
+        ],
+        "examples": [
+          "Ich spüre den Wind auf meiner Haut.",
+          "Ich spüre eine große Freude.",
+          "Ich spüre, dass etwas nicht stimmt."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʃpyːʁə",
+        "number": "singular",
+        "pastTenses": "spürte, hat gespürt",
+        "presentTenses": "ich spüre, du spürst, er/sie/es spürt",
+        "tense": "present"
+      },
+      {
         "source": "fühlst",
         "translation": "feel, sense, touch",
         "definitions": [
@@ -203336,6 +204307,26 @@
         ],
         "partOfSpeech": "verb",
         "ipa": "ˈʃpyːʁən",
+        "number": "singular",
+        "pastTenses": "spürte, hat gespürt",
+        "presentTenses": "ich spüre, du spürst, er/sie/es spürt",
+        "tense": "present"
+      },
+      {
+        "source": "spüre",
+        "translation": "feel, sense, perceive",
+        "definitions": [
+          "Wahrnehmen mit den Sinnen",
+          "Fühlen einer Empfindung",
+          "Erkennen einer Präsenz"
+        ],
+        "examples": [
+          "Ich spüre den Wind auf meiner Haut.",
+          "Ich spüre eine große Freude.",
+          "Ich spüre, dass etwas nicht stimmt."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʃpyːʁə",
         "number": "singular",
         "pastTenses": "spürte, hat gespürt",
         "presentTenses": "ich spüre, du spürst, er/sie/es spürt",
@@ -228688,6 +229679,24 @@
     },
     "items": [
       {
+        "source": "das Grab",
+        "translation": "grave, tomb",
+        "definitions": [
+          "Stätte, an der ein Toter beigesetzt ist oder wird",
+          "Ort des Todes oder des Untergangs"
+        ],
+        "examples": [
+          "Ein Grab schaufeln",
+          "Blumen aufs Grab legen",
+          "Das nasse Grab"
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ɡʁaːp",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Gräber"
+      },
+      {
         "source": "serious",
         "translation": "serious, grave, earnest",
         "definitions": ["ernst", "seriös", "schwerwiegend"],
@@ -240601,6 +241610,80 @@
     "extraItems": [],
     "explanation": ""
   },
+  "obliquely": {
+    "source": "obliquely",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "schräg",
+        "translation": "obliquely, askew, oddly",
+        "definitions": [
+          "nicht gerade oder senkrecht",
+          "aus einem ungewöhnlichen Blickwinkel",
+          "auf eine eigenartige oder exzentrische Weise"
+        ],
+        "examples": [
+          "Der Tisch steht schräg.",
+          "Er sah mich schräg an.",
+          "Die Bilder hängen schräg an der Wand."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "ʃrɛːk",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "askew": {
+    "source": "askew",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "schief",
+        "translation": "crooked, askew",
+        "definitions": ["nicht gerade; geneigt", "fehlerhaft; nicht korrekt"],
+        "examples": ["ein schiefer Turm", "schief gehen"],
+        "partOfSpeech": "adjective",
+        "ipa": "ʃiːf"
+      },
+      {
+        "source": "schräg",
+        "translation": "obliquely, askew, oddly",
+        "definitions": [
+          "nicht gerade oder senkrecht",
+          "aus einem ungewöhnlichen Blickwinkel",
+          "auf eine eigenartige oder exzentrische Weise"
+        ],
+        "examples": [
+          "Der Tisch steht schräg.",
+          "Er sah mich schräg an.",
+          "Die Bilder hängen schräg an der Wand."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "ʃrɛːk",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "slanted": {
     "source": "slanted",
     "sourceLanguage": "de",
@@ -246604,8 +247687,8 @@
     "extraItems": [],
     "explanation": ""
   },
-  "beat": {
-    "source": "beat",
+  "temple": {
+    "source": "temple",
     "sourceLanguage": "de",
     "targetLanguage": "en",
     "isDirect": false,
@@ -246616,166 +247699,20 @@
     },
     "items": [
       {
-        "source": "prügelten",
-        "translation": "beat, thrashed",
+        "source": "die Schläfe",
+        "translation": "temple",
         "definitions": [
-          "schlugen wiederholt und heftig",
-          "verabreichten Schläge"
+          "Seitlicher Teil des Kopfes zwischen Stirn, Ohr und Auge."
         ],
         "examples": [
-          "Sie prügelten den Teppich aus.",
-          "Die Kinder prügelten sich auf dem Schulhof.",
-          "Sie prügelten ihn zu Boden."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈpryːɡl̩tn̩",
-        "number": "plural",
-        "pastTenses": "prügelte, hat geprügelt",
-        "presentTenses": "ich prügele, du prügelst, er/sie/es prügelt",
-        "tense": "past"
-      },
-      {
-        "source": "prügeln",
-        "translation": "beat, thrash, flog",
-        "definitions": [
-          "jemanden oder etwas wiederholt mit Schlägen traktieren",
-          "sich schlagen, kämpfen"
-        ],
-        "examples": [
-          "Er prügelt den Teppich aus.",
-          "Sie prügelten sich auf der Straße.",
-          "Die Kinder prügeln sich um das Spielzeug."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈpryːɡl̩n",
-        "number": "plural",
-        "pastTenses": "prügelte, hat geprügelt",
-        "presentTenses": "ich prügele, du prügelst, er/sie/es prügelt",
-        "tense": "present"
-      },
-      {
-        "source": "prügeln",
-        "translation": "beat, thrash, flog",
-        "definitions": [
-          "jemanden oder etwas wiederholt mit Schlägen traktieren",
-          "sich schlagen, kämpfen"
-        ],
-        "examples": [
-          "Er prügelt den Teppich aus.",
-          "Sie prügelten sich auf der Straße.",
-          "Die Kinder prügeln sich um das Spielzeug."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈpryːɡl̩n",
-        "number": "plural",
-        "pastTenses": "prügelte, hat geprügelt",
-        "presentTenses": "ich prügele, du prügelst, er/sie/es prügelt",
-        "tense": "present"
-      },
-      {
-        "source": "schlägst",
-        "translation": "hit, beat, strike, suggest",
-        "definitions": [
-          "Du triffst etwas mit der Hand oder einem Werkzeug.",
-          "Du besiegst jemanden in einem Kampf oder Wettbewerb.",
-          "Du machst eine schnelle Bewegung mit einem Körperteil.",
-          "Du schlägst einen Weg ein oder eine Richtung vor."
-        ],
-        "examples": [
-          "Du schlägst den Ball weit.",
-          "Du schlägst deinen Gegner im Schach.",
-          "Du schlägst die Augen auf.",
-          "Du schlägst einen neuen Kurs vor."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ʃlɛːkst",
-        "number": "singular",
-        "pastTenses": "schlug, hat geschlagen",
-        "presentTenses": "ich schlage, du schlägst, er/sie/es schlägt",
-        "tense": "present"
-      },
-      {
-        "source": "schlagen",
-        "translation": "to hit, to beat, to strike, to punch, to defeat",
-        "definitions": [
-          "jemanden oder etwas mit der Hand oder einem Gegenstand wiederholt treffen",
-          "etwas durch Schlagen in eine bestimmte Form bringen",
-          "einen Kampf oder Wettbewerb gewinnen",
-          "schnell und rhythmisch pochen (Herz)",
-          "eine bestimmte Zeit anzeigen (Uhr)"
-        ],
-        "examples": [
-          "Er schlägt den Ball.",
-          "Sie schlägt Sahne.",
-          "Wir schlagen den Gegner.",
-          "Sein Herz schlägt schnell.",
-          "Die Uhr schlägt zwölf."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈʃlaːɡn̩",
-        "number": "plural",
-        "pastTenses": "schlug, hat geschlagen",
-        "presentTenses": "ich schlage, du schlägst, er/sie/es schlägt",
-        "tense": "present"
-      },
-      {
-        "source": "schlug",
-        "translation": "hit, beat, took",
-        "definitions": [
-          "Präteritum von schlagen (jemanden oder etwas mit der Hand oder einem Gegenstand treffen)",
-          "Präteritum von schlagen (einen Schlag ausführen)",
-          "Präteritum von schlagen (etwas in eine bestimmte Form bringen, z.B. Sahne schlagen)",
-          "Präteritum von schlagen (eine Uhr schlägt die Stunde)"
-        ],
-        "examples": [
-          "Er schlug den Ball weit.",
-          "Sie schlug die Tür zu.",
-          "Das Herz schlug schnell.",
-          "Der Blitz schlug ein."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ʃluːk",
-        "number": "singular",
-        "pastTenses": "schlug, hat geschlagen",
-        "presentTenses": "ich schlage, du schlägst, er/sie/es schlägt",
-        "tense": "past"
-      },
-      {
-        "source": "der Puls",
-        "translation": "pulse, beat",
-        "definitions": [
-          "Anstoß der Blutwelle an die Arterienwände",
-          "Regelmäßiger Schlag oder Rhythmus"
-        ],
-        "examples": [
-          "Der Puls ist ruhig.",
-          "Sie fühlte seinen Puls.",
-          "Den Puls der Zeit fühlen."
+          "Er rieb sich die Schläfe.",
+          "Graue Haare an den Schläfen."
         ],
         "partOfSpeech": "noun",
-        "ipa": "pʊls",
-        "g": "masculine",
+        "ipa": "ˈʃlɛːfə",
+        "g": "feminine",
         "number": "singular",
-        "pluralForm": "die Pulse"
-      },
-      {
-        "source": "der Rhythmus",
-        "translation": "rhythm, beat, cadence",
-        "definitions": [
-          "Gleichmäßige Abfolge von Bewegungen oder Lauten",
-          "Strukturierte zeitliche Gliederung in der Musik oder Sprache",
-          "Regelmäßige Wiederkehr bestimmter Vorgänge"
-        ],
-        "examples": [
-          "Der Rhythmus der Musik.",
-          "Ein biologischer Rhythmus.",
-          "Im Rhythmus klatschen."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ˈrʏtmʊs",
-        "g": "masculine",
-        "number": "singular",
-        "pluralForm": "die Rhythmen"
+        "pluralForm": "die Schläfen"
       }
     ],
     "detectedInputType": "word",
@@ -247894,6 +248831,80 @@
         "g": "neuter",
         "number": "singular",
         "pluralForm": "die Schließfächer"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "simple": {
+    "source": "simple",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "schlicht",
+        "translation": "simple, plain, simply",
+        "definitions": [
+          "einfach, schmucklos",
+          "geradeheraus, offen",
+          "lediglich, einfachhin"
+        ],
+        "examples": [
+          "Das Design ist schlicht und elegant.",
+          "Er sagte es schlicht und einfach.",
+          "Das ist schlicht unmöglich."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "ʃlɪçt",
+        "number": "singular"
+      },
+      {
+        "source": "schlicht",
+        "translation": "simple, plain",
+        "definitions": [
+          "einfach und ohne Verzierung",
+          "bescheiden und anspruchslos"
+        ],
+        "examples": [
+          "ein schlichtes Kleid",
+          "Der Raum ist schlicht eingerichtet."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ʃlɪçt",
+        "number": "singular"
+      },
+      {
+        "source": "einfachen",
+        "translation": "simple, easy",
+        "definitions": ["wenig komplex", "leicht zu verstehen oder zu nutzen"],
+        "examples": ["einfachen Aufgaben", "die Situation einfachen"],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈʔaɪ̯nfaxən"
+      },
+      {
+        "source": "einfach",
+        "translation": "simple, easy, straightforward",
+        "definitions": ["nicht kompliziert", "schlicht", "geradlinig"],
+        "examples": ["einfacher Plan", "einfach leben", "einfach zu lösen"],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈaɪ̯nfaχ",
+        "number": "singular"
+      },
+      {
+        "source": "einfach",
+        "translation": "simple, easy, straightforward",
+        "definitions": ["nicht kompliziert", "schlicht", "geradlinig"],
+        "examples": ["einfacher Plan", "einfach leben", "einfach zu lösen"],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈaɪ̯nfaχ",
+        "number": "singular"
       }
     ],
     "detectedInputType": "word",
@@ -250611,6 +251622,76 @@
     "extraItems": [],
     "explanation": ""
   },
+  "to shimmer": {
+    "source": "to shimmer",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "schimmern",
+        "translation": "to shimmer, to gleam",
+        "definitions": [
+          "leicht glänzen, einen schwachen, oft wechselnden Glanz haben",
+          "undeutlich, schemenhaft sichtbar sein"
+        ],
+        "examples": [
+          "Das Seidentuch schimmerte im Licht.",
+          "Am Horizont schimmerte ein Licht.",
+          "Ihre Augen schimmerten vor Freude."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʃɪmɐn",
+        "number": "singular",
+        "pastTenses": "schimmerte, hat geschimmert",
+        "presentTenses": "ich schimmere, du schimmerst, er/sie/es schimmert",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to gleam": {
+    "source": "to gleam",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "schimmern",
+        "translation": "to shimmer, to gleam",
+        "definitions": [
+          "leicht glänzen, einen schwachen, oft wechselnden Glanz haben",
+          "undeutlich, schemenhaft sichtbar sein"
+        ],
+        "examples": [
+          "Das Seidentuch schimmerte im Licht.",
+          "Am Horizont schimmerte ein Licht.",
+          "Ihre Augen schimmerten vor Freude."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʃɪmɐn",
+        "number": "singular",
+        "pastTenses": "schimmerte, hat geschimmert",
+        "presentTenses": "ich schimmere, du schimmerst, er/sie/es schimmert",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "turtle": {
     "source": "turtle",
     "sourceLanguage": "de",
@@ -252149,30 +253230,6 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Schienen"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "askew": {
-    "source": "askew",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "schief",
-        "translation": "crooked, askew",
-        "definitions": ["nicht gerade; geneigt", "fehlerhaft; nicht korrekt"],
-        "examples": ["ein schiefer Turm", "schief gehen"],
-        "partOfSpeech": "adjective",
-        "ipa": "ʃiːf"
       }
     ],
     "detectedInputType": "word",
@@ -254112,6 +255169,25 @@
         "g": "masculine",
         "number": "singular",
         "pluralForm": "die Scheine"
+      },
+      {
+        "source": "prangen",
+        "translation": "shine, be emblazoned",
+        "definitions": [
+          "auffällig zur Schau stellen, glänzen",
+          "prächtig aussehen, sich schmücken"
+        ],
+        "examples": [
+          "Die Blumen prangen im Garten.",
+          "Medaillen prangen an seiner Brust.",
+          "Das Schloss prangt in neuem Glanz."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈpraŋən",
+        "number": "singular",
+        "pastTenses": "prangte, hat geprangt",
+        "presentTenses": "ich prange, du prangst, er/sie/es prangt",
+        "tense": "present"
       },
       {
         "source": "leuchten",
@@ -260883,6 +261959,15 @@
         "partOfSpeech": "adjective",
         "ipa": "ˈʁʏkzɪçtˌloːs",
         "number": "singular"
+      },
+      {
+        "source": "erbarmungslos",
+        "translation": "merciless, ruthless",
+        "definitions": ["ohne Erbarmen", "gnadenlos"],
+        "examples": ["ein erbarmungsloser Richter", "erbarmungslos handeln"],
+        "partOfSpeech": "adjective",
+        "ipa": "ɛʁˈbaʁmʊŋsloːs",
+        "number": "singular"
       }
     ],
     "detectedInputType": "word",
@@ -262095,6 +263180,114 @@
     "extraItems": [],
     "explanation": ""
   },
+  "wrinkles": {
+    "source": "wrinkles",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "runzelt",
+        "translation": "wrinkles, frowns",
+        "definitions": [
+          "Falten bilden (auf der Haut, einem Stoff)",
+          "Die Stirn in Falten legen (als Ausdruck von Nachdenklichkeit, Ärger)"
+        ],
+        "examples": [
+          "Sie runzelt die Stirn.",
+          "Der Stoff runzelt leicht.",
+          "Seine Augenbrauen runzelt er."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʁʊnt͡sl̩t",
+        "number": "singular",
+        "pastTenses": "runzelte, hat gerunzelt",
+        "presentTenses": "ich runzle, du runzelst, er/sie/es runzelt",
+        "tense": "present"
+      },
+      {
+        "source": "runzeln",
+        "translation": "wrinkle, frown",
+        "definitions": [
+          "Falten bilden, besonders auf der Haut oder einem Stoff",
+          "Die Stirn in Falten legen, um Nachdenklichkeit, Missbilligung oder Konzentration auszudrücken"
+        ],
+        "examples": [
+          "Er begann, die Stirn zu runzeln.",
+          "Die alte Frau runzelte die Augenbrauen.",
+          "Das Tuch runzelte sich im Wind."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈrʊnt͡sl̩n",
+        "number": "plural",
+        "pastTenses": "runzelte, hat gerunzelt",
+        "presentTenses": "ich runzle, du runzelst, er/sie/es runzelt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "frowns": {
+    "source": "frowns",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "runzelt",
+        "translation": "wrinkles, frowns",
+        "definitions": [
+          "Falten bilden (auf der Haut, einem Stoff)",
+          "Die Stirn in Falten legen (als Ausdruck von Nachdenklichkeit, Ärger)"
+        ],
+        "examples": [
+          "Sie runzelt die Stirn.",
+          "Der Stoff runzelt leicht.",
+          "Seine Augenbrauen runzelt er."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈʁʊnt͡sl̩t",
+        "number": "singular",
+        "pastTenses": "runzelte, hat gerunzelt",
+        "presentTenses": "ich runzle, du runzelst, er/sie/es runzelt",
+        "tense": "present"
+      },
+      {
+        "source": "runzeln",
+        "translation": "wrinkle, frown",
+        "definitions": [
+          "Falten bilden, besonders auf der Haut oder einem Stoff",
+          "Die Stirn in Falten legen, um Nachdenklichkeit, Missbilligung oder Konzentration auszudrücken"
+        ],
+        "examples": [
+          "Er begann, die Stirn zu runzeln.",
+          "Die alte Frau runzelte die Augenbrauen.",
+          "Das Tuch runzelte sich im Wind."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈrʊnt͡sl̩n",
+        "number": "plural",
+        "pastTenses": "runzelte, hat gerunzelt",
+        "presentTenses": "ich runzle, du runzelst, er/sie/es runzelt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "wrinkle": {
     "source": "wrinkle",
     "sourceLanguage": "de",
@@ -262178,6 +263371,114 @@
       "language": "de"
     },
     "items": [
+      {
+        "source": "runzeln",
+        "translation": "wrinkle, frown",
+        "definitions": [
+          "Falten bilden, besonders auf der Haut oder einem Stoff",
+          "Die Stirn in Falten legen, um Nachdenklichkeit, Missbilligung oder Konzentration auszudrücken"
+        ],
+        "examples": [
+          "Er begann, die Stirn zu runzeln.",
+          "Die alte Frau runzelte die Augenbrauen.",
+          "Das Tuch runzelte sich im Wind."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈrʊnt͡sl̩n",
+        "number": "plural",
+        "pastTenses": "runzelte, hat gerunzelt",
+        "presentTenses": "ich runzle, du runzelst, er/sie/es runzelt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to wrinkle": {
+    "source": "to wrinkle",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "runzel",
+        "translation": "to wrinkle, to frown",
+        "definitions": [
+          "Falten bilden (auf der Haut oder einem Stoff)",
+          "Die Stirn in Falten legen"
+        ],
+        "examples": [
+          "Sie runzelte die Stirn.",
+          "Das Tuch runzelte sich.",
+          "Er runzelt die Augenbrauen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈrʊntsl̩",
+        "number": "singular",
+        "pastTenses": "runzelte, hat gerunzelt",
+        "presentTenses": "ich runzle, du runzelst, er/sie/es runzelt",
+        "tense": "present"
+      },
+      {
+        "source": "runzeln",
+        "translation": "wrinkle, frown",
+        "definitions": [
+          "Falten bilden, besonders auf der Haut oder einem Stoff",
+          "Die Stirn in Falten legen, um Nachdenklichkeit, Missbilligung oder Konzentration auszudrücken"
+        ],
+        "examples": [
+          "Er begann, die Stirn zu runzeln.",
+          "Die alte Frau runzelte die Augenbrauen.",
+          "Das Tuch runzelte sich im Wind."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈrʊnt͡sl̩n",
+        "number": "plural",
+        "pastTenses": "runzelte, hat gerunzelt",
+        "presentTenses": "ich runzle, du runzelst, er/sie/es runzelt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "to frown": {
+    "source": "to frown",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "runzel",
+        "translation": "to wrinkle, to frown",
+        "definitions": [
+          "Falten bilden (auf der Haut oder einem Stoff)",
+          "Die Stirn in Falten legen"
+        ],
+        "examples": [
+          "Sie runzelte die Stirn.",
+          "Das Tuch runzelte sich.",
+          "Er runzelt die Augenbrauen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈrʊntsl̩",
+        "number": "singular",
+        "pastTenses": "runzelte, hat gerunzelt",
+        "presentTenses": "ich runzle, du runzelst, er/sie/es runzelt",
+        "tense": "present"
+      },
       {
         "source": "runzeln",
         "translation": "wrinkle, frown",
@@ -263965,6 +265266,25 @@
         "ipa": "ˈʁoːʁə",
         "g": "neuter",
         "number": "plural"
+      },
+      {
+        "source": "das Rohr",
+        "translation": "pipe, tube, barrel",
+        "definitions": [
+          "Ein hohler, zylindrischer Gegenstand zur Leitung von Flüssigkeiten oder Gasen.",
+          "Stängel von Schilf oder ähnlichen Pflanzen.",
+          "Der Lauf einer Schusswaffe."
+        ],
+        "examples": [
+          "Das Rohr leckt.",
+          "Ein Rohr aus Stahl.",
+          "Schilf am Ufer."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ʁoːɐ̯",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Rohre"
       }
     ],
     "detectedInputType": "word",
@@ -263994,6 +265314,115 @@
         "ipa": "ˈʁoːʁə",
         "g": "neuter",
         "number": "plural"
+      },
+      {
+        "source": "das Rohr",
+        "translation": "pipe, tube, barrel",
+        "definitions": [
+          "Ein hohler, zylindrischer Gegenstand zur Leitung von Flüssigkeiten oder Gasen.",
+          "Stängel von Schilf oder ähnlichen Pflanzen.",
+          "Der Lauf einer Schusswaffe."
+        ],
+        "examples": [
+          "Das Rohr leckt.",
+          "Ein Rohr aus Stahl.",
+          "Schilf am Ufer."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ʁoːɐ̯",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Rohre"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "pipe": {
+    "source": "pipe",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "das Rohr",
+        "translation": "pipe, tube, barrel",
+        "definitions": [
+          "Ein hohler, zylindrischer Gegenstand zur Leitung von Flüssigkeiten oder Gasen.",
+          "Stängel von Schilf oder ähnlichen Pflanzen.",
+          "Der Lauf einer Schusswaffe."
+        ],
+        "examples": [
+          "Das Rohr leckt.",
+          "Ein Rohr aus Stahl.",
+          "Schilf am Ufer."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ʁoːɐ̯",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Rohre"
+      },
+      {
+        "source": "pfeifen",
+        "translation": "whistle, pipe, not care about something",
+        "definitions": [
+          "einen pfeifenden Ton erzeugen",
+          "ein Lied pfeifend spielen",
+          "etwas ignorieren, sich nicht darum kümmern"
+        ],
+        "examples": [
+          "Der Wind pfeift durch die Bäume.",
+          "Er pfeift eine Melodie.",
+          "Ich pfeife auf deine Meinung."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈpfaɪ̯fn̩",
+        "number": "singular",
+        "pastTenses": "pfiff, hat gepfiffen",
+        "presentTenses": "ich pfeife, du pfeifst, er/sie/es pfeift",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "tube": {
+    "source": "tube",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "das Rohr",
+        "translation": "pipe, tube, barrel",
+        "definitions": [
+          "Ein hohler, zylindrischer Gegenstand zur Leitung von Flüssigkeiten oder Gasen.",
+          "Stängel von Schilf oder ähnlichen Pflanzen.",
+          "Der Lauf einer Schusswaffe."
+        ],
+        "examples": [
+          "Das Rohr leckt.",
+          "Ein Rohr aus Stahl.",
+          "Schilf am Ufer."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ʁoːɐ̯",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Rohre"
       }
     ],
     "detectedInputType": "word",
@@ -264433,25 +265862,21 @@
     },
     "items": [
       {
-        "source": "riss",
+        "source": "rissen",
         "translation": "tore, pulled, ripped",
         "definitions": [
-          "brach entzwei",
-          "trennte sich plötzlich",
-          "zerfiel",
-          "riss ab",
-          "riss ein"
+          "1. Zerrten, zogen (Vergangenheitsform von reißen)",
+          "2. Rissen, brachen (Vergangenheitsform von reißen)",
+          "3. Entrissen, entrissen sich (Vergangenheitsform von reißen)"
         ],
         "examples": [
-          "Der Faden riss.",
-          "Ein lauter Schrei riss ihn aus dem Schlaf.",
-          "Die Geduld riss ihm.",
-          "Der Damm riss.",
-          "Die Verbindung riss."
+          "Sie rissen das Papier entzwei.",
+          "Die Hunde rissen an der Leine.",
+          "Die Wolken rissen auf."
         ],
         "partOfSpeech": "verb",
-        "ipa": "rɪs",
-        "number": "singular",
+        "ipa": "ˈrɪsn̩",
+        "number": "plural",
         "pastTenses": "riss, hat gerissen",
         "presentTenses": "ich reiße, du reißt, er/sie/es reißt",
         "tense": "past"
@@ -264477,6 +265902,30 @@
         "pastTenses": "riss, hat gerissen",
         "presentTenses": "ich reiße, du reißt, er/sie/es reißt",
         "tense": "present"
+      },
+      {
+        "source": "riss",
+        "translation": "tore, pulled, ripped",
+        "definitions": [
+          "brach entzwei",
+          "trennte sich plötzlich",
+          "zerfiel",
+          "riss ab",
+          "riss ein"
+        ],
+        "examples": [
+          "Der Faden riss.",
+          "Ein lauter Schrei riss ihn aus dem Schlaf.",
+          "Die Geduld riss ihm.",
+          "Der Damm riss.",
+          "Die Verbindung riss."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "rɪs",
+        "number": "singular",
+        "pastTenses": "riss, hat gerissen",
+        "presentTenses": "ich reiße, du reißt, er/sie/es reißt",
+        "tense": "past"
       }
     ],
     "detectedInputType": "word",
@@ -282168,6 +283617,21 @@
         "tense": "present"
       },
       {
+        "source": "geprägte",
+        "translation": "coined, stamped",
+        "definitions": [
+          "durch Prägung entstanden",
+          "stark beeinflusst oder charakterisiert"
+        ],
+        "examples": [
+          "eine geprägte Münze",
+          "ein von Traditionen geprägtes Leben"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ɡəˈpʁɛːktə",
+        "number": "singular"
+      },
+      {
         "source": "geprägt",
         "translation": "coined, stamped, characterized",
         "definitions": [
@@ -286503,6 +287967,207 @@
     "extraItems": [],
     "explanation": ""
   },
+  "shone": {
+    "source": "shone",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "prangte",
+        "translation": "shone, was displayed, was emblazoned",
+        "definitions": [
+          "glänzte, strahlte, war prächtig ausgestellt",
+          "war auffällig platziert oder sichtbar",
+          "war mit Stolz oder Prunk versehen"
+        ],
+        "examples": [
+          "Das Gemälde prangte an der Wand.",
+          "Ihr Name prangte auf der Titelseite.",
+          "Der Orden prangte an seiner Brust."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈpraŋtə",
+        "number": "singular",
+        "pastTenses": "prangte, hat geprangt",
+        "presentTenses": "ich prange, du prangst, er/sie/es prangt",
+        "tense": "past"
+      },
+      {
+        "source": "prangen",
+        "translation": "shine, be emblazoned",
+        "definitions": [
+          "auffällig zur Schau stellen, glänzen",
+          "prächtig aussehen, sich schmücken"
+        ],
+        "examples": [
+          "Die Blumen prangen im Garten.",
+          "Medaillen prangen an seiner Brust.",
+          "Das Schloss prangt in neuem Glanz."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈpraŋən",
+        "number": "singular",
+        "pastTenses": "prangte, hat geprangt",
+        "presentTenses": "ich prange, du prangst, er/sie/es prangt",
+        "tense": "present"
+      },
+      {
+        "source": "leuchtete",
+        "translation": "shone, beamed, illuminated",
+        "definitions": ["strahlte Licht aus", "gab Licht ab", "erhellte etwas"],
+        "examples": [
+          "Die Lampe leuchtete hell.",
+          "Sein Gesicht leuchtete vor Freude.",
+          "Das Feuer leuchtete in der Dunkelheit."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈlɔɪçtətə",
+        "number": "singular",
+        "pastTenses": "leuchtete, hat geleuchtet",
+        "presentTenses": "ich leuchte, du leuchtest, er/sie/es leuchtet",
+        "tense": "past"
+      },
+      {
+        "source": "leuchten",
+        "translation": "shine, light, gleam",
+        "definitions": [
+          "Licht ausstrahlen oder reflektieren",
+          "hell sein oder scheinen",
+          "glänzen oder strahlen"
+        ],
+        "examples": [
+          "Die Sterne leuchten am Nachthimmel.",
+          "Ihre Augen leuchten vor Freude.",
+          "Die Lampe leuchtet hell."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈlɔɪçtn̩",
+        "number": "singular",
+        "pastTenses": "leuchtete, hat geleuchtet",
+        "presentTenses": "ich leuchte, du leuchtest, er/sie/es leuchtet",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "was displayed": {
+    "source": "was displayed",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "ausgelegen",
+        "translation": "was displayed, was laid out, was exhibited",
+        "definitions": [
+          "etwas zum Trocknen, Lüften oder zur Ansicht ausbreiten",
+          "eine bestimmte Zeit lang an einem Ort liegen",
+          "durch Liegen eine Form annehmen oder verändern"
+        ],
+        "examples": [
+          "Die Wäsche hat den ganzen Tag ausgelegen.",
+          "Das Buch hat lange im Regal ausgelegen.",
+          "Die Matratze ist ausgelegen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈaʊ̯sɡəˌleːɡn̩",
+        "number": "singular",
+        "pastTenses": "hat ausgelegen",
+        "presentTenses": "ich liege aus, du liegst aus, er/sie/es liegt aus",
+        "tense": "past"
+      },
+      {
+        "source": "prangte",
+        "translation": "shone, was displayed, was emblazoned",
+        "definitions": [
+          "glänzte, strahlte, war prächtig ausgestellt",
+          "war auffällig platziert oder sichtbar",
+          "war mit Stolz oder Prunk versehen"
+        ],
+        "examples": [
+          "Das Gemälde prangte an der Wand.",
+          "Ihr Name prangte auf der Titelseite.",
+          "Der Orden prangte an seiner Brust."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈpraŋtə",
+        "number": "singular",
+        "pastTenses": "prangte, hat geprangt",
+        "presentTenses": "ich prange, du prangst, er/sie/es prangt",
+        "tense": "past"
+      },
+      {
+        "source": "prangen",
+        "translation": "shine, be emblazoned",
+        "definitions": [
+          "auffällig zur Schau stellen, glänzen",
+          "prächtig aussehen, sich schmücken"
+        ],
+        "examples": [
+          "Die Blumen prangen im Garten.",
+          "Medaillen prangen an seiner Brust.",
+          "Das Schloss prangt in neuem Glanz."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈpraŋən",
+        "number": "singular",
+        "pastTenses": "prangte, hat geprangt",
+        "presentTenses": "ich prange, du prangst, er/sie/es prangt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "be emblazoned": {
+    "source": "be emblazoned",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "prangen",
+        "translation": "shine, be emblazoned",
+        "definitions": [
+          "auffällig zur Schau stellen, glänzen",
+          "prächtig aussehen, sich schmücken"
+        ],
+        "examples": [
+          "Die Blumen prangen im Garten.",
+          "Medaillen prangen an seiner Brust.",
+          "Das Schloss prangt in neuem Glanz."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈpraŋən",
+        "number": "singular",
+        "pastTenses": "prangte, hat geprangt",
+        "presentTenses": "ich prange, du prangst, er/sie/es prangt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "convenient": {
     "source": "convenient",
     "sourceLanguage": "de",
@@ -288474,6 +290139,128 @@
         "g": "masculine",
         "number": "singular",
         "pluralForm": "die Podcasts"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "throbbing": {
+    "source": "throbbing",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "pochende",
+        "translation": "throbbing, pounding, pulsating",
+        "definitions": ["schlagend", "pulsierend", "klopfend"],
+        "examples": [
+          "pochende Schläfen",
+          "pochende Wunde",
+          "pochende Kopfschmerzen"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈpɔxəndə",
+        "number": "singular"
+      },
+      {
+        "source": "pochend",
+        "translation": "throbbing, pounding",
+        "definitions": [
+          "schlagend, klopfend (oft im Zusammenhang mit Schmerz oder Puls)",
+          "insistierend, nachdrücklich (im übertragenen Sinne)"
+        ],
+        "examples": [
+          "Ein pochender Schmerz im Kopf.",
+          "Das pochende Herz nach dem Lauf.",
+          "Eine pochende Forderung nach Gerechtigkeit."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈpɔχn̩t",
+        "number": "singular"
+      },
+      {
+        "source": "pochend",
+        "translation": "throbbing, pounding",
+        "definitions": [
+          "schlagend, klopfend (oft im Zusammenhang mit Schmerz oder Puls)",
+          "insistierend, nachdrücklich (im übertragenen Sinne)"
+        ],
+        "examples": [
+          "Ein pochender Schmerz im Kopf.",
+          "Das pochende Herz nach dem Lauf.",
+          "Eine pochende Forderung nach Gerechtigkeit."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈpɔχn̩t",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "pounding": {
+    "source": "pounding",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "pochende",
+        "translation": "throbbing, pounding, pulsating",
+        "definitions": ["schlagend", "pulsierend", "klopfend"],
+        "examples": [
+          "pochende Schläfen",
+          "pochende Wunde",
+          "pochende Kopfschmerzen"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈpɔxəndə",
+        "number": "singular"
+      },
+      {
+        "source": "pochend",
+        "translation": "throbbing, pounding",
+        "definitions": [
+          "schlagend, klopfend (oft im Zusammenhang mit Schmerz oder Puls)",
+          "insistierend, nachdrücklich (im übertragenen Sinne)"
+        ],
+        "examples": [
+          "Ein pochender Schmerz im Kopf.",
+          "Das pochende Herz nach dem Lauf.",
+          "Eine pochende Forderung nach Gerechtigkeit."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈpɔχn̩t",
+        "number": "singular"
+      },
+      {
+        "source": "pochend",
+        "translation": "throbbing, pounding",
+        "definitions": [
+          "schlagend, klopfend (oft im Zusammenhang mit Schmerz oder Puls)",
+          "insistierend, nachdrücklich (im übertragenen Sinne)"
+        ],
+        "examples": [
+          "Ein pochender Schmerz im Kopf.",
+          "Das pochende Herz nach dem Lauf.",
+          "Eine pochende Forderung nach Gerechtigkeit."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈpɔχn̩t",
+        "number": "singular"
       }
     ],
     "detectedInputType": "word",
@@ -291382,42 +293169,6 @@
   },
   "whistle": {
     "source": "whistle",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "pfeifen",
-        "translation": "whistle, pipe, not care about something",
-        "definitions": [
-          "einen pfeifenden Ton erzeugen",
-          "ein Lied pfeifend spielen",
-          "etwas ignorieren, sich nicht darum kümmern"
-        ],
-        "examples": [
-          "Der Wind pfeift durch die Bäume.",
-          "Er pfeift eine Melodie.",
-          "Ich pfeife auf deine Meinung."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈpfaɪ̯fn̩",
-        "number": "singular",
-        "pastTenses": "pfiff, hat gepfiffen",
-        "presentTenses": "ich pfeife, du pfeifst, er/sie/es pfeift",
-        "tense": "present"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "pipe": {
-    "source": "pipe",
     "sourceLanguage": "de",
     "targetLanguage": "en",
     "isDirect": false,
@@ -314153,6 +315904,24 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Mären"
+      },
+      {
+        "source": "das Geflüster",
+        "translation": "whisper, rumor",
+        "definitions": [
+          "Leises Sprechen oder Geräusch",
+          "Geheime oder vertrauliche Unterhaltung"
+        ],
+        "examples": [
+          "Das Geflüster im Publikum war kaum hörbar.",
+          "Ein Geflüster ging durch die Reihen.",
+          "Sie hörte ein leises Geflüster."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ɡəˈflʏstɐ",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "das Geflüster"
       }
     ],
     "detectedInputType": "word",
@@ -314889,6 +316658,25 @@
       "language": "de"
     },
     "items": [
+      {
+        "source": "murmeln",
+        "translation": "mumble, murmur",
+        "definitions": [
+          "Leise und undeutlich sprechen",
+          "Ein leises, gleichmäßiges Geräusch machen"
+        ],
+        "examples": [
+          "Er murmelte eine Entschuldigung.",
+          "Der Bach murmelte sanft.",
+          "Sie murmelte vor sich hin."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈmʊrməln",
+        "number": "singular",
+        "pastTenses": "murmelte, hat gemurmelt",
+        "presentTenses": "ich murmle, du murmelst, er/sie/es murmelt",
+        "tense": "present"
+      },
       {
         "source": "mutter",
         "translation": "mutter, mumble, grumble",
@@ -316154,6 +317942,149 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Muschis"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "mumbled": {
+    "source": "mumbled",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "murmelte",
+        "translation": "mumbled, murmured",
+        "definitions": [
+          "sprach leise und undeutlich",
+          "machte ein dumpfes, rollendes Geräusch"
+        ],
+        "examples": [
+          "Er murmelte eine Entschuldigung.",
+          "Sie murmelte etwas vor sich hin.",
+          "Der Bach murmelte sanft."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈmʊʁml̩tə",
+        "number": "singular",
+        "pastTenses": "murmelte, hat gemurmelt",
+        "presentTenses": "ich murmle, du murmelst, er/sie/es murmelt",
+        "tense": "past"
+      },
+      {
+        "source": "murmeln",
+        "translation": "mumble, murmur",
+        "definitions": [
+          "Leise und undeutlich sprechen",
+          "Ein leises, gleichmäßiges Geräusch machen"
+        ],
+        "examples": [
+          "Er murmelte eine Entschuldigung.",
+          "Der Bach murmelte sanft.",
+          "Sie murmelte vor sich hin."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈmʊrməln",
+        "number": "singular",
+        "pastTenses": "murmelte, hat gemurmelt",
+        "presentTenses": "ich murmle, du murmelst, er/sie/es murmelt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "murmured": {
+    "source": "murmured",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "murmelte",
+        "translation": "mumbled, murmured",
+        "definitions": [
+          "sprach leise und undeutlich",
+          "machte ein dumpfes, rollendes Geräusch"
+        ],
+        "examples": [
+          "Er murmelte eine Entschuldigung.",
+          "Sie murmelte etwas vor sich hin.",
+          "Der Bach murmelte sanft."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈmʊʁml̩tə",
+        "number": "singular",
+        "pastTenses": "murmelte, hat gemurmelt",
+        "presentTenses": "ich murmle, du murmelst, er/sie/es murmelt",
+        "tense": "past"
+      },
+      {
+        "source": "murmeln",
+        "translation": "mumble, murmur",
+        "definitions": [
+          "Leise und undeutlich sprechen",
+          "Ein leises, gleichmäßiges Geräusch machen"
+        ],
+        "examples": [
+          "Er murmelte eine Entschuldigung.",
+          "Der Bach murmelte sanft.",
+          "Sie murmelte vor sich hin."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈmʊrməln",
+        "number": "singular",
+        "pastTenses": "murmelte, hat gemurmelt",
+        "presentTenses": "ich murmle, du murmelst, er/sie/es murmelt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "murmur": {
+    "source": "murmur",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "murmeln",
+        "translation": "mumble, murmur",
+        "definitions": [
+          "Leise und undeutlich sprechen",
+          "Ein leises, gleichmäßiges Geräusch machen"
+        ],
+        "examples": [
+          "Er murmelte eine Entschuldigung.",
+          "Der Bach murmelte sanft.",
+          "Sie murmelte vor sich hin."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈmʊrməln",
+        "number": "singular",
+        "pastTenses": "murmelte, hat gemurmelt",
+        "presentTenses": "ich murmle, du murmelst, er/sie/es murmelt",
+        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -325024,6 +326955,72 @@
     "extraItems": [],
     "explanation": ""
   },
+  "brass color": {
+    "source": "brass color",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Messingfarbe",
+        "translation": "brass color, brass",
+        "definitions": [
+          "Die Farbe von Messing; ein goldgelber Farbton.",
+          "Ein Farbstoff oder Pigment, das die Farbe von Messing hat."
+        ],
+        "examples": [
+          "Die Wand hatte eine schöne Messingfarbe.",
+          "Sie mischte die Messingfarbe mit Weiß."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈmɛsɪŋˌfaʁbə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Messingfarben"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "brass": {
+    "source": "brass",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Messingfarbe",
+        "translation": "brass color, brass",
+        "definitions": [
+          "Die Farbe von Messing; ein goldgelber Farbton.",
+          "Ein Farbstoff oder Pigment, das die Farbe von Messing hat."
+        ],
+        "examples": [
+          "Die Wand hatte eine schöne Messingfarbe.",
+          "Sie mischte die Messingfarbe mit Weiß."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈmɛsɪŋˌfaʁbə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Messingfarben"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "knife attack": {
     "source": "knife attack",
     "sourceLanguage": "de",
@@ -330737,6 +332734,76 @@
     "extraItems": [],
     "explanation": ""
   },
+  "massage": {
+    "source": "massage",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "massieren",
+        "translation": "massage, rub",
+        "definitions": [
+          "Durch Kneten, Reiben oder Klopfen die Durchblutung fördern und Verspannungen lösen.",
+          "Eine Massage durchführen."
+        ],
+        "examples": [
+          "Sie massieren den Rücken.",
+          "Er massiert die Waden.",
+          "Ich massiere meine Schultern."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "maˈsiːʁən",
+        "number": "plural",
+        "pastTenses": "massierte, hat massiert",
+        "presentTenses": "ich massiere, du massierst, er/sie/es massiert",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "rub": {
+    "source": "rub",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "massieren",
+        "translation": "massage, rub",
+        "definitions": [
+          "Durch Kneten, Reiben oder Klopfen die Durchblutung fördern und Verspannungen lösen.",
+          "Eine Massage durchführen."
+        ],
+        "examples": [
+          "Sie massieren den Rücken.",
+          "Er massiert die Waden.",
+          "Ich massiere meine Schultern."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "maˈsiːʁən",
+        "number": "plural",
+        "pastTenses": "massierte, hat massiert",
+        "presentTenses": "ich massiere, du massierst, er/sie/es massiert",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "mask": {
     "source": "mask",
     "sourceLanguage": "de",
@@ -334287,6 +336354,76 @@
     "extraItems": [],
     "explanation": ""
   },
+  "M": {
+    "source": "M",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "das M",
+        "translation": "M, m, 1000",
+        "definitions": [
+          "Dreizehnter Buchstabe des lateinischen Alphabets",
+          "Abkürzung für die Maßeinheit Meter",
+          "Römische Zahl für Eintausend"
+        ],
+        "examples": [
+          "Das Wort beginnt mit M.",
+          "Die Strecke beträgt 500 m.",
+          "M steht für 1000."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ɛm",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Ms"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "m": {
+    "source": "m",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "das M",
+        "translation": "M, m, 1000",
+        "definitions": [
+          "Dreizehnter Buchstabe des lateinischen Alphabets",
+          "Abkürzung für die Maßeinheit Meter",
+          "Römische Zahl für Eintausend"
+        ],
+        "examples": [
+          "Das Wort beginnt mit M.",
+          "Die Strecke beträgt 500 m.",
+          "M steht für 1000."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ɛm",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Ms"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "lie": {
     "source": "lie",
     "sourceLanguage": "de",
@@ -336020,6 +338157,78 @@
         "ipa": "ˈlɛndɐ",
         "g": "neuter",
         "number": "plural"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "paralyze": {
+    "source": "paralyze",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "lähmen",
+        "translation": "paralyze, cripple, immobilize",
+        "definitions": [
+          "Bewegungsfähigkeit oder Funktion einschränken oder aufheben",
+          "jemanden handlungsunfähig machen",
+          "etwas zum Stillstand bringen"
+        ],
+        "examples": [
+          "Die Krankheit kann die Muskeln lähmen.",
+          "Der Schock lähmte sie völlig.",
+          "Ein Streik könnte den Verkehr lähmen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈlɛːmən",
+        "number": "singular",
+        "pastTenses": "lähmte, hat gelähmt",
+        "presentTenses": "ich lähme, du lähmst, er/sie/es lähmt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "cripple": {
+    "source": "cripple",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "lähmen",
+        "translation": "paralyze, cripple, immobilize",
+        "definitions": [
+          "Bewegungsfähigkeit oder Funktion einschränken oder aufheben",
+          "jemanden handlungsunfähig machen",
+          "etwas zum Stillstand bringen"
+        ],
+        "examples": [
+          "Die Krankheit kann die Muskeln lähmen.",
+          "Der Schock lähmte sie völlig.",
+          "Ein Streik könnte den Verkehr lähmen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈlɛːmən",
+        "number": "singular",
+        "pastTenses": "lähmte, hat gelähmt",
+        "presentTenses": "ich lähme, du lähmst, er/sie/es lähmt",
+        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -341597,58 +343806,6 @@
         "g": "masculine",
         "number": "singular",
         "pluralForm": "die Leuchttürme"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "shone": {
-    "source": "shone",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "leuchtete",
-        "translation": "shone, beamed, illuminated",
-        "definitions": ["strahlte Licht aus", "gab Licht ab", "erhellte etwas"],
-        "examples": [
-          "Die Lampe leuchtete hell.",
-          "Sein Gesicht leuchtete vor Freude.",
-          "Das Feuer leuchtete in der Dunkelheit."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈlɔɪçtətə",
-        "number": "singular",
-        "pastTenses": "leuchtete, hat geleuchtet",
-        "presentTenses": "ich leuchte, du leuchtest, er/sie/es leuchtet",
-        "tense": "past"
-      },
-      {
-        "source": "leuchten",
-        "translation": "shine, light, gleam",
-        "definitions": [
-          "Licht ausstrahlen oder reflektieren",
-          "hell sein oder scheinen",
-          "glänzen oder strahlen"
-        ],
-        "examples": [
-          "Die Sterne leuchten am Nachthimmel.",
-          "Ihre Augen leuchten vor Freude.",
-          "Die Lampe leuchtet hell."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈlɔɪçtn̩",
-        "number": "singular",
-        "pastTenses": "leuchtete, hat geleuchtet",
-        "presentTenses": "ich leuchte, du leuchtest, er/sie/es leuchtet",
-        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -366564,74 +368721,6 @@
     "extraItems": [],
     "explanation": ""
   },
-  "gear": {
-    "source": "gear",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "Klamotten",
-        "translation": "clothes, gear",
-        "definitions": [
-          "umgangssprachlich für Kleidung",
-          "alte oder abgetragene Kleider"
-        ],
-        "examples": [
-          "Er hat seine Klamotten im Schrank aufgeräumt.",
-          "Sie trägt immer stylische Klamotten."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "klaˈmɔtn̩",
-        "number": "plural"
-      },
-      {
-        "source": "die Klamotte",
-        "translation": "piece of clothing, old junk, funny old film",
-        "definitions": [
-          "Ein Kleidungsstück",
-          "Ein minderwertiges oder veraltetes Theaterstück oder Film",
-          "Ein wertloser Gegenstand oder Brocken"
-        ],
-        "examples": [
-          "Zieh deine Klamotten an.",
-          "Das ist eine alte Klamotte.",
-          "Was für eine lustige Klamotte!"
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "klaˈmɔtə",
-        "g": "feminine",
-        "number": "singular",
-        "pluralForm": "die Klamotten"
-      },
-      {
-        "source": "die Ausrüstung",
-        "translation": "equipment, gear",
-        "definitions": [
-          "Gesamtheit der Gegenstände, die für eine bestimmte Tätigkeit oder einen Zweck benötigt werden.",
-          "Vorgang des Ausstattens mit notwendigen Dingen."
-        ],
-        "examples": [
-          "Die militärische Ausrüstung.",
-          "Eine teure Ausrüstung kaufen.",
-          "Die Ausrüstung für die Expedition ist bereit."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ˈaʊ̯sˌʁʏstʊŋ",
-        "g": "feminine",
-        "number": "singular",
-        "pluralForm": "die Ausrüstungen"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
   "piece of clothing": {
     "source": "piece of clothing",
     "sourceLanguage": "de",
@@ -389440,6 +391529,27 @@
         "g": "masculine",
         "number": "singular",
         "pluralForm": "die Hänger"
+      },
+      {
+        "source": "der Anhänger",
+        "translation": "trailer, follower, pendant, tag",
+        "definitions": [
+          "Ein Fahrzeug ohne eigenen Antrieb, das von einem Zugfahrzeug gezogen wird.",
+          "Eine Person, die eine bestimmte Lehre, Partei oder Person unterstützt.",
+          "Ein Schmuckstück, das an einer Kette getragen wird.",
+          "Ein Etikett, das an einer Ware befestigt ist."
+        ],
+        "examples": [
+          "Der LKW zieht einen Anhänger.",
+          "Er ist ein treuer Anhänger des Vereins.",
+          "Sie trägt einen goldenen Anhänger.",
+          "Der Preis steht auf dem Anhänger."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈanˌhɛŋɐ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Anhänger"
       }
     ],
     "detectedInputType": "word",
@@ -395894,6 +398004,19 @@
         ],
         "partOfSpeech": "adverb",
         "ipa": "hɪˈnaʊ̯f",
+        "number": "singular"
+      },
+      {
+        "source": "empor",
+        "translation": "up, upwards, aloft",
+        "definitions": ["nach oben", "aufwärts", "in die Höhe"],
+        "examples": [
+          "Er blickte empor.",
+          "Die Rakete stieg empor.",
+          "Sie hob die Hände empor."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "ɛmˈpoːɐ̯",
         "number": "singular"
       }
     ],
@@ -409356,6 +411479,152 @@
     "extraItems": [],
     "explanation": ""
   },
+  "hairstyle": {
+    "source": "hairstyle",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Frisur",
+        "translation": "hairstyle, hairdo",
+        "definitions": [
+          "Die Art und Weise, wie das Haar gestaltet, geschnitten oder frisiert ist."
+        ],
+        "examples": ["Eine neue Frisur.", "Die Frisur sitzt perfekt."],
+        "partOfSpeech": "noun",
+        "ipa": "fʁiˈzuːɐ̯",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Frisuren"
+      },
+      {
+        "source": "der Haarschnitt",
+        "translation": "haircut, cut",
+        "definitions": [
+          "Die Art und Weise, wie das Haar geschnitten ist.",
+          "Der Vorgang des Haareschneidens."
+        ],
+        "examples": [
+          "Ein neuer Haarschnitt.",
+          "Der Haarschnitt war teuer.",
+          "Gefällt dir mein Haarschnitt?"
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈhaːɐ̯ˌʃnɪt",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Haarschnitte"
+      },
+      {
+        "source": "der Haarstil",
+        "translation": "hairstyle, hairdo",
+        "definitions": [
+          "Art und Weise, wie Haare frisiert oder geschnitten sind",
+          "Modische Gestaltung der Haare"
+        ],
+        "examples": [
+          "Ihr neuer Haarstil gefällt mir sehr.",
+          "Er experimentiert gerne mit verschiedenen Haarstilen.",
+          "Der Haarstil der 80er Jahre war sehr auffällig."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈhaːɐ̯ˌʃtiːl",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Haarstile"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "hairdo": {
+    "source": "hairdo",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Haarstil",
+        "translation": "hairstyle, hairdo",
+        "definitions": [
+          "Art und Weise, wie Haare frisiert oder geschnitten sind",
+          "Modische Gestaltung der Haare"
+        ],
+        "examples": [
+          "Ihr neuer Haarstil gefällt mir sehr.",
+          "Er experimentiert gerne mit verschiedenen Haarstilen.",
+          "Der Haarstil der 80er Jahre war sehr auffällig."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈhaːɐ̯ˌʃtiːl",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Haarstile"
+      },
+      {
+        "source": "die Frisur",
+        "translation": "hairstyle, hairdo",
+        "definitions": [
+          "Die Art und Weise, wie das Haar gestaltet, geschnitten oder frisiert ist."
+        ],
+        "examples": ["Eine neue Frisur.", "Die Frisur sitzt perfekt."],
+        "partOfSpeech": "noun",
+        "ipa": "fʁiˈzuːɐ̯",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Frisuren"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "haircut": {
+    "source": "haircut",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Haarschnitt",
+        "translation": "haircut, cut",
+        "definitions": [
+          "Die Art und Weise, wie das Haar geschnitten ist.",
+          "Der Vorgang des Haareschneidens."
+        ],
+        "examples": [
+          "Ein neuer Haarschnitt.",
+          "Der Haarschnitt war teuer.",
+          "Gefällt dir mein Haarschnitt?"
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈhaːɐ̯ˌʃnɪt",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Haarschnitte"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "hairs": {
     "source": "hairs",
     "sourceLanguage": "de",
@@ -412232,6 +414501,98 @@
     "extraItems": [],
     "explanation": ""
   },
+  "graves": {
+    "source": "graves",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Gräbern",
+        "translation": "graves, tombs",
+        "definitions": [
+          "Hohlräume im Boden, die als Ruhestätte für Verstorbene dienen"
+        ],
+        "examples": ["Die Blumen wurden auf den Gräbern niedergelegt."],
+        "partOfSpeech": "noun",
+        "ipa": "ˈɡʁɛːbɐn",
+        "g": "neuter",
+        "number": "plural"
+      },
+      {
+        "source": "das Grab",
+        "translation": "grave, tomb",
+        "definitions": [
+          "Stätte, an der ein Toter beigesetzt ist oder wird",
+          "Ort des Todes oder des Untergangs"
+        ],
+        "examples": [
+          "Ein Grab schaufeln",
+          "Blumen aufs Grab legen",
+          "Das nasse Grab"
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ɡʁaːp",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Gräber"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "tombs": {
+    "source": "tombs",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Gräbern",
+        "translation": "graves, tombs",
+        "definitions": [
+          "Hohlräume im Boden, die als Ruhestätte für Verstorbene dienen"
+        ],
+        "examples": ["Die Blumen wurden auf den Gräbern niedergelegt."],
+        "partOfSpeech": "noun",
+        "ipa": "ˈɡʁɛːbɐn",
+        "g": "neuter",
+        "number": "plural"
+      },
+      {
+        "source": "das Grab",
+        "translation": "grave, tomb",
+        "definitions": [
+          "Stätte, an der ein Toter beigesetzt ist oder wird",
+          "Ort des Todes oder des Untergangs"
+        ],
+        "examples": [
+          "Ein Grab schaufeln",
+          "Blumen aufs Grab legen",
+          "Das nasse Grab"
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ɡʁaːp",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Gräber"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "welcome address": {
     "source": "welcome address",
     "sourceLanguage": "de",
@@ -414195,6 +416556,56 @@
     "extraItems": [],
     "explanation": ""
   },
+  "coarse": {
+    "source": "coarse",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "grobem",
+        "translation": "coarse, rough, rude, crude",
+        "definitions": [
+          "Dativ Singular Maskulinum der starken Deklination des Adjektivs grob",
+          "Dativ Singular Neutrum der starken Deklination des Adjektivs grob",
+          "Dativ Singular Maskulinum der gemischten Deklination des Adjektivs grob",
+          "Dativ Singular Neutrum der gemischten Deklination des Adjektivs grob"
+        ],
+        "examples": [
+          "mit grobem Sand",
+          "zu grobem Mehl",
+          "einem grobem Fehler"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈɡʁoːbm̩",
+        "number": "singular"
+      },
+      {
+        "source": "grob",
+        "translation": "rough, coarse",
+        "definitions": ["nicht fein oder eben", "unhöflich oder rücksichtslos"],
+        "examples": ["eine grobe Textur", "ein grober Fehler", "grob werden"],
+        "partOfSpeech": "adjective",
+        "ipa": "ɡʁoːp"
+      },
+      {
+        "source": "grob",
+        "translation": "rough, coarse",
+        "definitions": ["nicht fein oder eben", "unhöflich oder rücksichtslos"],
+        "examples": ["eine grobe Textur", "ein grober Fehler", "grob werden"],
+        "partOfSpeech": "adjective",
+        "ipa": "ɡʁoːp"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "flu": {
     "source": "flu",
     "sourceLanguage": "de",
@@ -415476,6 +417887,74 @@
     "extraItems": [],
     "explanation": ""
   },
+  "county": {
+    "source": "county",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Grafschaft",
+        "translation": "county, shire",
+        "definitions": [
+          "Ein Verwaltungsgebiet, das historisch von einem Grafen regiert wurde.",
+          "Eine Region oder ein Bezirk, der einem Grafen unterstellt ist."
+        ],
+        "examples": [
+          "Die Grafschaft war reich an Wäldern.",
+          "Er reiste durch die Grafschaft.",
+          "Die Grafschaft feierte ein Jubiläum."
+        ],
+        "partOfSpeech": "feminine noun",
+        "ipa": "ˈɡʁaːfʃaft",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Grafschaften"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "shire": {
+    "source": "shire",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Grafschaft",
+        "translation": "county, shire",
+        "definitions": [
+          "Ein Verwaltungsgebiet, das historisch von einem Grafen regiert wurde.",
+          "Eine Region oder ein Bezirk, der einem Grafen unterstellt ist."
+        ],
+        "examples": [
+          "Die Grafschaft war reich an Wäldern.",
+          "Er reiste durch die Grafschaft.",
+          "Die Grafschaft feierte ein Jubiläum."
+        ],
+        "partOfSpeech": "feminine noun",
+        "ipa": "ˈɡʁaːfʃaft",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Grafschaften"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "graphic": {
     "source": "graphic",
     "sourceLanguage": "de",
@@ -415557,6 +418036,112 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Grafiken"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "dig": {
+    "source": "dig",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "graben",
+        "translation": "dig, excavate, burrow",
+        "definitions": [
+          "Eine Grube oder einen Kanal in der Erde ausheben.",
+          "Etwas durch Graben finden oder entfernen.",
+          "Sich in etwas eingraben oder vertiefen."
+        ],
+        "examples": [
+          "Wir graben einen Brunnen.",
+          "Er gräbt nach Schätzen.",
+          "Die Kinder graben im Sand."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈɡʁaːbn̩",
+        "number": "singular",
+        "pastTenses": "grub, gegraben",
+        "presentTenses": "ich grabe, du gräbst, er/sie/es gräbt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "excavate": {
+    "source": "excavate",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "graben",
+        "translation": "dig, excavate, burrow",
+        "definitions": [
+          "Eine Grube oder einen Kanal in der Erde ausheben.",
+          "Etwas durch Graben finden oder entfernen.",
+          "Sich in etwas eingraben oder vertiefen."
+        ],
+        "examples": [
+          "Wir graben einen Brunnen.",
+          "Er gräbt nach Schätzen.",
+          "Die Kinder graben im Sand."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈɡʁaːbn̩",
+        "number": "singular",
+        "pastTenses": "grub, gegraben",
+        "presentTenses": "ich grabe, du gräbst, er/sie/es gräbt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "tomb": {
+    "source": "tomb",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "das Grab",
+        "translation": "grave, tomb",
+        "definitions": [
+          "Stätte, an der ein Toter beigesetzt ist oder wird",
+          "Ort des Todes oder des Untergangs"
+        ],
+        "examples": [
+          "Ein Grab schaufeln",
+          "Blumen aufs Grab legen",
+          "Das nasse Grab"
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ɡʁaːp",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Gräber"
       }
     ],
     "detectedInputType": "word",
@@ -416959,6 +419544,34 @@
     "extraItems": [],
     "explanation": ""
   },
+  "limbs": {
+    "source": "limbs",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Gliedmaßen",
+        "translation": "limbs",
+        "definitions": [
+          "Bewegliche Körperteile eines Menschen oder Tieres, die Arme und Beine umfassen"
+        ],
+        "examples": ["Gliedmaßen des Tieres", "Verletzung der Gliedmaßen"],
+        "partOfSpeech": "noun",
+        "ipa": "ˈɡliːtˌmaːsən",
+        "g": "feminine",
+        "number": "plural"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "limb": {
     "source": "limb",
     "sourceLanguage": "de",
@@ -416970,6 +419583,24 @@
       "language": "de"
     },
     "items": [
+      {
+        "source": "die Gliedmaße",
+        "translation": "limb, extremity",
+        "definitions": [
+          "Körperteil eines Lebewesens, das zur Fortbewegung oder zum Greifen dient",
+          "Extremität eines Menschen oder Tieres"
+        ],
+        "examples": [
+          "Die Gliedmaßen des Pferdes sind kräftig.",
+          "Er spürte Schmerzen in allen Gliedmaßen.",
+          "Eine verlorene Gliedmaße kann nicht nachwachsen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈɡliːtˌmaːsə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Gliedmaßen"
+      },
       {
         "source": "Glieder",
         "translation": "limb, member",
@@ -417040,6 +419671,40 @@
         "g": "masculine",
         "number": "singular",
         "pluralForm": "die Äste"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "extremity": {
+    "source": "extremity",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Gliedmaße",
+        "translation": "limb, extremity",
+        "definitions": [
+          "Körperteil eines Lebewesens, das zur Fortbewegung oder zum Greifen dient",
+          "Extremität eines Menschen oder Tieres"
+        ],
+        "examples": [
+          "Die Gliedmaßen des Pferdes sind kräftig.",
+          "Er spürte Schmerzen in allen Gliedmaßen.",
+          "Eine verlorene Gliedmaße kann nicht nachwachsen."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈɡliːtˌmaːsə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Gliedmaßen"
       }
     ],
     "detectedInputType": "word",
@@ -430591,24 +433256,19 @@
     },
     "items": [
       {
-        "source": "geprägt",
-        "translation": "coined, stamped, characterized",
+        "source": "geprägte",
+        "translation": "coined, stamped",
         "definitions": [
-          "Durch einen Stempel oder eine Form geformt oder mit einem Muster versehen.",
-          "Charakteristisch beeinflusst oder geformt.",
-          "Münzen oder Medaillen hergestellt."
+          "durch Prägung entstanden",
+          "stark beeinflusst oder charakterisiert"
         ],
         "examples": [
-          "Die Münze wurde 1990 geprägt.",
-          "Seine Kindheit hat ihn geprägt.",
-          "Das Wort ist fest im Sprachgebrauch geprägt."
+          "eine geprägte Münze",
+          "ein von Traditionen geprägtes Leben"
         ],
-        "partOfSpeech": "verb",
-        "ipa": "ɡəˈpʁɛːkt",
-        "number": "singular",
-        "pastTenses": "hat geprägt, hatte geprägt",
-        "presentTenses": "ich präge, du prägst, er/sie/es prägt",
-        "tense": "past"
+        "partOfSpeech": "adjective",
+        "ipa": "ɡəˈpʁɛːktə",
+        "number": "singular"
       },
       {
         "source": "prägen",
@@ -430630,6 +433290,166 @@
         "number": "singular",
         "pastTenses": "prägte, hat geprägt",
         "presentTenses": "ich präge, du prägst, er/sie/es prägt",
+        "tense": "present"
+      },
+      {
+        "source": "geprägt",
+        "translation": "coined, stamped, characterized",
+        "definitions": [
+          "Durch einen Stempel oder eine Form geformt oder mit einem Muster versehen.",
+          "Charakteristisch beeinflusst oder geformt.",
+          "Münzen oder Medaillen hergestellt."
+        ],
+        "examples": [
+          "Die Münze wurde 1990 geprägt.",
+          "Seine Kindheit hat ihn geprägt.",
+          "Das Wort ist fest im Sprachgebrauch geprägt."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ɡəˈpʁɛːkt",
+        "number": "singular",
+        "pastTenses": "hat geprägt, hatte geprägt",
+        "presentTenses": "ich präge, du prägst, er/sie/es prägt",
+        "tense": "past"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "shaped": {
+    "source": "shaped",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "geprägt",
+        "translation": "shaped, marked",
+        "definitions": ["durch etwas beeinflusst oder charakterisiert"],
+        "examples": [
+          "eine von Armut geprägte Kindheit",
+          "historisch geprägte Stadt"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ɡəˈpʁɛːkt",
+        "number": "singular"
+      },
+      {
+        "source": "prägen",
+        "translation": "to coin, to mint, to shape, to characterize",
+        "definitions": [
+          "Eine Form oder ein Muster auf etwas drücken",
+          "Etwas entscheidend beeinflussen oder formen",
+          "Münzen oder Medaillen herstellen",
+          "Sich etwas einprägen, merken"
+        ],
+        "examples": [
+          "Die Erfahrung hat ihn geprägt.",
+          "Neue Münzen werden geprägt.",
+          "Er prägte sich die Worte ein.",
+          "Das Ereignis prägte die ganze Generation."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈpʁɛːɡn̩",
+        "number": "singular",
+        "pastTenses": "prägte, hat geprägt",
+        "presentTenses": "ich präge, du prägst, er/sie/es prägt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "marked": {
+    "source": "marked",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "geprägt",
+        "translation": "shaped, marked",
+        "definitions": ["durch etwas beeinflusst oder charakterisiert"],
+        "examples": [
+          "eine von Armut geprägte Kindheit",
+          "historisch geprägte Stadt"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ɡəˈpʁɛːkt",
+        "number": "singular"
+      },
+      {
+        "source": "prägen",
+        "translation": "to coin, to mint, to shape, to characterize",
+        "definitions": [
+          "Eine Form oder ein Muster auf etwas drücken",
+          "Etwas entscheidend beeinflussen oder formen",
+          "Münzen oder Medaillen herstellen",
+          "Sich etwas einprägen, merken"
+        ],
+        "examples": [
+          "Die Erfahrung hat ihn geprägt.",
+          "Neue Münzen werden geprägt.",
+          "Er prägte sich die Worte ein.",
+          "Das Ereignis prägte die ganze Generation."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈpʁɛːɡn̩",
+        "number": "singular",
+        "pastTenses": "prägte, hat geprägt",
+        "presentTenses": "ich präge, du prägst, er/sie/es prägt",
+        "tense": "present"
+      },
+      {
+        "source": "gekennzeichnet",
+        "translation": "characterized, marked, distinguished",
+        "definitions": [
+          "als Merkmal haben",
+          "charakterisiert sein",
+          "ausgezeichnet sein"
+        ],
+        "examples": [
+          "Das Produkt ist durch hohe Qualität gekennzeichnet.",
+          "Die Epoche war von politischen Umwälzungen gekennzeichnet.",
+          "Er ist durch seinen Humor gekennzeichnet."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ɡəˈkɛnnt͡saɪçnət",
+        "number": "singular",
+        "pastTenses": "kennzeichnete, hat gekennzeichnet",
+        "presentTenses": "ich kennzeichne, du kennzeichnest, er/sie/es kennzeichnet",
+        "tense": "past"
+      },
+      {
+        "source": "kennzeichnen",
+        "translation": "mark, characterize, distinguish",
+        "definitions": [
+          "etwas mit einem Zeichen versehen, um es kenntlich zu machen",
+          "charakteristisch sein für etwas",
+          "als Merkmal aufweisen"
+        ],
+        "examples": [
+          "Die Produkte sind mit einem Gütesiegel gekennzeichnet.",
+          "Diese Eigenschaft kennzeichnet seine Arbeit.",
+          "Ein roter Punkt kennzeichnet die wichtigen Stellen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈkɛnˌt͡saɪ̯çn̩",
+        "number": "singular",
+        "pastTenses": "kennzeichnete, hat gekennzeichnet",
+        "presentTenses": "ich kennzeichne, du kennzeichnest, er/sie/es kennzeichnet",
         "tense": "present"
       }
     ],
@@ -434180,6 +437000,131 @@
     "extraItems": [],
     "explanation": ""
   },
+  "paralyzed": {
+    "source": "paralyzed",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "gelähmt",
+        "translation": "paralyzed, crippled",
+        "definitions": [
+          "in seiner Bewegung oder Funktion stark eingeschränkt oder aufgehoben",
+          "unfähig zu handeln oder zu reagieren"
+        ],
+        "examples": [
+          "Er war nach dem Unfall gelähmt.",
+          "Die Wirtschaft war durch die Krise gelähmt.",
+          "Sie fühlte sich vor Schreck gelähmt."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ɡəˈlɛːmt",
+        "number": "singular",
+        "pastTenses": "hat gelähmt, ist gelähmt worden",
+        "presentTenses": "ich lähme, du lähmst, er/sie/es lähmt",
+        "tense": "past"
+      },
+      {
+        "source": "lähmen",
+        "translation": "paralyze, cripple, immobilize",
+        "definitions": [
+          "Bewegungsfähigkeit oder Funktion einschränken oder aufheben",
+          "jemanden handlungsunfähig machen",
+          "etwas zum Stillstand bringen"
+        ],
+        "examples": [
+          "Die Krankheit kann die Muskeln lähmen.",
+          "Der Schock lähmte sie völlig.",
+          "Ein Streik könnte den Verkehr lähmen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈlɛːmən",
+        "number": "singular",
+        "pastTenses": "lähmte, hat gelähmt",
+        "presentTenses": "ich lähme, du lähmst, er/sie/es lähmt",
+        "tense": "present"
+      },
+      {
+        "source": "gelähmt",
+        "translation": "paralyzed, numb",
+        "definitions": [
+          "unfähig sich zu bewegen",
+          "bewegungsunfähig durch Schock oder Angst"
+        ],
+        "examples": [
+          "Er war vor Angst wie gelähmt.",
+          "Die Glieder sind gelähmt."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ɡəˈlɛːmt",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "crippled": {
+    "source": "crippled",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "gelähmt",
+        "translation": "paralyzed, crippled",
+        "definitions": [
+          "in seiner Bewegung oder Funktion stark eingeschränkt oder aufgehoben",
+          "unfähig zu handeln oder zu reagieren"
+        ],
+        "examples": [
+          "Er war nach dem Unfall gelähmt.",
+          "Die Wirtschaft war durch die Krise gelähmt.",
+          "Sie fühlte sich vor Schreck gelähmt."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ɡəˈlɛːmt",
+        "number": "singular",
+        "pastTenses": "hat gelähmt, ist gelähmt worden",
+        "presentTenses": "ich lähme, du lähmst, er/sie/es lähmt",
+        "tense": "past"
+      },
+      {
+        "source": "lähmen",
+        "translation": "paralyze, cripple, immobilize",
+        "definitions": [
+          "Bewegungsfähigkeit oder Funktion einschränken oder aufheben",
+          "jemanden handlungsunfähig machen",
+          "etwas zum Stillstand bringen"
+        ],
+        "examples": [
+          "Die Krankheit kann die Muskeln lähmen.",
+          "Der Schock lähmte sie völlig.",
+          "Ein Streik könnte den Verkehr lähmen."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈlɛːmən",
+        "number": "singular",
+        "pastTenses": "lähmte, hat gelähmt",
+        "presentTenses": "ich lähme, du lähmst, er/sie/es lähmt",
+        "tense": "present"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "succeeded": {
     "source": "succeeded",
     "sourceLanguage": "de",
@@ -437597,62 +440542,6 @@
   },
   "characterized": {
     "source": "characterized",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "gekennzeichnet",
-        "translation": "characterized, marked, distinguished",
-        "definitions": [
-          "als Merkmal haben",
-          "charakterisiert sein",
-          "ausgezeichnet sein"
-        ],
-        "examples": [
-          "Das Produkt ist durch hohe Qualität gekennzeichnet.",
-          "Die Epoche war von politischen Umwälzungen gekennzeichnet.",
-          "Er ist durch seinen Humor gekennzeichnet."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ɡəˈkɛnnt͡saɪçnət",
-        "number": "singular",
-        "pastTenses": "kennzeichnete, hat gekennzeichnet",
-        "presentTenses": "ich kennzeichne, du kennzeichnest, er/sie/es kennzeichnet",
-        "tense": "past"
-      },
-      {
-        "source": "kennzeichnen",
-        "translation": "mark, characterize, distinguish",
-        "definitions": [
-          "etwas mit einem Zeichen versehen, um es kenntlich zu machen",
-          "charakteristisch sein für etwas",
-          "als Merkmal aufweisen"
-        ],
-        "examples": [
-          "Die Produkte sind mit einem Gütesiegel gekennzeichnet.",
-          "Diese Eigenschaft kennzeichnet seine Arbeit.",
-          "Ein roter Punkt kennzeichnet die wichtigen Stellen."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈkɛnˌt͡saɪ̯çn̩",
-        "number": "singular",
-        "pastTenses": "kennzeichnete, hat gekennzeichnet",
-        "presentTenses": "ich kennzeichne, du kennzeichnest, er/sie/es kennzeichnet",
-        "tense": "present"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "marked": {
-    "source": "marked",
     "sourceLanguage": "de",
     "targetLanguage": "en",
     "isDirect": false,
@@ -452375,64 +455264,6 @@
     "extraItems": [],
     "explanation": ""
   },
-  "hairstyle": {
-    "source": "hairstyle",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "die Frisur",
-        "translation": "hairstyle, hairdo",
-        "definitions": [
-          "Die Art und Weise, wie das Haar gestaltet, geschnitten oder frisiert ist."
-        ],
-        "examples": ["Eine neue Frisur.", "Die Frisur sitzt perfekt."],
-        "partOfSpeech": "noun",
-        "ipa": "fʁiˈzuːɐ̯",
-        "g": "feminine",
-        "number": "singular",
-        "pluralForm": "die Frisuren"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "hairdo": {
-    "source": "hairdo",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "die Frisur",
-        "translation": "hairstyle, hairdo",
-        "definitions": [
-          "Die Art und Weise, wie das Haar gestaltet, geschnitten oder frisiert ist."
-        ],
-        "examples": ["Eine neue Frisur.", "Die Frisur sitzt perfekt."],
-        "partOfSpeech": "noun",
-        "ipa": "fʁiˈzuːɐ̯",
-        "g": "feminine",
-        "number": "singular",
-        "pluralForm": "die Frisuren"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
   "without notice": {
     "source": "without notice",
     "sourceLanguage": "de",
@@ -462837,6 +465668,176 @@
     "extraItems": [],
     "explanation": ""
   },
+  "fetters": {
+    "source": "fetters",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Fesseln",
+        "translation": "fetters, shackles",
+        "definitions": [
+          "Fesseln sind Vorrichtungen, die dazu dienen, jemanden oder etwas zu fesseln oder zu fixieren.",
+          "Fesseln können auch im übertragenen Sinne verwendet werden, um Einschränkungen oder Zwänge zu beschreiben."
+        ],
+        "examples": [
+          "Die Fesseln wurden angelegt.",
+          "Er befreite sich von den Fesseln.",
+          "Die Fesseln der Bürokratie."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈfɛsl̩n",
+        "number": "plural",
+        "pluralForm": "die Fesseln"
+      },
+      {
+        "source": "die Fessel",
+        "translation": "fetter, shackle",
+        "definitions": [
+          "Gegenstand, der jemanden oder etwas an der freien Bewegung hindert (z. B. Kette, Strick).",
+          "Anatomischer Teil des Beins bei Huftieren zwischen Mittelfuß und Huf."
+        ],
+        "examples": [
+          "Die Fessel sprengen.",
+          "In Fesseln liegen.",
+          "Das Pferd hat eine Verletzung an der Fessel."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈfɛsl̩",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Fesseln"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "shackles": {
+    "source": "shackles",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "Fesseln",
+        "translation": "fetters, shackles",
+        "definitions": [
+          "Fesseln sind Vorrichtungen, die dazu dienen, jemanden oder etwas zu fesseln oder zu fixieren.",
+          "Fesseln können auch im übertragenen Sinne verwendet werden, um Einschränkungen oder Zwänge zu beschreiben."
+        ],
+        "examples": [
+          "Die Fesseln wurden angelegt.",
+          "Er befreite sich von den Fesseln.",
+          "Die Fesseln der Bürokratie."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈfɛsl̩n",
+        "number": "plural",
+        "pluralForm": "die Fesseln"
+      },
+      {
+        "source": "die Fessel",
+        "translation": "fetter, shackle",
+        "definitions": [
+          "Gegenstand, der jemanden oder etwas an der freien Bewegung hindert (z. B. Kette, Strick).",
+          "Anatomischer Teil des Beins bei Huftieren zwischen Mittelfuß und Huf."
+        ],
+        "examples": [
+          "Die Fessel sprengen.",
+          "In Fesseln liegen.",
+          "Das Pferd hat eine Verletzung an der Fessel."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈfɛsl̩",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Fesseln"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "fetter": {
+    "source": "fetter",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Fessel",
+        "translation": "fetter, shackle",
+        "definitions": [
+          "Gegenstand, der jemanden oder etwas an der freien Bewegung hindert (z. B. Kette, Strick).",
+          "Anatomischer Teil des Beins bei Huftieren zwischen Mittelfuß und Huf."
+        ],
+        "examples": [
+          "Die Fessel sprengen.",
+          "In Fesseln liegen.",
+          "Das Pferd hat eine Verletzung an der Fessel."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈfɛsl̩",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Fesseln"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "shackle": {
+    "source": "shackle",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Fessel",
+        "translation": "fetter, shackle",
+        "definitions": [
+          "Gegenstand, der jemanden oder etwas an der freien Bewegung hindert (z. B. Kette, Strick).",
+          "Anatomischer Teil des Beins bei Huftieren zwischen Mittelfuß und Huf."
+        ],
+        "examples": [
+          "Die Fessel sprengen.",
+          "In Fesseln liegen.",
+          "Das Pferd hat eine Verletzung an der Fessel."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈfɛsl̩",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Fesseln"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "to be exhausted": {
     "source": "to be exhausted",
     "sourceLanguage": "de",
@@ -465357,6 +468358,72 @@
     "extraItems": [],
     "explanation": ""
   },
+  "penholder": {
+    "source": "penholder",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Federhalter",
+        "translation": "penholder, pen holder",
+        "definitions": [
+          "Ein Schreibgerät, in das eine Schreibfeder eingesetzt wird.",
+          "Eine Vorrichtung zum Halten oder Aufbewahren von Federn."
+        ],
+        "examples": [
+          "Er tauchte den Federhalter in das Tintenfass.",
+          "Ein antiker Federhalter aus Holz."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈfeːdɐˌhaltɐ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Federhalter"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "pen holder": {
+    "source": "pen holder",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Federhalter",
+        "translation": "penholder, pen holder",
+        "definitions": [
+          "Ein Schreibgerät, in das eine Schreibfeder eingesetzt wird.",
+          "Eine Vorrichtung zum Halten oder Aufbewahren von Federn."
+        ],
+        "examples": [
+          "Er tauchte den Federhalter in das Tintenfass.",
+          "Ein antiker Federhalter aus Holz."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈfeːdɐˌhaltɐ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Federhalter"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "to fence": {
     "source": "to fence",
     "sourceLanguage": "de",
@@ -466409,76 +469476,6 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Fassaden"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "front": {
-    "source": "front",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "die Nase",
-        "translation": "nose, front",
-        "definitions": [
-          "Organ am Kopf von Menschen und Tieren, das zum Riechen und Atmen dient",
-          "Vorderster Teil eines Objekts, oft spitz zulaufend"
-        ],
-        "examples": [
-          "Sie hat eine kleine Nase.",
-          "Er steckt seine Nase überall rein.",
-          "Das Flugzeug hat eine lange Nase."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "diː ˈnaːzə",
-        "g": "feminine",
-        "number": "singular",
-        "pluralForm": "die Nasen"
-      },
-      {
-        "source": "die Fassade",
-        "translation": "facade, front, exterior",
-        "definitions": [
-          "Die Außenseite eines Gebäudes, meist die Vorderseite.",
-          "Ein trügerischer Schein oder ein Verhalten, das die wahren Gefühle verbirgt."
-        ],
-        "examples": [
-          "Die Fassade wird renoviert.",
-          "Hinter der Fassade bröckelt es.",
-          "Er wahrte stets seine Fassade."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "faˈsaːdə",
-        "g": "feminine",
-        "number": "singular",
-        "pluralForm": "die Fassaden"
-      },
-      {
-        "source": "die Stirn",
-        "translation": "forehead, front",
-        "definitions": [
-          "Teil des Gesichts oberhalb der Augen und unterhalb des Haaransatzes",
-          "Vorderseite eines Gebäudes oder Objekts"
-        ],
-        "examples": [
-          "Sie runzelte die Stirn.",
-          "Er küsste sie auf die Stirn.",
-          "Die Stirn des Hauses war mit Efeu bewachsen."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ʃtɪʁn",
-        "g": "feminine",
-        "number": "singular",
-        "pluralForm": "die Stirnen"
       }
     ],
     "detectedInputType": "word",
@@ -482901,6 +485898,31 @@
     "extraItems": [],
     "explanation": ""
   },
+  "merciless": {
+    "source": "merciless",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "erbarmungslos",
+        "translation": "merciless, ruthless",
+        "definitions": ["ohne Erbarmen", "gnadenlos"],
+        "examples": ["ein erbarmungsloser Richter", "erbarmungslos handeln"],
+        "partOfSpeech": "adjective",
+        "ipa": "ɛʁˈbaʁmʊŋsloːs",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "mercy": {
     "source": "mercy",
     "sourceLanguage": "de",
@@ -489278,6 +492300,35 @@
     "extraItems": [],
     "explanation": ""
   },
+  "upwards": {
+    "source": "upwards",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "empor",
+        "translation": "up, upwards, aloft",
+        "definitions": ["nach oben", "aufwärts", "in die Höhe"],
+        "examples": [
+          "Er blickte empor.",
+          "Die Rakete stieg empor.",
+          "Sie hob die Hände empor."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "ɛmˈpoːɐ̯",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "recommended": {
     "source": "recommended",
     "sourceLanguage": "de",
@@ -490529,6 +493580,74 @@
         "g": "masculine",
         "number": "singular",
         "pluralForm": "die Eiskaffees"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "iron bar": {
+    "source": "iron bar",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Eisenstange",
+        "translation": "iron bar, crowbar",
+        "definitions": [
+          "Eine Stange, die aus Eisen gefertigt ist.",
+          "Ein langes, zylindrisches oder prismatisches Stück Eisen."
+        ],
+        "examples": [
+          "Er hob die Eisenstange auf.",
+          "Die Eisenstange war rostig.",
+          "Sie benutzte eine Eisenstange als Hebel."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈaɪ̯zn̩ˌʃtaŋə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Eisenstangen"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "crowbar": {
+    "source": "crowbar",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "die Eisenstange",
+        "translation": "iron bar, crowbar",
+        "definitions": [
+          "Eine Stange, die aus Eisen gefertigt ist.",
+          "Ein langes, zylindrisches oder prismatisches Stück Eisen."
+        ],
+        "examples": [
+          "Er hob die Eisenstange auf.",
+          "Die Eisenstange war rostig.",
+          "Sie benutzte eine Eisenstange als Hebel."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈaɪ̯zn̩ˌʃtaŋə",
+        "g": "feminine",
+        "number": "singular",
+        "pluralForm": "die Eisenstangen"
       }
     ],
     "detectedInputType": "word",
@@ -498285,48 +501404,6 @@
     "extraItems": [],
     "explanation": ""
   },
-  "simple": {
-    "source": "simple",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "einfachen",
-        "translation": "simple, easy",
-        "definitions": ["wenig komplex", "leicht zu verstehen oder zu nutzen"],
-        "examples": ["einfachen Aufgaben", "die Situation einfachen"],
-        "partOfSpeech": "adjective",
-        "ipa": "ˈʔaɪ̯nfaxən"
-      },
-      {
-        "source": "einfach",
-        "translation": "simple, easy, straightforward",
-        "definitions": ["nicht kompliziert", "schlicht", "geradlinig"],
-        "examples": ["einfacher Plan", "einfach leben", "einfach zu lösen"],
-        "partOfSpeech": "adjective",
-        "ipa": "ˈaɪ̯nfaχ",
-        "number": "singular"
-      },
-      {
-        "source": "einfach",
-        "translation": "simple, easy, straightforward",
-        "definitions": ["nicht kompliziert", "schlicht", "geradlinig"],
-        "examples": ["einfacher Plan", "einfach leben", "einfach zu lösen"],
-        "partOfSpeech": "adjective",
-        "ipa": "ˈaɪ̯nfaχ",
-        "number": "singular"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
   "come up easily": {
     "source": "come up easily",
     "sourceLanguage": "de",
@@ -500463,6 +503540,39 @@
         ],
         "partOfSpeech": "adjective",
         "ipa": "ˈaɪ̯ɡn̩fɛɐ̯ˌʔantvɔʁtlɪç",
+        "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "headstrong": {
+    "source": "headstrong",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "eigensinnig",
+        "translation": "stubborn, headstrong, wilful",
+        "definitions": [
+          "Starrköpfig, nicht bereit, die Meinung zu ändern",
+          "Hartnäckig, auf dem eigenen Willen beharrend",
+          "Unbeugsam, widerwillig, sich anzupassen"
+        ],
+        "examples": [
+          "ein eigensinniges Kind",
+          "eine eigensinnige Entscheidung",
+          "er ist sehr eigensinnig"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈaɪ̯ɡn̩ˌzɪnɪç",
         "number": "singular"
       }
     ],
@@ -511022,40 +514132,6 @@
     "extraItems": [],
     "explanation": ""
   },
-  "forehead": {
-    "source": "forehead",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "die Stirn",
-        "translation": "forehead, front",
-        "definitions": [
-          "Teil des Gesichts oberhalb der Augen und unterhalb des Haaransatzes",
-          "Vorderseite eines Gebäudes oder Objekts"
-        ],
-        "examples": [
-          "Sie runzelte die Stirn.",
-          "Er küsste sie auf die Stirn.",
-          "Die Stirn des Hauses war mit Efeu bewachsen."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ʃtɪʁn",
-        "g": "feminine",
-        "number": "singular",
-        "pluralForm": "die Stirnen"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
   "rudder": {
     "source": "rudder",
     "sourceLanguage": "de",
@@ -511615,40 +514691,6 @@
         "g": "feminine",
         "number": "singular",
         "pluralForm": "die Schulen"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "temple": {
-    "source": "temple",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "die Schläfe",
-        "translation": "temple",
-        "definitions": [
-          "Seite des Kopfes zwischen Auge, Ohr und Stirn.",
-          "Der Bereich des Kopfes, wo das Haar oft dünner wird."
-        ],
-        "examples": [
-          "Sie rieb sich die Schläfe.",
-          "Ein Schlag auf die Schläfe kann gefährlich sein.",
-          "Die Schläfen sind empfindlich."
-        ],
-        "partOfSpeech": "noun",
-        "ipa": "ˈʃlɛːfə",
-        "g": "feminine",
-        "number": "singular",
-        "pluralForm": "die Schläfen"
       }
     ],
     "detectedInputType": "word",
@@ -573018,6 +576060,77 @@
         "ipa": "ˈaʊ̯sɡəˌpʁɛːktəs",
         "g": "neuter",
         "number": "singular"
+      },
+      {
+        "source": "ausgeprägt",
+        "translation": "pronounced, distinct, marked",
+        "definitions": [
+          "deutlich erkennbar oder entwickelt",
+          "stark ausgeprägt; charakteristisch",
+          "markant, deutlich"
+        ],
+        "examples": [
+          "eine ausgeprägte Persönlichkeit",
+          "mit ausgeprägtem Sinn für Humor",
+          "ein ausgeprägtes Merkmal"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈaʊ̯sɡəˌpʁɛːkt",
+        "number": "singular"
+      },
+      {
+        "source": "ausgeprägte",
+        "translation": "pronounced, distinct, marked",
+        "definitions": [
+          "deutlich erkennbar oder entwickelt",
+          "charakteristisch, markant",
+          "stark ausgeprägt, deutlich"
+        ],
+        "examples": [
+          "Sie hat eine ausgeprägte Persönlichkeit.",
+          "Das Land hat eine ausgeprägte Kultur.",
+          "Er zeigte eine ausgeprägte Neigung zur Kunst."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈaʊ̯sɡəˌpʁɛːktə",
+        "number": "singular"
+      },
+      {
+        "source": "ausgeprägt",
+        "translation": "pronounced, distinct, marked",
+        "definitions": [
+          "deutlich erkennbar oder entwickelt",
+          "stark ausgeprägt; charakteristisch",
+          "markant, deutlich"
+        ],
+        "examples": [
+          "eine ausgeprägte Persönlichkeit",
+          "mit ausgeprägtem Sinn für Humor",
+          "ein ausgeprägtes Merkmal"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈaʊ̯sɡəˌpʁɛːkt",
+        "number": "singular"
+      },
+      {
+        "source": "ausprägen",
+        "translation": "to coin, to mint, to develop",
+        "definitions": [
+          "etwas deutlich, charakteristisch gestalten oder hervorbringen",
+          "Münzen oder Medaillen herstellen",
+          "eine bestimmte Form oder Eigenschaft entwickeln"
+        ],
+        "examples": [
+          "Die Kultur prägt sich in der Sprache aus.",
+          "Neue Münzen werden in der Prägeanstalt ausgeprägt.",
+          "Die Krankheit prägt sich unterschiedlich aus."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈaʊ̯sˌpʁɛːɡn̩",
+        "number": "singular",
+        "pastTenses": "prägte aus, hat ausgeprägt",
+        "presentTenses": "ich präge aus, du prägst aus, er/sie/es prägt aus",
+        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -573051,6 +576164,77 @@
         "ipa": "ˈaʊ̯sɡəˌpʁɛːktəs",
         "g": "neuter",
         "number": "singular"
+      },
+      {
+        "source": "ausgeprägt",
+        "translation": "pronounced, distinct, marked",
+        "definitions": [
+          "deutlich erkennbar oder entwickelt",
+          "stark ausgeprägt; charakteristisch",
+          "markant, deutlich"
+        ],
+        "examples": [
+          "eine ausgeprägte Persönlichkeit",
+          "mit ausgeprägtem Sinn für Humor",
+          "ein ausgeprägtes Merkmal"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈaʊ̯sɡəˌpʁɛːkt",
+        "number": "singular"
+      },
+      {
+        "source": "ausgeprägte",
+        "translation": "pronounced, distinct, marked",
+        "definitions": [
+          "deutlich erkennbar oder entwickelt",
+          "charakteristisch, markant",
+          "stark ausgeprägt, deutlich"
+        ],
+        "examples": [
+          "Sie hat eine ausgeprägte Persönlichkeit.",
+          "Das Land hat eine ausgeprägte Kultur.",
+          "Er zeigte eine ausgeprägte Neigung zur Kunst."
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈaʊ̯sɡəˌpʁɛːktə",
+        "number": "singular"
+      },
+      {
+        "source": "ausgeprägt",
+        "translation": "pronounced, distinct, marked",
+        "definitions": [
+          "deutlich erkennbar oder entwickelt",
+          "stark ausgeprägt; charakteristisch",
+          "markant, deutlich"
+        ],
+        "examples": [
+          "eine ausgeprägte Persönlichkeit",
+          "mit ausgeprägtem Sinn für Humor",
+          "ein ausgeprägtes Merkmal"
+        ],
+        "partOfSpeech": "adjective",
+        "ipa": "ˈaʊ̯sɡəˌpʁɛːkt",
+        "number": "singular"
+      },
+      {
+        "source": "ausprägen",
+        "translation": "to coin, to mint, to develop",
+        "definitions": [
+          "etwas deutlich, charakteristisch gestalten oder hervorbringen",
+          "Münzen oder Medaillen herstellen",
+          "eine bestimmte Form oder Eigenschaft entwickeln"
+        ],
+        "examples": [
+          "Die Kultur prägt sich in der Sprache aus.",
+          "Neue Münzen werden in der Prägeanstalt ausgeprägt.",
+          "Die Krankheit prägt sich unterschiedlich aus."
+        ],
+        "partOfSpeech": "verb",
+        "ipa": "ˈaʊ̯sˌpʁɛːɡn̩",
+        "number": "singular",
+        "pastTenses": "prägte aus, hat ausgeprägt",
+        "presentTenses": "ich präge aus, du prägst aus, er/sie/es prägt aus",
+        "tense": "present"
       }
     ],
     "detectedInputType": "word",
@@ -573329,42 +576513,6 @@
         "pastTenses": "lieferte aus, hat ausgeliefert",
         "presentTenses": "ich liefere aus, du lieferst aus, er/sie/es liefert aus",
         "tense": "present"
-      }
-    ],
-    "detectedInputType": "word",
-    "extraItems": [],
-    "explanation": ""
-  },
-  "was displayed": {
-    "source": "was displayed",
-    "sourceLanguage": "de",
-    "targetLanguage": "en",
-    "isDirect": false,
-    "deck": {
-      "cards": [],
-      "tags": [],
-      "language": "de"
-    },
-    "items": [
-      {
-        "source": "ausgelegen",
-        "translation": "was displayed, was laid out, was exhibited",
-        "definitions": [
-          "etwas zum Trocknen, Lüften oder zur Ansicht ausbreiten",
-          "eine bestimmte Zeit lang an einem Ort liegen",
-          "durch Liegen eine Form annehmen oder verändern"
-        ],
-        "examples": [
-          "Die Wäsche hat den ganzen Tag ausgelegen.",
-          "Das Buch hat lange im Regal ausgelegen.",
-          "Die Matratze ist ausgelegen."
-        ],
-        "partOfSpeech": "verb",
-        "ipa": "ˈaʊ̯sɡəˌleːɡn̩",
-        "number": "singular",
-        "pastTenses": "hat ausgelegen",
-        "presentTenses": "ich liege aus, du liegst aus, er/sie/es liegt aus",
-        "tense": "past"
       }
     ],
     "detectedInputType": "word",
@@ -586663,6 +589811,43 @@
     "extraItems": [],
     "explanation": ""
   },
+  "follower": {
+    "source": "follower",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "der Anhänger",
+        "translation": "trailer, follower, pendant, tag",
+        "definitions": [
+          "Ein Fahrzeug ohne eigenen Antrieb, das von einem Zugfahrzeug gezogen wird.",
+          "Eine Person, die eine bestimmte Lehre, Partei oder Person unterstützt.",
+          "Ein Schmuckstück, das an einer Kette getragen wird.",
+          "Ein Etikett, das an einer Ware befestigt ist."
+        ],
+        "examples": [
+          "Der LKW zieht einen Anhänger.",
+          "Er ist ein treuer Anhänger des Vereins.",
+          "Sie trägt einen goldenen Anhänger.",
+          "Der Preis steht auf dem Anhänger."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈanˌhɛŋɐ",
+        "g": "masculine",
+        "number": "singular",
+        "pluralForm": "die Anhänger"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
   "appendix": {
     "source": "appendix",
     "sourceLanguage": "de",
@@ -590083,6 +593268,58 @@
         "partOfSpeech": "adjective",
         "ipa": "laŋ",
         "number": "singular"
+      }
+    ],
+    "detectedInputType": "word",
+    "extraItems": [],
+    "explanation": ""
+  },
+  "eventually": {
+    "source": "eventually",
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "isDirect": false,
+    "deck": {
+      "cards": [],
+      "tags": [],
+      "language": "de"
+    },
+    "items": [
+      {
+        "source": "am Ende",
+        "translation": "in the end, eventually, after all",
+        "definitions": [
+          "schließlich, letztendlich",
+          "zum Schluss, nach allem",
+          "im Grunde genommen, eigentlich"
+        ],
+        "examples": [
+          "Am Ende hat er doch gewonnen.",
+          "Was ist am Ende dabei herausgekommen?",
+          "Am Ende ist es doch egal."
+        ],
+        "partOfSpeech": "adverb",
+        "ipa": "am ˈɛndə",
+        "number": "singular"
+      },
+      {
+        "source": "das Ende",
+        "translation": "end, close, conclusion",
+        "definitions": [
+          "Der räumliche oder zeitliche Abschluss von etwas.",
+          "Der letzte Teil eines Objekts oder Zeitraums.",
+          "Das Aufhören oder der Tod."
+        ],
+        "examples": [
+          "Das Ende des Films.",
+          "Am Ende der Straße.",
+          "Ein glückliches Ende."
+        ],
+        "partOfSpeech": "noun",
+        "ipa": "ˈɛndə",
+        "g": "neuter",
+        "number": "singular",
+        "pluralForm": "die Enden"
       }
     ],
     "detectedInputType": "word",
