@@ -54,11 +54,8 @@
   </div>
 </div>
 
-<div
-  class="text-example rounded contrast-bg mb-3"
-  *ngIf="!isLoading && exampleHtml"
->
-  <div class="mb-2">
+<div class="text-example mb-3" *ngIf="!isLoading && exampleHtml">
+  <div class="rounded contrast-bg mb-3" style="padding: 1rem">
     <mat-icon style="vertical-align: middle" class="text-primary"
       >text_select_move_forward_character</mat-icon
     >
@@ -66,6 +63,8 @@
   </div>
   <div
     class="large"
+    style="padding: 0 1rem"
+    translate="no"
     *ngIf="!isLoading && exampleHtml"
     [lang]="sourceLanguage"
     [innerHTML]="exampleHtml"

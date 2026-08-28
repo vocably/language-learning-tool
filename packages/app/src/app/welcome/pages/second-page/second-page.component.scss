@@ -1,12 +1,30 @@
 @import '../../../../styles/variables';
 
 .text-example {
-  padding: 2rem;
-  border-radius: $border-radius;
-
   .large {
     color: var(--emphasize-color);
     font-size: 140%;
+  }
+
+  ::ng-deep h1 {
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+  }
+
+  ::ng-deep p {
+    margin-bottom: 1.5rem;
+  }
+
+  ::ng-deep ul {
+    list-style-position: outside;
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+
+    li {
+      margin-bottom: 1rem;
+      padding-left: 1rem;
+    }
   }
 }
 
