@@ -6,6 +6,7 @@ import { createPopup } from './popup';
 import { getGlobalRect } from './position';
 import { setYouTubeStyles } from './styles';
 import { extractTokens } from './tokenizer/extractTokens';
+import { destroyButton } from './button';
 
 const ytPlayerTagName = 'ytd-player';
 
@@ -16,6 +17,16 @@ export const getPlayerElements = (): HTMLElement[] => {
 
 export type InitYouTubeOptions = {
   ytHosts: string[];
+};
+
+const unselectAll = () => {
+  const selection = window.getSelection();
+  if (!selection) {
+    return;
+  }
+
+  selection.removeAllRanges();
+  selection.empty();
 };
 
 const handlePlayerElement = (player: HTMLElement): (() => void) => {
@@ -143,21 +154,38 @@ export const initYoutube = async (options: InitYouTubeOptions) => {
     subtree: true,
   });
 
-  let isAltDown = false;
-
   document.addEventListener('keydown', (e) => {
-    if (e.key !== 'Alt' || isAltDown) {
+    if (e.key !== 'Alt') {
       return;
     }
-
-    isAltDown = true;
-    let isMouseDown = false;
 
     const players = getPlayerElements();
     let captionContainerList: HTMLElement[] = [];
     let captionContainersCloneList: HTMLElement[] = [];
 
     players.forEach((player) => {
+      const captionContainer = player.querySelector(
+        '#ytp-caption-window-container'
+      );
+      if (!isHtmlElement(captionContainer) || captionContainer.hidden) {
+        return;
+      }
+      const videoElement = player.querySelector('video');
+
+      if (videoElement) {
+        if (!videoElement.paused) {
+          return;
+        }
+
+        const onPlay = () => {
+          videoElement.removeEventListener('play', onPlay);
+          unselectAll();
+          tearDown();
+          destroyButton();
+        };
+        videoElement.addEventListener('play', onPlay);
+      }
+
       player.style.userSelect = 'auto';
       player.style.webkitUserSelect = 'auto';
 
@@ -165,13 +193,6 @@ export const initYoutube = async (options: InitYouTubeOptions) => {
       if (isHtmlElement(container)) {
         container.style.userSelect = 'auto';
         container.style.webkitUserSelect = 'auto';
-      }
-
-      const captionContainer = player.querySelector(
-        '#ytp-caption-window-container'
-      );
-      if (!isHtmlElement(captionContainer)) {
-        return;
       }
 
       captionContainer.style.userSelect = 'auto';
@@ -194,6 +215,10 @@ export const initYoutube = async (options: InitYouTubeOptions) => {
           captionWindow.draggable = false;
           captionWindow.style.userSelect = 'auto';
           captionWindow.style.webkitUserSelect = 'auto';
+          captionWindow.style.transition = `text-shadow 200ms ease-in-out`;
+          setTimeout(() => {
+            captionWindow.style.textShadow = `0 0 5px #28a5ff, 0 0 10px #28a5ff, 0 0 20px #28a5ff, 0 0 40px #28a5ff`;
+          }, 0);
 
           captionWindow
             .querySelectorAll('.captions-text')
@@ -236,55 +261,13 @@ export const initYoutube = async (options: InitYouTubeOptions) => {
     window.addEventListener('blur', onBlur);
 
     const tearDown = () => {
-      isAltDown = false;
       captionContainersCloneList.forEach((element) => element.remove());
+      captionContainersCloneList = [];
       captionContainerList.forEach((element) => (element.hidden = false));
+      captionContainerList = [];
 
-      document.removeEventListener('keyup', onKeyUp);
-      document.removeEventListener('mouseup', onMouseUp);
-      document.removeEventListener('mousedown', onMouseDown);
       document.removeEventListener('visibilitychange', onVisibilityChange);
       window.removeEventListener('blur', onBlur);
     };
-
-    const onMouseDown = (e: MouseEvent) => {
-      if (e.button !== 0) {
-        return;
-      }
-
-      isMouseDown = true;
-    };
-
-    const onMouseUp = (e: MouseEvent) => {
-      if (e.button !== 0) {
-        return;
-      }
-
-      isMouseDown = false;
-
-      if (isAltDown) {
-        return;
-      }
-
-      setTimeout(tearDown, 100);
-    };
-
-    const onKeyUp = (e: KeyboardEvent) => {
-      if (e.key !== 'Alt') {
-        return;
-      }
-
-      isAltDown = false;
-
-      if (isMouseDown) {
-        return;
-      }
-
-      setTimeout(tearDown, 100);
-    };
-
-    document.addEventListener('keyup', onKeyUp);
-    document.addEventListener('mousedown', onMouseDown);
-    document.addEventListener('mouseup', onMouseUp);
   });
 };
