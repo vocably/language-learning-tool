@@ -104,6 +104,91 @@ const handlePlayerElement = (player: HTMLElement): (() => void) => {
   };
 };
 
+type SelectableCaptions = {
+  captionContainerList: HTMLElement[];
+  captionContainersCloneList: HTMLElement[];
+};
+
+const makeCaptionsSelectable = (): SelectableCaptions => {
+  const captionContainerList: HTMLElement[] = [];
+  const captionContainersCloneList: HTMLElement[] = [];
+
+  getPlayerElements().forEach((player) => {
+    player.style.userSelect = 'auto';
+    player.style.webkitUserSelect = 'auto';
+
+    const container = player.querySelector('.ytd-player');
+    if (isHtmlElement(container)) {
+      container.style.userSelect = 'auto';
+      container.style.webkitUserSelect = 'auto';
+    }
+
+    const captionContainer = player.querySelector(
+      '#ytp-caption-window-container'
+    );
+    if (!isHtmlElement(captionContainer)) {
+      return;
+    }
+
+    captionContainer.style.userSelect = 'auto';
+    captionContainer.style.webkitUserSelect = 'auto';
+
+    const captionContainerClone = captionContainer.cloneNode(
+      true
+    ) as HTMLElement;
+    captionContainerList.push(captionContainer);
+    captionContainersCloneList.push(captionContainerClone);
+    captionContainer.hidden = true;
+    captionContainer.before(captionContainerClone);
+    captionContainerClone
+      .querySelectorAll('.caption-window')
+      .forEach((captionWindow) => {
+        if (!isHtmlElement(captionWindow)) {
+          return;
+        }
+
+        captionWindow.draggable = false;
+        captionWindow.style.userSelect = 'auto';
+        captionWindow.style.webkitUserSelect = 'auto';
+
+        captionWindow.querySelectorAll('.captions-text').forEach((element) => {
+          if (!isHtmlElement(element)) {
+            return;
+          }
+
+          element.style.userSelect = 'auto';
+          element.style.webkitUserSelect = 'auto';
+        });
+
+        captionWindow
+          .querySelectorAll('.ytp-caption-segment')
+          .forEach((segment) => {
+            if (!isHtmlElement(segment)) {
+              return;
+            }
+
+            segment.style.cursor = 'text';
+          });
+
+        captionWindow
+          .querySelectorAll('.vocably-word')
+          .forEach((word) => word.classList.remove('vocably-word'));
+      });
+  });
+
+  return { captionContainerList, captionContainersCloneList };
+};
+
+const hasTextSelection = (): boolean => {
+  const selection = window.getSelection();
+
+  if (!selection || selection.isCollapsed) {
+    return false;
+  }
+
+  return selection.toString().trim() !== '';
+};
+
 export const initYoutube = async (options: InitYouTubeOptions) => {
   if (!options.ytHosts.includes(window.location.host)) {
     return;
@@ -144,6 +229,68 @@ export const initYoutube = async (options: InitYouTubeOptions) => {
   });
 
   let isAltDown = false;
+  let isMouseDown = false;
+  let selectableCaptions: SelectableCaptions | null = null;
+  let tearDownTimeout: ReturnType<typeof setTimeout> | null = null;
+
+  const cancelScheduledTearDown = () => {
+    if (tearDownTimeout === null) {
+      return;
+    }
+
+    clearTimeout(tearDownTimeout);
+    tearDownTimeout = null;
+  };
+
+  const setUp = () => {
+    cancelScheduledTearDown();
+
+    if (selectableCaptions !== null) {
+      return;
+    }
+
+    selectableCaptions = makeCaptionsSelectable();
+  };
+
+  const tearDown = () => {
+    cancelScheduledTearDown();
+
+    isAltDown = false;
+    isMouseDown = false;
+
+    if (selectableCaptions === null) {
+      return;
+    }
+
+    selectableCaptions.captionContainersCloneList.forEach((element) =>
+      element.remove()
+    );
+    selectableCaptions.captionContainerList.forEach(
+      (element) => (element.hidden = false)
+    );
+
+    selectableCaptions = null;
+  };
+
+  const isInUse = (): boolean => isAltDown || isMouseDown || hasTextSelection();
+
+  const scheduleTearDown = () => {
+    cancelScheduledTearDown();
+
+    if (selectableCaptions === null || isInUse()) {
+      return;
+    }
+
+    tearDownTimeout = setTimeout(() => {
+      tearDownTimeout = null;
+
+      if (isInUse()) {
+        return;
+      }
+
+      tearDown();
+    }, 100);
+  };
 
   document.addEventListener('keydown', (e) => {
     if (e.key !== 'Alt' || isAltDown) {
@@ -151,140 +298,46 @@ export const initYoutube = async (options: InitYouTubeOptions) => {
     }
 
     isAltDown = true;
-    let isMouseDown = false;
+    setUp();
+  });
 
-    const players = getPlayerElements();
-    let captionContainerList: HTMLElement[] = [];
-    let captionContainersCloneList: HTMLElement[] = [];
+  document.addEventListener('keyup', (e) => {
+    if (e.key !== 'Alt' || !isAltDown) {
+      return;
+    }
 
-    players.forEach((player) => {
-      player.style.userSelect = 'auto';
-      player.style.webkitUserSelect = 'auto';
+    isAltDown = false;
+    scheduleTearDown();
+  });
 
-      const container = player.querySelector('.ytd-player');
-      if (isHtmlElement(container)) {
-        container.style.userSelect = 'auto';
-        container.style.webkitUserSelect = 'auto';
-      }
+  document.addEventListener('mousedown', (e) => {
+    if (e.button !== 0) {
+      return;
+    }
 
-      const captionContainer = player.querySelector(
-        '#ytp-caption-window-container'
-      );
-      if (!isHtmlElement(captionContainer)) {
-        return;
-      }
+    isMouseDown = true;
+  });
 
-      captionContainer.style.userSelect = 'auto';
-      captionContainer.style.webkitUserSelect = 'auto';
+  document.addEventListener('mouseup', (e) => {
+    if (e.button !== 0) {
+      return;
+    }
 
-      const captionContainerClone = captionContainer.cloneNode(
-        true
-      ) as HTMLElement;
-      captionContainerList.push(captionContainer);
-      captionContainersCloneList.push(captionContainerClone);
-      captionContainer.hidden = true;
-      captionContainer.before(captionContainerClone);
-      captionContainerClone
-        .querySelectorAll('.caption-window')
-        .forEach((captionWindow) => {
-          if (!isHtmlElement(captionWindow)) {
-            return;
-          }
+    isMouseDown = false;
+    scheduleTearDown();
+  });
 
-          captionWindow.draggable = false;
-          captionWindow.style.userSelect = 'auto';
-          captionWindow.style.webkitUserSelect = 'auto';
+  document.addEventListener('selectionchange', () => {
+    scheduleTearDown();
+  });
 
-          captionWindow
-            .querySelectorAll('.captions-text')
-            .forEach((element) => {
-              if (!isHtmlElement(element)) {
-                return;
-              }
-
-              element.style.userSelect = 'auto';
-              element.style.webkitUserSelect = 'auto';
-            });
-
-          captionWindow
-            .querySelectorAll('.ytp-caption-segment')
-            .forEach((segment) => {
-              if (!isHtmlElement(segment)) {
-                return;
-              }
-
-              segment.style.cursor = 'text';
-            });
-
-          captionWindow
-            .querySelectorAll('.vocably-word')
-            .forEach((word) => word.classList.remove('vocably-word'));
-        });
-    });
-
-    const onBlur = () => {
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
       tearDown();
-    };
+    }
+  });
 
-    const onVisibilityChange = () => {
-      if (document.hidden) {
-        tearDown();
-      }
-    };
-
-    document.addEventListener('visibilitychange', onVisibilityChange);
-    window.addEventListener('blur', onBlur);
-
-    const tearDown = () => {
-      isAltDown = false;
-      captionContainersCloneList.forEach((element) => element.remove());
-      captionContainerList.forEach((element) => (element.hidden = false));
-
-      document.removeEventListener('keyup', onKeyUp);
-      document.removeEventListener('mouseup', onMouseUp);
-      document.removeEventListener('mousedown', onMouseDown);
-      document.removeEventListener('visibilitychange', onVisibilityChange);
-      window.removeEventListener('blur', onBlur);
-    };
-
-    const onMouseDown = (e: MouseEvent) => {
-      if (e.button !== 0) {
-        return;
-      }
-
-      isMouseDown = true;
-    };
-
-    const onMouseUp = (e: MouseEvent) => {
-      if (e.button !== 0) {
-        return;
-      }
-
-      isMouseDown = false;
-
-      if (isAltDown) {
-        return;
-      }
-
-      setTimeout(tearDown, 100);
-    };
-
-    const onKeyUp = (e: KeyboardEvent) => {
-      if (e.key !== 'Alt') {
-        return;
-      }
-
-      isAltDown = false;
-
-      if (isMouseDown) {
-        return;
-      }
-
-      setTimeout(tearDown, 100);
-    };
-
-    document.addEventListener('keyup', onKeyUp);
-    document.addEventListener('mousedown', onMouseDown);
-    document.addEventListener('mouseup', onMouseUp);
+  window.addEventListener('blur', () => {
+    tearDown();
   });
 };
