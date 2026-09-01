@@ -4,10 +4,13 @@ import { getContext } from './getContext';
 import { isHtmlElement } from './isHtmlElement';
 import { createPopup } from './popup';
 import { getGlobalRect } from './position';
-import { setYouTubeStyles } from './styles';
+import { setYouTubeStyles, youtubeHighlightDuration } from './styles';
 import { extractTokens } from './tokenizer/extractTokens';
 
 const ytPlayerTagName = 'ytd-player';
+
+const selectableCaptionsClassName = 'vocably-selectable-captions';
+const highlightedCaptionsClassName = 'vocably-selectable-captions-highlighted';
 
 export const getPlayerElements = (): HTMLElement[] => {
   const players = document.querySelectorAll(ytPlayerTagName);
@@ -136,6 +139,7 @@ const makeCaptionsSelectable = (): SelectableCaptions => {
     const captionContainerClone = captionContainer.cloneNode(
       true
     ) as HTMLElement;
+    captionContainerClone.classList.add(selectableCaptionsClassName);
     captionContainerList.push(captionContainer);
     captionContainersCloneList.push(captionContainerClone);
     captionContainer.hidden = true;
@@ -231,7 +235,9 @@ export const initYoutube = async (options: InitYouTubeOptions) => {
   let isAltDown = false;
   let isMouseDown = false;
   let selectableCaptions: SelectableCaptions | null = null;
+  let fadingOutCaptions: SelectableCaptions | null = null;
   let tearDownTimeout: ReturnType<typeof setTimeout> | null = null;
+  let removeCaptionsTimeout: ReturnType<typeof setTimeout> | null = null;
 
   const cancelScheduledTearDown = () => {
     if (tearDownTimeout === null) {
@@ -242,14 +248,38 @@ export const initYoutube = async (options: InitYouTubeOptions) => {
     tearDownTimeout = null;
   };
 
+  const cancelScheduledRemoval = (): SelectableCaptions | null => {
+    if (removeCaptionsTimeout !== null) {
+      clearTimeout(removeCaptionsTimeout);
+      removeCaptionsTimeout = null;
+    }
+
+    const captions = fadingOutCaptions;
+    fadingOutCaptions = null;
+
+    return captions;
+  };
+
+  const removeCaptions = (captions: SelectableCaptions) => {
+    captions.captionContainersCloneList.forEach((element) => element.remove());
+    captions.captionContainerList.forEach(
+      (element) => (element.hidden = false)
+    );
+  };
+
   const setUp = () => {
     cancelScheduledTearDown();
 
-    if (selectableCaptions !== null) {
-      return;
+    if (selectableCaptions === null) {
+      selectableCaptions = cancelScheduledRemoval() ?? makeCaptionsSelectable();
     }
 
-    selectableCaptions = makeCaptionsSelectable();
+    selectableCaptions.captionContainersCloneList.forEach((element) => {
+      // Forces a reflow, so the highlight is transitioned in
+      // instead of being applied right away.
+      void element.offsetHeight;
+      element.classList.add(highlightedCaptionsClassName);
+    });
   };
 
   const tearDown = () => {
@@ -262,14 +292,19 @@ export const initYoutube = async (options: InitYouTubeOptions) => {
       return;
     }
 
-    selectableCaptions.captionContainersCloneList.forEach((element) =>
-      element.remove()
-    );
-    selectableCaptions.captionContainerList.forEach(
-      (element) => (element.hidden = false)
+    const captions = selectableCaptions;
+    selectableCaptions = null;
+    fadingOutCaptions = captions;
+
+    captions.captionContainersCloneList.forEach((element) =>
+      element.classList.remove(highlightedCaptionsClassName)
     );
 
-    selectableCaptions = null;
+    removeCaptionsTimeout = setTimeout(() => {
+      removeCaptionsTimeout = null;
+      fadingOutCaptions = null;
+      removeCaptions(captions);
+    }, youtubeHighlightDuration);
   };
 
   const isInUse = (): boolean => isAltDown || isMouseDown || hasTextSelection();
